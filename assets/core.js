@@ -131,7 +131,7 @@
     function go(event){
       if(event)event.preventDefault();
       const q=siteSearch.value.trim();
-      location.href='/top_zanosi/guides/'+(q?'?q='+encodeURIComponent(q):'');
+      location.href='/Affiliate_Lab/guides/'+(q?'?q='+encodeURIComponent(q):'');
     }
     const form=siteSearch.closest('form');
     if(form)form.addEventListener('submit',go);
