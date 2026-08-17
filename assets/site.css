@@ -4501,3 +4501,29 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
     transition:opacity .2s ease,visibility 0s!important;
   }
 }
+
+/* v60: align the collapsed navigation as one vertical mobile column. */
+@media(max-width:1050px){
+  .global-sidebar{
+    align-items:stretch!important;
+    gap:0!important;
+  }
+  .global-sidebar>.sidebar-search,
+  .global-sidebar>.sidebar-mode-compact,
+  .global-sidebar>.sidebar-group,
+  .global-sidebar>.sidebar-partner-cta,
+  .global-sidebar>.sidebar-bottom{
+    width:auto!important;
+    max-width:none!important;
+    flex:0 0 auto!important;
+  }
+  .global-sidebar .sidebar-menu{
+    width:100%!important;
+    align-items:stretch!important;
+  }
+  .global-sidebar .sidebar-menu a{
+    width:100%!important;
+    box-sizing:border-box!important;
+    text-align:left!important;
+  }
+}
