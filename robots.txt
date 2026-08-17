@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /go/
+Disallow: /_local/
+
+Sitemap: https://pr0ject2.github.io/top_zanosi/sitemap.xml
