@@ -4457,3 +4457,47 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
   .mobile-nav-toggle{min-width:80px!important;padding:0 9px!important}
   .home-welcome h1,.page-head h1,.article h1{font-size:clamp(30px,9.5vw,37px)!important}
 }
+
+/* v59: one predictable menu state for every collapsed layout. */
+@media(max-width:1050px){
+  .mobile-nav-toggle{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:8px!important;
+    flex:0 0 auto!important;
+    cursor:pointer!important;
+    touch-action:manipulation;
+  }
+  .global-sidebar{
+    display:flex!important;
+    flex-direction:column!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+    transform:translate3d(-105%,0,0)!important;
+    transition:transform .2s ease,visibility 0s linear .2s!important;
+    z-index:130!important;
+  }
+  body.mobile-nav-open .global-sidebar{
+    visibility:visible!important;
+    pointer-events:auto!important;
+    transform:translate3d(0,0,0)!important;
+    transition:transform .2s ease,visibility 0s!important;
+  }
+  .mobile-nav-overlay{
+    display:block!important;
+    visibility:hidden!important;
+    opacity:0!important;
+    pointer-events:none!important;
+    z-index:120!important;
+    cursor:pointer!important;
+    touch-action:manipulation;
+    transition:opacity .2s ease,visibility 0s linear .2s!important;
+  }
+  body.mobile-nav-open .mobile-nav-overlay{
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+    transition:opacity .2s ease,visibility 0s!important;
+  }
+}

@@ -81,22 +81,30 @@
   function initMobileNav(){
     const header=document.querySelector('.site-header .header-inner');
     const sidebar=document.querySelector('.global-sidebar');
-    if(!header||!sidebar||header.querySelector('.mobile-nav-toggle'))return;
-    const btn=document.createElement('button');
-    btn.type='button';
-    btn.className='mobile-nav-toggle';
+    if(!header||!sidebar)return;
+    let btn=header.querySelector('.mobile-nav-toggle');
+    if(!btn){
+      btn=document.createElement('button');
+      btn.type='button';
+      btn.className='mobile-nav-toggle';
+      btn.innerHTML='<span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span>';
+      header.appendChild(btn);
+    }
+    if(btn.dataset.mobileNavReady==='true')return;
+    btn.dataset.mobileNavReady='true';
     btn.setAttribute('aria-expanded','false');
     sidebar.id=sidebar.id||'library-navigation';
     btn.setAttribute('aria-controls',sidebar.id);
     btn.setAttribute('aria-label','Открыть меню библиотеки');
-    btn.innerHTML='<span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span>';
-    header.appendChild(btn);
 
-    const overlay=document.createElement('button');
-    overlay.type='button';
-    overlay.className='mobile-nav-overlay';
-    overlay.setAttribute('aria-label','Закрыть меню');
-    document.body.appendChild(overlay);
+    let overlay=document.querySelector('.mobile-nav-overlay');
+    if(!overlay){
+      overlay=document.createElement('button');
+      overlay.type='button';
+      overlay.className='mobile-nav-overlay';
+      overlay.setAttribute('aria-label','Закрыть меню');
+      document.body.appendChild(overlay);
+    }
 
     function close(returnFocus){
       document.body.classList.remove('mobile-nav-open');
@@ -121,6 +129,10 @@
     document.addEventListener('keydown',function(e){
       if(e.key==='Escape'&&document.body.classList.contains('mobile-nav-open'))close(true);
     });
+    const mobileQuery=window.matchMedia('(max-width:1050px)');
+    function closeOnDesktop(e){if(!e.matches)close(false)}
+    if(mobileQuery.addEventListener)mobileQuery.addEventListener('change',closeOnDesktop);
+    else if(mobileQuery.addListener)mobileQuery.addListener(closeOnDesktop);
   }
   initMobileNav();
 
