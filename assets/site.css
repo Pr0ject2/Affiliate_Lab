@@ -4603,3 +4603,17 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
     white-space:normal!important;
   }
 }
+
+
+/* v62: editorial figures inside guides */
+.article-figure{margin:28px 0 34px;padding:12px;border:1px solid #ddd4c6;border-radius:12px;background:#fffdf9;box-shadow:0 8px 26px rgba(38,54,47,.045)}
+.article-figure img{display:block;width:100%;height:auto;border-radius:8px;background:#f5f0e6}
+.article-figure figcaption{padding:11px 5px 2px;color:#6d746f;font-size:13px;line-height:1.5}
+.article-figure.compact{max-width:860px}
+@media(max-width:650px){.article-figure{margin:22px 0 28px;padding:7px;border-radius:10px}.article-figure img{border-radius:7px}.article-figure figcaption{font-size:12px;padding:9px 4px 3px}}
+
+/* v63: real-source article screenshots */
+.article-figure.source-shot{max-width:860px}
+.article-figure.source-shot img{object-fit:contain;max-height:620px}
+.article-figure.source-shot figcaption a{color:#285b4f;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:650px){.article-figure.source-shot img{max-height:none}}
