@@ -1,5 +1,5 @@
 
-/* Affiliate Lab core UI.
+/* iGaming Traffic Academy core UI.
    Critical navigation lives here so a failure in optional modules does not disable the site. */
 (function(){
   'use strict';

@@ -4636,3 +4636,70 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
 
 .article-figure.diagram-figure{background:#fbf8f0;border:1px solid rgba(43,87,75,.12)}
 .article-figure.diagram-figure figcaption{color:#51635c}
+
+
+/* v72 services directory */
+.services-page{padding-bottom:70px}
+.services-intro{padding-top:34px}
+.service-notice,.service-legal{background:#fffdf8;border:1px solid var(--line);border-left:4px solid var(--forest);padding:18px 20px;border-radius:8px}
+.service-notice b,.service-legal b{font-family:Georgia,serif;color:var(--forest-2);font-size:19px;font-weight:600}
+.service-notice p,.service-legal p{margin:7px 0 0;color:var(--muted)}
+.service-section{padding-top:52px}
+.service-section-last{padding-bottom:20px}
+.service-section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:50px;align-items:end;margin-bottom:22px}
+.service-section-head>div{display:flex;align-items:baseline;gap:14px}
+.service-section-head>div>span{font:700 11px/1 "Courier New",monospace;color:var(--wine)}
+.service-section-head h2{margin:0}
+.service-section-head>p{margin:0;color:var(--muted);font-size:14px}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service-card{position:relative;display:flex;flex-direction:column;min-height:260px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:10px;padding:20px;box-shadow:0 8px 20px rgba(36,44,39,.04)}
+.service-card:nth-child(2){border-top-color:var(--brass)}
+.service-card:nth-child(3){border-top-color:#657f8b}
+.service-card:nth-child(4){border-top-color:var(--wine)}
+.service-kicker{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--wine)}
+.service-card h3{margin:8px 0 8px}
+.service-card p{margin:0 0 20px;color:var(--muted);font-size:13.5px;line-height:1.6}
+.service-card>a{margin-top:auto;color:var(--forest);font-weight:800;font-size:13px;text-underline-offset:4px}
+.service-tip,.service-warning{display:flex;gap:10px;margin-top:16px;padding:13px 15px;border:1px solid var(--line);border-radius:8px;background:#f8f4ea;font-size:13px;color:#5d625e}
+.service-tip b,.service-warning b{color:var(--forest-2);flex:0 0 auto}
+.service-warning{border-left:4px solid var(--wine)}
+.service-legal{border-left-color:var(--wine)}
+.service-use-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.service-use-grid>div{background:var(--surface);padding:18px 20px}
+.service-use-grid b{display:block;color:var(--forest-2);font-family:Georgia,serif;font-size:18px;margin-bottom:5px}
+.service-use-grid span{color:var(--muted);font-size:13px}
+.service-inline{margin:24px 0;padding:16px 18px;border:1px solid var(--line);border-left:4px solid var(--brass);border-radius:8px;background:#fbf8ef}
+.service-inline>b{display:block;color:var(--forest-2);font-family:Georgia,serif;font-size:18px;margin-bottom:6px}
+.service-inline p{margin:0;color:#545b56;font-size:14px}
+.service-inline p a{color:var(--wine);font-weight:700;text-underline-offset:3px}
+.service-inline-more{display:inline-block;margin-top:9px;color:var(--forest);font-size:13px;font-weight:800;text-underline-offset:4px}
+@media(max-width:900px){.service-section-head{grid-template-columns:1fr;gap:10px}.service-grid{grid-template-columns:1fr 1fr}.service-card{min-height:230px}.service-use-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.service-grid{grid-template-columns:1fr}.service-card{min-height:0}.service-tip,.service-warning{display:block}.service-tip b,.service-warning b{display:block;margin-bottom:4px}.service-section{padding-top:38px}.services-intro{padding-top:24px}}
+
+.service-card-primary{border-top-color:var(--forest)!important;border-color:rgba(28,91,72,.32);box-shadow:0 12px 28px rgba(27,75,61,.09)}
+.service-primary-badge{position:absolute;top:14px;right:14px;padding:5px 8px;border-radius:999px;background:#e8f2ec;color:var(--forest);font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(28,91,72,.16)}
+.service-card-primary h3{padding-right:74px}
+.service-terms-note{margin:-5px 0 18px;padding:10px 11px;border-radius:8px;background:#f6f1e7;border:1px solid rgba(146,111,48,.14);font-size:11.5px;line-height:1.45;color:#5b5449}
+.service-terms-note b{color:var(--forest)}
+.service-primary-strip{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.service-primary-strip>span{font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-right:2px}
+.service-primary-strip a{padding:6px 9px;border-radius:999px;background:#edf4ef;border:1px solid rgba(28,91,72,.12);color:var(--forest);font-size:11.5px;font-weight:800;text-decoration:none}
+.service-primary-strip a:hover{text-decoration:underline}
+.service-card-primary>a{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:9px 12px;border-radius:8px;background:var(--forest);color:#fff;text-decoration:none}
+.service-card-primary>a:hover{filter:brightness(.96);text-decoration:none}
+
+.service-review-note{margin:-7px 0 18px;padding:10px 11px;border-left:3px solid rgba(28,91,72,.28);background:#f7faf8;font-size:11.5px;line-height:1.5;color:#53645e}
+.service-review-note b{color:var(--forest)}
+
+
+/* v79: iGaming Traffic Academy branding */
+.brand-mark{font-size:9.5px;letter-spacing:.045em}
+@media(max-width:650px){
+  .brand{gap:10px}
+  .brand-text b{font-size:15px!important;line-height:1.02;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;max-width:150px}
+  .brand-mark{font-size:9px!important;letter-spacing:.03em}
+}
+@media(max-width:370px){
+  .brand-text b{font-size:14px!important;max-width:132px}
+  .brand-mark{flex-basis:34px!important;width:34px!important;height:34px!important}
+}

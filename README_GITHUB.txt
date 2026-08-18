@@ -12,3 +12,5 @@ AFFILIATE LAB — ЗАГРУЗКА НА GITHUB PAGES
 https://pr0ject2.github.io/Affiliate_Lab/
 
 В архиве меньше 100 файлов, поэтому GitHub принимает их одной загрузкой.
+
+Бренд сайта: iGaming Traffic Academy. Технический путь /Affiliate_Lab/ сохранён для совместимости с текущим GitHub Pages-репозиторием.
