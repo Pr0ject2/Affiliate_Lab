@@ -4703,3 +4703,13 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
   .brand-text b{font-size:14px!important;max-width:132px}
   .brand-mark{flex-basis:34px!important;width:34px!important;height:34px!important}
 }
+
+
+/* v80: simplified navigation, curated services and full traffic playbooks */
+.single-service-grid{grid-template-columns:minmax(0,720px)!important}
+.single-service-grid .service-card{min-height:0}
+.source-next-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.source-next-links a{display:inline-flex;align-items:center;min-height:39px;padding:0 13px;border:1px solid #d7cec0;border-radius:7px;background:#fbf8f1;color:#294a40;font-size:12.5px;font-weight:800;text-decoration:none}
+.source-next-links a:first-child{background:#294940;color:#fff;border-color:#294940}
+.sidebar-group-priority .sidebar-menu a,.sidebar-group .sidebar-menu a{line-height:1.25}
+@media(max-width:620px){.source-next-links{flex-direction:column}.source-next-links a{justify-content:center}.single-service-grid{grid-template-columns:1fr!important}}
