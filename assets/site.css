@@ -4617,3 +4617,11 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
 .article-figure.source-shot img{object-fit:contain;max-height:620px}
 .article-figure.source-shot figcaption a{color:#285b4f;text-decoration:underline;text-underline-offset:2px}
 @media(max-width:650px){.article-figure.source-shot img{max-height:none}}
+
+
+/* v66: реальные пользовательские скриншоты */
+.article-figure.user-shot{max-width:920px}
+.article-figure.user-shot .image-zoom{display:block;cursor:zoom-in}
+.article-figure.user-shot .image-zoom img{max-height:680px;object-fit:contain}
+.article-figure.user-shot figcaption::after{content:"  Нажмите на изображение, чтобы открыть его в полном размере.";color:#8a8f8b}
+@media(max-width:650px){.article-figure.user-shot .image-zoom img{max-height:none}.article-figure.user-shot figcaption::after{content:" Нажмите на изображение, чтобы увеличить."}}

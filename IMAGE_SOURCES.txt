@@ -1,88 +1,64 @@
-Affiliate Lab — источники внешних изображений (v63)
+Affiliate Lab — изображения, версия v66
+
+Принцип v66: внешние изображения остаются только там, где они прямо показывают нужный интерфейс или действие. Скриншоты, предоставленные владельцем проекта, используются без внешней атрибуции.
+
+СКРИНШОТЫ ВЛАДЕЛЬЦА ПРОЕКТА
+
+1) youtube-videos-user.png
+Использование: guides/video-traffic/
+Содержание: список опубликованных видео в YouTube Studio и разброс просмотров.
+
+2) youtube-analytics-user.png
+Использование: guides/video-traffic/
+Содержание: просмотры, показы, CTR, средняя длительность просмотра и источники трафика в YouTube Studio.
+
+3) affiliate-dashboard-user.png
+Использование: guides/statistics/
+Содержание: график переходов, регистраций, дохода, первых депозитов и суммы депозитов в партнёрском кабинете.
+
+4) affiliate-statistics-table-user.png
+Использование: guides/partner-dashboard/
+Содержание: таблица статистики партнёрской программы с разбивкой по ссылкам.
+
+5) affiliate-link-create-user.png
+Использование: guides/launch-checklist/
+Содержание: форма создания отдельной партнёрской ссылки.
+
+6) casino-registration-user.png
+Использование: guides/clicks-no-registrations/
+Содержание: реальная форма регистрации в онлайн-казино.
+
+7) casino-payment-methods-user.png
+Использование: guides/registrations-no-ftd/
+Содержание: доступные способы пополнения баланса.
+
+ВНЕШНИЕ ИЗОБРАЖЕНИЯ
 
 1) YouTube Shorts player, opened on a video.png
-Страница источника: https://commons.wikimedia.org/wiki/File:YouTube_Shorts_player,_opened_on_a_video.png
-Автор видео/материала: Mailer's Landing (@MailersLanding)
-Лицензия: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
-Использование в проекте: guides/social-traffic/
-Изменения: уменьшение до 1280×720 и конвертация в WebP для оптимизации загрузки.
+Источник: https://commons.wikimedia.org/wiki/File:YouTube_Shorts_player,_opened_on_a_video.png
+Автор: Mailer's Landing (@MailersLanding)
+Лицензия: CC BY 3.0
+Использование: guides/social-traffic/
 
 2) Channel post with commens from Telegram Desktop.png
-Страница источника: https://commons.wikimedia.org/wiki/File:Channel_post_with_commens_from_Telegram_Desktop.png
-Автор/правообладатель интерфейса: Telegram FZ-LLC
-Лицензия: GNU General Public License v3 (GPLv3), согласно странице файла Wikimedia Commons.
-Использование в проекте: guides/community-traffic/
-Изменения: без смысловых изменений, локальная копия исходного PNG.
+Источник: https://commons.wikimedia.org/wiki/File:Channel_post_with_commens_from_Telegram_Desktop.png
+Автор/интерфейс: Telegram
+Лицензия: GPLv3 согласно странице файла
+Использование: guides/community-traffic/
 
-V64 — дополнительные реальные материалы для статей
+3) Google Trend.png
+Источник: https://commons.wikimedia.org/wiki/File:Google_Trend.png
+Автор: Hc6db
+Лицензия: CC BY-SA 4.0
+Использование: guides/search-traffic/
 
-matomo-dashboard.png
-Источник: https://commons.wikimedia.org/wiki/File:Matomo-v5-3-1-screenshot.png
-Автор/правообладатель: Matomo Developers / Matthieu Aubry и другие
-Лицензия: GPL
-
-paid-report.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Whatagraph_report_template.jpg
-Автор/правообладатель: Justinawha
-Лицензия: CC0 1.0
-
-checklist-photo.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Paperlist.jpg
-Автор/правообладатель: Glenn Carstens-Peters
-Лицензия: CC0 1.0
-
-payment-card.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Paying_with_a_Credit_Card_(28886645201).jpg
-Автор/правообладатель: Hloom Templates
-Лицензия: CC BY 2.0
-
-world-map.jpg
-Источник: https://commons.wikimedia.org/wiki/File:World_map_geographical.jpg
-Автор/правообладатель: Natural Earth
-Лицензия: CC0 1.0
-
-spreadsheet.png
-Источник: https://commons.wikimedia.org/wiki/File:LibreOffice_7.2.4.1_Calc_with_csv_screenshot.png
-Автор/правообладатель: The Document Foundation / VulcanSphere
-Лицензия: свободный скриншот LibreOffice
-
-browser-page.webp
-Источник: https://commons.wikimedia.org/wiki/File:Firefox_140.0.2_opening_Japanese_Wikipedia_main_page_screenshot.webp
-Автор/правообладатель: Mozilla, Wikimedia Foundation, VulcanSphere
-Лицензия: свободный скриншот
-
-messenger-screen.webp
-Источник: https://commons.wikimedia.org/wiki/File:Element_1.12.7_screenshot.webp
-Автор/правообладатель: Element / VulcanSphere
-Лицензия: AGPL/GPL
-
-desk-calculator.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Desktop_with_laptop_and_calculator_(Unsplash).jpg
-Автор/правообладатель: Unsplash, автор не указан
-Лицензия: CC0 1.0
-
-google-home.png
-Источник: https://commons.wikimedia.org/wiki/File:Google_Homepage_in_2025.png
-Автор/правообладатель: Vitor Labres Perrut de Andrade / Google
-Лицензия: public domain (простая интерфейсная композиция)
-
-obs-studio.png
+4) OBS Studio 32.1.2 Screenshot.png
 Источник: https://commons.wikimedia.org/wiki/File:OBS_Studio_32.1.2_Screenshot.png
 Автор/правообладатель: DidierFuze / OBS Studio
-Лицензия: CC0 1.0
+Лицензия: CC0 1.0 согласно странице файла
+Использование: guides/stream-traffic/
 
-adtech-diagram.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Display_advertising_and_programmatic_advertising_diagram_-_Diaz_Ruiz_2025.jpg
-Автор/правообладатель: Carlos Diaz Ruiz
-Лицензия: CC BY 4.0
-
-google-ads-quality.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Google_Ads_Quality_Score_Factors.jpg
-Автор/правообладатель: Prathamisrani
-Лицензия: CC BY-SA 4.0
-
-roulette-casino.jpg
-Источник: https://commons.wikimedia.org/wiki/File:Roulette_in_Las_Vegas.jpg
-Автор/правообладатель: Antoine Taveneaux
-Лицензия: CC BY-SA 3.0
-
+5) LibreOffice 7.2.4.1 Calc with csv screenshot.png
+Источник: https://commons.wikimedia.org/wiki/File:LibreOffice_7.2.4.1_Calc_with_csv_screenshot.png
+Автор/правообладатель: The Document Foundation / VulcanSphere
+Использование: guides/statistics-mismatch/
