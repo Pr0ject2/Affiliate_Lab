@@ -6468,3 +6468,327 @@ body.reference-ui-v99.theme-dark{--ref-ink:#e5efeb;--ref-copy:#9cb0a8;--ref-line
 @media(max-width:1320px){.guide-v101-grid.five,.guide-v101-formats{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-v101-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:820px){.guide-v101-hero .playbook-facts{grid-template-columns:repeat(2,minmax(0,1fr))!important}.guide-v101-flow,.guide-v101-flow.compact{grid-template-columns:1fr!important}.guide-v101-flow>i{transform:rotate(90deg)}.guide-v101-dual,.guide-v101-grid.five,.guide-v101-grid.four,.guide-v101-grid.three,.guide-v101-formats,.guide-v101-funnel-table,.guide-v101-diagnostics,.guide-v101-scale,.guide-v101-next>div{grid-template-columns:1fr!important}.guide-v101-timeline>div{grid-template-columns:1fr;gap:5px}.guide-v101-code{grid-template-columns:1fr}.guide-v101-code code,.guide-v101-code dl{grid-column:1}.guide-v101-code dl{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-v101-steps{grid-template-columns:1fr!important}.guide-v101-callout{grid-template-columns:1fr;gap:5px}.guide-v101-section{padding-block:26px!important}}
 body.theme-dark .guide-structured-v101 .guide-v101-section{border-color:#20352e}body.theme-dark .guide-structured-v101 .guide-v101-section>h2{color:#e7f1ed!important}body.theme-dark .guide-structured-v101 .guide-v101-section>p{color:#9fb2aa!important}body.theme-dark :is(.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a){background:#0d1b17!important;border-color:#20352e!important;color:#dce8e3!important}body.theme-dark .guide-v101-callout{background:#0d2119}body.theme-dark .guide-v101-callout.warning{background:#241d10}body.theme-dark .guide-v101-media figcaption{background:#0b1713!important;color:#9fb2aa!important}body.theme-dark .guide-v101-scale>div{background:#0d1b17}body.theme-dark .guide-v101-grid code,body.theme-dark .guide-v101-code code{background:#10251d;color:#6bd1aa}
+
+/* ======================================================================
+   v102 — refinement pass
+   - compact home canvas
+   - readable article scale
+   - cleaner sidebar + icons
+   - right rail pinned to the viewport edge
+   - complete, layered dark theme
+   ====================================================================== */
+:root{
+  --v102-article-max:900px;
+  --v102-rail:300px;
+  --v102-gap:24px;
+  --v102-home:1180px;
+}
+
+/* LEFT NAV: fewer items, better icons, readable size */
+.global-sidebar .sidebar-menu a{
+  min-height:40px!important;
+  padding:8px 10px 8px 39px!important;
+  font-size:14px!important;
+  line-height:1.25!important;
+  letter-spacing:0!important;
+}
+.global-sidebar .sidebar-menu a:before{
+  left:10px!important;
+  width:21px!important;
+  height:21px!important;
+  border:0!important;
+  border-radius:6px!important;
+  background:rgba(255,255,255,.055)!important;
+  color:#a8c9bd!important;
+  font:700 12px/1 Inter,"Segoe UI",Arial,sans-serif!important;
+}
+.global-sidebar .sidebar-menu a[data-nav="home"]:before{content:'⌂'!important;font-size:14px!important}
+.global-sidebar .sidebar-menu a[data-nav="start"]:before{content:'▶'!important;font-size:8px!important}
+.global-sidebar .sidebar-menu a[data-nav="traffic"]:before{content:'↗'!important;font-size:14px!important}
+.global-sidebar .sidebar-menu a[data-nav="practice"]:before{content:'✓'!important;font-size:12px!important}
+.global-sidebar .sidebar-menu a[data-nav="diagnostics"]:before{content:'?'!important;font-size:12px!important}
+.global-sidebar .sidebar-menu a[data-nav="analytics"]:before{content:'▥'!important;font-size:11px!important}
+.global-sidebar .sidebar-menu a[data-nav="library"]:before{content:'▤'!important;font-size:11px!important}
+.global-sidebar .sidebar-menu a[data-nav="services"]:before{content:'⚙'!important;font-size:11px!important}
+.global-sidebar .sidebar-menu a[data-nav="glossary"]:before{content:'Aa'!important;font-size:8px!important}
+.global-sidebar .sidebar-menu a.active:before,
+.global-sidebar .sidebar-menu a.is-active:before,
+.global-sidebar .sidebar-menu a[aria-current="page"]:before{
+  background:rgba(83,216,164,.14)!important;
+  color:#5bd7a8!important;
+}
+.global-sidebar .sidebar-group{margin-bottom:15px!important}
+.global-sidebar .sidebar-group-title,.global-sidebar .sidebar-group-toggle{
+  font-size:10.5px!important;
+  letter-spacing:.07em!important;
+}
+.global-sidebar .sidebar-search input{font-size:14px!important}
+
+/* HOME: restore the compact, centered composition instead of the stretched canvas */
+main.home-page>section>.wrap,
+main.home-page .wrap{
+  width:min(calc(100% - 38px),var(--v102-home))!important;
+  max-width:var(--v102-home)!important;
+  margin-inline:auto!important;
+}
+main.home-page .home-welcome{padding:54px 0 56px!important}
+main.home-page .home-welcome-grid{
+  grid-template-columns:minmax(0,1fr) 350px!important;
+  gap:44px!important;
+  align-items:center!important;
+}
+main.home-page .home-welcome h1{
+  max-width:720px!important;
+  font-size:clamp(44px,4.5vw,64px)!important;
+  line-height:1.03!important;
+}
+main.home-page .home-lead{max-width:700px!important;font-size:17px!important;line-height:1.68!important}
+main.home-page .home-search-card{max-width:350px!important}
+main.home-page .home-entry-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+main.home-page .home-source-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:13px!important}
+main.home-page .home-reference .wrap{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+
+/* ARTICLE CANVAS: compact reading column; right rail sits near the viewport edge. */
+@media(min-width:1051px){
+  body.reference-ui-v99 .article-layout{
+    width:calc(100vw - var(--ref-sidebar) - 20px)!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:12px!important;
+    padding:24px 0 76px!important;
+    grid-template-columns:minmax(0,var(--v102-article-max)) var(--v102-rail)!important;
+    gap:var(--v102-gap)!important;
+    justify-content:end!important;
+    align-items:start!important;
+  }
+  body.reference-ui-v99 .article-aside.enhanced-rail{
+    width:var(--v102-rail)!important;
+    justify-self:end!important;
+    position:sticky!important;
+    top:calc(var(--ref-topbar) + 14px)!important;
+    max-height:calc(100vh - var(--ref-topbar) - 26px)!important;
+  }
+}
+
+/* ARTICLE TYPOGRAPHY: readable again, including the YouTube course. */
+body.reference-ui-v99 .source-title-copy h1,
+body.reference-ui-v99 .article h1{
+  font-size:clamp(34px,2.4vw,43px)!important;
+  line-height:1.08!important;
+}
+body.reference-ui-v99 .source-hero-shell>.lead,
+body.reference-ui-v99 .article .lead,
+.guide-v101-hero .lead{
+  font-size:16px!important;
+  line-height:1.62!important;
+  color:#5a6c65!important;
+}
+body.reference-ui-v99 .source-playbook-article h2,
+body.reference-ui-v99 .article-page .article h2,
+.guide-structured-v101 .guide-v101-section>h2{
+  font-size:24px!important;
+  line-height:1.24!important;
+  margin-bottom:12px!important;
+}
+body.reference-ui-v99 .source-playbook-article h3,
+body.reference-ui-v99 .article-page .article h3,
+.guide-structured-v101 h3{
+  font-size:16px!important;
+  line-height:1.4!important;
+}
+body.reference-ui-v99 .source-playbook-article p,
+body.reference-ui-v99 .source-playbook-article li,
+body.reference-ui-v99 .source-playbook-article dd,
+body.reference-ui-v99 .article-page .article p,
+body.reference-ui-v99 .article-page .article li,
+body.reference-ui-v99 .article-page .article dd,
+.guide-structured-v101 .guide-v101-section>p{
+  font-size:16px!important;
+  line-height:1.7!important;
+}
+body.reference-ui-v99 .source-playbook-article>section,
+body.reference-ui-v99 .article-page .article>section,
+.guide-structured-v101 .guide-v101-section{
+  padding-top:28px!important;
+  padding-bottom:28px!important;
+}
+
+/* YouTube structured guide: stop squeezing five tiny cards into one row. */
+.guide-v101-grid.five,.guide-v101-formats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.guide-v101-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.guide-v101-grid>div{padding:18px 17px!important}
+.guide-v101-grid>div>span{font-size:11.5px!important}
+.guide-v101-grid h3{font-size:15px!important;margin-bottom:8px!important}
+.guide-v101-grid p{font-size:13.5px!important;line-height:1.58!important}
+.guide-v101-grid code{font-size:11.5px!important;line-height:1.45!important}
+.guide-v101-formats h3{font-size:14.5px!important;margin:11px 12px 5px!important}
+.guide-v101-formats p{font-size:13px!important;line-height:1.52!important;margin:0 12px 14px!important}
+.guide-v101-format-art{height:116px!important;font-size:13px!important}.guide-v101-format-art b{font-size:26px!important}
+.guide-v101-callout{grid-template-columns:145px 1fr!important;padding:16px 17px!important}.guide-v101-callout b{font-size:13px!important}.guide-v101-callout p{font-size:13.5px!important;line-height:1.6!important}
+.guide-v101-verdict h3{font-size:16px!important}.guide-v101-verdict li{font-size:14px!important;line-height:1.58!important}
+.guide-v101-flow>div{padding:15px 12px!important}.guide-v101-flow b{font-size:13px!important}.guide-v101-flow small{font-size:11.5px!important;line-height:1.45!important}
+.guide-v101-timeline>div{grid-template-columns:120px 180px 1fr!important;padding:17px 18px!important}.guide-v101-timeline time{font-size:12px!important}.guide-v101-timeline h3{font-size:14px!important}.guide-v101-timeline p{font-size:13.5px!important;line-height:1.56!important}
+.guide-v101-media figcaption{font-size:13px!important;line-height:1.58!important;padding:14px 16px!important}
+.guide-v101-link-options h3{font-size:15px!important}.guide-v101-link-options p,.guide-v101-link-options li{font-size:13.5px!important;line-height:1.58!important}
+.guide-v101-code>b{font-size:13px!important}.guide-v101-code code{font-size:12.5px!important}.guide-v101-code dt{font-size:10.5px!important}.guide-v101-code dd{font-size:11.5px!important}
+.guide-v101-steps li{min-height:118px!important;padding:17px!important}.guide-v101-steps b{font-size:14.5px!important}.guide-v101-steps p{font-size:13.5px!important;line-height:1.58!important}
+.guide-v101-funnel-table b{font-size:14px!important}.guide-v101-funnel-table span{font-size:11px!important}.guide-v101-funnel-table small{font-size:11.5px!important;line-height:1.48!important}
+.guide-v101-diagnostics b{font-size:14px!important}.guide-v101-diagnostics p{font-size:13px!important;line-height:1.55!important}.guide-v101-diagnostics span{font-size:11.5px!important}
+.guide-v101-scale b{font-size:13px!important}.guide-v101-scale p{font-size:13px!important;line-height:1.56!important}.guide-v101-next b{font-size:14px!important}.guide-v101-next span{font-size:12.5px!important;line-height:1.5!important}
+.guide-v101-inline-link a{font-size:12.5px!important;padding:9px 12px!important}
+
+/* Right rail: denser but readable. */
+.article-aside.enhanced-rail .rail-card{border-radius:11px!important}
+.article-aside.enhanced-rail .rail-card h2,.article-aside.enhanced-rail .rail-card h3{font-size:14px!important}
+.article-aside.enhanced-rail .rail-card a,.article-aside.enhanced-rail .rail-card p,.article-aside.enhanced-rail .rail-card span{font-size:12.5px!important;line-height:1.45!important}
+
+/* COMPLETE DARK THEME: layered surfaces, readable type, preserved accents. */
+body.theme-dark{
+  --paper:#0a1210!important;
+  --paper-2:#0d1713!important;
+  --surface:#101c18!important;
+  --ink:#e8f1ed!important;
+  --muted:#9cafa7!important;
+  --line:#26362f!important;
+  --line-dark:#34483f!important;
+  --forest:#68c7a2!important;
+  --forest-2:#0a1712!important;
+  --forest-soft:#173127!important;
+  --wine:#d29383!important;
+  --brass:#d6a85f!important;
+  background:#0a1210!important;
+  color:#e8f1ed!important;
+}
+body.reference-ui-v99.theme-dark,
+body.reference-ui-v99.theme-dark main,
+body.theme-dark main.home-page,
+body.theme-dark .source-playbook-page,
+body.theme-dark main.article-page{background:#0a1210!important;color:#e8f1ed!important}
+body.theme-dark .site-header{background:#07110e!important;border-color:#203229!important}
+body.theme-dark .global-sidebar{background:#0b1713!important;border-color:#21352c!important}
+body.theme-dark .site-footer{background:#0b1713!important;border-color:#263a31!important;color:#b7c8c0!important}
+body.theme-dark :is(h1,h2,h3,h4,strong,b,dt,.article-label,.source-title-copy h1,.footer-brand){color:#edf6f2!important}
+body.theme-dark :is(p,li,dd,.lead,small,.article-meta,.breadcrumbs,.source-playbook-article p,.source-playbook-article li,.article-page .article p,.article-page .article li){color:#a7b9b1!important}
+body.theme-dark a{color:#7fd4b2}
+body.theme-dark a:hover{color:#a6ebcf}
+body.theme-dark :is(.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.home-reference,.rule-section,.page-head,.library-shell,.tools-grid,.about-grid){background:#0a1210!important;border-color:#26362f!important}
+body.theme-dark :is(.home-search-card,.home-entry-grid>a,.home-source-grid>a,.home-reference .wrap>div,.index-panel,.knowledge-map,.library-row,.library-search,.tool-card,.about-card,.article,.source-playbook-article,.playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.traffic-diagnostic-list li,.playbook-steps>li,.source-journey-card,.service-card,.services-card,.article-figure,.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,.article-aside.enhanced-rail .rail-card){
+  background:#101d18!important;
+  border-color:#2a3c34!important;
+  color:#e6efeb!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.12)!important;
+}
+body.theme-dark :is(.playbook-risk,.inline-note,.guide-v101-callout){background:#13251e!important;border-color:#3a8063!important}
+body.theme-dark :is(.guide-v101-callout.warning,.warning-note){background:#2a2215!important;border-color:#a67838!important}
+body.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input){background:#0d1814!important;color:#e7f0ec!important;border-color:#31443b!important}
+body.theme-dark :is(input,select,textarea)::placeholder{color:#73877f!important}
+body.theme-dark :is(table,th,td){border-color:#2d4037!important}
+body.theme-dark th{background:#15251f!important;color:#dce9e3!important}
+body.theme-dark td{background:#0f1b17!important;color:#afc0b8!important}
+body.theme-dark :is(pre,code){background:#11251d!important;color:#7ed8b4!important}
+body.theme-dark .guide-v101-scale>div{background:#12221c!important;border-top-color:#48bf8f!important}
+body.theme-dark .guide-v101-media figcaption{background:#0d1814!important;color:#a4b7ae!important}
+body.theme-dark .source-journey-card img,body.theme-dark .guide-v101-media img{background:#16221e!important}
+body.theme-dark .source-section-tabs{border-color:#2b3b34!important}.theme-dark .source-section-tabs a{color:#9db0a7!important}.theme-dark .source-section-tabs a:first-child{color:#79d6b1!important;border-color:#55c99b!important}
+body.theme-dark .theme-toggle{background:#173127!important;border-color:#3d6353!important;color:#dff0e8!important}
+body.theme-dark .home-results-inner{background:#173127!important;border:1px solid #315245!important}
+body.theme-dark .home-results-inner h2,body.theme-dark .home-results-inner p,body.theme-dark .home-results-inner span,body.theme-dark .home-results-inner a{color:#e7f3ee!important}
+body.theme-dark .rail-card.tools-card{background:#123126!important;border-color:#315c49!important}
+body.theme-dark .rail-card.related-card{background:#221c14!important;border-color:#5b4730!important}
+
+@media(max-width:1100px){
+  main.home-page .home-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  main.home-page .home-welcome-grid{grid-template-columns:1fr!important}
+  main.home-page .home-search-card{max-width:620px!important}
+}
+@media(max-width:820px){
+  main.home-page>section>.wrap,main.home-page .wrap{width:min(calc(100% - 30px),var(--v102-home))!important}
+  main.home-page .home-entry-grid,main.home-page .home-source-grid,main.home-page .home-reference .wrap{grid-template-columns:1fr!important}
+  .guide-v101-grid.five,.guide-v101-grid.four,.guide-v101-formats{grid-template-columns:1fr!important}
+  body.reference-ui-v99 .source-playbook-article p,body.reference-ui-v99 .source-playbook-article li,body.reference-ui-v99 .article-page .article p,body.reference-ui-v99 .article-page .article li{font-size:15.5px!important}
+}
+
+/* v102.1 — final desktop rail placement: the rail is fixed to the right edge,
+   while the reading column stays centered in the remaining workspace. */
+@media(min-width:1051px){
+  body.reference-ui-v99 .article-layout{
+    display:block!important;
+    width:calc(100vw - var(--ref-sidebar) - var(--v102-rail) - 48px)!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:24px 0 76px 18px!important;
+    box-sizing:border-box!important;
+  }
+  body.reference-ui-v99 .source-playbook-article,
+  body.reference-ui-v99 .article-page .article{
+    width:100%!important;
+    max-width:var(--v102-article-max)!important;
+    margin:0 auto!important;
+  }
+  body.reference-ui-v99 .article-aside.enhanced-rail{
+    position:fixed!important;
+    right:14px!important;
+    left:auto!important;
+    top:calc(var(--ref-topbar) + 14px)!important;
+    width:var(--v102-rail)!important;
+    max-height:calc(100vh - var(--ref-topbar) - 28px)!important;
+    overflow:auto!important;
+    z-index:45!important;
+  }
+}
+
+/* Center the last row of five-card groups instead of leaving an awkward empty cell. */
+@media(min-width:821px){
+  .guide-v101-grid.five,.guide-v101-formats{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+  .guide-v101-grid.five>div,.guide-v101-formats>article{grid-column:span 2}
+  .guide-v101-grid.five>div:nth-child(4),.guide-v101-formats>article:nth-child(4){grid-column:2 / span 2}
+  .guide-v101-grid.five>div:nth-child(5),.guide-v101-formats>article:nth-child(5){grid-column:4 / span 2}
+}
+
+/* v102.2 — dark theme contrast hierarchy */
+body.theme-dark .article-aside.enhanced-rail{background:transparent!important}
+body.theme-dark .article-aside.enhanced-rail .aside-block{
+  background:#101e19!important;
+  border-color:#2a4037!important;
+}
+body.theme-dark .article-aside.enhanced-rail .playbook-aside{background:#101e19!important}
+body.theme-dark .article-aside.enhanced-rail .rail-tools{
+  background:linear-gradient(180deg,#123328,#0f281f)!important;
+  border-color:#2e5a48!important;
+}
+body.theme-dark .article-aside.enhanced-rail .rail-related-visual{
+  background:linear-gradient(180deg,#2b2115,#211a12)!important;
+  border-color:#624a2d!important;
+}
+body.theme-dark .article-aside.enhanced-rail .rail-related-visual>b{color:#e6bc78!important}
+body.theme-dark .article-aside.enhanced-rail .rail-related-visual span{color:#d8c8ae!important}
+body.theme-dark .article-aside.enhanced-rail .rail-tool-mark{background:#173f31!important;color:#73d7b0!important}
+body.theme-dark .article-aside.enhanced-rail :is(a,span,small,li){color:#a9bbb3!important}
+body.theme-dark .article-aside.enhanced-rail a.is-current{color:#78d9b3!important}
+body.theme-dark .rail-progress{background:#22362e!important}.theme-dark .rail-progress span{background:#55c999!important}
+body.theme-dark .playbook-faq details{background:#101d18!important;border-color:#2b3d35!important}
+body.theme-dark .playbook-faq summary{color:#d8ebe3!important}.theme-dark .playbook-faq details p{color:#a5b7af!important}
+body.theme-dark .source-tool-card{background:#11221b!important;border-color:#2b493c!important}
+body.theme-dark .source-tool-card-top{color:#d5aa70!important}.theme-dark .source-tool-card>b{color:#e4f1ec!important}.theme-dark .source-tool-card-copy{color:#a8bbb3!important}.theme-dark .source-tool-card-action{color:#70d3ad!important}
+body.theme-dark .source-tool-card:after{background:#173b2f!important;color:#6dd1aa!important}
+body.theme-dark .playbook-facts>div{background:#101d18!important;border-color:#2a3e35!important}.theme-dark .playbook-facts dt{color:#7f988e!important}.theme-dark .playbook-facts dd{color:#7ad2b0!important}
+body.theme-dark .guide-v101-verdict.good{background:#10271f!important}.theme-dark .guide-v101-verdict.bad{background:#2a1d18!important}
+body.theme-dark .guide-v101-verdict.good h3{color:#75d4ae!important}.theme-dark .guide-v101-verdict.bad h3{color:#e2a275!important}
+body.theme-dark .guide-v101-format-art{filter:saturate(.9) brightness(.85)}
+body.theme-dark .home-kicker,body.theme-dark .home-search-label,body.theme-dark .home-section-title>p{color:#d1a66d!important}
+body.theme-dark .home-actions .home-action-primary{background:#2d6b55!important;border-color:#43876e!important;color:#fff!important}
+body.theme-dark .home-actions a{border-color:#3d5b4f!important;color:#cae0d7!important}.theme-dark .home-actions a:hover{background:#162720!important}
+body.theme-dark .home-actions .home-action-partner{background:#2a2115!important;border-color:#6b5131!important;color:#e4bd80!important}
+body.theme-dark .home-search-card,.theme-dark .home-entry-grid>a,.theme-dark .home-source-grid>a,.theme-dark .home-reference .wrap>div{box-shadow:0 10px 28px rgba(0,0,0,.16)!important}
+body.theme-dark .home-entry-grid>a:hover,.theme-dark .home-source-grid>a:hover{background:#14251f!important;border-color:#3a5b4d!important}
+body.theme-dark .home-entry-grid b,.theme-dark .home-source-grid b,.theme-dark .home-reference b{color:#dcece6!important}
+body.theme-dark .home-entry-grid p,.theme-dark .home-source-grid p,.theme-dark .home-reference p{color:#9eafa7!important}
+
+/* mobile reading scale */
+@media(max-width:680px){
+  body.reference-ui-v99 .source-title-copy h1,body.reference-ui-v99 .article h1{font-size:30px!important}
+  body.reference-ui-v99 .source-hero-shell>.lead,body.reference-ui-v99 .article .lead{font-size:15.5px!important}
+  body.reference-ui-v99 .source-playbook-article h2,body.reference-ui-v99 .article-page .article h2,.guide-structured-v101 .guide-v101-section>h2{font-size:22px!important}
+  body.reference-ui-v99 .source-playbook-article p,body.reference-ui-v99 .source-playbook-article li,body.reference-ui-v99 .article-page .article p,body.reference-ui-v99 .article-page .article li,.guide-structured-v101 .guide-v101-section>p{font-size:15.5px!important;line-height:1.68!important}
+  .global-sidebar .sidebar-menu a{font-size:14.5px!important;min-height:42px!important}
+}
