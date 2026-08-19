@@ -1604,6 +1604,8 @@
      if(label)label.textContent=dark?'Светлый режим':'Тёмный режим';
      if(icon)icon.textContent=dark?'☀':'☾';
    });
+   const meta=document.querySelector('meta[name="theme-color"]');
+   if(meta)meta.setAttribute('content',dark?'#07120f':'#0d493d');
    if(save)try{localStorage.setItem(storageKey,theme)}catch(e){}
  };
  let stored=null;try{stored=localStorage.getItem(storageKey)}catch(e){}
@@ -1619,15 +1621,25 @@
    if(!title||!menu||group.querySelector(':scope > .sidebar-group-toggle'))return;
    const button=document.createElement('button');
    button.type='button';button.className='sidebar-group-toggle';button.textContent=title.textContent.trim();
-   const key='ita-sidebar-'+(group.dataset.sidebarGroup||index);
+   const key='ita-sidebar-v93-'+(group.dataset.sidebarGroup||index);
    const hasCurrent=!!menu.querySelector('.active,[aria-current="page"]');
-   let collapsed=false;try{collapsed=localStorage.getItem(key)==='1'}catch(e){}
-   if(hasCurrent)collapsed=false;
+   let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+   // Keep the current section open. Other groups start collapsed so every item
+   // remains reachable without turning the sidebar into a very long page.
+   let collapsed=hasCurrent?false:(saved==='0'?false:true);
    group.classList.toggle('is-collapsed',collapsed);
    button.setAttribute('aria-expanded',collapsed?'false':'true');
    title.insertAdjacentElement('afterend',button);
    button.addEventListener('click',()=>{
      const next=!group.classList.contains('is-collapsed');
+     if(!next && innerWidth<=900){
+       document.querySelectorAll('.global-sidebar .sidebar-group').forEach(other=>{
+         if(other===group)return;
+         other.classList.add('is-collapsed');
+         const otherBtn=other.querySelector(':scope > .sidebar-group-toggle');
+         if(otherBtn)otherBtn.setAttribute('aria-expanded','false');
+       });
+     }
      group.classList.toggle('is-collapsed',next);
      button.setAttribute('aria-expanded',next?'false':'true');
      try{localStorage.setItem(key,next?'1':'0')}catch(e){}
