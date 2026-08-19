@@ -1500,7 +1500,7 @@
  function reset(){scale=1;tx=0;ty=0;render();}
  function open(img){
    lastFocus=document.activeElement;
-   photo.src=img.currentSrc||img.src;
+   photo.src=img.dataset.fullSrc||img.currentSrc||img.src;
    photo.alt=img.alt||'Увеличенное изображение';
    reset();
    viewer.classList.add('is-open');
