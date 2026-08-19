@@ -337,32 +337,18 @@
 ;
 
 (function(){try{
- var path=location.pathname, search=location.search, key='home';
- if(path.indexOf('/Affiliate_Lab/traffic/')===0) key='traffic';
- else if(path.indexOf('/Affiliate_Lab/glossary/')===0) key='glossary';
- else if(path.indexOf('/Affiliate_Lab/diagnostics/')===0) key='diagnostics';
- else if(path.indexOf('/Affiliate_Lab/tools/')===0) key='tools';
- else if(path.indexOf('/Affiliate_Lab/services/')===0) key='services';
+ var path=location.pathname, key='home';
+ if(path.indexOf('/Affiliate_Lab/services/')===0) key='services';
  else if(path.indexOf('/Affiliate_Lab/start/')===0) key='start';
- else if(path.indexOf('/Affiliate_Lab/notes/')===0) key='notes';
- else if(path.indexOf('/Affiliate_Lab/path/')===0) key='notes';
- else if(path.indexOf('/Affiliate_Lab/help/')===0) key='help';
- else if(path.indexOf('/Affiliate_Lab/about/')===0) key='about';
- else if(path.indexOf('/Affiliate_Lab/basics/')===0) key='basics';
- else if(path.indexOf('/Affiliate_Lab/economics/')===0) key='economics';
- else if(path.indexOf('/Affiliate_Lab/analytics/')===0) key='analytics';
  else if(path.indexOf('/Affiliate_Lab/traffic/')===0) key='traffic';
- else if(path.indexOf('/Affiliate_Lab/practice/')===0) key='practice';
- else if(path.indexOf('/Affiliate_Lab/guides/')===0){
-   if(search.indexOf('topic=basics')>-1) key='basics';
-   else if(search.indexOf('topic=economics')>-1) key='economics';
-   else if(search.indexOf('topic=analytics')>-1) key='analytics';
-   else if(search.indexOf('topic=traffic')>-1) key='traffic';
-   else if(search.indexOf('topic=practice')>-1) key='practice';
- }
+ else if(path.indexOf('/Affiliate_Lab/diagnostics/')===0) key='diagnostics';
+ else if(path.indexOf('/Affiliate_Lab/analytics/')===0) key='analytics';
+ else if(path.indexOf('/Affiliate_Lab/notes/')===0 || path.indexOf('/Affiliate_Lab/path/')===0) key='notes';
+ else if(path.indexOf('/Affiliate_Lab/glossary/')===0) key='glossary';
+ else if(path.indexOf('/Affiliate_Lab/about/')===0) key='about';
+ else if(path.indexOf('/Affiliate_Lab/guides/')===0 || path.indexOf('/Affiliate_Lab/basics/')===0 || path.indexOf('/Affiliate_Lab/economics/')===0 || path.indexOf('/Affiliate_Lab/practice/')===0 || path.indexOf('/Affiliate_Lab/tools/')===0) key='library';
  document.querySelectorAll('[data-nav]').forEach(function(a){const on=a.getAttribute('data-nav')===key;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-}catch(e){console.error('iGaming Traffic Academy module 2 error',e);}})();
-
+}catch(e){console.error('iGaming Traffic Academy navigation error',e);}})();
 
 /* v18 - interactive terminology */
 (function(){try{
@@ -1334,7 +1320,7 @@
    pro:['Если трафик уже запущен','Не перечитывай базу: начни с конкретного участка, где просел результат.','/Affiliate_Lab/diagnostics/','Открыть диагностику']
   },
   '/Affiliate_Lab/traffic/':{
-   beginner:['Если источник ещё не выбран','Сначала подбери 1–2 направления под бюджет, контент и доступную аудиторию.','/#sourceWizard','Подобрать источник'],
+   beginner:['Если источник ещё не выбран','Сначала подбери 1–2 направления под бюджет, контент и доступную аудиторию.','/Affiliate_Lab/traffic/compare/','Подобрать источник'],
    pro:['Если уже есть рабочий источник','Сравни его с альтернативой по обратной связи, аналитике и ресурсу на запуск.','/Affiliate_Lab/traffic/compare/','Сравнить источники']
   },
   '/Affiliate_Lab/tools/':{
