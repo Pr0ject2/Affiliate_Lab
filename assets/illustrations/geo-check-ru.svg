@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+<rect width="1200" height="560" rx="30" fill="#fbf7ec"/>
+<rect x="10" y="10" width="1180" height="540" rx="26" fill="none" stroke="#e6dcc7" stroke-width="2"/>
+<text x="600.0" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#17342d">Проверка GEO перед запуском</text>
+<rect x="70.0" y="170" width="244.0" height="230" rx="24" fill="#fffdf8" stroke="#e6dcc7" stroke-width="2"/>
+<circle cx="192.0" cy="232" r="34" fill="#0b5d4d"/>
+<text x="192.0" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="white">1</text>
+<text x="192.0" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17342d">GEO разрешено</text>
+<text x="192.0" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">сверьте список</text>
+<text x="192.0" y="381" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">партнёрки</text>
+<path d="M 321.0 285 H 335.0" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round"/>
+<path d="M 325.0 276 L 335.0 285 L 325.0 294" fill="none" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="342.0" y="170" width="244.0" height="230" rx="24" fill="#fffdf8" stroke="#e6dcc7" stroke-width="2"/>
+<circle cx="464.0" cy="232" r="34" fill="#0b5d4d"/>
+<text x="464.0" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="white">2</text>
+<text x="464.0" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17342d">Правила рекламы</text>
+<text x="464.0" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">ограничения</text>
+<text x="464.0" y="381" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">по стране</text>
+<path d="M 593.0 285 H 607.0" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round"/>
+<path d="M 597.0 276 L 607.0 285 L 597.0 294" fill="none" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="614.0" y="170" width="244.0" height="230" rx="24" fill="#fffdf8" stroke="#e6dcc7" stroke-width="2"/>
+<circle cx="736.0" cy="232" r="34" fill="#0b5d4d"/>
+<text x="736.0" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="white">3</text>
+<text x="736.0" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17342d">Регистрация и</text>
+<text x="736.0" y="331" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17342d">платежи</text>
+<text x="736.0" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">валюта, телефон,</text>
+<text x="736.0" y="394" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">методы пополнения</text>
+<path d="M 865.0 285 H 879.0" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round"/>
+<path d="M 869.0 276 L 879.0 285 L 869.0 294" fill="none" stroke="#0b5d4d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="886.0" y="170" width="244.0" height="230" rx="24" fill="#fffdf8" stroke="#e6dcc7" stroke-width="2"/>
+<circle cx="1008.0" cy="232" r="34" fill="#0b5d4d"/>
+<text x="1008.0" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="white">4</text>
+<text x="1008.0" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17342d">Тест ссылки</text>
+<text x="1008.0" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">проверьте путь</text>
+<text x="1008.0" y="381" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64716c">с нужного GEO</text>
+<rect x="70" y="438" width="1060" height="70" rx="18" fill="#edf5f1"/>
+<text x="600" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#17342d">Разрешённая страна ещё не означает готовую связку: проверьте весь путь игрока до оплаты.</text>
+</svg>
