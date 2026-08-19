@@ -169,3 +169,17 @@ window.alTrack=function(name,data){
     if(url) location.href=url;
   });
 })();
+
+
+/* v83: keyboard support for clickable service cards */
+(function(){
+  'use strict';
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Enter' && e.key!==' ') return;
+    const card=e.target.closest('.service-tool[data-card-link]');
+    if(!card || e.target.closest('a,button,input,select,textarea')) return;
+    e.preventDefault();
+    const url=card.dataset.cardLink;
+    if(url) location.href=url;
+  });
+})();
