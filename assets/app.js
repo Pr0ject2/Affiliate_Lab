@@ -1669,3 +1669,220 @@
  };
  addEventListener('scroll',updateRail,{passive:true});addEventListener('resize',updateRail);updateRail();
 })();
+
+/* ======================================================================
+   v99 — reference UI rebuild based on the approved Academy mockup.
+   Rebuilds the shell without changing the underlying educational content.
+   ====================================================================== */
+(()=>{
+  const initReferenceUI=()=>{
+    document.body.classList.add('reference-ui-v99');
+
+    const base='/Affiliate_Lab/';
+    const svg=(name)=>{
+      const common='viewBox="0 0 24 24" aria-hidden="true" focusable="false"';
+      const icons={
+        home:`<svg ${common}><path d="M3 11.2 12 4l9 7.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`,
+        start:`<svg ${common}><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8.8 15.2 12 10 15.2z" fill="currentColor"/></svg>`,
+        target:`<svg ${common}><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>`,
+        grid:`<svg ${common}><rect x="4" y="4" width="6" height="6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="4" width="6" height="6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="14" width="6" height="6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="6" height="6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>`,
+        traffic:`<svg ${common}><path d="M5 18V9m7 9V5m7 13v-7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="m4 7 5-3 4 3 6-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+        guide:`<svg ${common}><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21.5z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 5.5v16" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>`,
+        tools:`<svg ${common}><path d="m14.4 5.2 4.4 4.4-8.7 8.7a2 2 0 0 1-2.8 0l-1.6-1.6a2 2 0 0 1 0-2.8z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m13 6.5 4.5 4.5" stroke="currentColor" stroke-width="1.7"/></svg>`,
+        chart:`<svg ${common}><path d="M4 19V5m0 14h16" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m7 15 3.2-4 3 2 4.8-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+        calc:`<svg ${common}><rect x="5" y="3.5" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 7h8M8 11h2m3 0h3m-8 4h2m3 0h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+        journal:`<svg ${common}><rect x="5" y="3.5" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+        article:`<svg ${common}><path d="M6 3.5h9l3 3V20.5H6z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M15 3.5v3h3M9 11h6M9 15h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+        book:`<svg ${common}><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>`,
+        services:`<svg ${common}><rect x="4" y="4" width="6" height="6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="4" width="6" height="6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="14" width="6" height="6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M17 14v6m-3-3h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+        info:`<svg ${common}><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 10v6M12 7.5h.01" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>`,
+        search:`<svg ${common}><circle cx="10.5" cy="10.5" r="5.7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15 15 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+        star:`<svg ${common}><path d="m12 3.8 2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6L7.1 19l.9-5.5-4-3.9 5.5-.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>`,
+        moon:`<svg ${common}><path d="M18.5 15.7A7.8 7.8 0 0 1 8.3 5.5 7.8 7.8 0 1 0 18.5 15.7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>`
+      };
+      return icons[name]||icons.article;
+    };
+
+    const currentPath=location.pathname;
+    const active=(href)=>{
+      if(href===base) return currentPath===base || currentPath===base+'index.html';
+      return currentPath.startsWith(href);
+    };
+    const groups=[
+      {title:'ГЛАВНАЯ',links:[
+        ['Главная',base,'home'],['С чего начать',base+'start/','start'],['Подобрать источник',base+'traffic/sources/','target'],['Сравнение источников',base+'traffic/compare/','grid']
+      ]},
+      {title:'ПРАКТИКА',links:[
+        ['Источники трафика',base+'traffic/','traffic'],['Практические гайды',base+'practice/','guide'],['Диагностика и ошибки',base+'diagnostics/','tools'],['Аналитика',base+'analytics/','chart'],['Калькуляторы',base+'tools/','calc']
+      ]},
+      {title:'БИБЛИОТЕКА',links:[
+        ['Журнал тестов',base+'notes/','journal'],['Статьи',base+'guides/','article'],['Обзоры',base+'basics/','book'],['Словарь терминов',base+'glossary/','book']
+      ]},
+      {title:'ИНСТРУМЕНТЫ',links:[
+        ['Сервисы',base+'services/','services'],['Шаблоны и чек-листы',base+'cheatsheets/','guide'],['Трекеры и аналитика',base+'guides/tracker-for-beginner/','chart']
+      ]}
+    ];
+
+    const sidebar=document.querySelector('.global-sidebar');
+    if(sidebar){
+      sidebar.innerHTML=`
+        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/academy-cap.png" alt=""><span><b>iGaming</b><strong>Traffic Academy</strong></span></a>
+        <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
+          const hasActive=g.links.some(l=>active(l[1]));
+          return `<section class="ref-nav-group is-open${hasActive?' has-active':''}" data-ref-group="${gi}">
+            <button class="ref-nav-heading" type="button" aria-expanded="true"><span>${g.title}</span><i>⌄</i></button>
+            <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"><span class="ref-nav-icon">${svg(icon)}</span><span>${label}</span></a>`).join('')}</nav>
+          </section>`
+        }).join('')}</div>
+        <a class="ref-partner-card" href="${base}guides/1win-rules/"><b>1win Partners: правила и GEO</b><span>Актуальные выплаты, условия и список разрешённых GEO.</span><em>Открыть <span>→</span></em></a>
+        <button class="ref-sidebar-collapse" type="button" data-ref-sidebar-collapse><span>←</span> Свернуть меню</button>`;
+
+      sidebar.querySelectorAll('.ref-nav-heading').forEach(btn=>btn.addEventListener('click',()=>{
+        const group=btn.closest('.ref-nav-group');
+        const next=!group.classList.contains('is-open');
+        group.classList.toggle('is-open',next);
+        btn.setAttribute('aria-expanded',next?'true':'false');
+      }));
+      const collapse=sidebar.querySelector('[data-ref-sidebar-collapse]');
+      if(collapse)collapse.addEventListener('click',()=>document.body.classList.toggle('ref-sidebar-collapsed'));
+    }
+
+    const header=document.querySelector('.site-header');
+    if(header){
+      let crumbHtml='<a href="'+base+'">Главная</a>';
+      const articleCrumbs=document.querySelector('.breadcrumbs');
+      if(articleCrumbs){
+        const parts=[...articleCrumbs.querySelectorAll('a,span')].map(el=>({text:(el.textContent||'').trim(),href:el.tagName==='A'?el.getAttribute('href'):''})).filter(x=>x.text&&x.text!=='/');
+        if(parts.length){
+          crumbHtml='<a href="'+base+'">Главная</a>'+parts.map(p=>`<span>›</span>${p.href?`<a href="${p.href}">${p.text}</a>`:`<b>${p.text}</b>`}`).join('');
+        }
+      }
+      header.innerHTML=`<div class="ref-topbar">
+        <div class="ref-mobile-brand"><img src="${base}assets/academy-cap.png" alt=""><b>iGaming Traffic Academy</b></div>
+        <nav class="ref-topbar-crumbs">${crumbHtml}</nav>
+        <div class="ref-topbar-actions">
+          <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>
+          <button class="ref-theme-button" type="button" data-theme-toggle aria-label="Переключить тему"><span class="theme-toggle-icon">☾</span></button>
+          <a class="ref-top-favorite" href="${base}saved/">${svg('star')}<span>В избранное</span></a>
+          <div class="ref-top-progress"><span>Прогресс в разделе</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
+          <button class="ref-mobile-menu" type="button" data-ref-mobile-menu aria-label="Открыть меню">☰</button>
+        </div>
+      </div>`;
+      const search=header.querySelector('.ref-top-search input');
+      document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search&&search.focus();}});
+      const mobileMenu=header.querySelector('[data-ref-mobile-menu]');
+      if(mobileMenu&&sidebar)mobileMenu.addEventListener('click',()=>document.body.classList.toggle('ref-mobile-nav-open'));
+    }
+
+    // Reference page summary for source playbooks.
+    const article=document.querySelector('.source-playbook-article');
+    if(article){
+      const slug=(location.pathname.match(/\/traffic\/sources\/([^/]+)/)||[])[1]||'source';
+      const data={
+        youtube:{title:'YouTube (длинные видео)',subtitle:'Полное руководство по созданию и развитию каналов с длинными видео в нише iGaming.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'все разрешённые',time:'2–4 недели',accent:'#ff2b25'},
+        'vk-video':{title:'VK Видео',subtitle:'Пошаговый запуск длинных видео и клипов с раздельной аналитикой до первого депозита.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по офферу',time:'1–3 недели',accent:'#2787f5'},
+        telegram:{title:'Telegram',subtitle:'Полное руководство по каналу, контенту, разметке и переходу от подписчика к игроку.',difficulty:'Средняя',start:'1–3 дня',traffic:'свой / покупной',geo:'по офферу',time:'3–10 дней',accent:'#2aabee'},
+        'content-site':{title:'Контентный сайт',subtitle:'SEO-трафик на статьи, подборки и страницы под конкретный поисковый спрос.',difficulty:'Выше средней',start:'от 1 недели',traffic:'поисковый',geo:'по офферу',time:'4–12 недель',accent:'#18795a'},
+        search:{title:'Поисковый трафик',subtitle:'Как собирать спрос из поиска и доводить пользователя до партнёрского перехода.',difficulty:'Выше средней',start:'от 1 недели',traffic:'органический',geo:'по запросам',time:'4–12 недель',accent:'#18795a'},
+        paid:{title:'Платный трафик',subtitle:'Пошаговая схема теста рекламной связки с лимитами, трекингом и контролем качества.',difficulty:'Высокая',start:'от 1 дня',traffic:'платный',geo:'строго по офферу',time:'1–7 дней',accent:'#ef8b28'},
+        social:{title:'Социальные сети',subtitle:'Контентные ленты, короткий путь до оффера и серия публикаций вместо оценки одного поста.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по площадке',time:'3–10 дней',accent:'#8a5be8'},
+        'short-video':{title:'Короткие видео',subtitle:'Shorts, Reels, клипы и другие вертикальные форматы с отдельной разметкой каждого ролика.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по площадке',time:'3–10 дней',accent:'#e04f87'},
+        streams:{title:'Стримы',subtitle:'Как превратить эфир, запись и нарезки в измеримую воронку до регистрации и депозита.',difficulty:'Средняя',start:'2–3 дня',traffic:'органический',geo:'по офферу',time:'1–2 недели',accent:'#9b59b6'},
+        communities:{title:'Сообщества и форумы',subtitle:'Работа с тематическими площадками, контекстом обсуждений и отдельной меткой на каждое размещение.',difficulty:'Средняя',start:'1–2 дня',traffic:'органический',geo:'по аудитории',time:'3–10 дней',accent:'#4f7a61'},
+        reddit:{title:'Reddit',subtitle:'Работа с сабреддитами, правилами сообществ и контентом, который не выглядит чужой рекламой.',difficulty:'Средняя',start:'1–3 дня',traffic:'органический',geo:'по сообществу',time:'1–2 недели',accent:'#ff4500'},
+        dzen:{title:'Дзен',subtitle:'Статьи, короткие публикации и последовательный тест тем с раздельной аналитикой.',difficulty:'Средняя',start:'1–3 дня',traffic:'органический',geo:'по аудитории',time:'1–3 недели',accent:'#222'},
+        mailing:{title:'Рассылки',subtitle:'Собственная база, доставка, сегментация и измерение перехода до продукта без спама.',difficulty:'Средняя',start:'1–3 дня',traffic:'собственная база',geo:'по базе',time:'3–7 дней',accent:'#1a7f5a'},
+        'x-twitter':{title:'X / Twitter',subtitle:'Публичная лента, тематические треды и измеримый путь от поста до партнёрской ссылки.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по аудитории',time:'3–10 дней',accent:'#111'},
+        'alt-video':{title:'Другие видеохостинги',subtitle:'Как тестировать дополнительные видеоплощадки отдельно от основного YouTube-канала.',difficulty:'Средняя',start:'1–3 дня',traffic:'органический',geo:'по площадке',time:'1–3 недели',accent:'#4d67d7'}
+      }[slug]||{title:document.querySelector('h1')?.textContent||'Источник трафика',subtitle:document.querySelector('.lead')?.textContent||'',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по офферу',time:'1–2 недели',accent:'#169766'};
+
+      const h1=article.querySelector('h1'); if(h1)h1.textContent=data.title;
+      const lead=article.querySelector('.source-hero-shell>.lead'); if(lead)lead.textContent=data.subtitle;
+      const icon=article.querySelector('.source-hero-icon');
+      if(icon){icon.style.setProperty('--source-accent',data.accent); if(slug==='youtube')icon.innerHTML='<span class="ref-play-triangle"></span>';}
+      const titleRow=article.querySelector('.source-title-row');
+      if(titleRow&&!titleRow.querySelector('.ref-launch-time'))titleRow.insertAdjacentHTML('beforeend',`<div class="ref-launch-time"><span>◷</span><small>Время на запуск</small><b>${data.time}</b></div>`);
+      const oldFacts=article.querySelector('.playbook-facts');
+      if(oldFacts){oldFacts.innerHTML=`<div><dt>Сложность</dt><dd>${data.difficulty}</dd></div><div><dt>Старт</dt><dd>${data.start}</dd></div><div><dt>Трафик</dt><dd>${data.traffic}</dd></div><div><dt>GEO</dt><dd>${data.geo}</dd></div>`;}
+
+      const tabs=article.querySelector('.source-section-tabs');
+      if(tabs){[...tabs.querySelectorAll('a')].forEach((a,i)=>{if(i>0&&!a.querySelector('span'))a.insertAdjacentHTML('afterbegin',`<span>${i}</span>`);});}
+
+      const how=article.querySelector('#how');
+      if(how&&!article.querySelector('.ref-source-funnel')){
+        const sourceLabel={youtube:'Поиск / Рекомендации',telegram:'Канал / Пост',paid:'Рекламное объявление',search:'Поисковый запрос','content-site':'Поиск / Статья','short-video':'Лента / Рекомендации',streams:'Эфир / Запись',reddit:'Сабреддит / Тред',communities:'Сообщество / Пост',social:'Лента / Пост','vk-video':'Поиск / Рекомендации',dzen:'Лента / Поиск',mailing:'Письмо / Push','x-twitter':'Лента / Тред','alt-video':'Поиск / Рекомендации'}[slug]||'Источник / Контент';
+        how.insertAdjacentHTML('beforeend',`<div class="ref-source-funnel"><div><i>${svg('search')}</i><b>${sourceLabel}</b><small>Пользователь видит контент</small></div><em>→</em><div><i>${svg('start')}</i><b>Просмотр контента</b><small>Получает интерес и доверие</small></div><em>→</em><div><i>${svg('target')}</i><b>Переход по ссылке</b><small>Описание, пост или профиль</small></div><em>→</em><div><i>${svg('home')}</i><b>Регистрация</b><small>Переходит к продукту</small></div></div>`);
+      }
+
+      // Move screenshots lower: keep the first screen clean, preserve them in the detailed part.
+      const visual=article.querySelector('.source-visual-section');
+      const launch=article.querySelector('#launch-plan');
+      if(visual&&launch)launch.insertAdjacentElement('afterend',visual);
+      const setup=article.querySelector('#setup');
+      if(setup&&launch)launch.insertAdjacentElement('afterend',setup);
+
+      const prepare=article.querySelector('#prepare');
+      if(prepare){
+        const hh=prepare.querySelector('h2'); if(hh)hh.textContent='Подготовка к запуску';
+        [...prepare.querySelectorAll('.playbook-checklist>li')].forEach((li,i)=>li.setAttribute('data-ref-icon',['chart','target','home','journal','tools'][i]||'target'));
+      }
+
+      const formats=article.querySelector('#formats');
+      if(formats){
+        const fh=formats.querySelector('h2'); if(fh)fh.textContent='Примеры форматов';
+        if(slug==='youtube'&&!formats.querySelector('.ref-format-showcase')){
+          formats.insertAdjacentHTML('beforeend',`<div class="ref-format-showcase">
+            <article class="ref-format-card f1"><div><b>ТОП ЗАНОСОВ</b><span>НЕДЕЛИ</span></div><strong>Топ заносов недели</strong><small>Сборники игровых моментов</small></article>
+            <article class="ref-format-card f2"><div><b>СТРАТЕГИИ</b><span>В СЛОТАХ</span></div><strong>Разборы слотов</strong><small>Механики и игровые сценарии</small></article>
+            <article class="ref-format-card f3"><div><b>БОНУС</b><span>ХАНТ</span></div><strong>Бонус-ханты</strong><small>Покупка бонусов и поиск заносов</small></article>
+            <article class="ref-format-card f4"><div><b>LIVE</b><span>STREAM</span></div><strong>Стримы и марафоны</strong><small>Живые игровые сессии</small></article>
+            <article class="ref-format-card f5"><div><b>ОБЗОРЫ</b><span>КАЗИНО</span></div><strong>Обзоры казино</strong><small>Условия, бонусы и особенности</small></article>
+          </div>`);
+        }
+      }
+
+      const risk=article.querySelector('.source-hero-shell>.playbook-risk');
+      if(risk&&formats&&!article.querySelector('.ref-tip-strip')){
+        const text=(risk.querySelector('p')?.textContent||'Перед запуском проверь правила площадки и условия оффера.').trim();
+        formats.insertAdjacentHTML('afterend',`<div class="ref-tip-strip"><span>☼</span><p>${text}</p></div>`);
+        risk.hidden=true;
+      }
+
+      const tracking=article.querySelector('#tracking');
+      const metrics=article.querySelector('#metrics');
+      if(tracking&&metrics&&!article.querySelector('.ref-summary-grid')){
+        const list=[...tracking.querySelectorAll('li')].slice(0,4).map(li=>`<li>${li.innerHTML}</li>`).join('')||'<li>Разделяй источники и точки перехода отдельными метками.</li>';
+        const summary=document.createElement('section');
+        summary.className='ref-summary-grid';
+        summary.innerHTML=`<div class="ref-track-card"><h2>Разметка и трекинг</h2><ul>${list}</ul></div><div class="ref-metrics-card"><h2>Ключевые метрики</h2><div class="ref-metrics-row">${['Просмотры','CTR в описании','Регистрации','FTD','Доход'].map((x,i)=>`<div><small>${x}</small><b>—</b><span>${i===0?'снять после теста':'по своей метке'}</span></div>`).join('')}</div></div>`;
+        const summaryAnchor=article.querySelector('.ref-tip-strip')||formats||metrics; summaryAnchor.insertAdjacentElement('afterend',summary);
+      }
+
+      const toolkit=article.querySelector('#source-tools .source-toolkit-grid');
+      if(toolkit&&!article.querySelector('.ref-connected-tools')){
+        const items=[...toolkit.querySelectorAll('.source-tool-card')].slice(0,5).map(a=>`<a href="${a.href}" target="_blank" rel="${a.rel}"><span>${(a.querySelector('b')?.textContent||'Tool').slice(0,2)}</span><b>${a.querySelector('b')?.textContent||'Инструмент'}</b><small>${a.querySelector('.source-tool-card-top')?.textContent||''}</small></a>`).join('');
+        const block=document.createElement('section');block.className='ref-connected-tools';block.innerHTML=`<h2>Связанные инструменты</h2><div>${items}</div>`;
+        const summary=article.querySelector('.ref-summary-grid'); (summary||metrics).insertAdjacentElement('afterend',block);
+      }
+    }
+
+    // Global article rail uses the approved light visual hierarchy.
+    const rail=document.querySelector('.article-aside.enhanced-rail');
+    if(rail){
+      const toc=rail.querySelector('.rail-toc'); if(toc){const b=toc.querySelector(':scope>b'); if(b)b.textContent='Содержание';}
+      const related=rail.querySelector('.rail-related-visual'); if(related){const b=related.querySelector(':scope>b'); if(b)b.textContent='Похожие гайды';}
+    }
+
+    // Reading progress in the top bar.
+    const progressValue=document.querySelector('[data-ref-progress-value]');
+    const progressBar=document.querySelector('[data-ref-progress-bar]');
+    const updateProgress=()=>{
+      const main=document.querySelector('main'); if(!main)return;
+      const top=main.offsetTop; const total=Math.max(1,main.scrollHeight-innerHeight*.75); const pct=Math.max(0,Math.min(100,((scrollY-top)/total)*100));
+      if(progressValue)progressValue.textContent=Math.round(pct)+'%';
+      if(progressBar)progressBar.style.width=pct+'%';
+    };
+    addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initReferenceUI); else initReferenceUI();
+})();
