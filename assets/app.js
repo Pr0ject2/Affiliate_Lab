@@ -1781,7 +1781,7 @@
         }
       }
       header.innerHTML=`<div class="ref-topbar">
-        <div class="ref-mobile-brand"><img src="${base}assets/academy-cap.png" alt=""><b>iGaming Traffic Academy</b></div>
+        <a class="ref-mobile-brand" href="${base}" aria-label="iGaming Traffic Academy — на главную"><img src="${base}assets/academy-cap.png" alt=""><b>iGaming Traffic Academy</b></a>
         <nav class="ref-topbar-crumbs">${crumbHtml}</nav>
         <div class="ref-topbar-actions">
           <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>

@@ -9584,3 +9584,305 @@ html body.theme-dark main.compact-main-v103 .wrap.source-compare-note {
 html body.theme-dark .source-compare-note strong {
   color: #edf2f5 !important;
 }
+
+
+/* ======================================================================
+   v117b — dark article surface, button cleanup, stronger contrast, image text centering
+   ====================================================================== */
+
+/* In dark theme, section wrappers should blend with the page instead of forming a lighter slab. */
+html body.theme-dark :is(.section-groups,.section-bottom-links,.library-shell,.library-main,.catalog-bar){
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Repaint remaining light buttons in dark mode. */
+html body.theme-dark :is(
+  .section-bottom-links a,
+  .guide-v101-next a,
+  .guide-v101-diagnostics a,
+  .traffic-next a,
+  .playbook-official a,
+  .source-compare-actions a,
+  .article-cta-row a,
+  .section-entry span,
+  .section-outcome a,
+  .section-feature a,
+  .section-card a,
+  .playbook-head-actions a
+){
+  background:#171c22 !important;
+  background-image:none !important;
+  color:#8fd8bf !important;
+  border-color:#2f3843 !important;
+  box-shadow:none !important;
+}
+html body.theme-dark :is(
+  .section-bottom-links a:hover,
+  .guide-v101-next a:hover,
+  .guide-v101-diagnostics a:hover,
+  .traffic-next a:hover,
+  .playbook-official a:hover,
+  .source-compare-actions a:hover,
+  .article-cta-row a:hover,
+  .playbook-head-actions a:hover
+){
+  background:#1d232b !important;
+  color:#b0ecd6 !important;
+  border-color:#40505d !important;
+}
+
+/* Increase contrast of muted text that still sinks into the dark background. */
+html body.theme-dark :is(
+  .source-hero-shell > .lead,
+  .article .lead,
+  .guide-v101-hero .lead,
+  .article-aside.enhanced-rail .rail-toc a,
+  .article-aside.enhanced-rail .rail-toc b,
+  .article-aside.enhanced-rail .aside-block p,
+  .section-entry p,
+  .section-outcome p,
+  .guide-v101-formats p,
+  .guide-v101-grid p,
+  .guide-v101-verdict p,
+  .guide-v101-flow p,
+  .guide-v101-diagnostics a,
+  .related-card p,
+  .library-row p,
+  .service-tool p,
+  .tool-card p,
+  .about-card p
+){
+  color:#cbd4db !important;
+}
+html body.theme-dark .article-aside.enhanced-rail .rail-toc a{opacity:1 !important}
+html body.theme-dark .article-aside.enhanced-rail .rail-toc a:hover,
+html body.theme-dark .article-aside.enhanced-rail .rail-toc a[aria-current="true"]{
+  color:#edf2f5 !important;
+}
+html body.theme-dark .source-hero-shell > .lead,
+html body.theme-dark .article .lead,
+html body.theme-dark .guide-v101-hero .lead{
+  color:#d2dbe2 !important;
+}
+
+/* Keep dark cards readable, including entry cards and CTA strips. */
+html body.theme-dark :is(.section-entry,.section-outcome,.section-feature>div,.section-feature>aside){
+  background:#171c22 !important;
+  border-color:#2f3843 !important;
+}
+html body.theme-dark :is(.section-entry b,.section-outcome b,.section-feature h2,.section-feature h3){
+  color:#edf2f5 !important;
+}
+html body.theme-dark .section-entry span{display:inline-flex!important;align-items:center!important}
+
+/* Center the typography vertically inside the source-format art blocks. */
+html body .guide-v101-format-art{
+  justify-content:center !important;
+}
+
+
+/* ======================================================================
+   v118 — unified readable typography
+   Keep hierarchy in headings, but normalize ordinary reading text.
+   ====================================================================== */
+:root{
+  --academy-text-base:16px;
+  --academy-text-secondary:14px;
+  --academy-text-meta:12px;
+}
+
+/* Main reading text: one comfortable size across articles and guides. */
+html body.reference-ui-v99 :is(
+  .article p,.article li,.article dd,
+  .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+  .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+  .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd,
+  .academy-content-section p,.academy-content-section li,.academy-content-section dd
+){
+  font-size:var(--academy-text-base)!important;
+  line-height:1.65!important;
+}
+
+/* Lead paragraphs stay only slightly larger than body copy. */
+html body.reference-ui-v99 :is(
+  .source-hero-shell>.lead,
+  .academy-article-hero .lead,
+  .article>.lead,
+  .guide-v101-hero .lead,
+  .page-head p,
+  .home-lead
+){
+  font-size:17px!important;
+  line-height:1.62!important;
+}
+
+/* Cards and compact explanatory blocks use the same readable body size. */
+html body.reference-ui-v99 :is(
+  .home-entry-grid>a p,.home-source-grid>a p,
+  .section-entry p,.section-outcome p,.section-feature p,
+  .playbook-card>p,.playbook-card-risk,
+  .service-card p,.service-tool p,.service-tool dd,
+  .tool-card p,.big-tool-head p,.tool-source-note,.big-tool-foot,
+  .about-card p,.about-principle-grid-v114 p,.about-route-v114 p,.about-boundaries-v114 li,
+  .library-row p,.related-card p,.traffic-next p,
+  .guide-v101-grid p,.guide-v101-formats p,.guide-v101-callout p,
+  .guide-v101-timeline p,.guide-v101-media figcaption,.guide-v101-link-options p,
+  .guide-v101-link-options li,.guide-v101-steps p,.guide-v101-diagnostics p,
+  .guide-v101-scale p,.guide-v101-next span,
+  .playbook-faq summary,.playbook-faq details p,
+  .playbook-checklist li,.platform-setup>div,.playbook-format-list dd,
+  .traffic-diagnostic-list li,.source-tool-card-copy,
+  .ref-tip-strip p,.ref-format-card>small,.ref-source-funnel small,
+  .rules-summary-grid p,.rules-model-grid li,.geo-chip-grid li
+){
+  font-size:15px!important;
+  line-height:1.6!important;
+}
+
+/* Compact titles: fewer arbitrary sizes, still visibly stronger than body copy. */
+html body.reference-ui-v99 :is(
+  .section-entry b,.home-entry-grid>a b,.home-source-grid>a b,
+  .service-tool h3,.tool-card h3,.guide-v101-grid h3,
+  .guide-v101-formats h3,.guide-v101-link-options h3,
+  .guide-v101-steps b,.guide-v101-diagnostics b,.guide-v101-next b,
+  .source-tool-card>b,.ref-format-card>strong,.ref-source-funnel b,
+  .rail-quick a strong
+){
+  font-size:16px!important;
+  line-height:1.4!important;
+}
+
+/* Facts, metadata and captions: normalized secondary tier, no microscopic text. */
+html body.reference-ui-v99 :is(
+  .playbook-facts dt,.playbook-facts dd,
+  .home-welcome-summary b,.home-welcome-summary span,
+  .playbook-risk b,.playbook-risk p,
+  .guide-v101-flow b,.guide-v101-flow small,
+  .guide-v101-code>b,.guide-v101-code code,.guide-v101-code dt,.guide-v101-code dd,
+  .guide-v101-funnel-table b,.guide-v101-funnel-table span,.guide-v101-funnel-table small,
+  .ref-metrics-row small,.ref-metrics-row span,
+  .article-figure figcaption,.source-journey-card figcaption,
+  .rail-tools a small,.rail-related-visual span,.rail-quick a small
+){
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+html body.reference-ui-v99 .playbook-facts dd{
+  font-size:14px!important;
+  line-height:1.45!important;
+}
+
+/* Right article rail was noticeably smaller than the rest of the interface. */
+html body.reference-ui-v99 .article-aside.enhanced-rail :is(.rail-toc a,.aside-block a,.aside-block span){
+  font-size:13px!important;
+  line-height:1.48!important;
+}
+html body.reference-ui-v99 .article-aside.enhanced-rail :is(.rail-toc>b,.aside-block>b){
+  font-size:13px!important;
+  line-height:1.4!important;
+}
+
+/* Buttons and text links use one stable interface size. */
+html body.reference-ui-v99 :is(
+  .home-actions a,.article-cta-row a,.source-compare-actions a,.playbook-head-actions a,
+  .playbook-official a,.service-open-link,.button-primary,.service-inline-primary,
+  .section-bottom-links a,.article-exit-nav a,.next-reading a,.starter-next,
+  .rail-all-tools,.bookmark-button,.saved-link
+){
+  font-size:14px!important;
+  line-height:1.35!important;
+}
+
+/* Labels are allowed to be smaller, but no longer tiny 8–10px text. */
+html body.reference-ui-v99 :is(
+  .article-label,.overline,.sidebar-group-title,.playbook-card-top,
+  .source-title-copy .article-label,.service-kicker,.about-nav-card-v114>span,
+  .about-section-head-v114>span
+){
+  font-size:12px!important;
+  line-height:1.35!important;
+}
+
+/* Forms should match the body copy instead of feeling visually smaller. */
+html body.reference-ui-v99 :is(input,select,textarea,button){
+  font-size:15px!important;
+}
+
+/* Mobile keeps the same body size; only headings scale down. */
+@media(max-width:900px){
+  html body.reference-ui-v99 :is(
+    .article p,.article li,.article dd,
+    .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+    .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+    .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd
+  ){
+    font-size:16px!important;
+    line-height:1.62!important;
+  }
+  html body.reference-ui-v99 :is(.source-hero-shell>.lead,.academy-article-hero .lead,.article>.lead,.page-head p){
+    font-size:16px!important;
+    line-height:1.58!important;
+  }
+}
+
+
+/* ======================================================================
+   v119 — restore wide green mobile top bar
+   ====================================================================== */
+@media (max-width:900px){
+  :root{--v110-mobile-header:64px!important}
+  html body .site-header,
+  html body.reference-ui-v99 .site-header,
+  html body.theme-dark .site-header,
+  html body.reference-ui-v99.theme-dark .site-header{
+    background:#17493d!important;
+    border-bottom:1px solid rgba(255,255,255,.12)!important;
+    box-shadow:0 6px 18px rgba(10,28,22,.16)!important;
+  }
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .ref-topbar{
+    padding:0 14px!important;
+    gap:10px!important;
+  }
+  html body .site-header .brand-logo,
+  html body.reference-ui-v99 .ref-mobile-brand img{
+    width:33px!important;
+    height:31px!important;
+    flex-basis:33px!important;
+  }
+  html body .site-header .brand-text b,
+  html body.reference-ui-v99 .ref-mobile-brand b{
+    font-size:12.8px!important;
+  }
+  html body .site-header .theme-toggle,
+  html body .site-header .mobile-nav-toggle,
+  html body.reference-ui-v99 .ref-theme-button,
+  html body.reference-ui-v99 .ref-mobile-menu{
+    width:40px!important;
+    height:40px!important;
+    min-width:40px!important;
+    min-height:40px!important;
+    border-radius:10px!important;
+    background:rgba(0,0,0,.14)!important;
+    border-color:rgba(255,255,255,.18)!important;
+    color:#fff!important;
+  }
+}
+@media (max-width:430px){
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .ref-topbar{padding:0 12px!important}
+}
+
+/* v120 — mobile brand is a home link */
+@media (max-width:900px){
+  html body.reference-ui-v99 .ref-mobile-brand{
+    text-decoration:none!important;
+    cursor:pointer!important;
+  }
+  html body.reference-ui-v99 .ref-mobile-brand:focus-visible{
+    outline:2px solid rgba(255,255,255,.82)!important;
+    outline-offset:3px!important;
+    border-radius:8px!important;
+  }
+}
