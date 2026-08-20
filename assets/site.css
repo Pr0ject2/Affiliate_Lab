@@ -10595,3 +10595,247 @@ html body :is(
     font-size:16px!important;
   }
 }
+
+
+/* ======================================================================
+   v125 — make the article TOC rail more compact again
+   ====================================================================== */
+html body .article-aside.enhanced-rail .rail-toc li{margin:5px 0!important}
+html body .article-aside.enhanced-rail .rail-toc a{
+  font-size:12.6px!important;
+  line-height:1.38!important;
+  gap:6px!important;
+  padding:4px 0!important;
+}
+html body .article-aside.enhanced-rail .rail-toc li a:before{
+  font-size:9px!important;
+}
+html body .article-aside.enhanced-rail .aside-block>b{
+  font-size:13px!important;
+  margin-bottom:10px!important;
+}
+
+
+/* ======================================================================
+   v126 — proportional chips, aligned text, steadier article cards
+   ====================================================================== */
+
+/* Article metadata chips: equal height and centered rhythm. */
+html body .article-meta{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:10px!important;
+  padding:12px 0 16px!important;
+}
+html body .article-meta > *{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  min-height:38px!important;
+  padding:8px 12px!important;
+  border:1px solid #d7ddd9!important;
+  border-radius:9px!important;
+  line-height:1.25!important;
+  background:#fbfcfa!important;
+  box-sizing:border-box!important;
+  text-align:left!important;
+}
+html body .article-meta > * b,
+html body .article-meta > * strong{
+  line-height:1.2!important;
+}
+html body.theme-dark .article-meta > *{
+  background:#191e25!important;
+  border-color:#2b333d!important;
+}
+
+/* Simple article metric / measurement lists: consistent cards and aligned copy. */
+html body .playbook-measurement ul,
+html body .playbook-fit-plain ul,
+html body .field-case-plain ul{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;
+  margin:14px 0 20px!important;
+  padding:0!important;
+  list-style:none!important;
+}
+html body .playbook-measurement li,
+html body .playbook-fit-plain li,
+html body .field-case-plain li{
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  min-height:78px!important;
+  margin:0!important;
+  padding:14px 14px 15px!important;
+  border:1px solid #dbe2dd!important;
+  border-radius:10px!important;
+  background:#fbfcfa!important;
+  box-sizing:border-box!important;
+  text-align:left!important;
+  line-height:1.5!important;
+  color:#35413c!important;
+  text-wrap:pretty!important;
+}
+html body.theme-dark .playbook-measurement li,
+html body.theme-dark .playbook-fit-plain li,
+html body.theme-dark .field-case-plain li{
+  background:#191e25!important;
+  border-color:#2b333d!important;
+  color:#edf1f4!important;
+}
+
+/* Cards and grid items: keep content on one visual baseline. */
+html body :is(
+  .section-entry,.section-outcome,.tool-card,.service-tool,.about-card,
+  .guide-v101-grid>div,.guide-v101-formats article,.source-tool-card,
+  .traffic-next a,.traffic-hub-basics>div,.playbook-card,.next-reading a
+){
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  text-align:left!important;
+}
+html body :is(
+  .section-entry b,.section-entry p,
+  .guide-v101-grid h3,.guide-v101-grid p,
+  .guide-v101-formats h3,.guide-v101-formats p,
+  .source-tool-card>b,.source-tool-card-copy,
+  .playbook-card h2,.playbook-card p,
+  .next-reading b,.next-reading span
+){
+  width:100%!important;
+  text-align:left!important;
+}
+
+/* Avoid narrow last columns / floating single items in 3-col metric blocks. */
+@media (max-width:1160px){
+  html body .playbook-measurement ul,
+  html body .playbook-fit-plain ul,
+  html body .field-case-plain ul{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media (max-width:720px){
+  html body .playbook-measurement ul,
+  html body .playbook-fit-plain ul,
+  html body .field-case-plain ul{
+    grid-template-columns:1fr!important;
+  }
+  html body .playbook-measurement li,
+  html body .playbook-fit-plain li,
+  html body .field-case-plain li{
+    min-height:0!important;
+  }
+  html body .article-meta > *{
+    min-height:36px!important;
+  }
+}
+
+
+/* ======================================================================
+   v127 — prettier numbering chips across structured articles
+   ====================================================================== */
+
+/* Numbered section headings in structured guides. */
+body.content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+  grid-template-columns:46px minmax(0,1fr)!important;
+  gap:14px!important;
+  align-items:start!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-index-v103{
+  display:grid!important;
+  place-items:center!important;
+  width:40px!important;
+  min-width:40px!important;
+  height:28px!important;
+  padding:0 8px!important;
+  margin-top:2px!important;
+  border:1px solid #d9e7e0!important;
+  border-radius:999px!important;
+  background:linear-gradient(180deg,#f4faf7 0%,#e7f2ec 100%)!important;
+  color:#1a7054!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.88)!important;
+  font-size:11px!important;
+  font-weight:850!important;
+  letter-spacing:.08em!important;
+  line-height:1!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  border-color:#ead7b7!important;
+  background:linear-gradient(180deg,#fbf4e7 0%,#f2e5cf 100%)!important;
+  color:#8c6227!important;
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-index-v103{
+  border-color:#365147!important;
+  background:linear-gradient(180deg,#1c2b26 0%,#16231f 100%)!important;
+  color:#8dd2b8!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  border-color:#5b4a33!important;
+  background:linear-gradient(180deg,#2b241b 0%,#241f17 100%)!important;
+  color:#d9bd8c!important;
+}
+
+/* Step numbers and numbered mini-cards: one calm visual language. */
+html body :is(
+  .source-playbook-page .playbook-steps>li>span:first-child,
+  .source-playbook-article .guide-v101-steps li>span,
+  .platform-setup li>span,
+  .guide-v101-grid>div>span
+){
+  display:grid!important;
+  place-items:center!important;
+  min-width:34px!important;
+  height:28px!important;
+  padding:0 9px!important;
+  margin:0!important;
+  border:1px solid #dbe7e1!important;
+  border-radius:999px!important;
+  background:linear-gradient(180deg,#f3faf6 0%,#e8f3ee 100%)!important;
+  color:#166d50!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.88)!important;
+  font-size:10.5px!important;
+  font-weight:850!important;
+  letter-spacing:.06em!important;
+  line-height:1!important;
+}
+html body .guide-v101-grid>div>span{
+  width:max-content!important;
+  margin-bottom:10px!important;
+}
+html body .platform-setup li>span,
+html body .source-playbook-page .playbook-steps>li>span:first-child,
+html body .source-playbook-article .guide-v101-steps li>span{
+  width:34px!important;
+  padding:0!important;
+}
+html body.theme-dark :is(
+  .source-playbook-page .playbook-steps>li>span:first-child,
+  .source-playbook-article .guide-v101-steps li>span,
+  .platform-setup li>span,
+  .guide-v101-grid>div>span
+){
+  border-color:#355045!important;
+  background:linear-gradient(180deg,#1b2a25 0%,#16231f 100%)!important;
+  color:#8bd1b6!important;
+  box-shadow:none!important;
+}
+
+@media (max-width:900px){
+  body.content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+    grid-template-columns:42px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  body.content-system-v103 .structured-article-v103 .logic-index-v103{
+    width:36px!important;
+    min-width:36px!important;
+    height:26px!important;
+    font-size:10px!important;
+  }
+}
