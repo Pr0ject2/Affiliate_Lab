@@ -9364,3 +9364,223 @@ html body.reference-ui-v99:not(.theme-dark) :is(
   background:#e1efe8!important;
   color:#103f31!important;
 }
+
+
+/* ======================================================================
+   v117 — source header cleanup, icon spacing fix, dark theme polish
+   ====================================================================== */
+
+/* Remove the right-side picture from traffic-source article headers. */
+html body .source-playbook-page .source-title-visual,
+html body.reference-ui-v99 main.source-playbook-page .source-title-visual {
+  display: none !important;
+}
+html body .source-playbook-page .source-title-row,
+html body.reference-ui-v99 main.source-playbook-page .source-title-row {
+  grid-template-columns: 56px minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 14px !important;
+}
+html body .source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon {
+  margin-top: 2px !important;
+}
+
+/* Fix cramped icons in checklist-style blocks. */
+html body .playbook-checklist li {
+  padding: 14px 16px 14px 46px !important;
+  min-height: 74px !important;
+}
+html body .playbook-checklist li:before {
+  left: 15px !important;
+  top: 14px !important;
+  width: 18px !important;
+  height: 18px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  background: #e8f4ee !important;
+  color: #156d4f !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+
+html body .rail-quick a {
+  position: relative !important;
+  display: block !important;
+  padding: 11px 12px 11px 44px !important;
+  min-height: 68px !important;
+}
+html body .rail-quick a:before {
+  left: 13px !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 999px !important;
+  font-size: 10px !important;
+}
+html body .rail-quick a strong {
+  display: block !important;
+  margin: 0 0 4px !important;
+  font-size: 12.2px !important;
+  line-height: 1.35 !important;
+}
+html body .rail-quick a small {
+  display: block !important;
+  margin: 0 !important;
+  font-size: 10.8px !important;
+  line-height: 1.45 !important;
+}
+
+/* FAQ rows: clearer spacing and stronger contrast. */
+html body .playbook-faq details {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+html body .playbook-faq summary {
+  list-style: none !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  padding: 13px 16px !important;
+}
+html body .playbook-faq summary::-webkit-details-marker {
+  display: none !important;
+}
+html body .playbook-faq summary::before {
+  content: "▸";
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #1f6e58;
+  font-size: 12px;
+  line-height: 1.2;
+}
+html body .playbook-faq details[open] summary::before {
+  transform: rotate(90deg);
+}
+html body .playbook-faq details p {
+  padding: 0 16px 14px 38px !important;
+}
+
+/* Dark theme: remove light islands and improve readability. */
+html body.theme-dark :is(
+  .rail-quick,
+  .rail-quick a,
+  .playbook-faq details,
+  .source-compare-actions a,
+  .article-cta-row a,
+  .playbook-head-actions a,
+  .playbook-official a,
+  .bookmark-button,
+  .saved-link,
+  .compare-table > div,
+  .source-compare-row > div,
+  .source-compare-row > div:first-child,
+  .rules-model-grid section,
+  .rules-summary-grid > div,
+  .geo-directory,
+  .geo-chip-grid li,
+  .geo-guideline-link,
+  .rail-tools a,
+  .playbook-method li,
+  .playbook-template-list span,
+  .playbook-decision article,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-format-card,
+  .ref-connected-tools a,
+  .playbook-facts > div
+) {
+  background: #171c22 !important;
+  background-image: none !important;
+  border-color: #2f3843 !important;
+  color: #edf2f5 !important;
+  box-shadow: none !important;
+}
+html body.theme-dark :is(
+  .source-compare-row.source-compare-head > div,
+  .compare-table > div:nth-child(3n+1),
+  .article th
+) {
+  background: #1d232b !important;
+  color: #edf2f5 !important;
+  border-color: #36404a !important;
+}
+html body.theme-dark :is(
+  .playbook-faq summary,
+  .rail-quick a strong,
+  .article-cta-row a,
+  .playbook-head-actions a,
+  .playbook-official a,
+  .bookmark-button,
+  .saved-link,
+  .source-compare-actions a,
+  .ref-metrics-row b,
+  .rail-tools a b,
+  .geo-directory b,
+  .rules-summary-grid b,
+  .rules-model-grid h3,
+  .article th
+) {
+  color: #edf2f5 !important;
+}
+html body.theme-dark :is(
+  .playbook-faq details p,
+  .rail-quick a small,
+  .source-compare-row > div,
+  .compare-table > div,
+  .rules-summary-grid p,
+  .rules-model-grid li,
+  .geo-chip-grid li,
+  .geo-chip-grid li small,
+  .geo-guideline-link,
+  .geo-guideline-link span,
+  .article td,
+  .article p,
+  .article li,
+  .article dd,
+  .source-playbook-article p,
+  .source-playbook-article li,
+  .source-playbook-article dd,
+  .playbook-facts dt
+) {
+  color: #c7d0d8 !important;
+}
+html body.theme-dark .playbook-facts dd {
+  color: #edf2f5 !important;
+}
+html body.theme-dark .playbook-checklist li:before,
+html body.theme-dark .rail-quick a:before {
+  background: #20312b !important;
+  color: #96e0c4 !important;
+}
+html body.theme-dark .playbook-faq summary::before {
+  color: #8fd8bf !important;
+}
+html body.theme-dark .playbook-faq summary {
+  background: #171c22 !important;
+  color: #edf2f5 !important;
+}
+html body.theme-dark .playbook-faq details {
+  border-color: #2f3843 !important;
+  background: #171c22 !important;
+}
+html body.theme-dark .playbook-risk {
+  background: #221f1a !important;
+  border-color: #584a35 !important;
+}
+html body.theme-dark .playbook-risk b {
+  color: #efd7ab !important;
+}
+html body.theme-dark .playbook-risk p {
+  color: #e3d6bc !important;
+}
+html body.theme-dark .source-compare-note,
+html body.theme-dark main.compact-main-v103 .wrap.source-compare-note {
+  background: #191e25 !important;
+  border-color: #2f3843 !important;
+  color: #c7d0d8 !important;
+}
+html body.theme-dark .source-compare-note strong {
+  color: #edf2f5 !important;
+}
