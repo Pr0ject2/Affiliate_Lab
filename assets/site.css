@@ -11247,3 +11247,352 @@ html body.theme-dark .autocomplete-box a>b{color:#eef3f1!important}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}html body *,html body *::before,html body *::after{animation:none!important;transition:none!important}}
 @media print{html body{background:#fff!important;color:#111!important}html body :is(.site-header,.global-sidebar,.mobile-nav-overlay,.article-aside,.site-footer,.article-actions,.article-exit-nav){display:none!important}html body :is(main,.compact-main-v103,.article-layout,.article){width:100%!important;max-width:none!important;margin:0!important;padding:0!important}html body a{color:#111!important;text-decoration:underline!important}}
+
+/* ======================================================================
+   v133 — home result panel spacing and contrast
+   ====================================================================== */
+html body.reference-ui-v99 main.home-page .home-results{
+  box-sizing:border-box!important;
+  padding:38px clamp(18px,3vw,34px) 48px!important;
+  background:#fbfcfa!important;
+}
+html body.reference-ui-v99 main.home-page .home-results>.wrap{
+  width:100%!important;
+  max-width:1440px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+}
+html body.reference-ui-v99 main.home-page .home-results .home-results-inner{
+  width:100%!important;
+  margin:0 auto!important;
+  padding:clamp(30px,3.4vw,46px)!important;
+  gap:clamp(24px,3.5vw,48px)!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  border-radius:15px!important;
+  background:#214f42!important;
+  color:#fff!important;
+  box-shadow:0 14px 34px rgba(23,61,50,.14)!important;
+}
+html body.reference-ui-v99 main.home-page .home-results .home-results-inner>div{
+  min-width:0!important;
+  padding:0!important;
+}
+html body.reference-ui-v99 main.home-page .home-results .home-results-inner>div>p{
+  margin:0 0 11px!important;
+  color:#f0cb98!important;
+  font-size:11.5px!important;
+  line-height:1.4!important;
+}
+html body.reference-ui-v99 main.home-page .home-results .home-results-inner h2{
+  margin:0 0 12px!important;
+  color:#fff!important;
+  font-size:clamp(29px,3vw,40px)!important;
+  line-height:1.12!important;
+  letter-spacing:-.025em!important;
+}
+html body.reference-ui-v99 main.home-page .home-results .home-results-inner>div>span{
+  display:block!important;
+  max-width:66ch!important;
+  color:#eef7f3!important;
+  font-size:15.5px!important;
+  line-height:1.62!important;
+}
+html body.reference-ui-v99 main.home-page .home-results nav{
+  min-width:0!important;
+  gap:9px!important;
+}
+html body.reference-ui-v99 main.home-page .home-results nav a{
+  min-height:44px!important;
+  padding:11px 14px!important;
+  border-color:rgba(255,255,255,.25)!important;
+  background:rgba(255,255,255,.08)!important;
+  color:#fff!important;
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+html body.reference-ui-v99 main.home-page .home-results nav a:hover{
+  border-color:rgba(255,255,255,.42)!important;
+  background:rgba(255,255,255,.15)!important;
+}
+html body.theme-dark.reference-ui-v99 main.home-page .home-results{
+  background:#11161b!important;
+}
+html body.theme-dark.reference-ui-v99 main.home-page .home-results .home-results-inner{
+  border-color:#31594d!important;
+  background:#173b32!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.reference-ui-v99 main.home-page .home-results .home-results-inner>div>p{color:#efc68f!important}
+html body.theme-dark.reference-ui-v99 main.home-page .home-results .home-results-inner h2,
+html body.theme-dark.reference-ui-v99 main.home-page .home-results .home-results-inner>div>span{color:#f4f8f6!important}
+
+@media (max-width:900px){
+  html body.reference-ui-v99 main.home-page .home-results{
+    padding:28px 16px 40px!important;
+  }
+  html body.reference-ui-v99 main.home-page .home-results .home-results-inner{
+    grid-template-columns:minmax(0,1fr)!important;
+    padding:28px 22px!important;
+    gap:24px!important;
+    border-radius:13px!important;
+  }
+  html body.reference-ui-v99 main.home-page .home-results .home-results-inner h2{
+    font-size:clamp(28px,7.5vw,36px)!important;
+  }
+  html body.reference-ui-v99 main.home-page .home-results .home-results-inner>div>span{
+    font-size:15.5px!important;
+  }
+}
+@media (max-width:430px){
+  html body.reference-ui-v99 main.home-page .home-results{padding:24px 14px 34px!important}
+  html body.reference-ui-v99 main.home-page .home-results .home-results-inner{
+    padding:24px 18px!important;
+    gap:21px!important;
+    border-radius:12px!important;
+  }
+}
+
+
+/* v134 fix: traffic hub source cards facts should not shift */
+html body main.traffic-hub-page .playbook-card .playbook-facts,
+html body.reference-ui-v99 main.traffic-hub-page .playbook-card .playbook-facts{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:10px!important;
+  margin:14px 0 12px!important;
+}
+html body main.traffic-hub-page .playbook-card .playbook-facts>div,
+html body.reference-ui-v99 main.traffic-hub-page .playbook-card .playbook-facts>div{
+  display:block!important;
+  width:100%!important;
+  min-height:0!important;
+  padding:11px 14px!important;
+  border:1px solid #dce4df!important;
+  border-radius:10px!important;
+  background:#fbfcfb!important;
+  box-sizing:border-box!important;
+}
+html body main.traffic-hub-page .playbook-card .playbook-facts dt,
+html body.reference-ui-v99 main.traffic-hub-page .playbook-card .playbook-facts dt{
+  display:block!important;
+  margin:0 0 4px!important;
+  font-size:11px!important;
+  line-height:1.25!important;
+  color:#78857f!important;
+  text-transform:uppercase!important;
+  letter-spacing:.05em!important;
+}
+html body main.traffic-hub-page .playbook-card .playbook-facts dd,
+html body.reference-ui-v99 main.traffic-hub-page .playbook-card .playbook-facts dd{
+  display:block!important;
+  margin:0!important;
+  font-size:15px!important;
+  line-height:1.45!important;
+  color:#223b34!important;
+  font-weight:760!important;
+  text-align:left!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:anywhere!important;
+}
+html body.theme-dark main.traffic-hub-page .playbook-card .playbook-facts>div,
+html body.reference-ui-v99.theme-dark main.traffic-hub-page .playbook-card .playbook-facts>div{
+  background:#171c22!important;
+  border-color:#2d3640!important;
+}
+html body.theme-dark main.traffic-hub-page .playbook-card .playbook-facts dd,
+html body.reference-ui-v99.theme-dark main.traffic-hub-page .playbook-card .playbook-facts dd{
+  color:#edf2f5!important;
+}
+
+
+/* ======================================================================
+   v135 — remove multicolored page backgrounds, keep one calm neutral tone
+   ====================================================================== */
+
+/* Large page sections and wrappers */
+html body,
+html body .home-page,
+html body .page-head,
+html body .home-intro,
+html body .rule-section.alt,
+html body .home-playbooks,
+html body .home-sources,
+html body .home-workflow,
+html body .home-reference,
+html body .source-playbook-page,
+html body .notes-page,
+html body .traffic-playbook-entry,
+html body .home-entry,
+html body .home-audience,
+html body .home-results,
+html body .home-reference,
+html body .home-faq,
+html body .home-cta,
+html body .service-entry,
+html body .guide-entry,
+html body .article-page,
+html body .traffic-hub-page{
+  background:#f6f4ef!important;
+}
+
+/* Remove pastel alternation from page cards that link to sections/pages */
+html body :is(
+  .playbook-card,
+  .home-source-grid>a,
+  .traffic-playbook-entry .traffic-source-grid>a,
+  .home-entry-grid>a,
+  .traffic-choice-entry,
+  .wizard-gate,
+  .audience-mode-card,
+  .path-card,
+  .knowledge-map>div,
+  .library-row,
+  .calc,
+  .foundation-list a
+){
+  background:#fffdf9!important;
+}
+
+/* Neutralize nth-child color variants so page cards are not multicolored */
+html body :is(.playbook-card,.home-source-grid>a,.traffic-playbook-entry .traffic-source-grid>a):nth-child(n){
+  background:#fffdf9!important;
+  border-top-color:#a48257!important;
+}
+html body .knowledge-map>div:nth-child(n){
+  background:#fffdf9!important;
+}
+html body .knowledge-map>div:nth-child(n)::before,
+html body .foundation-list a:nth-child(n)::before,
+html body .library-row:nth-child(n)::before,
+html body .calc:nth-child(n)::before,
+html body .calc:nth-child(n)::after{
+  background:#d9d3c9!important;
+}
+
+/* Keep light hover/interaction but remove colored tints */
+html body :is(.library-row:hover,.foundation-list a:hover,.tool-preview a:hover,.index-panel a:hover){
+  background:#f8f6f1!important;
+}
+
+
+/* ======================================================================
+   v136 — compact TOC and shorter left navigation
+   ====================================================================== */
+
+/* Desktop article TOC: short block with its own scroll instead of a tall rail. */
+@media (min-width:1081px){
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc,
+  html body .article-aside.enhanced-rail .rail-toc{
+    max-height:300px!important;
+    overflow:hidden!important;
+    padding:12px 13px!important;
+  }
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc ol,
+  html body .article-aside.enhanced-rail .rail-toc ol{
+    max-height:235px!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    padding-right:7px!important;
+    scrollbar-width:thin!important;
+    scrollbar-color:#c5cfca transparent!important;
+  }
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc ol::-webkit-scrollbar,
+  html body .article-aside.enhanced-rail .rail-toc ol::-webkit-scrollbar{width:5px!important}
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc ol::-webkit-scrollbar-thumb,
+  html body .article-aside.enhanced-rail .rail-toc ol::-webkit-scrollbar-thumb{
+    background:#c5cfca!important;
+    border-radius:999px!important;
+  }
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc li,
+  html body .article-aside.enhanced-rail .rail-toc li{margin:2px 0!important}
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc a,
+  html body .article-aside.enhanced-rail .rail-toc a{
+    padding:3px 0!important;
+    font-size:12.4px!important;
+    line-height:1.3!important;
+  }
+  html body.reference-ui-v99 .article-aside.enhanced-rail .rail-toc>b,
+  html body .article-aside.enhanced-rail .rail-toc>b{
+    margin-bottom:7px!important;
+    font-size:12.5px!important;
+  }
+}
+
+/* Left desktop menu: tighter rhythm without making labels tiny. */
+@media (min-width:901px){
+  html body.reference-ui-v99 .global-sidebar{padding-top:14px!important;padding-bottom:12px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-brand{
+    gap:9px!important;
+    padding:0 3px 10px!important;
+    margin-bottom:7px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-brand img{
+    width:34px!important;
+    height:30px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-brand b{font-size:14px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-brand strong{font-size:12px!important;margin-top:2px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-collapse-top{
+    min-height:30px!important;
+    margin:0 0 5px!important;
+    padding:6px 4px!important;
+    font-size:10.5px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-sidebar-groups{gap:1px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-nav-heading{
+    min-height:25px!important;
+    height:25px!important;
+    padding:0 4px!important;
+    font-size:9.5px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-nav-group nav{padding-bottom:2px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-nav-group.is-open nav{gap:1px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a{
+    min-height:33px!important;
+    padding:5px 8px!important;
+    gap:9px!important;
+    border-radius:7px!important;
+    font-size:13px!important;
+    line-height:1.22!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-nav-icon,
+  html body.reference-ui-v99 .global-sidebar .ref-nav-icon-img{
+    width:17px!important;
+    height:17px!important;
+    min-width:17px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-partner-card{
+    gap:5px!important;
+    margin-top:8px!important;
+    padding:9px 10px!important;
+    border-radius:8px!important;
+  }
+  html body.reference-ui-v99 .global-sidebar .ref-partner-card b{font-size:12.5px!important}
+  html body.reference-ui-v99 .global-sidebar .ref-partner-card>span{display:none!important}
+  html body.reference-ui-v99 .global-sidebar .ref-partner-card em{
+    min-height:29px!important;
+    height:29px!important;
+    padding:0 9px!important;
+    font-size:10.5px!important;
+  }
+  html body.reference-ui-v99 .ref-sidebar-rules{
+    padding:6px 6px 7px!important;
+    font-size:10.5px!important;
+  }
+  html body.reference-ui-v99 .ref-sidebar-footer{
+    margin-top:2px!important;
+    padding:8px 4px 0!important;
+    font-size:10px!important;
+  }
+}
+
+html body.theme-dark .article-aside.enhanced-rail .rail-toc ol{
+  scrollbar-color:#46515b transparent!important;
+}
+html body.theme-dark .article-aside.enhanced-rail .rail-toc ol::-webkit-scrollbar-thumb{
+  background:#46515b!important;
+}

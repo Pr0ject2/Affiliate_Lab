@@ -1737,8 +1737,8 @@
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
-          return `<section class="ref-nav-group is-open${hasActive?' has-active':''}" data-ref-group="${gi}">
-            <button class="ref-nav-heading" type="button" aria-expanded="true"><span>${g.title}</span><i>⌄</i></button>
+          return `<section class="ref-nav-group${hasActive?' is-open has-active':''}" data-ref-group="${gi}">
+            <button class="ref-nav-heading" type="button" aria-expanded="${hasActive?'true':'false'}"><span>${g.title}</span><i>⌄</i></button>
             <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"${active(href)?' aria-current="page"':''}><span class="ref-nav-icon">${navIcon(icon)}</span><span>${label}</span></a>`).join('')}</nav>
           </section>`
         }).join('')}</div>
