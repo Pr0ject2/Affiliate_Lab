@@ -1858,13 +1858,7 @@
         summary.innerHTML=`<div class="ref-track-card"><h2>Разметка и трекинг</h2><ul>${list}</ul></div><div class="ref-metrics-card"><h2>Ключевые метрики</h2><div class="ref-metrics-row">${['Просмотры','CTR в описании','Регистрации','FTD','Доход'].map((x,i)=>`<div><small>${x}</small><b>—</b><span>${i===0?'снять после теста':'по своей метке'}</span></div>`).join('')}</div></div>`;
         const summaryAnchor=article.querySelector('.ref-tip-strip')||formats||metrics; summaryAnchor.insertAdjacentElement('afterend',summary);
       }
-
-      const toolkit=article.querySelector('#source-tools .source-toolkit-grid');
-      if(!structuredV101&&toolkit&&!article.querySelector('.ref-connected-tools')){
-        const items=[...toolkit.querySelectorAll('.source-tool-card')].slice(0,5).map(a=>`<a href="${a.href}" target="_blank" rel="${a.rel}"><span>${(a.querySelector('b')?.textContent||'Tool').slice(0,2)}</span><b>${a.querySelector('b')?.textContent||'Инструмент'}</b><small>${a.querySelector('.source-tool-card-top')?.textContent||''}</small></a>`).join('');
-        const block=document.createElement('section');block.className='ref-connected-tools';block.innerHTML=`<h2>Связанные инструменты</h2><div>${items}</div>`;
-        const summary=article.querySelector('.ref-summary-grid'); (summary||metrics).insertAdjacentElement('afterend',block);
-      }
+      // v107: duplicate connected-tools strip removed; full tools block remains at the end.
     }
 
     // Global article rail uses the approved light visual hierarchy.
