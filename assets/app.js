@@ -1608,6 +1608,7 @@
    if(meta)meta.setAttribute('content',dark?'#101318':'#0d493d');
    if(save)try{localStorage.setItem(storageKey,theme)}catch(e){}
  };
+ window.ITAApplyTheme=applyTheme;
  let stored=null;try{stored=localStorage.getItem(storageKey)}catch(e){}
  applyTheme(stored==='dark'?'dark':'light');
  document.addEventListener('click',e=>{
@@ -1732,7 +1733,7 @@
     const sidebar=document.querySelector('.global-sidebar');
     if(sidebar){
       sidebar.innerHTML=`
-        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/academy-cap.png" alt=""><span><b>iGaming</b><strong>Traffic Academy</strong></span></a>
+        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/academy-cap.png" alt="" width="96" height="82"><span><b>iGaming</b><strong>Traffic Academy</strong></span></a>
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
@@ -1741,7 +1742,9 @@
             <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"${active(href)?' aria-current="page"':''}><span class="ref-nav-icon">${navIcon(icon)}</span><span>${label}</span></a>`).join('')}</nav>
           </section>`
         }).join('')}</div>
-        <a class="ref-partner-card" href="${base}guides/1win-rules/"><b>1win Partners: правила и GEO</b><span>Актуальные выплаты, условия и список разрешённых GEO.</span><em>Открыть <span>→</span></em></a>`;
+        <a class="ref-partner-card" data-track="affiliate_cta" href="${base}go/partner/?from=sidebar-v132" target="_blank" rel="sponsored nofollow noopener noreferrer"><b>1win Partners</b><span>Регистрация, партнёрские ссылки, SubID и статистика.</span><em>Открыть программу <span>→</span></em></a>
+        <a class="ref-sidebar-rules" href="${base}guides/1win-rules/">Правила и актуальные GEO</a>
+        <div class="ref-sidebar-footer"><a href="${base}about/">О проекте</a><span>Материалы 18+</span></div>`;
 
       sidebar.querySelectorAll('.ref-nav-heading').forEach(btn=>btn.addEventListener('click',()=>{
         const group=btn.closest('.ref-nav-group');
@@ -1781,10 +1784,10 @@
         }
       }
       header.innerHTML=`<div class="ref-topbar">
-        <a class="ref-mobile-brand" href="${base}" aria-label="iGaming Traffic Academy — на главную"><img src="${base}assets/academy-cap.png" alt=""><b>iGaming Traffic Academy</b></a>
+        <a class="ref-mobile-brand" href="${base}" aria-label="iGaming Traffic Academy — на главную"><img src="${base}assets/academy-cap.png" alt="" width="96" height="82"><b>iGaming Traffic Academy</b></a>
         <nav class="ref-topbar-crumbs">${crumbHtml}</nav>
         <div class="ref-topbar-actions">
-          <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>
+          <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input type="search" name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>
           <button class="ref-theme-button" type="button" data-theme-toggle aria-label="Переключить тему"><span class="theme-toggle-icon">☾</span></button>
           <a class="ref-top-favorite" href="${base}saved/">${svg('star')}<span>В избранное</span></a>
           <div class="ref-top-progress" title="Доля открытых страниц Академии"><span>Прогресс по Академии</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
@@ -1794,6 +1797,7 @@
       const search=header.querySelector('.ref-top-search input');
       document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search&&search.focus();}});
       if(window.ITAInitMobileNav)window.ITAInitMobileNav();
+      if(window.ITAApplyTheme)window.ITAApplyTheme(document.body.classList.contains('theme-dark')?'dark':'light',false);
     }
 
     // Reference page summary for source playbooks.
@@ -1826,7 +1830,7 @@
       const titleRow=article.querySelector('.source-title-row');
       if(titleRow){titleRow.querySelector('.ref-launch-time')?.remove();}
       const oldFacts=article.querySelector('.playbook-facts');
-      if(oldFacts){oldFacts.innerHTML=`<div><dt>Сложность</dt><dd>${data.difficulty}</dd></div><div><dt>Старт</dt><dd>${data.start}</dd></div><div><dt>Трафик</dt><dd>${data.traffic}</dd></div><div><dt>GEO</dt><dd>${data.geo}</dd></div><div><dt>Сигнал</dt><dd>${data.time}</dd></div>`;}
+      if(oldFacts){oldFacts.innerHTML=`<div><dt>Сложность</dt><dd>${data.difficulty}</dd></div><div><dt>Старт</dt><dd>${data.start}</dd></div><div><dt>Трафик</dt><dd>${data.traffic}</dd></div><div><dt>GEO</dt><dd>${data.geo}</dd></div><div><dt>Результат</dt><dd>${data.time}</dd></div>`;}
 
       const tabs=article.querySelector('.source-section-tabs');
       if(tabs){[...tabs.querySelectorAll('a')].forEach((a,i)=>{if(i>0&&!a.querySelector('span'))a.insertAdjacentHTML('afterbegin',`<span>${i}</span>`);});}
@@ -1951,6 +1955,7 @@
     darkstore:'https://www.google.com/s2/favicons?domain=dark.shopping&sz=128',
     profitads:'https://www.google.com/s2/favicons?domain=profitads.ru&sz=128'
   };
+  const iconFallback={multilogin:'ML',proxys:'PX',ruvds:'RV',adsbridge:'AB',onlinesim:'OS',spyhouse:'SH',darkstore:'DS',profitads:'PA'};
   const decorate = () => {
     document.querySelectorAll('.rail-tools a:not(.rail-all-tools), .service-tool, .source-tool-card').forEach(el=>{
       const title = (el.querySelector('h3,b')?.textContent || '').trim();
@@ -1961,6 +1966,7 @@
       if(mark){
         mark.classList.add('tool-mark--'+key);
         mark.dataset.tool = key;
+        mark.dataset.fallback = iconFallback[key] || 'IT';
         mark.setAttribute('aria-label', title);
         mark.textContent = '';
         const img=document.createElement('img');
@@ -1972,6 +1978,7 @@
         img.width=32;
         img.height=32;
         img.referrerPolicy='no-referrer';
+        img.addEventListener('error',()=>{img.hidden=true;mark.classList.add('is-fallback')},{once:true});
         mark.appendChild(img);
       }
     });
