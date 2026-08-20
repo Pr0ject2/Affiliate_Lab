@@ -8266,3 +8266,167 @@ html body.theme-dark .home-actions a:not(.home-action-primary):not(.home-action-
     gap:6px!important;
   }
 }
+
+
+/* ======================================================================
+   v111 — spacing, contrast, centered reading canvas and strict dark mode
+   ====================================================================== */
+:root{--v111-footer:#0d241e;--v111-footer-line:#23443a;--v111-card-pad:20px}
+
+/* Card copy must never touch an edge. */
+body .home-results-inner{padding:30px 32px!important}
+body .home-results-inner>div{padding:2px 4px!important}
+body .home-results-inner h2{color:#fff!important}
+body .home-results-inner>div>p{color:#e1bf94!important}
+body .home-results-inner>div>span{color:#eef5f2!important}
+
+body .section-outcome{padding:24px 26px!important}
+body .section-outcome>div{padding:2px 2px!important}
+body .section-outcome h2{color:#17372f!important}
+body .section-outcome>div>span{color:#8a6240!important}
+
+body .guide-v101-formats>article{
+  overflow:hidden!important;
+  padding:0 14px 16px!important;
+}
+body .guide-v101-formats .guide-v101-format-art{
+  width:calc(100% + 28px)!important;
+  margin:0 -14px 12px!important;
+  color:#fff!important;
+}
+body .guide-v101-formats .guide-v101-format-art b{color:#fff!important}
+body .guide-v101-formats h3{margin:0 0 7px!important;color:#17372f!important}
+body .guide-v101-formats p{margin:0!important;color:#596862!important}
+
+/* A little breathing room in every common editorial card. */
+body :is(.section-entry,.home-entry-grid>a,.home-source-grid>a,.knowledge-map>div,.tool-card,.about-card,.service-card,.service-tool,.source-tool-card,.traffic-hub-basics>div,.traffic-next a){
+  padding-left:max(18px,var(--v111-card-pad))!important;
+  padding-right:max(18px,var(--v111-card-pad))!important;
+}
+
+/* Footer is deliberately dark in both themes. */
+html body .site-footer,
+html body.reference-ui-v99 .site-footer{
+  background:var(--v111-footer)!important;
+  background-image:none!important;
+  border-top:1px solid var(--v111-footer-line)!important;
+  color:#dce9e4!important;
+}
+html body .site-footer :is(.footer-brand,h2,h3,h4,b,strong){color:#f2f7f5!important}
+html body .site-footer :is(p,span,small,li){color:#aebfba!important}
+html body .site-footer a{color:#d6e6e0!important}
+html body .site-footer a:hover{color:#fff!important}
+html body .site-footer :is(.footer-bottom,.disclosure){border-color:#29483f!important}
+
+/* Desktop article canvas: centered inside the area that remains after the sidebar. */
+@media (min-width:901px){
+  html body.reference-ui-v99>main,
+  html body.reference-ui-v99 main{
+    margin-left:var(--ref-sidebar)!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  html body.reference-ui-v99 .site-footer{
+    margin-left:var(--ref-sidebar)!important;
+    width:auto!important;
+  }
+  html body.reference-ui-v99 .article-layout,
+  html body .article-page .article-layout,
+  html body .source-playbook-page .article-layout{
+    box-sizing:border-box!important;
+    width:calc(100% - 48px)!important;
+    max-width:1180px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    justify-content:center!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .article-layout{margin-left:auto!important;margin-right:auto!important}
+}
+
+/* Strict dark mode. First neutralize old light structural fills, then restore dark surfaces. */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{background:#101318!important;color:#edf2f5!important}
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main{background:#101318!important;background-image:none!important;color:#edf2f5!important}
+html body.theme-dark main :where(section,article,aside,nav,div,ul,ol,li,figure,figcaption,form,details,summary,dl,dt,dd){
+  background-color:transparent!important;
+  background-image:none!important;
+}
+html body.theme-dark :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.compact-main-v103,.article-page,.source-playbook-page){
+  background:#101318!important;background-image:none!important;border-color:#2d353f!important;
+}
+html body.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,
+  .playbook-card,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .knowledge-map>div,.library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,
+  .source-tool-card,.traffic-hub-basics>div,.traffic-next a,.handbook-intro,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,
+  .traffic-diagnostic-list li,.source-journey-card,.article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.partner-next-step,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats>article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,
+  .academy-content-section,.logic-section-v103,.related-reading,.related-primary,.related-secondary,
+  .article-exit-nav a,.next-reading a,.starter-next,.service-inline
+){
+  background:#191e25!important;
+  background-image:none!important;
+  border-color:#303945!important;
+  color:#edf2f5!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .home-results-inner{background:#17372f!important;border-color:#31584c!important}
+html body.theme-dark .home-results-inner h2,
+html body.theme-dark .home-results-inner>div>span{color:#f2f7f5!important}
+html body.theme-dark .home-results-inner>div>p{color:#e3bd8b!important}
+html body.theme-dark .section-outcome h2{color:#f1f5f7!important}
+html body.theme-dark .section-outcome>div>span{color:#d7ad79!important}
+html body.theme-dark .guide-v101-formats h3{color:#f2f5f7!important}
+html body.theme-dark .guide-v101-formats p{color:#adb7c0!important}
+html body.theme-dark .guide-v101-format-art,
+html body.theme-dark .guide-v101-format-art.f1{background:linear-gradient(145deg,#123f35,#0b201a)!important;color:#fff!important}
+html body.theme-dark .guide-v101-format-art.f2{background:linear-gradient(145deg,#173a4a,#101d26)!important}
+html body.theme-dark .guide-v101-format-art.f3{background:linear-gradient(145deg,#3b3521,#201c13)!important}
+html body.theme-dark .guide-v101-format-art.f4{background:linear-gradient(145deg,#402a38,#20151d)!important}
+html body.theme-dark .guide-v101-format-art.f5{background:linear-gradient(145deg,#18564a,#0c1d18)!important}
+html body.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input){
+  background-color:#171c23!important;border-color:#36414c!important;color:#edf2f5!important;
+}
+html body.theme-dark :is(table,thead,tbody,tr){background:#151a20!important;color:#edf2f5!important}
+html body.theme-dark th{background:#20262d!important;color:#f0f4f6!important;border-color:#36404a!important}
+html body.theme-dark td{background:#171c22!important;color:#b8c1ca!important;border-color:#303943!important}
+html body.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+  background:#24211b!important;background-image:none!important;border-color:#5a4c36!important;color:#dbc9aa!important;
+}
+html body.theme-dark .site-footer,
+html body.reference-ui-v99.theme-dark .site-footer{background:#0b0e12!important;border-color:#252d35!important}
+
+/* Mobile spacing remains real even when older responsive rules collide. */
+@media (max-width:900px){
+  html body .article-layout,
+  html body.reference-ui-v99 .article-layout,
+  html body .source-playbook-page .article-layout{
+    width:100%!important;
+    max-width:820px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  html body .home-results-inner{padding:22px 20px!important}
+  html body .home-results-inner>div{padding:0 2px!important}
+  html body .section-outcome{padding:20px!important}
+  html body .section-outcome>div{padding:0!important}
+  html body .guide-v101-formats>article{padding:0 14px 16px!important}
+}
+@media (max-width:360px){
+  html body .article-layout,
+  html body.reference-ui-v99 .article-layout,
+  html body .source-playbook-page .article-layout{padding-left:14px!important;padding-right:14px!important}
+  html body .home-results-inner{padding:20px 17px!important}
+  html body .section-outcome{padding:18px!important}
+}
