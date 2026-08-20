@@ -1887,3 +1887,52 @@
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initReferenceUI); else initReferenceUI();
 })();
+
+
+(function(){
+  const slugFromHref=(href='')=>{
+    const parts=href.split('/').filter(Boolean);
+    return parts[parts.length-1]||'';
+  };
+  const toolKey=(name='')=>{
+    const n=name.toLowerCase().replace(/\s+/g,' ').trim();
+    if(n.includes('multilogin')) return 'multilogin';
+    if(n.includes('proxys')) return 'proxys';
+    if(n.includes('ruvds')) return 'ruvds';
+    if(n.includes('adsbridge')) return 'adsbridge';
+    if(n.includes('onlinesim')) return 'onlinesim';
+    if(n.includes('spy.house')||n.includes('spy house')) return 'spyhouse';
+    if(n.includes('darkstore')||n.includes('darkstore')) return 'darkstore';
+    if(n.includes('profitads')) return 'profitads';
+    return '';
+  };
+  const decorate = () => {
+    document.querySelectorAll('.rail-tools a:not(.rail-all-tools), .service-tool, .source-tool-card').forEach(el=>{
+      const title = (el.querySelector('h3,b')?.textContent || '').trim();
+      const key = toolKey(title);
+      if(!key) return;
+      el.dataset.tool = key;
+      const mark = el.querySelector('.rail-tool-mark, .service-mark');
+      if(mark){
+        mark.classList.add('tool-mark--'+key);
+        mark.dataset.tool = key;
+        mark.setAttribute('aria-label', title);
+        mark.textContent = '';
+      }
+    });
+    document.querySelectorAll('.playbook-card').forEach(card=>{
+      const href = card.getAttribute('data-card-link') || card.querySelector('a[href*="/traffic/sources/"]')?.getAttribute('href') || '';
+      const slug = slugFromHref(href);
+      if(slug) card.dataset.source = slug;
+      const top = card.querySelector('.playbook-card-top');
+      if(top && !top.querySelector('.playbook-hero-art')){
+        const art = document.createElement('span');
+        art.className = 'playbook-hero-art';
+        art.setAttribute('aria-hidden','true');
+        top.appendChild(art);
+      }
+    });
+  };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', decorate);
+  else decorate();
+})();
