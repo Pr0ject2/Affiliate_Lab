@@ -7078,14 +7078,6 @@ body.content-system-v103 .structured-article-v103 .logic-warning-v103{background
 
 
 /* v105 patch: proportional cards, real tool icons, neutral dark theme */
-body .tool-mark--multilogin{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Crect%20x%3D%224%22%20y%3D%226%22%20width%3D%228%22%20height%3D%2212%22%20rx%3D%224%22%20stroke%3D%22%232f80ed%22%20stroke-width%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%226%22%20width%3D%228%22%20height%3D%2212%22%20rx%3D%224%22%20stroke%3D%22%234fb4ff%22%20stroke-width%3D%222%22/%3E%3C/svg%3E")}
-body .tool-mark--proxys{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Ccircle%20cx%3D%227%22%20cy%3D%2212%22%20r%3D%222.5%22%20fill%3D%22%2322a06b%22/%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%227%22%20r%3D%222.5%22%20fill%3D%22%232d90ff%22/%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2217%22%20r%3D%222.5%22%20fill%3D%22%238968f7%22/%3E%3Cpath%20d%3D%22M9.2%2011l5.7-3M9.2%2013l5.7%203%22%20stroke%3D%22%236b7b88%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E")}
-body .tool-mark--ruvds{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%2214%22%20height%3D%225%22%20rx%3D%222%22%20stroke%3D%22%2357b0ff%22%20stroke-width%3D%222%22/%3E%3Crect%20x%3D%225%22%20y%3D%2214%22%20width%3D%2214%22%20height%3D%225%22%20rx%3D%222%22%20stroke%3D%22%2357b0ff%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%229%22%20cy%3D%227.5%22%20r%3D%221%22%20fill%3D%22%2357b0ff%22/%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2216.5%22%20r%3D%221%22%20fill%3D%22%2357b0ff%22/%3E%3C/svg%3E")}
-body .tool-mark--adsbridge{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M8.5%209.5h4a3%203%200%201%201%200%206h-4%22%20stroke%3D%22%23ff9f43%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M15.5%2014.5h-4a3%203%200%201%201%200-6h4%22%20stroke%3D%22%232d90ff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E")}
-body .tool-mark--onlinesim{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Crect%20x%3D%226.5%22%20y%3D%224.5%22%20width%3D%2211%22%20height%3D%2215%22%20rx%3D%222.5%22%20stroke%3D%22%2311a97e%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M10%207.5h4%22%20stroke%3D%22%2311a97e%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M9%2011h6M9%2014h4%22%20stroke%3D%22%2374c1ad%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2217%22%20r%3D%221%22%20fill%3D%22%2311a97e%22/%3E%3C/svg%3E")}
-body .tool-mark--spyhouse{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M4%2013c2.4-4%205-6%208-6s5.6%202%208%206c-2.4%204-5%206-8%206s-5.6-2-8-6Z%22%20stroke%3D%22%239c7a3f%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2213%22%20r%3D%222.5%22%20fill%3D%22%23d3a34c%22/%3E%3Cpath%20d%3D%22M6%2013v6h12v-6%22%20stroke%3D%22%23466c63%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E")}
-body .tool-mark--darkstore{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M8%208.5A4%204%200%200%201%2016%208.5%22%20stroke%3D%22%238b5cf6%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M6%209.5h12l-1%209H7l-1-9Z%22%20stroke%3D%22%238b5cf6%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M9.5%2013h5%22%20stroke%3D%22%23c1a8ff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E")}
-body .tool-mark--profitads{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Crect%20x%3D%224.5%22%20y%3D%226%22%20width%3D%2215%22%20height%3D%2210.5%22%20rx%3D%222.5%22%20stroke%3D%22%2300a3a3%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M7%2010h10%22%20stroke%3D%22%2300a3a3%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M12%209.5l1.4%202.3h-1.6l1%202.2-2.8-3.8h1.6Z%22%20fill%3D%22%23ffb648%22/%3E%3C/svg%3E")}
 
 body .rail-tools>a:not(.rail-all-tools),
 body .service-tool,
@@ -8584,4 +8576,791 @@ html body.reference-ui-v99.theme-dark .site-footer{background:#0b0e12!important;
   html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
     display:none!important;
   }
+}
+
+/* ======================================================================
+   v114 — rail/footer boundary, useful About page, accessible sidebar
+   ====================================================================== */
+
+/* Ordinary article rail belongs to the article grid again. Sticky keeps it
+   useful while scrolling, but the parent grid naturally stops it before the
+   footer instead of allowing a fixed panel to float over the footer. */
+@media (min-width:1501px){
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-layout{
+    display:grid!important;
+    grid-template-columns:minmax(0,var(--v113-article-max)) minmax(280px,var(--v103-rail))!important;
+    gap:32px!important;
+    width:min(calc(100% - 48px),1332px)!important;
+    max-width:1332px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:28px 0 78px!important;
+    align-items:start!important;
+    justify-content:center!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article{
+    width:100%!important;
+    max-width:var(--v113-article-max)!important;
+    margin:0!important;
+    justify-self:stretch!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
+    display:grid!important;
+    position:sticky!important;
+    top:calc(var(--ref-topbar) + 16px)!important;
+    right:auto!important;
+    left:auto!important;
+    width:100%!important;
+    max-width:var(--v103-rail)!important;
+    max-height:calc(100vh - var(--ref-topbar) - 32px)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    align-self:start!important;
+  }
+}
+
+/* Collapse control is intentionally high in the sidebar and remains usable
+   after the sidebar has been collapsed. */
+body.reference-ui-v99 .global-sidebar .ref-sidebar-collapse-top{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:8px!important;
+  width:100%!important;
+  min-height:34px!important;
+  margin:0 0 10px!important;
+  padding:7px 9px!important;
+  border:1px solid rgba(255,255,255,.09)!important;
+  border-radius:7px!important;
+  background:rgba(255,255,255,.035)!important;
+  color:#d9e7e2!important;
+  font-size:10.5px!important;
+  font-weight:650!important;
+  line-height:1.2!important;
+  text-align:left!important;
+  cursor:pointer!important;
+}
+body.reference-ui-v99 .global-sidebar .ref-sidebar-collapse-top:hover{
+  background:rgba(255,255,255,.075)!important;
+  color:#fff!important;
+}
+body.reference-ui-v99 .global-sidebar .ref-collapse-icon{
+  display:inline-grid!important;
+  place-items:center!important;
+  flex:0 0 18px!important;
+  width:18px!important;
+  height:18px!important;
+  margin:0!important;
+  color:#78d9b6!important;
+  font-size:14px!important;
+  transition:transform .18s ease!important;
+}
+body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-collapse-top{
+  display:flex!important;
+  width:44px!important;
+  min-width:44px!important;
+  margin:0 auto 10px!important;
+  padding:7px!important;
+  justify-content:center!important;
+}
+body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-collapse-top .ref-collapse-label{display:none!important}
+body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-collapse-top .ref-collapse-icon{transform:rotate(180deg)!important}
+
+/* Force readable text throughout both the rebuilt and fallback sidebar. */
+body.reference-ui-v99 .global-sidebar .ref-sidebar-brand,
+body.reference-ui-v99 .global-sidebar .ref-sidebar-brand b,
+body.reference-ui-v99 .global-sidebar .ref-sidebar-brand strong,
+body.reference-ui-v99 .global-sidebar .sidebar-brand,
+body.reference-ui-v99 .global-sidebar .sidebar-brand b,
+body.reference-ui-v99 .global-sidebar .sidebar-brand strong{color:#f3faf7!important}
+body.reference-ui-v99 .global-sidebar .ref-nav-heading{color:#91a7a1!important}
+body.reference-ui-v99 .global-sidebar .ref-nav-group nav a{color:#e3eeea!important}
+body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover{color:#fff!important}
+body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active{color:#59e0aa!important}
+body.reference-ui-v99 .global-sidebar .ref-partner-card b{color:#f3faf7!important}
+body.reference-ui-v99 .global-sidebar .ref-partner-card>span{color:#b4c7c1!important}
+body.reference-ui-v99 .global-sidebar .ref-partner-card em{color:#fff!important}
+
+/* The desktop collapse control has no purpose inside the mobile drawer. */
+@media (max-width:1050px){
+  body.reference-ui-v99 .global-sidebar .ref-sidebar-collapse-top{display:none!important}
+}
+
+/* About page: a wider editorial canvas and practical, task-first content. */
+body.about-page-v114 .about-hero-v114 .wrap.narrow{
+  width:min(calc(100% - 48px),1180px)!important;
+  max-width:1180px!important;
+  margin-inline:auto!important;
+}
+body.about-page-v114 .about-hero-v114 h1{max-width:900px!important}
+body.about-page-v114 .about-hero-v114 p{max-width:920px!important;font-size:17px!important;line-height:1.65!important}
+body.about-page-v114 .about-layout-v114{
+  box-sizing:border-box!important;
+  width:min(calc(100% - 48px),1180px)!important;
+  max-width:1180px!important;
+  margin-inline:auto!important;
+  padding:34px 0 72px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 330px!important;
+  gap:34px!important;
+  align-items:start!important;
+}
+body.about-page-v114 .about-main{width:100%!important;max-width:none!important}
+body.about-page-v114 .about-main p{max-width:none!important}
+body.about-page-v114 .about-section-v114{padding:0 0 34px!important;margin:0 0 34px!important;border-bottom:1px solid #e1e7e3!important}
+body.about-page-v114 .about-section-v114:last-child{margin-bottom:0!important}
+body.about-page-v114 .about-section-head-v114>span{
+  display:block!important;margin-bottom:7px!important;color:#8a6844!important;
+  font-size:10px!important;font-weight:850!important;letter-spacing:.09em!important;text-transform:uppercase!important
+}
+body.about-page-v114 .about-section-head-v114 h2{margin:0 0 18px!important;font-size:29px!important;line-height:1.17!important}
+body.about-page-v114 .about-value-grid-v114,
+body.about-page-v114 .about-principle-grid-v114{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px!important}
+body.about-page-v114 .about-value-grid-v114>a,
+body.about-page-v114 .about-principle-grid-v114>div{
+  display:flex!important;flex-direction:column!important;min-height:154px!important;padding:18px 19px!important;
+  border:1px solid #dce4df!important;border-radius:11px!important;background:#fff!important;color:#34443e!important;text-decoration:none!important
+}
+body.about-page-v114 .about-value-grid-v114>a:hover{border-color:#a9c7ba!important;transform:translateY(-1px)!important}
+body.about-page-v114 .about-value-grid-v114 b,
+body.about-page-v114 .about-principle-grid-v114 b{display:block!important;margin-bottom:7px!important;color:#183b30!important;font-size:16px!important;line-height:1.3!important}
+body.about-page-v114 .about-value-grid-v114 span,
+body.about-page-v114 .about-principle-grid-v114 p{margin:0!important;color:#65736d!important;font-size:13.5px!important;line-height:1.55!important}
+body.about-page-v114 .about-value-grid-v114 em{margin-top:auto!important;padding-top:15px!important;color:#0d7955!important;font-size:12px!important;font-style:normal!important;font-weight:800!important}
+body.about-page-v114 .about-route-v114{margin:0!important;padding:0!important;list-style:none!important;counter-reset:about-route!important;display:grid!important;gap:0!important}
+body.about-page-v114 .about-route-v114 li{position:relative!important;counter-increment:about-route!important;padding:18px 18px 18px 58px!important;border-top:1px solid #e1e7e3!important}
+body.about-page-v114 .about-route-v114 li:last-child{border-bottom:1px solid #e1e7e3!important}
+body.about-page-v114 .about-route-v114 li:before{content:counter(about-route)!important;position:absolute!important;left:8px!important;top:18px!important;display:grid!important;place-items:center!important;width:31px!important;height:31px!important;border-radius:9px!important;background:#e9f5f0!important;color:#0d7955!important;font-size:12px!important;font-weight:850!important}
+body.about-page-v114 .about-route-v114 b{display:block!important;margin-bottom:4px!important;color:#183b30!important;font-size:16px!important}
+body.about-page-v114 .about-route-v114 p{margin:0 0 8px!important;color:#65736d!important;font-size:14px!important;line-height:1.6!important}
+body.about-page-v114 .about-route-v114 a{color:#0c7954!important;font-size:12.5px!important;font-weight:800!important;text-underline-offset:3px!important}
+body.about-page-v114 .about-boundaries-v114 ul{margin:0!important;padding:0!important;list-style:none!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+body.about-page-v114 .about-boundaries-v114 li{position:relative!important;padding:13px 15px 13px 38px!important;border:1px solid #e3ddd4!important;border-radius:10px!important;background:#fbf9f5!important;color:#5b625e!important;font-size:13.5px!important;line-height:1.5!important}
+body.about-page-v114 .about-boundaries-v114 li:before{content:"×"!important;position:absolute!important;left:14px!important;top:11px!important;color:#9a6c4b!important;font-size:18px!important;font-weight:500!important}
+body.about-page-v114 .about-nav-card-v114{position:sticky!important;top:calc(var(--ref-topbar) + 20px)!important;padding:20px!important;border-top-width:1px!important;background:#f8faf8!important}
+body.about-page-v114 .about-nav-card-v114>span{display:block!important;color:#7b8d85!important;font-size:9.5px!important;font-weight:850!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+body.about-page-v114 .about-nav-card-v114>strong{display:block!important;margin:5px 0 15px!important;color:#193a30!important;font:700 23px/1.2 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important}
+body.about-page-v114 .about-nav-links-v114{display:grid!important;gap:7px!important}
+body.about-page-v114 .about-nav-links-v114 a{display:block!important;margin:0!important;padding:12px 13px!important;border:1px solid #dce5e0!important;border-radius:8px!important;background:#fff!important;text-decoration:none!important}
+body.about-page-v114 .about-nav-links-v114 b{display:block!important;color:#244239!important;font-size:12.5px!important}
+body.about-page-v114 .about-nav-links-v114 small{display:block!important;margin-top:3px!important;color:#78847f!important;font-size:10.5px!important;line-height:1.4!important}
+body.about-page-v114 .about-nav-note-v114{margin-top:14px!important;padding:14px!important;border-radius:9px!important;background:#eef6f2!important}
+body.about-page-v114 .about-nav-note-v114 b{color:#176248!important;font-size:11.5px!important}
+body.about-page-v114 .about-nav-note-v114 p{margin:5px 0 0!important;color:#61716a!important;font-size:11.5px!important;line-height:1.5!important}
+body.about-page-v114 .about-review-v114{display:block!important;margin-top:15px!important;color:#8a938f!important;font-size:9.5px!important}
+
+/* About page dark mode follows the global no-light-surfaces rule. */
+html body.theme-dark.about-page-v114 .about-section-v114{border-color:#303943!important}
+html body.theme-dark.about-page-v114 :is(.about-value-grid-v114>a,.about-principle-grid-v114>div,.about-nav-card-v114,.about-nav-links-v114 a,.about-boundaries-v114 li){background:#191e25!important;border-color:#303943!important;color:#edf1f4!important}
+html body.theme-dark.about-page-v114 :is(.about-value-grid-v114 b,.about-principle-grid-v114 b,.about-route-v114 b,.about-nav-card-v114>strong,.about-nav-links-v114 b){color:#edf2f5!important}
+html body.theme-dark.about-page-v114 :is(.about-value-grid-v114 span,.about-principle-grid-v114 p,.about-route-v114 p,.about-nav-links-v114 small,.about-boundaries-v114 li){color:#aeb8c0!important}
+html body.theme-dark.about-page-v114 .about-route-v114 li{border-color:#303943!important}
+html body.theme-dark.about-page-v114 .about-route-v114 li:before{background:#1d2b28!important;color:#83d4b7!important}
+html body.theme-dark.about-page-v114 .about-nav-note-v114{background:#1b2926!important}
+html body.theme-dark.about-page-v114 .about-nav-note-v114 b{color:#86d4b9!important}
+html body.theme-dark.about-page-v114 .about-nav-note-v114 p{color:#aeb8c0!important}
+
+@media (max-width:1050px){
+  body.about-page-v114 .about-hero-v114 .wrap.narrow,
+  body.about-page-v114 .about-layout-v114{width:min(calc(100% - 36px),900px)!important;max-width:900px!important}
+  body.about-page-v114 .about-layout-v114{grid-template-columns:1fr!important;gap:24px!important}
+  body.about-page-v114 .about-nav-card-v114{position:static!important;max-width:none!important}
+}
+@media (max-width:700px){
+  body.about-page-v114 .about-hero-v114 .wrap.narrow,
+  body.about-page-v114 .about-layout-v114{width:100%!important;max-width:100%!important;padding-left:16px!important;padding-right:16px!important}
+  body.about-page-v114 .about-value-grid-v114,
+  body.about-page-v114 .about-principle-grid-v114,
+  body.about-page-v114 .about-boundaries-v114 ul{grid-template-columns:1fr!important}
+  body.about-page-v114 .about-value-grid-v114>a,
+  body.about-page-v114 .about-principle-grid-v114>div{min-height:0!important}
+  body.about-page-v114 .about-section-head-v114 h2{font-size:24px!important}
+  body.about-page-v114 .about-route-v114 li{padding-left:52px!important;padding-right:8px!important}
+}
+
+/* v114.1 — override the older 980px compact-page cap on About only. */
+@media (min-width:1051px){
+  html body.about-page-v114.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .about-hero-v114 > .wrap.narrow,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.about-layout-v114,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.about-layout-v114{
+    width:min(calc(100% - 48px),1180px)!important;
+    max-width:1180px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+
+/* ======================================================================
+   v115 — spacing cleanup, one active nav item, real service favicons
+   ====================================================================== */
+
+/* Inline glossary controls must never sit on top of neighbouring copy. */
+html body .term-help{
+  display:inline-flex!important;
+  align-items:baseline!important;
+  gap:3px!important;
+  margin-left:1px!important;
+  margin-right:3px!important;
+  padding:0 1px!important;
+  line-height:inherit!important;
+  vertical-align:baseline!important;
+  white-space:nowrap!important;
+}
+html body .term-help::after{
+  position:static!important;
+  flex:0 0 12px!important;
+  margin:0!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Old compact layers zeroed padding on several callouts. These are text
+   containers, so they always keep an actual inner gutter. */
+html body.content-system-v103 :is(
+  .partner-next-step,.traffic-partner-step,.handbook-intro,.inline-note,
+  .traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,
+  .tool-source-note,.service-inline,.service-review-note,.playbook-tips,
+  .hero-note,.hero-route,.related-primary,.playbook-risk,.guide-v101-callout
+){
+  box-sizing:border-box!important;
+  padding:18px 20px!important;
+}
+html body.content-system-v103 .traffic-partner-step{
+  padding:20px 22px!important;
+}
+html body.content-system-v103 .partner-next-step>span,
+html body.content-system-v103 .partner-next-step>p,
+html body.content-system-v103 .partner-next-step>a{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  max-width:none!important;
+}
+
+/* Use actual web favicons for named services. The former generated SVG
+   approximations are disabled completely. */
+html body .rail-tool-mark::before,
+html body .service-mark::before{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body .rail-tool-mark img,
+html body .service-mark img{
+  display:block!important;
+  width:24px!important;
+  height:24px!important;
+  max-width:70%!important;
+  max-height:70%!important;
+  object-fit:contain!important;
+  border-radius:5px!important;
+}
+html body .service-mark img{width:28px!important;height:28px!important}
+html body.theme-dark :is(.rail-tool-mark,.service-mark){
+  background:#20262e!important;
+  border-color:#37414c!important;
+}
+
+/* Sidebar contrast: inactive copy is readable, only one exact route gets
+   the active treatment produced by app.js. */
+html body.reference-ui-v99 .global-sidebar .ref-nav-heading{
+  color:#a4b7b1!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a{
+  color:#e8f1ee!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a .ref-nav-icon{
+  color:#b9cbc5!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover{
+  color:#fff!important;
+  background:rgba(255,255,255,.065)!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active,
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"]{
+  color:#8cf0c8!important;
+  background:linear-gradient(90deg,rgba(23,159,110,.25),rgba(23,159,110,.075))!important;
+  box-shadow:inset 2px 0 #27c98e!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active .ref-nav-icon,
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon{
+  color:#63e1b0!important;
+}
+
+@media(max-width:650px){
+  html body.content-system-v103 :is(
+    .partner-next-step,.traffic-partner-step,.handbook-intro,.inline-note,
+    .traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,
+    .tool-source-note,.service-inline,.service-review-note,.playbook-tips,
+    .hero-note,.hero-route,.related-primary,.playbook-risk,.guide-v101-callout
+  ){
+    padding:16px!important;
+  }
+}
+
+
+/* v115.1 — restore gutters on .wrap callouts after the compact-page rule. */
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.partner-next-step,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.partner-next-step{
+  padding-left:22px!important;
+  padding-right:22px!important;
+}
+@media(max-width:650px){
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.partner-next-step,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.partner-next-step{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+}
+
+
+/* v115.2 — remaining spacing and navigation-state cleanup. */
+/* This comparison note is a real callout, not a page-edge accent. */
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.source-compare-note,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.source-compare-note{
+  box-sizing:border-box!important;
+  padding:18px 20px!important;
+  border:1px solid #e2e1db!important;
+  border-left-width:1px!important;
+  border-radius:10px!important;
+  background:#faf8f4!important;
+}
+html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.source-compare-note,
+html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.source-compare-note{
+  background:#191e25!important;
+  border-color:#2b333d!important;
+  color:#edf1f4!important;
+}
+html body.theme-dark .source-compare-note strong{color:#f3f6f8!important}
+html body.theme-dark .source-compare-note p{color:#c8d0d7!important}
+
+/* Only aria-current marks the selected route. This deliberately neutralises
+   any stale .active/.is-active class left by older markup or scripts. */
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:not([aria-current="page"]),
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active:not([aria-current="page"]){
+  color:#e8f1ee!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-weight:570!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:not([aria-current="page"]) .ref-nav-icon,
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active:not([aria-current="page"]) .ref-nav-icon{
+  color:#b9cbc5!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"]{
+  color:#8cf0c8!important;
+  background:linear-gradient(90deg,rgba(23,159,110,.25),rgba(23,159,110,.075))!important;
+  box-shadow:inset 2px 0 #27c98e!important;
+  font-weight:700!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon{color:#63e1b0!important}
+
+/* Same rule for the pre-JS fallback sidebar: never show two selected links. */
+html body .global-sidebar .sidebar-menu a:not([aria-current="page"]){
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+@media(max-width:650px){
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap.source-compare-note,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap.source-compare-note{
+    padding:16px!important;
+  }
+}
+
+/* v115.3 — source playbook mistake blocks keep real inner gutters too. */
+html body .source-playbook-page .playbook-tips{
+  box-sizing:border-box!important;
+  padding:18px 20px!important;
+  border:1px solid #e6d4b6!important;
+  border-left-width:1px!important;
+  border-radius:10px!important;
+  background:#fbf5eb!important;
+}
+html body.theme-dark .source-playbook-page .playbook-tips{
+  background:#211e1a!important;
+  border-color:#40382f!important;
+  color:#edf1f4!important;
+}
+html body.theme-dark .source-playbook-page .playbook-tips :is(h2,h3,strong,b){color:#f4f6f7!important}
+html body.theme-dark .source-playbook-page .playbook-tips :is(p,li){color:#cbd1d6!important}
+@media(max-width:650px){
+  html body .source-playbook-page .playbook-tips{padding:16px!important}
+}
+/* v115.3a — outrank the article-rhythm shorthand on these semantic warning sections. */
+html body.article-page main.source-playbook-page .source-playbook-article > section.playbook-tips{
+  padding:18px 20px!important;
+}
+@media(max-width:650px){
+  html body.article-page main.source-playbook-page .source-playbook-article > section.playbook-tips{padding:16px!important}
+}
+
+/* ======================================================================
+   v116 — final UI polish: light controls, Academy-wide progress,
+   aligned article headers, source-only hero art, readable compact cards,
+   and stable Lucide navigation icons.
+   ====================================================================== */
+
+/* ---------- Light theme top bar ---------- */
+html body.reference-ui-v99:not(.theme-dark) .site-header{
+  background:#f6f9f7!important;
+  border-bottom:1px solid #dce5e1!important;
+  box-shadow:0 2px 10px rgba(27,56,46,.045)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-topbar{color:#425951!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-topbar-crumbs a{
+  color:#557068!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-topbar-crumbs b{color:#183f34!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-topbar-crumbs>span{color:#9aa9a3!important}
+
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search{
+  height:36px!important;
+  width:280px!important;
+  padding:0 11px!important;
+  border:1px solid #cbd8d2!important;
+  border-radius:9px!important;
+  background:#fff!important;
+  box-shadow:0 1px 3px rgba(25,57,46,.04)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search>span{color:#41665a!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input{
+  color:#173b31!important;
+  font-size:12px!important;
+  font-weight:550!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::placeholder{color:#7d918a!important;opacity:1!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search kbd{
+  padding:3px 5px!important;
+  border:1px solid #dce5e1!important;
+  border-radius:5px!important;
+  background:#f2f6f4!important;
+  color:#647a72!important;
+  font-size:9px!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-top-favorite){
+  height:36px!important;
+  border:1px solid #cbd8d2!important;
+  border-radius:9px!important;
+  background:#fff!important;
+  color:#244c40!important;
+  box-shadow:0 1px 3px rgba(25,57,46,.04)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-top-favorite):hover{
+  background:#eef5f1!important;
+  border-color:#aec4ba!important;
+  color:#103f31!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress span,
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress b{color:#526c63!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress b{color:#174a3a!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress i{background:#dbe5e0!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress em{background:#1a9a69!important}
+
+/* Dark theme retains the dark shell and gets a slightly cleaner control contrast. */
+html body.reference-ui-v99.theme-dark :is(.ref-top-search,.ref-theme-button,.ref-top-favorite){
+  border-color:#34414a!important;
+  background:#161d23!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99.theme-dark .ref-top-search input{color:#eef4f2!important}
+html body.reference-ui-v99.theme-dark .ref-top-search input::placeholder{color:#92a29d!important}
+
+/* ---------- Header and article canvas alignment ---------- */
+@media (min-width:1501px){
+  html body.reference-ui-v99.article-page .ref-topbar{
+    box-sizing:border-box!important;
+    width:min(calc(100% - 48px),1332px)!important;
+    max-width:1332px!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+}
+@media (min-width:1051px) and (max-width:1500px){
+  html body.reference-ui-v99.article-page.content-system-v103 .ref-topbar{
+    box-sizing:border-box!important;
+    width:min(calc(100% - 64px),1000px)!important;
+    max-width:1000px!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+  html body.reference-ui-v99.article-page:not(.content-system-v103) .ref-topbar{
+    box-sizing:border-box!important;
+    width:calc(100% - 48px)!important;
+    max-width:1160px!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+}
+
+/* Ordinary guides: text-only headers. Header illustrations were removed from
+   the markup in v116, and these rules keep old cached markup harmless. */
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero{
+  box-sizing:border-box!important;
+  width:100%!important;
+  margin:0 0 24px!important;
+  padding:8px 0 24px!important;
+  border:0!important;
+  border-bottom:1px solid #dfe7e3!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero-main{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero-visual{display:none!important}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero-copy{
+  width:100%!important;
+  max-width:940px!important;
+  margin:0!important;
+  padding:0!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero .article-label{
+  margin:0 0 7px!important;
+  font-size:10.5px!important;
+  line-height:1.3!important;
+  letter-spacing:.075em!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero h1{
+  max-width:940px!important;
+  margin:0 0 10px!important;
+  font-size:38px!important;
+  line-height:1.08!important;
+  letter-spacing:-.035em!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero .lead{
+  max-width:880px!important;
+  margin:0!important;
+  font-size:16px!important;
+  line-height:1.62!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero-foot{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  margin-top:20px!important;
+  padding-top:15px!important;
+  border-top:1px solid #edf1ef!important;
+}
+html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero .article-meta{
+  margin:0!important;
+}
+
+/* Source playbooks are the only article family that keeps header artwork. */
+@media (min-width:1261px){
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+    display:grid!important;
+    grid-template-columns:58px minmax(0,1fr) 182px!important;
+    gap:16px!important;
+    align-items:center!important;
+    margin:0 0 10px!important;
+  }
+  html body.reference-ui-v99 main.source-playbook-page .source-title-visual{
+    display:block!important;
+    width:182px!important;
+    height:92px!important;
+    padding:7px!important;
+    border:1px solid #dfe8e4!important;
+    border-radius:11px!important;
+    background:#f7faf8!important;
+    overflow:hidden!important;
+  }
+  html body.reference-ui-v99 main.source-playbook-page .source-title-visual img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+}
+@media (max-width:1260px){
+  html body.reference-ui-v99 main.source-playbook-page .source-title-visual{display:none!important}
+}
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-title-visual{
+  background:#171d23!important;
+  border-color:#303942!important;
+}
+
+/* ---------- Real Lucide icons in the left navigation ---------- */
+html body.reference-ui-v99 .global-sidebar .ref-nav-icon{
+  width:20px!important;
+  height:20px!important;
+  min-width:20px!important;
+  flex:0 0 20px!important;
+  display:grid!important;
+  place-items:center!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+  overflow:visible!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-icon-img{
+  display:block!important;
+  width:18px!important;
+  height:18px!important;
+  min-width:18px!important;
+  max-width:18px!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+  color:#f4fbf8!important;
+  opacity:.68!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover .ref-nav-icon-img{opacity:.9!important}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon-img{opacity:1!important}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a{
+  grid-template-columns:20px minmax(0,1fr)!important;
+  gap:10px!important;
+  align-items:center!important;
+}
+
+/* ---------- Larger text in compact information blocks ---------- */
+html body.reference-ui-v99 .home-welcome-summary b{font-size:13px!important;line-height:1.35!important}
+html body.reference-ui-v99 .home-welcome-summary span{font-size:13px!important;line-height:1.55!important}
+html body.reference-ui-v99 .home-welcome-summary>div{padding:15px 15px 16px!important}
+html body.reference-ui-v99 .playbook-facts dt{font-size:10.5px!important;line-height:1.3!important}
+html body.reference-ui-v99 .playbook-facts dd{font-size:12.5px!important;line-height:1.42!important}
+html body.reference-ui-v99 .playbook-risk b{font-size:12px!important;line-height:1.4!important}
+html body.reference-ui-v99 .playbook-risk p{font-size:13px!important;line-height:1.55!important}
+html body.reference-ui-v99 .source-section-tabs a{font-size:11.8px!important;line-height:1.25!important}
+html body.reference-ui-v99 .playbook-checklist li{font-size:12.8px!important;line-height:1.5!important}
+html body.reference-ui-v99 .ref-source-funnel b{font-size:12.5px!important;line-height:1.3!important}
+html body.reference-ui-v99 .ref-source-funnel small{font-size:11.2px!important;line-height:1.45!important}
+html body.reference-ui-v99 .ref-format-card>strong{font-size:12.5px!important;line-height:1.35!important}
+html body.reference-ui-v99 .ref-format-card>small{font-size:11.5px!important;line-height:1.5!important}
+html body.reference-ui-v99 .ref-tip-strip p{font-size:12.5px!important;line-height:1.5!important}
+html body.reference-ui-v99 :is(.service-task-nav,.traffic-next,.guide-v101-next,.guide-v101-diagnostics) :is(p,small,span){font-size:max(12px,1em)!important;line-height:1.5!important}
+
+/* Main article reading text gets a comfortable floor on desktop. */
+@media (min-width:901px){
+  html body.reference-ui-v99 .source-playbook-article :is(p,li,dd),
+  html body.reference-ui-v99.article-page.content-system-v103 .article :is(p,li,dd){
+    font-size:14.5px!important;
+    line-height:1.65!important;
+  }
+}
+
+/* ---------- Light-theme buttons and search on content pages ---------- */
+html body.reference-ui-v99:not(.theme-dark) .home-main-search>div{
+  border-color:#c9d6d0!important;
+  background:#fff!important;
+  box-shadow:0 1px 3px rgba(25,57,46,.035)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-main-search input{
+  background:#fff!important;
+  color:#173b31!important;
+  font-size:13px!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-main-search button{
+  border-left:1px solid #c9d6d0!important;
+  background:#f0f6f3!important;
+  color:#184b3a!important;
+  font-size:12.5px!important;
+  font-weight:750!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-main-search button:hover{background:#e6f1ec!important}
+html body.reference-ui-v99:not(.theme-dark) .home-actions a{
+  min-height:48px!important;
+  padding:0 18px!important;
+  border:1px solid #c8d6d0!important;
+  border-radius:9px!important;
+  background:#fff!important;
+  color:#17473a!important;
+  box-shadow:0 1px 3px rgba(25,57,46,.035)!important;
+  font-size:13.5px!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-actions a:hover{background:#eef5f1!important;border-color:#acc3b9!important}
+html body.reference-ui-v99:not(.theme-dark) .home-actions .home-action-primary{
+  background:#e7f3ed!important;
+  border-color:#a8c8ba!important;
+  color:#114a38!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-actions .home-action-primary:hover{background:#dcece5!important}
+html body.reference-ui-v99:not(.theme-dark) .home-actions .home-action-partner{
+  background:#fff8ef!important;
+  border-color:#e1c9a9!important;
+  color:#70471f!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .home-actions .home-action-partner:hover{background:#faeedf!important}
+
+/* ---------- Mobile top bar: a real Menu button, mobile only ---------- */
+html body.reference-ui-v99 .ref-mobile-menu{display:none!important}
+@media (max-width:900px){
+  html body.reference-ui-v99:not(.theme-dark) .site-header{
+    background:#f6f9f7!important;
+    border-bottom-color:#dce5e1!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand{color:#173d32!important}
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand b{color:#173d32!important}
+  html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-menu){
+    border:1px solid #c5d3cd!important;
+    background:#fff!important;
+    color:#214a3e!important;
+    box-shadow:0 1px 3px rgba(25,57,46,.05)!important;
+  }
+  html body.reference-ui-v99 .ref-mobile-menu{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:auto!important;
+    min-width:76px!important;
+    height:38px!important;
+    padding:0 11px!important;
+    gap:8px!important;
+    border-radius:9px!important;
+    font-size:12px!important;
+    font-weight:700!important;
+  }
+  html body.reference-ui-v99 .ref-mobile-menu>span:last-child{display:inline!important}
+  html body.reference-ui-v99 .ref-mobile-menu .mobile-nav-icon{width:17px!important;height:14px!important}
+  html body.reference-ui-v99 .ref-mobile-brand{max-width:calc(100% - 132px)!important}
+  html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero{
+    padding:10px 0 20px!important;
+    margin-bottom:18px!important;
+  }
+  html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero h1{
+    font-size:28px!important;
+    line-height:1.1!important;
+  }
+  html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero .lead{font-size:14.5px!important;line-height:1.6!important}
+  html body.reference-ui-v99.article-page.content-system-v103 .academy-article-hero-foot{align-items:flex-start!important;flex-direction:column!important}
+}
+
+/* Collapsed desktop sidebar still keeps every icon centered on one axis. */
+@media (min-width:901px){
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-nav-group nav a{
+    display:grid!important;
+    grid-template-columns:20px!important;
+    justify-content:center!important;
+    justify-items:center!important;
+    padding-inline:0!important;
+  }
+}
+
+/* v116.1 — keep primary actions light in the light theme as well. */
+html body.reference-ui-v99:not(.theme-dark) :is(
+  .service-inline-primary,
+  .button-primary,
+  .source-partner-cta>a,
+  .service-open-link
+){
+  border:1px solid #a9c6ba!important;
+  background:#edf6f1!important;
+  color:#174a3a!important;
+  box-shadow:0 1px 3px rgba(25,57,46,.04)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(
+  .service-inline-primary,
+  .button-primary,
+  .source-partner-cta>a,
+  .service-open-link
+):hover{
+  border-color:#8fb5a5!important;
+  background:#e1efe8!important;
+  color:#103f31!important;
 }

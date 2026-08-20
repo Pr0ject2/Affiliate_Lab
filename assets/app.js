@@ -1704,38 +1704,44 @@
     };
 
     const currentPath=location.pathname;
-    const active=(href)=>{
-      if(href===base) return currentPath===base || currentPath===base+'index.html';
-      return currentPath.startsWith(href);
-    };
     const groups=[
       {title:'ГЛАВНАЯ',links:[
-        ['Главная',base,'home'],['С чего начать',base+'start/','start'],['Подобрать источник',base+'traffic/sources/','target'],['Сравнение источников',base+'traffic/compare/','grid']
+        ['Главная',base,'home'],['С чего начать',base+'start/','compass'],['Сравнение источников',base+'traffic/compare/','scaling']
       ]},
       {title:'ПРАКТИКА',links:[
-        ['Источники трафика',base+'traffic/','traffic'],['Практические гайды',base+'practice/','guide'],['Диагностика и ошибки',base+'diagnostics/','tools'],['Аналитика',base+'analytics/','chart'],['Калькуляторы',base+'tools/','calc']
+        ['Источники трафика',base+'traffic/','route'],['Практические гайды',base+'practice/','book-open'],['Диагностика и ошибки',base+'diagnostics/','circle-alert'],['Аналитика',base+'analytics/','line-chart'],['Калькуляторы',base+'tools/','calculator']
       ]},
       {title:'БИБЛИОТЕКА',links:[
-        ['Журнал тестов',base+'notes/','journal'],['Статьи',base+'guides/','article'],['Обзоры',base+'basics/','book'],['Словарь терминов',base+'glossary/','book']
+        ['Журнал тестов',base+'notes/','pen-square'],['Статьи',base+'guides/','layout-template'],['Обзоры',base+'basics/','map'],['Словарь терминов',base+'glossary/','whole-word']
       ]},
       {title:'ИНСТРУМЕНТЫ',links:[
-        ['Сервисы',base+'services/','services'],['Шаблоны и чек-листы',base+'cheatsheets/','guide'],['Трекеры и аналитика',base+'guides/tracker-for-beginner/','chart']
+        ['Сервисы',base+'services/','package-2'],['Трекеры и аналитика',base+'guides/tracker-for-beginner/','network']
       ]}
     ];
+    const navIcon=(name)=>`<svg class="ref-nav-icon-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><use href="${base}assets/icons/nav.svg#${name}"></use></svg>`;
+    const pathMatches=(href)=>{
+      if(href===base) return currentPath===base || currentPath===base+'index.html';
+      return currentPath===href || currentPath===href+'index.html' || currentPath.startsWith(href);
+    };
+    const currentNavHref=groups.flatMap(g=>g.links)
+      .map(link=>link[1])
+      .filter(pathMatches)
+      .sort((a,b)=>b.length-a.length)[0] || '';
+    const active=(href)=>href===currentNavHref;
 
     const sidebar=document.querySelector('.global-sidebar');
     if(sidebar){
       sidebar.innerHTML=`
         <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/academy-cap.png" alt=""><span><b>iGaming</b><strong>Traffic Academy</strong></span></a>
+        <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
           return `<section class="ref-nav-group is-open${hasActive?' has-active':''}" data-ref-group="${gi}">
             <button class="ref-nav-heading" type="button" aria-expanded="true"><span>${g.title}</span><i>⌄</i></button>
-            <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"><span class="ref-nav-icon">${svg(icon)}</span><span>${label}</span></a>`).join('')}</nav>
+            <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"${active(href)?' aria-current="page"':''}><span class="ref-nav-icon">${navIcon(icon)}</span><span>${label}</span></a>`).join('')}</nav>
           </section>`
         }).join('')}</div>
-        <a class="ref-partner-card" href="${base}guides/1win-rules/"><b>1win Partners: правила и GEO</b><span>Актуальные выплаты, условия и список разрешённых GEO.</span><em>Открыть <span>→</span></em></a>
-        <button class="ref-sidebar-collapse" type="button" data-ref-sidebar-collapse><span>←</span> Свернуть меню</button>`;
+        <a class="ref-partner-card" href="${base}guides/1win-rules/"><b>1win Partners: правила и GEO</b><span>Актуальные выплаты, условия и список разрешённых GEO.</span><em>Открыть <span>→</span></em></a>`;
 
       sidebar.querySelectorAll('.ref-nav-heading').forEach(btn=>btn.addEventListener('click',()=>{
         const group=btn.closest('.ref-nav-group');
@@ -1744,7 +1750,24 @@
         btn.setAttribute('aria-expanded',next?'true':'false');
       }));
       const collapse=sidebar.querySelector('[data-ref-sidebar-collapse]');
-      if(collapse)collapse.addEventListener('click',()=>document.body.classList.toggle('ref-sidebar-collapsed'));
+      const collapseKey='ita-ref-sidebar-collapsed';
+      const syncCollapse=()=>{
+        if(!collapse)return;
+        const isCollapsed=document.body.classList.contains('ref-sidebar-collapsed');
+        collapse.setAttribute('aria-expanded',isCollapsed?'false':'true');
+        collapse.setAttribute('aria-label',isCollapsed?'Развернуть левое меню':'Свернуть левое меню');
+        const label=collapse.querySelector('.ref-collapse-label');
+        if(label)label.textContent=isCollapsed?'Развернуть меню':'Свернуть меню';
+      };
+      try{
+        if(localStorage.getItem(collapseKey)==='1')document.body.classList.add('ref-sidebar-collapsed');
+      }catch(_e){}
+      syncCollapse();
+      if(collapse)collapse.addEventListener('click',()=>{
+        document.body.classList.toggle('ref-sidebar-collapsed');
+        try{localStorage.setItem(collapseKey,document.body.classList.contains('ref-sidebar-collapsed')?'1':'0')}catch(_e){}
+        syncCollapse();
+      });
     }
 
     const header=document.querySelector('.site-header');
@@ -1764,8 +1787,8 @@
           <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>
           <button class="ref-theme-button" type="button" data-theme-toggle aria-label="Переключить тему"><span class="theme-toggle-icon">☾</span></button>
           <a class="ref-top-favorite" href="${base}saved/">${svg('star')}<span>В избранное</span></a>
-          <div class="ref-top-progress"><span>Прогресс в разделе</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
-          <button class="mobile-nav-toggle ref-mobile-menu" type="button" aria-label="Открыть меню библиотеки"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span></button>
+          <div class="ref-top-progress" title="Доля открытых страниц Академии"><span>Прогресс по Академии</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
+          <button class="mobile-nav-toggle ref-mobile-menu" type="button" aria-label="Открыть меню"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span></button>
         </div>
       </div>`;
       const search=header.querySelector('.ref-top-search input');
@@ -1801,9 +1824,9 @@
       const icon=article.querySelector('.source-hero-icon');
       if(icon){icon.style.setProperty('--source-accent',data.accent); if(slug==='youtube')icon.innerHTML='<span class="ref-play-triangle"></span>';}
       const titleRow=article.querySelector('.source-title-row');
-      if(titleRow&&!titleRow.querySelector('.ref-launch-time'))titleRow.insertAdjacentHTML('beforeend',`<div class="ref-launch-time"><span>◷</span><small>Время на запуск</small><b>${data.time}</b></div>`);
+      if(titleRow){titleRow.querySelector('.ref-launch-time')?.remove();}
       const oldFacts=article.querySelector('.playbook-facts');
-      if(oldFacts){oldFacts.innerHTML=`<div><dt>Сложность</dt><dd>${data.difficulty}</dd></div><div><dt>Старт</dt><dd>${data.start}</dd></div><div><dt>Трафик</dt><dd>${data.traffic}</dd></div><div><dt>GEO</dt><dd>${data.geo}</dd></div>`;}
+      if(oldFacts){oldFacts.innerHTML=`<div><dt>Сложность</dt><dd>${data.difficulty}</dd></div><div><dt>Старт</dt><dd>${data.start}</dd></div><div><dt>Трафик</dt><dd>${data.traffic}</dd></div><div><dt>GEO</dt><dd>${data.geo}</dd></div><div><dt>Сигнал</dt><dd>${data.time}</dd></div>`;}
 
       const tabs=article.querySelector('.source-section-tabs');
       if(tabs){[...tabs.querySelectorAll('a')].forEach((a,i)=>{if(i>0&&!a.querySelector('span'))a.insertAdjacentHTML('afterbegin',`<span>${i}</span>`);});}
@@ -1867,16 +1890,35 @@
       const related=rail.querySelector('.rail-related-visual'); if(related){const b=related.querySelector(':scope>b'); if(b)b.textContent='Похожие гайды';}
     }
 
-    // Reading progress in the top bar.
+    // Academy-wide progress: opened pages across the whole site, not scroll depth of one article.
     const progressValue=document.querySelector('[data-ref-progress-value]');
     const progressBar=document.querySelector('[data-ref-progress-bar]');
-    const updateProgress=()=>{
-      const main=document.querySelector('main'); if(!main)return;
-      const top=main.offsetTop; const total=Math.max(1,main.scrollHeight-innerHeight*.75); const pct=Math.max(0,Math.min(100,((scrollY-top)/total)*100));
-      if(progressValue)progressValue.textContent=Math.round(pct)+'%';
-      if(progressBar)progressBar.style.width=pct+'%';
+    const progressBox=document.querySelector('.ref-top-progress');
+    const academyPages=["/Affiliate_Lab/about/","/Affiliate_Lab/analytics/","/Affiliate_Lab/basics/","/Affiliate_Lab/diagnostics/","/Affiliate_Lab/economics/","/Affiliate_Lab/glossary/","/Affiliate_Lab/guides/1win-rules/","/Affiliate_Lab/guides/adsbridge-campaign/","/Affiliate_Lab/guides/affiliate-manager/","/Affiliate_Lab/guides/affiliate-marketing/","/Affiliate_Lab/guides/choose-program/","/Affiliate_Lab/guides/choose-traffic-source/","/Affiliate_Lab/guides/clicks-no-registrations/","/Affiliate_Lab/guides/community-traffic/","/Affiliate_Lab/guides/content-sites/","/Affiliate_Lab/guides/cpa-vs-revshare/","/Affiliate_Lab/guides/first-ftd/","/Affiliate_Lab/guides/free-traffic/","/Affiliate_Lab/guides/ftd/","/Affiliate_Lab/guides/geo/","/Affiliate_Lab/guides/ggr-ngr/","/Affiliate_Lab/guides/","/Affiliate_Lab/guides/landing-page/","/Affiliate_Lab/guides/launch-checklist/","/Affiliate_Lab/guides/metrics/","/Affiliate_Lab/guides/offer/","/Affiliate_Lab/guides/paid-traffic/","/Affiliate_Lab/guides/partner-dashboard/","/Affiliate_Lab/guides/registrations-no-ftd/","/Affiliate_Lab/guides/revshare/","/Affiliate_Lab/guides/search-traffic/","/Affiliate_Lab/guides/social-traffic/","/Affiliate_Lab/guides/statistics/","/Affiliate_Lab/guides/statistics-mismatch/","/Affiliate_Lab/guides/stream-traffic/","/Affiliate_Lab/guides/tracker-for-beginner/","/Affiliate_Lab/guides/tracking/","/Affiliate_Lab/guides/traffic-quality/","/Affiliate_Lab/guides/video-traffic/","/Affiliate_Lab/help/","/Affiliate_Lab/","/Affiliate_Lab/notes/","/Affiliate_Lab/practice/","/Affiliate_Lab/services/","/Affiliate_Lab/start/","/Affiliate_Lab/tools/","/Affiliate_Lab/traffic/compare/","/Affiliate_Lab/traffic/","/Affiliate_Lab/traffic/sources/alt-video/","/Affiliate_Lab/traffic/sources/communities/","/Affiliate_Lab/traffic/sources/content-site/","/Affiliate_Lab/traffic/sources/dzen/","/Affiliate_Lab/traffic/sources/mailing/","/Affiliate_Lab/traffic/sources/paid/","/Affiliate_Lab/traffic/sources/reddit/","/Affiliate_Lab/traffic/sources/search/","/Affiliate_Lab/traffic/sources/short-video/","/Affiliate_Lab/traffic/sources/social/","/Affiliate_Lab/traffic/sources/streams/","/Affiliate_Lab/traffic/sources/telegram/","/Affiliate_Lab/traffic/sources/vk-video/","/Affiliate_Lab/traffic/sources/x-twitter/","/Affiliate_Lab/traffic/sources/youtube/"];
+    const progressKey='ita-site-progress-v1';
+    const normalizeProgressPath=(value='')=>{
+      try{const u=new URL(value,location.origin);let p=u.pathname.replace(/index\.html$/,'');if(!p.endsWith('/'))p+='/';return p;}catch(_e){return value;}
     };
-    addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+    const visited=new Set();
+    try{
+      const saved=JSON.parse(localStorage.getItem(progressKey)||'[]');
+      if(Array.isArray(saved))saved.forEach(x=>visited.add(normalizeProgressPath(x)));
+      const oldStates=JSON.parse(localStorage.getItem('al-reading-state-v1')||'{}');
+      Object.keys(oldStates||{}).forEach(x=>visited.add(normalizeProgressPath(x)));
+      const recent=JSON.parse(localStorage.getItem('al-recent-v1')||'[]');
+      if(Array.isArray(recent))recent.forEach(x=>{if(x&&x.url)visited.add(normalizeProgressPath(x.url));});
+    }catch(_e){}
+    const currentProgressPath=normalizeProgressPath(location.pathname);
+    if(academyPages.includes(currentProgressPath))visited.add(currentProgressPath);
+    const validVisited=academyPages.filter(x=>visited.has(x));
+    try{localStorage.setItem(progressKey,JSON.stringify(validVisited));}catch(_e){}
+    const sitePct=academyPages.length?Math.round(validVisited.length/academyPages.length*100):0;
+    if(progressValue)progressValue.textContent=sitePct+'%';
+    if(progressBar)progressBar.style.width=sitePct+'%';
+    if(progressBox){
+      progressBox.title=`Открыто ${validVisited.length} из ${academyPages.length} страниц Академии`;
+      progressBox.setAttribute('aria-label',progressBox.title);
+    }
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initReferenceUI); else initReferenceUI();
 })();
@@ -1899,6 +1941,16 @@
     if(n.includes('profitads')) return 'profitads';
     return '';
   };
+  const iconUrl={
+    multilogin:'https://www.google.com/s2/favicons?domain=multilogin.com&sz=128',
+    proxys:'https://www.google.com/s2/favicons?domain=proxys.io&sz=128',
+    ruvds:'https://www.google.com/s2/favicons?domain=ruvds.com&sz=128',
+    adsbridge:'https://www.google.com/s2/favicons?domain=adsbridge.com&sz=128',
+    onlinesim:'https://www.google.com/s2/favicons?domain=onlinesim.io&sz=128',
+    spyhouse:'https://www.google.com/s2/favicons?domain=spy.house&sz=128',
+    darkstore:'https://www.google.com/s2/favicons?domain=dark.shopping&sz=128',
+    profitads:'https://www.google.com/s2/favicons?domain=profitads.ru&sz=128'
+  };
   const decorate = () => {
     document.querySelectorAll('.rail-tools a:not(.rail-all-tools), .service-tool, .source-tool-card').forEach(el=>{
       const title = (el.querySelector('h3,b')?.textContent || '').trim();
@@ -1911,6 +1963,16 @@
         mark.dataset.tool = key;
         mark.setAttribute('aria-label', title);
         mark.textContent = '';
+        const img=document.createElement('img');
+        img.src=iconUrl[key];
+        img.alt='';
+        img.setAttribute('aria-hidden','true');
+        img.loading='lazy';
+        img.decoding='async';
+        img.width=32;
+        img.height=32;
+        img.referrerPolicy='no-referrer';
+        mark.appendChild(img);
       }
     });
     document.querySelectorAll('.playbook-card').forEach(card=>{
