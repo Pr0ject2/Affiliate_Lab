@@ -79,7 +79,7 @@
 
   /* Mobile menu is critical navigation, so it does not depend on the knowledge-base script. */
   function initMobileNav(){
-    const header=document.querySelector('.site-header .header-inner');
+    const header=document.querySelector('.site-header .header-inner, .site-header .ref-topbar') || document.querySelector('.site-header');
     const sidebar=document.querySelector('.global-sidebar');
     if(!header||!sidebar)return;
     let btn=header.querySelector('.mobile-nav-toggle');
@@ -106,16 +106,21 @@
       document.body.appendChild(overlay);
     }
 
+    function syncButtons(expanded){
+      document.querySelectorAll('.site-header .mobile-nav-toggle').forEach(function(button){
+        button.setAttribute('aria-expanded',expanded?'true':'false');
+        button.setAttribute('aria-label',expanded?'Закрыть меню библиотеки':'Открыть меню библиотеки');
+      });
+    }
     function close(returnFocus){
       document.body.classList.remove('mobile-nav-open');
-      btn.setAttribute('aria-expanded','false');
-      btn.setAttribute('aria-label','Открыть меню библиотеки');
-      if(returnFocus)btn.focus();
+      syncButtons(false);
+      const currentBtn=document.querySelector('.site-header .mobile-nav-toggle')||btn;
+      if(returnFocus && currentBtn && currentBtn.isConnected)currentBtn.focus();
     }
     function open(){
       document.body.classList.add('mobile-nav-open');
-      btn.setAttribute('aria-expanded','true');
-      btn.setAttribute('aria-label','Закрыть меню библиотеки');
+      syncButtons(true);
       const firstLink=sidebar.querySelector('a,input,button');
       if(firstLink)firstLink.focus();
     }
@@ -129,11 +134,17 @@
     document.addEventListener('keydown',function(e){
       if(e.key==='Escape'&&document.body.classList.contains('mobile-nav-open'))close(true);
     });
-    const mobileQuery=window.matchMedia('(max-width:1050px)');
+    const mobileQuery=window.matchMedia('(max-width:900px)');
     function closeOnDesktop(e){if(!e.matches)close(false)}
     if(mobileQuery.addEventListener)mobileQuery.addEventListener('change',closeOnDesktop);
     else if(mobileQuery.addListener)mobileQuery.addListener(closeOnDesktop);
   }
+  window.ITAInitMobileNav=initMobileNav;
+  window.ITASetAudienceMode=function(mode,emit){
+    mode=mode==='pro'?'pro':'beginner';
+    safeStorageSet(MODE_KEY,mode);
+    applyMode(mode,emit!==false);
+  };
   initMobileNav();
 
   /* Homepage search has a native fallback form after v38, this handles old markup too. */

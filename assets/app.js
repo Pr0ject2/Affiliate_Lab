@@ -488,21 +488,21 @@
       key:'retention',
       variants:['Retention'],
       en:'Audience Retention',
-      title:'Retention',
+      title:'Удержание',
       text:'Удержание аудитории: какая часть ролика или серии остаётся просмотренной и где зрители чаще всего уходят.'
     },
     {
       key:'reach',
       variants:['Reach'],
       en:'Reach',
-      title:'Reach',
+      title:'Охват',
       text:'Число уникальных людей, которым площадка показала публикацию или ролик за выбранный период.'
     },
     {
       key:'tracking-term',
       variants:['Tracking'],
       en:'Tracking',
-      title:'Tracking',
+      title:'Трекинг',
       text:'Система учёта пути от источника и конкретной публикации до регистрации, FTD и дохода.'
     },
     {
@@ -516,28 +516,28 @@
       key:'invite-link',
       variants:['invite links','invite link'],
       en:'Invite link',
-      title:'Invite link',
+      title:'Ссылка-приглашение',
       text:'Отдельная ссылка-приглашение в Telegram. Она помогает определить, из какого источника пришли новые подписчики.'
     },
     {
       key:'impressions',
       variants:['Impressions'],
       en:'Impressions',
-      title:'Impressions',
+      title:'Показы',
       text:'Количество показов публикации, thumbnail или страницы в выдаче. Один человек может создать больше одного показа.'
     },
     {
       key:'content-cluster',
       variants:['Content cluster'],
       en:'Content cluster',
-      title:'Content cluster',
+      title:'Тематический кластер',
       text:'Группа связанных страниц вокруг одной темы: опорная страница и отдельные ответы на соседние вопросы.'
     },
     {
       key:'query',
       variants:['Queries','Query'],
       en:'Search query',
-      title:'Query',
+      title:'Поисковый запрос',
       text:'Запрос, который пользователь ввёл в поиск. В Search Console запросы можно сравнивать по Impressions, clicks и CTR.'
     },
     {
@@ -586,14 +586,14 @@
       key:'attribution-window',
       variants:['окно Attribution','окна Attribution','окном Attribution'],
       en:'Attribution window',
-      title:'Окно Attribution',
+      title:'Окно атрибуции',
       text:'Период, в течение которого конверсия после клика может быть засчитана источнику или партнёру.'
     },
     {
       key:'tracker',
       variants:['Tracker','Tracker','Tracker','Tracker','Tracker'],
       en:'Tracking platform / Tracker',
-      title:'Tracker',
+      title:'Трекер',
       text:'Система для учёта переходов, источников, меток и конверсий, а также для сопоставления данных между рекламой и партнёрской программой.'
     },
     {
@@ -1174,11 +1174,11 @@
  const data={
   search:{name:'Поисковый трафик',url:'/Affiliate_Lab/traffic/sources/search/',start:'Полезные страницы под существующие запросы и технически доступный сайт.',audience:'Люди сами формулируют запрос и приходят из поиска.',feedback:'Индексация может занять дни или недели; заметный результат не имеет гарантированного быстрого срока.',after:'Опубликованные страницы остаются и могут продолжать получать переходы.',measure:'Запрос, страница, клик, регистрация, FTD.',trap:'Не путать индексацию страницы с появлением стабильного поискового трафика.'},
   video:{name:'Видео и короткие ролики',url:'/Affiliate_Lab/guides/video-traffic/',start:'Сценарии, ролики и возможность выпускать несколько сопоставимых материалов.',audience:'Зритель сначала встречает контент, а потом решает, переходить ли дальше.',feedback:'Первые результаты можно увидеть после публикаций, но вывод лучше делать по серии роликов.',after:'Отдельные ролики могут продолжать набирать просмотры, но это зависит от площадки и темы.',measure:'Просмотр, переход, регистрация, FTD.',trap:'Не принимать просмотры за коммерческий результат.'},
-  community:{name:'Сообщества и мессенджеры',url:'/Affiliate_Lab/traffic/sources/communities/',start:'Собственная аудитория или доступ к релевантным размещениям.',audience:'Люди приходят из конкретного канала, группы или рекомендации.',feedback:'При существующей аудитории отклик можно увидеть сразу после размещения.',after:'Эффект конкретного поста обычно снижается, если публикацию перестают видеть.',measure:'Каждый канал и размещение отдельно, переход, регистрация, депозит.',trap:'Не смешивать собственную прогретую аудиторию с чужими размещениями.'},
+  community:{name:'Сообщества и мессенджеры',url:'/Affiliate_Lab/traffic/sources/communities/',start:'Собственная аудитория или доступ к подходящим тематическим площадкам.',audience:'Люди приходят из конкретного канала, группы или рекомендации.',feedback:'При существующей аудитории отклик можно увидеть сразу после размещения.',after:'Эффект конкретного поста обычно снижается, если публикацию перестают видеть.',measure:'Каждый канал и размещение отдельно, переход, регистрация, депозит.',trap:'Не смешивать собственную прогретую аудиторию с чужими размещениями.'},
   social:{name:'Социальные сети',url:'/Affiliate_Lab/traffic/sources/social/',start:'Регулярный контент и формат, который работает внутри конкретной ленты.',audience:'Чаще холодная лента: пользователь изначально ничего не искал.',feedback:'Сигналы появляются после публикации, но один пост редко даёт надёжный вывод.',after:'Жизнь публикации зависит от алгоритма и того, продолжает ли она получать охват.',measure:'Охват, переход, регистрация, FTD.',trap:'Не переносить результаты одного формата или аккаунта на всю социальную сеть.'},
   shortvideo:{name:'TikTok, Reels, Spotlight и Likee',url:'/Affiliate_Lab/traffic/sources/short-video/',start:'Серия из 10–20 коротких роликов на одной площадке и одна точка перехода.',audience:'Холодная вертикальная лента, где решение о просмотре принимается за первые секунды.',feedback:'Показы и переходы появляются быстро, но вывод нужен по серии, а не по одному ролику.',after:'Жизнь ролика зависит от алгоритма конкретной площадки.',measure:'Просмотры, переходы в профиль, клики, регистрации, FTD.',trap:'Не объединять одинаковый ролик на разных платформах в один источник.'},
   altvideo:{name:'Rutube, Dailymotion и OK Видео',url:'/Affiliate_Lab/traffic/sources/alt-video/',start:'3–5 готовых сопоставимых роликов и отдельные ссылки для каждой платформы.',audience:'Зрители конкретного видеохостинга, которые могут отличаться от аудитории YouTube.',feedback:'Результат виден после накопления просмотров и внешних переходов.',after:'Ролики могут продолжать получать просмотры после публикации.',measure:'Просмотры, клики на 1000, регистрации, FTD.',trap:'Не считать дополнительный охват полезным, если он не даёт переходов.'},
-  dzen:{name:'Дзен',url:'/Affiliate_Lab/traffic/sources/dzen/',start:'8–12 статей, постов или видео одного формата и одной темы.',audience:'Пользователи рекомендательной ленты и подписчики канала.',feedback:'Первые показы могут появиться быстро, но сравнивать материалы нужно по одинаковому возрасту.',after:'Отдельные публикации могут продолжать получать рекомендации и переходы.',measure:'Показы, дочитывания, внешние клики, регистрации, FTD.',trap:'Не принимать дочитывания за коммерческий результат.'},
+  dzen:{name:'Дзен',url:'/Affiliate_Lab/traffic/sources/dzen/',start:'8–12 статей, постов или видео одного формата и одной темы.',audience:'Пользователи рекомендательной ленты и подписчики канала.',feedback:'Первые показы могут появиться быстро, но сравнивать материалы нужно через одинаковое время после публикации.',after:'Отдельные публикации могут продолжать получать рекомендации и переходы.',measure:'Показы, дочитывания, внешние клики, регистрации, FTD.',trap:'Не принимать дочитывания за коммерческий результат.'},
   reddit:{name:'Reddit и тематические ветки',url:'/Affiliate_Lab/traffic/sources/reddit/',start:'5–10 полезных публикаций или ответов в сообществах, где тема и ссылки разрешены.',audience:'Люди уже обсуждают конкретную тему внутри сообщества.',feedback:'Клики могут появиться сразу после публикации, но многое зависит от конкретной ветки.',after:'Старые обсуждения иногда продолжают давать переходы.',measure:'Ветка, публикация, внешний клик, регистрация, FTD.',trap:'Не путать активное обсуждение с коммерческим трафиком.'},
   x:{name:'X и короткие посты',url:'/Affiliate_Lab/traffic/sources/x-twitter/',start:'15–30 коротких постов или тредов одной темы.',audience:'Лента, подписчики и пользователи, которые видят репосты и обсуждения.',feedback:'Показы и переходы в профиль видны быстро, но внешний клик нужно считать отдельно.',after:'Посты обычно быстро теряют охват, отдельные треды могут жить дольше.',measure:'Показы, профиль, внешний клик, регистрация, FTD.',trap:'Не считать переход в профиль равным партнёрскому клику.'},
   mailing:{name:'Email и web push',url:'/Affiliate_Lab/traffic/sources/mailing/',start:'Собственная база подписчиков и 3–5 сопоставимых выпусков.',audience:'Люди, которые уже согласились получать сообщения от проекта.',feedback:'Клики появляются после отправки, поэтому серии удобно сравнивать по одинаковому окну.',after:'Поток прекращается после остановки рассылок, но база остаётся собственным активом.',measure:'Доставка, клики, регистрации, FTD.',trap:'Не использовать покупные базы и не оценивать рассылку только по открытиям.'},
@@ -1263,7 +1263,7 @@
  /* v38: mode switching is owned by core.js */
  document.addEventListener('al:modechange',e=>renderMode(e.detail?.mode||current()));
  renderMode(current());
- window.ALAudienceMode={get:current,set:(m)=>{try{localStorage.setItem(KEY,m==='pro'?'pro':'beginner')}catch(e){}renderMode(current())}};
+ window.ALAudienceMode={get:current,set:(m)=>{if(window.ITASetAudienceMode)window.ITASetAudienceMode(m,true);else{try{localStorage.setItem(KEY,m==='pro'?'pro':'beginner')}catch(e){}renderMode(current())}}};
 }catch(e){console.error('iGaming Traffic Academy module 10 error',e);}})();
 
 /* v34 - reading marks in the catalog */
@@ -1297,7 +1297,7 @@
  const get=(k,f)=>{try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(f))}catch(e){return f}};
  const sourceNames={search:'Поисковый трафик',video:'Видео и короткие ролики',community:'Сообщества и мессенджеры',social:'Социальные сети',ads:'Платная реклама',stream:'Стримы и прямые эфиры',site:'Свой сайт и контентный проект'};
  const source=get('al-selected-source-v1',null),recent=get('al-recent-v1',[]),states=get('al-reading-state-v1',{}),book=get('al-bookmarks-v1',[]);
- const sbox=document.getElementById('pathSourceState');if(sbox){if(source&&source.key){sbox.innerHTML=`<b class="path-source-name">${sourceNames[source.key]||source.name||source.key}</b><p>Этот источник сохранён для расчётов и заметок.</p><div class="path-source-actions"><a href="/Affiliate_Lab/tools/?source=${source.key}">Открыть инструменты</a><a href="/Affiliate_Lab/traffic/">Выбрать другой</a></div>`}else{sbox.innerHTML='<p>Источник пока не выбран. Библиотека работает и без этого.</p><div class="path-source-actions"><a href="/Affiliate_Lab/traffic/">Выбрать источник</a><a href="/Affiliate_Lab/traffic/compare/">Сравнить варианты</a></div>'}}
+ const sbox=document.getElementById('pathSourceState');if(sbox){if(source&&source.key){sbox.innerHTML=`<b class="path-source-name">${sourceNames[source.key]||source.name||source.key}</b><p>Этот источник выбран для расчётов и заметок.</p><div class="path-source-actions"><a href="/Affiliate_Lab/tools/?source=${source.key}">Открыть инструменты</a><a href="/Affiliate_Lab/traffic/">Выбрать другой</a></div>`}else{sbox.innerHTML='<p>Источник пока не выбран. Библиотека работает и без этого.</p><div class="path-source-actions"><a href="/Affiliate_Lab/traffic/">Выбрать источник</a><a href="/Affiliate_Lab/traffic/compare/">Сравнить варианты</a></div>'}}
  const cbox=document.getElementById('pathContinueState');if(cbox){const last=recent[0];if(last){const st=states[last.url]||{},pr=st.progress||0,pct=Math.max(0,Math.min(100,Math.round(pr*100)));const href=pr>.05&&pr<.82?last.url+'?continue=1':last.url;cbox.innerHTML=`<h2>${last.title}</h2><p>${pr>=.78?'Материал почти дочитан. Можно вернуться к нему или продолжить по рекомендациям в конце.':pr>.05?'Вернуться к месту, где остановились.':'Недавно открытый материал.'}</p><div class="path-progress"><i style="width:${pct}%"></i></div><small>Прогресс: около ${pct}%</small><div class="path-continue-actions"><a href="${href}">${pr>.05&&pr<.82?'Продолжить чтение':'Открыть материал'}</a><a href="/Affiliate_Lab/notes/">История чтения</a></div>`}else{cbox.innerHTML='<p>История чтения пока пустая. Начни с любого раздела - здесь появится удобное продолжение.</p><div class="path-continue-actions"><a href="/Affiliate_Lab/guides/">Открыть материалы</a></div>'}}
  const bbox=document.getElementById('pathSavedState');if(bbox){bbox.innerHTML=`<b class="path-source-name">${book.length}</b><p>${book.length===1?'материал сохранён в закладках':'материалов сохранено в закладках'}.</p><div class="path-source-actions"><a href="/Affiliate_Lab/notes/">Открыть закладки</a></div>`}
 }catch(e){console.error('iGaming Traffic Academy module 14 error',e);}})();
@@ -1605,7 +1605,7 @@
      if(icon)icon.textContent=dark?'☀':'☾';
    });
    const meta=document.querySelector('meta[name="theme-color"]');
-   if(meta)meta.setAttribute('content',dark?'#07120f':'#0d493d');
+   if(meta)meta.setAttribute('content',dark?'#101318':'#0d493d');
    if(save)try{localStorage.setItem(storageKey,theme)}catch(e){}
  };
  let stored=null;try{stored=localStorage.getItem(storageKey)}catch(e){}
@@ -1765,13 +1765,12 @@
           <button class="ref-theme-button" type="button" data-theme-toggle aria-label="Переключить тему"><span class="theme-toggle-icon">☾</span></button>
           <a class="ref-top-favorite" href="${base}saved/">${svg('star')}<span>В избранное</span></a>
           <div class="ref-top-progress"><span>Прогресс в разделе</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
-          <button class="ref-mobile-menu" type="button" data-ref-mobile-menu aria-label="Открыть меню">☰</button>
+          <button class="mobile-nav-toggle ref-mobile-menu" type="button" aria-label="Открыть меню библиотеки"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span></button>
         </div>
       </div>`;
       const search=header.querySelector('.ref-top-search input');
       document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search&&search.focus();}});
-      const mobileMenu=header.querySelector('[data-ref-mobile-menu]');
-      if(mobileMenu&&sidebar)mobileMenu.addEventListener('click',()=>document.body.classList.toggle('ref-mobile-nav-open'));
+      if(window.ITAInitMobileNav)window.ITAInitMobileNav();
     }
 
     // Reference page summary for source playbooks.
@@ -1789,7 +1788,7 @@
         social:{title:'Социальные сети',subtitle:'Контентные ленты, короткий путь до оффера и серия публикаций вместо оценки одного поста.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по площадке',time:'3–10 дней',accent:'#8a5be8'},
         'short-video':{title:'Короткие видео',subtitle:'Shorts, Reels, клипы и другие вертикальные форматы с отдельной разметкой каждого ролика.',difficulty:'Средняя',start:'от 1 дня',traffic:'органический',geo:'по площадке',time:'3–10 дней',accent:'#e04f87'},
         streams:{title:'Стримы',subtitle:'Как превратить эфир, запись и нарезки в измеримую воронку до регистрации и депозита.',difficulty:'Средняя',start:'2–3 дня',traffic:'органический',geo:'по офферу',time:'1–2 недели',accent:'#9b59b6'},
-        communities:{title:'Сообщества и форумы',subtitle:'Работа с тематическими площадками, контекстом обсуждений и отдельной меткой на каждое размещение.',difficulty:'Средняя',start:'1–2 дня',traffic:'органический',geo:'по аудитории',time:'3–10 дней',accent:'#4f7a61'},
+        communities:{title:'Сообщества и форумы',subtitle:'Работа с тематическими площадками, контекстом обсуждений и отдельной меткой на каждую площадку.',difficulty:'Средняя',start:'1–2 дня',traffic:'органический',geo:'по аудитории',time:'3–10 дней',accent:'#4f7a61'},
         reddit:{title:'Reddit',subtitle:'Работа с сабреддитами, правилами сообществ и контентом, который не выглядит чужой рекламой.',difficulty:'Средняя',start:'1–3 дня',traffic:'органический',geo:'по сообществу',time:'1–2 недели',accent:'#ff4500'},
         dzen:{title:'Дзен',subtitle:'Статьи, короткие публикации и последовательный тест тем с раздельной аналитикой.',difficulty:'Средняя',start:'1–3 дня',traffic:'органический',geo:'по аудитории',time:'1–3 недели',accent:'#222'},
         mailing:{title:'Рассылки',subtitle:'Собственная база, доставка, сегментация и измерение перехода до продукта без спама.',difficulty:'Средняя',start:'1–3 дня',traffic:'собственная база',geo:'по базе',time:'3–7 дней',accent:'#1a7f5a'},
