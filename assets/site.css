@@ -10087,3 +10087,511 @@ html body.theme-dark :is(
     border-left:1px solid rgba(99,122,114,.10);
   }
 }
+
+
+/* ======================================================================
+   v123 — article declutter and stronger editorial structure
+   ====================================================================== */
+
+/* ---------- Regular articles: sections are chapters, not cards ---------- */
+body.content-system-v103 .structured-article-v103 .logic-section-v103,
+body.content-system-v103 .structured-article-v103 .academy-content-section{
+  margin:0!important;
+  padding:30px 0 31px!important;
+  border:0!important;
+  border-top:1px solid #dfe5e1!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.content-system-v103 .structured-article-v103 .service-inline + .logic-section-v103,
+body.content-system-v103 .structured-article-v103 .academy-article-hero + .logic-section-v103{
+  border-top-color:#cfd9d4!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+  display:grid!important;
+  grid-template-columns:34px minmax(0,1fr)!important;
+  align-items:start!important;
+  gap:12px!important;
+  margin:0 0 13px!important;
+  font-size:24px!important;
+  line-height:1.25!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-index-v103{
+  width:auto!important;
+  height:auto!important;
+  min-width:0!important;
+  padding:3px 0 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#6f8e82!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,li,dd){
+  font-size:17px!important;
+  line-height:1.72!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-section-v103 :is(ul,ol){
+  margin:13px 0 4px!important;
+  padding-left:23px!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-section-v103 li+li{margin-top:7px!important}
+
+/* Only warnings stay visually boxed. Action/analysis sections use a restrained marker. */
+body.content-system-v103 .structured-article-v103 :is(.logic-explain-v103,.logic-analysis-v103,.logic-action-v103){
+  background:transparent!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-action-v103>h2::after{
+  content:"Практика";
+  align-self:center;
+  justify-self:start;
+  margin-left:7px;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#edf6f2;
+  color:#31705a;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+body.content-system-v103 .structured-article-v103 .logic-action-v103>h2{
+  grid-template-columns:34px minmax(0,1fr) auto!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-warning-v103{
+  margin:20px 0!important;
+  padding:20px 22px!important;
+  border:1px solid #e6d8c3!important;
+  border-radius:10px!important;
+  background:#fbf6ec!important;
+}
+
+/* Inline service notes become editorial notes instead of another card. */
+body .article .service-inline{
+  margin:20px 0 8px!important;
+  padding:15px 0 15px 18px!important;
+  border:0!important;
+  border-left:3px solid #9db8ad!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .article .service-inline-actions{margin-top:8px!important}
+body .article .service-inline-actions a{
+  display:inline!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  text-decoration:underline!important;
+  text-underline-offset:3px!important;
+}
+
+/* ---------- Source playbooks: one section rhythm, fewer nested boxes ---------- */
+body .source-playbook-article .source-hero-shell{
+  margin-bottom:4px!important;
+  padding-bottom:24px!important;
+  border-bottom:1px solid #d8e1dc!important;
+}
+body .source-playbook-article .guide-v101-section,
+body.reference-ui-v99 .source-playbook-article .guide-v101-section{
+  margin:0!important;
+  padding:34px 0 36px!important;
+  border:0!important;
+  border-top:1px solid #dfe6e2!important;
+  background:transparent!important;
+}
+body .source-playbook-article .guide-v101-section:first-of-type{border-top:0!important}
+body .source-playbook-article .guide-v101-section>h2{
+  margin:0 0 14px!important;
+  font-size:24px!important;
+  line-height:1.28!important;
+}
+body .source-playbook-article .guide-v101-section>p{
+  max-width:860px!important;
+  margin:0 0 14px!important;
+  font-size:17px!important;
+  line-height:1.72!important;
+}
+
+/* Facts in the hero are a data strip, not four mini-cards. */
+body .source-playbook-article .playbook-facts{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:0!important;
+  margin:20px 0 15px!important;
+  border-top:1px solid #dbe3df!important;
+  border-bottom:1px solid #dbe3df!important;
+}
+body .source-playbook-article .playbook-facts>div{
+  min-height:0!important;
+  padding:13px 16px!important;
+  border:0!important;
+  border-right:1px solid #e2e7e4!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+body .source-playbook-article .playbook-facts>div:last-child{border-right:0!important}
+body .source-playbook-article .playbook-facts dt{font-size:11px!important}
+body .source-playbook-article .playbook-facts dd{font-size:14px!important;line-height:1.42!important}
+
+/* Checklists: simple structured list with separators. */
+body .source-playbook-page .playbook-checklist,
+body .source-playbook-article .playbook-checklist{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:0 28px!important;
+  margin:17px 0 29px!important;
+  border-top:1px solid #dfe6e2!important;
+}
+body .source-playbook-page .playbook-checklist li,
+body .source-playbook-article .playbook-checklist li{
+  min-height:0!important;
+  margin:0!important;
+  padding:14px 4px 14px 32px!important;
+  border:0!important;
+  border-bottom:1px solid #e5eae7!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-size:15.5px!important;
+  line-height:1.58!important;
+}
+body .source-playbook-page .playbook-checklist li:before,
+body .source-playbook-article .playbook-checklist li:before{
+  left:4px!important;
+  top:16px!important;
+  width:18px!important;
+  height:18px!important;
+  background:#eaf3ef!important;
+  border-radius:50%!important;
+}
+
+/* Generic grids: grouped data with separators instead of isolated floating cards. */
+body .source-playbook-article .guide-v101-grid{
+  gap:0!important;
+  margin-top:18px!important;
+  border-top:1px solid #dfe6e2!important;
+  border-bottom:1px solid #dfe6e2!important;
+}
+body .source-playbook-article .guide-v101-grid>div{
+  padding:17px 16px!important;
+  border:0!important;
+  border-right:1px solid #e3e8e5!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .source-playbook-article .guide-v101-grid>div:last-child{border-right-color:transparent!important}
+body .source-playbook-article .guide-v101-grid h3{font-size:15.5px!important}
+body .source-playbook-article .guide-v101-grid p{font-size:14px!important;line-height:1.58!important}
+
+/* Steps are a single numbered sequence, not a wall of cards. */
+body .source-playbook-article .guide-v101-steps,
+body .source-playbook-page .playbook-steps{
+  display:block!important;
+  margin:18px 0 28px!important;
+  border-top:1px solid #dfe6e2!important;
+}
+body .source-playbook-article .guide-v101-steps li,
+body .source-playbook-page .playbook-steps>li{
+  display:grid!important;
+  grid-template-columns:42px minmax(0,1fr)!important;
+  gap:14px!important;
+  min-height:0!important;
+  padding:16px 0!important;
+  border:0!important;
+  border-bottom:1px solid #e3e8e5!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .source-playbook-article .guide-v101-steps li>span,
+body .source-playbook-page .playbook-steps>li>span:first-child{
+  width:34px!important;
+  height:34px!important;
+  border-radius:50%!important;
+  background:#e8f3ee!important;
+  color:#207254!important;
+  font-size:12px!important;
+}
+body .source-playbook-article .guide-v101-steps b{font-size:15.5px!important}
+body .source-playbook-article .guide-v101-steps p{font-size:14.5px!important;line-height:1.55!important}
+
+/* Timelines and funnel cells become one continuous structured table. */
+body .source-playbook-article :is(.guide-v101-timeline,.guide-v101-funnel-table){
+  border:1px solid #dfe6e2!important;
+  border-radius:8px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .source-playbook-article .guide-v101-timeline>div,
+body .source-playbook-article .guide-v101-funnel-table>div{
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .source-playbook-article .guide-v101-funnel-table{gap:0!important}
+body .source-playbook-article .guide-v101-funnel-table>div{border:0!important;border-right:1px solid #e1e7e4!important}
+body .source-playbook-article .guide-v101-funnel-table>div:last-child{border-right:0!important}
+
+/* Comparisons remain distinct because their contrast carries meaning. */
+body .source-playbook-article .guide-v101-verdict{box-shadow:none!important}
+
+/* Format cards stay visual, but quieter and less bulky. */
+body .source-playbook-article .guide-v101-formats{gap:10px!important}
+body .source-playbook-article .guide-v101-formats article{
+  border:1px solid #dfe5e2!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+body .source-playbook-article .guide-v101-format-art{height:76px!important}
+body .source-playbook-article .guide-v101-formats h3{font-size:14.5px!important}
+body .source-playbook-article .guide-v101-formats p{font-size:13px!important;line-height:1.52!important}
+
+/* Diagnostic and next links become flat rows. */
+body .source-playbook-article :is(.guide-v101-diagnostics,.guide-v101-next>div){gap:0!important;border-top:1px solid #dfe6e2!important}
+body .source-playbook-article :is(.guide-v101-diagnostics a,.guide-v101-next a){
+  padding:15px 14px!important;
+  border:0!important;
+  border-bottom:1px solid #e3e8e5!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* ---------- Right rail: one quiet utility panel ---------- */
+body .article-aside.enhanced-rail{
+  padding:17px 18px!important;
+  border:1px solid #dbe3df!important;
+  border-radius:10px!important;
+  background:#f7f9f7!important;
+  box-shadow:none!important;
+}
+body .article-aside.enhanced-rail .aside-block,
+body .article-aside.enhanced-rail :is(.rail-card,.rail-tools){
+  margin:0!important;
+  padding:0 0 16px!important;
+  border:0!important;
+  border-bottom:1px solid #dfe5e2!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body .article-aside.enhanced-rail .aside-block:last-child{padding-bottom:0!important;border-bottom:0!important}
+body .article-aside.enhanced-rail .aside-block+.aside-block{margin-top:16px!important;padding-top:0!important}
+body .article-aside.enhanced-rail .rail-toc ol{margin-bottom:0!important}
+body .article-aside.enhanced-rail .rail-toc li{margin:7px 0!important}
+body .article-aside.enhanced-rail .rail-toc a{font-size:14px!important;line-height:1.4!important}
+
+/* ---------- Bottom navigation: continuation first, utilities second ---------- */
+body .article .related-reading{
+  margin:26px 0 0!important;
+  padding:27px 0 0!important;
+  border:0!important;
+  border-top:2px solid #d5dfda!important;
+  background:transparent!important;
+}
+body .article .related-primary{
+  padding:15px 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+body .article .related-secondary{
+  padding:12px 0 0!important;
+  border-top:1px solid #e1e6e3!important;
+  background:transparent!important;
+}
+body .article .article-exit-nav{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:10px 18px!important;
+  margin:24px 0 0!important;
+  padding:18px 0 0!important;
+  border-top:1px solid #e0e6e3!important;
+  background:transparent!important;
+}
+body .article .article-exit-nav a{
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-size:13.5px!important;
+  text-decoration:underline!important;
+  text-underline-offset:3px!important;
+}
+
+/* ---------- Dark theme mirrors the same flat hierarchy ---------- */
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-section-v103,
+html body.theme-dark.content-system-v103 .structured-article-v103 .academy-content-section,
+html body.theme-dark .source-playbook-article .guide-v101-section{
+  background:transparent!important;
+  border-color:#2a333c!important;
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-index-v103{color:#8fb6a8!important}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-action-v103>h2::after{
+  background:#1b2d27!important;color:#91d6bb!important
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103{
+  background:#211f1b!important;border-color:#514735!important
+}
+html body.theme-dark .article .service-inline{border-left-color:#4b665b!important;background:transparent!important}
+html body.theme-dark .source-playbook-article .playbook-facts,
+html body.theme-dark .source-playbook-page .playbook-checklist,
+html body.theme-dark .source-playbook-article .playbook-checklist,
+html body.theme-dark .source-playbook-article .guide-v101-grid,
+html body.theme-dark .source-playbook-article .guide-v101-steps,
+html body.theme-dark .source-playbook-page .playbook-steps,
+html body.theme-dark .source-playbook-article :is(.guide-v101-diagnostics,.guide-v101-next>div){
+  border-color:#2d3740!important;
+}
+html body.theme-dark .source-playbook-article :is(.playbook-facts>div,.playbook-checklist li,.guide-v101-grid>div,.guide-v101-steps li,.playbook-steps>li,.guide-v101-diagnostics a,.guide-v101-next a,.guide-v101-funnel-table>div,.guide-v101-timeline>div){
+  background:transparent!important;
+  border-color:#2a333c!important;
+}
+html body.theme-dark .article-aside.enhanced-rail{
+  background:#151a20!important;
+  border-color:#2c3540!important;
+}
+html body.theme-dark .article-aside.enhanced-rail .aside-block{background:transparent!important;border-color:#2c3540!important}
+html body.theme-dark .article :is(.related-reading,.related-primary,.related-secondary,.article-exit-nav,.article-exit-nav a){
+  background:transparent!important;
+  border-color:#2b343d!important;
+}
+
+@media(max-width:900px){
+  body.content-system-v103 .structured-article-v103 .logic-section-v103,
+  body.content-system-v103 .structured-article-v103 .academy-content-section,
+  body .source-playbook-article .guide-v101-section{
+    padding:25px 0 27px!important;
+  }
+  body.content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+    grid-template-columns:30px minmax(0,1fr)!important;
+    font-size:22px!important;
+  }
+  body.content-system-v103 .structured-article-v103 .logic-action-v103>h2{grid-template-columns:30px minmax(0,1fr)!important}
+  body.content-system-v103 .structured-article-v103 .logic-action-v103>h2::after{display:none!important}
+  body .source-playbook-article .playbook-facts{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body .source-playbook-article .playbook-facts>div:nth-child(2){border-right:0!important}
+  body .source-playbook-article .playbook-facts>div:nth-child(-n+2){border-bottom:1px solid #e2e7e4!important}
+  body .source-playbook-page .playbook-checklist,
+  body .source-playbook-article .playbook-checklist{grid-template-columns:1fr!important;gap:0!important}
+  body .source-playbook-article .guide-v101-grid{grid-template-columns:1fr!important}
+  body .source-playbook-article .guide-v101-grid>div{border-right:0!important;border-bottom:1px solid #e3e8e5!important}
+  body .source-playbook-article .guide-v101-grid>div:last-child{border-bottom:0!important}
+}
+
+
+/* ======================================================================
+   v124 — larger reading scale after article declutter
+   ====================================================================== */
+
+/* Global copy: one step larger, without flattening heading hierarchy. */
+html body{
+  font-size:17px!important;
+}
+
+/* Main article copy. */
+html body :is(
+  .article p,.article li,.article dd,
+  .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+  .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+  .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd
+){
+  font-size:18px!important;
+  line-height:1.66!important;
+}
+
+/* Introductory copy should be only slightly larger than body text. */
+html body :is(
+  .source-hero-shell>.lead,.academy-article-hero .lead,.article>.lead,.page-head p
+){
+  font-size:18.5px!important;
+  line-height:1.62!important;
+}
+
+/* Cards, explanations and structured article rows. */
+html body :is(
+  .section-entry p,.section-outcome p,.section-feature p,
+  .home-entry-grid p,.home-source-grid p,.library-row p,
+  .service-tool p,.tool-card p,.about-card p,.playbook-card>p,
+  .playbook-fit-grid li,.playbook-checklist li,.playbook-format-list dd,
+  .playbook-steps p,.traffic-diagnostic-list li,.source-tool-card-copy,
+  .guide-v101-formats p,.guide-v101-grid p,.guide-v101-verdict p,
+  .guide-v101-flow p,.related-card p
+){
+  font-size:16.5px!important;
+  line-height:1.6!important;
+}
+
+/* v123 flattened blocks had their own smaller values — normalize them too. */
+html body .source-playbook-article .playbook-facts dt{font-size:12px!important}
+html body .source-playbook-article .playbook-facts dd{font-size:16px!important;line-height:1.48!important}
+html body .source-playbook-article .guide-v101-grid h3{font-size:17px!important}
+html body .source-playbook-article .guide-v101-grid p{font-size:16.5px!important;line-height:1.6!important}
+html body .source-playbook-article .guide-v101-steps b{font-size:17px!important}
+html body .source-playbook-article .guide-v101-steps p{font-size:16.5px!important;line-height:1.58!important}
+html body .source-playbook-article .guide-v101-formats h3{font-size:16px!important}
+html body .source-playbook-article .guide-v101-formats p{font-size:15.5px!important;line-height:1.56!important}
+
+/* Tables should no longer be noticeably smaller than surrounding copy. */
+html body .article table,
+html body .rules-table,
+html body .compare-table,
+html body .source-compare-table{
+  font-size:15.5px!important;
+}
+html body .article :is(th,td){font-size:15px!important;line-height:1.5!important}
+
+/* Navigation and utility text. */
+html body :is(
+  .global-sidebar .sidebar-menu a,
+  .article-aside.enhanced-rail .rail-toc a,
+  .article-aside.enhanced-rail .aside-block a,
+  .article-aside.enhanced-rail .aside-block span,
+  .rail-quick a strong,.rail-quick a small,
+  .article-cta-row a,.section-bottom-links a,.source-compare-actions a,
+  button,input,select,textarea
+){
+  font-size:15.5px!important;
+}
+html body .article-aside.enhanced-rail .rail-toc a{
+  font-size:15.5px!important;
+  line-height:1.46!important;
+}
+html body .article .article-exit-nav a{font-size:15px!important}
+
+/* Small labels stay secondary but readable. */
+html body :is(
+  .article-label,.overline,.playbook-facts dt,.article-meta,.breadcrumbs,
+  .service-kicker,.playbook-card-top,.rules-summary-grid span,.sidebar-group-title
+){
+  font-size:12.5px!important;
+  line-height:1.42!important;
+}
+
+@media(max-width:900px){
+  html body{font-size:16.5px!important}
+  html body :is(
+    .article p,.article li,.article dd,
+    .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+    .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+    .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd
+  ){
+    font-size:17.5px!important;
+    line-height:1.64!important;
+  }
+  html body :is(.source-hero-shell>.lead,.academy-article-hero .lead,.article>.lead,.page-head p){
+    font-size:17.5px!important;
+  }
+  html body :is(
+    .section-entry p,.section-outcome p,.section-feature p,.library-row p,
+    .service-tool p,.tool-card p,.about-card p,.playbook-checklist li,
+    .playbook-steps p,.traffic-diagnostic-list li,.guide-v101-grid p
+  ){
+    font-size:16px!important;
+  }
+}
