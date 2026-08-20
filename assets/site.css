@@ -9886,3 +9886,120 @@ html body.reference-ui-v99 :is(input,select,textarea,button){
     border-radius:8px!important;
   }
 }
+
+
+/* ======================================================================
+   v121 — larger, darker typography
+   ====================================================================== */
+
+/* Base reading text: larger and darker in the light theme. */
+html body:not(.theme-dark){
+  color:#25342f!important;
+}
+html body:not(.theme-dark) :is(
+  p,li,dd,
+  .article p,.article li,.article dd,
+  .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+  .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+  .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd,
+  .section-entry p,.section-outcome p,.section-feature p,
+  .library-row p,.service-tool p,.tool-card p,.about-card p,
+  .playbook-card>p,.guide-v101-formats p,.guide-v101-grid p
+){
+  color:#35453f!important;
+}
+html body:not(.theme-dark) :is(
+  .lead,.article>.lead,.source-hero-shell>.lead,.academy-article-hero .lead,.page-head p,
+  .breadcrumbs,.article-meta,.playbook-facts dt,.rail-quick a small,
+  .article-aside.enhanced-rail .rail-toc a,.article-aside.enhanced-rail .aside-block p
+){
+  color:#4b5b55!important;
+}
+
+/* One comfortable scale for ordinary reading text. */
+html body.reference-ui-v99 :is(
+  .article p,.article li,.article dd,
+  .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+  .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+  .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd
+){
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+html body.reference-ui-v99 :is(
+  .source-hero-shell>.lead,.academy-article-hero .lead,.article>.lead,.page-head p
+){
+  font-size:17px!important;
+  line-height:1.62!important;
+}
+
+/* Cards and compact explanatory blocks should no longer feel tiny. */
+html body.reference-ui-v99 :is(
+  .section-entry p,.section-outcome p,.section-feature p,
+  .home-entry-grid p,.home-source-grid p,
+  .library-row p,.service-tool p,.tool-card p,.about-card p,
+  .playbook-card>p,.playbook-fit-grid li,.playbook-checklist li,
+  .playbook-format-list dd,.playbook-steps p,.traffic-diagnostic-list li,
+  .source-tool-card-copy,.guide-v101-formats p,.guide-v101-grid p,
+  .guide-v101-verdict p,.guide-v101-flow p,.related-card p
+){
+  font-size:15.5px!important;
+  line-height:1.58!important;
+}
+
+/* Controls and side navigation: slightly larger, but still secondary. */
+html body.reference-ui-v99 :is(
+  .global-sidebar .sidebar-menu a,
+  .sidebar-group-title,
+  .article-aside.enhanced-rail .rail-toc a,
+  .article-aside.enhanced-rail .aside-block a,
+  .article-aside.enhanced-rail .aside-block span,
+  .rail-quick a strong,.rail-quick a small,
+  button,input,select,textarea,
+  .article-cta-row a,.section-bottom-links a,.source-compare-actions a
+){
+  font-size:14.5px!important;
+}
+
+/* Keep labels readable instead of microscopic. */
+html body.reference-ui-v99 :is(
+  .article-label,.overline,.playbook-facts dt,.article-meta,.breadcrumbs,
+  .service-kicker,.playbook-card-top,.rules-summary-grid span
+){
+  font-size:12px!important;
+  line-height:1.4!important;
+}
+
+/* Dark theme remains bright enough against the background. */
+html body.theme-dark :is(
+  p,li,dd,.article p,.article li,.article dd,
+  .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+  .section-entry p,.section-outcome p,.section-feature p,.library-row p,
+  .service-tool p,.tool-card p,.about-card p,.guide-v101-formats p
+){
+  color:#d0d8df!important;
+}
+html body.theme-dark :is(
+  .lead,.article>.lead,.source-hero-shell>.lead,.academy-article-hero .lead,.page-head p,
+  .article-aside.enhanced-rail .rail-toc a,.rail-quick a small,.breadcrumbs,.article-meta
+){
+  color:#b8c3cc!important;
+}
+
+@media(max-width:900px){
+  html body.reference-ui-v99 :is(
+    .article p,.article li,.article dd,
+    .source-playbook-article p,.source-playbook-article li,.source-playbook-article dd,
+    .guide-v101-section>p,.guide-v101-section li,.guide-v101-section dd,
+    .logic-section-v103 p,.logic-section-v103 li,.logic-section-v103 dd
+  ){
+    font-size:17px!important;
+    line-height:1.65!important;
+  }
+  html body.reference-ui-v99 :is(.source-hero-shell>.lead,.academy-article-hero .lead,.article>.lead,.page-head p){
+    font-size:16.5px!important;
+  }
+  html body.reference-ui-v99 :is(.global-sidebar .sidebar-menu a,.article-aside.enhanced-rail .rail-toc a){
+    font-size:15px!important;
+  }
+}
