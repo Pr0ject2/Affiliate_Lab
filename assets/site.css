@@ -7495,3 +7495,351 @@ html body.theme-dark table{background:#151a20!important;color:#e8edf0!important}
 html body.theme-dark th{background:#1e242b!important;color:#e8edf0!important;border-color:#333c46!important}
 html body.theme-dark td{background:#171c22!important;color:#b3bcc5!important;border-color:#303943!important}
 html body.theme-dark :is(pre,code){background:#161d22!important;color:#91d8bf!important}
+
+/* ======================================================================
+   v109 — final presentation pass
+   Calm editorial system: fewer decorative stripes, consistent surfaces,
+   stronger navigation contrast and a quieter card hierarchy.
+   ====================================================================== */
+:root{
+  --v109-bg:#f4f6f3;
+  --v109-bg-soft:#f8f8f5;
+  --v109-surface:#fff;
+  --v109-surface-warm:#fbf8f2;
+  --v109-ink:#1b2f28;
+  --v109-copy:#5f6c66;
+  --v109-muted:#7d8983;
+  --v109-line:#dde4df;
+  --v109-line-strong:#cfd8d2;
+  --v109-green:#205144;
+  --v109-green-dark:#163c32;
+  --v109-green-soft:#eaf3ef;
+  --v109-warm:#9a744a;
+  --v109-warm-soft:#f6efe4;
+  --v109-warning:#9d6d2d;
+  --v109-warning-soft:#fff8ec;
+  --v109-radius:12px;
+  --v109-shadow:0 8px 24px rgba(25,47,39,.045);
+  --v109-shadow-hover:0 14px 32px rgba(25,47,39,.075);
+}
+
+/* Base canvas */
+html body:not(.theme-dark){background:var(--v109-bg)!important;color:var(--v109-ink)!important}
+html body:not(.theme-dark) :is(main,.compact-main-v103,.home-page,.article-page,.source-playbook-page,.traffic-hub-page,.services-page){color:var(--v109-ink)}
+html body:not(.theme-dark) :is(p,li,dd,dt,small,figcaption,.lead){color:var(--v109-copy)}
+html body:not(.theme-dark) :is(h1,h2,h3,h4,strong,b){color:var(--v109-ink)}
+
+/* Header and permanent navigation: one dark, high-contrast frame. */
+html body:not(.theme-dark) .site-header{
+  background:#173f35!important;
+  border-bottom:1px solid rgba(255,255,255,.09)!important;
+  box-shadow:0 5px 20px rgba(18,45,37,.10)!important;
+}
+html body:not(.theme-dark) .site-header :is(.brand-text b,.brand-text strong,.header-about-link,.theme-toggle){color:#f4f8f6!important}
+html body:not(.theme-dark) .site-header :is(.brand-text small,.header-tagline){color:#b9d0c7!important}
+html body:not(.theme-dark) .site-header .header-about-link{border-color:rgba(255,255,255,.16)!important;background:rgba(255,255,255,.035)!important}
+html body:not(.theme-dark) .site-header .theme-toggle{border-color:rgba(255,255,255,.17)!important;background:rgba(255,255,255,.055)!important}
+html body:not(.theme-dark) .site-header .theme-toggle:hover,
+html body:not(.theme-dark) .site-header .header-about-link:hover{background:rgba(255,255,255,.10)!important}
+
+html body:not(.theme-dark) .global-sidebar{
+  background:#17382f!important;
+  border-right:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:8px 0 26px rgba(18,42,35,.09)!important;
+  scrollbar-color:#54786d transparent!important;
+}
+html body:not(.theme-dark) .sidebar-brand{border-bottom-color:rgba(255,255,255,.10)!important;color:#fff!important}
+html body:not(.theme-dark) .sidebar-brand :is(b,strong){color:#fff!important}
+html body:not(.theme-dark) .sidebar-brand small{color:#9fbdb2!important}
+html body:not(.theme-dark) .global-sidebar>.sidebar-search input{
+  background:rgba(7,24,19,.28)!important;
+  border-color:rgba(255,255,255,.13)!important;
+  color:#fff!important;
+}
+html body:not(.theme-dark) .global-sidebar>.sidebar-search input::placeholder{color:#9fb9b0!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a{color:#cfe0da!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:before{color:#a8c5ba!important;background:rgba(255,255,255,.045)!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:hover{background:rgba(255,255,255,.07)!important;color:#fff!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:is(.active,.is-active,[aria-current="page"]){
+  background:rgba(117,201,169,.14)!important;
+  color:#fff!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:is(.active,.is-active,[aria-current="page"]):before{
+  background:rgba(117,201,169,.16)!important;color:#91dfc0!important
+}
+html body:not(.theme-dark) .global-sidebar>.sidebar-partner-cta{
+  background:rgba(86,176,141,.10)!important;border-color:rgba(113,208,171,.25)!important
+}
+html body:not(.theme-dark) .global-sidebar>.sidebar-partner-rules{
+  background:rgba(255,255,255,.035)!important;border-color:rgba(255,255,255,.09)!important;color:#bfd4cc!important
+}
+
+/* Calm page headers. Remove multicolor bars and category gradients. */
+body .page-head:after{display:none!important}
+html body:not(.theme-dark) :is(.page-head,.section-landing-head){
+  background:#f7f9f7!important;
+  background-image:none!important;
+  border-bottom:1px solid var(--v109-line-strong)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(.section-basics-page,.section-economics-page,.section-analytics-page,.section-practice-page) .section-landing-head{
+  background:#f7f9f7!important;border-bottom:1px solid var(--v109-line-strong)!important
+}
+html body:not(.theme-dark) .home-welcome{
+  background:linear-gradient(135deg,#f8faf8 0%,#f5f6f2 68%,#f6f1e9 100%)!important;
+  border-bottom:1px solid var(--v109-line)!important;
+}
+html body:not(.theme-dark) :is(.home-entry-section,.home-results){background:#fbfcfa!important}
+html body:not(.theme-dark) .home-sources-v51{background:#f1f4f1!important}
+
+/* Consistent section cards, without decorative side rails. */
+body :is(.playbook-card,.home-source-grid>a,.home-entry-grid>a,.section-entry,.section-outcome,.knowledge-map>div,.library-row,.tool-card,.about-card,.service-card,.service-tool,.source-tool-card,.traffic-hub-basics>div,.traffic-next a,.handbook ol.starter-five li a,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-diagnostics a,.guide-v101-next a){
+  border-color:var(--v109-line)!important;
+  border-left-width:1px!important;
+  border-radius:var(--v109-radius)!important;
+  background:var(--v109-surface)!important;
+  box-shadow:none!important;
+}
+body :is(.playbook-card,.home-source-grid>a,.home-entry-grid>a,.section-entry,.knowledge-map>div,.library-row,.service-tool,.source-tool-card,.traffic-next a):hover{
+  transform:translateY(-1px)!important;
+  border-color:var(--v109-line-strong)!important;
+  box-shadow:var(--v109-shadow)!important;
+}
+body :is(.playbook-card,.home-source-grid>a,.section-entry,.section-feature aside,.library-row,.knowledge-map>div):before{display:none!important}
+body .playbook-card:after{display:none!important}
+
+/* Homepage summary: one visual language instead of three accent colors. */
+body .home-welcome-summary{gap:10px!important}
+body .home-welcome-summary>div{
+  padding:14px 15px!important;
+  border:1px solid var(--v109-line)!important;
+  border-top-width:1px!important;
+  border-radius:10px!important;
+  background:rgba(255,255,255,.64)!important;
+}
+body .home-welcome-summary>div:nth-child(n){border-top-color:var(--v109-line)!important}
+html body:not(.theme-dark) .home-search-card{
+  border:1px solid var(--v109-line-strong)!important;
+  border-top-width:1px!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  box-shadow:var(--v109-shadow)!important;
+}
+body .home-entry-grid>a{padding:21px 21px 20px!important}
+body .home-source-grid>a{padding:19px 19px 18px!important}
+body .home-source-grid small{border-top-color:#e8ece9!important;color:var(--v109-green)!important}
+
+/* Traffic hub: small logo tiles, not large colored banners or side stripes. */
+body .playbook-card{position:relative!important;padding:20px 20px 18px!important;overflow:hidden!important}
+body .playbook-card-top{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:11px!important;
+  min-height:52px!important;
+  margin:0 0 14px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:var(--v109-muted)!important;
+}
+body .playbook-card[data-source] .playbook-card-top{background:transparent!important}
+body .playbook-card-top>span:not(.playbook-hero-art){
+  display:block!important;
+  order:2!important;
+  color:#7a6d5d!important;
+  font-size:9.5px!important;
+  font-weight:800!important;
+  letter-spacing:.10em!important;
+}
+body .playbook-card-top .playbook-hero-art{
+  position:static!important;
+  order:1!important;
+  display:block!important;
+  width:48px!important;
+  height:48px!important;
+  min-width:48px!important;
+  border:1px solid var(--v109-line)!important;
+  border-radius:11px!important;
+  background-color:#f7f9f7!important;
+  background-image:var(--source-logo)!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:32px 32px!important;
+  box-shadow:none!important;
+}
+body .playbook-card-top .playbook-hero-art::before{display:none!important}
+body .playbook-card h2{margin:0 0 9px!important;font-size:22px!important;line-height:1.22!important}
+body .playbook-card>p{margin:0 0 14px!important;font-size:13.5px!important;line-height:1.6!important}
+body .playbook-card .playbook-facts{gap:7px!important}
+body .playbook-card .playbook-facts>div{padding:9px 10px!important;background:#f8faf8!important;border-color:#e2e8e4!important}
+body .playbook-card>a{margin-top:14px!important;padding:11px 0 0!important;padding-right:0!important;border-top:1px solid #e8ece9!important;color:var(--v109-green)!important;font-size:11.5px!important;font-weight:800!important;opacity:1!important}
+
+/* Section landing pages: no colored left bars. */
+body .section-entry{padding-left:20px!important}
+body .section-feature aside:before{display:none!important}
+body .section-feature>div,body .section-feature>aside{
+  border:1px solid var(--v109-line)!important;
+  border-left-width:1px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body .section-outcome{border:1px solid var(--v109-line)!important;background:#fff!important;box-shadow:none!important}
+
+/* Articles: use spacing and tone for hierarchy, not a colored stripe on every block. */
+body.content-system-v103 .structured-article-v103 .logic-section-v103{
+  border:1px solid var(--v109-line)!important;
+  border-left-width:1px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+  border-radius:11px!important;
+}
+body.content-system-v103 .structured-article-v103 :is(.logic-explain-v103,.logic-action-v103,.logic-analysis-v103){
+  border-left:1px solid var(--v109-line)!important;
+  background:#fff!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-warning-v103{
+  border:1px solid #e6d6bc!important;
+  background:var(--v109-warning-soft)!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-index-v103{
+  background:var(--v109-green-soft)!important;
+  color:var(--v109-green)!important;
+  border:1px solid #d7e7e0!important;
+}
+body.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  background:#f6ead7!important;color:#8f6125!important;border-color:#ead9bc!important
+}
+
+/* Notes/callouts: full borders, no universal left accent. Warnings still read as warnings. */
+body :is(.handbook-intro,.inline-note,.playbook-risk,.guide-v101-callout,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.source-mode-panel article,.related-primary,.source-partner-cta,.service-notice,.service-legal,.service-inline,.service-review-note,.partner-next-step,.playbook-tips,.hero-note,.hero-route){
+  border-left-width:1px!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(.handbook-intro,.inline-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.service-inline,.service-review-note,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary){
+  border:1px solid #e2e1db!important;
+  background:#faf8f4!important;
+}
+html body:not(.theme-dark) :is(.playbook-risk,.guide-v101-callout.warning,.service-warning,.warning-note){
+  border:1px solid #e6d4b6!important;
+  background:var(--v109-warning-soft)!important;
+}
+body .related-primary{padding:14px 15px!important}
+
+/* Right rail: quieter cards with one shared treatment. */
+body .article-aside.enhanced-rail :is(.aside-block,.rail-card,.rail-cover-card,.rail-partner-card,.rail-path-card){
+  border:1px solid var(--v109-line)!important;
+  border-left-width:1px!important;
+  border-radius:11px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body .article-aside.enhanced-rail .aside-block+ .aside-block{margin-top:9px!important}
+
+/* Forms and actions: clear hierarchy without heavy ornament. */
+body :is(.home-actions a,.service-tool-actions a,.service-open-link,.home-results nav a,.guide-v101-inline-link a){border-radius:8px!important}
+html body:not(.theme-dark) .home-actions .home-action-primary{background:var(--v109-green)!important;border-color:var(--v109-green)!important;color:#fff!important}
+html body:not(.theme-dark) .home-actions .home-action-primary:hover{background:var(--v109-green-dark)!important}
+html body:not(.theme-dark) .home-actions .home-action-partner{background:var(--v109-warm-soft)!important;border-color:#d9c2a4!important;color:#6d4c29!important}
+html body:not(.theme-dark) :is(input,select,textarea){border-color:#cfd8d2!important;border-radius:8px!important;background:#fff!important;color:var(--v109-ink)!important}
+
+/* Tables and small cells. */
+html body:not(.theme-dark) .article th{background:#f3f5f3!important;color:#31423b!important;border-color:var(--v109-line)!important}
+html body:not(.theme-dark) .article td{background:#fff!important;border-color:var(--v109-line)!important}
+
+/* Dark theme mirrors the same quiet hierarchy. */
+html body.theme-dark{
+  --v109-bg:#101318;
+  --v109-bg-soft:#15191f;
+  --v109-surface:#191e25;
+  --v109-surface-warm:#1c2025;
+  --v109-ink:#edf1f4;
+  --v109-copy:#a9b2bb;
+  --v109-muted:#88939e;
+  --v109-line:#2d353f;
+  --v109-line-strong:#3a444f;
+  --v109-green:#79cfb2;
+  --v109-green-dark:#63b89d;
+  --v109-green-soft:#1b2926;
+  --v109-warm:#c7a477;
+  --v109-warm-soft:#26221c;
+  --v109-warning:#d1a35f;
+  --v109-warning-soft:#24211b;
+}
+html body.theme-dark :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results){
+  background:#101318!important;background-image:none!important;border-color:#2b333d!important
+}
+html body.theme-dark .home-welcome{background:linear-gradient(135deg,#12171c 0%,#101318 72%,#181713 100%)!important}
+html body.theme-dark :is(.playbook-card,.home-source-grid>a,.home-entry-grid>a,.section-entry,.section-outcome,.knowledge-map>div,.library-row,.tool-card,.about-card,.service-card,.service-tool,.source-tool-card,.traffic-hub-basics>div,.traffic-next a,.section-feature>div,.section-feature>aside,.article-aside.enhanced-rail .aside-block,.article-aside.enhanced-rail .rail-card){
+  background:#191e25!important;border-color:#2d353f!important;box-shadow:none!important
+}
+html body.theme-dark .home-welcome-summary>div{background:#171c22!important;border-color:#2d353f!important}
+html body.theme-dark .home-search-card{background:#191e25!important;border-color:#35404a!important;box-shadow:none!important}
+html body.theme-dark .playbook-card-top{background:transparent!important}
+html body.theme-dark .playbook-card-top .playbook-hero-art{background-color:#151a20!important;border-color:#35404a!important}
+html body.theme-dark .playbook-card .playbook-facts>div{background:#151a20!important;border-color:#2d353f!important}
+html body.theme-dark .playbook-card>a{border-top-color:#2d353f!important;color:#85d5ba!important}
+html body.theme-dark.content-system-v103 .structured-article-v103 :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103){
+  background:#191e25!important;border:1px solid #2d353f!important
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103{background:#24211b!important;border:1px solid #5a4c36!important}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-index-v103{background:#1d2b28!important;color:#86d2b8!important;border-color:#30463f!important}
+html body.theme-dark :is(.handbook-intro,.inline-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.service-inline,.service-review-note,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary){
+  background:#191d22!important;border:1px solid #313943!important;color:#c4ccd3!important
+}
+html body.theme-dark :is(.playbook-risk,.guide-v101-callout.warning,.service-warning,.warning-note){background:#24211b!important;border:1px solid #5a4c36!important}
+
+/* Mobile: keep the same rhythm and avoid cramped decorative elements. */
+@media(max-width:1050px){
+  body .global-sidebar{box-shadow:16px 0 38px rgba(8,20,16,.24)!important}
+  body .playbook-card-top{min-height:46px!important}
+  body .playbook-card-top .playbook-hero-art{width:44px!important;height:44px!important;min-width:44px!important;background-size:29px 29px!important}
+  body .playbook-card{padding:17px!important}
+  body .home-welcome-summary>div{padding:13px!important}
+}
+@media(max-width:520px){
+  body .playbook-card h2{font-size:20px!important}
+  body .home-search-card{padding:19px 17px!important}
+  body .section-feature>div,body .section-feature>aside{padding:17px!important}
+  body.content-system-v103 .structured-article-v103 .logic-section-v103{padding:16px!important}
+}
+
+/* v109 final polish: search shell and dark action contrast */
+body .global-sidebar>.sidebar-search{
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .home-source-grid small{border-top-color:#323b44!important;color:#82d1b6!important}
+html body.theme-dark .home-actions .home-action-partner{
+  background:#262119!important;
+  border-color:#5b4b36!important;
+  color:#d9bd96!important;
+}
+html body.theme-dark .home-actions .home-action-partner:hover{background:#30271d!important;border-color:#715c41!important;color:#ead0aa!important}
+html body.theme-dark .home-actions a:not(.home-action-primary):not(.home-action-partner){background:transparent!important;border-color:#46515c!important;color:#9ed9c5!important}
+
+/* v109 mobile header: keep the product name readable instead of ellipsizing it. */
+@media(max-width:520px){
+  .site-header .brand{gap:8px!important;min-width:0!important;max-width:178px!important}
+  .site-header .brand-text{min-width:0!important;max-width:125px!important}
+  .site-header .brand-text b{
+    display:block!important;
+    max-width:125px!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    font-size:11.5px!important;
+    line-height:1.05!important;
+  }
+  .site-header .brand-text small{display:none!important}
+}
+@media(max-width:360px){
+  .site-header .brand{max-width:154px!important}
+  .site-header .brand-text,.site-header .brand-text b{max-width:105px!important;font-size:10.8px!important}
+}
