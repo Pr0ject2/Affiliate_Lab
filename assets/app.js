@@ -1737,14 +1737,12 @@
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
-          return `<section class="ref-nav-group${hasActive?' is-open has-active':''}" data-ref-group="${gi}">
-            <button class="ref-nav-heading" type="button" aria-expanded="${hasActive?'true':'false'}"><span>${g.title}</span><i>⌄</i></button>
+          return `<section class="ref-nav-group is-open${hasActive?' has-active':''}" data-ref-group="${gi}">
+            <button class="ref-nav-heading" type="button" aria-expanded="true"><span>${g.title}</span><i>⌄</i></button>
             <nav>${g.links.map(([label,href,icon])=>`<a href="${href}" class="${active(href)?'is-active':''}"${active(href)?' aria-current="page"':''}><span class="ref-nav-icon">${navIcon(icon)}</span><span>${label}</span></a>`).join('')}</nav>
           </section>`
         }).join('')}</div>
-        <a class="ref-partner-card" data-track="affiliate_cta" href="${base}go/partner/?from=sidebar-v132" target="_blank" rel="sponsored nofollow noopener noreferrer"><b>1win Partners</b><span>Регистрация, партнёрские ссылки, SubID и статистика.</span><em>Открыть программу <span>→</span></em></a>
-        <a class="ref-sidebar-rules" href="${base}guides/1win-rules/">Правила и актуальные GEO</a>
-        <div class="ref-sidebar-footer"><a href="${base}about/">О проекте</a><span>Материалы 18+</span></div>`;
+        <a class="ref-partner-card" href="${base}guides/1win-rules/"><b>1win Partners: правила и GEO</b><span>Актуальные выплаты, условия и список разрешённых GEO.</span><em>Открыть <span>→</span></em></a>`;
 
       sidebar.querySelectorAll('.ref-nav-heading').forEach(btn=>btn.addEventListener('click',()=>{
         const group=btn.closest('.ref-nav-group');
