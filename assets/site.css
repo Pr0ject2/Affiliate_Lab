@@ -7843,3 +7843,426 @@ html body.theme-dark .home-actions a:not(.home-action-primary):not(.home-action-
   .site-header .brand{max-width:154px!important}
   .site-header .brand-text,.site-header .brand-text b{max-width:105px!important;font-size:10.8px!important}
 }
+
+/* ======================================================================
+   v110 — FINAL MOBILE CONTRACT
+   The v99 shell is injected after page load, so these rules deliberately
+   match its full specificity. Nothing below affects desktop widths.
+   ====================================================================== */
+@media (max-width:900px){
+  :root{--v110-mobile-header:58px}
+
+  html,html body,html body.reference-ui-v99{
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:hidden!important;
+  }
+  html body{min-width:0!important}
+  html body.mobile-nav-open{overflow:hidden!important;touch-action:none}
+  html body *{box-sizing:border-box}
+
+  /* One mobile top bar for the original shell and the JS-injected shell. */
+  html body .site-header,
+  html body.reference-ui-v99 .site-header{
+    position:fixed!important;
+    inset:0 0 auto 0!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    width:100%!important;
+    height:var(--v110-mobile-header)!important;
+    min-height:var(--v110-mobile-header)!important;
+    margin:0!important;
+    padding:0!important;
+    z-index:200!important;
+    background:#173f35!important;
+    border-bottom:1px solid rgba(255,255,255,.10)!important;
+    box-shadow:0 4px 16px rgba(10,28,22,.14)!important;
+  }
+  html body.theme-dark .site-header,
+  html body.reference-ui-v99.theme-dark .site-header{background:#0c1115!important}
+
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .ref-topbar{
+    width:100%!important;
+    max-width:none!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0 12px!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    overflow:hidden!important;
+  }
+
+  /* Header before app.js finishes. */
+  html body .site-header .brand{
+    display:flex!important;align-items:center!important;gap:8px!important;
+    min-width:0!important;max-width:none!important;flex:1 1 auto!important;
+    color:#fff!important;text-decoration:none!important
+  }
+  html body .site-header .brand-logo{width:31px!important;height:29px!important;flex:0 0 31px!important;object-fit:contain!important}
+  html body .site-header .brand-text{min-width:0!important;max-width:none!important}
+  html body .site-header .brand-text b{
+    display:block!important;max-width:none!important;color:#fff!important;
+    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+    font:760 12px/1.1 Inter,"Segoe UI",Arial,sans-serif!important
+  }
+  html body .site-header .brand-text small,
+  html body .site-header .header-tagline,
+  html body .site-header .header-about-link{display:none!important}
+  html body .header-actions{display:flex!important;align-items:center!important;gap:6px!important;flex:0 0 auto!important;margin:0!important}
+  html body .site-header .theme-toggle,
+  html body .site-header .mobile-nav-toggle{
+    display:grid!important;place-items:center!important;
+    width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;
+    padding:0!important;margin:0!important;border:1px solid rgba(255,255,255,.16)!important;
+    border-radius:9px!important;background:rgba(0,0,0,.13)!important;color:#fff!important;box-shadow:none!important
+  }
+  html body .site-header .theme-toggle [data-theme-label],
+  html body .site-header .mobile-nav-toggle>span:last-child{display:none!important}
+
+  /* Header after v99 rebuild. */
+  html body.reference-ui-v99 .ref-topbar-crumbs,
+  html body.reference-ui-v99 .ref-top-search,
+  html body.reference-ui-v99 .ref-top-favorite,
+  html body.reference-ui-v99 .ref-top-progress{display:none!important}
+  html body.reference-ui-v99 .ref-mobile-brand{
+    display:flex!important;align-items:center!important;gap:8px!important;
+    min-width:0!important;max-width:calc(100% - 88px)!important;flex:1 1 auto!important;
+    color:#fff!important;text-decoration:none!important
+  }
+  html body.reference-ui-v99 .ref-mobile-brand img{display:block!important;width:31px!important;height:31px!important;flex:0 0 31px!important;object-fit:contain!important}
+  html body.reference-ui-v99 .ref-mobile-brand b{
+    display:block!important;min-width:0!important;max-width:100%!important;
+    color:#fff!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+    font:760 12.5px/1.1 Inter,"Segoe UI",Arial,sans-serif!important
+  }
+  html body.reference-ui-v99 .ref-topbar-actions{display:flex!important;align-items:center!important;gap:7px!important;height:100%!important;flex:0 0 auto!important}
+  html body.reference-ui-v99 .ref-theme-button,
+  html body.reference-ui-v99 .ref-mobile-menu{
+    display:grid!important;place-items:center!important;width:38px!important;height:38px!important;min-width:38px!important;
+    padding:0!important;margin:0!important;border:1px solid #35514a!important;border-radius:9px!important;
+    background:#102722!important;color:#fff!important;box-shadow:none!important
+  }
+  html body.reference-ui-v99.theme-dark .ref-theme-button,
+  html body.reference-ui-v99.theme-dark .ref-mobile-menu{background:#13191f!important;border-color:#34404a!important}
+  html body.reference-ui-v99 .ref-mobile-menu>span:last-child{display:none!important}
+
+  /* Drawer starts below the top bar instead of covering it. */
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{
+    position:fixed!important;
+    left:0!important;top:var(--v110-mobile-header)!important;bottom:0!important;
+    width:min(310px,86vw)!important;max-width:min(310px,86vw)!important;
+    height:auto!important;max-height:none!important;
+    margin:0!important;padding:12px 12px max(22px,env(safe-area-inset-bottom))!important;
+    display:block!important;overflow-y:auto!important;overflow-x:hidden!important;
+    overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch;
+    visibility:hidden!important;pointer-events:none!important;
+    transform:translate3d(-104%,0,0)!important;
+    transition:transform .2s ease,visibility 0s linear .2s!important;
+    z-index:190!important;
+    background:#0d2b24!important;border-right:1px solid rgba(255,255,255,.09)!important;
+    box-shadow:14px 0 34px rgba(5,18,14,.24)!important
+  }
+  html body.theme-dark .global-sidebar,
+  html body.reference-ui-v99.theme-dark .global-sidebar{background:#0d1116!important;border-color:#28323a!important}
+  html body.mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99.mobile-nav-open .global-sidebar{
+    visibility:visible!important;pointer-events:auto!important;transform:translate3d(0,0,0)!important;
+    transition:transform .2s ease,visibility 0s!important
+  }
+  html body.reference-ui-v99 .ref-sidebar-brand{display:none!important}
+  html body.reference-ui-v99 .ref-sidebar-groups{display:grid!important;gap:5px!important}
+  html body.reference-ui-v99 .ref-nav-heading{
+    height:31px!important;padding:0 7px!important;color:#8fa9a0!important;
+    font-size:9.5px!important;letter-spacing:.075em!important
+  }
+  html body.reference-ui-v99 .ref-nav-group nav{padding-bottom:5px!important}
+  html body.reference-ui-v99 .ref-nav-group nav a{
+    width:100%!important;min-height:40px!important;padding:8px 9px!important;gap:10px!important;
+    border-radius:8px!important;font-size:12.5px!important;line-height:1.25!important;white-space:normal!important
+  }
+  html body.reference-ui-v99 .ref-partner-card{margin-top:12px!important;padding:13px!important}
+  html body.reference-ui-v99 .ref-sidebar-collapse{display:none!important}
+
+  html body .mobile-nav-overlay{
+    display:block!important;position:fixed!important;
+    inset:var(--v110-mobile-header) 0 0 0!important;
+    visibility:hidden!important;opacity:0!important;pointer-events:none!important;
+    border:0!important;background:rgba(10,16,14,.42)!important;
+    z-index:180!important;transition:opacity .2s ease,visibility 0s linear .2s!important
+  }
+  html body.mobile-nav-open .mobile-nav-overlay{
+    visibility:visible!important;opacity:1!important;pointer-events:auto!important;
+    transition:opacity .2s ease,visibility 0s!important
+  }
+
+  /* Main canvas: reset every desktop sidebar offset, including v99 specificity. */
+  html body>main,
+  html body>main#main-content,
+  html body.reference-ui-v99 main{
+    width:100%!important;max-width:100%!important;min-width:0!important;
+    margin:0!important;margin-left:0!important;margin-right:0!important;
+    padding-top:var(--v110-mobile-header)!important;
+  }
+  html body .site-footer,
+  html body.reference-ui-v99 .site-footer{
+    width:100%!important;max-width:100%!important;
+    margin:0!important;margin-left:0!important;margin-right:0!important
+  }
+  html body .wrap,
+  html body main .wrap,
+  html body .site-footer .wrap,
+  html body.reference-ui-v99 main .wrap,
+  html body.reference-ui-v99 .site-footer .wrap{
+    width:100%!important;max-width:100%!important;min-width:0!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding-left:15px!important;padding-right:15px!important
+  }
+
+  /* Homepage: one clean column. */
+  html body main.home-page>section>.wrap,
+  html body.reference-ui-v99 main.home-page>section>.wrap,
+  html body main.home-page .wrap,
+  html body.reference-ui-v99 main.home-page .wrap{
+    width:100%!important;max-width:100%!important;padding-left:15px!important;padding-right:15px!important
+  }
+  html body main.home-page .home-welcome{padding:32px 0 38px!important}
+  html body main.home-page .home-welcome-grid,
+  html body main.home-page .home-entry-grid,
+  html body main.home-page .home-source-grid,
+  html body main.home-page .home-section-title-split,
+  html body main.home-page .home-results-inner,
+  html body main.home-page .home-welcome-summary{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important
+  }
+  html body main.home-page .home-welcome-grid{gap:28px!important}
+  html body main.home-page .home-welcome h1{
+    max-width:100%!important;margin-right:0!important;
+    font-size:clamp(34px,10vw,44px)!important;line-height:1.05!important;
+    overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important
+  }
+  html body main.home-page .home-lead{max-width:100%!important;font-size:15px!important;line-height:1.62!important}
+  html body main.home-page .home-actions{display:grid!important;grid-template-columns:1fr!important;gap:8px!important;width:100%!important}
+  html body main.home-page .home-actions a{
+    width:100%!important;max-width:100%!important;min-height:46px!important;
+    margin:0!important;padding:0 14px!important;box-shadow:none!important;
+    overflow:hidden!important;text-align:center!important
+  }
+  html body main.home-page .home-actions a::before,
+  html body main.home-page .home-actions a::after{display:none!important;content:none!important}
+  html body main.home-page .home-search-card{width:100%!important;max-width:100%!important;margin:0!important;padding:19px 17px!important}
+  html body main.home-page .home-main-search,
+  html body main.home-page .home-main-search>div{width:100%!important;max-width:100%!important}
+  html body main.home-page .home-main-search>div{
+    display:grid!important;grid-template-columns:1fr!important;gap:8px!important;
+    height:auto!important;border:0!important;background:transparent!important;overflow:visible!important
+  }
+  html body main.home-page .home-main-search input{
+    display:block!important;width:100%!important;height:48px!important;
+    padding:0 13px!important;border:1px solid #cfd8d2!important;border-radius:8px!important;background:#fff!important
+  }
+  html body main.home-page .home-main-search button{
+    width:100%!important;height:46px!important;margin:0!important;padding:0 14px!important;
+    border:0!important;border-radius:8px!important;background:#765b42!important;color:#fff!important
+  }
+  html body main.home-page .home-entry-grid>a,
+  html body main.home-page .home-source-grid>a{width:100%!important;max-width:100%!important;min-width:0!important;min-height:0!important;height:auto!important}
+  html body main.home-page .home-source-grid>a::before{display:none!important;content:none!important}
+  html body main.home-page .home-results-inner{gap:18px!important;padding:22px 18px!important}
+  html body main.home-page .home-results nav{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+  html body main.home-page .home-results nav a{width:100%!important;text-align:center!important}
+
+  /* Landing pages, tools, services, notes and diagnostics. */
+  html body :is(.page-head-grid,.section-entry-grid,.service-tool-grid,.service-tool-grid-one,.service-start-grid,.tools-grid,.tool-form-grid,.compare-grid,.notes-grid,.journal-reading-grid,.about-grid,.about-quick-grid,.rules-summary-grid,.rules-model-grid,.geo-chip-grid,.playbook-catalog-grid,.traffic-hub-basics,.traffic-next,.knowledge-map){
+    grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important
+  }
+  html body :is(.service-tool,.service-card,.tool-card,.big-tool,.diagnostic-card,.notes-card,.library-row,.section-entry,.traffic-source-card,.source-card,.playbook-card){
+    width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important
+  }
+  html body :is(.tool-form-grid input,.tool-form-grid select,.tool-form-grid textarea,.compare-side input,.compare-side select,.notes-composer input,.notes-composer textarea,.library-search input,.glossary-search input){
+    width:100%!important;max-width:100%!important;min-width:0!important;font-size:16px!important
+  }
+  html body .service-tool-actions,
+  html body .service-inline-actions,
+  html body .article-cta-row,
+  html body .source-compare-actions{display:grid!important;grid-template-columns:1fr!important;gap:8px!important;width:100%!important}
+  html body :is(.service-tool-actions a,.service-inline-actions a,.article-cta-row a,.source-compare-actions a){width:100%!important;max-width:100%!important;justify-content:center!important;text-align:center!important}
+
+  /* Traffic catalog cards were inheriting the article's 80px facts offset. */
+  html body.reference-ui-v99 main:not(.source-playbook-page) .playbook-card .playbook-facts,
+  html body.reference-ui-v99 main.traffic-hub-page .playbook-facts,
+  html body main.traffic-hub-page .playbook-facts{
+    width:100%!important;max-width:100%!important;margin:12px 0 0!important;
+    display:grid!important;grid-template-columns:1fr!important;gap:7px!important
+  }
+  html body.reference-ui-v99 main:not(.source-playbook-page) .playbook-card .playbook-facts>div,
+  html body.reference-ui-v99 main.traffic-hub-page .playbook-facts>div,
+  html body main.traffic-hub-page .playbook-facts>div{
+    width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;
+    display:grid!important;grid-template-columns:92px minmax(0,1fr)!important;gap:7px!important
+  }
+  html body main.traffic-hub-page .playbook-facts :is(dt,dd){min-width:0!important;margin:0!important;overflow-wrap:normal!important;word-break:normal!important}
+
+  /* Article canvas. */
+  html body .article-layout,
+  html body.reference-ui-v99 .article-layout,
+  html body .source-playbook-page .article-layout,
+  html body.reference-ui-v99 .source-playbook-page .article-layout{
+    display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;
+    margin:0!important;padding:18px 15px 54px!important
+  }
+  html body .article,
+  html body .source-playbook-article,
+  html body.reference-ui-v99 .article,
+  html body.reference-ui-v99 .source-playbook-article{
+    width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding-left:0!important;padding-right:0!important
+  }
+  html body .article-aside.enhanced-rail,
+  html body.reference-ui-v99 .article-aside.enhanced-rail{display:none!important}
+  html body :is(.article h1,.source-playbook-article h1,.source-title-copy h1){
+    max-width:100%!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:auto!important
+  }
+  html body .article h1{font-size:clamp(28px,8.2vw,36px)!important;line-height:1.1!important}
+
+  /* Source article hero: override the high-specificity three-column v99 grid. */
+  html body.reference-ui-v99 .source-title-row,
+  html body .source-playbook-page .source-title-row{
+    display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;
+    gap:11px!important;align-items:center!important;width:100%!important;max-width:100%!important;margin:0 0 10px!important
+  }
+  html body.reference-ui-v99 .source-hero-icon,
+  html body .source-playbook-page .source-hero-icon{
+    width:48px!important;height:48px!important;min-width:48px!important;max-width:48px!important;
+    margin:0!important;border-radius:10px!important
+  }
+  html body.reference-ui-v99 .source-title-copy,
+  html body .source-playbook-page .source-title-copy{width:auto!important;max-width:100%!important;min-width:0!important;margin:0!important}
+  html body.reference-ui-v99 .source-title-copy h1,
+  html body .source-playbook-page .source-title-copy h1{
+    width:auto!important;max-width:100%!important;margin:0!important;
+    font-size:27px!important;line-height:1.08!important;letter-spacing:-.03em!important;
+    overflow-wrap:normal!important;word-break:normal!important;hyphens:auto!important
+  }
+  html body.reference-ui-v99 .ref-launch-time{display:none!important}
+  html body.reference-ui-v99 .source-hero-shell>.lead,
+  html body .source-playbook-page .source-hero-shell>.lead{width:100%!important;max-width:100%!important;margin:0!important;font-size:14px!important;line-height:1.55!important}
+
+  /* Facts must start at the article edge, not 80px to the right. */
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts,
+  html body .source-playbook-page .source-playbook-article>.playbook-facts{
+    width:100%!important;max-width:100%!important;margin:13px 0!important;
+    display:grid!important;grid-template-columns:1fr!important;gap:8px!important
+  }
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts>div,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts>div,
+  html body .source-playbook-page .source-playbook-article>.playbook-facts>div{
+    width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;
+    display:grid!important;grid-template-columns:96px minmax(0,1fr)!important;gap:8px!important;align-items:center!important
+  }
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts :is(dt,dd),
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts :is(dt,dd){min-width:0!important;margin:0!important;overflow-wrap:normal!important;word-break:normal!important}
+
+  html body .source-section-tabs,
+  html body.reference-ui-v99 .source-section-tabs{
+    display:flex!important;flex-wrap:nowrap!important;width:100%!important;max-width:100%!important;
+    margin:14px 0 5px!important;padding:0 0 8px!important;gap:6px!important;
+    overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important
+  }
+  html body .source-section-tabs::-webkit-scrollbar{display:none!important}
+  html body .source-section-tabs a{flex:0 0 auto!important;white-space:nowrap!important;min-width:0!important}
+
+  html body .source-playbook-article>section,
+  html body.reference-ui-v99 .source-playbook-article>section,
+  html body .guide-v101-section{
+    width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;
+    padding-left:0!important;padding-right:0!important
+  }
+  html body :is(.playbook-checklist,.platform-setup,.playbook-format-list,.playbook-steps,.traffic-diagnostic-list,.source-toolkit-grid,.source-journey-grid,.guide-v101-grid,.guide-v101-formats,.guide-v101-dual,.guide-v101-funnel-table,.guide-v101-diagnostics,.guide-v101-scale,.guide-v101-next>div,.ref-summary-grid,.ref-format-showcase,.ref-metrics-row){
+    grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important
+  }
+  html body :is(.playbook-checklist>li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,.traffic-diagnostic-list>li,.source-tool-card,.source-journey-card,.guide-v101-grid>div,.guide-v101-formats>article){
+    width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important
+  }
+  html body :is(.article-figure,.guide-v101-media,.source-journey-card){max-width:100%!important;margin-left:0!important;margin-right:0!important;overflow:hidden!important}
+  html body :is(.article-figure img,.guide-v101-media img,.source-journey-card img){display:block!important;width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important}
+
+  /* Tables: scroll inside the article instead of moving the page. */
+  html body .article table,
+  html body .rules-table,
+  html body .source-compare-table{
+    display:block!important;width:100%!important;max-width:100%!important;
+    overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important
+  }
+  html body .compare-table{width:100%!important;max-width:100%!important;overflow-x:auto!important;grid-template-columns:minmax(130px,1.2fr) minmax(105px,1fr) minmax(105px,1fr)!important}
+  html body :is(pre,code){max-width:100%!important}
+  html body pre{overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+
+  /* Footer is deliberately compact and never inherits the desktop sidebar offset. */
+  html body .footer-main,
+  html body.reference-ui-v99 .footer-main{display:grid!important;grid-template-columns:1fr!important;gap:18px!important;padding-top:28px!important;padding-bottom:20px!important}
+  html body .footer-links,
+  html body.reference-ui-v99 .footer-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px 16px!important}
+  html body .footer-bottom,
+  html body.reference-ui-v99 .footer-bottom{display:flex!important;flex-wrap:wrap!important;gap:8px 16px!important;padding-top:14px!important;padding-bottom:18px!important}
+
+  /* Long technical strings may break; normal prose and headings may not. */
+  html body :is(a,p,li,dd,dt,span,strong,b,h1,h2,h3,h4){min-width:0}
+  html body :is(code,pre,kbd,.url,.mono){overflow-wrap:anywhere!important;word-break:break-word!important}
+}
+
+@media (max-width:360px){
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .ref-topbar{padding-left:10px!important;padding-right:10px!important;gap:6px!important}
+  html body.reference-ui-v99 .ref-mobile-brand{max-width:calc(100% - 84px)!important;gap:7px!important}
+  html body.reference-ui-v99 .ref-mobile-brand b{font-size:11.5px!important}
+  html body.reference-ui-v99 .ref-theme-button,
+  html body.reference-ui-v99 .ref-mobile-menu,
+  html body .site-header .theme-toggle,
+  html body .site-header .mobile-nav-toggle{width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important}
+  html body main.home-page .home-welcome h1{font-size:32px!important}
+  html body .article h1{font-size:27px!important}
+  html body.reference-ui-v99 .source-title-copy h1,
+  html body .source-playbook-page .source-title-copy h1{font-size:24px!important}
+  html body .footer-links,
+  html body.reference-ui-v99 .footer-links{grid-template-columns:1fr!important}
+}
+
+@media (min-width:370px) and (max-width:900px){
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts,
+  html body .source-playbook-page .source-playbook-article>.playbook-facts{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important
+  }
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts>div,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts>div,
+  html body .source-playbook-page .source-playbook-article>.playbook-facts>div{
+    display:block!important;padding:11px 12px!important
+  }
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts dt,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts dt{display:block!important;margin:0 0 4px!important}
+  html body.reference-ui-v99 .source-playbook-article>.playbook-facts dd,
+  html body.reference-ui-v99 .source-hero-shell>.playbook-facts dd{display:block!important;margin:0!important}
+}
+
+/* v110 mobile follow-up: structured YouTube guide must not keep desktop inner grids. */
+@media (max-width:900px){
+  html body .guide-v101-timeline>div,
+  html body.reference-ui-v99 .guide-v101-timeline>div{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:5px!important;
+    padding:15px 16px!important;
+  }
+  html body .guide-v101-timeline time{width:auto!important;max-width:100%!important;margin:0 0 1px!important}
+  html body .guide-v101-timeline h3{width:auto!important;max-width:100%!important;margin:0!important}
+  html body .guide-v101-timeline p{width:auto!important;max-width:100%!important;margin:2px 0 0!important}
+  html body .guide-v101-callout,
+  html body.reference-ui-v99 .guide-v101-callout{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:6px!important;
+  }
+}
