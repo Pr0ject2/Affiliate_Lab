@@ -8430,3 +8430,158 @@ html body.reference-ui-v99.theme-dark .site-footer{background:#0b0e12!important;
   html body .home-results-inner{padding:20px 17px!important}
   html body .section-outcome{padding:18px!important}
 }
+
+/* ======================================================================
+   v112 — free-width editorial blocks; restore real inner spacing
+   ====================================================================== */
+
+/*
+   Regular copy can stay in the compact reading column, but composite
+   editorial blocks are allowed to break out of it.  The outcome block
+   keeps the normal left reading edge and grows to the right instead of
+   being forced into a symmetrical 980px box.
+*/
+@media (min-width:901px){
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome{
+    --v112-copy-offset:max(21px,calc((100% - var(--v104-regular-content))/2));
+    box-sizing:border-box!important;
+    width:min(1180px,calc(100% - var(--v112-copy-offset) - 21px))!important;
+    max-width:none!important;
+    margin-left:var(--v112-copy-offset)!important;
+    margin-right:0!important;
+    padding:26px 28px 26px 30px!important;
+    grid-template-columns:minmax(260px,.72fr) minmax(0,1.8fr)!important;
+    gap:26px!important;
+    overflow:visible!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome>div{
+    padding:2px 0 2px 0!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome ul{
+    gap:12px!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome li{
+    padding:15px 15px 15px 44px!important;
+    line-height:1.5!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome li:before{
+    top:14px!important;
+    left:13px!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome h2{
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+}
+
+/* On narrower desktop widths, keep the breakout but stack the heading
+   above the three checks so none of the cards is squeezed. */
+@media (min-width:901px) and (max-width:1240px){
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:18px!important;
+  }
+}
+
+/* Mobile needs an explicit high-specificity rule because old .wrap rules
+   otherwise zero/replace the horizontal padding. */
+@media (max-width:900px){
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome{
+    box-sizing:border-box!important;
+    width:calc(100% - 28px)!important;
+    max-width:none!important;
+    margin-left:14px!important;
+    margin-right:14px!important;
+    padding:20px!important;
+    overflow:visible!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome>div{
+    padding:0!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome li{
+    padding:14px 14px 14px 43px!important;
+  }
+}
+@media (max-width:360px){
+  html body.content-system-v103 main.section-landing > .wrap.section-outcome{
+    width:calc(100% - 24px)!important;
+    margin-left:12px!important;
+    margin-right:12px!important;
+    padding:17px!important;
+  }
+}
+
+/* ======================================================================
+   v113 — wider editorial canvas for ordinary guides
+   Standard articles no longer inherit the old 830px reading cap. The
+   article is centered in the actual workspace between the left navigation
+   and the fixed right rail. On medium desktop widths the rail is removed
+   so it cannot squeeze the article into a narrow strip.
+   ====================================================================== */
+:root{--v113-article-max:1000px;--v113-workspace-gap:84px;--v113-workspace-left:36px}
+
+@media (min-width:1501px){
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-layout{
+    box-sizing:border-box!important;
+    display:block!important;
+    width:calc(100% - var(--v103-rail) - var(--v113-workspace-gap))!important;
+    max-width:none!important;
+    margin-left:var(--v113-workspace-left)!important;
+    margin-right:0!important;
+    padding:28px 0 78px!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:var(--v113-article-max)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    justify-self:auto!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
+    display:grid!important;
+  }
+}
+
+@media (min-width:1051px) and (max-width:1500px){
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-layout{
+    box-sizing:border-box!important;
+    display:block!important;
+    width:calc(100% - 64px)!important;
+    max-width:none!important;
+    margin-left:32px!important;
+    margin-right:32px!important;
+    padding:26px 0 72px!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:var(--v113-article-max)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
+    display:none!important;
+  }
+}
+
+@media (min-width:901px) and (max-width:1050px){
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-layout{
+    box-sizing:border-box!important;
+    width:calc(100% - 44px)!important;
+    max-width:none!important;
+    margin-left:22px!important;
+    margin-right:22px!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article{
+    width:100%!important;
+    max-width:920px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  html body.reference-ui-v99.content-system-v103.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
+    display:none!important;
+  }
+}
