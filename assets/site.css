@@ -12693,3 +12693,197 @@ html body.reference-ui-v99 button.term-help::after{
 html body.reference-ui-v99 :is(button,.bookmark-button,.saved-link,.article-cta-row a,.source-compare-actions a).term-help{
   min-height:0!important;
 }
+
+
+/* ======================================================================
+   v143 — repair section landing feature block
+   ====================================================================== */
+@media (min-width:901px){
+  html body.content-system-v103 main.section-landing > .wrap.section-feature{
+    --v143-copy-offset:max(21px,calc((100% - var(--v104-regular-content))/2));
+    box-sizing:border-box!important;
+    width:min(1180px,calc(100% - var(--v143-copy-offset) - 21px))!important;
+    max-width:none!important;
+    margin-left:var(--v143-copy-offset)!important;
+    margin-right:0!important;
+    padding:28px 0 26px!important;
+    grid-template-columns:minmax(0,1.75fr) minmax(310px,.82fr)!important;
+    gap:20px!important;
+    align-items:start!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-feature>div,
+  html body.content-system-v103 main.section-landing > .wrap.section-feature>aside{
+    align-self:start!important;
+    height:auto!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-feature>div{
+    padding:24px 26px!important;
+  }
+  html body.content-system-v103 main.section-landing > .wrap.section-feature>aside{
+    padding:22px 23px!important;
+  }
+}
+
+@media (min-width:901px) and (max-width:1180px){
+  html body.content-system-v103 main.section-landing > .wrap.section-feature{
+    width:calc(100% - 42px)!important;
+    margin-left:21px!important;
+    margin-right:21px!important;
+    grid-template-columns:minmax(0,1fr) minmax(280px,.72fr)!important;
+  }
+}
+
+@media (max-width:900px){
+  html body.content-system-v103 main.section-landing > .wrap.section-feature{
+    width:calc(100% - 28px)!important;
+    max-width:none!important;
+    margin-left:14px!important;
+    margin-right:14px!important;
+    padding:20px 0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+}
+
+
+/* ======================================================================
+   v144 — clean numbering system: no leading zeroes, calm logical styling
+   ====================================================================== */
+
+/* Remove forced leading zero in generated counters. */
+.playbook-method li:before{
+  content:counter(method)!important;
+}
+
+/* One calm style for ordinary numbering chips. */
+html body :is(
+  .service-workflow-head>span,
+  .source-playbook-page .playbook-steps>li>span:first-child,
+  .platform-setup li>span,
+  .guide-v101-grid>div>span,
+  .structured-article-v103 .logic-index-v103,
+  .about-route-v114 li:before
+){
+  display:grid!important;
+  place-items:center!important;
+  min-width:34px!important;
+  width:auto!important;
+  height:28px!important;
+  padding:0 10px!important;
+  border:1px solid #d8ccb9!important;
+  border-radius:999px!important;
+  background:#f4efe5!important;
+  color:#6e5631!important;
+  box-shadow:none!important;
+  font-size:12px!important;
+  font-weight:820!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+  font-family:Inter,"Segoe UI",Arial,sans-serif!important;
+}
+html body .guide-v101-grid>div>span{
+  width:max-content!important;
+  margin-bottom:10px!important;
+}
+html body .service-workflow-head>span,
+html body .source-playbook-page .playbook-steps>li>span:first-child,
+html body .platform-setup li>span,
+html body .about-route-v114 li:before{
+  min-width:36px!important;
+}
+
+/* Warning sections can keep a warm accent: this is the only intentional color exception. */
+html body .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  border-color:#e1c796!important;
+  background:#f7ecd6!important;
+  color:#8a6129!important;
+}
+
+/* Dark theme counterparts. */
+html body.theme-dark :is(
+  .service-workflow-head>span,
+  .source-playbook-page .playbook-steps>li>span:first-child,
+  .platform-setup li>span,
+  .guide-v101-grid>div>span,
+  .structured-article-v103 .logic-index-v103,
+  .about-route-v114 li:before
+){
+  border-color:#4a4032!important;
+  background:#2a241d!important;
+  color:#e2ceb0!important;
+}
+html body.theme-dark .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  border-color:#6d5634!important;
+  background:#352a1d!important;
+  color:#e0bf87!important;
+}
+
+
+/* ======================================================================
+   v145 — mobile-only green top strip with light gradient
+   ====================================================================== */
+@media (max-width:650px){
+  .site-header{
+    background:
+      radial-gradient(circle at 18% 14%,rgba(255,255,255,.09),transparent 18%),
+      linear-gradient(180deg,#245647 0%,#1b4639 56%,#163c31 100%)!important;
+    border-bottom:1px solid #b38f58!important;
+    box-shadow:0 5px 18px rgba(19,34,29,.14), inset 0 -1px rgba(255,255,255,.05)!important;
+  }
+  .site-header:after{
+    background:linear-gradient(90deg,transparent 0 4%,#b99355 18%,#d4ba84 50%,#b99355 82%,transparent 96%)!important;
+    opacity:.82!important;
+  }
+  .site-header .brand:after{
+    background:#ccb07a!important;
+    opacity:.62!important;
+  }
+}
+
+
+/* ======================================================================
+   v146 — right rail should align to the outer right edge of the workspace
+   ====================================================================== */
+@media (min-width:1501px){
+  html body.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .wrap.article-layout,
+  html body.reference-ui-v99.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .wrap.article-layout{
+    box-sizing:border-box!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(260px,var(--v103-rail))!important;
+    gap:32px!important;
+    width:calc(100% - 48px)!important;
+    max-width:none!important;
+    margin-left:24px!important;
+    margin-right:24px!important;
+    padding:28px 0 78px!important;
+    align-items:start!important;
+  }
+  html body.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .article,
+  html body.reference-ui-v99.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .article{
+    width:min(100%,1000px)!important;
+    max-width:1000px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    justify-self:center!important;
+  }
+  html body.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .article-aside.enhanced-rail,
+  html body.reference-ui-v99.content-system-v103.article-page:not(.about-page-v114) main.compact-main-v103:not(.source-playbook-page) .article-aside.enhanced-rail{
+    display:grid!important;
+    width:100%!important;
+    max-width:var(--v103-rail)!important;
+    justify-self:end!important;
+    align-self:start!important;
+    position:sticky!important;
+    top:calc(var(--ref-topbar) + 16px)!important;
+    max-height:calc(100vh - var(--ref-topbar) - 32px)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+}
