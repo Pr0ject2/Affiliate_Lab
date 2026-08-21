@@ -11729,3 +11729,41 @@ html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-me
   border-color:rgba(255,255,255,.16)!important;
   color:#ffffff!important;
 }
+
+
+/* ======================================================================
+   v140 — restore compact tooltip hitboxes
+   ====================================================================== */
+/* A later global button rule gave every button a 42px minimum height.
+   Term-help controls live inline in prose, so their clickable area must stay
+   exactly around the word and the small question marker. */
+html body .term-help,
+html body.reference-ui-v99 .term-help{
+  display:inline-flex!important;
+  align-items:baseline!important;
+  justify-content:flex-start!important;
+  align-self:baseline!important;
+  justify-self:start!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  max-width:max-content!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  padding:0 1px!important;
+  margin:0 3px 0 1px!important;
+  line-height:inherit!important;
+  vertical-align:baseline!important;
+  white-space:nowrap!important;
+  box-sizing:content-box!important;
+}
+html body .term-help::after,
+html body.reference-ui-v99 .term-help::after{
+  flex:0 0 12px!important;
+  width:12px!important;
+  height:12px!important;
+  min-width:12px!important;
+  min-height:12px!important;
+  margin-left:3px!important;
+}
