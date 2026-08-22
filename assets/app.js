@@ -16,13 +16,13 @@
    ['поиск','seo','search','organic','органика','поисковый'],
    ['видео','video','youtube','shorts','ролики','short'],
    ['стрим','stream','streaming','эфир','прямой эфир'],
-   ['лендинг','landing','landing page','посадочная','Landing page'],
+   ['лендинг','landing','landing page','посадочная','лендинг'],
    ['прелендинг','prelanding','pre-landing','Pre-landing'],
    ['метка','метки','subid','sub id','utm','трекинг','tracking','clickid','click id'],
    ['статистика','analytics','аналитика','кабинет','dashboard','report','отчет','отчёт'],
    ['регистрация','registration','signup','sign up'],
    ['клик','click','clicks'],
-   ['Offer','offer','offers'],
+   ['оффер','offer','offers'],
    ['гемблинг','gambling','casino','казино']
  ];
  const topicMap={basics:'основы',economics:'экономика',analytics:'аналитика',traffic:'трафик',practice:'практика',all:'all'};
@@ -120,7 +120,7 @@
   ['GGR и NGR','Расчётные показатели игрового дохода.','ggr ngr игровой доход'],
   ['SubID','Метка для разделения источников, страниц и публикаций.','subid метка источник'],
   ['Click ID','Идентификатор конкретного перехода.','click id Click ID'],
-  ['Postback','Серверное уведомление о конверсии.','postback Postback конверсия'],
+  ['Постбэк','Серверное уведомление о конверсии.','постбэк Постбэк конверсия'],
   ['Холд','Период проверки конверсии перед выплатой.','холд hold проверка'],
   ['Фрод','Недействительные или искусственно созданные действия.','фрод fraud'],
   ['Квалифицированный FTD','Первый депозит, выполнивший дополнительные условия программы.','квалифицированный ftd квалификация'],
@@ -129,15 +129,15 @@
   ['CTR','Доля кликов от числа показов.','ctr click through rate'],
   ['ROI','Окупаемость относительно расходов.','roi окупаемость'],
   ['GEO','Страна или рынок, на который направлен трафик.','geo гео страна'],
-  ['Offer','Условия конкретного предложения партнёрской программы.','offer Offer предложение'],
-  ['Landing page','Страница после рекламного перехода.','landing page лендинг'],
-  ['Tracker','Система учёта кликов, меток и конверсий.','tracker Tracker tracking'],
-  ['Куки','Данные браузера, которые могут участвовать в Attribution.','куки cookie cookies'],
+  ['оффер','Условия конкретного предложения партнёрской программы.','offer оффер предложение'],
+  ['лендинг','Страница после рекламного перехода.','landing page лендинг'],
+  ['трекер','Система учёта кликов, меток и конверсий.','tracker трекер tracking'],
+  ['Куки','Данные браузера, которые могут участвовать в атрибуции.','куки cookie куки'],
   ['Органический трафик','Переходы без оплаты за каждый показ или клик.','органический трафик органика']
  ].map(([title,desc,aliases])=>({title,url:'/Affiliate_Lab/glossary/?q='+encodeURIComponent(title),section:'Словарь',desc,aliases}));
 
 
- const suggestionIndex=[{"title":"1win Partners: правила, выплаты и актуальные GEO","url":"/Affiliate_Lab/guides/1win-rules/","section":"Практика","desc":"RS и CPA, условия выплат, запрещённые методы, проверка трафика и актуальные GEO 1win.","aliases":"1win partners правила geo гео страны revshare rs cpa выплаты запрещенный трафик"},{"title":"YouTube: длинные видео — от канала до первого FTD","url":"/Affiliate_Lab/traffic/sources/youtube/","section":"Источники трафика","desc":"3–5 длинных видео одного формата: отдельная метка на ролик, замеры через 24 часа, 7 и 14 дней, сверка просмотров с регистрациями и FTD.","aliases":"youtube ютуб shorts видео ролики запуск план"},{"title":"VK Видео и Клипы: пошаговый запуск","url":"/Affiliate_Lab/traffic/sources/vk-video/","section":"Источники трафика","desc":"3–5 видео или 10–20 Клипов: отдельно считаются ролик, сообщество, внешний клик, регистрация и первый депозит.","aliases":"vk вк видео клипы сообщество запуск план"},{"title":"Telegram-канал: от первого читателя до FTD","url":"/Affiliate_Lab/traffic/sources/telegram/","section":"Источники трафика","desc":"8–12 стартовых постов, отдельные пригласительные ссылки, чтение следующих публикаций, клики и первые депозиты.","aliases":"telegram телеграм канал размещения посевы запуск план"},{"title":"Контентный сайт: пошаговый запуск SEO-источника","url":"/Affiliate_Lab/traffic/sources/content-site/","section":"Источники трафика","desc":"Один кластер из 3–5 страниц: запросы, показы, поисковые и партнёрские клики, регистрации и первые депозиты.","aliases":"контентный сайт seo поиск блог search console запуск план"},{"title":"Социальные сети: посты, карусели и обычная лента","url":"/Affiliate_Lab/traffic/sources/social/","section":"Источники трафика","desc":"10–20 публикаций одного формата: отдельные метки, клики на 1000 просмотров, регистрации и первые депозиты.","aliases":"соцсети social tiktok reels клипы короткие видео лента"},{"title":"Тематические сообщества и форумы: органический трафик без спама","url":"/Affiliate_Lab/traffic/sources/communities/","section":"Источники трафика","desc":"3–5 релевантных площадок: отдельные метки, клики, регистрации и первые депозиты.","aliases":"сообщества форумы группы чаты community forum"},{"title":"Поисковый трафик: от запроса до партнёрского клика","url":"/Affiliate_Lab/traffic/sources/search/","section":"Источники трафика","desc":"5–10 запросов, 3–5 страниц: показы, кликабельность, партнёрские клики, регистрации и первые депозиты.","aliases":"поиск seo google yandex запросы search"},{"title":"Стримы и прямые эфиры: пошаговый тест источника","url":"/Affiliate_Lab/traffic/sources/streams/","section":"Источники трафика","desc":"3–5 эфиров: отдельно считаются прямой эфир и запись, клики, регистрации и первые депозиты.","aliases":"стрим stream live эфир запись"},{"title":"Платный трафик: пошаговый тест без бесконтрольного расхода","url":"/Affiliate_Lab/traffic/sources/paid/","section":"Источники трафика","desc":"Одна гипотеза, фиксированный лимит и раздельный трекинг до первого расхода.","aliases":"платный трафик реклама paid ads cpc budget"},{"title":"TikTok, Reels, Spotlight и Likee: вертикальные видео","url":"/Affiliate_Lab/traffic/sources/short-video/","section":"Источники трафика","desc":"10–20 вертикальных роликов на одной площадке: отдельные метки, клики, регистрации и первые депозиты.","aliases":"tiktok тикток reels рилс spotlight likee лайки вертикальные видео"},{"title":"Rutube, OK Видео и другие видеохостинги: дополнительный источник","url":"/Affiliate_Lab/traffic/sources/alt-video/","section":"Источники трафика","desc":"3–5 сопоставимых роликов на дополнительную площадку: просмотры, клики и действия ниже по воронке.","aliases":"rutube рутуб dailymotion ok видео одноклассники видеохостинг"},{"title":"Дзен: статьи, посты и рекомендательная лента","url":"/Affiliate_Lab/traffic/sources/dzen/","section":"Источники трафика","desc":"8–12 материалов одного формата: дочитывания, внешние клики, регистрации и первые депозиты.","aliases":"дзен dzen статьи лента рекомендации контент"},{"title":"Reddit: как работать с тематическими сообществами без спама","url":"/Affiliate_Lab/traffic/sources/reddit/","section":"Источники трафика","desc":"5–10 полезных публикаций или ответов: отдельные метки по сообществам и веткам.","aliases":"reddit реддит сабреддит форум ветка обсуждение"},{"title":"X: короткие посты, треды и переходы через профиль","url":"/Affiliate_Lab/traffic/sources/x-twitter/","section":"Источники трафика","desc":"15–30 постов одной темы: показы, профиль, внешние клики, регистрации и первые депозиты.","aliases":"x twitter твиттер тред короткие посты"},{"title":"Email и web push: работа с собственной базой","url":"/Affiliate_Lab/traffic/sources/mailing/","section":"Источники трафика","desc":"3–5 рассылок одной темы по собственной базе: клики, регистрации и первые депозиты.","aliases":"email почта рассылка web push пуш подписчики база"},{"title":"Основы партнёрского маркетинга","url":"/Affiliate_Lab/basics/","section":"Раздел","desc":"Offer, FTD, GEO, воронка и базовая механика.","aliases":"основы база beginner basics affiliate beginner партнерка Offer ftd"},{"title":"Экономика партнёрских программ","url":"/Affiliate_Lab/economics/","section":"Раздел","desc":"RevShare, CPA, GGR, NGR и логика выплат.","aliases":"экономика деньги выплаты revshare cpa ggr ngr revenue share"},{"title":"Аналитика и трекинг","url":"/Affiliate_Lab/analytics/","section":"Раздел","desc":"Метки, статистика, Tracker, Cohort и сравнение источников.","aliases":"аналитика statistics tracking трекинг dashboard кабинет метрики tracker"},{"title":"Источники трафика","url":"/Affiliate_Lab/traffic/","section":"Раздел","desc":"15 направлений: YouTube, VK, Telegram, короткие видео, Дзен, Reddit, X, поиск, сообщества, рассылки, реклама и собственные площадки.","aliases":"traffic трафик seo search youtube video telegram vk social ads stream источники"},{"title":"Практика вебмастера","url":"/Affiliate_Lab/practice/","section":"Раздел","desc":"Подготовка запуска, первый тест, менеджер и разбор результата.","aliases":"практика запуск тест checklist менеджер first ftd"},{"title":"Словарь","url":"/Affiliate_Lab/glossary/","section":"Справочник","desc":"Короткие определения терминов и английские эквиваленты.","aliases":"словарь glossary термины definitions термин"},{"title":"Инструменты","url":"/Affiliate_Lab/tools/","section":"Справочник","desc":"Калькуляторы для воронки, теста и RevShare.","aliases":"tools инструменты калькуляторы calculator расчеты расчёт"},{"title":"Сервисы","url":"/Affiliate_Lab/services/","section":"Справочник","desc":"Основной набор: Proxys.io, Multilogin, DarkStore, OnlineSim, RUVDS, Spy.House, AdsBridge и ProfitAds.","aliases":"сервисы proxy прокси proxys antidetect антидетект multilogin onlinesim darkstore ruvds spyhouse adsbridge profitads трекер аккаунты vds sms"},{"title":"Рабочий журнал","url":"/Affiliate_Lab/notes/","section":"Для работы","desc":"Запуски, метки, показатели и выводы по тестам.","aliases":"тесты записи журнал результаты запуск"},{"title":"Мессенджеры и сообщества: как приводить игроков из каналов и групп","url":"/Affiliate_Lab/guides/community-traffic/","section":"Трафик","desc":"Как выбрать подходящее сообщество, подать предложение и довести заинтересованного пользователя до регистрации и первого депозита.","aliases":"сообщества мессенджеры telegram телеграм канал чат community messenger доверие аудитория форум форумы forum discord дискорд vk группы размещения"},{"title":"Социальные сети: как приводить игроков из ленты","url":"/Affiliate_Lab/guides/social-traffic/","section":"Трафик","desc":"Как через контент в ленте довести заинтересованного пользователя до перехода, регистрации и первого депозита.","aliases":"соцсети social media vk instagram tiktok reels shorts clips клипы рилс лента органика реклама"},{"title":"Платный трафик: как задать тест до покупки кликов","url":"/Affiliate_Lab/guides/paid-traffic/","section":"Трафик","desc":"Лимит расходов, учёт, структура теста и критерий остановки до первого потраченного рубля.","aliases":"платный трафик paid ads cpc cpl реклама google meta tiktok бюджет"},{"title":"Стримы и прямые эфиры: как считать трафик от живой аудитории","url":"/Affiliate_Lab/guides/stream-traffic/","section":"Трафик","desc":"Онлайн, переходы, отдельные метки по эфирам и влияние доверия к ведущему.","aliases":"стрим stream streaming twitch youtube live эфир зрители онлайн"},{"title":"Сайты и контентные проекты: как строить источник на своей площадке","url":"/Affiliate_Lab/guides/content-sites/","section":"Трафик","desc":"Как собрать первую тему, связать материалы и измерять собственный сайт как долгосрочный актив.","aliases":"сайт website content seo блог контент проект own media"},{"title":"Как выбрать партнёрскую программу","url":"/Affiliate_Lab/guides/choose-program/","section":"Практика","desc":"Программа выбирается не по одной ставке: важны правила трафика, трекинг, выплаты, продукт и поддержка.","aliases":"выбор партнерской программы ставка условия трекинг выплаты менеджер качество"},{"title":"Партнёрский кабинет: как читать отчёт по кликам, регистрациям и FTD","url":"/Affiliate_Lab/guides/partner-dashboard/","section":"Аналитика","desc":"Как найти в кабинете период, клики, регистрации, FTD, статусы и разбивки.","aliases":"партнерский кабинет статистика клики регистрации FTD доход отчет"},{"title":"Когда нужна Landing page","url":"/Affiliate_Lab/guides/landing-page/","section":"Практика","desc":"Когда собственная страница помогает воронке, а когда только добавляет лишний шаг.","aliases":"Landing page лендинг прелендинг переход конверсия сайт"},{"title":"Нужен ли Tracker новичку","url":"/Affiliate_Lab/guides/tracker-for-beginner/","section":"Аналитика","desc":"Когда отдельный Tracker действительно нужен и в каких случаях на старте можно обойтись без него.","aliases":"Tracker Postback серверный трекинг метки конверсия новичок"},{"title":"AdsBridge: как создать первую кампанию","url":"/Affiliate_Lab/guides/adsbridge-campaign/","section":"Аналитика","desc":"Пошаговая настройка кампании: домен, источник, SubID, оффер, лендинг, postback и тестовая ссылка.","aliases":"adsbridge адсбридж кампания tracker трекер subid click id postback offer оффер лендинг"},{"title":"Как работать с менеджером партнёрской программы","url":"/Affiliate_Lab/guides/affiliate-manager/","section":"Практика","desc":"Какие вопросы задавать до запуска и какую информацию давать, если статистика выглядит странно.","aliases":"менеджер партнерской программы вопросы ставка правила трафика спор статистика"},{"title":"Что значит качество трафика","url":"/Affiliate_Lab/guides/traffic-quality/","section":"Аналитика","desc":"Качество трафика видно по прохождению воронки и дальнейшей активности аудитории.","aliases":"качество трафика конверсия Cohort отклонения повторные депозиты"},{"title":"Что проверить перед первым запуском","url":"/Affiliate_Lab/guides/launch-checklist/","section":"Практика","desc":"Короткая проверка ссылки, учёта кликов, мобильной версии и лимита теста до первого реального трафика.","aliases":"первый запуск чеклист ссылка мобильная версия метки тест бюджет"},{"title":"Поисковый трафик: как начать и что считать","url":"/Affiliate_Lab/guides/search-traffic/","section":"Трафик","desc":"Почему поиск не даёт быстрый результат, как выбрать тему, получить первые результаты и считать страницы отдельно.","aliases":"поисковый трафик запрос намерение страница органика поиск"},{"title":"Видео и короткие ролики: как измерять трафик, а не просмотры","url":"/Affiliate_Lab/guides/video-traffic/","section":"Трафик","desc":"Как отделить просмотры от переходов и сравнивать ролики по реальной воронке.","aliases":"видео трафик просмотры переходы регистрации FTD канал"},{"title":"Как устроен Affiliate Marketing","url":"/Affiliate_Lab/guides/affiliate-marketing/","section":"Основы","desc":"Кто участвует в партнёрской схеме, где появляется трекинг и в какой момент возникает выплата.","aliases":"Affiliate Marketing партнерский маркетинг рекламодатель вебмастер publisher advertiser партнерская программа комиссия"},{"title":"Что такое Offer и что проверять до запуска","url":"/Affiliate_Lab/guides/offer/","section":"Основы","desc":"До запуска Offer проверь действие, страну, ограничения и правила учёта конверсий.","aliases":"Offer offer geo ставка cpa revshare ограничения источники трафика условия Attribution"},{"title":"Метки, Click ID и Postback: как не путать трекинг","url":"/Affiliate_Lab/guides/tracking/","section":"Аналитика","desc":"Метки источника, Click ID и Postback решают разные задачи. Здесь они собраны в одну схему.","aliases":"tracking трекинг subid click id postback s2s utm метки Attribution источник кампания"},{"title":"GGR и NGR: откуда берётся расчётная база","url":"/Affiliate_Lab/guides/ggr-ngr/","section":"Экономика","desc":"GGR и NGR часто стоят рядом с RevShare, но означают разные уровни расчёта дохода.","aliases":"ggr ngr gross gaming revenue net gaming revenue ставки выигрыши бонусы комиссии revshare экономика"},{"title":"Метрики трафика: как считать конверсии, стоимость FTD и доход","url":"/Affiliate_Lab/guides/metrics/","section":"Аналитика","desc":"Формулы для конверсий, стоимости FTD и сравнения сопоставимых источников.","aliases":"метрики kpi ctr cr conversion rate epc clicks регистрации ftd cpa стоимость привлечения Cohort"},{"title":"GEO Offer: почему одна связка по-разному работает в разных странах","url":"/Affiliate_Lab/guides/geo/","section":"Основы","desc":"GEO определяет язык, платежи, правила рекламы и доступность продукта.","aliases":"geo гео страна локализация язык валюта платежи регулирование мобильный трафик affiliate igaming"},{"title":"FTD: что считается FTD","url":"/Affiliate_Lab/guides/ftd/","section":"Основы","desc":"Разница между регистрацией и FTD, плюс две конверсии для первого разбора.","aliases":"ftd FTD регистрация конверсия основы"},{"title":"Как устроен RevShare в гемблинге","url":"/Affiliate_Lab/guides/revshare/","section":"Экономика","desc":"От GGR и NGR до отрицательного баланса и длинной жизни игрока.","aliases":"revshare ggr ngr negative carry доход экономика"},{"title":"CPA или RevShare: как сравнивать модели выплат","url":"/Affiliate_Lab/guides/cpa-vs-revshare/","section":"Экономика","desc":"Какие цифры нужны, чтобы сравнение не сводилось к ставке в рекламном баннере.","aliases":"cpa revshare сравнение выплаты экономика"},{"title":"Статистика партнёрской программы: 5 показателей для первого разбора","url":"/Affiliate_Lab/guides/statistics/","section":"Аналитика","desc":"Пять исходных цифр, с которых достаточно начать разбор партнёрской статистики.","aliases":"статистика клики регистрации ftd Cohort доход аналитика"},{"title":"Органический и условно бесплатный трафик","url":"/Affiliate_Lab/guides/free-traffic/","section":"Трафик","desc":"Поисковый трафик, видео, сообщества и собственные инструменты: плюсы, минусы и цена времени.","aliases":"трафик seo youtube видео сообщества органика убт"},{"title":"Первый FTD: как провести тест и не запутаться в данных","url":"/Affiliate_Lab/guides/first-ftd/","section":"Практика","desc":"Простой порядок действий от выбора источника до разбора первой конверсии.","aliases":"первый ftd тест источник Offer subid практика"},{"title":"Как выбрать источник трафика: от бюджета и времени к первому тесту","url":"/Affiliate_Lab/guides/choose-traffic-source/","section":"Трафик","desc":"Выбор канала по бюджету, контенту, своей аудитории и скорости обратной связи.","aliases":"как выбрать источник трафика выбор канала бюджет время контент аудитория быстрый результат seo video social paid"},{"title":"Клики есть, регистраций нет: что проверить по порядку","url":"/Affiliate_Lab/guides/clicks-no-registrations/","section":"Аналитика","desc":"Пошаговая проверка участка между кликом и регистрацией.","aliases":"клики есть регистраций нет нет регистраций clicks no registrations лендинг гео воронка"},{"title":"Регистрации есть, FTD нет: где искать причину","url":"/Affiliate_Lab/guides/registrations-no-ftd/","section":"Аналитика","desc":"FTD, путь после регистрации, платежи, задержка и качество аудитории.","aliases":"регистрации есть депозитов нет нет ftd registration no deposit FTD"},{"title":"Статистика не сходится: как сверить клики и конверсии между системами","url":"/Affiliate_Lab/guides/statistics-mismatch/","section":"Аналитика","desc":"Период, часовой пояс, Click ID, SubID и postback.","aliases":"статистика не сходится расхождение Tracker кабинет click id subid postback mismatch"}];
+ const suggestionIndex=[{"title":"1win Partners: правила, выплаты и актуальные GEO","url":"/Affiliate_Lab/guides/1win-rules/","section":"Практика","desc":"RS и CPA, условия выплат, запрещённые методы, проверка трафика и актуальные GEO 1win.","aliases":"1win partners правила geo гео страны revshare rs cpa выплаты запрещенный трафик"},{"title":"YouTube: длинные видео — от канала до первого FTD","url":"/Affiliate_Lab/traffic/sources/youtube/","section":"Источники трафика","desc":"3–5 длинных видео одного формата: отдельная метка на ролик, замеры через 24 часа, 7 и 14 дней, сверка просмотров с регистрациями и FTD.","aliases":"youtube ютуб shorts видео ролики запуск план"},{"title":"VK Видео и Клипы: пошаговый запуск","url":"/Affiliate_Lab/traffic/sources/vk-video/","section":"Источники трафика","desc":"3–5 видео или 10–20 Клипов: отдельно считаются ролик, сообщество, внешний клик, регистрация и первый депозит.","aliases":"vk вк видео клипы сообщество запуск план"},{"title":"Telegram-канал: от первого читателя до FTD","url":"/Affiliate_Lab/traffic/sources/telegram/","section":"Источники трафика","desc":"8–12 стартовых постов, отдельные пригласительные ссылки, чтение следующих публикаций, клики и первые депозиты.","aliases":"telegram телеграм канал размещения посевы запуск план"},{"title":"Контентный сайт: пошаговый запуск SEO-источника","url":"/Affiliate_Lab/traffic/sources/content-site/","section":"Источники трафика","desc":"Один кластер из 3–5 страниц: запросы, показы, поисковые и партнёрские клики, регистрации и первые депозиты.","aliases":"контентный сайт seo поиск блог search console запуск план"},{"title":"Социальные сети: посты, карусели и обычная лента","url":"/Affiliate_Lab/traffic/sources/social/","section":"Источники трафика","desc":"10–20 публикаций одного формата: отдельные метки, клики на 1000 просмотров, регистрации и первые депозиты.","aliases":"соцсети social tiktok reels клипы короткие видео лента"},{"title":"Тематические сообщества и форумы: органический трафик без спама","url":"/Affiliate_Lab/traffic/sources/communities/","section":"Источники трафика","desc":"3–5 релевантных площадок: отдельные метки, клики, регистрации и первые депозиты.","aliases":"сообщества форумы группы чаты community forum"},{"title":"Поисковый трафик: от запроса до партнёрского клика","url":"/Affiliate_Lab/traffic/sources/search/","section":"Источники трафика","desc":"5–10 запросов, 3–5 страниц: показы, кликабельность, партнёрские клики, регистрации и первые депозиты.","aliases":"поиск seo google yandex запросы search"},{"title":"Стримы и прямые эфиры: пошаговый тест источника","url":"/Affiliate_Lab/traffic/sources/streams/","section":"Источники трафика","desc":"3–5 эфиров: отдельно считаются прямой эфир и запись, клики, регистрации и первые депозиты.","aliases":"стрим stream live эфир запись"},{"title":"Платный трафик: пошаговый тест без бесконтрольного расхода","url":"/Affiliate_Lab/traffic/sources/paid/","section":"Источники трафика","desc":"Одна гипотеза, фиксированный лимит и раздельный трекинг до первого расхода.","aliases":"платный трафик реклама paid ads cpc budget"},{"title":"TikTok, Reels, Spotlight и Likee: вертикальные видео","url":"/Affiliate_Lab/traffic/sources/short-video/","section":"Источники трафика","desc":"10–20 вертикальных роликов на одной площадке: отдельные метки, клики, регистрации и первые депозиты.","aliases":"tiktok тикток reels рилс spotlight likee лайки вертикальные видео"},{"title":"Rutube, OK Видео и другие видеохостинги: дополнительный источник","url":"/Affiliate_Lab/traffic/sources/alt-video/","section":"Источники трафика","desc":"3–5 сопоставимых роликов на дополнительную площадку: просмотры, клики и действия ниже по воронке.","aliases":"rutube рутуб dailymotion ok видео одноклассники видеохостинг"},{"title":"Дзен: статьи, посты и рекомендательная лента","url":"/Affiliate_Lab/traffic/sources/dzen/","section":"Источники трафика","desc":"8–12 материалов одного формата: дочитывания, внешние клики, регистрации и первые депозиты.","aliases":"дзен dzen статьи лента рекомендации контент"},{"title":"Reddit: как работать с тематическими сообществами без спама","url":"/Affiliate_Lab/traffic/sources/reddit/","section":"Источники трафика","desc":"5–10 полезных публикаций или ответов: отдельные метки по сообществам и веткам.","aliases":"reddit реддит сабреддит форум ветка обсуждение"},{"title":"X: короткие посты, треды и переходы через профиль","url":"/Affiliate_Lab/traffic/sources/x-twitter/","section":"Источники трафика","desc":"15–30 постов одной темы: показы, профиль, внешние клики, регистрации и первые депозиты.","aliases":"x twitter твиттер тред короткие посты"},{"title":"Email и веб-пуш: работа с собственной базой","url":"/Affiliate_Lab/traffic/sources/mailing/","section":"Источники трафика","desc":"3–5 рассылок одной темы по собственной базе: клики, регистрации и первые депозиты.","aliases":"email почта рассылка веб-пуш пуш подписчики база"},{"title":"Основы партнёрского маркетинга","url":"/Affiliate_Lab/basics/","section":"Раздел","desc":"оффер, FTD, GEO, воронка и базовая механика.","aliases":"основы база beginner basics affiliate beginner партнерка оффер ftd"},{"title":"Экономика партнёрских программ","url":"/Affiliate_Lab/economics/","section":"Раздел","desc":"RevShare, CPA, GGR, NGR и логика выплат.","aliases":"экономика деньги выплаты revshare cpa ggr ngr revenue share"},{"title":"Аналитика и трекинг","url":"/Affiliate_Lab/analytics/","section":"Раздел","desc":"Метки, статистика, трекер, когортный анализ и сравнение источников.","aliases":"аналитика statistics tracking трекинг dashboard кабинет метрики tracker"},{"title":"Источники трафика","url":"/Affiliate_Lab/traffic/","section":"Раздел","desc":"15 направлений: YouTube, VK, Telegram, короткие видео, Дзен, Reddit, X, поиск, сообщества, рассылки, реклама и собственные площадки.","aliases":"traffic трафик seo search youtube video telegram vk social ads stream источники"},{"title":"Практика вебмастера","url":"/Affiliate_Lab/practice/","section":"Раздел","desc":"Подготовка запуска, первый тест, менеджер и разбор результата.","aliases":"практика запуск тест checklist менеджер first ftd"},{"title":"Словарь","url":"/Affiliate_Lab/glossary/","section":"Справочник","desc":"Короткие определения терминов и английские эквиваленты.","aliases":"словарь glossary термины definitions термин"},{"title":"Инструменты","url":"/Affiliate_Lab/tools/","section":"Справочник","desc":"Калькуляторы для воронки, теста и RevShare.","aliases":"tools инструменты калькуляторы calculator расчеты расчёт"},{"title":"Сервисы","url":"/Affiliate_Lab/services/","section":"Справочник","desc":"Основной набор: Proxys.io, Multilogin, DarkStore, OnlineSim, RUVDS, Spy.House, AdsBridge и ProfitAds.","aliases":"сервисы proxy прокси proxys antidetect антидетект multilogin onlinesim darkstore ruvds spyhouse adsbridge profitads трекер аккаунты vds sms"},{"title":"Рабочий журнал","url":"/Affiliate_Lab/notes/","section":"Для работы","desc":"Запуски, метки, показатели и выводы по тестам.","aliases":"тесты записи журнал результаты запуск"},{"title":"Мессенджеры и сообщества: как приводить игроков из каналов и групп","url":"/Affiliate_Lab/guides/community-traffic/","section":"Трафик","desc":"Как выбрать подходящее сообщество, подать предложение и довести заинтересованного пользователя до регистрации и первого депозита.","aliases":"сообщества мессенджеры telegram телеграм канал чат community messenger доверие аудитория форум форумы forum discord дискорд vk группы размещения"},{"title":"Социальные сети: как приводить игроков из ленты","url":"/Affiliate_Lab/guides/social-traffic/","section":"Трафик","desc":"Как через контент в ленте довести заинтересованного пользователя до перехода, регистрации и первого депозита.","aliases":"соцсети social media vk instagram tiktok reels shorts clips клипы рилс лента органика реклама"},{"title":"Платный трафик: как задать тест до покупки кликов","url":"/Affiliate_Lab/guides/paid-traffic/","section":"Трафик","desc":"Лимит расходов, учёт, структура теста и критерий остановки до первого потраченного рубля.","aliases":"платный трафик paid ads cpc cpl реклама google meta tiktok бюджет"},{"title":"Стримы и прямые эфиры: как считать трафик от живой аудитории","url":"/Affiliate_Lab/guides/stream-traffic/","section":"Трафик","desc":"Онлайн, переходы, отдельные метки по эфирам и влияние доверия к ведущему.","aliases":"стрим stream streaming twitch youtube live эфир зрители онлайн"},{"title":"Сайты и контентные проекты: как строить источник на своей площадке","url":"/Affiliate_Lab/guides/content-sites/","section":"Трафик","desc":"Как собрать первую тему, связать материалы и измерять собственный сайт как долгосрочный актив.","aliases":"сайт website content seo блог контент проект own media"},{"title":"Как выбрать партнёрскую программу","url":"/Affiliate_Lab/guides/choose-program/","section":"Практика","desc":"Программа выбирается не по одной ставке: важны правила трафика, трекинг, выплаты, продукт и поддержка.","aliases":"выбор партнерской программы ставка условия трекинг выплаты менеджер качество"},{"title":"Партнёрский кабинет: как читать отчёт по кликам, регистрациям и FTD","url":"/Affiliate_Lab/guides/partner-dashboard/","section":"Аналитика","desc":"Как найти в кабинете период, клики, регистрации, FTD, статусы и разбивки.","aliases":"партнерский кабинет статистика клики регистрации FTD доход отчет"},{"title":"Когда нужен лендинг","url":"/Affiliate_Lab/guides/landing-page/","section":"Практика","desc":"Когда собственная страница помогает воронке, а когда только добавляет лишний шаг.","aliases":"лендинг лендинг прелендинг переход конверсия сайт"},{"title":"Нужен ли трекер новичку","url":"/Affiliate_Lab/guides/tracker-for-beginner/","section":"Аналитика","desc":"Когда отдельный трекер действительно нужен и в каких случаях на старте можно обойтись без него.","aliases":"трекер Постбэк серверный трекинг метки конверсия новичок"},{"title":"AdsBridge: как создать первую кампанию","url":"/Affiliate_Lab/guides/adsbridge-campaign/","section":"Аналитика","desc":"Пошаговая настройка кампании: домен, источник, SubID, оффер, лендинг, постбэк и тестовая ссылка.","aliases":"adsbridge адсбридж кампания tracker трекер subid click id постбэк offer оффер лендинг"},{"title":"Как работать с менеджером партнёрской программы","url":"/Affiliate_Lab/guides/affiliate-manager/","section":"Практика","desc":"Какие вопросы задавать до запуска и какую информацию давать, если статистика выглядит странно.","aliases":"менеджер партнерской программы вопросы ставка правила трафика спор статистика"},{"title":"Что значит качество трафика","url":"/Affiliate_Lab/guides/traffic-quality/","section":"Аналитика","desc":"Качество трафика видно по прохождению воронки и дальнейшей активности аудитории.","aliases":"качество трафика конверсия когорта отклонения повторные депозиты"},{"title":"Что проверить перед первым запуском","url":"/Affiliate_Lab/guides/launch-checklist/","section":"Практика","desc":"Короткая проверка ссылки, учёта кликов, мобильной версии и лимита теста до первого реального трафика.","aliases":"первый запуск чеклист ссылка мобильная версия метки тест бюджет"},{"title":"Поисковый трафик: как начать и что считать","url":"/Affiliate_Lab/guides/search-traffic/","section":"Трафик","desc":"Почему поиск не даёт быстрый результат, как выбрать тему, получить первые результаты и считать страницы отдельно.","aliases":"поисковый трафик запрос намерение страница органика поиск"},{"title":"Видео и короткие ролики: как измерять трафик, а не просмотры","url":"/Affiliate_Lab/guides/video-traffic/","section":"Трафик","desc":"Как отделить просмотры от переходов и сравнивать ролики по реальной воронке.","aliases":"видео трафик просмотры переходы регистрации FTD канал"},{"title":"Как устроен партнёрский маркетинг","url":"/Affiliate_Lab/guides/affiliate-marketing/","section":"Основы","desc":"Кто участвует в партнёрской схеме, где появляется трекинг и в какой момент возникает выплата.","aliases":"партнёрский маркетинг партнерский маркетинг рекламодатель вебмастер publisher advertiser партнерская программа комиссия"},{"title":"Что такое оффер и что проверять до запуска","url":"/Affiliate_Lab/guides/offer/","section":"Основы","desc":"До запуска проверьте оффер: целевое действие, GEO, ограничения и правила учёта конверсий.","aliases":"оффер offer geo ставка cpa revshare ограничения источники трафика условия атрибуции"},{"title":"Метки, Click ID и Постбэк: как не путать трекинг","url":"/Affiliate_Lab/guides/tracking/","section":"Аналитика","desc":"Метки источника, Click ID и Постбэк решают разные задачи. Здесь они собраны в одну схему.","aliases":"tracking трекинг subid click id постбэк s2s utm метки атрибуция источник кампания"},{"title":"GGR и NGR: откуда берётся расчётная база","url":"/Affiliate_Lab/guides/ggr-ngr/","section":"Экономика","desc":"GGR и NGR часто стоят рядом с RevShare, но означают разные уровни расчёта дохода.","aliases":"ggr ngr gross gaming revenue net gaming revenue ставки выигрыши бонусы комиссии revshare экономика"},{"title":"Метрики трафика: как считать конверсии, стоимость FTD и доход","url":"/Affiliate_Lab/guides/metrics/","section":"Аналитика","desc":"Формулы для конверсий, стоимости FTD и сравнения сопоставимых источников.","aliases":"метрики kpi ctr cr conversion rate epc clicks регистрации ftd cpa стоимость привлечения когорта"},{"title":"GEO: почему одна связка по-разному работает в разных странах","url":"/Affiliate_Lab/guides/geo/","section":"Основы","desc":"GEO определяет язык, платежи, правила рекламы и доступность продукта.","aliases":"geo гео страна локализация язык валюта платежи регулирование мобильный трафик affiliate igaming"},{"title":"FTD: что считается FTD","url":"/Affiliate_Lab/guides/ftd/","section":"Основы","desc":"Разница между регистрацией и FTD, плюс две конверсии для первого разбора.","aliases":"ftd FTD регистрация конверсия основы"},{"title":"Как устроен RevShare в гемблинге","url":"/Affiliate_Lab/guides/revshare/","section":"Экономика","desc":"От GGR и NGR до отрицательного баланса и длинной жизни игрока.","aliases":"revshare ggr ngr negative carry доход экономика"},{"title":"CPA или RevShare: как сравнивать модели выплат","url":"/Affiliate_Lab/guides/cpa-vs-revshare/","section":"Экономика","desc":"Какие цифры нужны, чтобы сравнение не сводилось к ставке в рекламном баннере.","aliases":"cpa revshare сравнение выплаты экономика"},{"title":"Статистика партнёрской программы: 5 показателей для первого разбора","url":"/Affiliate_Lab/guides/statistics/","section":"Аналитика","desc":"Пять исходных цифр, с которых достаточно начать разбор партнёрской статистики.","aliases":"статистика клики регистрации ftd доход по когорте аналитика"},{"title":"Органический и условно бесплатный трафик","url":"/Affiliate_Lab/guides/free-traffic/","section":"Трафик","desc":"Поисковый трафик, видео, сообщества и собственные инструменты: плюсы, минусы и цена времени.","aliases":"трафик seo youtube видео сообщества органика убт"},{"title":"Первый FTD: как провести тест и не запутаться в данных","url":"/Affiliate_Lab/guides/first-ftd/","section":"Практика","desc":"Простой порядок действий от выбора источника до разбора первой конверсии.","aliases":"первый ftd тест источник оффер subid практика"},{"title":"Как выбрать источник трафика: от бюджета и времени к первому тесту","url":"/Affiliate_Lab/guides/choose-traffic-source/","section":"Трафик","desc":"Выбор канала по бюджету, контенту, своей аудитории и скорости обратной связи.","aliases":"как выбрать источник трафика выбор канала бюджет время контент аудитория быстрый результат seo video social paid"},{"title":"Клики есть, регистраций нет: что проверить по порядку","url":"/Affiliate_Lab/guides/clicks-no-registrations/","section":"Аналитика","desc":"Пошаговая проверка участка между кликом и регистрацией.","aliases":"клики есть регистраций нет нет регистраций clicks no registrations лендинг гео воронка"},{"title":"Регистрации есть, FTD нет: где искать причину","url":"/Affiliate_Lab/guides/registrations-no-ftd/","section":"Аналитика","desc":"FTD, путь после регистрации, платежи, задержка и качество аудитории.","aliases":"регистрации есть депозитов нет нет ftd registration no deposit FTD"},{"title":"Статистика не сходится: как сверить клики и конверсии между системами","url":"/Affiliate_Lab/guides/statistics-mismatch/","section":"Аналитика","desc":"Период, часовой пояс, Click ID, SubID и постбэк.","aliases":"статистика не сходится расхождение трекер кабинет click id subid постбэк mismatch"}];
  suggestionIndex.unshift(...glossarySuggestions);
  function scoreSuggestion(query,item){
    const q=expandQuery(query);
@@ -333,7 +333,7 @@
    presetSelect.addEventListener('change',()=>applyPreset(presetSelect.value));
    applyPreset(presetSelect.value||'search');
  }else{calc();}
-}catch(e){console.error('iGaming Traffic Academy module 1 error',e);}})();
+}catch(e){console.error('TrafficLab module 1 error',e);}})();
 ;
 
 (function(){try{
@@ -353,23 +353,23 @@
  else if(path.indexOf('/Affiliate_Lab/about/')===0) key='about';
  else if(path.indexOf('/Affiliate_Lab/guides/')===0) key='library';
  document.querySelectorAll('[data-nav]').forEach(function(a){const on=a.getAttribute('data-nav')===key;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-}catch(e){console.error('iGaming Traffic Academy navigation error',e);}})();
+}catch(e){console.error('TrafficLab navigation error',e);}})();
 
 /* v18 - interactive terminology */
 (function(){try{
   const dictionary = [
     {
       key:'affiliate-marketing',
-      variants:['Affiliate Marketing','Affiliate Marketing'],
+      variants:['партнёрский маркетинг','Affiliate Marketing','Affiliate marketing'],
       en:'Affiliate marketing',
-      title:'Affiliate Marketing',
+      title:'Партнёрский маркетинг',
       text:'Модель продвижения, при которой партнёр приводит пользователей рекламодателю и получает вознаграждение за оговорённый результат.'
     },
     {
       key:'offer',
-      variants:['Offer','Offer','Offer','Offer','Offer','Offer'],
+      variants:['оффер','оффера','офферу','оффером','Offer'],
       en:'Offer',
-      title:'Offer',
+      title:'Оффер',
       text:'Конкретное предложение партнёрской программы: продукт, GEO, модель оплаты, допустимые источники трафика и условия зачёта конверсии.'
     },
     {
@@ -437,16 +437,16 @@
     },
     {
       key:'postback',
-      variants:['Postback','Postbackа','Postbackом','postback','Postback'],
+      variants:['постбэк','постбэка','постбэком','Postback'],
       en:'Postback / Server-to-server callback',
-      title:'Postback',
+      title:'Постбэк',
       text:'Серверное уведомление о конверсии. Оно позволяет передавать событие между партнёрской программой и системой отслеживания без браузерного пикселя.'
     },
     {
       key:'landing',
-      variants:['Landing page','Landing page','Landing page','Landing page','посадочной странице'],
+      variants:['лендинг','лендинга','лендингу','лендингом','Landing page','посадочной странице'],
       en:'Landing page',
-      title:'Landing page',
+      title:'Лендинг',
       text:'Страница, на которую пользователь попадает после рекламного перехода и где получает основную информацию перед целевым действием.'
     },
     {
@@ -458,16 +458,16 @@
     },
     {
       key:'attribution',
-      variants:['Attribution','Attribution','Attribution','Attribution','Attribution'],
+      variants:['атрибуция','атрибуции','атрибуцию','атрибуцией','Attribution'],
       en:'Attribution',
-      title:'Attribution',
+      title:'Атрибуция',
       text:'Правило, по которому система определяет, какому источнику или партнёру засчитать конверсию.'
     },
     {
       key:'cohort',
-      variants:['Cohort','Cohort','Cohort','когортой','когорте','когорт'],
+      variants:['когорта','когорты','когорту','когортой','когорте','когорт','Cohort'],
       en:'Cohort',
-      title:'Cohort',
+      title:'Когорта',
       text:'Группа пользователей, объединённая общим признаком, например датой привлечения. Когортный анализ помогает смотреть результат на дистанции.'
     },
     {
@@ -584,15 +584,15 @@
     },
     {
       key:'attribution-window',
-      variants:['окно Attribution','окна Attribution','окном Attribution'],
+      variants:['окно атрибуции','окна атрибуции','окном атрибуции','Attribution window'],
       en:'Attribution window',
       title:'Окно атрибуции',
       text:'Период, в течение которого конверсия после клика может быть засчитана источнику или партнёру.'
     },
     {
       key:'tracker',
-      variants:['Tracker','Tracker','Tracker','Tracker','Tracker'],
-      en:'Tracking platform / Tracker',
+      variants:['трекер','трекера','трекеру','трекером','Tracker'],
+      en:'Tracker / Tracking platform',
       title:'Трекер',
       text:'Система для учёта переходов, источников, меток и конверсий, а также для сопоставления данных между рекламой и партнёрской программой.'
     },
@@ -601,7 +601,7 @@
       variants:['GEO','GEO','GEO','GEO'],
       en:'GEO',
       title:'GEO',
-      text:'Страна или рынок, на который направлен трафик. Условия Offer, доступность продукта и правила продвижения могут заметно различаться по GEO.'
+      text:'Страна или рынок, на который направлен трафик. Условия оффера, доступность продукта и правила продвижения могут заметно различаться по GEO.'
     },
     {
       key:'url-term',
@@ -678,7 +678,7 @@
       variants:['куки'],
       en:'Cookie',
       title:'Куки',
-      text:'Данные в браузере, которые могут использоваться для сохранения информации о переходе и Attribution.'
+      text:'Данные в браузере, которые могут использоваться для сохранения информации о переходе и атрибуции.'
     },
     {
       key:'pixel-term',
@@ -720,7 +720,7 @@
       variants:['мотивированный трафик','мотивированного трафика'],
       en:'Incentivized traffic',
       title:'Мотивированный трафик',
-      text:'Пользователи получают отдельное вознаграждение за регистрацию или другое действие. Такой источник часто ограничен правилами Offer.'
+      text:'Пользователи получают отдельное вознаграждение за регистрацию или другое действие. Такой источник часто ограничен правилами оффер.'
     },
     {
       key:'negative-carry-term',
@@ -888,7 +888,7 @@
   window.addEventListener('scroll',()=>{if(active) position(active)},{passive:true});
   document.addEventListener('al:hintschange',syncHintState);
   syncHintState();
-}catch(e){console.error('iGaming Traffic Academy module 3 error',e);}})();
+}catch(e){console.error('TrafficLab module 3 error',e);}})();
 
 
 /* v38: card navigation is semantic HTML and does not require JavaScript. */
@@ -955,7 +955,7 @@
  opts.addEventListener('click',e=>{const b=e.target.closest('[data-answer]');if(!b)return;if(step===0)state.budget=b.dataset.answer;if(step===1)state.content=b.dataset.answer;if(step===2)state.audience=b.dataset.answer;if(step===3)state.goal=b.dataset.answer;step++;if(step>=questions.length)finish();else render()});
  if(startButton){startButton.addEventListener('click',()=>{state={};step=0;render();if(window.alTrack)window.alTrack('source_wizard_start',{})});}
  else render();
-}catch(e){console.error('iGaming Traffic Academy module 4 error',e);}})();
+}catch(e){console.error('TrafficLab module 4 error',e);}})();
 
 /* v32 - remembered source helper */
 (function(){try{
@@ -970,7 +970,7 @@
  const problem=document.getElementById('problemSource');if(problem&&[...problem.options].some(o=>o.value===data.key))problem.value=data.key;
  const compareMemory=document.getElementById('sourceCompareMemory');if(compareMemory){compareMemory.hidden=false;compareMemory.innerHTML=`Источник из мастера: <b>${names[data.key]}</b>. Он автоматически поставлен в колонку A.`}
  const problemSaved=document.getElementById('problemSavedSource');if(problemSaved)problemSaved.textContent=`Из мастера: ${names[data.key]}`;
-}catch(e){console.error('iGaming Traffic Academy module 5 error',e);}})();
+}catch(e){console.error('TrafficLab module 5 error',e);}})();
 
 /* v33 - bookmarks, reading history and stable continuation */
 (function(){try{
@@ -1059,7 +1059,7 @@
      }
    }
  }
-}catch(e){console.error('iGaming Traffic Academy module 6 error',e);}})();
+}catch(e){console.error('TrafficLab module 6 error',e);}})();
 
 /* v50 - structured test notes stored on this device */
 (function(){try{
@@ -1081,7 +1081,7 @@
  const empty=document.querySelector('[data-note-empty]');
  const from=new URLSearchParams(location.search).get('from')||'';
  const known=[...get(RECENT,[]),...get(BOOK,[])].find(x=>x.url===from);
- const context=from.startsWith('/Affiliate_Lab/')?{url:from,title:known?.title||'Материал iGaming Traffic Academy'}:null;
+ const context=from.startsWith('/Affiliate_Lab/')?{url:from,title:known?.title||'Материал TrafficLab'}:null;
  if(context&&contextBox){contextBox.textContent='К материалу: ';const link=document.createElement('a');link.href=context.url;link.textContent=context.title;contextBox.appendChild(link)}
  else if(contextBox)contextBox.textContent='Одна запись описывает один тест и одно проверяемое изменение.';
  const TEST_TEMPLATE='Источник трафика:\nПлощадка или формат:\nСтрана / GEO:\nПартнёрская программа или предложение:\nМетка ссылки:\nПериод или лимит теста:\nЧто проверяю:\n\nПоказы / просмотры:\nКлики:\nРегистрации:\nПервые депозиты (FTD):\nРасход:\n\nВывод:\nЧто изменяю в следующем тесте:';
@@ -1114,7 +1114,7 @@
  document.addEventListener('click',e=>{const btn=e.target.closest('[data-remove-note]');if(!btn)return;set(KEY,get(KEY,[]).filter(x=>x.id!==btn.dataset.removeNote));render()});
  document.querySelector('[data-clear-notes]')?.addEventListener('click',()=>{set(KEY,[]);render()});
  render();
-}catch(e){console.error('iGaming Traffic Academy notes error',e);}})();
+}catch(e){console.error('TrafficLab notes error',e);}})();
 
 /* v32 - three core tools + remembered source */
 (function(){try{
@@ -1139,7 +1139,7 @@
  function calcCmp(){const out=document.getElementById('cmpResult');if(!out)return;const a=metrics('A'),b=metrics('B'),nameA=document.getElementById('cmpSourceA').selectedOptions[0].textContent,nameB=document.getElementById('cmpSourceB').selectedOptions[0].textContent;let summary='';if(a.c<50||b.c<50)summary='Хотя бы в одном источнике пока слишком мало кликов для уверенного сравнения.';else if(Math.abs(a.per100-b.per100)<.3)summary='По первым депозитам на 100 кликов источники сейчас близки. Смотри дальше на стоимость и качество игроков.';else summary=(a.per100>b.per100?nameA:nameB)+' сейчас даёт больше FTD на 100 кликов. Это вывод только по введённой выборке.';out.innerHTML=`<h3>Сравнение по введённым данным</h3><p>${summary}</p><div class="compare-table"><div>Показатель</div><div>${nameA}</div><div>${nameB}</div><div>Клик, регистрация</div><div>${fmt(a.cr1)}%</div><div>${fmt(b.cr1)}%</div><div>Регистрация, депозит</div><div>${fmt(a.cr2)}%</div><div>${fmt(b.cr2)}%</div><div>Депозитов на 100 кликов</div><div>${fmt(a.per100)}</div><div>${fmt(b.per100)}</div><div>Расход на FTD</div><div>${a.cost?fmt(a.cost)+' ₽':'-'}</div><div>${b.cost?fmt(b.cost)+' ₽':'-'}</div></div>`}
  function initCmp(){const a=document.getElementById('cmpSourceA'),b=document.getElementById('cmpSourceB');if(!a||!b)return;const mem=selected();if(mem&&[...a.options].some(o=>o.value===mem))a.value=mem;if(a.value===b.value){const alt=[...b.options].find(o=>o.value!==a.value);if(alt)b.value=alt.value}['cmpSourceA','cmpClicksA','cmpRegsA','cmpFtdA','cmpSpendA','cmpSourceB','cmpClicksB','cmpRegsB','cmpFtdB','cmpSpendB'].forEach(id=>document.getElementById(id)?.addEventListener('input',calcCmp));calcCmp()}
  initPlan();initDiag();initCmp();
-}catch(e){console.error('iGaming Traffic Academy module 7 error',e);}})();
+}catch(e){console.error('TrafficLab module 7 error',e);}})();
 
 
 /* v32 - diagnostic wizard */
@@ -1157,7 +1157,7 @@
  function showFollow(p){problem=p;const c=configs[p];follow.hidden=false;result.hidden=true;follow.innerHTML=`<span>Уточнение</span><h2>${c.q}</h2><div class="problem-options">${c.opts.map(([k,t])=>`<button type="button" data-follow="${k}">${t}</button>`).join('')}</div><button type="button" class="problem-back"> Назад</button>`;stepOne.hidden=true;follow.querySelector('.problem-back').onclick=()=>{follow.hidden=true;stepOne.hidden=false}}
  function article(url,label){return `<a href="${url}">${label}</a>`}
  function renderResult(answer){const s=source.value,name=sourceNames[s]||'этого источника';let title='',checks=[],links=[];
-  if(problem==='clicks'){title='Сначала проверь участок между кликом и регистрацией';checks=answer==='own'?['Совпадает ли обещание в источнике с тем, что человек видит на странице.','Понятно ли с первого экрана, куда пользователь попал и что делать дальше.','Не ломается ли страница или форма на мобильном устройстве.']:['Совпадает ли аудитория источника с продуктом и страной.','Не обещает ли креатив одно, а продукт показывает другое.','Проверь переход самостоятельно с телефона и компьютера.'];links=[article('/Affiliate_Lab/guides/clicks-no-registrations/','Полный разбор: клики без регистраций'),article('/Affiliate_Lab/guides/landing-page/','Когда нужна Landing page')];}
+  if(problem==='clicks'){title='Сначала проверь участок между кликом и регистрацией';checks=answer==='own'?['Совпадает ли обещание в источнике с тем, что человек видит на странице.','Понятно ли с первого экрана, куда пользователь попал и что делать дальше.','Не ломается ли страница или форма на мобильном устройстве.']:['Совпадает ли аудитория источника с продуктом и страной.','Не обещает ли креатив одно, а продукт показывает другое.','Проверь переход самостоятельно с телефона и компьютера.'];links=[article('/Affiliate_Lab/guides/clicks-no-registrations/','Полный разбор: клики без регистраций'),article('/Affiliate_Lab/guides/landing-page/','Когда нужен лендинг')];}
   if(problem==='regs'){title='Проверь путь после регистрации и качество аудитории';checks=answer==='unknown'?['Пройди регистрацию и путь до пополнения сам, на нужном устройстве и в нужной стране.','Проверь доступные способы оплаты и очевидные технические препятствия.','Только после этого делай вывод о качестве трафика.']:['Сравни регистрацию, FTD отдельно по '+name+'.','Проверь, не слишком ли широкая или случайная аудитория.','Уточни у менеджера условия квалификации FTD.'];links=[article('/Affiliate_Lab/guides/registrations-no-ftd/','Полный разбор: регистрации без депозитов'),article('/Affiliate_Lab/guides/ftd/','Что считается FTD')];}
   if(problem==='income'){title=answer==='rev'?'Не оценивай RevShare только по числу депозитов':'Проверь правила зачёта и выплаты';checks=answer==='rev'?['Уточни, от какой базы считается процент и какие вычеты применяются.','Смотри одну и ту же группу игроков на одинаковом временном горизонте.','Проверь, не искажает ли результат один крупный игрок.']:['Проверь, какие действия считаются квалифицированными.','Уточни холд, отклонения и условия выплаты.','Сравни фактически подтверждённые действия, а не только регистрации.'];links=[article('/Affiliate_Lab/guides/revshare/','Как устроен процент от дохода'),article('/Affiliate_Lab/guides/ggr-ngr/','Откуда берётся расчётная база')];}
   if(problem==='tracking'){title='Начни не с конверсии, а с маршрута данных';checks=answer==='single'?['Найди идентификатор конкретного клика или метку источника.','Сверь, прошла ли эта метка до партнёрской программы.','Проверь серверное уведомление о конверсии, если оно используется.']:['Сверь период и часовой пояс в двух системах.','Проверь, одинаково ли считаются уникальные и повторные события.','Раздели источники отдельными метками, чтобы не смешивать данные.'];links=[article('/Affiliate_Lab/guides/statistics-mismatch/','Полный разбор расхождений'),article('/Affiliate_Lab/guides/tracking/','Как устроен трекинг')];}
@@ -1165,7 +1165,7 @@
   follow.hidden=true;result.hidden=false;result.innerHTML=`<span>С чего начать</span><h2>${title}</h2><ol>${checks.map(x=>`<li>${x}</li>`).join('')}</ol><div class="problem-result-links">${links.join('')}</div><button type="button" class="problem-restart">Разобрать другую проблему</button>`;result.querySelector('.problem-restart').onclick=()=>{problem=null;result.hidden=true;stepOne.hidden=false};
  }
  stepOne.addEventListener('click',e=>{const b=e.target.closest('[data-problem]');if(b)showFollow(b.dataset.problem)});follow.addEventListener('click',e=>{const b=e.target.closest('[data-follow]');if(b)renderResult(b.dataset.follow)});
-}catch(e){console.error('iGaming Traffic Academy module 8 error',e);}})();
+}catch(e){console.error('TrafficLab module 8 error',e);}})();
 
 /* v32 - qualitative source comparison */
 (function(){try{
@@ -1181,7 +1181,7 @@
   dzen:{name:'Дзен',url:'/Affiliate_Lab/traffic/sources/dzen/',start:'8–12 статей, постов или видео одного формата и одной темы.',audience:'Пользователи рекомендательной ленты и подписчики канала.',feedback:'Первые показы могут появиться быстро, но сравнивать материалы нужно через одинаковое время после публикации.',after:'Отдельные публикации могут продолжать получать рекомендации и переходы.',measure:'Показы, дочитывания, внешние клики, регистрации, FTD.',trap:'Не принимать дочитывания за коммерческий результат.'},
   reddit:{name:'Reddit и тематические ветки',url:'/Affiliate_Lab/traffic/sources/reddit/',start:'5–10 полезных публикаций или ответов в сообществах, где тема и ссылки разрешены.',audience:'Люди уже обсуждают конкретную тему внутри сообщества.',feedback:'Клики могут появиться сразу после публикации, но многое зависит от конкретной ветки.',after:'Старые обсуждения иногда продолжают давать переходы.',measure:'Ветка, публикация, внешний клик, регистрация, FTD.',trap:'Не путать активное обсуждение с коммерческим трафиком.'},
   x:{name:'X и короткие посты',url:'/Affiliate_Lab/traffic/sources/x-twitter/',start:'15–30 коротких постов или тредов одной темы.',audience:'Лента, подписчики и пользователи, которые видят репосты и обсуждения.',feedback:'Показы и переходы в профиль видны быстро, но внешний клик нужно считать отдельно.',after:'Посты обычно быстро теряют охват, отдельные треды могут жить дольше.',measure:'Показы, профиль, внешний клик, регистрация, FTD.',trap:'Не считать переход в профиль равным партнёрскому клику.'},
-  mailing:{name:'Email и web push',url:'/Affiliate_Lab/traffic/sources/mailing/',start:'Собственная база подписчиков и 3–5 сопоставимых выпусков.',audience:'Люди, которые уже согласились получать сообщения от проекта.',feedback:'Клики появляются после отправки, поэтому серии удобно сравнивать по одинаковому окну.',after:'Поток прекращается после остановки рассылок, но база остаётся собственным активом.',measure:'Доставка, клики, регистрации, FTD.',trap:'Не использовать покупные базы и не оценивать рассылку только по открытиям.'},
+  mailing:{name:'Email и веб-пуш',url:'/Affiliate_Lab/traffic/sources/mailing/',start:'Собственная база подписчиков и 3–5 сопоставимых выпусков.',audience:'Люди, которые уже согласились получать сообщения от проекта.',feedback:'Клики появляются после отправки, поэтому серии удобно сравнивать по одинаковому окну.',after:'Поток прекращается после остановки рассылок, но база остаётся собственным активом.',measure:'Доставка, клики, регистрации, FTD.',trap:'Не использовать покупные базы и не оценивать рассылку только по открытиям.'},
   ads:{name:'Платная реклама',url:'/Affiliate_Lab/traffic/sources/paid/',start:'Бюджет, разрешённая площадка, креатив и заранее заданный лимит теста.',audience:'Сегмент задаётся настройками рекламы и самим креативом.',feedback:'После запуска можно быстрее накапливать измеримые клики, если реклама допущена и получает показы.',after:'Когда закупка останавливается, поток оплачиваемого трафика тоже прекращается.',measure:'Расход, показы, клики, регистрации, FTD.',trap:'Дешёвый клик сам по себе ничего не говорит о качестве трафика.'},
   stream:{name:'Стримы и прямые эфиры',url:'/Affiliate_Lab/traffic/sources/streams/',start:'Ведущий, эфирный формат и аудитория, которая готова смотреть вживую.',audience:'Зрители вовлекаются через ведущего и контекст прямого эфира.',feedback:'Отклик можно видеть во время или после эфира, но отдельный эфир сильно зависит от аудитории дня.',after:'Основной эффект привязан к эфиру; запись может жить дольше, если площадка её рекомендует.',measure:'Зрители эфира, переходы, регистрации, FTD.',trap:'Не отделять качество источника от доверия к самому ведущему.'},
   site:{name:'Свой сайт и контентный проект',url:'/Affiliate_Lab/guides/content-sites/',start:'Сайт, материалы, аналитика и время на накопление страниц и аудитории.',audience:'Может приходить из поиска, прямых заходов, ссылок и других каналов - их нужно разделять.',feedback:'Первые посещения возможны быстро из внешних источников, но органическое накопление обычно требует времени.',after:'Материалы остаются под твоим контролем и могут работать после публикации.',measure:'Источник посещения, страница, партнёрский переход, результат.',trap:'Не называть сайт отдельным источником, если внутри смешаны поиск, соцсети и прямые переходы.'}
@@ -1189,7 +1189,7 @@
  const rows=[['Что нужно до старта','start'],['Откуда приходит аудитория','audience'],['Когда появляется обратная связь','feedback'],['Что остаётся после остановки','after'],['Что измерять','measure'],['Главная ошибка','trap']];
  function render(){if(a.value===b.value){const alt=[...b.options].find(o=>o.value!==a.value);if(alt)b.value=alt.value}const A=data[a.value],B=data[b.value];table.innerHTML=`<div class="source-compare-row source-compare-head"><div>Параметр</div><div>${A.name}</div><div>${B.name}</div></div>`+rows.map(([label,key])=>`<div class="source-compare-row"><div>${label}</div><div>${A[key]}</div><div>${B[key]}</div></div>`).join('');linkA.href=A.url;linkA.textContent='Открыть: '+A.name+'';linkB.href=B.url;linkB.textContent='Открыть: '+B.name+''}
  a.addEventListener('change',render);b.addEventListener('change',render);render();
-}catch(e){console.error('iGaming Traffic Academy module 9 error',e);}})();
+}catch(e){console.error('TrafficLab module 9 error',e);}})();
 
 
 /* v34 - stable audience mode */
@@ -1264,13 +1264,13 @@
  document.addEventListener('al:modechange',e=>renderMode(e.detail?.mode||current()));
  renderMode(current());
  window.ALAudienceMode={get:current,set:(m)=>{if(window.ITASetAudienceMode)window.ITASetAudienceMode(m,true);else{try{localStorage.setItem(KEY,m==='pro'?'pro':'beginner')}catch(e){}renderMode(current())}}};
-}catch(e){console.error('iGaming Traffic Academy module 10 error',e);}})();
+}catch(e){console.error('TrafficLab module 10 error',e);}})();
 
 /* v34 - reading marks in the catalog */
 (function(){try{
  const STATE='al-reading-state-v1';let states={};try{states=JSON.parse(localStorage.getItem(STATE)||'{}')}catch(e){}
  document.querySelectorAll('.library-row[data-card-link]').forEach(row=>{const url=row.dataset.cardLink,st=states[url];if(!st||!st.visited)return;const meta=row.querySelector('.library-meta');if(!meta)return;const old=meta.querySelector('.reading-state-badge');if(old)old.remove();const progress=st.progress||0,b=document.createElement('span');b.className='reading-state-badge '+(progress>=.78?'done':'started');b.textContent=progress>=.78?'прочитано':'начато';meta.prepend(b)});
-}catch(e){console.error('iGaming Traffic Academy module 11 error',e);}})();
+}catch(e){console.error('TrafficLab module 11 error',e);}})();
 
 /* v34 - problem-oriented search shortcut */
 (function(){try{
@@ -1284,12 +1284,12 @@
   return null}
  function render(){const hit=detect(input.value);box.hidden=!hit;if(!hit)return;box.innerHTML=`<span>Нашёл разбор по этому запросу</span><b>${hit[1]}</b><p>Можно сразу открыть пошаговую диагностику вместо просмотра общего списка статей.</p><a href="/Affiliate_Lab/diagnostics/?problem=${hit[0]}">${hit[2]}</a>`}
  input.addEventListener('input',render);render();
-}catch(e){console.error('iGaming Traffic Academy module 12 error',e);}})();
+}catch(e){console.error('TrafficLab module 12 error',e);}})();
 
 /* v34 - diagnostics accepts a problem from search */
 (function(){try{
  const root=document.getElementById('problemWizard');if(!root)return;const p=new URLSearchParams(location.search).get('problem');if(!p)return;const b=root.querySelector(`[data-problem="${p}"]`);if(b)setTimeout(()=>b.click(),0);
-}catch(e){console.error('iGaming Traffic Academy module 13 error',e);}})();
+}catch(e){console.error('TrafficLab module 13 error',e);}})();
 
 /* v34 - My Path dashboard */
 (function(){try{
@@ -1300,7 +1300,7 @@
  const sbox=document.getElementById('pathSourceState');if(sbox){if(source&&source.key){sbox.innerHTML=`<b class="path-source-name">${sourceNames[source.key]||source.name||source.key}</b><p>Этот источник выбран для расчётов и заметок.</p><div class="path-source-actions"><a href="/Affiliate_Lab/tools/?source=${source.key}">Открыть инструменты</a><a href="/Affiliate_Lab/traffic/">Выбрать другой</a></div>`}else{sbox.innerHTML='<p>Источник пока не выбран. Библиотека работает и без этого.</p><div class="path-source-actions"><a href="/Affiliate_Lab/traffic/">Выбрать источник</a><a href="/Affiliate_Lab/traffic/compare/">Сравнить варианты</a></div>'}}
  const cbox=document.getElementById('pathContinueState');if(cbox){const last=recent[0];if(last){const st=states[last.url]||{},pr=st.progress||0,pct=Math.max(0,Math.min(100,Math.round(pr*100)));const href=pr>.05&&pr<.82?last.url+'?continue=1':last.url;cbox.innerHTML=`<h2>${last.title}</h2><p>${pr>=.78?'Материал почти дочитан. Можно вернуться к нему или продолжить по рекомендациям в конце.':pr>.05?'Вернуться к месту, где остановились.':'Недавно открытый материал.'}</p><div class="path-progress"><i style="width:${pct}%"></i></div><small>Прогресс: около ${pct}%</small><div class="path-continue-actions"><a href="${href}">${pr>.05&&pr<.82?'Продолжить чтение':'Открыть материал'}</a><a href="/Affiliate_Lab/notes/">История чтения</a></div>`}else{cbox.innerHTML='<p>История чтения пока пустая. Начни с любого раздела - здесь появится удобное продолжение.</p><div class="path-continue-actions"><a href="/Affiliate_Lab/guides/">Открыть материалы</a></div>'}}
  const bbox=document.getElementById('pathSavedState');if(bbox){bbox.innerHTML=`<b class="path-source-name">${book.length}</b><p>${book.length===1?'материал сохранён в закладках':'материалов сохранено в закладках'}.</p><div class="path-source-actions"><a href="/Affiliate_Lab/notes/">Открыть закладки</a></div>`}
-}catch(e){console.error('iGaming Traffic Academy module 14 error',e);}})();
+}catch(e){console.error('TrafficLab module 14 error',e);}})();
 
 
 /* v35 - audience mode works across the whole site without changing page structure */
@@ -1386,7 +1386,7 @@
  document.addEventListener('al:modechange',render);
  document.getElementById('librarySearch')?.addEventListener('input',()=>{if(!document.getElementById('librarySearch').value.trim())setTimeout(render,0)});
  render();
-}catch(e){console.error('iGaming Traffic Academy module 15 error',e);}})();
+}catch(e){console.error('TrafficLab module 15 error',e);}})();
 
 
 /* v40 - provider-agnostic behavioral events for launch analytics */
@@ -1421,7 +1421,7 @@
  if(article&&end&&'IntersectionObserver' in window){
    let sent=false;const io=new IntersectionObserver(function(entries){if(!sent&&entries.some(x=>x.isIntersecting)){sent=true;track('article_reached_end',{title:(document.querySelector('h1')?.textContent||'').trim().slice(0,100)});io.disconnect();}},{threshold:.15});io.observe(end);
  }
-}catch(e){console.error('iGaming Traffic Academy analytics error',e);}})();
+}catch(e){console.error('TrafficLab analytics error',e);}})();
 
 
 /* v41 - first-visit orientation measurement. No external analytics provider is attached here. */
@@ -1446,7 +1446,7 @@
    sessionStorage.setItem(KEY,'1');
    if(window.alTrack)window.alTrack('first_meaningful_action',{kind:kind,elapsed_ms:Math.round(performance.now()-started)});
  },{capture:true});
-}catch(e){console.error('iGaming Traffic Academy first-action analytics error',e);}})();
+}catch(e){console.error('TrafficLab first-action analytics error',e);}})();
 
 /* v86 — enlarge article images in an in-page viewer */
 (function(){try{
@@ -1583,7 +1583,7 @@
    else if(e.key==='-')setScale(scale-.5);
    else if(e.key==='0')reset();
  });
-}catch(e){console.error('iGaming Traffic Academy image viewer error',e);}})();
+}catch(e){console.error('TrafficLab image viewer error',e);}})();
 
 ;(()=>{const academyV90Progress=()=>{const article=document.querySelector('.source-playbook-article');if(!article)return;const bar=document.querySelector('.rail-progress span');const toc=[...document.querySelectorAll('.playbook-aside a[href^="#"]')];const tabs=[...document.querySelectorAll('.source-section-tabs a[href^="#"]')];const links=[...toc,...tabs];const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);const update=()=>{if(bar){const start=article.getBoundingClientRect().top+scrollY;const end=Math.max(start+1,start+article.offsetHeight-innerHeight*.72);const pct=Math.max(0,Math.min(1,(scrollY-start+80)/(end-start)));bar.style.width=(pct*100).toFixed(1)+'%';}let current=sections[0];for(const s of sections){if(s.getBoundingClientRect().top<=150)current=s;}links.forEach(a=>a.classList.toggle('is-current',current&&a.getAttribute('href')==='#'+current.id));};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',academyV90Progress);else academyV90Progress();})();
 
@@ -1733,7 +1733,7 @@
     const sidebar=document.querySelector('.global-sidebar');
     if(sidebar){
       sidebar.innerHTML=`
-        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/academy-cap.png" alt="" width="96" height="82"><span><b>iGaming</b><strong>Traffic Academy</strong></span></a>
+        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><span><b>Traffic</b><strong>Lab</strong></span></a>
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
@@ -1782,17 +1782,21 @@
         }
       }
       header.innerHTML=`<div class="ref-topbar">
-        <a class="ref-mobile-brand" href="${base}" aria-label="iGaming Traffic Academy — на главную"><img src="${base}assets/academy-cap.png" alt="" width="96" height="82"><b>iGaming Traffic Academy</b></a>
+        <a class="ref-mobile-brand" href="${base}" aria-label="TrafficLab — на главную"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><b>TrafficLab</b></a>
         <nav class="ref-topbar-crumbs">${crumbHtml}</nav>
         <div class="ref-topbar-actions">
-          <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input type="search" name="q" placeholder="Поиск по Академии..." aria-label="Поиск по Академии"><kbd>Ctrl + K</kbd></form>
+          <form class="ref-top-search" action="${base}guides/" method="get"><span>${svg('search')}</span><input type="search" name="q" placeholder="Поиск по TrafficLab..." aria-label="Поиск по TrafficLab"><kbd>Ctrl + K</kbd></form>
           <button class="ref-theme-button" type="button" data-theme-toggle aria-label="Переключить тему"><span class="theme-toggle-icon">☾</span></button>
           <a class="ref-top-favorite" href="${base}saved/">${svg('star')}<span>В избранное</span></a>
-          <div class="ref-top-progress" title="Доля открытых страниц Академии"><span>Прогресс по Академии</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
+          <div class="ref-top-progress" title="Доля открытых страниц TrafficLab"><span>Прогресс по TrafficLab</span><b data-ref-progress-value>0%</b><i><em data-ref-progress-bar></em></i></div>
           <button class="mobile-nav-toggle ref-mobile-menu" type="button" aria-label="Открыть меню"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span><span>Меню</span></button>
         </div>
       </div>`;
       const search=header.querySelector('.ref-top-search input');
+      if(search){
+        if(!search.getAttribute('aria-label')) search.setAttribute('aria-label','Поиск по TrafficLab');
+        attachAutocomplete(search,{host:search.closest('.ref-top-search')||search.parentElement});
+      }
       document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search&&search.focus();}});
       if(window.ITAInitMobileNav)window.ITAInitMobileNav();
       if(window.ITAApplyTheme)window.ITAApplyTheme(document.body.classList.contains('theme-dark')?'dark':'light',false);
@@ -1918,7 +1922,7 @@
     if(progressValue)progressValue.textContent=sitePct+'%';
     if(progressBar)progressBar.style.width=sitePct+'%';
     if(progressBox){
-      progressBox.title=`Открыто ${validVisited.length} из ${academyPages.length} страниц Академии`;
+      progressBox.title=`Открыто ${validVisited.length} из ${academyPages.length} страниц TrafficLab`;
       progressBox.setAttribute('aria-label',progressBox.title);
     }
   };

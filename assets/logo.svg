@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="iGaming Traffic Academy">
-  <rect width="64" height="64" rx="8" fill="#102e27"/>
-  <rect x="7" y="7" width="50" height="50" rx="4" fill="none" stroke="#b6843f" stroke-width="1.5"/>
-  <text x="32" y="38" text-anchor="middle" fill="#fffdf8" font-family="Georgia, Times New Roman, serif" font-size="19" font-weight="700" letter-spacing="1">ITA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TrafficLab">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#f5f7f4" stroke="#c7d3cd" stroke-width="2"/>
+  <path d="M15 18h25v7h-9v23h-7V25h-9z" fill="#16483b"/>
+  <path d="M39 18h7v23h10v7H39z" fill="#16483b"/>
+  <circle cx="51" cy="17" r="3.5" fill="#c59a55"/>
 </svg>

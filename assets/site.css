@@ -4693,7 +4693,7 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
 .service-review-note b{color:var(--forest)}
 
 
-/* v79: iGaming Traffic Academy branding */
+/* v79: TrafficLab branding */
 .brand-mark{font-size:9.5px;letter-spacing:.045em}
 @media(max-width:650px){
   .brand{gap:10px}
@@ -6223,7 +6223,7 @@ pre,code{overflow-wrap:anywhere}
 .rail-snapshot{display:none!important}
 
 /* ======================================================================
-   v99 — approved iGaming Traffic Academy reference layout
+   v99 — approved TrafficLab reference layout
    Exact visual direction: dark navigation shell, light course canvas,
    light sticky contents rail, restrained spacing and strong hierarchy.
    ====================================================================== */
@@ -11766,4 +11766,30 @@ html body.reference-ui-v99 .term-help::after{
   min-width:12px!important;
   min-height:12px!important;
   margin-left:3px!important;
+}
+
+
+/* v141 — TrafficLab brand polish */
+html body .brand-text b{font-size:18px!important;letter-spacing:-.025em!important}
+html body .footer-brand{letter-spacing:-.02em!important}
+html body.reference-ui-v99 .ref-mobile-brand b{letter-spacing:-.02em!important}
+
+
+/* v143 — autocomplete for the top search in the header */
+html body.reference-ui-v99 .ref-top-search{position:relative!important;overflow:visible!important}
+html body.reference-ui-v99 .ref-top-search .autocomplete-box{
+  top:calc(100% + 8px)!important;
+  left:0!important;
+  right:0!important;
+  width:360px!important;
+  max-width:min(460px,44vw)!important;
+  border-radius:10px!important;
+}
+html body.reference-ui-v99 .ref-top-search .autocomplete-box a{grid-template-columns:80px minmax(0,1fr)!important}
+html body.reference-ui-v99 .ref-top-search .autocomplete-box a>span{font-size:9.5px!important}
+html body.reference-ui-v99 .ref-top-search .autocomplete-box a>small{display:block!important}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search .autocomplete-box{background:#fffdf9!important;border-color:#d6cec2!important}
+html body.reference-ui-v99.theme-dark .ref-top-search .autocomplete-box{background:#171d22!important;border-color:#3a444c!important}
+@media (max-width:1200px){
+  html body.reference-ui-v99 .ref-top-search .autocomplete-box{width:320px!important;max-width:min(380px,40vw)!important}
 }
