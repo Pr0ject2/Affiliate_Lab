@@ -13455,3 +13455,138 @@ html body.reference-ui-v99.theme-dark .source-playbook-page :is(.article-figure,
     padding-right:4px!important;
   }
 }
+
+/* v177 — remove leftover side gutters on source pages in dark mode */
+@media (min-width:1051px){
+  html body .source-playbook-page .article-layout,
+  html body.reference-ui-v99 .source-playbook-page .article-layout{
+    width:calc(100% - 28px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:24px 14px 72px!important;
+    grid-template-columns:minmax(0,1fr) 280px!important;
+    gap:32px!important;
+    justify-content:stretch!important;
+    align-items:start!important;
+  }
+
+  html body .source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99 .source-playbook-page .source-playbook-article{
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+
+  html body .source-playbook-page .article-aside.enhanced-rail,
+  html body.reference-ui-v99 .source-playbook-page .article-aside.enhanced-rail{
+    width:280px!important;
+    min-width:280px!important;
+    justify-self:end!important;
+  }
+}
+
+html body.theme-dark .source-playbook-page,
+html body.reference-ui-v99.theme-dark .source-playbook-page,
+html body.theme-dark .source-playbook-page .article-layout,
+html body.reference-ui-v99.theme-dark .source-playbook-page .article-layout,
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+  background:#101318!important;
+  background-image:none!important;
+}
+
+/* v178 — unify dark canvas and section rhythm for regular article pages too */
+html body.theme-dark.article-page,
+html body.reference-ui-v99.theme-dark.article-page,
+html body.theme-dark.article-page .compact-main-v103,
+html body.reference-ui-v99.theme-dark.article-page .compact-main-v103,
+html body.theme-dark.article-page .article-layout,
+html body.reference-ui-v99.theme-dark.article-page .article-layout,
+html body.theme-dark.article-page .structured-article-v103,
+html body.reference-ui-v99.theme-dark.article-page .structured-article-v103,
+html body.theme-dark.article-page .academy-article-hero,
+html body.reference-ui-v99.theme-dark.article-page .academy-article-hero,
+html body.theme-dark.article-page .article-aside,
+html body.reference-ui-v99.theme-dark.article-page .article-aside{
+  background:#0a0d11!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+@media (min-width:1051px){
+  html body.theme-dark.article-page .article-layout,
+  html body.reference-ui-v99.theme-dark.article-page .article-layout{
+    width:calc(100% - 28px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:24px 14px 72px!important;
+    grid-template-columns:minmax(0,1fr) 280px!important;
+    gap:32px!important;
+    align-items:start!important;
+  }
+
+  html body.theme-dark.article-page .structured-article-v103,
+  html body.reference-ui-v99.theme-dark.article-page .structured-article-v103{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+
+  html body.theme-dark.article-page .article-aside.enhanced-rail,
+  html body.reference-ui-v99.theme-dark.article-page .article-aside.enhanced-rail{
+    width:280px!important;
+    min-width:280px!important;
+    justify-self:end!important;
+  }
+}
+
+html body.theme-dark.article-page :is(.academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-exit-nav,.next-reading,.article-author),
+html body.reference-ui-v99.theme-dark.article-page :is(.academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-exit-nav,.next-reading,.article-author){
+  margin-left:0!important;
+  margin-right:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark.article-page :is(.academy-content-section,.logic-section-v103,.article-depth,.related-reading),
+html body.reference-ui-v99.theme-dark.article-page :is(.academy-content-section,.logic-section-v103,.article-depth,.related-reading){
+  padding-left:0!important;
+  padding-right:0!important;
+  border-color:#222a32!important;
+}
+
+html body.theme-dark.article-page .academy-content-section + .academy-content-section,
+html body.theme-dark.article-page .academy-content-section + .article-depth,
+html body.theme-dark.article-page .article-depth + .related-reading,
+html body.reference-ui-v99.theme-dark.article-page .academy-content-section + .academy-content-section,
+html body.reference-ui-v99.theme-dark.article-page .academy-content-section + .article-depth,
+html body.reference-ui-v99.theme-dark.article-page .article-depth + .related-reading{
+  margin-top:0!important;
+}
+
+html body.theme-dark.article-page .related-reading,
+html body.reference-ui-v99.theme-dark.article-page .related-reading{
+  border-top:1px solid #222a32!important;
+  padding-top:20px!important;
+}
+
+html body.theme-dark.article-page .article-exit-nav,
+html body.reference-ui-v99.theme-dark.article-page .article-exit-nav{
+  border-top:1px solid #222a32!important;
+  padding-top:18px!important;
+}
+
+html body.theme-dark.article-page .article-exit-nav a,
+html body.reference-ui-v99.theme-dark.article-page .article-exit-nav a,
+html body.theme-dark.article-page .related-primary,
+html body.reference-ui-v99.theme-dark.article-page .related-primary,
+html body.theme-dark.article-page .related-secondary,
+html body.reference-ui-v99.theme-dark.article-page .related-secondary{
+  background:#11171e!important;
+  border-color:#29333d!important;
+}
