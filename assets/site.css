@@ -13411,3 +13411,47 @@ body.content-system-v103 .beginner-term-note{
   margin-top:30px!important;
   margin-bottom:10px!important;
 }
+
+/* v176 — finish dark source-guide canvas alignment */
+html body.theme-dark .source-playbook-page .article-layout,
+html body.reference-ui-v99.theme-dark .source-playbook-page .article-layout,
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article,
+html body.theme-dark .source-playbook-page .source-hero-shell,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-hero-shell,
+html body.theme-dark .source-playbook-page .academy-article-hero,
+html body.reference-ui-v99.theme-dark .source-playbook-page .academy-article-hero,
+html body.theme-dark .source-playbook-page .guide-v101-section,
+html body.reference-ui-v99.theme-dark .source-playbook-page .guide-v101-section{
+  background:#0a0d11!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+  padding-left:12px!important;
+  padding-right:12px!important;
+}
+
+html body.theme-dark .source-playbook-page :is(.source-hero-shell,.academy-article-hero,.source-playbook-article>section,.guide-v101-section),
+html body.reference-ui-v99.theme-dark .source-playbook-page :is(.source-hero-shell,.academy-article-hero,.source-playbook-article>section,.guide-v101-section){
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+
+html body.theme-dark .source-playbook-page :is(.article-figure,.source-journey-card.article-figure,.source-visual-pair .article-figure,.source-visual-wide.article-figure,.guide-v101-media,.service-inline,.playbook-tips,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.ref-source-funnel),
+html body.reference-ui-v99.theme-dark .source-playbook-page :is(.article-figure,.source-journey-card.article-figure,.source-visual-pair .article-figure,.source-visual-wide.article-figure,.guide-v101-media,.service-inline,.playbook-tips,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.ref-source-funnel){
+  margin-left:0!important;
+  margin-right:0!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark .source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+    padding-left:4px!important;
+    padding-right:4px!important;
+  }
+}
