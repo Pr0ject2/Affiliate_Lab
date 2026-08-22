@@ -2000,3 +2000,24 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', decorate);
   else decorate();
 })();
+
+
+(()=>{
+  const classifyFactIcon=(label)=>{
+    const t=(label||'').toLowerCase().replace(/ё/g,'е');
+    if(/перв(ый|ого) тест|первый запуск|тест/.test(t)) return 'test';
+    if(/размет|метк/.test(t)) return 'markup';
+    if(/трафик/.test(t)) return 'traffic';
+    if(/замер|окно|срок|период|сигнал/.test(t)) return 'time';
+    if(/цифр|метрик|показател|главн/.test(t)) return 'metrics';
+    return 'default';
+  };
+  const decorateFactIcons=()=>{
+    document.querySelectorAll('.source-playbook-page .playbook-facts > div').forEach(card=>{
+      const label=(card.querySelector('dt')?.textContent || '').trim();
+      card.dataset.factIcon=classifyFactIcon(label);
+    });
+  };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', decorateFactIcons);
+  else decorateFactIcons();
+})();
