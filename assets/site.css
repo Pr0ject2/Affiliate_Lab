@@ -13590,3 +13590,284 @@ html body.reference-ui-v99.theme-dark.article-page .related-secondary{
   background:#11171e!important;
   border-color:#29333d!important;
 }
+
+/* v179 — remove all leftover dark slabs and keep one uniform canvas */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main,
+html body.theme-dark :is(
+  .compact-main-v103,
+  .section-landing,
+  .source-playbook-page,
+  .article-page,
+  .article-layout,
+  .structured-article-v103,
+  .source-playbook-article,
+  .article,
+  .page-head,
+  .section-landing-head,
+  .source-hero-shell,
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot
+),
+html body.reference-ui-v99.theme-dark :is(
+  .compact-main-v103,
+  .section-landing,
+  .source-playbook-page,
+  .article-page,
+  .article-layout,
+  .structured-article-v103,
+  .source-playbook-article,
+  .article,
+  .page-head,
+  .section-landing-head,
+  .source-hero-shell,
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot
+ ){
+  background:#0a0d11!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Large wrappers should blend into the same dark page instead of looking like separate slabs. */
+html body.theme-dark :is(
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-entry-grid,
+  .section-bottom-links,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .academy-content-section,
+  .logic-section-v103,
+  .article-depth,
+  .related-reading,
+  .article-exit-nav,
+  .next-reading,
+  .article-author,
+  .source-playbook-article>section,
+  .guide-v101-section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-entry-grid,
+  .section-bottom-links,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .academy-content-section,
+  .logic-section-v103,
+  .article-depth,
+  .related-reading,
+  .article-exit-nav,
+  .next-reading,
+  .article-author,
+  .source-playbook-article>section,
+  .guide-v101-section
+ ){
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Keep separators, but remove the lighter fill behind long content zones. */
+html body.theme-dark :is(
+  .section-group,
+  .academy-content-section,
+  .logic-section-v103,
+  .article-depth,
+  .related-reading,
+  .article-author,
+  .source-playbook-article>section,
+  .guide-v101-section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-group,
+  .academy-content-section,
+  .logic-section-v103,
+  .article-depth,
+  .related-reading,
+  .article-author,
+  .source-playbook-article>section,
+  .guide-v101-section
+ ){
+  border-color:#222a32!important;
+}
+
+/* Source pages: explicitly kill the slightly lighter background introduced by previous layout patches. */
+html body.theme-dark .source-playbook-page,
+html body.theme-dark .source-playbook-page .article-layout,
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .source-playbook-page,
+html body.reference-ui-v99.theme-dark .source-playbook-page .article-layout,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+  background:#0a0d11!important;
+  background-image:none!important;
+}
+
+/* Section landing pages: the area between cards should be the same canvas color too. */
+html body.theme-dark.content-system-v103 :is(
+  main.compact-main-v103,
+  main.compact-main-v103 > .wrap,
+  main.compact-main-v103 .wrap,
+  .section-landing > .wrap
+),
+html body.reference-ui-v99.theme-dark.content-system-v103 :is(
+  main.compact-main-v103,
+  main.compact-main-v103 > .wrap,
+  main.compact-main-v103 .wrap,
+  .section-landing > .wrap
+ ){
+  background-color:transparent!important;
+  background-image:none!important;
+}
+
+/* v180 — remove remaining green accents in dark theme and switch to neutral/brass palette */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --dark-accent:#d6b27a;
+  --dark-accent-strong:#c79a5a;
+  --dark-accent-soft:#f0dfbe;
+  --dark-copy:#c8d0d8;
+  --dark-muted:#9aa3ad;
+  --dark-surface:#131920;
+  --dark-surface-2:#171d24;
+  --dark-border:#29323c;
+  --dark-border-strong:#4a3f31;
+  --dark-callout:#211a14;
+  --dark-code:#d9be8d;
+}
+
+html body.theme-dark a,
+html body.reference-ui-v99.theme-dark a{
+  color:var(--dark-accent-soft)!important;
+}
+html body.theme-dark a:hover,
+html body.reference-ui-v99.theme-dark a:hover{
+  color:#f5e8cf!important;
+}
+
+html body.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.rail-tools a small,.rail-related-visual span,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.sidebar-partner-cta small,.ref-partner-card span,.rules-summary-grid span,.geo-directory-head>span,.partner-specific-box>span,.article-sources li,.next-reading span,.library-meta,.breadcrumbs a),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.rail-tools a small,.rail-related-visual span,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.sidebar-partner-cta small,.ref-partner-card span,.rules-summary-grid span,.geo-directory-head>span,.partner-specific-box>span,.article-sources li,.next-reading span,.library-meta,.breadcrumbs a){
+  color:var(--dark-copy)!important;
+}
+
+html body.theme-dark :is(.logic-action-v103,.partner-specific-box,.rules-action-box,.geo-directory,.geo-directory-brand,.geo-guideline-link,.guide-v101-callout:not(.warning),.service-inline,.playbook-tips,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.ref-source-funnel,.rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.article-sources,.term-tooltip,.article-figure,.service-task-nav a,.source-next-links a,.service-tool,.service-card,.service-tool-actions>a,.playbook-card,.next-reading a,.related-primary,.related-secondary,.article-exit-nav a,.sidebar-partner-cta,.ref-partner-card,.sidebar-partner-rules,.home-search-card,.catalog-search,.home-results-inner,.rail-partner-card,.rail-path-card,.rail-cover-card,.source-journey-card,.source-tool-card,.playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a),
+html body.reference-ui-v99.theme-dark :is(.logic-action-v103,.partner-specific-box,.rules-action-box,.geo-directory,.geo-directory-brand,.geo-guideline-link,.guide-v101-callout:not(.warning),.service-inline,.playbook-tips,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.ref-source-funnel,.rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.article-sources,.term-tooltip,.article-figure,.service-task-nav a,.source-next-links a,.service-tool,.service-card,.service-tool-actions>a,.playbook-card,.next-reading a,.related-primary,.related-secondary,.article-exit-nav a,.sidebar-partner-cta,.ref-partner-card,.sidebar-partner-rules,.home-search-card,.catalog-search,.home-results-inner,.rail-partner-card,.rail-path-card,.rail-cover-card,.source-journey-card,.source-tool-card,.playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a){
+  background:var(--dark-surface)!important;
+  background-image:none!important;
+  border-color:var(--dark-border)!important;
+  color:#eef2f5!important;
+}
+
+html body.theme-dark :is(.logic-explain-v103,.logic-analysis-v103,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-author,.source-playbook-article>section,.guide-v101-section,.section-entry,.section-outcome,.section-feature,.section-card,.section-groups,.section-bottom-links),
+html body.reference-ui-v99.theme-dark :is(.logic-explain-v103,.logic-analysis-v103,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-author,.source-playbook-article>section,.guide-v101-section,.section-entry,.section-outcome,.section-feature,.section-card,.section-groups,.section-bottom-links){
+  background:transparent!important;
+  background-image:none!important;
+  border-color:#222a32!important;
+}
+
+html body.theme-dark :is(.logic-warning-v103,.inline-note,.playbook-risk,.guide-v101-callout.warning,.warning-note),
+html body.reference-ui-v99.theme-dark :is(.logic-warning-v103,.inline-note,.playbook-risk,.guide-v101-callout.warning,.warning-note){
+  background:var(--dark-callout)!important;
+  border-color:var(--dark-border-strong)!important;
+  color:#e7d6b5!important;
+}
+
+html body.theme-dark :is(.logic-index-v103,.section-index,.guide-step-index,.journey-step-index,.flow-step-index,.rail-progress span,.playbook-checklist li:before,.service-task-nav .step-index),
+html body.reference-ui-v99.theme-dark :is(.logic-index-v103,.section-index,.guide-step-index,.journey-step-index,.flow-step-index,.rail-progress span,.playbook-checklist li:before,.service-task-nav .step-index){
+  background:#2a231c!important;
+  border-color:#6a5338!important;
+  color:var(--dark-accent-soft)!important;
+}
+
+html body.theme-dark :is(.term-help,.plain-link,.text-cta,.partner-specific-box>a,.geo-guideline-link,.source-toolkit-helper a,.source-toolkit-all a,.service-tool>a,.article-cta-row>a,.playbook-card>a,.home-results-inner>div>p,.sidebar-partner-cta span,.sidebar-partner-rules,.rules-summary-grid b,.rule-model-badge,.geo-chip-grid li small,.calc output,.calc-head>span),
+html body.reference-ui-v99.theme-dark :is(.term-help,.plain-link,.text-cta,.partner-specific-box>a,.geo-guideline-link,.source-toolkit-helper a,.source-toolkit-all a,.service-tool>a,.article-cta-row>a,.playbook-card>a,.home-results-inner>div>p,.sidebar-partner-cta span,.sidebar-partner-rules,.rules-summary-grid b,.rule-model-badge,.geo-chip-grid li small,.calc output,.calc-head>span){
+  color:var(--dark-accent-soft)!important;
+}
+html body.theme-dark .term-help,
+html body.reference-ui-v99.theme-dark .term-help{
+  border-bottom-color:#9b7a4a!important;
+}
+html body.theme-dark .term-help:after,
+html body.reference-ui-v99.theme-dark .term-help:after{
+  border-color:#8f7248!important;
+  color:#d6b27a!important;
+}
+html body.theme-dark .term-help:hover,
+html body.theme-dark .term-help:focus-visible,
+html body.theme-dark .term-help[aria-expanded="true"],
+html body.reference-ui-v99.theme-dark .term-help:hover,
+html body.reference-ui-v99.theme-dark .term-help:focus-visible,
+html body.reference-ui-v99.theme-dark .term-help[aria-expanded="true"]{
+  color:#f3e1bf!important;
+  background:rgba(182,145,90,.10)!important;
+}
+
+html body.theme-dark :is(pre,code),
+html body.reference-ui-v99.theme-dark :is(pre,code){
+  background:#141b22!important;
+  color:var(--dark-code)!important;
+}
+
+html body.theme-dark :is(.source-section-tabs a.is-current,.source-section-tabs a:first-child,.rail-all-tools,.service-mark,.rail-tool-mark,.source-playbook-page .playbook-aside li a:hover),
+html body.reference-ui-v99.theme-dark :is(.source-section-tabs a.is-current,.source-section-tabs a:first-child,.rail-all-tools,.service-mark,.rail-tool-mark,.source-playbook-page .playbook-aside li a:hover){
+  color:var(--dark-accent-soft)!important;
+  border-color:#6d563a!important;
+}
+html body.theme-dark .source-section-tabs a.is-current,
+html body.theme-dark .source-section-tabs a:first-child,
+html body.reference-ui-v99.theme-dark .source-section-tabs a.is-current,
+html body.reference-ui-v99.theme-dark .source-section-tabs a:first-child{
+  border-bottom-color:#a98453!important;
+}
+
+html body.theme-dark .sidebar-partner-cta,
+html body.reference-ui-v99.theme-dark .sidebar-partner-cta{
+  background:#1d1712!important;
+  border-color:#574331!important;
+}
+html body.theme-dark .sidebar-partner-cta b,
+html body.reference-ui-v99.theme-dark .sidebar-partner-cta b{
+  color:#f2f4f6!important;
+}
+html body.theme-dark .sidebar-partner-rules,
+html body.reference-ui-v99.theme-dark .sidebar-partner-rules{
+  background:#151a20!important;
+  border-color:#303943!important;
+}
+
+html body.theme-dark .home-action-primary,
+html body.theme-dark .article-cta-row .home-action-primary,
+html body.reference-ui-v99.theme-dark .home-action-primary,
+html body.reference-ui-v99.theme-dark .article-cta-row .home-action-primary{
+  background:#3f3428!important;
+  border-color:#6d563a!important;
+  color:#f4ead8!important;
+}
+html body.theme-dark .home-action-primary:hover,
+html body.theme-dark .article-cta-row .home-action-primary:hover,
+html body.reference-ui-v99.theme-dark .home-action-primary:hover,
+html body.reference-ui-v99.theme-dark .article-cta-row .home-action-primary:hover{
+  background:#4a3d2f!important;
+}
+html body.theme-dark :is(.home-action-secondary,.home-action-partner,.article-cta-row>a,.service-task-nav a,.source-next-links a,.article-exit-nav a,.next-reading a),
+html body.reference-ui-v99.theme-dark :is(.home-action-secondary,.home-action-partner,.article-cta-row>a,.service-task-nav a,.source-next-links a,.article-exit-nav a,.next-reading a){
+  background:#151b22!important;
+  border-color:#394451!important;
+  color:#eef2f4!important;
+}
+
+html body.theme-dark :is(.brand-mark,.nav-all,.nav-basics,.nav-economics,.nav-analytics,.nav-traffic,.nav-practice,.nav-glossary,.nav-tools),
+html body.reference-ui-v99.theme-dark :is(.brand-mark,.nav-all,.nav-basics,.nav-economics,.nav-analytics,.nav-traffic,.nav-practice,.nav-glossary,.nav-tools){
+  background:#1d2430!important;
+  border-color:#33404d!important;
+  color:#f2f4f6!important;
+}
