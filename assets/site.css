@@ -13139,3 +13139,275 @@ html body.theme-dark .home-search-card .search-row{
 }
 html body.theme-dark .site-footer,
 html body.reference-ui-v99.theme-dark .site-footer{background:#090c10!important;border-color:#1f2730!important}
+
+
+/* v168 — align section landing blocks to one inner column */
+body.content-system-v103 .section-groups,
+body.content-system-v103 .section-bottom-links,
+body.content-system-v103 .global-mode-guidance,
+body.content-system-v103 .beginner-term-note{
+  padding-left:12px!important;
+  padding-right:12px!important;
+  box-sizing:border-box!important;
+}
+body.content-system-v103 .section-group{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+@media (max-width:650px){
+  body.content-system-v103 .section-groups,
+  body.content-system-v103 .section-bottom-links,
+  body.content-system-v103 .global-mode-guidance,
+  body.content-system-v103 .beginner-term-note{
+    padding-left:6px!important;
+    padding-right:6px!important;
+  }
+}
+
+
+/* v170 — stronger beginner-oriented 1win emphasis */
+html body:not(.theme-dark) .sidebar-partner-cta,
+html body:not(.theme-dark) .ref-partner-card{
+  border-color:#d7c19f!important;
+  background:linear-gradient(180deg,#fffaf2 0%,#f8f1e5 100%)!important;
+}
+html body:not(.theme-dark) .sidebar-partner-cta small,
+html body:not(.theme-dark) .ref-partner-card span{
+  color:#745f49!important;
+}
+html body.theme-dark .sidebar-partner-cta,
+html body.reference-ui-v99.theme-dark .ref-partner-card{
+  background:#1d1915!important;
+  border-color:#5c4b39!important;
+}
+html body.theme-dark .sidebar-partner-cta small,
+html body.reference-ui-v99.theme-dark .ref-partner-card span{
+  color:#d6c2a6!important;
+}
+
+/* v171 — fix collapsed sidebar brand and partner card/rules */
+@media (min-width:901px){
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar{
+    padding-left:12px!important;
+    padding-right:12px!important;
+    overflow-x:hidden!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand{
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+    width:100%!important;
+    padding:0!important;
+    margin:0 0 12px!important;
+    border-bottom:0!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand img{
+    width:38px!important;
+    height:38px!important;
+    min-width:38px!important;
+    flex:0 0 38px!important;
+    margin:0 auto!important;
+    display:block!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand span,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand b,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand small,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-brand strong{
+    display:none!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-partner-card,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-sidebar-rules,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .sidebar-partner-cta,
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .sidebar-partner-rules,
+  html body.ref-sidebar-collapsed .global-sidebar .ref-partner-card,
+  html body.ref-sidebar-collapsed .global-sidebar .ref-sidebar-rules,
+  html body.ref-sidebar-collapsed .global-sidebar .sidebar-partner-cta,
+  html body.ref-sidebar-collapsed .global-sidebar .sidebar-partner-rules{
+    display:none!important;
+  }
+  html body.reference-ui-v99.ref-sidebar-collapsed .global-sidebar .ref-nav-group nav a,
+  html body.ref-sidebar-collapsed .global-sidebar .ref-nav-group nav a{
+    min-height:38px!important;
+    width:100%!important;
+  }
+}
+
+/* v173 — dark numbering + restrained action accent */
+html body.theme-dark :is(
+  .logic-index-v103,
+  .source-playbook-page .playbook-steps>li>span:first-child,
+  .source-playbook-article .guide-v101-steps li>span,
+  .platform-setup li>span,
+  .guide-v101-grid>div>span
+){
+  background:#1b252e!important;
+  border:1px solid #405563!important;
+  color:#b8cedb!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important;
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  background:#28231d!important;
+  border-color:#5b4d3a!important;
+  color:#ddc39e!important;
+}
+
+/* Action elements get a quiet blue-slate tint instead of green. */
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,
+  .service-tool-actions>a:not(.service-open-link),
+  .service-inline-primary,
+  .service-inline-secondary,
+  .service-inline-more,
+  .guide-v101-inline-link a,
+  .button-primary,
+  .source-partner-cta>a,
+  .home-actions a:not(.home-action-partner),
+  .home-main-search button,
+  .article-cta-row a,
+  .source-compare-actions a,
+  .home-results nav a,
+  .partner-next-step>a,
+  .traffic-partner-step>a
+){
+  background:#202a33!important;
+  border-color:#465967!important;
+  color:#e6eef2!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.025)!important;
+}
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,
+  .service-tool-actions>a:not(.service-open-link),
+  .service-inline-primary,
+  .service-inline-secondary,
+  .service-inline-more,
+  .guide-v101-inline-link a,
+  .button-primary,
+  .source-partner-cta>a,
+  .home-actions a:not(.home-action-partner),
+  .home-main-search button,
+  .article-cta-row a,
+  .source-compare-actions a,
+  .home-results nav a,
+  .partner-next-step>a,
+  .traffic-partner-step>a
+):hover{
+  background:#27343e!important;
+  border-color:#5a6f7e!important;
+  color:#ffffff!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-primary,
+html body.reference-ui-v99.theme-dark .article-cta-row .home-action-primary{
+  background:#26333d!important;
+  border-color:#5a6e7d!important;
+  color:#f0f5f7!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-primary:hover,
+html body.reference-ui-v99.theme-dark .article-cta-row .home-action-primary:hover{
+  background:#2e3d48!important;
+  border-color:#697f8f!important;
+}
+/* Partner CTA keeps a warm restrained identity so it is distinct, not loud. */
+html body.reference-ui-v99.theme-dark .home-actions .home-action-partner{
+  background:#29231d!important;
+  border-color:#665642!important;
+  color:#ead7ba!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-partner:hover{
+  background:#302820!important;
+  border-color:#76644d!important;
+  color:#f4e3c9!important;
+}
+
+/* v174 — homogeneous dark article canvas */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main,
+html body.theme-dark :is(
+  .compact-main-v103,
+  .article-page,
+  .source-playbook-page,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .source-hero-shell,
+  .source-title-row,
+  .page-head,
+  .section-landing-head
+){
+  background:#0a0d11!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Normal article sections belong to the same canvas instead of looking like cards. */
+html body.theme-dark :is(
+  .academy-content-section,
+  .logic-section-v103,
+  .guide-v101-section,
+  .source-playbook-article>section,
+  .article>section,
+  .section-groups,
+  .section-group,
+  .section-bottom-links,
+  .related-reading,
+  .related-reading-stable,
+  .geo-directory,
+  .geo-directory-brand
+){
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Keep only subtle separators between long article sections. */
+html body.theme-dark .source-playbook-article>section,
+html body.theme-dark .article>section,
+html body.theme-dark .academy-content-section,
+html body.theme-dark .logic-section-v103{
+  border-color:#222a32!important;
+}
+
+/* Content cards and functional blocks stay slightly raised for hierarchy. */
+html body.theme-dark :is(
+  .article-figure,
+  .playbook-checklist li,
+  .playbook-steps>li,
+  .platform-setup>div,
+  .platform-setup>li,
+  .playbook-format-list>div,
+  .source-tool-card,
+  .guide-v101-grid>div,
+  .guide-v101-formats>article,
+  .guide-v101-steps li,
+  .guide-v101-funnel-table>div,
+  .guide-v101-diagnostics a,
+  .guide-v101-next a,
+  .rules-summary-grid>div,
+  .rules-model-grid>section,
+  .geo-chip-grid>li,
+  .related-primary,
+  .related-secondary,
+  .article-exit-nav a,
+  .next-reading a,
+  table,
+  .service-inline,
+  .inline-note,
+  .rules-action-box
+){
+  background:#11171e!important;
+  border-color:#29333d!important;
+  box-shadow:none!important;
+}
+
+
+/* v175 — add more breathing room around beginner note */
+body.content-system-v103 .beginner-term-note{
+  margin-top:30px!important;
+  margin-bottom:10px!important;
+}
