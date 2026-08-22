@@ -12796,3 +12796,346 @@ html body.theme-dark.reference-ui-v99 main.home-page .home-results-inner>div>p{
     border-bottom-color:rgba(255,255,255,.06)!important;
   }
 }
+
+
+/* v164 — restore academy cap logo and keep brand name on one line */
+html body .sidebar-brand,
+html body.reference-ui-v99 .ref-sidebar-brand,
+html body.reference-ui-v99 .ref-mobile-brand,
+html body .site-header .brand{
+  align-items:center!important;
+}
+html body .sidebar-brand-logo,
+html body.reference-ui-v99 .ref-sidebar-brand img,
+html body.reference-ui-v99 .ref-mobile-brand img,
+html body .site-header .brand-logo{
+  object-fit:contain!important;
+  filter:none!important;
+}
+html body .sidebar-brand>span,
+html body.reference-ui-v99 .ref-sidebar-brand span{
+  display:flex!important;
+  flex-direction:column!important;
+  min-width:0!important;
+  gap:3px!important;
+}
+html body .sidebar-brand b,
+html body.reference-ui-v99 .ref-sidebar-brand b,
+html body.reference-ui-v99 .ref-mobile-brand b,
+html body .site-header .brand-text b{
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+}
+html body .sidebar-brand strong,
+html body.reference-ui-v99 .ref-sidebar-brand strong{display:none!important}
+html body .sidebar-brand small,
+html body.reference-ui-v99 .ref-sidebar-brand small{
+  display:block!important;
+  margin-top:0!important;
+}
+html body.reference-ui-v99 .ref-sidebar-brand img,
+html body .global-sidebar .sidebar-brand-logo{
+  width:42px!important;
+  height:42px!important;
+  flex:0 0 42px!important;
+}
+html body.reference-ui-v99 .ref-mobile-brand img,
+html body .site-header .brand-logo{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 34px!important;
+}
+html body.reference-ui-v99 .ref-sidebar-brand b,
+html body .global-sidebar .sidebar-brand b{
+  font-size:17px!important;
+  font-weight:780!important;
+  letter-spacing:-.02em!important;
+}
+html body.reference-ui-v99 .ref-sidebar-brand small,
+html body .global-sidebar .sidebar-brand small{
+  font-size:8.8px!important;
+  letter-spacing:.06em!important;
+  text-transform:uppercase!important;
+  color:#aab8b6!important;
+}
+html body.reference-ui-v99 .ref-mobile-brand{
+  max-width:calc(100% - 88px)!important;
+  gap:8px!important;
+}
+html body.reference-ui-v99 .ref-mobile-brand b{
+  max-width:none!important;
+  font-size:14px!important;
+  font-weight:780!important;
+  letter-spacing:-.02em!important;
+}
+@media (max-width:420px){
+  html body.reference-ui-v99 .ref-mobile-brand{max-width:calc(100% - 80px)!important}
+  html body.reference-ui-v99 .ref-mobile-brand b{font-size:13px!important}
+}
+
+
+/* v165 — dark theme buttons: all action buttons use dark surfaces and light text */
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,
+  .service-tool-actions>a:not(.service-open-link),
+  .service-inline-primary,
+  .service-inline-secondary,
+  .service-inline-more,
+  .guide-v101-inline-link a,
+  .button-primary,
+  .source-partner-cta>a,
+  .home-actions a,
+  .home-main-search button,
+  .article-cta-row a,
+  .source-compare-actions a,
+  .home-results nav a
+){
+  background:#171d23!important;
+  border:1px solid #35404a!important;
+  color:#eef4f2!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,
+  .service-tool-actions>a:not(.service-open-link),
+  .service-inline-primary,
+  .service-inline-secondary,
+  .service-inline-more,
+  .guide-v101-inline-link a,
+  .button-primary,
+  .source-partner-cta>a,
+  .home-actions a,
+  .home-main-search button,
+  .article-cta-row a,
+  .source-compare-actions a,
+  .home-results nav a
+):hover{
+  background:#1d242b!important;
+  border-color:#43515d!important;
+  color:#ffffff!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-primary{
+  background:#1b2329!important;
+  border-color:#45535f!important;
+  color:#f2f7f6!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-primary:hover{
+  background:#212931!important;
+  border-color:#51606d!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-partner{
+  background:#221d18!important;
+  border-color:#5b4b36!important;
+  color:#f1dcc0!important;
+}
+html body.reference-ui-v99.theme-dark .home-actions .home-action-partner:hover{
+  background:#2a221c!important;
+  border-color:#6c5941!important;
+  color:#fff0d9!important;
+}
+html body.reference-ui-v99.theme-dark .home-main-search button{
+  border-left-color:#35404a!important;
+  font-weight:760!important;
+}
+
+
+/* v166 — restore breathing room from edges across articles and rail */
+.article-page .article-layout{
+  max-width:1480px!important;
+  padding-left:42px!important;
+  padding-right:42px!important;
+}
+.source-playbook-page .article-layout{
+  grid-template-columns:minmax(0,900px) var(--academy-rail)!important;
+  max-width:1420px!important;
+  padding-left:42px!important;
+  padding-right:42px!important;
+}
+.article-page .article,
+.source-playbook-page .source-playbook-article{
+  padding-left:14px!important;
+  padding-right:14px!important;
+}
+.article-page .article section,
+.source-playbook-page .source-playbook-article section,
+.source-playbook-page .source-hero-shell,
+.source-playbook-page .academy-article-hero{
+  padding-left:8px!important;
+  padding-right:8px!important;
+}
+.article-page .article-figure,
+.source-playbook-page .article-figure,
+.source-playbook-page .source-journey-card.article-figure,
+.source-playbook-page .source-visual-pair .article-figure,
+.source-playbook-page .source-visual-wide.article-figure,
+.source-playbook-page .guide-v101-media,
+.source-playbook-page .service-inline,
+.source-playbook-page .playbook-tips,
+.source-playbook-page .guide-v101-section,
+.source-playbook-page .guide-v101-flow,
+.source-playbook-page .guide-v101-verdict,
+.source-playbook-page .guide-v101-code,
+.source-playbook-page .guide-v101-media,
+.source-playbook-page .ref-source-funnel{
+  margin-left:8px!important;
+  margin-right:8px!important;
+}
+.source-playbook-page :is(.playbook-checklist li,.playbook-steps>li,.platform-setup>div,.playbook-format-list>div,.traffic-diagnostic-list li,.source-tool-card,.guide-v101-grid>div,.guide-v101-steps li,.guide-v101-diagnostics a,.guide-v101-next a,.guide-v101-funnel-table>div){
+  padding-left:18px!important;
+  padding-right:18px!important;
+}
+.article-aside.enhanced-rail .aside-block,
+.article-aside.enhanced-rail .rail-cover-card,
+.article-aside.enhanced-rail .rail-partner-card,
+.article-aside.enhanced-rail .rail-path-card,
+.article-aside.enhanced-rail .rail-card{
+  padding-left:16px!important;
+  padding-right:16px!important;
+}
+.article-page .article-figure figcaption,
+.source-playbook-page .article-figure figcaption{
+  padding-left:18px!important;
+  padding-right:18px!important;
+}
+@media(max-width:1260px) and (min-width:901px){
+  .article-page .article-layout,
+  .source-playbook-page .article-layout{
+    padding-left:28px!important;
+    padding-right:28px!important;
+  }
+  .source-playbook-page .article-layout{
+    grid-template-columns:minmax(0,1fr) var(--academy-rail)!important;
+    max-width:1360px!important;
+  }
+  .article-page .article,
+  .source-playbook-page .source-playbook-article{
+    padding-left:10px!important;
+    padding-right:10px!important;
+  }
+}
+@media(max-width:900px){
+  .article-page .article-layout,
+  .source-playbook-page .article-layout{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .article-page .article,
+  .source-playbook-page .source-playbook-article{
+    padding-left:4px!important;
+    padding-right:4px!important;
+  }
+  .article-page .article section,
+  .source-playbook-page .source-playbook-article section,
+  .source-playbook-page .source-hero-shell,
+  .source-playbook-page .academy-article-hero{
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  .article-page .article-figure,
+  .source-playbook-page .article-figure,
+  .source-playbook-page .guide-v101-media,
+  .source-playbook-page .service-inline,
+  .source-playbook-page .playbook-tips,
+  .source-playbook-page .guide-v101-section,
+  .source-playbook-page .guide-v101-flow,
+  .source-playbook-page .guide-v101-verdict,
+  .source-playbook-page .guide-v101-code,
+  .source-playbook-page .ref-source-funnel{
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+}
+
+
+/* v167 — darker, calmer dark theme for stronger text contrast */
+html body.theme-dark{
+  --v109-bg:#0a0d11!important;
+  --v109-bg-soft:#0e1318!important;
+  --v109-surface:#121820!important;
+  --v109-surface-warm:#121820!important;
+  --v109-ink:#f3f6f8!important;
+  --v109-copy:#c8d0d7!important;
+  --v109-muted:#9aa6b1!important;
+  --v109-line:#27313b!important;
+  --v109-line-strong:#34404b!important;
+  --v109-green:#8fd7c1!important;
+  --v109-green-dark:#77c5ad!important;
+  --v109-green-soft:#16201d!important;
+  --v109-warm:#d5b084!important;
+  --v109-warm-soft:#241e18!important;
+}
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main,
+html body.theme-dark :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.compact-main-v103,.article-page,.source-playbook-page){
+  background:#0a0d11!important;
+  background-image:none!important;
+  color:#f3f6f8!important;
+}
+html body.theme-dark .home-welcome,
+html body.theme-dark .home-intro{
+  background:linear-gradient(135deg,#0c1015 0%,#0a0d11 72%,#10151b 100%)!important;
+  border-color:#25303a!important;
+}
+html body.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,
+  .playbook-card,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .knowledge-map>div,.library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,
+  .source-tool-card,.traffic-hub-basics>div,.traffic-next a,.handbook-intro,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,
+  .traffic-diagnostic-list li,.source-journey-card,.article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.partner-next-step,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats>article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,
+  .academy-content-section,.logic-section-v103,.related-reading,.related-primary,.related-secondary,
+  .article-exit-nav a,.next-reading a,.starter-next,.service-inline
+){
+  background:#121820!important;
+  border-color:#28323d!important;
+  color:#f3f6f8!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(p,li,dd,figcaption,.article p,.article li,.source-playbook-page p,.source-playbook-page li,.home-welcome p,.home-intro p,.home-search-card p){
+  color:#cbd3da!important;
+}
+html body.theme-dark :is(h1,h2,h3,h4,strong,b,.hero-badge,.section-eyebrow,.article-kicker){
+  color:#f4f7f9!important;
+}
+html body.theme-dark :is(.muted,.meta,.article-meta,.card-meta,small,.home-search-card small,.home-search-card .inline-links a){
+  color:#a8b3bd!important;
+}
+html body.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input){
+  background-color:#0f151c!important;
+  border-color:#313c47!important;
+  color:#f3f6f8!important;
+}
+html body.theme-dark :is(input::placeholder,textarea::placeholder){color:#8794a0!important;opacity:1!important}
+html body.theme-dark :is(table,thead,tbody,tr){background:#10161d!important;color:#f3f6f8!important}
+html body.theme-dark th{background:#171e26!important;color:#f3f6f8!important;border-color:#313c47!important}
+html body.theme-dark td{background:#111821!important;color:#c8d0d7!important;border-color:#28323d!important}
+html body.theme-dark .home-results-inner{
+  background:#111821!important;
+  border-color:#28323d!important;
+}
+html body.theme-dark .home-results-inner>div>p{color:#d8b182!important}
+html body.theme-dark .site-header,
+html body.reference-ui-v99.theme-dark .site-header{background:#0b1015!important;border-bottom:1px solid rgba(255,255,255,.08)!important}
+html body.theme-dark .global-sidebar,
+html body.reference-ui-v99.theme-dark .global-sidebar{background:#0c1116!important;border-color:#232c35!important}
+html body.theme-dark .ref-topbar,
+html body.theme-dark .site-header .header-inner{background:transparent!important}
+html body.theme-dark .ref-top-search,
+html body.theme-dark .topbar-search,
+html body.theme-dark .home-search-card .search-row{
+  background:#0f151c!important;
+  border-color:#2c3742!important;
+}
+html body.theme-dark .site-footer,
+html body.reference-ui-v99.theme-dark .site-footer{background:#090c10!important;border-color:#1f2730!important}

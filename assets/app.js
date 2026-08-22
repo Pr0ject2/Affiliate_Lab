@@ -1733,7 +1733,7 @@
     const sidebar=document.querySelector('.global-sidebar');
     if(sidebar){
       sidebar.innerHTML=`
-        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><span><b>Traffic</b><strong>Lab</strong></span></a>
+        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><span><b>TrafficLab</b><small>трафик на гемблинг</small></span></a>
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
