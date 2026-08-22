@@ -14396,3 +14396,326 @@ html body.reference-ui-v99.theme-dark :is(.section-entry,.section-outcome,.secti
     width:calc(100% - 28px)!important;
   }
 }
+
+/* v183 — narrower reading column for traffic-source playbooks */
+@media (min-width:1051px){
+  :root{
+    --v183-source-article:850px;
+    --v183-source-rail:270px;
+    --v183-source-gap:28px;
+  }
+
+  html body .source-playbook-page .article-layout,
+  html body.reference-ui-v99 .source-playbook-page .article-layout,
+  html body.theme-dark .source-playbook-page .article-layout,
+  html body.reference-ui-v99.theme-dark .source-playbook-page .article-layout{
+    width:min(calc(100% - 56px),calc(var(--v183-source-article) + var(--v183-source-rail) + var(--v183-source-gap)))!important;
+    max-width:calc(var(--v183-source-article) + var(--v183-source-rail) + var(--v183-source-gap))!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    grid-template-columns:minmax(0,var(--v183-source-article)) var(--v183-source-rail)!important;
+    gap:var(--v183-source-gap)!important;
+    justify-content:center!important;
+  }
+
+  html body .source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99 .source-playbook-page .source-playbook-article,
+  html body.theme-dark .source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+    width:100%!important;
+    max-width:var(--v183-source-article)!important;
+    justify-self:start!important;
+  }
+
+  html body .source-playbook-page .article-aside.enhanced-rail,
+  html body.reference-ui-v99 .source-playbook-page .article-aside.enhanced-rail{
+    width:var(--v183-source-rail)!important;
+    max-width:var(--v183-source-rail)!important;
+  }
+}
+
+/* v184 — restore regular article width; keep narrow layout only for traffic-source playbooks */
+@media (min-width:1051px){
+  html body.theme-dark.article-page main:not(.source-playbook-page) .article-layout,
+  html body.reference-ui-v99.theme-dark.article-page main:not(.source-playbook-page) .article-layout{
+    width:calc(100% - 28px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:24px 14px 72px!important;
+    grid-template-columns:minmax(0,1fr) 280px!important;
+    gap:32px!important;
+    justify-content:stretch!important;
+    align-items:start!important;
+  }
+
+  html body.theme-dark.article-page main:not(.source-playbook-page) .article,
+  html body.reference-ui-v99.theme-dark.article-page main:not(.source-playbook-page) .article{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+  }
+
+  html body.theme-dark.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail,
+  html body.reference-ui-v99.theme-dark.article-page main:not(.source-playbook-page) .article-aside.enhanced-rail{
+    width:280px!important;
+    min-width:280px!important;
+    max-width:280px!important;
+    justify-self:end!important;
+  }
+}
+
+
+/* v185 — equal small side gutters on all non-home pages */
+:root{
+  --tl-page-gutter: 14px;
+  --tl-page-gutter-tablet: 12px;
+  --tl-page-gutter-mobile: 10px;
+}
+
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .global-mode-guidance.wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .beginner-term-note.wrap,
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow,
+html body.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+  width:calc(100% - (var(--tl-page-gutter) * 2))!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap > :is(.overline,h1,p,.glossary-search),
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow > :is(.overline,h1,p,.glossary-search),
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap > :is(.overline,h1,p),
+html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow > :is(.overline,h1,p),
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow > *{
+  margin-left:0!important;
+  margin-right:0!important;
+}
+
+@media (max-width: 1100px){
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .global-mode-guidance.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .beginner-term-note.wrap,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - (var(--tl-page-gutter-tablet) * 2))!important;
+  }
+}
+
+@media (max-width: 650px){
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .global-mode-guidance.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .beginner-term-note.wrap,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - (var(--tl-page-gutter-mobile) * 2))!important;
+  }
+}
+
+/* ======================================================================
+   v186 — dark theme: no decorative circles, no green text anywhere
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --forest:#c8d0d8!important;
+  --forest-2:#161c22!important;
+  --forest-soft:#1b222a!important;
+  --green:#c8d0d8!important;
+  --green-dark:#aab5bf!important;
+  --academy-green:#c8d0d8!important;
+  --academy-green-soft:#1b222a!important;
+  --v109-green:#c8d0d8!important;
+  --v109-green-dark:#aab5bf!important;
+  --v109-green-soft:#1b222a!important;
+  --source-accent:#c8d0d8!important;
+  --tl-dark-accent:#d3c3a4!important;
+  --tl-dark-accent-2:#d3c3a4!important;
+  --tl-dark-accent-strong:#eadabc!important;
+}
+
+/* Remove the old desktop decorative strips with circles/grid entirely. */
+@media (min-width:1180px){
+  html body.theme-dark::before,
+  html body.theme-dark::after,
+  html body.reference-ui-v99.theme-dark::before,
+  html body.reference-ui-v99.theme-dark::after{
+    content:none!important;
+    display:none!important;
+    width:0!important;
+    background:none!important;
+    background-image:none!important;
+    border:0!important;
+    opacity:0!important;
+  }
+}
+
+/* Neutral text palette. No green typography in the dark theme. */
+html body.theme-dark :is(
+  p,li,dd,dt,figcaption,small,label,
+  .lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,
+  .article-author p,.handbook-intro p,.playbook-card>p,.section-entry p,
+  .section-outcome p,.guide-v101-formats p,.guide-v101-grid p,
+  .guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,
+  .service-tool p,.tool-card p,.about-card p,.rail-quick a small,
+  .playbook-faq details p,.rules-summary-grid p,.rules-model-grid li,
+  .geo-chip-grid li,.geo-chip-grid li small,.article td,.playbook-facts dt,
+  .ref-top-progress span,.ref-top-progress b,.ref-sidebar-footer span
+),
+html body.reference-ui-v99.theme-dark :is(
+  p,li,dd,dt,figcaption,small,label,
+  .lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,
+  .article-author p,.handbook-intro p,.playbook-card>p,.section-entry p,
+  .section-outcome p,.guide-v101-formats p,.guide-v101-grid p,
+  .guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,
+  .service-tool p,.tool-card p,.about-card p,.rail-quick a small,
+  .playbook-faq details p,.rules-summary-grid p,.rules-model-grid li,
+  .geo-chip-grid li,.geo-chip-grid li small,.article td,.playbook-facts dt,
+  .ref-top-progress span,.ref-top-progress b,.ref-sidebar-footer span
+){
+  color:#c6ced6!important;
+}
+
+html body.theme-dark :is(
+  h1,h2,h3,h4,strong,b,.article-label,.overline,.section-eyebrow,
+  .footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,
+  .section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,
+  .article-page .article h1,.article-page .article h2,.article th,
+  .rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,
+  .playbook-faq summary,.home-results-inner h2
+),
+html body.reference-ui-v99.theme-dark :is(
+  h1,h2,h3,h4,strong,b,.article-label,.overline,.section-eyebrow,
+  .footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,
+  .section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,
+  .article-page .article h1,.article-page .article h2,.article th,
+  .rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,
+  .playbook-faq summary,.home-results-inner h2
+){
+  color:#eef2f5!important;
+}
+
+/* Links and clickable text use one restrained warm-neutral accent. */
+html body.theme-dark :is(
+  a,.plain-link,.text-cta,.term-help,.rail-all-tools,.sidebar-partner-cta span,
+  .section-bottom-links a,.home-actions a,.guide-v101-next a,
+  .guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,
+  .bookmark-button,.saved-link,.service-tool>a,.source-toolkit-helper a,
+  .source-toolkit-all a,.partner-specific-box>a,.geo-guideline-link,
+  .playbook-card>a,.source-section-tabs a.is-current,.source-section-tabs a:first-child
+),
+html body.reference-ui-v99.theme-dark :is(
+  a,.plain-link,.text-cta,.term-help,.rail-all-tools,.sidebar-partner-cta span,
+  .section-bottom-links a,.home-actions a,.guide-v101-next a,
+  .guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,
+  .bookmark-button,.saved-link,.service-tool>a,.source-toolkit-helper a,
+  .source-toolkit-all a,.partner-specific-box>a,.geo-guideline-link,
+  .playbook-card>a,.source-section-tabs a.is-current,.source-section-tabs a:first-child
+){
+  color:#d3c3a4!important;
+}
+html body.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.term-help:hover),
+html body.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.term-help:hover){
+  color:#eadabc!important;
+}
+
+/* Navigation remains neutral, not beige or green. */
+html body.theme-dark :is(
+  .sidebar-menu a,.sidebar-secondary a,.ref-nav-group nav a,
+  .ref-topbar-crumbs a,.ref-topbar-crumbs b,.ref-mobile-brand,
+  .ref-mobile-brand b,.ref-sidebar-brand,.ref-sidebar-brand b
+),
+html body.reference-ui-v99.theme-dark :is(
+  .sidebar-menu a,.sidebar-secondary a,.ref-nav-group nav a,
+  .ref-topbar-crumbs a,.ref-topbar-crumbs b,.ref-mobile-brand,
+  .ref-mobile-brand b,.ref-sidebar-brand,.ref-sidebar-brand b
+){
+  color:#dce3e8!important;
+}
+html body.theme-dark :is(
+  .sidebar-menu a:hover,.sidebar-menu a.active,.sidebar-menu a.is-active,
+  .sidebar-menu a[aria-current="page"],.ref-nav-group nav a:hover,
+  .ref-nav-group nav a.is-active,.ref-nav-group nav a[aria-current="page"]
+),
+html body.reference-ui-v99.theme-dark :is(
+  .sidebar-menu a:hover,.sidebar-menu a.active,.sidebar-menu a.is-active,
+  .sidebar-menu a[aria-current="page"],.ref-nav-group nav a:hover,
+  .ref-nav-group nav a.is-active,.ref-nav-group nav a[aria-current="page"]
+){
+  color:#f2f5f7!important;
+}
+
+/* Remove green from badges, counters, icons and pseudo-elements too. */
+html body.theme-dark :is(
+  .logic-index-v103,.reading-state-badge,.rule-model-badge,.service-primary-badge,
+  .mode-recommended-tool>.big-tool-head:before,.about-route-v114 li:before,
+  .playbook-checklist li:before,.rail-quick a:before,.playbook-faq summary::before,
+  .section-outcome li:before,.global-sidebar .sidebar-menu a:before,
+  .ref-nav-icon,.service-mark,.rail-tool-mark,.ref-metrics-row span
+),
+html body.reference-ui-v99.theme-dark :is(
+  .logic-index-v103,.reading-state-badge,.rule-model-badge,.service-primary-badge,
+  .mode-recommended-tool>.big-tool-head:before,.about-route-v114 li:before,
+  .playbook-checklist li:before,.rail-quick a:before,.playbook-faq summary::before,
+  .section-outcome li:before,.global-sidebar .sidebar-menu a:before,
+  .ref-nav-icon,.service-mark,.rail-tool-mark,.ref-metrics-row span
+){
+  color:#cbd3da!important;
+  border-color:#3b4652!important;
+}
+html body.theme-dark :is(
+  .logic-index-v103,.reading-state-badge,.rule-model-badge,.service-primary-badge,
+  .about-route-v114 li:before,.playbook-checklist li:before,.rail-quick a:before,
+  .section-outcome li:before,.service-mark,.rail-tool-mark
+),
+html body.reference-ui-v99.theme-dark :is(
+  .logic-index-v103,.reading-state-badge,.rule-model-badge,.service-primary-badge,
+  .about-route-v114 li:before,.playbook-checklist li:before,.rail-quick a:before,
+  .section-outcome li:before,.service-mark,.rail-tool-mark
+){
+  background:#19212a!important;
+  background-image:none!important;
+}
+
+html body.theme-dark .source-section-tabs a.is-current,
+html body.theme-dark .source-section-tabs a:first-child,
+html body.reference-ui-v99.theme-dark .source-section-tabs a.is-current,
+html body.reference-ui-v99.theme-dark .source-section-tabs a:first-child{
+  border-bottom-color:#6f7d89!important;
+}
+
+html body.theme-dark :is(pre,code),
+html body.reference-ui-v99.theme-dark :is(pre,code){
+  color:#d3c3a4!important;
+}
+
+/* No green decorative fills inside dark callouts or partner blocks. */
+html body.theme-dark :is(
+  .logic-action-v103,.partner-specific-box,.home-results-inner,.sidebar-partner-cta,
+  .about-nav-note-v114,.geo-directory-brand,.geo-guideline-link
+),
+html body.reference-ui-v99.theme-dark :is(
+  .logic-action-v103,.partner-specific-box,.home-results-inner,.sidebar-partner-cta,
+  .about-nav-note-v114,.geo-directory-brand,.geo-guideline-link
+){
+  background:#111820!important;
+  background-image:none!important;
+  border-color:#29333d!important;
+}
