@@ -13871,3 +13871,286 @@ html body.reference-ui-v99.theme-dark :is(.brand-mark,.nav-all,.nav-basics,.nav-
   border-color:#33404d!important;
   color:#f2f4f6!important;
 }
+
+/* v181 — calmer dark theme: graphite canvas, softer contrast, restrained accents */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-dark-bg:#0d1117;
+  --tl-dark-bg-2:#10151b;
+  --tl-dark-panel:#131920;
+  --tl-dark-panel-2:#161d25;
+  --tl-dark-line:#28313a;
+  --tl-dark-line-soft:#222a32;
+  --tl-dark-text:#e7ecef;
+  --tl-dark-copy:#b9c3ca;
+  --tl-dark-muted:#8e9aa4;
+  --tl-dark-accent:#9eb3c1;
+  --tl-dark-accent-2:#b8c8d2;
+  --tl-dark-warm:#c4a47b;
+  --tl-dark-warm-bg:#1d1915;
+  --tl-dark-warm-line:#514333;
+}
+
+/* One calm canvas. */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main,
+html body.theme-dark :is(.compact-main-v103,.section-landing,.article-page,.source-playbook-page,.article-layout,.article,.structured-article-v103,.source-playbook-article,.page-head,.section-landing-head,.source-hero-shell,.academy-article-hero,.academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot),
+html body.reference-ui-v99.theme-dark :is(.compact-main-v103,.section-landing,.article-page,.source-playbook-page,.article-layout,.article,.structured-article-v103,.source-playbook-article,.page-head,.section-landing-head,.source-hero-shell,.academy-article-hero,.academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot){
+  background:var(--tl-dark-bg)!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Header/sidebar should feel like the same product, not separate colored strips. */
+html body.theme-dark .site-header,
+html body.reference-ui-v99.theme-dark .site-header{
+  background:#0f141a!important;
+  border-bottom:1px solid var(--tl-dark-line)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .global-sidebar,
+html body.reference-ui-v99.theme-dark .global-sidebar{
+  background:#0f141a!important;
+  border-right:1px solid var(--tl-dark-line)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .site-footer,
+html body.reference-ui-v99.theme-dark .site-footer{
+  background:#0b0f14!important;
+  border-color:#252d35!important;
+}
+
+/* Typography: bright enough to read, not stark white. */
+html body.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.hero-badge,.section-eyebrow,.article-kicker,.source-title-copy h1,.service-tool h3,.playbook-card h2),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.hero-badge,.section-eyebrow,.article-kicker,.source-title-copy h1,.service-tool h3,.playbook-card h2){
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark :is(p,li,dd,dt,figcaption,.lead,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.service-tool p,.tool-card p,.about-card p),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,figcaption,.lead,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.service-tool p,.tool-card p,.about-card p){
+  color:var(--tl-dark-copy)!important;
+}
+html body.theme-dark :is(small,.muted,.meta,.article-meta,.card-meta,.breadcrumbs,.service-kicker,.rail-tools a small,.rail-related-visual span),
+html body.reference-ui-v99.theme-dark :is(small,.muted,.meta,.article-meta,.card-meta,.breadcrumbs,.service-kicker,.rail-tools a small,.rail-related-visual span){
+  color:var(--tl-dark-muted)!important;
+}
+
+/* Links: cool neutral rather than green or bright gold. */
+html body.theme-dark a,
+html body.reference-ui-v99.theme-dark a{
+  color:var(--tl-dark-accent-2)!important;
+}
+html body.theme-dark a:hover,
+html body.reference-ui-v99.theme-dark a:hover{
+  color:#dbe4e9!important;
+}
+html body.theme-dark :is(.plain-link,.text-cta,.partner-specific-box>a,.geo-guideline-link,.source-toolkit-helper a,.source-toolkit-all a,.service-tool>a,.playbook-card>a,.section-entry span),
+html body.reference-ui-v99.theme-dark :is(.plain-link,.text-cta,.partner-specific-box>a,.geo-guideline-link,.source-toolkit-helper a,.source-toolkit-all a,.service-tool>a,.playbook-card>a,.section-entry span){
+  color:#aebfca!important;
+}
+
+/* Cards: only one small step lighter than the page. */
+html body.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.knowledge-map>div,
+  .library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,.playbook-card,
+  .source-tool-card,.source-journey-card,.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,
+  .platform-setup>div,.platform-setup>li,.playbook-format-list>div,.traffic-diagnostic-list li,
+  .guide-v101-grid>div,.guide-v101-formats>article,.guide-v101-timeline,.guide-v101-media,
+  .guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,
+  .notes-card,.tool-panel,.related-primary,.related-secondary,.next-reading a,.service-inline,
+  .rules-summary-grid>div,.rules-model-grid>section,.geo-chip-grid>li
+),
+html body.reference-ui-v99.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.knowledge-map>div,
+  .library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,.playbook-card,
+  .source-tool-card,.source-journey-card,.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,
+  .platform-setup>div,.platform-setup>li,.playbook-format-list>div,.traffic-diagnostic-list li,
+  .guide-v101-grid>div,.guide-v101-formats>article,.guide-v101-timeline,.guide-v101-media,
+  .guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,
+  .notes-card,.tool-panel,.related-primary,.related-secondary,.next-reading a,.service-inline,
+  .rules-summary-grid>div,.rules-model-grid>section,.geo-chip-grid>li
+){
+  background:var(--tl-dark-panel)!important;
+  background-image:none!important;
+  border-color:var(--tl-dark-line)!important;
+  box-shadow:none!important;
+}
+
+/* Large article sections stay flat. */
+html body.theme-dark :is(.academy-content-section,.logic-section-v103,.article-depth,.source-playbook-article>section,.guide-v101-section,.section-groups,.section-group,.section-bottom-links,.related-reading,.article-author,.article-exit-nav),
+html body.reference-ui-v99.theme-dark :is(.academy-content-section,.logic-section-v103,.article-depth,.source-playbook-article>section,.guide-v101-section,.section-groups,.section-group,.section-bottom-links,.related-reading,.article-author,.article-exit-nav){
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  border-color:var(--tl-dark-line-soft)!important;
+}
+
+/* Informational callouts should not become large colored banners. */
+html body.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.rules-action-box,.partner-specific-box,.service-notice,.partner-next-step),
+html body.reference-ui-v99.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.rules-action-box,.partner-specific-box,.service-notice,.partner-next-step){
+  background:#16191d!important;
+  background-image:none!important;
+  border-color:#443a2f!important;
+  color:#c9c1b5!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.rules-action-box,.partner-specific-box,.service-notice,.partner-next-step) :is(p,li,dd),
+html body.reference-ui-v99.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.rules-action-box,.partner-specific-box,.service-notice,.partner-next-step) :is(p,li,dd){
+  color:#c5bdb1!important;
+}
+
+/* Numbering: quiet steel-blue, no neon green. */
+html body.theme-dark :is(.logic-index-v103,.source-playbook-page .playbook-steps>li>span:first-child,.source-playbook-article .guide-v101-steps li>span,.platform-setup li>span,.guide-v101-grid>div>span),
+html body.reference-ui-v99.theme-dark :is(.logic-index-v103,.source-playbook-page .playbook-steps>li>span:first-child,.source-playbook-article .guide-v101-steps li>span,.platform-setup li>span,.guide-v101-grid>div>span){
+  background:#18222b!important;
+  border-color:#3a4b59!important;
+  color:#b7cad6!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103,
+html body.reference-ui-v99.theme-dark.content-system-v103 .structured-article-v103 .logic-warning-v103 .logic-index-v103{
+  background:#221e19!important;
+  border-color:#544632!important;
+  color:#cfb183!important;
+}
+
+/* Term hints: neutral warm-gray instead of green. */
+html body.theme-dark .term-help,
+html body.reference-ui-v99.theme-dark .term-help{
+  color:#d5dde1!important;
+  border-bottom-color:#70624e!important;
+  background:transparent!important;
+}
+html body.theme-dark .term-help:after,
+html body.reference-ui-v99.theme-dark .term-help:after{
+  border-color:#70624e!important;
+  color:#bba17a!important;
+}
+html body.theme-dark .term-help:hover,
+html body.theme-dark .term-help:focus-visible,
+html body.theme-dark .term-help[aria-expanded="true"],
+html body.reference-ui-v99.theme-dark .term-help:hover,
+html body.reference-ui-v99.theme-dark .term-help:focus-visible,
+html body.reference-ui-v99.theme-dark .term-help[aria-expanded="true"]{
+  color:#eceff1!important;
+  background:rgba(180,157,120,.07)!important;
+}
+
+/* Buttons: visible, but no bright fill. */
+html body.theme-dark :is(
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .guide-v101-inline-link a,.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),
+  .home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next a,
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.service-task-nav a,.source-next-links a
+),
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .guide-v101-inline-link a,.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),
+  .home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next a,
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.service-task-nav a,.source-next-links a
+){
+  background:#1a232c!important;
+  border-color:#3b4a57!important;
+  color:#dce6eb!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .guide-v101-inline-link a,.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),
+  .home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next a,
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.service-task-nav a,.source-next-links a
+):hover,
+html body.reference-ui-v99.theme-dark :is(
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .guide-v101-inline-link a,.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),
+  .home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next a,
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.service-task-nav a,.source-next-links a
+):hover{
+  background:#202c36!important;
+  border-color:#4a5c69!important;
+  color:#f0f4f6!important;
+}
+
+/* 1win may remain identifiable, but quietly. */
+html body.theme-dark :is(.sidebar-partner-cta,.ref-partner-card,.home-action-partner),
+html body.reference-ui-v99.theme-dark :is(.sidebar-partner-cta,.ref-partner-card,.home-action-partner){
+  background:#1b1815!important;
+  border-color:#4b4033!important;
+  color:#d8c5aa!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.sidebar-partner-cta,.ref-partner-card,.home-action-partner) :is(span,small),
+html body.reference-ui-v99.theme-dark :is(.sidebar-partner-cta,.ref-partner-card,.home-action-partner) :is(span,small){
+  color:#b9a98f!important;
+}
+
+/* Navigation and tabs: no green active state. */
+html body.theme-dark .source-section-tabs a,
+html body.reference-ui-v99.theme-dark .source-section-tabs a{
+  color:#8f9ca6!important;
+  background:transparent!important;
+}
+html body.theme-dark .source-section-tabs a:is(.is-current,:first-child),
+html body.reference-ui-v99.theme-dark .source-section-tabs a:is(.is-current,:first-child){
+  color:#c1ced6!important;
+  border-bottom-color:#657986!important;
+  background:transparent!important;
+}
+html body.theme-dark .source-playbook-page .playbook-aside li a:hover,
+html body.reference-ui-v99.theme-dark .source-playbook-page .playbook-aside li a:hover{
+  color:#d5dfe4!important;
+}
+html body.theme-dark .rail-progress span,
+html body.reference-ui-v99.theme-dark .rail-progress span{
+  background:#768996!important;
+}
+
+/* Right rail: reduce contrast with article. */
+html body.theme-dark .article-aside.enhanced-rail,
+html body.reference-ui-v99.theme-dark .article-aside.enhanced-rail{
+  background:transparent!important;
+  border-color:var(--tl-dark-line)!important;
+}
+html body.theme-dark .article-aside.enhanced-rail :is(.aside-block,.rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card),
+html body.reference-ui-v99.theme-dark .article-aside.enhanced-rail :is(.aside-block,.rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card){
+  background:#121820!important;
+  border-color:#2a333d!important;
+  box-shadow:none!important;
+}
+
+/* Inputs and search fields. */
+html body.theme-dark :is(input,select,textarea,.sidebar-search input,.home-main-search input,.ref-top-search),
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,.sidebar-search input,.home-main-search input,.ref-top-search){
+  background:#121820!important;
+  border-color:#313b45!important;
+  color:#dfe5e8!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(input,textarea)::placeholder,
+html body.reference-ui-v99.theme-dark :is(input,textarea)::placeholder{
+  color:#77838c!important;
+  opacity:1!important;
+}
+
+/* Tables/code use the same understated hierarchy. */
+html body.theme-dark table,
+html body.reference-ui-v99.theme-dark table{background:#11171e!important;border-color:#29323c!important}
+html body.theme-dark th,
+html body.reference-ui-v99.theme-dark th{background:#161d25!important;color:#dce3e7!important;border-color:#2d3741!important}
+html body.theme-dark td,
+html body.reference-ui-v99.theme-dark td{background:#121820!important;color:#b9c3ca!important;border-color:#29323c!important}
+html body.theme-dark :is(pre,code),
+html body.reference-ui-v99.theme-dark :is(pre,code){background:#121820!important;color:#c9b18d!important}
+
+/* Decorative icons/marks should support the page rather than dominate it. */
+html body.theme-dark :is(.service-mark,.rail-tool-mark,.source-hero-icon,.ref-nav-icon,.sidebar-menu a:before),
+html body.reference-ui-v99.theme-dark :is(.service-mark,.rail-tool-mark,.source-hero-icon,.ref-nav-icon,.sidebar-menu a:before){
+  background:#171e26!important;
+  border-color:#303b45!important;
+  color:#a6b6c0!important;
+}
