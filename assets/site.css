@@ -14154,3 +14154,245 @@ html body.reference-ui-v99.theme-dark :is(.service-mark,.rail-tool-mark,.source-
   border-color:#303b45!important;
   color:#a6b6c0!important;
 }
+
+
+/* ======================================================================
+   v182 — dark theme uniform cleanup
+   Calm, solid dark surfaces, even side gutters, no green accents.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-dark-bg:#0b1015;
+  --tl-dark-panel:#111821;
+  --tl-dark-panel-2:#151d27;
+  --tl-dark-border:#273240;
+  --tl-dark-border-strong:#334153;
+  --tl-dark-text:#eef2f6;
+  --tl-dark-muted:#c6ced7;
+  --tl-dark-soft:#9ca6b1;
+  --tl-dark-accent:#d5c19a;
+  --tl-dark-accent-strong:#e3d0ab;
+  background:var(--tl-dark-bg)!important;
+  color:var(--tl-dark-text)!important;
+}
+
+/* Remove the decorative background grid, blobs and side glow in dark theme. */
+html body.theme-dark :is(main,.site-footer,.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.compact-main-v103,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.academy-article-hero,.source-hero-shell){
+  background:var(--tl-dark-bg)!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(main,.compact-main-v103,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results)::before,
+html body.theme-dark :is(main,.compact-main-v103,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results)::after,
+html body.reference-ui-v99.theme-dark :is(main,.article-page,.source-playbook-page)::before,
+html body.reference-ui-v99.theme-dark :is(main,.article-page,.source-playbook-page)::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+
+/* Keep all article canvases uniform and solid. */
+html body.theme-dark :is(.article-page .article,.source-playbook-page .source-playbook-article,.structured-article-v103,.academy-article-hero-shell),
+html body.reference-ui-v99.theme-dark :is(.article-page .article,.source-playbook-page .source-playbook-article){
+  background:var(--tl-dark-panel)!important;
+  background-image:none!important;
+  border:1px solid var(--tl-dark-border)!important;
+  border-radius:14px!important;
+  color:var(--tl-dark-text)!important;
+  box-shadow:none!important;
+  padding:28px!important;
+}
+html body.theme-dark :is(.source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103),
+html body.reference-ui-v99.theme-dark :is(.source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103){
+  background:transparent!important;
+  background-image:none!important;
+  margin:0!important;
+  padding:24px 0!important;
+  border-top:1px solid var(--tl-dark-border)!important;
+  border-bottom:0!important;
+  border-left:0!important;
+  border-right:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.source-playbook-article>section:first-of-type,.article-page .article>section:first-of-type),
+html body.reference-ui-v99.theme-dark :is(.source-playbook-article>section:first-of-type,.article-page .article>section:first-of-type){
+  border-top:0!important;
+  padding-top:18px!important;
+}
+
+/* Equal side gutters on all dark pages. */
+html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap,
+html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap,
+html body.theme-dark.content-system-v103 main.section-landing > .wrap,
+html body.theme-dark.content-system-v103 main.section-landing .wrap{
+  width:min(calc(100% - 56px),var(--v104-regular-content))!important;
+  max-width:var(--v104-regular-content)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+html body.theme-dark :is(.article-page .article-layout,.source-playbook-page .article-layout),
+html body.reference-ui-v99.theme-dark .article-layout{
+  width:min(calc(100% - 56px),1260px)!important;
+  max-width:1260px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:28px!important;
+  padding-right:28px!important;
+  box-sizing:border-box!important;
+}
+
+/* Neutralize all tinted blocks and cards in dark mode. */
+html body.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .playbook-card,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.section-groups,.section-group,
+  .knowledge-map>div,.library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,.section-card,
+  .source-tool-card,.traffic-hub-basics>div,.traffic-next a,.handbook-intro,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,.traffic-diagnostic-list li,
+  .source-journey-card,.article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.partner-next-step,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats>article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,
+  .related-reading,.related-primary,.related-secondary,.article-exit-nav a,.next-reading a,.starter-next,
+  .service-inline,.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.service-warning,
+  .logic-action-v103,.logic-analysis-v103,.logic-warning-v103,.logic-explain-v103,
+  .partner-specific-box.logic-section-v103,.source-compare-note,.ref-tip-strip,
+  .compare-table > div,.source-compare-row > div,.rules-model-grid section,.rules-summary-grid > div,
+  .geo-directory,.geo-chip-grid li,.geo-guideline-link,.rail-tools a,.playbook-method li,
+  .playbook-template-list span,.playbook-decision article,.ref-track-card,.ref-metrics-card,.ref-metrics-row>div,
+  .ref-format-card,.ref-connected-tools a,.source-compare-actions a,.article-cta-row a,.playbook-head-actions a,
+  .playbook-official a,.bookmark-button,.saved-link,.rail-quick,.rail-quick a,.playbook-faq details,
+  .home-actions a,.section-bottom-links a,.home-main-search button,.sidebar-partner-cta,.sidebar-partner-rules
+),
+html body.reference-ui-v99.theme-dark :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .playbook-card,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.section-groups,.section-group,
+  .knowledge-map>div,.library-row,.library-card,.tool-card,.about-card,.service-card,.service-tool,.section-card,
+  .source-tool-card,.traffic-hub-basics>div,.traffic-next a,.handbook-intro,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,.traffic-diagnostic-list li,
+  .source-journey-card,.article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,.rail-partner-card,.rail-path-card,.rail-cover-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.partner-next-step,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats>article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,
+  .related-reading,.related-primary,.related-secondary,.article-exit-nav a,.next-reading a,.starter-next,
+  .service-inline,.inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.service-warning,
+  .logic-action-v103,.logic-analysis-v103,.logic-warning-v103,.logic-explain-v103,
+  .partner-specific-box.logic-section-v103,.source-compare-note,.ref-tip-strip,
+  .compare-table > div,.source-compare-row > div,.rules-model-grid section,.rules-summary-grid > div,
+  .geo-directory,.geo-chip-grid li,.geo-guideline-link,.rail-tools a,.playbook-method li,
+  .playbook-template-list span,.playbook-decision article,.ref-track-card,.ref-metrics-card,.ref-metrics-row>div,
+  .ref-format-card,.ref-connected-tools a,.source-compare-actions a,.article-cta-row a,.playbook-head-actions a,
+  .playbook-official a,.bookmark-button,.saved-link,.rail-quick,.rail-quick a,.playbook-faq details,
+  .home-actions a,.section-bottom-links a,.home-main-search button,.sidebar-partner-cta,.sidebar-partner-rules
+){
+  background:var(--tl-dark-panel)!important;
+  background-image:none!important;
+  border-color:var(--tl-dark-border)!important;
+  color:var(--tl-dark-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.logic-action-v103,.logic-analysis-v103,.logic-warning-v103,.logic-explain-v103,.inline-note,.playbook-risk,.warning-note,.service-warning,.guide-v101-callout,.ref-tip-strip,.source-compare-note){
+  border-left:3px solid var(--tl-dark-border-strong)!important;
+}
+
+/* Tables and content shells should stay solid and readable. */
+html body.theme-dark :is(table,thead,tbody,tr),
+html body.reference-ui-v99.theme-dark :is(table,thead,tbody,tr){
+  background:var(--tl-dark-panel)!important;
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark th,
+html body.reference-ui-v99.theme-dark th{
+  background:var(--tl-dark-panel-2)!important;
+  color:var(--tl-dark-text)!important;
+  border-color:var(--tl-dark-border-strong)!important;
+}
+html body.theme-dark td,
+html body.reference-ui-v99.theme-dark td{
+  background:var(--tl-dark-panel)!important;
+  color:var(--tl-dark-muted)!important;
+  border-color:var(--tl-dark-border)!important;
+}
+
+/* Remove green text and replace with restrained warm accent. */
+html body.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partner-cta span,.section-bottom-links a,.home-actions a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.bookmark-button,.saved-link),
+html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partner-cta span,.section-bottom-links a,.home-actions a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.bookmark-button,.saved-link){
+  color:var(--tl-dark-accent)!important;
+}
+html body.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.rail-all-tools:hover,.section-bottom-links a:hover,.home-actions a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,.article-exit-nav a:hover,.next-reading a:hover,.bookmark-button:hover,.saved-link:hover),
+html body.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.rail-all-tools:hover,.section-bottom-links a:hover,.home-actions a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,.article-exit-nav a:hover,.next-reading a:hover,.bookmark-button:hover,.saved-link:hover){
+  color:var(--tl-dark-accent-strong)!important;
+}
+html body.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.guide-v101-formats p,.guide-v101-grid p,.guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,.service-tool p,.tool-card p,.about-card p,.playbook-faq details p,.rail-quick a small,.source-compare-row > div,.compare-table > div,.rules-summary-grid p,.rules-model-grid li,.geo-chip-grid li,.geo-chip-grid li small,.geo-guideline-link span,.article td,.article dd,.source-playbook-article dd,.playbook-facts dt),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.guide-v101-formats p,.guide-v101-grid p,.guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,.service-tool p,.tool-card p,.about-card p,.playbook-faq details p,.rail-quick a small,.source-compare-row > div,.compare-table > div,.rules-summary-grid p,.rules-model-grid li,.geo-chip-grid li,.geo-chip-grid li small,.geo-guideline-link span,.article td,.article dd,.source-playbook-article dd,.playbook-facts dt){
+  color:var(--tl-dark-muted)!important;
+}
+html body.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,.section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,.article-page .article h1,.article-page .article h2,.article th,.rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,.playbook-faq summary,.home-results-inner h2),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,.section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,.article-page .article h1,.article-page .article h2,.article th,.rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,.playbook-faq summary,.home-results-inner h2){
+  color:var(--tl-dark-text)!important;
+}
+
+/* Tone down number badges and circular counters. */
+html body.theme-dark :is(.check-list li:before,.playbook-checklist li:before,.rail-quick a:before,.playbook-faq summary::before,.sidebar-menu a:before,.reading-state-badge,.section-outcome li:before,.diagnostic-flag b),
+html body.reference-ui-v99.theme-dark :is(.check-list li:before,.playbook-checklist li:before,.rail-quick a:before,.playbook-faq summary::before,.sidebar-menu a:before,.reading-state-badge,.section-outcome li:before,.diagnostic-flag b){
+  color:#e8edf2!important;
+}
+html body.theme-dark :is(.playbook-checklist li:before,.rail-quick a:before),
+html body.reference-ui-v99.theme-dark :is(.playbook-checklist li:before,.rail-quick a:before){
+  background:var(--tl-dark-panel-2)!important;
+}
+
+/* Inputs and buttons stay dark, readable and not flashy. */
+html body.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input),
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input){
+  background:var(--tl-dark-panel)!important;
+  border-color:var(--tl-dark-border)!important;
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark :is(input,select,textarea,.sidebar-search input,.home-main-search input)::placeholder,
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,.sidebar-search input,.home-main-search input)::placeholder{
+  color:var(--tl-dark-soft)!important;
+}
+html body.theme-dark :is(.theme-toggle,.sidebar-menu a:hover,.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,.header-about-link:hover,.ref-theme-button:hover,.ref-top-favorite:hover),
+html body.reference-ui-v99.theme-dark :is(.theme-toggle,.sidebar-menu a:hover,.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,.header-about-link:hover,.ref-theme-button:hover,.ref-top-favorite:hover){
+  background:var(--tl-dark-panel-2)!important;
+  border-color:var(--tl-dark-border-strong)!important;
+  color:var(--tl-dark-text)!important;
+}
+
+/* Keep text away from card edges. */
+html body.theme-dark :is(.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.playbook-card,.home-entry-grid>a,.home-source-grid>a,.knowledge-map>div,.service-card,.service-tool,.library-row,.tool-card,.about-card,.section-card,.source-tool-card,.source-journey-card,.guide-v101-formats>article,.guide-v101-grid>div,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.playbook-faq details,.related-reading,.related-primary,.related-secondary,.field-case,.tool-panel,.calc-card,.diagnostic-card,.notes-card,.article-figure,.home-search-card,.home-welcome-summary>div,.sidebar-partner-cta,.sidebar-partner-rules),
+html body.reference-ui-v99.theme-dark :is(.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.playbook-card,.home-entry-grid>a,.home-source-grid>a,.knowledge-map>div,.service-card,.service-tool,.library-row,.tool-card,.about-card,.section-card,.source-tool-card,.source-journey-card,.guide-v101-formats>article,.guide-v101-grid>div,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,.playbook-faq details,.related-reading,.related-primary,.related-secondary,.field-case,.tool-panel,.calc-card,.diagnostic-card,.notes-card,.article-figure,.home-search-card,.home-welcome-summary>div,.sidebar-partner-cta,.sidebar-partner-rules){
+  padding-left:22px!important;
+  padding-right:22px!important;
+}
+
+@media (max-width: 900px){
+  html body.theme-dark :is(.article-page .article-layout,.source-playbook-page .article-layout),
+  html body.reference-ui-v99.theme-dark .article-layout{
+    width:calc(100% - 28px)!important;
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+  html body.theme-dark :is(.article-page .article,.source-playbook-page .source-playbook-article,.structured-article-v103,.academy-article-hero-shell),
+  html body.reference-ui-v99.theme-dark :is(.article-page .article,.source-playbook-page .source-playbook-article){
+    padding:20px!important;
+    border-radius:12px!important;
+  }
+  html body.theme-dark :is(.source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103),
+  html body.reference-ui-v99.theme-dark :is(.source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103){
+    padding:18px 0!important;
+  }
+  html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .wrap,
+  html body.theme-dark.content-system-v103 main.compact-main-v103:not(.source-playbook-page) .wrap,
+  html body.theme-dark.content-system-v103 main.section-landing > .wrap,
+  html body.theme-dark.content-system-v103 main.section-landing .wrap{
+    width:calc(100% - 28px)!important;
+  }
+}
