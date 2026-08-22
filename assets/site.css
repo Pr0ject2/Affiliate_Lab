@@ -12162,3 +12162,39 @@ html body .source-playbook-page .source-hero-short-video,
 html body .source-playbook-page .source-hero-alt-video{box-shadow:none!important}
 html body.theme-dark .source-playbook-page .source-hero-icon,
 html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{border-color:#31404b!important;background-color:#171d22!important}
+
+
+/* v153 — unify intro/header alignment across section landing pages */
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .global-mode-guidance.wrap,
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .beginner-term-note.wrap,
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow{
+  width:min(calc(100% - 42px),var(--v104-regular-content))!important;
+  max-width:var(--v104-regular-content)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap > :is(.overline,h1,p,.glossary-search),
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow > :is(.overline,h1,p,.glossary-search),
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap > :is(.overline,h1,p),
+html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow > :is(.overline,h1,p),
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow > *{
+  margin-left:0!important;
+}
+@media (max-width: 650px){
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .global-mode-guidance.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.source-playbook-page) > .beginner-term-note.wrap,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow{
+    width:min(calc(100% - 30px),var(--v104-regular-content))!important;
+  }
+}
