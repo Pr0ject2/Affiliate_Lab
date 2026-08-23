@@ -15861,3 +15861,47 @@ html body.reference-ui-v99.theme-dark :is(.service-mark,.rail-tool-mark,.ref-nav
   border-color:#34414e!important;
   color:#c5d0da!important;
 }
+
+
+/* v196D — Dark Metal */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main.compact-main-v103,
+html body.reference-ui-v99.theme-dark main.compact-main-v103{
+  background:
+    linear-gradient(90deg,#090e13 0%,#0d1319 17%,#10161d 50%,#0d1319 83%,#090e13 100%),
+    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,0))!important;
+  background-attachment:fixed!important;
+}
+
+
+html body.theme-dark :is(
+  .article-layout,.article,.structured-article-v103,.source-playbook-article,
+  .page-head,.section-landing,.section-landing-head,.academy-article-hero,
+  .academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot,
+  .academy-article-hero-shell,.source-hero-shell,.source-title-row,.source-title-copy,
+  .library-shell,.library-main,.handbook,.glossary,.saved-page,.diagnostic-wizard-page,
+  .source-compare-page,.traffic-page,.services-page,.notes-page,.tool-suite,
+  .about-hero-v114,.about-layout-v114,.journal-reading,.catalog-bar,
+  .global-mode-guidance,.beginner-term-note,.related-reading,.article-author,
+  .article-exit-nav,.next-reading,.section-groups,.section-group,.section-group-head,
+  .section-bottom-links,.academy-content-section,.logic-section-v103,
+  .source-playbook-article>section,.article>section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .article-layout,.article,.structured-article-v103,.source-playbook-article,
+  .page-head,.section-landing,.section-landing-head,.academy-article-hero,
+  .academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot,
+  .academy-article-hero-shell,.source-hero-shell,.source-title-row,.source-title-copy,
+  .library-shell,.library-main,.handbook,.glossary,.saved-page,.diagnostic-wizard-page,
+  .source-compare-page,.traffic-page,.services-page,.notes-page,.tool-suite,
+  .about-hero-v114,.about-layout-v114,.journal-reading,.catalog-bar,
+  .global-mode-guidance,.beginner-term-note,.related-reading,.article-author,
+  .article-exit-nav,.next-reading,.section-groups,.section-group,.section-group-head,
+  .section-bottom-links,.academy-content-section,.logic-section-v103,
+  .source-playbook-article>section,.article>section
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+}
