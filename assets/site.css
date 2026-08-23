@@ -20379,3 +20379,295 @@ html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page :is(.home-e
     background-size:auto,1200px auto!important;
   }
 }
+
+
+/* ======================================================================
+   v261 — финальная полировка главной страницы по референсу
+   Общая структура, форма карточек, жирность текста, увеличенный отступ
+   после вступительного блока и аккуратная адаптация для светлой темы.
+   ====================================================================== */
+
+html body.home-shell-v256 main.home-page .home-welcome,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+  padding:74px 0 44px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap,
+html body.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap,
+html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap,
+html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap,
+html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
+  width:min(calc(100% - 88px),1120px)!important;
+  max-width:1120px!important;
+  margin:0 auto!important;
+  padding:0!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-copy,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+  width:min(100%,860px)!important;
+  max-width:860px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome h1,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1,
+html body.theme-dark.home-shell-v256 main.home-page .home-welcome h1{
+  max-width:780px!important;
+  margin:0!important;
+  font-size:clamp(44px,4.15vw,66px)!important;
+  line-height:1.01!important;
+  letter-spacing:-.048em!important;
+  font-weight:820!important;
+  text-wrap:balance!important;
+}
+
+html body.home-shell-v256 main.home-page .home-lead,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead,
+html body.theme-dark.home-shell-v256 main.home-page .home-lead{
+  max-width:720px!important;
+  margin:18px 0 0!important;
+  font-size:18px!important;
+  line-height:1.64!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-summary,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary{
+  width:min(100%,860px)!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin:34px 0 0!important;
+  padding:0!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-summary > div,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary > div,
+html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div{
+  min-height:168px!important;
+  padding:22px 21px 20px!important;
+  border-radius:16px!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-summary b,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary b{
+  display:block!important;
+  margin:0 0 8px!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:15px!important;
+  line-height:1.32!important;
+  font-weight:790!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-summary span,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary span{
+  display:block!important;
+  font-size:13.8px!important;
+  line-height:1.64!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-section,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-section{
+  padding:82px 0 54px!important;
+  background:transparent!important;
+}
+
+html body.home-shell-v256 main.home-page .home-section-title,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title{
+  margin-bottom:28px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-section-title > p,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title > p{
+  margin:0 0 12px!important;
+  font-size:11px!important;
+  font-weight:820!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+
+html body.home-shell-v256 main.home-page .home-section-title h2,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title h2{
+  margin:0!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:42px!important;
+  line-height:1.04!important;
+  letter-spacing:-.04em!important;
+  font-weight:810!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-grid,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-grid{
+  gap:18px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-grid > a,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-grid > a{
+  min-height:214px!important;
+  padding:26px 24px 22px!important;
+  border-radius:18px!important;
+  transition:border-color .16s ease, box-shadow .16s ease, transform .16s ease, background-color .16s ease!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-grid > a b,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-grid > a b{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.35!important;
+  font-weight:780!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-grid > a p,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-grid > a p{
+  margin:12px 0 0!important;
+  font-size:14.5px!important;
+  line-height:1.68!important;
+}
+
+html body.home-shell-v256 main.home-page .home-entry-grid > a span,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-entry-grid > a span{
+  margin-top:auto!important;
+  padding-top:24px!important;
+  font-size:13px!important;
+  font-weight:760!important;
+}
+
+html body.home-shell-v256 main.home-page .home-results,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-results{
+  padding:70px 0 72px!important;
+  background:transparent!important;
+}
+
+html body.home-shell-v256 main.home-page .home-results .home-results-inner,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner{
+  border-radius:20px!important;
+  padding:34px 34px!important;
+  gap:28px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-results .home-results-inner h2,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner h2{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:32px!important;
+  line-height:1.08!important;
+  letter-spacing:-.03em!important;
+  font-weight:790!important;
+}
+
+html body.home-shell-v256 main.home-page .home-results .home-results-inner > div > span,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner > div > span{
+  font-size:14px!important;
+  line-height:1.64!important;
+}
+
+html body.home-shell-v256 main.home-page .home-results nav{gap:10px!important}
+html body.home-shell-v256 main.home-page .home-results nav a{padding:12px 14px!important;border-radius:10px!important;font-size:13px!important;font-weight:760!important}
+
+/* Light theme */
+html body:not(.theme-dark).home-shell-v256 main.home-page{
+  background:linear-gradient(180deg,#f7f6f1 0%,#f9faf8 58%,#f4f6f3 100%)!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome{
+  background:radial-gradient(circle at 82% 12%,rgba(176,190,167,.16),transparent 23%),transparent!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome h1{color:#16392f!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-lead{color:#5a6561!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome-summary > div{
+  border:1px solid #d9e1dd!important;
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 10px 28px rgba(28,49,42,.05)!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome-summary b{color:#173d32!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome-summary span{color:#5b6762!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-section-title > p{color:#8b6848!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-section-title h2{color:#173d32!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-entry-grid > a{
+  border:1px solid #d9e1dd!important;
+  background:#ffffff!important;
+  box-shadow:0 12px 28px rgba(28,49,42,.05)!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-entry-grid > a:hover{
+  border-color:#c3d1ca!important;
+  box-shadow:0 16px 34px rgba(28,49,42,.08)!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-entry-grid > a b{color:#173d32!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-entry-grid > a p{color:#5d6764!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-entry-grid > a span{color:#7a5c3f!important}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-results .home-results-inner{
+  background:#23453a!important;
+  border:1px solid #2f5a4b!important;
+  box-shadow:0 16px 36px rgba(24,39,34,.10)!important;
+}
+
+/* Dark theme */
+html body.theme-dark.home-shell-v256 main.home-page .home-lead{color:#afbbc1!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div{
+  border:1px solid #2f3b46!important;
+  background:#121920!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a{
+  border:1px solid #2f3a45!important;
+  background:#10171d!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a:hover{
+  border-color:#43515f!important;
+  background:#121a21!important;
+  box-shadow:0 14px 28px rgba(0,0,0,.18)!important;
+  transform:translateY(-2px)!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a b{color:#f3f6f5!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a p{color:#b2bec3!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a span{color:#c59a6a!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-section-title > p{color:#a78158!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-section-title h2{color:#f0f4f3!important}
+html body.theme-dark.home-shell-v256 main.home-page .home-results .home-results-inner{
+  background:#17362f!important;
+  border:1px solid #2d594b!important;
+}
+
+@media (max-width:1100px){
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
+    width:min(calc(100% - 52px),1000px)!important;
+  }
+  html body.home-shell-v256 main.home-page .home-entry-grid > a{min-height:0!important}
+}
+
+@media (max-width:900px){
+  html body.home-shell-v256 main.home-page .home-welcome{padding:38px 0 30px!important}
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
+    width:calc(100% - 32px)!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome h1{
+    max-width:12ch!important;
+    font-size:clamp(36px,9.3vw,47px)!important;
+  }
+  html body.home-shell-v256 main.home-page .home-lead{font-size:15.5px!important;line-height:1.62!important}
+  html body.home-shell-v256 main.home-page .home-welcome-summary{grid-template-columns:1fr!important;gap:12px!important;margin-top:24px!important;width:100%!important}
+  html body.home-shell-v256 main.home-page .home-welcome-summary > div{min-height:0!important;padding:18px 17px!important;border-radius:14px!important}
+  html body.home-shell-v256 main.home-page .home-welcome-summary b{font-size:14.5px!important}
+  html body.home-shell-v256 main.home-page .home-welcome-summary span{font-size:13.4px!important}
+  html body.home-shell-v256 main.home-page .home-entry-section{padding:56px 0 40px!important}
+  html body.home-shell-v256 main.home-page .home-section-title{margin-bottom:20px!important}
+  html body.home-shell-v256 main.home-page .home-section-title h2{font-size:34px!important}
+  html body.home-shell-v256 main.home-page .home-entry-grid{grid-template-columns:1fr!important;gap:14px!important}
+  html body.home-shell-v256 main.home-page .home-entry-grid > a{padding:21px 18px 18px!important;border-radius:15px!important}
+  html body.home-shell-v256 main.home-page .home-entry-grid > a b{font-size:15px!important}
+  html body.home-shell-v256 main.home-page .home-entry-grid > a p{font-size:14px!important}
+  html body.home-shell-v256 main.home-page .home-entry-grid > a span{padding-top:16px!important}
+  html body.home-shell-v256 main.home-page .home-results{padding:52px 0 54px!important}
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner{padding:24px 20px!important;border-radius:16px!important;gap:20px!important}
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner h2{font-size:26px!important}
+}
+
+@media (max-width:640px){
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
+    width:calc(100% - 24px)!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome h1{font-size:clamp(32px,10vw,41px)!important}
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner{padding:22px 17px!important}
+}
