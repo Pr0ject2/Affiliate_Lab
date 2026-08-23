@@ -15949,3 +15949,105 @@ html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap.nar
     max-width:none!important;
   }
 }
+
+
+/* ======================================================================
+   v198 — hard uniform width for every internal page
+   All non-home section canvases use the same 930px reading width.
+   Article pages keep their 930px article plus a separate right rail.
+   A dedicated body marker outranks the accumulated legacy width rules.
+   ====================================================================== */
+:root{
+  --tl-v198-reading-width:930px;
+  --tl-v198-rail-width:270px;
+  --tl-v198-rail-gap:28px;
+  --tl-v198-gutter:18px;
+  --tl-v198-gutter-tablet:14px;
+  --tl-v198-gutter-mobile:10px;
+}
+
+/* Ordinary internal sections / catalogs / start pages. */
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .wrap:not(.article-layout),
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap,
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap.narrow,
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .wrap:not(.article-layout),
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap,
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap.narrow,
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.traffic-hub-page > .wrap:not(.article-layout),
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.services-page > .wrap:not(.article-layout),
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .wrap:not(.article-layout),
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap,
+html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap.narrow{
+  width:min(calc(100% - (var(--tl-v198-gutter) * 2)),var(--tl-v198-reading-width))!important;
+  max-width:var(--tl-v198-reading-width)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+
+/* Article pages: identical 930px reading column, rail lives beside it. */
+@media (min-width:1051px){
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main > .wrap.article-layout{
+    width:min(
+      calc(100% - (var(--tl-v198-gutter) * 2)),
+      calc(var(--tl-v198-reading-width) + var(--tl-v198-rail-width) + var(--tl-v198-rail-gap))
+    )!important;
+    max-width:calc(var(--tl-v198-reading-width) + var(--tl-v198-rail-width) + var(--tl-v198-rail-gap))!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    grid-template-columns:minmax(0,var(--tl-v198-reading-width)) var(--tl-v198-rail-width)!important;
+    gap:var(--tl-v198-rail-gap)!important;
+    justify-content:center!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main > .wrap.article-layout > :is(.article,.source-playbook-article){
+    width:100%!important;
+    max-width:var(--tl-v198-reading-width)!important;
+    min-width:0!important;
+  }
+
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main > .wrap.article-layout > :is(.article-aside,aside){
+    width:var(--tl-v198-rail-width)!important;
+    min-width:var(--tl-v198-rail-width)!important;
+    max-width:var(--tl-v198-rail-width)!important;
+  }
+}
+
+@media (max-width:1100px){
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap.narrow,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap.narrow,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.traffic-hub-page > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.services-page > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap.narrow{
+    width:min(calc(100% - (var(--tl-v198-gutter-tablet) * 2)),var(--tl-v198-reading-width))!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.compact-main-v103 > .page-head > .wrap.narrow,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.section-landing > .page-head > .wrap.narrow,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.traffic-hub-page > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.services-page > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .wrap:not(.article-layout),
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap,
+  html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-main-v114 > .page-head > .wrap.narrow{
+    width:calc(100% - (var(--tl-v198-gutter-mobile) * 2))!important;
+    max-width:none!important;
+  }
+}
