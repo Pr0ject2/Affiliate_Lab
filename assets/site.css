@@ -15862,46 +15862,90 @@ html body.reference-ui-v99.theme-dark :is(.service-mark,.rail-tool-mark,.ref-nav
   color:#c5d0da!important;
 }
 
-
-/* v196D — Dark Metal */
-html body.theme-dark,
-html body.reference-ui-v99.theme-dark,
-html body.theme-dark main.compact-main-v103,
-html body.reference-ui-v99.theme-dark main.compact-main-v103{
-  background:
-    linear-gradient(90deg,#090e13 0%,#0d1319 17%,#10161d 50%,#0d1319 83%,#090e13 100%),
-    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,0))!important;
-  background-attachment:fixed!important;
+/* ======================================================================
+   v197 — true uniform inner width across all non-home sections
+   Section/catalog pages now use the SAME width as the article body,
+   while article pages keep the right rail outside that reading column.
+   ====================================================================== */
+:root{
+  --tl-v197-reading-width:930px;
+  --tl-v197-rail-width:270px;
+  --tl-v197-rail-gap:28px;
+  --tl-v197-side-gutter:18px;
+  --tl-v197-side-gutter-tablet:14px;
+  --tl-v197-side-gutter-mobile:10px;
 }
 
+/* Every ordinary inner section uses the article reading width. */
+html body main:not(.home-page) > .wrap:not(.article-layout),
+html body main:not(.home-page) > section:not(.wrap) > .wrap,
+html body main:not(.home-page) > section:not(.wrap) > .wrap.narrow,
+html body.reference-ui-v99 main:not(.home-page) > .wrap:not(.article-layout),
+html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap,
+html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap.narrow{
+  width:min(calc(100% - (var(--tl-v197-side-gutter) * 2)),var(--tl-v197-reading-width))!important;
+  max-width:var(--tl-v197-reading-width)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
 
-html body.theme-dark :is(
-  .article-layout,.article,.structured-article-v103,.source-playbook-article,
-  .page-head,.section-landing,.section-landing-head,.academy-article-hero,
-  .academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot,
-  .academy-article-hero-shell,.source-hero-shell,.source-title-row,.source-title-copy,
-  .library-shell,.library-main,.handbook,.glossary,.saved-page,.diagnostic-wizard-page,
-  .source-compare-page,.traffic-page,.services-page,.notes-page,.tool-suite,
-  .about-hero-v114,.about-layout-v114,.journal-reading,.catalog-bar,
-  .global-mode-guidance,.beginner-term-note,.related-reading,.article-author,
-  .article-exit-nav,.next-reading,.section-groups,.section-group,.section-group-head,
-  .section-bottom-links,.academy-content-section,.logic-section-v103,
-  .source-playbook-article>section,.article>section
-),
-html body.reference-ui-v99.theme-dark :is(
-  .article-layout,.article,.structured-article-v103,.source-playbook-article,
-  .page-head,.section-landing,.section-landing-head,.academy-article-hero,
-  .academy-article-hero-main,.academy-article-hero-copy,.academy-article-hero-foot,
-  .academy-article-hero-shell,.source-hero-shell,.source-title-row,.source-title-copy,
-  .library-shell,.library-main,.handbook,.glossary,.saved-page,.diagnostic-wizard-page,
-  .source-compare-page,.traffic-page,.services-page,.notes-page,.tool-suite,
-  .about-hero-v114,.about-layout-v114,.journal-reading,.catalog-bar,
-  .global-mode-guidance,.beginner-term-note,.related-reading,.article-author,
-  .article-exit-nav,.next-reading,.section-groups,.section-group,.section-group-head,
-  .section-bottom-links,.academy-content-section,.logic-section-v103,
-  .source-playbook-article>section,.article>section
-){
-  background:transparent!important;
-  background-color:transparent!important;
-  background-image:none!important;
+/* Article layouts: same 930px reading column + separate right rail. */
+@media (min-width:1051px){
+  html body main:not(.home-page) > .wrap.article-layout,
+  html body.reference-ui-v99 main:not(.home-page) > .wrap.article-layout{
+    width:min(
+      calc(100% - (var(--tl-v197-side-gutter) * 2)),
+      calc(var(--tl-v197-reading-width) + var(--tl-v197-rail-width) + var(--tl-v197-rail-gap))
+    )!important;
+    max-width:calc(var(--tl-v197-reading-width) + var(--tl-v197-rail-width) + var(--tl-v197-rail-gap))!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    grid-template-columns:minmax(0,var(--tl-v197-reading-width)) var(--tl-v197-rail-width)!important;
+    gap:var(--tl-v197-rail-gap)!important;
+    justify-content:center!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+  }
+
+  html body main:not(.home-page) > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99 main:not(.home-page) > .wrap.article-layout > :is(.article,.source-playbook-article){
+    width:100%!important;
+    max-width:var(--tl-v197-reading-width)!important;
+    min-width:0!important;
+  }
+
+  html body main:not(.home-page) > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99 main:not(.home-page) > .wrap.article-layout > :is(.article-aside,aside){
+    width:var(--tl-v197-rail-width)!important;
+    min-width:var(--tl-v197-rail-width)!important;
+    max-width:var(--tl-v197-rail-width)!important;
+  }
+}
+
+@media (max-width:1100px){
+  html body main:not(.home-page) > .wrap:not(.article-layout),
+  html body main:not(.home-page) > section:not(.wrap) > .wrap,
+  html body main:not(.home-page) > section:not(.wrap) > .wrap.narrow,
+  html body.reference-ui-v99 main:not(.home-page) > .wrap:not(.article-layout),
+  html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap,
+  html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap.narrow{
+    width:min(calc(100% - (var(--tl-v197-side-gutter-tablet) * 2)),var(--tl-v197-reading-width))!important;
+  }
+}
+
+@media (max-width:650px){
+  html body main:not(.home-page) > .wrap:not(.article-layout),
+  html body main:not(.home-page) > section:not(.wrap) > .wrap,
+  html body main:not(.home-page) > section:not(.wrap) > .wrap.narrow,
+  html body.reference-ui-v99 main:not(.home-page) > .wrap:not(.article-layout),
+  html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap,
+  html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap.narrow{
+    width:calc(100% - (var(--tl-v197-side-gutter-mobile) * 2))!important;
+    max-width:none!important;
+  }
 }
