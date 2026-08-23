@@ -17085,3 +17085,750 @@ html body.content-system-v103 main.compact-main-v103:not(.home-page):not(.source
     display:none!important;
   }
 }
+
+/* ======================================================================
+   v215 — roomier frames on About page sections
+   ====================================================================== */
+body.about-page-v114 .about-section-v114,
+html body.theme-dark.about-page-v114 .about-section-v114,
+html body.reference-ui-v99.theme-dark.about-page-v114 .about-section-v114{
+  padding:24px 26px!important;
+  margin-bottom:22px!important;
+  box-sizing:border-box!important;
+}
+
+body.about-page-v114 .about-section-v114:last-child,
+html body.theme-dark.about-page-v114 .about-section-v114:last-child,
+html body.reference-ui-v99.theme-dark.about-page-v114 .about-section-v114:last-child{
+  margin-bottom:0!important;
+}
+
+@media (max-width:900px){
+  body.about-page-v114 .about-section-v114,
+  html body.theme-dark.about-page-v114 .about-section-v114,
+  html body.reference-ui-v99.theme-dark.about-page-v114 .about-section-v114{
+    padding:20px 22px!important;
+  }
+}
+
+@media (max-width:650px){
+  body.about-page-v114 .about-section-v114,
+  html body.theme-dark.about-page-v114 .about-section-v114,
+  html body.reference-ui-v99.theme-dark.about-page-v114 .about-section-v114{
+    padding:17px 18px!important;
+  }
+}
+
+/* ======================================================================
+   v216 — header alignment after frame removal
+   Internal page headers must share the same centered content column as the
+   main content that follows.
+   ====================================================================== */
+
+html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow{
+  width:min(calc(100% - (var(--tl-v192-page-gutter) * 2)), var(--tl-v192-page-max))!important;
+  max-width:var(--tl-v192-page-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  box-sizing:border-box!important;
+  padding:26px 28px!important;
+}
+
+/* Journal title previously inherited a narrower max-width than the rest of
+   the page. Remove that mismatch so the header starts on the same line as the
+   content column below. */
+html body .journal-head .narrow{
+  max-width:none!important;
+}
+
+@media (max-width:1100px){
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow{
+    width:calc(100% - (var(--tl-v192-page-gutter-tablet) * 2))!important;
+    padding:20px 22px!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow{
+    width:calc(100% - (var(--tl-v192-page-gutter-mobile) * 2))!important;
+    padding:16px 18px!important;
+  }
+}
+
+/* ======================================================================
+   v217 — wider right rails, pushed to the site's right edge, footer-safe
+   One desktop rule for all article/source pages.
+   ====================================================================== */
+
+@media (min-width:1051px){
+  :root{
+    --tl-v217-page-max:1240px;
+    --tl-v217-rail:292px;
+    --tl-v217-gap:32px;
+    --tl-v217-gutter:18px;
+  }
+
+  /* Use the full internal-page canvas and push the rail to the far right. */
+  html body.article-page main#main-content > .wrap.article-layout,
+  html body.reference-ui-v99.article-page main#main-content > .wrap.article-layout,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.theme-dark.article-page main#main-content > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout,
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    display:flex!important;
+    align-items:flex-start!important;
+    justify-content:space-between!important;
+    gap:var(--tl-v217-gap)!important;
+    width:min(calc(100% - (var(--tl-v217-gutter) * 2)), var(--tl-v217-page-max))!important;
+    max-width:var(--tl-v217-page-max)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    padding-bottom:118px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article){
+    flex:1 1 auto!important;
+    width:auto!important;
+    max-width:calc(var(--tl-v217-page-max) - var(--tl-v217-rail) - var(--tl-v217-gap))!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  html body.article-page main#main-content > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.article-page main#main-content > .wrap.article-layout > :is(.article-aside,aside),
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article-aside,aside),
+  html body.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article-aside,aside),
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article-aside,aside){
+    flex:0 0 var(--tl-v217-rail)!important;
+    width:var(--tl-v217-rail)!important;
+    min-width:var(--tl-v217-rail)!important;
+    max-width:var(--tl-v217-rail)!important;
+    margin-left:auto!important;
+    margin-right:0!important;
+    justify-self:auto!important;
+    align-self:start!important;
+  }
+
+  /* Keep the sticky menu comfortably above the footer and within the viewport. */
+  html body .article-aside.enhanced-rail,
+  html body.reference-ui-v99 .article-aside.enhanced-rail{
+    top:calc(var(--academy-header) + 16px)!important;
+    max-height:calc(100vh - var(--academy-header) - 30px)!important;
+    padding-bottom:2px!important;
+  }
+
+  /* If a page still uses the older plain aside styling, widen it too. */
+  html body.article-page .article-aside:not(.enhanced-rail),
+  html body.reference-ui-v99.article-page .article-aside:not(.enhanced-rail),
+  html body.content-system-v103 main.source-playbook-page .article-aside:not(.enhanced-rail),
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page .article-aside:not(.enhanced-rail){
+    width:var(--tl-v217-rail)!important;
+    min-width:var(--tl-v217-rail)!important;
+    max-width:var(--tl-v217-rail)!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+}
+
+/* ======================================================================
+   v218 — dark-theme article width parity with light theme
+   The dark article frame adds horizontal padding, so give the article column
+   extra outer width to keep the readable text area equal to light theme.
+   ====================================================================== */
+
+@media (min-width:1051px){
+  html body.theme-dark.article-page main#main-content > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout,
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:min(calc(100% - (var(--tl-v217-gutter) * 2)), 1296px)!important;
+    max-width:1296px!important;
+  }
+
+  html body.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article){
+    max-width:972px!important;
+    width:972px!important;
+    flex:0 1 972px!important;
+  }
+}
+
+/* ======================================================================
+   v219 — FAQ blocks: remove inner fill/background
+   Keep the border and spacing, but let FAQ rows sit on the article canvas
+   without the extra tinted strip inside each item.
+   ====================================================================== */
+
+html body .playbook-faq details,
+html body .playbook-faq summary,
+html body .playbook-faq details p,
+html body.reference-ui-v99 .playbook-faq details,
+html body.reference-ui-v99 .playbook-faq summary,
+html body.reference-ui-v99 .playbook-faq details p{
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .playbook-faq details,
+html body.theme-dark .playbook-faq summary,
+html body.theme-dark .playbook-faq details p,
+html body.reference-ui-v99.theme-dark .playbook-faq details,
+html body.reference-ui-v99.theme-dark .playbook-faq summary,
+html body.reference-ui-v99.theme-dark .playbook-faq details p{
+  background:transparent!important;
+  background-image:none!important;
+}
+
+/* ======================================================================
+   v220 — traffic source articles: remove all remaining patchy backgrounds
+   in dark theme and unify every surface to one calm dark panel family.
+   ====================================================================== */
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-infrastructure,
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision,
+  .playbook-decision article,
+  .playbook-tips,
+  .playbook-official a,
+  .playbook-facts > div,
+  .source-playbook-article > .playbook-facts > div,
+  .source-tool-card,
+  .source-journey-card,
+  .article-figure,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-media,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .guide-v101-diagnostics a,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .field-case,
+  .tool-panel,
+  .source-title-visual,
+  .playbook-faq details,
+  .source-playbook-page .article-aside .aside-block,
+  .rail-quick,
+  .rail-quick a,
+  .rail-tools a,
+  .rail-related-visual > a,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a,
+  .playbook-template-list span,
+  .ref-connected-tools > div > a,
+  .ref-metrics-row > div,
+  .playbook-head-actions a,
+  .source-compare-actions a
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-infrastructure,
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision,
+  .playbook-decision article,
+  .playbook-tips,
+  .playbook-official a,
+  .playbook-facts > div,
+  .source-playbook-article > .playbook-facts > div,
+  .source-tool-card,
+  .source-journey-card,
+  .article-figure,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-media,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .guide-v101-diagnostics a,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .field-case,
+  .tool-panel,
+  .source-title-visual,
+  .playbook-faq details,
+  .source-playbook-page .article-aside .aside-block,
+  .rail-quick,
+  .rail-quick a,
+  .rail-tools a,
+  .rail-related-visual > a,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a,
+  .playbook-template-list span,
+  .ref-connected-tools > div > a,
+  .ref-metrics-row > div,
+  .playbook-head-actions a,
+  .source-compare-actions a
+){
+  background:#171c22!important;
+  background-image:none!important;
+  border-color:#2f3843!important;
+  box-shadow:none!important;
+}
+
+/* Keep media wells slightly darker, but still uniform. */
+html body.theme-dark main.source-playbook-page :is(
+  .source-title-visual,
+  .source-journey-card img,
+  .article-figure img,
+  .guide-v101-media img,
+  .guide-v101-format-art,
+  .source-hero-icon
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .source-title-visual,
+  .source-journey-card img,
+  .article-figure img,
+  .guide-v101-media img,
+  .guide-v101-format-art,
+  .source-hero-icon
+){
+  background:#151a20!important;
+  background-image:none!important;
+  border-color:#2f3843!important;
+}
+
+/* Active tabs should not introduce another fill patch. */
+html body.theme-dark main.source-playbook-page .source-section-tabs a,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-section-tabs a{
+  background:transparent!important;
+  background-image:none!important;
+}
+html body.theme-dark main.source-playbook-page .source-section-tabs a:is(.is-current,:first-child),
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-section-tabs a:is(.is-current,:first-child){
+  background:transparent!important;
+  background-image:none!important;
+}
+
+/* ======================================================================
+   v221 — source article blocks: restore comfortable inner padding
+   After the dark-theme unification pass, some content blocks need explicit
+   inner spacing so text never hugs the frame edges.
+   ====================================================================== */
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-infrastructure,
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision article,
+  .playbook-tips,
+  .playbook-official a,
+  .playbook-facts > div,
+  .source-playbook-article > .playbook-facts > div,
+  .source-tool-card,
+  .source-journey-card,
+  .article-figure,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-media,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .guide-v101-diagnostics a,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .field-case,
+  .tool-panel,
+  .playbook-faq details,
+  .source-playbook-page .article-aside .aside-block,
+  .rail-quick,
+  .rail-quick a,
+  .rail-tools a,
+  .rail-related-visual > a,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a,
+  .playbook-template-list span,
+  .playbook-head-actions a,
+  .source-compare-actions a
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-infrastructure,
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision article,
+  .playbook-tips,
+  .playbook-official a,
+  .playbook-facts > div,
+  .source-playbook-article > .playbook-facts > div,
+  .source-tool-card,
+  .source-journey-card,
+  .article-figure,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-media,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .guide-v101-diagnostics a,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .field-case,
+  .tool-panel,
+  .playbook-faq details,
+  .source-playbook-page .article-aside .aside-block,
+  .rail-quick,
+  .rail-quick a,
+  .rail-tools a,
+  .rail-related-visual > a,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a,
+  .playbook-template-list span,
+  .playbook-head-actions a,
+  .source-compare-actions a
+){
+  box-sizing:border-box!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision article,
+  .playbook-tips,
+  .source-tool-card,
+  .source-journey-card,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .field-case,
+  .tool-panel,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-method li,
+  .playbook-fit-grid > div,
+  .playbook-checklist li,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .playbook-week li,
+  .playbook-columns > div,
+  .playbook-decision article,
+  .playbook-tips,
+  .source-tool-card,
+  .source-journey-card,
+  .guide-v101-formats > article,
+  .guide-v101-grid > div,
+  .guide-v101-link-options > div,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .guide-v101-callout:not(.warning),
+  .field-case,
+  .tool-panel,
+  .ref-source-funnel,
+  .ref-format-card,
+  .ref-track-card,
+  .ref-metrics-card,
+  .ref-metrics-row > div,
+  .ref-connected-tools a
+){
+  padding:16px 18px!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(.playbook-faq summary,.playbook-faq details p),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(.playbook-faq summary,.playbook-faq details p){
+  padding-left:18px!important;
+  padding-right:18px!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(.playbook-facts > div,.source-playbook-article > .playbook-facts > div),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(.playbook-facts > div,.source-playbook-article > .playbook-facts > div){
+  padding:10px 12px!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(.rail-quick,.rail-tools a,.rail-related-visual > a,.playbook-head-actions a,.source-compare-actions a),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(.rail-quick,.rail-tools a,.rail-related-visual > a,.playbook-head-actions a,.source-compare-actions a){
+  padding:12px 14px!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark main.source-playbook-page :is(
+    .playbook-method li,
+    .playbook-fit-grid > div,
+    .playbook-checklist li,
+    .playbook-format-list > div,
+    .playbook-steps > li,
+    .playbook-week li,
+    .playbook-columns > div,
+    .playbook-decision article,
+    .playbook-tips,
+    .source-tool-card,
+    .source-journey-card,
+    .guide-v101-formats > article,
+    .guide-v101-grid > div,
+    .guide-v101-link-options > div,
+    .guide-v101-flow,
+    .guide-v101-verdict,
+    .guide-v101-code,
+    .guide-v101-callout:not(.warning),
+    .field-case,
+    .tool-panel,
+    .ref-source-funnel,
+    .ref-format-card,
+    .ref-track-card,
+    .ref-metrics-card,
+    .ref-metrics-row > div,
+    .ref-connected-tools a
+  ),
+  html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+    .playbook-method li,
+    .playbook-fit-grid > div,
+    .playbook-checklist li,
+    .playbook-format-list > div,
+    .playbook-steps > li,
+    .playbook-week li,
+    .playbook-columns > div,
+    .playbook-decision article,
+    .playbook-tips,
+    .source-tool-card,
+    .source-journey-card,
+    .guide-v101-formats > article,
+    .guide-v101-grid > div,
+    .guide-v101-link-options > div,
+    .guide-v101-flow,
+    .guide-v101-verdict,
+    .guide-v101-code,
+    .guide-v101-callout:not(.warning),
+    .field-case,
+    .tool-panel,
+    .ref-source-funnel,
+    .ref-format-card,
+    .ref-track-card,
+    .ref-metrics-card,
+    .ref-metrics-row > div,
+    .ref-connected-tools a
+  ){
+    padding:14px 16px!important;
+  }
+}
+
+
+/* ======================================================================
+   v222 — larger and cleaner traffic-source icons
+   Increase source icons everywhere and replace weak generic pictograms.
+   ====================================================================== */
+
+html body .playbook-card[data-source="youtube"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%225%22%20y%3D%2213%22%20width%3D%2254%22%20height%3D%2238%22%20rx%3D%2213%22%20fill%3D%22%23ff2d2d%22%2F%3E%3Cpath%20d%3D%22M27%2023l18%209-18%209z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-youtube{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%225%22%20y%3D%2213%22%20width%3D%2254%22%20height%3D%2238%22%20rx%3D%2213%22%20fill%3D%22%23ff2d2d%22%2F%3E%3Cpath%20d%3D%22M27%2023l18%209-18%209z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="vk-video"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2216%22%20fill%3D%22%232787f5%22%2F%3E%3Cpath%20d%3D%22M15%2021h9c.7%207.4%203.6%2011.4%207.2%2013.5V21H39v8.2c3.1-.4%206.3-4%208.2-8.2H54c-1.7%205.8-6.1%2010.8-9.2%2012.8%203.1%201.7%208.1%206.2%2010.2%2011.2h-8.1c-2.3-3.8-5.1-6.7-7.9-6.7V45h-3.6C22.7%2045%2015.8%2036.2%2015%2021Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-vk-video{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2216%22%20fill%3D%22%232787f5%22%2F%3E%3Cpath%20d%3D%22M15%2021h9c.7%207.4%203.6%2011.4%207.2%2013.5V21H39v8.2c3.1-.4%206.3-4%208.2-8.2H54c-1.7%205.8-6.1%2010.8-9.2%2012.8%203.1%201.7%208.1%206.2%2010.2%2011.2h-8.1c-2.3-3.8-5.1-6.7-7.9-6.7V45h-3.6C22.7%2045%2015.8%2036.2%2015%2021Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="telegram"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%232AABEE%22%2F%3E%3Cpath%20d%3D%22M16%2031.5%2049%2018.7c1.5-.6%202.8.4%202.3%202.4l-5.6%2026.4c-.4%201.9-1.6%202.4-3.2%201.5l-8.5-6.3-4.1%204c-.5.5-.9.9-1.8.9l.6-8.8%2016-14.5c.7-.6-.2-1-1.1-.4L23.8%2036.3l-8.5-2.7c-1.9-.6-1.9-1.8.7-2.1Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-telegram{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%232AABEE%22%2F%3E%3Cpath%20d%3D%22M16%2031.5%2049%2018.7c1.5-.6%202.8.4%202.3%202.4l-5.6%2026.4c-.4%201.9-1.6%202.4-3.2%201.5l-8.5-6.3-4.1%204c-.5.5-.9.9-1.8.9l.6-8.8%2016-14.5c.7-.6-.2-1-1.1-.4L23.8%2036.3l-8.5-2.7c-1.9-.6-1.9-1.8.7-2.1Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="content-site"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%227%22%20y%3D%229%22%20width%3D%2250%22%20height%3D%2246%22%20rx%3D%2210%22%20fill%3D%22%231f8b68%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2217%22%20width%3D%2240%22%20height%3D%2232%22%20rx%3D%225%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Ccircle%20cx%3D%2221%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Cpath%20d%3D%22M18%2025h21M18%2031h28M18%2037h17%22%20stroke%3D%22%231f8b68%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22m39%2039%207%206%202-9-9%203Z%22%20fill%3D%22%23f2b84b%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-content-site{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%227%22%20y%3D%229%22%20width%3D%2250%22%20height%3D%2246%22%20rx%3D%2210%22%20fill%3D%22%231f8b68%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2217%22%20width%3D%2240%22%20height%3D%2232%22%20rx%3D%225%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Ccircle%20cx%3D%2221%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2213%22%20r%3D%222%22%20fill%3D%22%23bfe8d8%22%2F%3E%3Cpath%20d%3D%22M18%2025h21M18%2031h28M18%2037h17%22%20stroke%3D%22%231f8b68%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22m39%2039%207%206%202-9-9%203Z%22%20fill%3D%22%23f2b84b%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="social"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%221%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20stop-color%3D%22%23feda75%22%2F%3E%3Cstop%20offset%3D%22.34%22%20stop-color%3D%22%23fa7e1e%22%2F%3E%3Cstop%20offset%3D%22.66%22%20stop-color%3D%22%23d62976%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234f5bd5%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%227%22%20y%3D%227%22%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2216%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2219%22%20r%3D%223.4%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-social{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%221%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20stop-color%3D%22%23feda75%22%2F%3E%3Cstop%20offset%3D%22.34%22%20stop-color%3D%22%23fa7e1e%22%2F%3E%3Cstop%20offset%3D%22.66%22%20stop-color%3D%22%23d62976%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234f5bd5%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%227%22%20y%3D%227%22%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2216%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2219%22%20r%3D%223.4%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="communities"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2224%22%20r%3D%229%22%20fill%3D%22%236c7dff%22%2F%3E%3Ccircle%20cx%3D%2243%22%20cy%3D%2227%22%20r%3D%227%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M9%2049c1.4-10%207.2-15%2015-15%207.7%200%2013.6%205%2015%2015H9Z%22%20fill%3D%22%236c7dff%22%2F%3E%3Cpath%20d%3D%22M36%2049c1.1-6.6%204.4-10.2%209.4-10.2%205.2%200%208.7%203.6%209.6%2010.2H36Z%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M35%2011h19v15H43l-6%205v-5h-2z%22%20fill%3D%22%23f6c95c%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%2218.5%22%20r%3D%221.6%22%20fill%3D%22%235a4d25%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2218.5%22%20r%3D%221.6%22%20fill%3D%22%235a4d25%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-communities{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2224%22%20r%3D%229%22%20fill%3D%22%236c7dff%22%2F%3E%3Ccircle%20cx%3D%2243%22%20cy%3D%2227%22%20r%3D%227%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M9%2049c1.4-10%207.2-15%2015-15%207.7%200%2013.6%205%2015%2015H9Z%22%20fill%3D%22%236c7dff%22%2F%3E%3Cpath%20d%3D%22M36%2049c1.1-6.6%204.4-10.2%209.4-10.2%205.2%200%208.7%203.6%209.6%2010.2H36Z%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M35%2011h19v15H43l-6%205v-5h-2z%22%20fill%3D%22%23f6c95c%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%2218.5%22%20r%3D%221.6%22%20fill%3D%22%235a4d25%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2218.5%22%20r%3D%221.6%22%20fill%3D%22%235a4d25%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="search"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%2228%22%20r%3D%2217%22%20fill%3D%22none%22%20stroke%3D%22%234285f4%22%20stroke-width%3D%227%22%2F%3E%3Cpath%20d%3D%22M40.5%2040.5%2054%2054%22%20stroke%3D%22%2334a853%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2016a17%2017%200%200%201%2024%200%22%20stroke%3D%22%23ea4335%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M12%2032a17%2017%200%200%201%204-16%22%20stroke%3D%22%23fbbc05%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-search{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%2228%22%20r%3D%2217%22%20fill%3D%22none%22%20stroke%3D%22%234285f4%22%20stroke-width%3D%227%22%2F%3E%3Cpath%20d%3D%22M40.5%2040.5%2054%2054%22%20stroke%3D%22%2334a853%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2016a17%2017%200%200%201%2024%200%22%20stroke%3D%22%23ea4335%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M12%2032a17%2017%200%200%201%204-16%22%20stroke%3D%22%23fbbc05%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="streams"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%228%22%20y%3D%2213%22%20width%3D%2248%22%20height%3D%2236%22%20rx%3D%2210%22%20fill%3D%22%237b61c8%22%2F%3E%3Cpath%20d%3D%22M27%2023l15%209-15%209z%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2217%22%20r%3D%227%22%20fill%3D%22%23ff4f5e%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M16%2055h32%22%20stroke%3D%22%23a996e4%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M6%2025c-3%204-3%2010%200%2014M58%2025c3%204%203%2010%200%2014%22%20fill%3D%22none%22%20stroke%3D%22%237b61c8%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-streams{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%228%22%20y%3D%2213%22%20width%3D%2248%22%20height%3D%2236%22%20rx%3D%2210%22%20fill%3D%22%237b61c8%22%2F%3E%3Cpath%20d%3D%22M27%2023l15%209-15%209z%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2217%22%20r%3D%227%22%20fill%3D%22%23ff4f5e%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M16%2055h32%22%20stroke%3D%22%23a996e4%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M6%2025c-3%204-3%2010%200%2014M58%2025c3%204%203%2010%200%2014%22%20fill%3D%22none%22%20stroke%3D%22%237b61c8%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="paid"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M10%2034%2042%2019v30L10%2034Z%22%20fill%3D%22%23ff8a00%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2230%22%20width%3D%2211%22%20height%3D%229%22%20rx%3D%223%22%20fill%3D%22%23ffd89a%22%2F%3E%3Cpath%20d%3D%22m22%2038%206%2015h9l-7-18%22%20fill%3D%22%23a95400%22%2F%3E%3Cpath%20d%3D%22M47%2020c5%204%207%208%207%2012s-2%208-7%2012M51%2014c8%206%2011%2012%2011%2018s-3%2012-11%2018%22%20fill%3D%22none%22%20stroke%3D%22%23ffb347%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-paid{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M10%2034%2042%2019v30L10%2034Z%22%20fill%3D%22%23ff8a00%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2230%22%20width%3D%2211%22%20height%3D%229%22%20rx%3D%223%22%20fill%3D%22%23ffd89a%22%2F%3E%3Cpath%20d%3D%22m22%2038%206%2015h9l-7-18%22%20fill%3D%22%23a95400%22%2F%3E%3Cpath%20d%3D%22M47%2020c5%204%207%208%207%2012s-2%208-7%2012M51%2014c8%206%2011%2012%2011%2018s-3%2012-11%2018%22%20fill%3D%22none%22%20stroke%3D%22%23ffb347%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="short-video"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%2216%22%20y%3D%225%22%20width%3D%2232%22%20height%3D%2254%22%20rx%3D%2210%22%20fill%3D%22%2314171d%22%2F%3E%3Crect%20x%3D%2220%22%20y%3D%2210%22%20width%3D%2224%22%20height%3D%2242%22%20rx%3D%226%22%20fill%3D%22%23232833%22%2F%3E%3Cpath%20d%3D%22M28%2021v22l16-11z%22%20fill%3D%22%23ff3b6b%22%2F%3E%3Cpath%20d%3D%22M33%2018v28%22%20stroke%3D%22%2325f4ee%22%20stroke-width%3D%223.5%22%20opacity%3D%22.95%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2255%22%20r%3D%222%22%20fill%3D%22%238c96a3%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-short-video{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%2216%22%20y%3D%225%22%20width%3D%2232%22%20height%3D%2254%22%20rx%3D%2210%22%20fill%3D%22%2314171d%22%2F%3E%3Crect%20x%3D%2220%22%20y%3D%2210%22%20width%3D%2224%22%20height%3D%2242%22%20rx%3D%226%22%20fill%3D%22%23232833%22%2F%3E%3Cpath%20d%3D%22M28%2021v22l16-11z%22%20fill%3D%22%23ff3b6b%22%2F%3E%3Cpath%20d%3D%22M33%2018v28%22%20stroke%3D%22%2325f4ee%22%20stroke-width%3D%223.5%22%20opacity%3D%22.95%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2255%22%20r%3D%222%22%20fill%3D%22%238c96a3%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="alt-video"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%2210%22%20width%3D%2252%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%2326a69a%22%2F%3E%3Cpath%20d%3D%22M27%2020l16%208-16%209z%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2250%22%20width%3D%2232%22%20height%3D%225%22%20rx%3D%222.5%22%20fill%3D%22%237dd7cf%22%2F%3E%3Crect%20x%3D%2243%22%20y%3D%2215%22%20width%3D%229%22%20height%3D%227%22%20rx%3D%222%22%20fill%3D%22%23bdf0eb%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-alt-video{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%2210%22%20width%3D%2252%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%2326a69a%22%2F%3E%3Cpath%20d%3D%22M27%2020l16%208-16%209z%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2250%22%20width%3D%2232%22%20height%3D%225%22%20rx%3D%222.5%22%20fill%3D%22%237dd7cf%22%2F%3E%3Crect%20x%3D%2243%22%20y%3D%2215%22%20width%3D%229%22%20height%3D%227%22%20rx%3D%222%22%20fill%3D%22%23bdf0eb%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="dzen"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2217%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M32%2014c-2%2010-8%2016-18%2018%2010%202%2016%208%2018%2018%202-10%208-16%2018-18-10-2-16-8-18-18Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-dzen{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2217%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M32%2014c-2%2010-8%2016-18%2018%2010%202%2016%208%2018%2018%202-10%208-16%2018-18-10-2-16-8-18-18Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="reddit"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2234%22%20r%3D%2223%22%20fill%3D%22%23ff4500%22%2F%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2235%22%20rx%3D%2217%22%20ry%3D%2213%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2234%22%20r%3D%223.1%22%20fill%3D%22%23ff4500%22%2F%3E%3Ccircle%20cx%3D%2239%22%20cy%3D%2234%22%20r%3D%223.1%22%20fill%3D%22%23ff4500%22%2F%3E%3Cpath%20d%3D%22M23%2041c5%204%2013%204%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23ff4500%22%20stroke-width%3D%222.8%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M34%2015l3-8%209%202%22%20fill%3D%22none%22%20stroke%3D%22%23ff4500%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2210%22%20r%3D%224%22%20fill%3D%22%23ff4500%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-reddit{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2234%22%20r%3D%2223%22%20fill%3D%22%23ff4500%22%2F%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2235%22%20rx%3D%2217%22%20ry%3D%2213%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2234%22%20r%3D%223.1%22%20fill%3D%22%23ff4500%22%2F%3E%3Ccircle%20cx%3D%2239%22%20cy%3D%2234%22%20r%3D%223.1%22%20fill%3D%22%23ff4500%22%2F%3E%3Cpath%20d%3D%22M23%2041c5%204%2013%204%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23ff4500%22%20stroke-width%3D%222.8%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M34%2015l3-8%209%202%22%20fill%3D%22none%22%20stroke%3D%22%23ff4500%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2210%22%20r%3D%224%22%20fill%3D%22%23ff4500%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="x-twitter"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2215%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M18%2017h9l19%2030h-9L18%2017Zm3%2030%2015-17m4-4%206-9%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-x-twitter{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2215%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M18%2017h9l19%2030h-9L18%2017Zm3%2030%2015-17m4-4%206-9%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .playbook-card[data-source="mailing"] .playbook-hero-art{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%227%22%20y%3D%2214%22%20width%3D%2250%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%238d5cc6%22%2F%3E%3Cpath%20d%3D%22M12%2021l20%2016%2020-16%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M38%2039l12%207-3-14-9%207Z%22%20fill%3D%22%23ffd25e%22%2F%3E%3C%2Fsvg%3E")!important;}
+html body .source-playbook-page .source-hero-mailing{--tl-v222-source-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20x%3D%227%22%20y%3D%2214%22%20width%3D%2250%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%238d5cc6%22%2F%3E%3Cpath%20d%3D%22M12%2021l20%2016%2020-16%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M38%2039l12%207-3-14-9%207Z%22%20fill%3D%22%23ffd25e%22%2F%3E%3C%2Fsvg%3E")!important;}
+
+/* Catalog cards: make the platform/source marks genuinely visible. */
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+  width:84px!important;
+  height:84px!important;
+  min-width:84px!important;
+  padding:11px!important;
+  border-radius:16px!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:54px 54px!important;
+  background-origin:border-box!important;
+  background-clip:padding-box!important;
+}
+
+/* Article headers: same artwork, larger than the old tiny 30px marks. */
+html body .source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  width:66px!important;
+  height:66px!important;
+  min-width:66px!important;
+  flex-basis:66px!important;
+  border-radius:15px!important;
+  background-image:var(--tl-v222-source-icon)!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:46px 46px!important;
+  text-indent:-9999px!important;
+  font-size:0!important;
+}
+html body .source-playbook-page .source-title-row{
+  grid-template-columns:66px minmax(0,1fr)!important;
+  gap:15px!important;
+}
+
+/* The small fact icons under source titles also scale up so they don't look
+   out of place next to the larger platform marks. */
+html body .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div::before{
+  width:38px!important;
+  height:38px!important;
+  margin-bottom:5px!important;
+  background-size:21px 21px!important;
+}
+
+/* Dark theme keeps the same icon geometry, only the holder surface changes. */
+html body.theme-dark .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .playbook-card-top .playbook-hero-art,
+html body.theme-dark .source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-color:#171d24!important;
+  border-color:#38434d!important;
+}
+
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+    width:68px!important;
+    height:68px!important;
+    min-width:68px!important;
+    padding:9px!important;
+    background-size:44px 44px!important;
+  }
+  html body .source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:56px!important;
+    height:56px!important;
+    min-width:56px!important;
+    flex-basis:56px!important;
+    background-size:39px 39px!important;
+  }
+  html body .source-playbook-page .source-title-row{
+    grid-template-columns:56px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  html body .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div::before{
+    width:34px!important;
+    height:34px!important;
+    background-size:19px 19px!important;
+  }
+}
+
+@media (max-width:430px){
+  html body .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    background-size:40px 40px!important;
+  }
+  html body .source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:52px!important;
+    height:52px!important;
+    min-width:52px!important;
+    flex-basis:52px!important;
+    background-size:36px 36px!important;
+  }
+  html body .source-playbook-page .source-title-row{
+    grid-template-columns:52px minmax(0,1fr)!important;
+  }
+}
