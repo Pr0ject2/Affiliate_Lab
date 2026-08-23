@@ -2046,3 +2046,53 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', decorateFactIcons);
   else decorateFactIcons();
 })();
+
+/* v214 — only scroll the article TOC when the whole right rail cannot fit. */
+(()=>{
+  const RAIL_SELECTOR='.article-aside.enhanced-rail';
+  const FIT_CLASS='rail-fits-viewport';
+  let raf=0;
+
+  const measureRail=(rail)=>{
+    if(!rail || window.innerWidth<1051){
+      rail?.classList.remove(FIT_CLASS);
+      return;
+    }
+
+    /* Measure from the constrained state so this also reacts correctly when
+       the viewport becomes shorter after having previously fitted. */
+    rail.classList.remove(FIT_CLASS);
+
+    const tocList=rail.querySelector('.rail-toc ol');
+    if(!tocList) return;
+
+    const railStyle=getComputedStyle(rail);
+    const stickyTop=parseFloat(railStyle.top)||0;
+    const viewportRoom=Math.max(0,window.innerHeight-stickyTop-14);
+
+    /* rail.scrollHeight contains the visible TOC box. Add the part currently
+       hidden by the TOC's own max-height to obtain its true expanded height. */
+    const hiddenTocHeight=Math.max(0,tocList.scrollHeight-tocList.clientHeight);
+    const fullyExpandedHeight=rail.scrollHeight+hiddenTocHeight;
+
+    rail.classList.toggle(FIT_CLASS,fullyExpandedHeight<=viewportRoom+2);
+  };
+
+  const update=()=>{
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>document.querySelectorAll(RAIL_SELECTOR).forEach(measureRail));
+  };
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',update,{once:true});
+  else update();
+
+  window.addEventListener('load',update,{once:true});
+  window.addEventListener('resize',update,{passive:true});
+
+  if('ResizeObserver' in window){
+    const observer=new ResizeObserver(update);
+    const observe=()=>document.querySelectorAll(RAIL_SELECTOR).forEach(el=>observer.observe(el));
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',observe,{once:true});
+    else observe();
+  }
+})();
