@@ -17951,3 +17951,190 @@ html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-ico
     overflow:visible!important;
   }
 }
+
+/* ======================================================================
+   v225 — header text alignment with content column
+   Internal page headers must start on the same vertical line as the content
+   blocks below them, including traffic hub / guides / journal-like pages.
+   ====================================================================== */
+
+html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap,
+html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap.narrow,
+html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap,
+html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap.narrow,
+html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap,
+html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap.narrow,
+html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap,
+html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap.narrow,
+html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap,
+html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap.narrow{
+  width:min(calc(100% - (var(--tl-v198-gutter) * 2)), var(--tl-v198-reading-width))!important;
+  max-width:var(--tl-v198-reading-width)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+
+@media (max-width:1100px){
+  html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap.narrow{
+    width:min(calc(100% - (var(--tl-v198-gutter-tablet) * 2)), var(--tl-v198-reading-width))!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.section-landing > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.traffic-hub-page > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.services-page > section.page-head > .wrap.narrow,
+  html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap,
+  html body.internal-page-v198.content-system-v103 main.about-main-v114 > section.page-head > .wrap.narrow{
+    width:calc(100% - (var(--tl-v198-gutter-mobile) * 2))!important;
+    max-width:none!important;
+  }
+}
+
+/* ======================================================================
+   v226 — unify remaining tool-page accents with the dark theme system
+   Removes the leftover beige/alternate treatment on pages like Tools.
+   ====================================================================== */
+
+html body.theme-dark .big-tool-head > span,
+html body.reference-ui-v99.theme-dark .big-tool-head > span{
+  background:#1a2330!important;
+  border:1px solid #33404c!important;
+  color:#e7edf2!important;
+}
+
+html body.theme-dark .mode-recommended-tool,
+html body.reference-ui-v99.theme-dark .mode-recommended-tool{
+  border-color:#33404c!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .mode-recommended-tool > .big-tool-head:before,
+html body.reference-ui-v99.theme-dark .mode-recommended-tool > .big-tool-head:before,
+html body.theme-dark .mode-pro .mode-recommended-tool > .big-tool-head:before,
+html body.reference-ui-v99.theme-dark .mode-pro .mode-recommended-tool > .big-tool-head:before{
+  background:#171d24!important;
+  border:1px solid #33404c!important;
+  color:#d5dde5!important;
+}
+
+html body.theme-dark .tool-memory > span,
+html body.reference-ui-v99.theme-dark .tool-memory > span,
+html body.theme-dark .tool-source-note,
+html body.reference-ui-v99.theme-dark .tool-source-note{
+  color:#c8d1d9!important;
+}
+
+/* ======================================================================
+   v227 — diagnostics footer actions: remove light buttons in dark theme
+   ====================================================================== */
+html body.theme-dark .diagnostic-after a,
+html body.reference-ui-v99.theme-dark .diagnostic-after a,
+html body.theme-dark .problem-result-links a,
+html body.reference-ui-v99.theme-dark .problem-result-links a{
+  background:#171d24!important;
+  background-image:none!important;
+  border-color:#38434d!important;
+  color:#d7dfe6!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .diagnostic-after a:hover,
+html body.reference-ui-v99.theme-dark .diagnostic-after a:hover,
+html body.theme-dark .problem-result-links a:hover,
+html body.reference-ui-v99.theme-dark .problem-result-links a:hover{
+  background:#1d252d!important;
+  border-color:#4a5865!important;
+  color:#f2f6f8!important;
+}
+
+/* ======================================================================
+   v228 — source header icons final fix + more breathing room
+   Force source-page header icons to render in both themes and give the title
+   more space so it does not sit too close to the icon.
+   ====================================================================== */
+
+html body main.source-playbook-page .source-title-row,
+html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+  grid-template-columns:72px minmax(0,1fr)!important;
+  gap:18px!important;
+  align-items:start!important;
+}
+
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  width:72px!important;
+  height:72px!important;
+  min-width:72px!important;
+  flex-basis:72px!important;
+  border-radius:16px!important;
+  text-indent:-9999px!important;
+  font-size:0!important;
+  overflow:hidden!important;
+  background-color:#ffffff!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:50px 50px!important;
+  border:1px solid #d9e3de!important;
+}
+
+html body.theme-dark main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-color:#171d24!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  border-color:#38434d!important;
+}
+
+html body main.source-playbook-page .source-title-copy h1,
+html body.reference-ui-v99 main.source-playbook-page .source-title-copy h1{
+  margin-top:2px!important;
+}
+
+@media (max-width:900px){
+  html body main.source-playbook-page .source-title-row,
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+    grid-template-columns:60px minmax(0,1fr)!important;
+    gap:14px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:60px!important;
+    height:60px!important;
+    min-width:60px!important;
+    flex-basis:60px!important;
+    background-size:42px 42px!important;
+  }
+}
+
+@media (max-width:430px){
+  html body main.source-playbook-page .source-title-row,
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+    grid-template-columns:54px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:54px!important;
+    height:54px!important;
+    min-width:54px!important;
+    flex-basis:54px!important;
+    background-size:38px 38px!important;
+  }
+}
