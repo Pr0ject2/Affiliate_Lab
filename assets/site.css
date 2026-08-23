@@ -16051,3 +16051,256 @@ html body.internal-page-v198.internal-page-v198.internal-page-v198 main.about-ma
     max-width:none!important;
   }
 }
+
+
+/* ======================================================================
+   v199 — dark surface system rebuilt from source-playbook framing
+   One page canvas + one framed surface color. Nested content never paints
+   a competing large background. True cards use the same fill and are
+   separated by borders only.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-v199-canvas:#0b1015;
+  --tl-v199-surface:#111821;
+  --tl-v199-border:#2a3642;
+  --tl-v199-divider:#25303a;
+  --tl-v199-text:#d6dde4;
+  --tl-v199-muted:#adb7c1;
+  --tl-v199-soft:#8995a0;
+  --tl-v199-accent:#d2b989;
+  background:var(--tl-v199-canvas)!important;
+}
+
+/* One canvas behind every page. */
+html body.theme-dark :is(main,main.compact-main-v103,main.section-landing,main.source-playbook-page,main.traffic-hub-page,main.services-page),
+html body.reference-ui-v99.theme-dark :is(main,main.compact-main-v103,main.section-landing,main.source-playbook-page,main.traffic-hub-page,main.services-page){
+  background:var(--tl-v199-canvas)!important;
+  background-color:var(--tl-v199-canvas)!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Page-level decorative layers are disabled in dark mode. */
+html body.theme-dark :is(main,.page-head,.section-landing-head,.article-layout,.section-groups,.library-shell,.handbook,.glossary,.notes-page,.tool-suite)::before,
+html body.theme-dark :is(main,.page-head,.section-landing-head,.article-layout,.section-groups,.library-shell,.handbook,.glossary,.notes-page,.tool-suite)::after,
+html body.reference-ui-v99.theme-dark :is(main,.page-head,.section-landing-head,.article-layout,.section-groups,.library-shell,.handbook,.glossary,.notes-page,.tool-suite)::before,
+html body.reference-ui-v99.theme-dark :is(main,.page-head,.section-landing-head,.article-layout,.section-groups,.library-shell,.handbook,.glossary,.notes-page,.tool-suite)::after{
+  background:none!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Large wrappers are transparent. The framed modules below own the surface. */
+html body.theme-dark :is(
+  .page-head,.section-landing-head,.article-layout,.section-groups,.section-entry-grid,
+  .library-main,.catalog-bar,.article-actions,.article-actions-unified,
+  .academy-article-hero,.academy-article-hero-main,.academy-article-hero-copy,
+  .academy-article-hero-foot,.source-hero-shell,.source-title-row,.source-title-copy,
+  .section-group-head,.about-layout-v114,.journal-reading
+),
+html body.reference-ui-v99.theme-dark :is(
+  .page-head,.section-landing-head,.article-layout,.section-groups,.section-entry-grid,
+  .library-main,.catalog-bar,.article-actions,.article-actions-unified,
+  .academy-article-hero,.academy-article-hero-main,.academy-article-hero-copy,
+  .academy-article-hero-foot,.source-hero-shell,.source-title-row,.source-title-copy,
+  .section-group-head,.about-layout-v114,.journal-reading
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Main framed surfaces — this is the source-playbook visual language. */
+html body.theme-dark :is(
+  .article-page .article,.source-playbook-page .source-playbook-article,
+  .page-head>.wrap,.section-landing-head>.wrap,
+  .wrap.section-outcome,.section-group,.wrap.handbook,.library-shell,
+  .wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,
+  .wrap.beginner-term-note,.wrap.section-bottom-links,
+  .diagnostic-wizard-card,.source-compare-page,.saved-page,
+  .about-section-v114,.service-workflow,.service-start-grid,
+  .traffic-hub-basics,.help-situation,.big-tool,.calc-card,.tool-panel
+),
+html body.reference-ui-v99.theme-dark :is(
+  .article-page .article,.source-playbook-page .source-playbook-article,
+  .page-head>.wrap,.section-landing-head>.wrap,
+  .wrap.section-outcome,.section-group,.wrap.handbook,.library-shell,
+  .wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,
+  .wrap.beginner-term-note,.wrap.section-bottom-links,
+  .diagnostic-wizard-card,.source-compare-page,.saved-page,
+  .about-section-v114,.service-workflow,.service-start-grid,
+  .traffic-hub-basics,.help-situation,.big-tool,.calc-card,.tool-panel
+){
+  background:var(--tl-v199-surface)!important;
+  background-color:var(--tl-v199-surface)!important;
+  background-image:none!important;
+  border:1px solid var(--tl-v199-border)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+  color:var(--tl-v199-text)!important;
+  box-sizing:border-box!important;
+}
+
+/* Restore a proper framed article sheet and consistent inner breathing room. */
+html body.theme-dark.internal-page-v198 :is(.article-page .article,.source-playbook-page .source-playbook-article),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+  padding:24px!important;
+  border-color:var(--tl-v199-border)!important;
+  border-radius:14px!important;
+}
+
+/* Section landing modules get the same frame spacing. */
+html body.theme-dark :is(.wrap.section-outcome,.section-group,.wrap.section-bottom-links,.wrap.handbook,.library-shell,.wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,.wrap.beginner-term-note),
+html body.reference-ui-v99.theme-dark :is(.wrap.section-outcome,.section-group,.wrap.section-bottom-links,.wrap.handbook,.library-shell,.wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,.wrap.beginner-term-note){
+  padding:22px!important;
+}
+
+/* The section-groups wrapper itself must never become a giant colored slab. */
+html body.theme-dark .section-groups,
+html body.reference-ui-v99.theme-dark .section-groups{
+  background:transparent!important;
+  background-color:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+html body.theme-dark .section-group + .section-group,
+html body.reference-ui-v99.theme-dark .section-group + .section-group{
+  margin-top:18px!important;
+}
+
+/* Feature layouts stay transparent; their actual cards carry the frame. */
+html body.theme-dark .wrap.section-feature,
+html body.reference-ui-v99.theme-dark .wrap.section-feature{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Every true inner card uses exactly the SAME fill; borders provide hierarchy. */
+html body.theme-dark :is(
+  .section-entry,.section-feature>div,.section-feature>aside,.section-card,.section-outcome li,
+  .playbook-card,.library-row,.tool-card,.service-card,.service-tool,.source-tool-card,
+  .source-journey-card,.traffic-next a,.knowledge-map>div,
+  .guide-v101-grid>div,.guide-v101-formats>article,.guide-v101-media,
+  .guide-v101-link-options>div,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.platform-setup>div,
+  .playbook-format-list>div,.traffic-diagnostic-list li,
+  .related-primary,.related-secondary,.article-exit-nav a,.next-reading a,
+  .rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.geo-directory,
+  .ref-partner-card,.rail-partner-card,.rail-path-card,.rail-cover-card,.rail-card,
+  .article-aside.enhanced-rail .aside-block,.article-figure,.field-case,.notes-card,
+  .diagnostic-card,.compare-side,.diagnostic-flag,.problem-options button,.problem-result-links a,
+  .source-compare-picker,.source-compare-row>div,.source-compare-actions a,
+  .saved-card,.path-card,.wizard-continuation,.wizard-memory,.tool-quick-links a
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-entry,.section-feature>div,.section-feature>aside,.section-card,.section-outcome li,
+  .playbook-card,.library-row,.tool-card,.service-card,.service-tool,.source-tool-card,
+  .source-journey-card,.traffic-next a,.knowledge-map>div,
+  .guide-v101-grid>div,.guide-v101-formats>article,.guide-v101-media,
+  .guide-v101-link-options>div,.guide-v101-flow,.guide-v101-verdict,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.platform-setup>div,
+  .playbook-format-list>div,.traffic-diagnostic-list li,
+  .related-primary,.related-secondary,.article-exit-nav a,.next-reading a,
+  .rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.geo-directory,
+  .ref-partner-card,.rail-partner-card,.rail-path-card,.rail-cover-card,.rail-card,
+  .article-aside.enhanced-rail .aside-block,.article-figure,.field-case,.notes-card,
+  .diagnostic-card,.compare-side,.diagnostic-flag,.problem-options button,.problem-result-links a,
+  .source-compare-picker,.source-compare-row>div,.source-compare-actions a,
+  .saved-card,.path-card,.wizard-continuation,.wizard-memory,.tool-quick-links a
+){
+  background:var(--tl-v199-surface)!important;
+  background-color:var(--tl-v199-surface)!important;
+  background-image:none!important;
+  border-color:var(--tl-v199-border)!important;
+  box-shadow:none!important;
+}
+
+/* No nested section may paint a different large background inside an article. */
+html body.theme-dark :is(
+  .article>section,.source-playbook-article>section,.academy-content-section,
+  .logic-section-v103,.article-depth,.guide-v101-section,.platform-setup-section,
+  .related-reading,.article-author,.article-exit-nav,.source-visual-section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .article>section,.source-playbook-article>section,.academy-content-section,
+  .logic-section-v103,.article-depth,.guide-v101-section,.platform-setup-section,
+  .related-reading,.article-author,.article-exit-nav,.source-visual-section
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Article sections use dividers rather than changing the fill. */
+html body.theme-dark :is(.article>section,.source-playbook-article>section,.academy-content-section,.logic-section-v103),
+html body.reference-ui-v99.theme-dark :is(.article>section,.source-playbook-article>section,.academy-content-section,.logic-section-v103){
+  border-color:var(--tl-v199-divider)!important;
+}
+
+/* Callouts keep their semantic accent only in the border/text, never in the fill. */
+html body.theme-dark :is(
+  .inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.service-warning,
+  .logic-warning-v103,.logic-action-v103,.logic-analysis-v103,.logic-explain-v103,
+  .partner-specific-box,.rules-action-box,.source-compare-note,.ref-tip-strip,.service-inline
+),
+html body.reference-ui-v99.theme-dark :is(
+  .inline-note,.playbook-risk,.guide-v101-callout,.warning-note,.service-warning,
+  .logic-warning-v103,.logic-action-v103,.logic-analysis-v103,.logic-explain-v103,
+  .partner-specific-box,.rules-action-box,.source-compare-note,.ref-tip-strip,.service-inline
+){
+  background:var(--tl-v199-surface)!important;
+  background-color:var(--tl-v199-surface)!important;
+  background-image:none!important;
+  border-color:var(--tl-v199-border)!important;
+  box-shadow:none!important;
+}
+
+/* Tables no longer introduce a third dark shade. */
+html body.theme-dark :is(table,thead,tbody,tr,th,td),
+html body.reference-ui-v99.theme-dark :is(table,thead,tbody,tr,th,td){
+  background:var(--tl-v199-surface)!important;
+  background-color:var(--tl-v199-surface)!important;
+  border-color:var(--tl-v199-border)!important;
+}
+
+/* Inputs/search fields belong to the same surface system. */
+html body.theme-dark :is(input,select,textarea,.library-search,.catalog-search,.home-main-search),
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,.library-search,.catalog-search,.home-main-search){
+  background:var(--tl-v199-surface)!important;
+  background-color:var(--tl-v199-surface)!important;
+  border-color:var(--tl-v199-border)!important;
+  box-shadow:none!important;
+}
+
+/* Copy remains slightly softened; links keep the restrained warm accent. */
+html body.theme-dark :is(p,li,dd,dt,figcaption,small,.lead,.section-entry p,.library-row p,.tool-card p,.service-tool p),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,figcaption,small,.lead,.section-entry p,.library-row p,.tool-card p,.service-tool p){
+  color:var(--tl-v199-muted)!important;
+}
+html body.theme-dark :is(a,.plain-link,.text-cta),
+html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta){
+  color:var(--tl-v199-accent)!important;
+}
+
+/* Small-screen framed surfaces keep compact but real inner padding. */
+@media (max-width:900px){
+  html body.theme-dark.internal-page-v198 :is(.article-page .article,.source-playbook-page .source-playbook-article),
+  html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+    padding:18px!important;
+    border-radius:12px!important;
+  }
+  html body.theme-dark :is(.wrap.section-outcome,.section-group,.wrap.section-bottom-links,.wrap.handbook,.library-shell,.wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,.wrap.beginner-term-note),
+  html body.reference-ui-v99.theme-dark :is(.wrap.section-outcome,.section-group,.wrap.section-bottom-links,.wrap.handbook,.library-shell,.wrap.glossary,.wrap.notes-page,.wrap.tool-suite,.wrap.tool-memory,.wrap.beginner-term-note){
+    padding:18px!important;
+    border-radius:12px!important;
+  }
+}
