@@ -16304,3 +16304,104 @@ html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta){
     border-radius:12px!important;
   }
 }
+
+/* ======================================================================
+   v200 — quieter dark-mode text accents
+   Warm brown/gold was drawing too much attention across ordinary links,
+   navigation and code. Dark mode now uses cool slate for everyday
+   interactive text; warm tone is reserved only for very subtle details.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-v199-accent:#b8c4ce!important;
+  --tl-v200-link:#b8c4ce;
+  --tl-v200-link-hover:#e0e6eb;
+  --tl-v200-code:#c6ced6;
+  --tl-v200-label:#95a1ab;
+}
+
+/* Ordinary links should read as links, not as a second headline color. */
+html body.theme-dark :is(
+  a,.plain-link,.text-cta,.term-help,.rail-all-tools,
+  .sidebar-partner-cta span,.section-bottom-links a,.home-actions a,
+  .guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,
+  .next-reading a,.bookmark-button,.saved-link,.service-tool>a,
+  .source-toolkit-helper a,.source-toolkit-all a,.partner-specific-box>a,
+  .geo-guideline-link,.playbook-card>a,.source-section-tabs a.is-current,
+  .source-section-tabs a:first-child,.source-shot figcaption a,
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,
+  .service-inline-secondary,.service-inline-more
+),
+html body.reference-ui-v99.theme-dark :is(
+  a,.plain-link,.text-cta,.term-help,.rail-all-tools,
+  .sidebar-partner-cta span,.section-bottom-links a,.home-actions a,
+  .guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,
+  .next-reading a,.bookmark-button,.saved-link,.service-tool>a,
+  .source-toolkit-helper a,.source-toolkit-all a,.partner-specific-box>a,
+  .geo-guideline-link,.playbook-card>a,.source-section-tabs a.is-current,
+  .source-section-tabs a:first-child,.source-shot figcaption a,
+  .service-open-link,.service-tool-actions>a,.service-inline-primary,
+  .service-inline-secondary,.service-inline-more
+){
+  color:var(--tl-v200-link)!important;
+}
+
+html body.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.term-help:hover,.rail-all-tools:hover),
+html body.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.term-help:hover,.rail-all-tools:hover){
+  color:var(--tl-v200-link-hover)!important;
+}
+
+/* Buttons and action links stay restrained as well. */
+html body.theme-dark :is(
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,
+  .traffic-next a,.playbook-official a,.source-compare-actions a,
+  .article-cta-row a,.service-task-nav a,.source-next-links a,
+  .rail-all-tools,.service-inline-more
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,
+  .traffic-next a,.playbook-official a,.source-compare-actions a,
+  .article-cta-row a,.service-task-nav a,.source-next-links a,
+  .rail-all-tools,.service-inline-more
+){
+  color:#c1cbd3!important;
+  border-color:#3a4651!important;
+}
+html body.theme-dark :is(
+  .section-bottom-links a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,
+  .traffic-next a:hover,.playbook-official a:hover,.source-compare-actions a:hover,
+  .article-cta-row a:hover,.service-task-nav a:hover,.source-next-links a:hover,
+  .rail-all-tools:hover,.service-inline-more:hover
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-bottom-links a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,
+  .traffic-next a:hover,.playbook-official a:hover,.source-compare-actions a:hover,
+  .article-cta-row a:hover,.service-task-nav a:hover,.source-next-links a:hover,
+  .rail-all-tools:hover,.service-inline-more:hover
+){
+  color:#e1e7ec!important;
+  border-color:#4a5865!important;
+}
+
+/* Tiny editorial labels should stay in the background visually. */
+html body.theme-dark .service-inline:before,
+html body.reference-ui-v99.theme-dark .service-inline:before,
+html body.theme-dark :is(.article-label,.service-kicker,.home-kicker),
+html body.reference-ui-v99.theme-dark :is(.article-label,.service-kicker,.home-kicker){
+  color:var(--tl-v200-label)!important;
+}
+
+/* Code is content, not an accent block. */
+html body.theme-dark :is(pre,code),
+html body.reference-ui-v99.theme-dark :is(pre,code){
+  color:var(--tl-v200-code)!important;
+}
+
+/* Current source tab gets a quiet underline instead of a warm text color. */
+html body.theme-dark .source-section-tabs a.is-current,
+html body.theme-dark .source-section-tabs a:first-child,
+html body.reference-ui-v99.theme-dark .source-section-tabs a.is-current,
+html body.reference-ui-v99.theme-dark .source-section-tabs a:first-child{
+  color:#d7dee4!important;
+  border-bottom-color:#56636f!important;
+}
