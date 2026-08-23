@@ -17832,3 +17832,122 @@ html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-ico
     grid-template-columns:52px minmax(0,1fr)!important;
   }
 }
+
+/* ======================================================================
+   v223 — dark theme source icons fix
+   v220 intentionally flattened patchy backgrounds, but it also nulled the
+   icon artwork in source pages. Restore all source icons in dark theme.
+   ====================================================================== */
+
+html body.theme-dark .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .playbook-card-top .playbook-hero-art{
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:54px 54px!important;
+}
+
+html body.theme-dark main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-image:var(--tl-v222-source-icon)!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:46px 46px!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99.theme-dark .playbook-card-top .playbook-hero-art{
+    background-size:44px 44px!important;
+  }
+
+  html body.theme-dark main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+    background-size:39px 39px!important;
+  }
+}
+
+/* ======================================================================
+   v224 — final right-rail layout fix
+   Put every article rail back on the far right, keep it out of the footer,
+   and remove the spare right-side stripe caused by conflicting older rules.
+   ====================================================================== */
+
+@media (min-width:1051px){
+  :root{
+    --tl-v224-wrap:1296px;
+    --tl-v224-article:968px;
+    --tl-v224-rail:296px;
+    --tl-v224-gap:32px;
+    --tl-v224-gutter:18px;
+  }
+
+  html body.article-page :is(main#main-content, main.source-playbook-page),
+  html body.reference-ui-v99.article-page :is(main#main-content, main.source-playbook-page),
+  html body.theme-dark.article-page :is(main#main-content, main.source-playbook-page),
+  html body.reference-ui-v99.theme-dark.article-page :is(main#main-content, main.source-playbook-page){
+    overflow-x:clip!important;
+  }
+
+  html body.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout,
+  html body.reference-ui-v99.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout,
+  html body.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout{
+    display:grid!important;
+    grid-template-columns:minmax(0,var(--tl-v224-article)) var(--tl-v224-rail)!important;
+    grid-auto-flow:row!important;
+    gap:var(--tl-v224-gap)!important;
+    width:min(calc(100% - (var(--tl-v224-gutter) * 2)), var(--tl-v224-wrap))!important;
+    max-width:var(--tl-v224-wrap)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:20px 0 128px!important;
+    justify-content:space-between!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+    overflow:visible!important;
+    background:transparent!important;
+  }
+
+  html body.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article,.source-playbook-article),
+  html body.reference-ui-v99.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article,.source-playbook-article){
+    grid-column:1!important;
+    width:100%!important;
+    max-width:var(--tl-v224-article)!important;
+    min-width:0!important;
+    margin:0!important;
+    justify-self:stretch!important;
+    align-self:start!important;
+    order:1!important;
+  }
+
+  html body.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article-aside,aside),
+  html body.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article-aside,aside),
+  html body.reference-ui-v99.theme-dark.article-page :is(main#main-content, main.source-playbook-page) > .wrap.article-layout > :is(.article-aside,aside){
+    grid-column:2!important;
+    width:var(--tl-v224-rail)!important;
+    min-width:var(--tl-v224-rail)!important;
+    max-width:var(--tl-v224-rail)!important;
+    margin:0 0 0 auto!important;
+    justify-self:end!important;
+    align-self:start!important;
+    order:2!important;
+    left:auto!important;
+    right:auto!important;
+    inset-inline:auto!important;
+    transform:none!important;
+  }
+
+  html body.article-page .article-aside.enhanced-rail,
+  html body.reference-ui-v99.article-page .article-aside.enhanced-rail,
+  html body.theme-dark.article-page .article-aside.enhanced-rail,
+  html body.reference-ui-v99.theme-dark.article-page .article-aside.enhanced-rail{
+    position:sticky!important;
+    top:calc(var(--academy-header) + 16px)!important;
+    max-height:calc(100vh - var(--academy-header) - 30px)!important;
+    overflow:visible!important;
+  }
+}
