@@ -19699,3 +19699,442 @@ html body.theme-dark .affiliate-inline-mention a,
 html body.reference-ui-v99.theme-dark .affiliate-inline-mention a{
   color:#dfe5ea!important;
 }
+
+
+/* ======================================================================
+   v249 — restore source illustrations in dark theme reliably
+   Some source icons could end up blank after theme overrides.
+   Render the artwork through ::before so the icon always stays visible.
+   ====================================================================== */
+
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:hidden!important;
+}
+
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+  background-image:none!important;
+}
+
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  background-image:none!important;
+}
+
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+  content:""!important;
+  display:block!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:contain!important;
+  flex:none!important;
+}
+
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before{
+  width:54px!important;
+  height:54px!important;
+}
+
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+  width:50px!important;
+  height:50px!important;
+}
+
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before{
+    width:44px!important;
+    height:44px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+    width:42px!important;
+    height:42px!important;
+  }
+}
+
+@media (max-width:430px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before{
+    width:40px!important;
+    height:40px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+    width:38px!important;
+    height:38px!important;
+  }
+}
+
+
+/* ======================================================================
+   v250 — remove leftover dark gradients/fills and flatten the first home block
+   ====================================================================== */
+
+/* First block on the homepage: keep the frame, remove the gradient fill. */
+html body.theme-dark main.home-page .home-welcome > .wrap,
+html body.theme-dark.reference-ui-v99 main.home-page .home-welcome > .wrap{
+  background:#121821!important;
+  background-image:none!important;
+}
+
+html body.theme-dark main.home-page .home-welcome > .wrap::before,
+html body.theme-dark main.home-page .home-welcome > .wrap::after,
+html body.theme-dark.reference-ui-v99 main.home-page .home-welcome > .wrap::before,
+html body.theme-dark.reference-ui-v99 main.home-page .home-welcome > .wrap::after{
+  content:none!important;
+  background:none!important;
+}
+
+/* Helper cards in the first screen: use a calm solid fill with no inner gradient. */
+html body.theme-dark .home-search-card,
+html body.reference-ui-v99.theme-dark .home-search-card,
+html body.theme-dark .home-welcome-summary > div,
+html body.reference-ui-v99.theme-dark .home-welcome-summary > div{
+  background:#131a22!important;
+  background-image:none!important;
+}
+
+/* Leftover filled backgrounds in dark theme: preserve the layout and border,
+   but disable decorative gradient overlays so cards look uniform. */
+html body.theme-dark :is(
+  .playbook-card,
+  .guide-v101-grid > div,
+  .guide-v101-formats > article,
+  .guide-v101-media,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .source-journey-card,
+  .source-tool-card,
+  .section-card,
+  .field-case,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .diagnostic-card,
+  .tool-panel,
+  .calc-card,
+  .notes-card,
+  .article-figure,
+  .playbook-faq details,
+  .comparison-note,
+  .playbook-risk,
+  .home-entry-grid > a,
+  .home-source-grid > a
+),
+html body.reference-ui-v99.theme-dark :is(
+  .playbook-card,
+  .guide-v101-grid > div,
+  .guide-v101-formats > article,
+  .guide-v101-media,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-code,
+  .source-journey-card,
+  .source-tool-card,
+  .section-card,
+  .field-case,
+  .related-reading,
+  .related-primary,
+  .related-secondary,
+  .diagnostic-card,
+  .tool-panel,
+  .calc-card,
+  .notes-card,
+  .article-figure,
+  .playbook-faq details,
+  .comparison-note,
+  .playbook-risk,
+  .home-entry-grid > a,
+  .home-source-grid > a
+){
+  background-image:none!important;
+}
+
+
+/* ======================================================================
+   v251 — homepage lab-style background + cleanup of leftover dark fills
+   ====================================================================== */
+
+/* Give the homepage its own textured background with a subtle lab feel. */
+html body.theme-dark main.home-page,
+html body.theme-dark.reference-ui-v99 main.home-page{
+  position:relative!important;
+  isolation:isolate!important;
+  background:
+    radial-gradient(circle at 16% 9%, rgba(84,172,144,.10) 0, transparent 22%),
+    radial-gradient(circle at 84% 15%, rgba(189,157,108,.08) 0, transparent 18%),
+    linear-gradient(180deg, #0b1015 0%, #0c1218 46%, #0b1116 100%)!important;
+}
+
+html body.theme-dark main.home-page::before,
+html body.theme-dark.reference-ui-v99 main.home-page::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  opacity:.34!important;
+  background:
+    linear-gradient(transparent calc(100% - 1px), rgba(104,125,140,.11) 0),
+    linear-gradient(90deg, transparent calc(100% - 1px), rgba(104,125,140,.08) 0);
+  background-size: 100% 72px, 72px 100%!important;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.55) 48%, rgba(0,0,0,.12) 100%)!important;
+}
+
+html body.theme-dark main.home-page::after,
+html body.theme-dark.reference-ui-v99 main.home-page::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  opacity:.26!important;
+  background:
+    radial-gradient(circle 80px at 14% 22%, rgba(165,197,187,.22) 0 1px, transparent 2px),
+    radial-gradient(circle 106px at 18% 26%, transparent 0 77px, rgba(144,166,175,.16) 78px 79px, transparent 80px),
+    linear-gradient(90deg, transparent 23.8%, rgba(144,166,175,.14) 23.8% 24%, transparent 24.2%),
+    linear-gradient(180deg, transparent 31.8%, rgba(144,166,175,.12) 31.8% 32%, transparent 32.2%),
+    radial-gradient(circle 56px at 82% 18%, transparent 0 41px, rgba(172,147,109,.14) 42px 43px, transparent 44px),
+    radial-gradient(circle at 82% 18%, rgba(196,170,129,.12) 0 1px, transparent 2px),
+    linear-gradient(90deg, transparent 77.8%, rgba(172,147,109,.11) 77.8% 78%, transparent 78.2%),
+    linear-gradient(180deg, transparent 16.8%, rgba(172,147,109,.10) 16.8% 17%, transparent 17.2%);
+  background-repeat:no-repeat!important;
+}
+
+html body.theme-dark main.home-page > section,
+html body.theme-dark.reference-ui-v99 main.home-page > section,
+html body.theme-dark main.home-page > section > .wrap,
+html body.theme-dark.reference-ui-v99 main.home-page > section > .wrap{
+  position:relative!important;
+  z-index:1!important;
+}
+
+/* First block stays calm and solid, without inner gradient. */
+html body.theme-dark main.home-page .home-welcome > .wrap,
+html body.theme-dark.reference-ui-v99 main.home-page .home-welcome > .wrap{
+  background:#121821!important;
+  background-image:none!important;
+}
+
+/* Hero summary cards and similar blocks: remove any leftover decorative fill. */
+html body.theme-dark .home-welcome-summary > div,
+html body.reference-ui-v99.theme-dark .home-welcome-summary > div,
+html body.theme-dark .playbook-card,
+html body.reference-ui-v99.theme-dark .playbook-card,
+html body.theme-dark .source-tool-card,
+html body.reference-ui-v99.theme-dark .source-tool-card,
+html body.theme-dark .source-journey-card,
+html body.reference-ui-v99.theme-dark .source-journey-card,
+html body.theme-dark .guide-v101-grid > div,
+html body.reference-ui-v99.theme-dark .guide-v101-grid > div{
+  background:#131a22!important;
+  background-image:none!important;
+}
+
+html body.theme-dark :is(.home-welcome-summary > div,.playbook-card,.source-tool-card,.source-journey-card,.guide-v101-grid > div)::before,
+html body.theme-dark.reference-ui-v99 :is(.home-welcome-summary > div,.playbook-card,.source-tool-card,.source-journey-card,.guide-v101-grid > div)::before,
+html body.theme-dark :is(.home-welcome-summary > div,.playbook-card,.source-tool-card,.source-journey-card,.guide-v101-grid > div)::after,
+html body.theme-dark.reference-ui-v99 :is(.home-welcome-summary > div,.playbook-card,.source-tool-card,.source-journey-card,.guide-v101-grid > div)::after{
+  background-image:none!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark main.home-page::before,
+  html body.theme-dark.reference-ui-v99 main.home-page::before{
+    opacity:.24!important;
+    background-size:100% 64px, 64px 100%!important;
+  }
+  html body.theme-dark main.home-page::after,
+  html body.theme-dark.reference-ui-v99 main.home-page::after{
+    opacity:.18!important;
+  }
+}
+
+/* ======================================================================
+   v253 — TrafficLab flask logo
+   ====================================================================== */
+html body .brand-logo,
+html body .sidebar-brand-logo,
+html body .ref-sidebar-brand img,
+html body .ref-mobile-brand img{
+  object-fit:contain!important;
+  filter:none!important;
+}
+
+html body .site-header .brand-logo{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 34px!important;
+}
+
+html body .global-sidebar .sidebar-brand-logo{
+  width:44px!important;
+  height:44px!important;
+}
+
+html body .ref-sidebar-brand img{
+  width:42px!important;
+  height:42px!important;
+}
+
+html body .ref-mobile-brand img{
+  width:32px!important;
+  height:32px!important;
+}
+
+@media (max-width:650px){
+  html body .site-header .brand-logo{
+    width:31px!important;
+    height:31px!important;
+    flex-basis:31px!important;
+  }
+}
+
+
+/* ======================================================================
+   v254 — restore compact Beginner / Advanced mode switch
+   Matches the lab mockup: small switch + current mode + short explanation.
+   Existing audience-mode logic remains unchanged.
+   ====================================================================== */
+
+html body .global-sidebar > .sidebar-mode-compact.sidebar-mode-switch-v254,
+html body.reference-ui-v99 .global-sidebar > .sidebar-mode-compact.sidebar-mode-switch-v254{
+  display:block!important;
+  margin:8px 4px 10px!important;
+  padding:11px 3px 10px!important;
+  border:0!important;
+  border-top:1px solid rgba(255,255,255,.11)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#dce7e3!important;
+}
+
+html body .sidebar-mode-switch-v254 .sidebar-mode-options-legacy-v254{
+  display:none!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-toggle-v254{
+  width:100%!important;
+  min-height:42px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+  padding:4px 3px!important;
+  border:0!important;
+  border-radius:8px!important;
+  background:transparent!important;
+  color:#eef4f1!important;
+  text-align:left!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-toggle-v254:hover{
+  background:rgba(255,255,255,.045)!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-track-v254{
+  position:relative!important;
+  flex:0 0 30px!important;
+  width:30px!important;
+  height:17px!important;
+  border:1px solid rgba(179,204,195,.35)!important;
+  border-radius:999px!important;
+  background:#10181d!important;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.34)!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-track-v254 i{
+  position:absolute!important;
+  left:3px!important;
+  top:3px!important;
+  width:9px!important;
+  height:9px!important;
+  border-radius:50%!important;
+  background:#c8d6d1!important;
+  box-shadow:0 1px 4px rgba(0,0,0,.34)!important;
+  transition:transform .18s ease,background .18s ease!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-toggle-v254[aria-pressed="true"] .audience-mode-track-v254{
+  border-color:rgba(91,190,154,.52)!important;
+  background:rgba(44,118,91,.28)!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-toggle-v254[aria-pressed="true"] .audience-mode-track-v254 i{
+  transform:translateX(14px)!important;
+  background:#75d2b0!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-copy-v254{
+  min-width:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:2px!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-copy-v254 b{
+  color:#eef4f1!important;
+  font:700 12.5px/1.25 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  letter-spacing:0!important;
+}
+
+html body .sidebar-mode-switch-v254 .audience-mode-copy-v254 small{
+  color:#91a59e!important;
+  font:500 9.5px/1.25 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+}
+
+html body .sidebar-mode-switch-v254 .sidebar-hints-toggle-v254{
+  min-height:27px!important;
+  width:auto!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+  margin:5px 0 0 40px!important;
+  padding:3px 0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#8da099!important;
+  font-size:9.5px!important;
+}
+
+html body .sidebar-mode-switch-v254 .sidebar-hints-toggle-v254 span{
+  color:#8da099!important;
+}
+
+html body .sidebar-mode-switch-v254 .sidebar-hints-toggle-v254 b{
+  color:#b8c7c1!important;
+  font-size:9px!important;
+}
+
+html body .sidebar-mode-switch-v254 .sidebar-hints-toggle-v254:hover span,
+html body .sidebar-mode-switch-v254 .sidebar-hints-toggle-v254:hover b{
+  color:#dfe9e5!important;
+}
+
+/* Keep it available in the mobile drawer as well. */
+@media (max-width:900px){
+  html body .global-sidebar > .sidebar-mode-compact.sidebar-mode-switch-v254,
+  html body.reference-ui-v99 .global-sidebar > .sidebar-mode-compact.sidebar-mode-switch-v254{
+    display:block!important;
+    margin-top:10px!important;
+    padding-top:12px!important;
+  }
+}

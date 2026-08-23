@@ -1271,7 +1271,7 @@
  }
  function renderHomeMode(mode){
   const title=document.querySelector('[data-mode-home-title]'),copy=document.querySelector('[data-mode-home-copy]');
-  if(title)title.textContent=mode==='pro'?'Есть опыт':'Я только начинаю';
+  if(title)title.textContent=mode==='pro'?'Продвинутый':'Начинающий';
   if(copy)copy.textContent=mode==='pro'?'Базовые разделы остаются на месте, но подсказки чаще ведут к диагностике, сравнению, экономике и трекингу.':'Сайт будет чаще вести к базовым материалам и объяснениям терминов. Структура страниц при этом не меняется.';
  }
  function renderProContinuation(mode){
@@ -1283,7 +1283,7 @@
   document.body.classList.toggle('mode-pro',mode==='pro');document.body.classList.toggle('mode-beginner',mode!=='pro');
   document.querySelectorAll('[data-user-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.userMode===mode?'true':'false'));
   renderPath(mode);renderWizardCopy(mode);renderHomeMode(mode);renderProContinuation(mode);
-  const pm=document.getElementById('pathModeTitle'),pc=document.getElementById('pathModeCopy');if(pm)pm.textContent=mode==='pro'?'Есть опыт':'Я только начинаю';if(pc)pc.textContent=mode==='pro'?'Выше показываются диагностика, сравнение источников, экономика и Tracking.':'Выше показываются базовые объяснения и подготовка первого теста.';
+  const pm=document.getElementById('pathModeTitle'),pc=document.getElementById('pathModeCopy');if(pm)pm.textContent=mode==='pro'?'Продвинутый':'Начинающий';if(pc)pc.textContent=mode==='pro'?'Выше показываются диагностика, сравнение источников, экономика и трекинг.':'Выше показываются базовые объяснения и подготовка первого теста.';
  }
  /* v38: mode switching is owned by core.js */
  document.addEventListener('al:modechange',e=>renderMode(e.detail?.mode||current()));
@@ -1362,8 +1362,8 @@
    pro:['Если цифры уже есть','После быстрой диагностики можно сразу проверить фактические конверсии в инструментах.','/Affiliate_Lab/tools/#diagnose-result','Разобрать цифры']
   },
   '/Affiliate_Lab/guides/':{
-   beginner:['Порядок материалов','В режиме «Начинаю» базовые материалы показываются выше, но поиск видит всю библиотеку.','/Affiliate_Lab/start/','Маршрут с нуля'],
-   pro:['Порядок материалов','В режиме «Есть опыт» выше показываются диагностика, Tracking и разбор экономики. Поиск по-прежнему видит всё.','/Affiliate_Lab/diagnostics/','К рабочим задачам']
+   beginner:['Порядок материалов','В режиме «Начинающий» базовые материалы показываются выше, но поиск видит всю библиотеку.','/Affiliate_Lab/start/','Маршрут с нуля'],
+   pro:['Порядок материалов','В режиме «Продвинутый» выше показываются диагностика, трекинг и разбор экономики. Поиск по-прежнему видит всё.','/Affiliate_Lab/diagnostics/','К рабочим задачам']
   },
   '/Affiliate_Lab/start/':{
    beginner:['Этот раздел для тебя','Пройди пять шагов по порядку, если пока сложно понять, с чего начинать.','#starterRoute','Начать маршрут'],
@@ -1758,7 +1758,7 @@
     const sidebar=document.querySelector('.global-sidebar');
     if(sidebar){
       sidebar.innerHTML=`
-        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><span><b>TrafficLab</b><small>трафик на гемблинг</small></span></a>
+        <a class="ref-sidebar-brand" href="${base}"><img src="${base}assets/trafficlab-flask.svg" alt="" width="96" height="82"><span><b>TrafficLab</b><small>трафик на гемблинг</small></span></a>
         <button class="ref-sidebar-collapse ref-sidebar-collapse-top" type="button" data-ref-sidebar-collapse aria-expanded="true" aria-label="Свернуть левое меню"><span class="ref-collapse-icon" aria-hidden="true">←</span><span class="ref-collapse-label">Свернуть меню</span></button>
         <div class="ref-sidebar-groups">${groups.map((g,gi)=>{
           const hasActive=g.links.some(l=>active(l[1]));
@@ -1807,7 +1807,7 @@
         }
       }
       header.innerHTML=`<div class="ref-topbar">
-        <a class="ref-mobile-brand" href="${base}" aria-label="TrafficLab — на главную"><img src="${base}assets/trafficlab-mark.png" alt="" width="96" height="82"><b>TrafficLab</b></a>
+        <a class="ref-mobile-brand" href="${base}" aria-label="TrafficLab — на главную"><img src="${base}assets/trafficlab-flask.svg" alt="" width="96" height="82"><b>TrafficLab</b></a>
         <nav class="ref-topbar-crumbs">${crumbHtml}</nav>
         <div class="ref-topbar-actions">
           <form class="ref-top-search" action="${base}guides/" method="get" autocomplete="off"><span>${svg('search')}</span><input type="text" name="q" placeholder="Поиск по TrafficLab..." aria-label="Поиск по TrafficLab" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"><kbd>Ctrl + K</kbd></form>
@@ -2148,4 +2148,32 @@
   const init=()=>{addHeaderFavorite();addRailFeedback();};
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
+})();
+
+
+/* v254 — compact Beginner / Advanced mode switch, matching the homepage mockup. */
+(()=>{
+  const syncAudienceSwitch=()=>{
+    const pro=document.body.classList.contains('mode-pro');
+    document.querySelectorAll('[data-audience-mode-toggle]').forEach(btn=>{
+      btn.setAttribute('aria-pressed',pro?'true':'false');
+      btn.setAttribute('aria-label',pro?'Переключить на режим «Начинающий»':'Переключить на режим «Продвинутый»');
+      const root=btn.closest('[data-mode-switch]');
+      const title=root?.querySelector('[data-audience-mode-title]');
+      const copy=root?.querySelector('[data-audience-mode-copy]');
+      if(title) title.textContent=pro?'Продвинутый':'Начинающий';
+      if(copy) copy.textContent=pro?'Аналитика и рабочие задачи':'Пошагово с нуля';
+    });
+  };
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('[data-audience-mode-toggle]');
+    if(!btn)return;
+    const next=document.body.classList.contains('mode-pro')?'beginner':'pro';
+    if(window.ITASetAudienceMode) window.ITASetAudienceMode(next,true);
+    else if(window.ALAudienceMode) window.ALAudienceMode.set(next);
+    syncAudienceSwitch();
+  });
+  document.addEventListener('al:modechange',syncAudienceSwitch);
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',syncAudienceSwitch,{once:true});
+  else syncAudienceSwitch();
 })();

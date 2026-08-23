@@ -22,7 +22,7 @@
       btn.setAttribute('aria-pressed',btn.dataset.userMode===mode?'true':'false');
     });
     document.querySelectorAll('[data-mode-summary]').forEach(function(label){
-      label.textContent=mode==='pro'?'Рабочие задачи и аналитика':'Маршрут с нуля';
+      label.textContent=mode==='pro'?'Аналитика и рабочие задачи':'Пошагово с нуля';
     });
     if(emit){
       document.dispatchEvent(new CustomEvent('al:modechange',{detail:{mode:mode}}));
