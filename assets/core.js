@@ -194,3 +194,49 @@ window.alTrack=function(name,data){
     if(url) location.href=url;
   });
 })();
+
+/* v244 — mobile navigation recovery layer.
+   The top bar is rebuilt by app.js after core.js has already loaded. Rebind
+   navigation when that happens and provide a click fallback in case a cached
+   shell replaced the original button without its listener. */
+(()=>{
+  const isMobile=()=>window.matchMedia('(max-width:900px)').matches;
+  const sync=(open)=>{
+    document.body.classList.toggle('mobile-nav-open',open);
+    document.querySelectorAll('.site-header .mobile-nav-toggle').forEach(btn=>{
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.setAttribute('aria-label',open?'Закрыть меню библиотеки':'Открыть меню библиотеки');
+    });
+  };
+
+  /* Capture the state before the button's own handler runs. If nothing has
+     changed by the end of the click, the fallback performs the toggle. */
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('.site-header .mobile-nav-toggle');
+    if(!btn || !isMobile()) return;
+    const before=document.body.classList.contains('mobile-nav-open');
+    setTimeout(()=>{
+      const after=document.body.classList.contains('mobile-nav-open');
+      if(after===before) sync(!before);
+    },0);
+  },true);
+
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.mobile-nav-overlay') || !isMobile()) return;
+    setTimeout(()=>{
+      if(document.body.classList.contains('mobile-nav-open')) sync(false);
+    },0);
+  },true);
+
+  const rebind=()=>{
+    if(typeof window.ITAInitMobileNav==='function') window.ITAInitMobileNav();
+  };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',rebind,{once:true});
+  else rebind();
+  window.addEventListener('load',rebind,{once:true});
+
+  const header=document.querySelector('.site-header');
+  if(header && 'MutationObserver' in window){
+    new MutationObserver(()=>rebind()).observe(header,{childList:true,subtree:true});
+  }
+})();

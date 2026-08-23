@@ -19413,3 +19413,289 @@ html body.reference-ui-v99 .source-compare-note > :last-child{
     font-size:17px!important;
   }
 }
+
+/* ======================================================================
+   v244 — final mobile drawer contract
+   ====================================================================== */
+@media (max-width:900px){
+  html body .site-header,
+  html body.reference-ui-v99 .site-header{z-index:320!important}
+
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{
+    display:block!important;
+    position:fixed!important;
+    left:0!important;
+    top:var(--v110-mobile-header,64px)!important;
+    bottom:0!important;
+    z-index:310!important;
+    visibility:hidden!important;
+    opacity:1!important;
+    pointer-events:none!important;
+    transform:translate3d(-105%,0,0)!important;
+    transition:transform .2s ease,visibility 0s linear .2s!important;
+  }
+
+  html body.mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99.mobile-nav-open .global-sidebar{
+    visibility:visible!important;
+    pointer-events:auto!important;
+    transform:translate3d(0,0,0)!important;
+    transition:transform .2s ease,visibility 0s!important;
+  }
+
+  html body .mobile-nav-overlay{
+    display:block!important;
+    position:fixed!important;
+    inset:var(--v110-mobile-header,64px) 0 0 0!important;
+    z-index:300!important;
+    visibility:hidden!important;
+    opacity:0!important;
+    pointer-events:none!important;
+  }
+  html body.mobile-nav-open .mobile-nav-overlay{
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+
+  html body.reference-ui-v99 .ref-mobile-menu,
+  html body .site-header .mobile-nav-toggle{
+    position:relative!important;
+    z-index:1!important;
+    cursor:pointer!important;
+    pointer-events:auto!important;
+  }
+}
+
+
+/* ======================================================================
+   v245 — thinner focus frame for inputs and search fields
+   Do not let focus rings overlap adjacent buttons or cling too aggressively.
+   ====================================================================== */
+
+html body :is(input, textarea, select):focus,
+html body :is(input, textarea, select):focus-visible,
+html body.reference-ui-v99 :is(input, textarea, select):focus,
+html body.reference-ui-v99 :is(input, textarea, select):focus-visible{
+  outline:1px solid rgba(68,184,146,.58)!important;
+  outline-offset:-1px!important;
+  box-shadow:none!important;
+}
+
+/* Keep grouped search fields neat: the frame ends before the action button. */
+html body :is(.home-main-search,.sidebar-search,.ref-search,.searchbox>div,.compare-side-field,.tool-form-row,.notes-composer-field):focus-within,
+html body.reference-ui-v99 :is(.home-main-search,.sidebar-search,.ref-search,.searchbox>div,.compare-side-field,.tool-form-row,.notes-composer-field):focus-within{
+  box-shadow:none!important;
+}
+
+html body .home-main-search input:focus,
+html body .home-main-search input:focus-visible,
+html body .sidebar-search input:focus,
+html body .sidebar-search input:focus-visible,
+html body .ref-search input:focus,
+html body .ref-search input:focus-visible,
+html body .searchbox input:focus,
+html body .searchbox input:focus-visible,
+html body.reference-ui-v99 .home-main-search input:focus,
+html body.reference-ui-v99 .home-main-search input:focus-visible,
+html body.reference-ui-v99 .sidebar-search input:focus,
+html body.reference-ui-v99 .sidebar-search input:focus-visible,
+html body.reference-ui-v99 .ref-search input:focus,
+html body.reference-ui-v99 .ref-search input:focus-visible,
+html body.reference-ui-v99 .searchbox input:focus,
+html body.reference-ui-v99 .searchbox input:focus-visible{
+  position:relative!important;
+  z-index:1!important;
+}
+
+
+/* ======================================================================
+   v246 — library meta areas refined, neutralized, and de-greened
+   Make the right-side meta zone look intentional and harmonious.
+   ====================================================================== */
+
+html body .library-row{
+  align-items:stretch!important;
+}
+
+html body .library-meta,
+html body.reference-ui-v99 .library-meta{
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:6px!important;
+  min-height:100%!important;
+  padding:14px 16px!important;
+  border-left:1px solid #ddd4c6!important;
+  border-radius:12px!important;
+  background:linear-gradient(180deg, rgba(250,247,241,.96) 0%, rgba(243,238,231,.92) 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.78)!important;
+  color:#6f6b63!important;
+}
+
+html body .library-meta span,
+html body.reference-ui-v99 .library-meta span{
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:center!important;
+  min-height:20px!important;
+  text-align:right!important;
+  line-height:1.35!important;
+}
+
+html body .library-meta span + span,
+html body.reference-ui-v99 .library-meta span + span{
+  padding-top:6px!important;
+  border-top:1px solid rgba(210,201,188,.7)!important;
+}
+
+html body .library-meta .level-badge,
+html body .library-meta .reading-state-badge,
+html body.reference-ui-v99 .library-meta .level-badge,
+html body.reference-ui-v99 .library-meta .reading-state-badge{
+  width:max-content!important;
+  margin-left:auto!important;
+  padding:4px 9px!important;
+  border:1px solid #d8cfbf!important;
+  border-radius:999px!important;
+  background:#f6f1e8!important;
+  color:#6b6257!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.03em!important;
+  text-transform:none!important;
+}
+
+html body .library-meta .level-beginner,
+html body .library-meta .level-advanced,
+html body .library-meta .reading-state-badge,
+html body.reference-ui-v99 .library-meta .level-beginner,
+html body.reference-ui-v99 .library-meta .level-advanced,
+html body.reference-ui-v99 .library-meta .reading-state-badge{
+  color:#6b6257!important;
+}
+
+html body .library-meta .reading-state-badge.started:before,
+html body.reference-ui-v99 .library-meta .reading-state-badge.started:before{
+  color:#8f877b!important;
+}
+
+html body.theme-dark .library-meta,
+html body.reference-ui-v99.theme-dark .library-meta{
+  border-left:1px solid #313b46!important;
+  background:linear-gradient(180deg, rgba(22,29,37,.98) 0%, rgba(18,24,31,.95) 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03)!important;
+  color:#bcc6cf!important;
+}
+
+html body.theme-dark .library-meta span,
+html body.reference-ui-v99.theme-dark .library-meta span{
+  color:#bcc6cf!important;
+}
+
+html body.theme-dark .library-meta span + span,
+html body.reference-ui-v99.theme-dark .library-meta span + span{
+  border-top:1px solid rgba(53,64,76,.9)!important;
+}
+
+html body.theme-dark .library-meta .level-badge,
+html body.theme-dark .library-meta .reading-state-badge,
+html body.reference-ui-v99.theme-dark .library-meta .level-badge,
+html body.reference-ui-v99.theme-dark .library-meta .reading-state-badge{
+  background:#202832!important;
+  border:1px solid #3a4551!important;
+  color:#dbe2e8!important;
+}
+
+html body.theme-dark .library-meta .level-beginner,
+html body.theme-dark .library-meta .level-advanced,
+html body.theme-dark .library-meta .reading-state-badge,
+html body.reference-ui-v99.theme-dark .library-meta .level-beginner,
+html body.reference-ui-v99.theme-dark .library-meta .level-advanced,
+html body.reference-ui-v99.theme-dark .library-meta .reading-state-badge{
+  color:#dbe2e8!important;
+}
+
+html body.theme-dark .library-meta .reading-state-badge.started:before,
+html body.reference-ui-v99.theme-dark .library-meta .reading-state-badge.started:before{
+  color:#94a0ab!important;
+}
+
+@media (max-width:920px){
+  html body .library-meta,
+  html body.reference-ui-v99 .library-meta{
+    min-height:auto!important;
+    width:100%!important;
+    flex-direction:row!important;
+    flex-wrap:wrap!important;
+    justify-content:flex-start!important;
+    align-items:center!important;
+    gap:8px!important;
+    padding:10px 12px!important;
+    border-left:0!important;
+  }
+  html body .library-meta span,
+  html body.reference-ui-v99 .library-meta span{
+    justify-content:flex-start!important;
+    text-align:left!important;
+    min-height:auto!important;
+  }
+  html body .library-meta span + span,
+  html body.reference-ui-v99 .library-meta span + span{
+    padding-top:0!important;
+    border-top:0!important;
+  }
+  html body .library-meta .level-badge,
+  html body .library-meta .reading-state-badge,
+  html body.reference-ui-v99 .library-meta .level-badge,
+  html body.reference-ui-v99 .library-meta .reading-state-badge{
+    margin-left:0!important;
+  }
+}
+
+
+/* ======================================================================
+   v247 — remove remaining green from library heading / topic label in dark theme
+   ====================================================================== */
+html body.theme-dark .page-head h1,
+html body.reference-ui-v99.theme-dark .page-head h1,
+html body.theme-dark .catalog-bar #activeTopicLabel,
+html body.reference-ui-v99.theme-dark .catalog-bar #activeTopicLabel{
+  color:#dfe5ea!important;
+}
+
+
+/* ======================================================================
+   v248 — subtle inline affiliate mentions; no branded promo blocks
+   ====================================================================== */
+html body .affiliate-inline-mention,
+html body.reference-ui-v99 .affiliate-inline-mention{
+  margin:16px 0 20px!important;
+  padding:0!important;
+  max-width:820px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:inherit!important;
+  font-size:14px!important;
+  line-height:1.65!important;
+}
+html body .affiliate-inline-mention a,
+html body.reference-ui-v99 .affiliate-inline-mention a{
+  color:inherit!important;
+  font-weight:700!important;
+  text-decoration:underline!important;
+  text-decoration-thickness:1px!important;
+  text-underline-offset:3px!important;
+}
+html body.theme-dark .affiliate-inline-mention,
+html body.reference-ui-v99.theme-dark .affiliate-inline-mention{
+  color:#b8c1ca!important;
+}
+html body.theme-dark .affiliate-inline-mention a,
+html body.reference-ui-v99.theme-dark .affiliate-inline-mention a{
+  color:#dfe5ea!important;
+}
