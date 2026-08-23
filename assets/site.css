@@ -15023,3 +15023,404 @@ html body.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partne
 html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partner-cta span,.section-bottom-links a,.home-actions a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.bookmark-button,.saved-link){
   color:#c9b58f!important;
 }
+
+/* ======================================================================
+   v190 — uniform article width on all non-home pages
+   Keep one sober reading width across the site, excluding the homepage.
+   ====================================================================== */
+:root{
+  --tl-v190-page-max:1148px;
+  --tl-v190-page-gutter:18px;
+  --tl-v190-page-gutter-tablet:14px;
+  --tl-v190-page-gutter-mobile:10px;
+  --tl-v190-article-col:850px;
+  --tl-v190-rail-col:270px;
+  --tl-v190-article-gap:28px;
+}
+
+/* Main inner width for every non-home page */
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap.narrow,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .global-mode-guidance.wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .beginner-term-note.wrap,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .handbook,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .glossary,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .saved-page,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .diagnostic-wizard-page,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .source-compare-page,
+html body.content-system-v103 main.compact-main-v103:not(.home-page) > .library-shell,
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap,
+html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow{
+  width:min(calc(100% - (var(--tl-v190-page-gutter) * 2)), var(--tl-v190-page-max))!important;
+  max-width:var(--tl-v190-page-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+
+/* Article pages with right rail get the exact same canvas width */
+@media (min-width:1051px){
+  html body.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.reference-ui-v99.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.reference-ui-v99.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout,
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:min(calc(100% - (var(--tl-v190-page-gutter) * 2)), var(--tl-v190-page-max))!important;
+    max-width:var(--tl-v190-page-max)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    grid-template-columns:minmax(0,var(--tl-v190-article-col)) var(--tl-v190-rail-col)!important;
+    gap:var(--tl-v190-article-gap)!important;
+    justify-content:center!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.article-page.content-system-v103 main.compact-main-v103 .article,
+  html body.content-system-v103 main.source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.article-page.content-system-v103 main.compact-main-v103 .article,
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page .source-playbook-article,
+  html body.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article,
+  html body.reference-ui-v99.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article,
+  html body.theme-dark.content-system-v103 main.source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page .source-playbook-article{
+    width:100%!important;
+    max-width:var(--tl-v190-article-col)!important;
+    min-width:0!important;
+    justify-self:start!important;
+  }
+
+  html body.article-page.content-system-v103 main.compact-main-v103 .article-aside,
+  html body.content-system-v103 main.source-playbook-page .article-aside,
+  html body.reference-ui-v99.article-page.content-system-v103 main.compact-main-v103 .article-aside,
+  html body.reference-ui-v99.content-system-v103 main.source-playbook-page .article-aside,
+  html body.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article-aside,
+  html body.reference-ui-v99.theme-dark.article-page.content-system-v103 main.compact-main-v103 .article-aside,
+  html body.theme-dark.content-system-v103 main.source-playbook-page .article-aside,
+  html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page .article-aside{
+    width:var(--tl-v190-rail-col)!important;
+    min-width:var(--tl-v190-rail-col)!important;
+    max-width:var(--tl-v190-rail-col)!important;
+    justify-self:end!important;
+  }
+}
+
+/* Slightly smaller symmetrical gutters on smaller screens */
+@media (max-width:1100px){
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .global-mode-guidance.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .beginner-term-note.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .handbook,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .glossary,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .saved-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .diagnostic-wizard-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .source-compare-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .library-shell,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow,
+  html body.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - (var(--tl-v190-page-gutter-tablet) * 2))!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > section.page-head > .wrap.narrow,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .global-mode-guidance.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .beginner-term-note.wrap,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .handbook,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .glossary,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .saved-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .diagnostic-wizard-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .source-compare-page,
+  html body.content-system-v103 main.compact-main-v103:not(.home-page) > .library-shell,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap,
+  html body.about-page-v114.content-system-v103 main.compact-main-v103 > .about-hero-v114 > .wrap.narrow,
+  html body.article-page.content-system-v103 main.compact-main-v103 .article-layout,
+  html body.content-system-v103 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - (var(--tl-v190-page-gutter-mobile) * 2))!important;
+  }
+}
+
+
+/* ======================================================================
+   v191 — real dark-theme background cleanup
+   Root cause: older dark-theme patches assigned several different solid
+   backgrounds to nested article wrappers (.academy-article-hero-main,
+   .academy-article-hero-copy, .academy-article-hero-foot, .page-head,
+   etc.). In dark mode this created visible slabs inside one article.
+   Fix: one outer canvas color, nested layout wrappers transparent.
+   ====================================================================== */
+:root{
+  --tl-v191-dark-canvas:#0b1015;
+}
+
+/* One actual canvas for the whole dark page. */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark,
+html body.theme-dark main,
+html body.reference-ui-v99.theme-dark main,
+html body.theme-dark :is(
+  .compact-main-v103,
+  .article-page,
+  .source-playbook-page,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .library-main,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .traffic-page,
+  .services-page,
+  .notes-page,
+  .tool-suite,
+  .about-hero-v114,
+  .about-layout-v114,
+  .journal-reading,
+  .catalog-bar,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .related-reading,
+  .article-author,
+  .article-exit-nav,
+  .next-reading
+),
+html body.reference-ui-v99.theme-dark :is(
+  .compact-main-v103,
+  .article-page,
+  .source-playbook-page,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .library-main,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .traffic-page,
+  .services-page,
+  .notes-page,
+  .tool-suite,
+  .about-hero-v114,
+  .about-layout-v114,
+  .journal-reading,
+  .catalog-bar,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .related-reading,
+  .article-author,
+  .article-exit-nav,
+  .next-reading
+){
+  background:var(--tl-v191-dark-canvas)!important;
+  background-color:var(--tl-v191-dark-canvas)!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Inner article wrappers must not paint their own slabs. */
+html body.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article > section,
+  .source-playbook-article > section,
+  .breadcrumbs,
+  .article-actions,
+  .article-actions-unified,
+  .page-head > .wrap,
+  .section-landing > .wrap,
+  .section-landing-head > .wrap
+),
+html body.reference-ui-v99.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article > section,
+  .source-playbook-article > section,
+  .breadcrumbs,
+  .article-actions,
+  .article-actions-unified,
+  .page-head > .wrap,
+  .section-landing > .wrap,
+  .section-landing-head > .wrap
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Decorative pseudo-elements also have to stay transparent. */
+html body.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .about-hero-v114,
+  .about-layout-v114
+)::before,
+html body.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .about-hero-v114,
+  .about-layout-v114
+)::after,
+html body.reference-ui-v99.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .about-hero-v114,
+  .about-layout-v114
+)::before,
+html body.reference-ui-v99.theme-dark :is(
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .academy-content-section,
+  .logic-section-v103,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing,
+  .section-landing-head,
+  .library-shell,
+  .handbook,
+  .glossary,
+  .saved-page,
+  .diagnostic-wizard-page,
+  .source-compare-page,
+  .about-hero-v114,
+  .about-layout-v114
+)::after{
+  background:none!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
