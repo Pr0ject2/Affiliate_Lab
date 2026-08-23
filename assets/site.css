@@ -20671,3 +20671,316 @@ html body.theme-dark.home-shell-v256 main.home-page .home-results .home-results-
   html body.home-shell-v256 main.home-page .home-welcome h1{font-size:clamp(32px,10vw,41px)!important}
   html body.home-shell-v256 main.home-page .home-results .home-results-inner{padding:22px 17px!important}
 }
+
+
+/* ======================================================================
+   v262 — restore hero search panel + make laboratory background visible
+   ====================================================================== */
+
+/* The lab blueprint now has enough contrast to be visible without competing
+   with text. Keep it attached to the full homepage surface. */
+html body.theme-dark.home-shell-v256 main.home-page,
+html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page{
+  background-color:#0b1117!important;
+  background-image:
+    linear-gradient(90deg,rgba(9,14,19,.20) 0%,rgba(9,14,19,.08) 48%,rgba(9,14,19,.12) 100%),
+    linear-gradient(180deg,rgba(7,12,17,.05) 0%,rgba(7,12,17,.28) 100%),
+    url('/Affiliate_Lab/assets/home-lab-blueprint.svg')!important;
+  background-position:center top,center top,center top!important;
+  background-size:auto,auto,1600px auto!important;
+  background-repeat:repeat,repeat,no-repeat!important;
+  background-attachment:scroll!important;
+}
+
+/* Restore the old search card on the right side of the introduction. */
+@media (min-width:901px){
+  html body.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 320px!important;
+    gap:54px!important;
+    align-items:start!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    width:100%!important;
+    max-width:860px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    display:block!important;
+    width:320px!important;
+    max-width:320px!important;
+    margin:34px 0 0!important;
+    padding:22px 20px 20px!important;
+    border-radius:16px!important;
+    box-shadow:none!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-actions,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-actions{
+    display:none!important;
+  }
+}
+
+/* Search panel typography and controls. */
+html body.home-shell-v256 main.home-page .home-search-card .home-search-label,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card .home-search-label{
+  margin:0 0 10px!important;
+  font-size:10px!important;
+  line-height:1!important;
+  font-weight:820!important;
+  letter-spacing:.07em!important;
+  text-transform:uppercase!important;
+}
+
+html body.home-shell-v256 main.home-page .home-search-card h2,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card h2{
+  margin:0 0 8px!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:22px!important;
+  line-height:1.15!important;
+  letter-spacing:-.025em!important;
+  font-weight:780!important;
+}
+
+html body.home-shell-v256 main.home-page .home-search-card > p:not(.home-search-label),
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card > p:not(.home-search-label){
+  margin:0 0 16px!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+
+html body.home-shell-v256 main.home-page .home-main-search,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search{
+  margin:0!important;
+}
+
+html body.home-shell-v256 main.home-page .home-main-search > div,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search > div{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  gap:0!important;
+  width:100%!important;
+  border-radius:10px!important;
+  overflow:hidden!important;
+}
+
+html body.home-shell-v256 main.home-page .home-main-search input,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search input{
+  min-width:0!important;
+  height:43px!important;
+  padding:0 12px!important;
+  border-radius:0!important;
+  font-size:12.5px!important;
+}
+
+html body.home-shell-v256 main.home-page .home-main-search button,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search button{
+  min-width:70px!important;
+  height:43px!important;
+  padding:0 14px!important;
+  border-radius:0!important;
+  font-size:12px!important;
+  font-weight:780!important;
+}
+
+html body.home-shell-v256 main.home-page .home-search-links,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-links{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:7px!important;
+  margin-top:15px!important;
+  padding-top:14px!important;
+  border-top:1px solid currentColor!important;
+  border-top-color:rgba(127,145,154,.18)!important;
+}
+
+html body.home-shell-v256 main.home-page .home-search-links a,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-links a{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:28px!important;
+  padding:0 9px!important;
+  border-radius:999px!important;
+  font-size:10.5px!important;
+  line-height:1!important;
+  font-weight:610!important;
+  text-decoration:none!important;
+}
+
+/* Dark search panel. */
+html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+  background:rgba(16,23,30,.90)!important;
+  border:1px solid #303c47!important;
+  color:#eff4f2!important;
+  backdrop-filter:blur(4px)!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-search-card .home-search-label{
+  color:#9babb2!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-search-card h2{
+  color:#eef3f2!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-search-card > p:not(.home-search-label){
+  color:#aeb9bf!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-main-search > div{
+  border:1px solid #34424e!important;
+  background:#0d141a!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-main-search input{
+  background:#0d141a!important;
+  border:0!important;
+  color:#dbe3e6!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-main-search button{
+  background:#151e26!important;
+  border:0!important;
+  border-left:1px solid #34424e!important;
+  color:#f1f4f3!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-search-links a{
+  background:#151e26!important;
+  border:1px solid #35424d!important;
+  color:#b9c6ca!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page .home-search-links a:hover{
+  border-color:#4a5a67!important;
+  color:#f2f6f5!important;
+}
+
+/* Light theme gets the same composition rather than a dark-theme-only feature. */
+html body:not(.theme-dark).home-shell-v256 main.home-page{
+  background:
+    linear-gradient(180deg,rgba(248,248,244,.88),rgba(244,247,244,.94)),
+    url('/Affiliate_Lab/assets/home-lab-blueprint.svg') center top / 1600px auto no-repeat!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-card,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid #d5ded9!important;
+  color:#193d33!important;
+  box-shadow:0 12px 30px rgba(30,50,43,.055)!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-card .home-search-label{
+  color:#75847e!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-card h2{
+  color:#173d32!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-card > p:not(.home-search-label){
+  color:#5d6964!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-main-search > div{
+  border:1px solid #d3ddd8!important;
+  background:#fbfcfb!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-main-search input{
+  background:#fbfcfb!important;
+  border:0!important;
+  color:#243f37!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-main-search button{
+  background:#edf3f0!important;
+  border:0!important;
+  border-left:1px solid #d3ddd8!important;
+  color:#21463b!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-links a{
+  background:#f6f8f6!important;
+  border:1px solid #d5ded9!important;
+  color:#53645d!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-search-links a:hover{
+  background:#eef4f1!important;
+  border-color:#bdcec6!important;
+  color:#1d4b3d!important;
+}
+
+/* Mobile: search card follows the intro cards naturally and stays usable. */
+@media (max-width:900px){
+  html body.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-grid{
+    display:block!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:20px 0 0!important;
+    padding:18px 16px 17px!important;
+    border-radius:14px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page,
+  html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page,
+  html body:not(.theme-dark).home-shell-v256 main.home-page{
+    background-size:auto,auto,1200px auto!important;
+  }
+}
+
+
+/* v263 — intro sentence now directly introduces the three learning cards. */
+html body.home-shell-v256 main.home-page .home-lead,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead{
+  margin-bottom:0!important;
+}
+
+html body.home-shell-v256 main.home-page .home-welcome-summary,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary{
+  margin-top:18px!important;
+}
+
+
+/* v264 — extra welcoming copy between hero heading and learning cards */
+html body.home-shell-v256 main.home-page .home-intro-copy,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-intro-copy{
+  max-width:760px!important;
+  margin:22px 0 0!important;
+  font-size:17px!important;
+  line-height:1.68!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page .home-intro-copy{
+  color:#b7c1c6!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-intro-copy{
+  color:#5d6964!important;
+}
+html body.home-shell-v256 main.home-page .home-lead,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead{
+  margin-top:18px!important;
+}
+@media (max-width:900px){
+  html body.home-shell-v256 main.home-page .home-intro-copy{
+    max-width:100%!important;
+    margin-top:18px!important;
+    font-size:15.5px!important;
+    line-height:1.62!important;
+  }
+  html body.home-shell-v256 main.home-page .home-lead{
+    margin-top:14px!important;
+  }
+}
