@@ -14719,3 +14719,307 @@ html body.reference-ui-v99.theme-dark :is(
   background-image:none!important;
   border-color:#29333d!important;
 }
+
+/* v187 — symmetric wider inner layout on all pages except home */
+@media (min-width: 1051px){
+  main:not(.home-page) > .wrap,
+  .page-head .wrap,
+  body:not(.home-page) .site-footer .wrap{
+    max-width: none !important;
+    width: auto !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+
+  main:not(.home-page) > .wrap.article-layout{
+    grid-template-columns: minmax(0, 1fr) 252px !important;
+    gap: 28px !important;
+    align-items: start !important;
+  }
+
+  main:not(.home-page) > .wrap.article-layout > .article,
+  main:not(.home-page) > .wrap.article-layout > article{
+    min-width: 0 !important;
+  }
+
+  main:not(.home-page) > .wrap.article-layout > .article-aside,
+  main:not(.home-page) > .wrap.article-layout > aside{
+    width: auto !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ======================================================================
+   v188 — one uniform dark content canvas everywhere
+   Remove leftover structural slabs/background differences in dark mode.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-uniform-dark:#0d1218;
+  --tl-uniform-panel:#141b23;
+  --tl-uniform-border:#2b3540;
+  background:var(--tl-uniform-dark)!important;
+  background-image:none!important;
+}
+
+/* Entire content canvas uses one single background color. */
+html body.theme-dark :is(
+  main,
+  main.compact-main-v103,
+  main.article-page,
+  main.source-playbook-page,
+  main.traffic-hub-page,
+  main.services-page,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .library-shell,
+  .library-main,
+  .catalog-bar,
+  .journal-reading,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .related-reading,
+  .article-author,
+  .article-exit-nav,
+  .next-reading,
+  .about-hero-v114,
+  .about-layout-v114,
+  .traffic-page,
+  .services-page,
+  .notes-page,
+  .tool-suite
+),
+html body.reference-ui-v99.theme-dark :is(
+  main,
+  main.compact-main-v103,
+  main.article-page,
+  main.source-playbook-page,
+  main.traffic-hub-page,
+  main.services-page,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .academy-article-hero-main,
+  .academy-article-hero-copy,
+  .academy-article-hero-foot,
+  .academy-article-hero-shell,
+  .source-hero-shell,
+  .source-title-row,
+  .source-title-copy,
+  .section-groups,
+  .section-group,
+  .section-group-head,
+  .section-bottom-links,
+  .library-shell,
+  .library-main,
+  .catalog-bar,
+  .journal-reading,
+  .global-mode-guidance,
+  .beginner-term-note,
+  .related-reading,
+  .article-author,
+  .article-exit-nav,
+  .next-reading,
+  .about-hero-v114,
+  .about-layout-v114,
+  .traffic-page,
+  .services-page,
+  .notes-page,
+  .tool-suite
+){
+  background:var(--tl-uniform-dark)!important;
+  background-color:var(--tl-uniform-dark)!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Article sections must never create a different large slab. */
+html body.theme-dark :is(
+  .source-playbook-article>section,
+  .article>section,
+  .article-depth,
+  .academy-content-section,
+  .logic-section-v103,
+  .guide-v101-section,
+  .platform-setup-section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .source-playbook-article>section,
+  .article>section,
+  .article-depth,
+  .academy-content-section,
+  .logic-section-v103,
+  .guide-v101-section,
+  .platform-setup-section
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Remove the outer framed-sheet effect from articles in dark mode. */
+html body.theme-dark :is(.article,.structured-article-v103,.source-playbook-article),
+html body.reference-ui-v99.theme-dark :is(.article,.structured-article-v103,.source-playbook-article){
+  border-color:transparent!important;
+  border-radius:0!important;
+}
+
+/* Decorative pseudo backgrounds must not reintroduce another shade. */
+html body.theme-dark :is(
+  main,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .source-hero-shell,
+  .section-groups,
+  .section-group,
+  .library-shell,
+  .library-main,
+  .about-hero-v114
+)::before,
+html body.theme-dark :is(
+  main,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .source-hero-shell,
+  .section-groups,
+  .section-group,
+  .library-shell,
+  .library-main,
+  .about-hero-v114
+)::after,
+html body.reference-ui-v99.theme-dark :is(
+  main,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .source-hero-shell,
+  .section-groups,
+  .section-group,
+  .library-shell,
+  .library-main,
+  .about-hero-v114
+)::before,
+html body.reference-ui-v99.theme-dark :is(
+  main,
+  .article-layout,
+  .article,
+  .structured-article-v103,
+  .source-playbook-article,
+  .page-head,
+  .section-landing-head,
+  .section-landing,
+  .academy-article-hero,
+  .source-hero-shell,
+  .section-groups,
+  .section-group,
+  .library-shell,
+  .library-main,
+  .about-hero-v114
+)::after{
+  background:none!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* Real cards/controls may remain slightly separated from the canvas. */
+html body.theme-dark :is(
+  .section-entry,
+  .section-outcome,
+  .section-feature>div,
+  .section-feature>aside,
+  .playbook-card,
+  .source-tool-card,
+  .source-journey-card,
+  .service-card,
+  .service-tool,
+  .tool-card,
+  .library-row,
+  .about-card,
+  .article-figure,
+  .playbook-facts>div,
+  .playbook-checklist li,
+  .guide-v101-grid>div,
+  .guide-v101-formats>article,
+  .guide-v101-flow,
+  .guide-v101-verdict,
+  .guide-v101-media,
+  .guide-v101-code,
+  .rules-summary-grid>div,
+  .rules-model-grid section,
+  .geo-chip-grid li,
+  table,
+  .article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,
+  .rail-partner-card,
+  .rail-path-card,
+  .rail-cover-card
+){
+  background:var(--tl-uniform-panel)!important;
+  background-image:none!important;
+  border-color:var(--tl-uniform-border)!important;
+}
+
+/* v189 — slightly softer text in dark theme */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-dark-text:#dfe5ea!important;
+  --tl-dark-muted:#b8c1ca!important;
+  --tl-dark-soft:#929da8!important;
+  --tl-dark-accent:#c9b58f!important;
+  --tl-dark-accent-strong:#d8c59f!important;
+}
+
+html body.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,.section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,.article-page .article h1,.article-page .article h2,.article th,.rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,.playbook-faq summary,.home-results-inner h2),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,strong,b,.article-label,.footer-brand,.source-title-copy h1,.service-tool h3,.playbook-card h2,.section-group-head h2,.source-playbook-article h1,.source-playbook-article h2,.article-page .article h1,.article-page .article h2,.article th,.rail-tools a b,.rules-summary-grid b,.rules-model-grid h3,.geo-directory b,.playbook-faq summary,.home-results-inner h2){
+  color:#dfe5ea!important;
+}
+
+html body.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.guide-v101-formats p,.guide-v101-grid p,.guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,.service-tool p,.tool-card p,.about-card p,.playbook-faq details p,.rail-quick a small,.source-compare-row > div,.compare-table > div,.rules-summary-grid p,.rules-model-grid li,.geo-chip-grid li,.geo-chip-grid li small,.geo-guideline-link span,.article td,.article dd,.source-playbook-article dd,.playbook-facts dt),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.service-kicker,.source-tool-card-copy,.article-author p,.handbook-intro p,.playbook-card>p,.article p,.article li,.source-playbook-article p,.source-playbook-article li,.section-entry p,.section-outcome p,.guide-v101-formats p,.guide-v101-grid p,.guide-v101-verdict p,.guide-v101-flow p,.related-card p,.library-row p,.service-tool p,.tool-card p,.about-card p,.playbook-faq details p,.rail-quick a small,.source-compare-row > div,.compare-table > div,.rules-summary-grid p,.rules-model-grid li,.geo-chip-grid li,.geo-chip-grid li small,.geo-guideline-link span,.article td,.article dd,.source-playbook-article dd,.playbook-facts dt){
+  color:#b8c1ca!important;
+}
+
+html body.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partner-cta span,.section-bottom-links a,.home-actions a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.bookmark-button,.saved-link),
+html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta,.rail-all-tools,.sidebar-partner-cta span,.section-bottom-links a,.home-actions a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.bookmark-button,.saved-link){
+  color:#c9b58f!important;
+}
