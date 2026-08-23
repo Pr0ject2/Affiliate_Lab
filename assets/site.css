@@ -18748,3 +18748,310 @@ html body.reference-ui-v99 .source-playbook-page :is(
     margin-top:14px!important;
   }
 }
+
+/* ======================================================================
+   v237 — feedback block alignment + proper light-theme button styling
+   ====================================================================== */
+
+html body .article-aside.enhanced-rail .rail-feedback{
+  align-items:stretch!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-actions{
+  justify-content:center!important;
+  width:100%!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button{
+  width:46px!important;
+  height:46px!important;
+  min-width:46px!important;
+  min-height:46px!important;
+  background:#f7faf8!important;
+  border:1px solid #cad5cf!important;
+  color:#314039!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button:hover{
+  background:#edf4f0!important;
+  border-color:#9fb6aa!important;
+  color:#243029!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button[aria-pressed="true"]{
+  background:rgba(68,184,146,.12)!important;
+  border-color:#44B892!important;
+  color:#1d7b5d!important;
+}
+
+html body.theme-dark .article-aside.enhanced-rail .rail-feedback-button,
+html body.reference-ui-v99.theme-dark .article-aside.enhanced-rail .rail-feedback-button{
+  background:#111820!important;
+  border-color:#303B46!important;
+  color:#EDF2F5!important;
+}
+html body.theme-dark .article-aside.enhanced-rail .rail-feedback-button:hover,
+html body.reference-ui-v99.theme-dark .article-aside.enhanced-rail .rail-feedback-button:hover{
+  background:#1C252E!important;
+  border-color:#44B892!important;
+  color:#EDF2F5!important;
+}
+html body.theme-dark .article-aside.enhanced-rail .rail-feedback-button[aria-pressed="true"],
+html body.reference-ui-v99.theme-dark .article-aside.enhanced-rail .rail-feedback-button[aria-pressed="true"]{
+  background:rgba(68,184,146,.14)!important;
+  border-color:#44B892!important;
+  color:#63C6A5!important;
+}
+
+/* ======================================================================
+   v238 — traffic sources final dark-theme palette alignment
+   Make source pages use the same neutral graphitic palette as the rest of the site.
+   ====================================================================== */
+
+html body.theme-dark main.source-playbook-page,
+html body.reference-ui-v99.theme-dark main.source-playbook-page{
+  background:var(--tl-dark-page,#0B1015)!important;
+}
+
+/* Source pages should use the same calm surfaces and not their own green/brown system. */
+html body.theme-dark main.source-playbook-page .source-hero-shell,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-shell,
+html body.theme-dark main.source-playbook-page .article-aside .aside-block,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .article-aside .aside-block{
+  background:var(--tl-dark-article,#111820)!important;
+  border:1px solid var(--tl-dark-line,#303B46)!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-head-actions a,
+  .guide-v101-inline-link a,
+  .source-compare-actions a,
+  .guide-v101-diagnostics a,
+  .playbook-official a,
+  .rail-tools a,
+  .rail-quick a,
+  .rail-related-visual > a,
+  .article-cta-row a,
+  .source-next-links a,
+  .section-bottom-links a,
+  .traffic-next a
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-head-actions a,
+  .guide-v101-inline-link a,
+  .source-compare-actions a,
+  .guide-v101-diagnostics a,
+  .playbook-official a,
+  .rail-tools a,
+  .rail-quick a,
+  .rail-related-visual > a,
+  .article-cta-row a,
+  .source-next-links a,
+  .section-bottom-links a,
+  .traffic-next a
+){
+  background:var(--tl-dark-card,#171E26)!important;
+  border:1px solid var(--tl-dark-line,#303B46)!important;
+  color:var(--tl-dark-text,#EDF2F5)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-head-actions a:hover,
+  .guide-v101-inline-link a:hover,
+  .source-compare-actions a:hover,
+  .guide-v101-diagnostics a:hover,
+  .playbook-official a:hover,
+  .rail-tools a:hover,
+  .rail-quick a:hover,
+  .rail-related-visual > a:hover,
+  .article-cta-row a:hover,
+  .source-next-links a:hover,
+  .section-bottom-links a:hover,
+  .traffic-next a:hover
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-head-actions a:hover,
+  .guide-v101-inline-link a:hover,
+  .source-compare-actions a:hover,
+  .guide-v101-diagnostics a:hover,
+  .playbook-official a:hover,
+  .rail-tools a:hover,
+  .rail-quick a:hover,
+  .rail-related-visual > a:hover,
+  .article-cta-row a:hover,
+  .source-next-links a:hover,
+  .section-bottom-links a:hover,
+  .traffic-next a:hover
+){
+  background:var(--tl-dark-soft,#1C252E)!important;
+  border-color:var(--tl-dark-line,#303B46)!important;
+  color:var(--tl-dark-text,#EDF2F5)!important;
+}
+
+/* Neutralize leftover source-specific warm/green labels. */
+html body.theme-dark main.source-playbook-page :is(
+  .article-label,
+  .playbook-method > div > span,
+  .playbook-infrastructure > div > span,
+  .playbook-decision article > span,
+  .playbook-risk b,
+  .playbook-format-list dt span,
+  .guide-v101-grid span,
+  .guide-v101-flow small,
+  .guide-v101-diagnostics span,
+  .guide-v101-scale span,
+  .guide-v101-next span,
+  .source-facts dt,
+  .playbook-facts dt,
+  .rail-feedback b,
+  .source-journey-card small,
+  .source-tool-card small,
+  .guide-v101-code dt,
+  .guide-v101-timeline time,
+  .ref-source-funnel span,
+  .ref-format-card span,
+  .ref-track-card span,
+  .ref-metrics-card span
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .article-label,
+  .playbook-method > div > span,
+  .playbook-infrastructure > div > span,
+  .playbook-decision article > span,
+  .playbook-risk b,
+  .playbook-format-list dt span,
+  .guide-v101-grid span,
+  .guide-v101-flow small,
+  .guide-v101-diagnostics span,
+  .guide-v101-scale span,
+  .guide-v101-next span,
+  .source-facts dt,
+  .playbook-facts dt,
+  .rail-feedback b,
+  .source-journey-card small,
+  .source-tool-card small,
+  .guide-v101-code dt,
+  .guide-v101-timeline time,
+  .ref-source-funnel span,
+  .ref-format-card span,
+  .ref-track-card span,
+  .ref-metrics-card span
+){
+  color:var(--tl-dark-muted,#85939D)!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-facts dd,
+  .guide-v101-grid b,
+  .guide-v101-flow b,
+  .guide-v101-diagnostics b,
+  .guide-v101-scale b,
+  .guide-v101-next b,
+  .guide-v101-timeline h3,
+  .guide-v101-link-options h3,
+  .playbook-format-list dt,
+  .playbook-decision h2,
+  .playbook-decision h3,
+  .source-tool-card b,
+  .source-journey-card b,
+  .ref-source-funnel b,
+  .ref-format-card b,
+  .ref-track-card b,
+  .ref-metrics-card b
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-facts dd,
+  .guide-v101-grid b,
+  .guide-v101-flow b,
+  .guide-v101-diagnostics b,
+  .guide-v101-scale b,
+  .guide-v101-next b,
+  .guide-v101-timeline h3,
+  .guide-v101-link-options h3,
+  .playbook-format-list dt,
+  .playbook-decision h2,
+  .playbook-decision h3,
+  .source-tool-card b,
+  .source-journey-card b,
+  .ref-source-funnel b,
+  .ref-format-card b,
+  .ref-track-card b,
+  .ref-metrics-card b
+){
+  color:var(--tl-dark-text,#EDF2F5)!important;
+}
+
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-card-risk,
+  .playbook-risk p,
+  .playbook-official p,
+  .playbook-format-list dd,
+  .playbook-format-list small,
+  .guide-v101-formats p,
+  .guide-v101-timeline p,
+  .guide-v101-link-options p,
+  .guide-v101-link-options li,
+  .guide-v101-diagnostics p,
+  .guide-v101-next p,
+  .guide-v101-next li,
+  .ref-source-funnel p,
+  .ref-format-card p,
+  .ref-track-card p,
+  .ref-metrics-card p
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-card-risk,
+  .playbook-risk p,
+  .playbook-official p,
+  .playbook-format-list dd,
+  .playbook-format-list small,
+  .guide-v101-formats p,
+  .guide-v101-timeline p,
+  .guide-v101-link-options p,
+  .guide-v101-link-options li,
+  .guide-v101-diagnostics p,
+  .guide-v101-next p,
+  .guide-v101-next li,
+  .ref-source-funnel p,
+  .ref-format-card p,
+  .ref-track-card p,
+  .ref-metrics-card p
+){
+  color:var(--tl-dark-copy,#B8C3CA)!important;
+}
+
+/* Section tabs and chips match the rest of the site. */
+html body.theme-dark main.source-playbook-page .source-section-tabs a,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-section-tabs a{
+  background:transparent!important;
+  border:1px solid transparent!important;
+  color:var(--tl-dark-copy,#B8C3CA)!important;
+}
+html body.theme-dark main.source-playbook-page .source-section-tabs a:hover,
+html body.theme-dark main.source-playbook-page .source-section-tabs a.is-current,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-section-tabs a:hover,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-section-tabs a.is-current{
+  background:var(--tl-dark-card,#171E26)!important;
+  border-color:var(--tl-dark-line,#303B46)!important;
+  color:var(--tl-dark-text,#EDF2F5)!important;
+}
+
+/* Remove the different greenish numbering chips from steps/cards. */
+html body.theme-dark main.source-playbook-page :is(
+  .playbook-steps > li > span:first-child,
+  .playbook-steps li > span,
+  .guide-v101-steps li > span,
+  .ref-source-funnel i,
+  .ref-track-card i,
+  .ref-metrics-card i
+),
+html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
+  .playbook-steps > li > span:first-child,
+  .playbook-steps li > span,
+  .guide-v101-steps li > span,
+  .ref-source-funnel i,
+  .ref-track-card i,
+  .ref-metrics-card i
+){
+  background:var(--tl-dark-soft,#1C252E)!important;
+  border:1px solid var(--tl-dark-line,#303B46)!important;
+  color:var(--tl-dark-text,#EDF2F5)!important;
+  box-shadow:none!important;
+}
