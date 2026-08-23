@@ -1921,35 +1921,89 @@
       const related=rail.querySelector('.rail-related-visual'); if(related){const b=related.querySelector(':scope>b'); if(b)b.textContent='Похожие гайды';}
     }
 
-    // Academy-wide progress: opened pages across the whole site, not scroll depth of one article.
+    // Adaptive TrafficLab progress: articles opened / all currently published articles.
+    // The catalog is discovered from sitemap.xml and the library/source hub at runtime,
+    // so newly added articles automatically enter the denominator without editing app.js.
     const progressValue=document.querySelector('[data-ref-progress-value]');
     const progressBar=document.querySelector('[data-ref-progress-bar]');
     const progressBox=document.querySelector('.ref-top-progress');
-    const academyPages=["/Affiliate_Lab/about/","/Affiliate_Lab/analytics/","/Affiliate_Lab/basics/","/Affiliate_Lab/diagnostics/","/Affiliate_Lab/economics/","/Affiliate_Lab/glossary/","/Affiliate_Lab/guides/1win-rules/","/Affiliate_Lab/guides/adsbridge-campaign/","/Affiliate_Lab/guides/affiliate-manager/","/Affiliate_Lab/guides/affiliate-marketing/","/Affiliate_Lab/guides/choose-program/","/Affiliate_Lab/guides/choose-traffic-source/","/Affiliate_Lab/guides/clicks-no-registrations/","/Affiliate_Lab/guides/community-traffic/","/Affiliate_Lab/guides/content-sites/","/Affiliate_Lab/guides/cpa-vs-revshare/","/Affiliate_Lab/guides/first-ftd/","/Affiliate_Lab/guides/free-traffic/","/Affiliate_Lab/guides/ftd/","/Affiliate_Lab/guides/geo/","/Affiliate_Lab/guides/ggr-ngr/","/Affiliate_Lab/guides/","/Affiliate_Lab/guides/landing-page/","/Affiliate_Lab/guides/launch-checklist/","/Affiliate_Lab/guides/metrics/","/Affiliate_Lab/guides/offer/","/Affiliate_Lab/guides/paid-traffic/","/Affiliate_Lab/guides/partner-dashboard/","/Affiliate_Lab/guides/registrations-no-ftd/","/Affiliate_Lab/guides/revshare/","/Affiliate_Lab/guides/search-traffic/","/Affiliate_Lab/guides/social-traffic/","/Affiliate_Lab/guides/statistics/","/Affiliate_Lab/guides/statistics-mismatch/","/Affiliate_Lab/guides/stream-traffic/","/Affiliate_Lab/guides/tracker-for-beginner/","/Affiliate_Lab/guides/tracking/","/Affiliate_Lab/guides/traffic-quality/","/Affiliate_Lab/guides/video-traffic/","/Affiliate_Lab/help/","/Affiliate_Lab/","/Affiliate_Lab/notes/","/Affiliate_Lab/practice/","/Affiliate_Lab/services/","/Affiliate_Lab/start/","/Affiliate_Lab/tools/","/Affiliate_Lab/traffic/compare/","/Affiliate_Lab/traffic/","/Affiliate_Lab/traffic/sources/alt-video/","/Affiliate_Lab/traffic/sources/communities/","/Affiliate_Lab/traffic/sources/content-site/","/Affiliate_Lab/traffic/sources/dzen/","/Affiliate_Lab/traffic/sources/mailing/","/Affiliate_Lab/traffic/sources/paid/","/Affiliate_Lab/traffic/sources/reddit/","/Affiliate_Lab/traffic/sources/search/","/Affiliate_Lab/traffic/sources/short-video/","/Affiliate_Lab/traffic/sources/social/","/Affiliate_Lab/traffic/sources/streams/","/Affiliate_Lab/traffic/sources/telegram/","/Affiliate_Lab/traffic/sources/vk-video/","/Affiliate_Lab/traffic/sources/x-twitter/","/Affiliate_Lab/traffic/sources/youtube/"];
-    const progressKey='ita-site-progress-v1';
+    const progressKey='ita-site-progress-v2';
+    const legacyProgressKey='ita-site-progress-v1';
+    const fallbackProgressPages=['/Affiliate_Lab/guides/1win-rules/','/Affiliate_Lab/guides/adsbridge-campaign/','/Affiliate_Lab/guides/affiliate-manager/','/Affiliate_Lab/guides/affiliate-marketing/','/Affiliate_Lab/guides/choose-program/','/Affiliate_Lab/guides/choose-traffic-source/','/Affiliate_Lab/guides/clicks-no-registrations/','/Affiliate_Lab/guides/community-traffic/','/Affiliate_Lab/guides/content-sites/','/Affiliate_Lab/guides/cpa-vs-revshare/','/Affiliate_Lab/guides/first-ftd/','/Affiliate_Lab/guides/free-traffic/','/Affiliate_Lab/guides/ftd/','/Affiliate_Lab/guides/geo/','/Affiliate_Lab/guides/ggr-ngr/','/Affiliate_Lab/guides/landing-page/','/Affiliate_Lab/guides/launch-checklist/','/Affiliate_Lab/guides/metrics/','/Affiliate_Lab/guides/offer/','/Affiliate_Lab/guides/paid-traffic/','/Affiliate_Lab/guides/partner-dashboard/','/Affiliate_Lab/guides/registrations-no-ftd/','/Affiliate_Lab/guides/revshare/','/Affiliate_Lab/guides/search-traffic/','/Affiliate_Lab/guides/social-traffic/','/Affiliate_Lab/guides/statistics-mismatch/','/Affiliate_Lab/guides/statistics/','/Affiliate_Lab/guides/stream-traffic/','/Affiliate_Lab/guides/tracker-for-beginner/','/Affiliate_Lab/guides/tracking/','/Affiliate_Lab/guides/traffic-quality/','/Affiliate_Lab/guides/video-traffic/','/Affiliate_Lab/traffic/sources/alt-video/','/Affiliate_Lab/traffic/sources/communities/','/Affiliate_Lab/traffic/sources/content-site/','/Affiliate_Lab/traffic/sources/dzen/','/Affiliate_Lab/traffic/sources/mailing/','/Affiliate_Lab/traffic/sources/paid/','/Affiliate_Lab/traffic/sources/reddit/','/Affiliate_Lab/traffic/sources/search/','/Affiliate_Lab/traffic/sources/short-video/','/Affiliate_Lab/traffic/sources/social/','/Affiliate_Lab/traffic/sources/streams/','/Affiliate_Lab/traffic/sources/telegram/','/Affiliate_Lab/traffic/sources/vk-video/','/Affiliate_Lab/traffic/sources/x-twitter/','/Affiliate_Lab/traffic/sources/youtube/'];
     const normalizeProgressPath=(value='')=>{
-      try{const u=new URL(value,location.origin);let p=u.pathname.replace(/index\.html$/,'');if(!p.endsWith('/'))p+='/';return p;}catch(_e){return value;}
+      try{
+        const u=new URL(value,location.origin);
+        let p=u.pathname.replace(/index\.html$/,'');
+        if(!p.endsWith('/'))p+='/';
+        return p;
+      }catch(_e){return String(value||'');}
+    };
+    const isProgressArticle=(value='')=>{
+      const p=normalizeProgressPath(value);
+      return (p.startsWith('/Affiliate_Lab/guides/')&&p!=='/Affiliate_Lab/guides/')||p.startsWith('/Affiliate_Lab/traffic/sources/');
     };
     const visited=new Set();
-    try{
-      const saved=JSON.parse(localStorage.getItem(progressKey)||'[]');
-      if(Array.isArray(saved))saved.forEach(x=>visited.add(normalizeProgressPath(x)));
-      const oldStates=JSON.parse(localStorage.getItem('al-reading-state-v1')||'{}');
-      Object.keys(oldStates||{}).forEach(x=>visited.add(normalizeProgressPath(x)));
-      const recent=JSON.parse(localStorage.getItem('al-recent-v1')||'[]');
-      if(Array.isArray(recent))recent.forEach(x=>{if(x&&x.url)visited.add(normalizeProgressPath(x.url));});
-    }catch(_e){}
-    const currentProgressPath=normalizeProgressPath(location.pathname);
-    if(academyPages.includes(currentProgressPath))visited.add(currentProgressPath);
-    const validVisited=academyPages.filter(x=>visited.has(x));
-    try{localStorage.setItem(progressKey,JSON.stringify(validVisited));}catch(_e){}
-    const sitePct=academyPages.length?Math.round(validVisited.length/academyPages.length*100):0;
-    if(progressValue)progressValue.textContent=sitePct+'%';
-    if(progressBar)progressBar.style.width=sitePct+'%';
-    if(progressBox){
-      progressBox.title=`Открыто ${validVisited.length} из ${academyPages.length} страниц TrafficLab`;
-      progressBox.setAttribute('aria-label',progressBox.title);
-    }
+    const absorbVisited=()=>{
+      try{
+        [progressKey,legacyProgressKey].forEach(key=>{
+          const saved=JSON.parse(localStorage.getItem(key)||'[]');
+          if(Array.isArray(saved))saved.forEach(x=>{const p=normalizeProgressPath(x);if(isProgressArticle(p))visited.add(p);});
+        });
+        const oldStates=JSON.parse(localStorage.getItem('al-reading-state-v1')||'{}');
+        Object.keys(oldStates||{}).forEach(x=>{const p=normalizeProgressPath(x);if(isProgressArticle(p))visited.add(p);});
+        const recent=JSON.parse(localStorage.getItem('al-recent-v1')||'[]');
+        if(Array.isArray(recent))recent.forEach(x=>{if(x&&x.url){const p=normalizeProgressPath(x.url);if(isProgressArticle(p))visited.add(p);}});
+      }catch(_e){}
+      const current=normalizeProgressPath(location.pathname);
+      if(isProgressArticle(current))visited.add(current);
+    };
+    const renderAdaptiveProgress=(pages)=>{
+      const catalog=[...new Set((pages||[]).map(normalizeProgressPath).filter(isProgressArticle))];
+      if(!catalog.length)return;
+      const validVisited=catalog.filter(x=>visited.has(x));
+      try{localStorage.setItem(progressKey,JSON.stringify([...visited]));}catch(_e){}
+      const sitePct=Math.max(0,Math.min(100,Math.round(validVisited.length/catalog.length*100)));
+      if(progressValue)progressValue.textContent=sitePct+'%';
+      if(progressBar){
+        progressBar.style.width=sitePct+'%';
+        progressBar.setAttribute('aria-valuenow',String(sitePct));
+      }
+      if(progressBox){
+        progressBox.title=`Открыто ${validVisited.length} из ${catalog.length} материалов TrafficLab`;
+        progressBox.setAttribute('aria-label',progressBox.title);
+      }
+    };
+    const linksFromHtml=(html='')=>{
+      try{
+        const doc=new DOMParser().parseFromString(html,'text/html');
+        return [...doc.querySelectorAll('a[href]')].map(a=>normalizeProgressPath(a.getAttribute('href'))).filter(isProgressArticle);
+      }catch(_e){return [];}
+    };
+    const discoverProgressCatalog=async()=>{
+      let sitemapPages=[];
+      let linkedPages=[];
+      const [siteMapResult,guidesResult,trafficResult]=await Promise.allSettled([
+        fetch(base+'sitemap.xml',{cache:'no-cache'}).then(r=>r.ok?r.text():Promise.reject()),
+        fetch(base+'guides/',{cache:'no-cache'}).then(r=>r.ok?r.text():Promise.reject()),
+        fetch(base+'traffic/',{cache:'no-cache'}).then(r=>r.ok?r.text():Promise.reject())
+      ]);
+      if(siteMapResult.status==='fulfilled'){
+        try{
+          const xml=new DOMParser().parseFromString(siteMapResult.value,'application/xml');
+          sitemapPages=[...xml.querySelectorAll('url > loc')].map(x=>normalizeProgressPath(x.textContent||'')).filter(isProgressArticle);
+        }catch(_e){}
+      }
+      if(guidesResult.status==='fulfilled')linkedPages.push(...linksFromHtml(guidesResult.value));
+      if(trafficResult.status==='fulfilled')linkedPages.push(...linksFromHtml(trafficResult.value));
+      // sitemap is authoritative when it is healthy; hub links supplement it.
+      // If network discovery fails, the shipped snapshot keeps the bar functional.
+      const dynamic=sitemapPages.length>=10?[...sitemapPages,...linkedPages]:[...fallbackProgressPages,...linkedPages];
+      return [...new Set(dynamic.filter(isProgressArticle))];
+    };
+    absorbVisited();
+    // Render immediately so the indicator never sits at a fake 0% while discovery runs.
+    renderAdaptiveProgress(fallbackProgressPages);
+    discoverProgressCatalog().then(renderAdaptiveProgress).catch(()=>renderAdaptiveProgress(fallbackProgressPages));
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initReferenceUI); else initReferenceUI();
 })();
