@@ -18138,3 +18138,310 @@ html body.reference-ui-v99 main.source-playbook-page .source-title-copy h1{
     background-size:38px 38px!important;
   }
 }
+
+/* ======================================================================
+   v229 — remove remaining extra fills and tooltip warm backgrounds
+   Final dark-theme cleanup for leftover filled cards on the home hero and
+   hint/tooltips that still used a different background treatment.
+   ====================================================================== */
+
+/* Home hero helper cards: keep the frame, remove the extra fill. */
+html body.theme-dark .home-welcome-summary,
+html body.reference-ui-v99.theme-dark .home-welcome-summary,
+html body.theme-dark .home-welcome-summary > div,
+html body.reference-ui-v99.theme-dark .home-welcome-summary > div{
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .home-welcome-summary > div,
+html body.reference-ui-v99.theme-dark .home-welcome-summary > div{
+  border-color:#2f3944!important;
+}
+
+/* Hint words should not get an extra fill on hover/open in dark theme. */
+html body.theme-dark .term-help,
+html body.reference-ui-v99.theme-dark .term-help{
+  background:transparent!important;
+}
+
+html body.theme-dark .term-help:hover,
+html body.theme-dark .term-help:focus-visible,
+html body.theme-dark .term-help[aria-expanded="true"],
+html body.reference-ui-v99.theme-dark .term-help:hover,
+html body.reference-ui-v99.theme-dark .term-help:focus-visible,
+html body.reference-ui-v99.theme-dark .term-help[aria-expanded="true"]{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* Tooltip popups: same dark surface language, no beige fill. */
+html body.theme-dark .term-tooltip,
+html body.reference-ui-v99.theme-dark .term-tooltip{
+  background:#171c22!important;
+  background-image:none!important;
+  border-color:#2f3944!important;
+  box-shadow:none!important;
+  color:#d8e0e6!important;
+}
+
+html body.theme-dark .term-tooltip:before,
+html body.reference-ui-v99.theme-dark .term-tooltip:before{
+  background:#171c22!important;
+  border-left-color:#2f3944!important;
+  border-top-color:#2f3944!important;
+}
+
+html body.theme-dark .term-tooltip .term-en,
+html body.reference-ui-v99.theme-dark .term-tooltip .term-en{
+  color:#b8c3cc!important;
+}
+
+html body.theme-dark .term-tooltip strong,
+html body.reference-ui-v99.theme-dark .term-tooltip strong{
+  color:#eef2f5!important;
+}
+
+html body.theme-dark .term-tooltip p,
+html body.theme-dark .term-tooltip .term-hint,
+html body.reference-ui-v99.theme-dark .term-tooltip p,
+html body.reference-ui-v99.theme-dark .term-tooltip .term-hint{
+  color:#c9d2d8!important;
+  border-color:#2f3944!important;
+}
+
+/* ======================================================================
+   v230 — extra breathing room for partner step / similar wrap callouts
+   Some light-theme wrap callouts still looked too tight against the frame.
+   ====================================================================== */
+
+html body .partner-next-step,
+html body .traffic-partner-step,
+html body.content-system-v103 .partner-next-step,
+html body.content-system-v103 .traffic-partner-step,
+html body.content-system-v103 main.compact-main-v103 > .wrap.partner-next-step,
+html body.content-system-v103 main.compact-main-v103 > aside.wrap.partner-next-step,
+html body.content-system-v103 main.compact-main-v103 > .wrap.traffic-partner-step,
+html body.content-system-v103 main.compact-main-v103 > aside.wrap.traffic-partner-step{
+  box-sizing:border-box!important;
+  padding:22px 24px!important;
+}
+
+html body .partner-next-step > span,
+html body .partner-next-step > p,
+html body .partner-next-step > a,
+html body .traffic-partner-step > span,
+html body .traffic-partner-step > p,
+html body .traffic-partner-step > a{
+  margin-left:0!important;
+  margin-right:0!important;
+}
+
+@media (max-width:650px){
+  html body .partner-next-step,
+  html body .traffic-partner-step,
+  html body.content-system-v103 .partner-next-step,
+  html body.content-system-v103 .traffic-partner-step,
+  html body.content-system-v103 main.compact-main-v103 > .wrap.partner-next-step,
+  html body.content-system-v103 main.compact-main-v103 > aside.wrap.partner-next-step,
+  html body.content-system-v103 main.compact-main-v103 > .wrap.traffic-partner-step,
+  html body.content-system-v103 main.compact-main-v103 > aside.wrap.traffic-partner-step{
+    padding:18px 18px!important;
+  }
+}
+
+/* ======================================================================
+   v231 — remove remaining dark fill from journal reading area and clear buttons
+   ====================================================================== */
+
+html body.theme-dark .journal-reading,
+html body.reference-ui-v99.theme-dark .journal-reading,
+html body.theme-dark .journal-reading-head,
+html body.reference-ui-v99.theme-dark .journal-reading-head,
+html body.theme-dark .journal-reading-grid,
+html body.reference-ui-v99.theme-dark .journal-reading-grid{
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .journal-reading-grid > .saved-block,
+html body.reference-ui-v99.theme-dark .journal-reading-grid > .saved-block{
+  background:transparent!important;
+  background-image:none!important;
+  border-color:#2f3944!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .text-button,
+html body.reference-ui-v99.theme-dark .text-button{
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  border:0!important;
+  color:#d7dfe6!important;
+}
+html body.theme-dark .text-button:hover,
+html body.reference-ui-v99.theme-dark .text-button:hover{
+  color:#f2f6f8!important;
+}
+
+/* ======================================================================
+   v232 — dark palette test + header favorite/theme buttons + right rail feedback
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-dark-page:#0B1015;
+  --tl-dark-article:#111820;
+  --tl-dark-card:#171E26;
+  --tl-dark-soft:#1C252E;
+  --tl-dark-line:#303B46;
+  --tl-dark-line-soft:#232E3A;
+  --tl-dark-text:#EDF2F5;
+  --tl-dark-copy:#B8C3CA;
+  --tl-dark-muted:#85939D;
+  --tl-dark-accent:#44B892;
+  --tl-dark-accent-hover:#63C6A5;
+  background:var(--tl-dark-page)!important;
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark :is(.site-header,.global-sidebar,.site-footer),
+html body.reference-ui-v99.theme-dark :is(.site-header,.global-sidebar,.site-footer){
+  background:#0B1015!important;
+}
+html body.theme-dark :is(.academy-article-hero,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.journal-reading-grid > .saved-block,.notes-panel,.service-card,.article-card,.about-card-v114,.home-quick-card,.guide-v101-callout,.inline-note,.partner-next-step,.warning-note,.service-notice),
+html body.reference-ui-v99.theme-dark :is(.academy-article-hero,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.journal-reading-grid > .saved-block,.notes-panel,.service-card,.article-card,.about-card-v114,.home-quick-card,.guide-v101-callout,.inline-note,.partner-next-step,.warning-note,.service-notice){
+  background:var(--tl-dark-article)!important;
+  border-color:var(--tl-dark-line)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.source-journey-card,.source-tool-card,.traffic-diagnostic-list li,.source-toolkit-grid>a,.source-toolkit-helper,.faq-list details,.faq-item,.service-tool,.service-inline, .guide-v101-grid>div, .guide-v101-dual>div, .guide-v101-formats>div, .guide-v101-flow, .guide-v101-timeline>div),
+html body.reference-ui-v99.theme-dark :is(.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.source-journey-card,.source-tool-card,.traffic-diagnostic-list li,.source-toolkit-grid>a,.source-toolkit-helper,.faq-list details,.faq-item,.service-tool,.service-inline, .guide-v101-grid>div, .guide-v101-dual>div, .guide-v101-formats>div, .guide-v101-flow, .guide-v101-timeline>div){
+  background:var(--tl-dark-card)!important;
+  border-color:var(--tl-dark-line)!important;
+}
+html body.theme-dark :is(p,li,dd,small,.lead,.article-page .article p,.source-playbook-article p,.article-page .article li,.source-playbook-article li),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,small,.lead,.article-page .article p,.source-playbook-article p,.article-page .article li,.source-playbook-article li){
+  color:var(--tl-dark-copy)!important;
+}
+html body.theme-dark :is(.article-label,.section-kicker,.library-type,.aside-block>b,.playbook-aside b,.source-facts dt,.rail-feedback b,.article-meta span,.footer-bottom span),
+html body.reference-ui-v99.theme-dark :is(.article-label,.section-kicker,.library-type,.aside-block>b,.playbook-aside b,.source-facts dt,.rail-feedback b,.article-meta span,.footer-bottom span){
+  color:var(--tl-dark-muted)!important;
+}
+html body.theme-dark :is(h1,h2,h3,h4,strong,b,.article-page .article h1,.article-page .article h2,.source-playbook-article h1,.source-playbook-article h2),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,strong,b,.article-page .article h1,.article-page .article h2,.source-playbook-article h1,.source-playbook-article h2){
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link),
+html body.reference-ui-v99.theme-dark :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link){
+  color:var(--tl-dark-text)!important;
+}
+html body.theme-dark :is(a:hover,.plain-link:hover,.saved-link:hover,.text-cta:hover,.service-name-link:hover,.geo-guideline-link:hover),
+html body.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.saved-link:hover,.text-cta:hover,.service-name-link:hover,.geo-guideline-link:hover){
+  color:var(--tl-dark-accent-hover)!important;
+}
+html body.theme-dark :is(.site-header,.academy-article-hero,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.faq-item,.faq-list details,.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.service-tool,.service-inline,.source-toolkit-grid>a,.journal-reading-grid > .saved-block),
+html body.reference-ui-v99.theme-dark :is(.site-header,.academy-article-hero,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.faq-item,.faq-list details,.playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.service-tool,.service-inline,.source-toolkit-grid>a,.journal-reading-grid > .saved-block){
+  border-color:var(--tl-dark-line)!important;
+}
+
+/* header buttons */
+html body .site-header .header-actions{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+html body .site-header .header-favorite,
+html body .site-header .theme-toggle{
+  height:40px!important;
+  min-height:40px!important;
+  border-radius:12px!important;
+  border:1px solid #303B46!important;
+  background:#111820!important;
+  color:#EDF2F5!important;
+  text-decoration:none!important;
+  box-shadow:none!important;
+}
+html body .site-header .theme-toggle{
+  min-width:40px!important;
+  width:40px!important;
+  padding:0!important;
+  display:grid!important;
+  place-items:center!important;
+}
+html body .site-header .theme-toggle [data-theme-label]{display:none!important}
+html body .site-header .theme-toggle .theme-toggle-icon{font-size:16px!important;line-height:1!important}
+html body .site-header .header-favorite{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  padding:0 14px!important;
+  font-size:12.5px!important;
+  font-weight:700!important;
+}
+html body .site-header .header-favorite-icon{
+  width:16px!important;
+  text-align:center!important;
+  color:#f1d37a!important;
+  font-size:13px!important;
+  line-height:1!important;
+}
+html body .site-header :is(.header-favorite:hover,.theme-toggle:hover){
+  background:#1C252E!important;
+  border-color:#44B892!important;
+  color:#EDF2F5!important;
+}
+html body .site-header .header-about-link{
+  color:#B8C3CA!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0 2px!important;
+  min-height:auto!important;
+}
+html body .site-header .header-about-link:hover{color:#EDF2F5!important}
+@media (max-width:980px){
+  html body .site-header .header-favorite span:last-child{display:none!important}
+  html body .site-header .header-favorite{width:40px!important;justify-content:center!important;padding:0!important}
+}
+@media (max-width:780px){
+  html body .site-header .header-about-link{display:none!important}
+}
+
+/* right rail feedback */
+html body .article-aside.enhanced-rail .rail-feedback{
+  display:grid!important;
+  gap:12px!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-actions{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button{
+  width:44px!important;
+  height:44px!important;
+  min-width:44px!important;
+  min-height:44px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:12px!important;
+  border:1px solid #303B46!important;
+  background:#111820!important;
+  color:#EDF2F5!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button:hover{
+  background:#1C252E!important;
+  border-color:#44B892!important;
+  transform:translateY(-1px)!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button[aria-pressed="true"]{
+  background:rgba(68,184,146,.14)!important;
+  border-color:#44B892!important;
+  color:#63C6A5!important;
+}
+html body .article-aside.enhanced-rail .rail-feedback-button span{font-size:18px!important;line-height:1!important}

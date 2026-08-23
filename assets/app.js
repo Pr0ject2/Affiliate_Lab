@@ -1626,7 +1626,7 @@
      btn.setAttribute('aria-pressed',dark?'true':'false');
      const label=btn.querySelector('[data-theme-label]');
      const icon=btn.querySelector('.theme-toggle-icon');
-     if(label)label.textContent=dark?'Светлый режим':'Тёмный режим';
+     if(label)label.textContent=dark?'Светлая':'Тёмная';
      if(icon)icon.textContent=dark?'☀':'☾';
    });
    const meta=document.querySelector('meta[name="theme-color"]');
@@ -2095,4 +2095,57 @@
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',observe,{once:true});
     else observe();
   }
+})();
+
+
+/* v232 — dark palette pass, header favorites button and right-rail feedback. */
+(()=>{
+  const addHeaderFavorite=()=>{
+    document.querySelectorAll('.site-header .header-actions').forEach(actions=>{
+      if(actions.querySelector('.header-favorite')) return;
+      const themeBtn=actions.querySelector('[data-theme-toggle]');
+      const link=document.createElement('a');
+      link.className='header-favorite';
+      link.href='/Affiliate_Lab/notes/';
+      link.setAttribute('aria-label','Открыть закладки и историю');
+      link.innerHTML='<span class="header-favorite-icon" aria-hidden="true">★</span><span>В избранное</span>';
+      if(themeBtn && themeBtn.nextSibling) actions.insertBefore(link,themeBtn.nextSibling);
+      else if(themeBtn) actions.appendChild(link);
+      else actions.prepend(link);
+    });
+  };
+
+  const feedbackKey='al-article-feedback-v1';
+  const votePath=()=>location.pathname.replace(/\/$/,'')||'/';
+  const getVotes=()=>{try{return JSON.parse(localStorage.getItem(feedbackKey)||'{}')}catch(_e){return {}}};
+  const setVotes=(data)=>{try{localStorage.setItem(feedbackKey,JSON.stringify(data))}catch(_e){}};
+  const syncVoteState=(block)=>{
+    const value=getVotes()[votePath()]||'';
+    block.querySelectorAll('[data-rail-vote]').forEach(btn=>btn.setAttribute('aria-pressed',btn.dataset.railVote===value?'true':'false'));
+  };
+  const addRailFeedback=()=>{
+    document.querySelectorAll('.article-aside.enhanced-rail').forEach(rail=>{
+      if(rail.querySelector('.rail-feedback')) return;
+      const block=document.createElement('div');
+      block.className='aside-block rail-feedback';
+      block.innerHTML='<b>Статья помогла?</b><div class="rail-feedback-actions"><button class="rail-feedback-button" type="button" data-rail-vote="up" aria-pressed="false" aria-label="Поставить лайк"><span aria-hidden="true">👍</span></button><button class="rail-feedback-button" type="button" data-rail-vote="down" aria-pressed="false" aria-label="Поставить дизлайк"><span aria-hidden="true">👎</span></button></div>';
+      rail.appendChild(block);
+      syncVoteState(block);
+    });
+  };
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('[data-rail-vote]');
+    if(!btn) return;
+    const block=btn.closest('.rail-feedback');
+    if(!block) return;
+    const votes=getVotes();
+    const path=votePath();
+    votes[path]=votes[path]===btn.dataset.railVote?'':btn.dataset.railVote;
+    setVotes(votes);
+    syncVoteState(block);
+  });
+
+  const init=()=>{addHeaderFavorite();addRailFeedback();};
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
+  else init();
 })();
