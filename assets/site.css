@@ -23420,8 +23420,7 @@ html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand small{
 }
 
 /* ======================================================================
-   v291 — homepage background switched to the approved chalkboard reference.
-   Exact reference image, only softened so it stays less bright than the mockup.
+   v298 — exact previous chalkboard picture background restored
    ====================================================================== */
 html body.theme-dark.home-shell-v256 main.home-page,
 html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page{
@@ -23448,10 +23447,10 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab
   pointer-events:none!important;
   background-image:
     linear-gradient(rgba(8,14,20,.30),rgba(8,14,20,.30)),
-    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260824-2951')!important;
-  background-repeat:no-repeat!important;
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260824-2981')!important;
+  background-repeat:repeat-y!important;
   background-position:center top!important;
-  background-size:min(100%, 1672px) auto!important;
+  background-size:100% auto!important;
   opacity:.9!important;
   filter:none!important;
 }
@@ -23461,28 +23460,26 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab
   position:absolute!important;
   inset:0!important;
   pointer-events:none!important;
-  background:
-    linear-gradient(180deg,rgba(2,5,8,.05),rgba(2,5,8,.18))!important;
+  background:linear-gradient(180deg,rgba(2,5,8,.05),rgba(2,5,8,.18))!important;
 }
-
 @media (max-width:1200px){
   html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
   html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
-    background-size:min(100%, 1320px) auto!important;
+    background-size:1200px auto!important;
     background-position:center top!important;
   }
 }
 @media (max-width:900px){
   html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
   html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
-    background-size:min(100%, 1080px) auto!important;
+    background-size:960px auto!important;
     opacity:.82!important;
   }
 }
 @media (max-width:680px){
   html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
   html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
-    background-size:min(100%, 820px) auto!important;
+    background-size:760px auto!important;
     opacity:.78!important;
   }
 }
