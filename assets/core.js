@@ -240,3 +240,119 @@ window.alTrack=function(name,data){
     new MutationObserver(()=>rebind()).observe(header,{childList:true,subtree:true});
   }
 })();
+
+
+/* v272 — independent adaptive site-progress engine.
+   Runs in core.js so optional article UI errors cannot stop progress tracking. */
+(function(){
+  'use strict';
+  const KEY='ita-site-progress-v3';
+  const LEGACY=['ita-site-progress-v2','ita-site-progress-v1'];
+  const FALLBACK=["/Affiliate_Lab/guides/1win-rules/", "/Affiliate_Lab/guides/adsbridge-campaign/", "/Affiliate_Lab/guides/affiliate-manager/", "/Affiliate_Lab/guides/affiliate-marketing/", "/Affiliate_Lab/guides/choose-program/", "/Affiliate_Lab/guides/choose-traffic-source/", "/Affiliate_Lab/guides/clicks-no-registrations/", "/Affiliate_Lab/guides/community-traffic/", "/Affiliate_Lab/guides/content-sites/", "/Affiliate_Lab/guides/cpa-vs-revshare/", "/Affiliate_Lab/guides/first-ftd/", "/Affiliate_Lab/guides/free-traffic/", "/Affiliate_Lab/guides/ftd/", "/Affiliate_Lab/guides/geo/", "/Affiliate_Lab/guides/ggr-ngr/", "/Affiliate_Lab/guides/landing-page/", "/Affiliate_Lab/guides/launch-checklist/", "/Affiliate_Lab/guides/metrics/", "/Affiliate_Lab/guides/nigeria-ad-guidelines/", "/Affiliate_Lab/guides/offer/", "/Affiliate_Lab/guides/paid-traffic/", "/Affiliate_Lab/guides/partner-dashboard/", "/Affiliate_Lab/guides/registrations-no-ftd/", "/Affiliate_Lab/guides/revshare/", "/Affiliate_Lab/guides/search-traffic/", "/Affiliate_Lab/guides/social-traffic/", "/Affiliate_Lab/guides/statistics-mismatch/", "/Affiliate_Lab/guides/statistics/", "/Affiliate_Lab/guides/stream-traffic/", "/Affiliate_Lab/guides/tracker-for-beginner/", "/Affiliate_Lab/guides/tracking/", "/Affiliate_Lab/guides/traffic-quality/", "/Affiliate_Lab/guides/video-traffic/", "/Affiliate_Lab/traffic/sources/alt-video/", "/Affiliate_Lab/traffic/sources/communities/", "/Affiliate_Lab/traffic/sources/content-site/", "/Affiliate_Lab/traffic/sources/dzen/", "/Affiliate_Lab/traffic/sources/mailing/", "/Affiliate_Lab/traffic/sources/paid/", "/Affiliate_Lab/traffic/sources/reddit/", "/Affiliate_Lab/traffic/sources/search/", "/Affiliate_Lab/traffic/sources/short-video/", "/Affiliate_Lab/traffic/sources/social/", "/Affiliate_Lab/traffic/sources/streams/", "/Affiliate_Lab/traffic/sources/telegram/", "/Affiliate_Lab/traffic/sources/vk-video/", "/Affiliate_Lab/traffic/sources/x-twitter/", "/Affiliate_Lab/traffic/sources/youtube/"];
+  let catalog=FALLBACK.slice();
+  const visited=new Set();
+
+  function normalize(value){
+    try{
+      const u=new URL(value||location.pathname,location.href);
+      let p=u.pathname.replace(/index\.html$/,'');
+      if(!p.endsWith('/'))p+='/';
+      return p;
+    }catch(e){return String(value||'')}
+  }
+  function isArticle(value){
+    const p=normalize(value);
+    return (p.startsWith('/Affiliate_Lab/guides/')&&p!=='/Affiliate_Lab/guides/') ||
+           p.startsWith('/Affiliate_Lab/traffic/sources/');
+  }
+  function parseArray(key){
+    try{
+      const value=JSON.parse(localStorage.getItem(key)||'[]');
+      return Array.isArray(value)?value:[];
+    }catch(e){return []}
+  }
+  function absorb(){
+    [KEY].concat(LEGACY).forEach(function(key){
+      parseArray(key).forEach(function(value){const p=normalize(value);if(isArticle(p))visited.add(p)});
+    });
+    try{
+      const states=JSON.parse(localStorage.getItem('al-reading-state-v1')||'{}')||{};
+      Object.keys(states).forEach(function(value){const p=normalize(value);if(isArticle(p))visited.add(p)});
+    }catch(e){}
+    try{
+      const recent=JSON.parse(localStorage.getItem('al-recent-v1')||'[]')||[];
+      recent.forEach(function(item){if(item&&item.url){const p=normalize(item.url);if(isArticle(p))visited.add(p)}});
+    }catch(e){}
+    const current=normalize(location.pathname);
+    if(isArticle(current))visited.add(current);
+    try{localStorage.setItem(KEY,JSON.stringify(Array.from(visited)))}catch(e){}
+  }
+  function validVisited(){
+    const set=new Set(catalog.map(normalize));
+    return Array.from(visited).filter(function(p){return set.has(normalize(p))});
+  }
+  function render(){
+    absorb();
+    const total=Math.max(1,catalog.length);
+    const opened=validVisited().length;
+    const pct=Math.max(0,Math.min(100,Math.round(opened/total*100)));
+    document.querySelectorAll('[data-ref-progress-value]').forEach(function(el){el.textContent=pct+'%'});
+    document.querySelectorAll('[data-ref-progress-bar]').forEach(function(el){
+      el.style.width=pct+'%';
+      el.setAttribute('aria-valuemin','0');
+      el.setAttribute('aria-valuemax','100');
+      el.setAttribute('aria-valuenow',String(pct));
+    });
+    document.querySelectorAll('.ref-top-progress').forEach(function(el){
+      const label='Открыто '+opened+' из '+total+' материалов TrafficLab';
+      el.title=label; el.setAttribute('aria-label',label);
+    });
+    return {opened:opened,total:total,pct:pct};
+  }
+  function basePath(){
+    const link=document.querySelector('link[href*="/assets/site.css"]');
+    if(link){
+      try{const p=new URL(link.href,location.href).pathname;return p.replace(/assets\/site\.css.*$/,'')}catch(e){}
+    }
+    return '/Affiliate_Lab/';
+  }
+  async function discover(){
+    try{
+      const response=await fetch(basePath()+'sitemap.xml',{cache:'no-store'});
+      if(!response.ok)throw new Error('sitemap '+response.status);
+      const text=await response.text();
+      const xml=new DOMParser().parseFromString(text,'application/xml');
+      const fresh=Array.from(xml.querySelectorAll('url > loc')).map(function(n){return normalize(n.textContent||'')}).filter(isArticle);
+      if(fresh.length)catalog=Array.from(new Set(fresh));
+    }catch(e){
+      catalog=FALLBACK.slice();
+    }
+    render();
+  }
+
+  window.ITARefreshSiteProgress=render;
+  window.ITASiteProgress={refresh:render,discover:discover,get:function(){return render()}};
+
+  absorb();
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){render();discover()},{once:true});
+  }else{render();discover()}
+  window.addEventListener('pageshow',render);
+  window.addEventListener('storage',function(e){
+    if([KEY].concat(LEGACY,['al-reading-state-v1','al-recent-v1']).includes(e.key))render();
+  });
+
+  // app.js rebuilds the topbar after core.js. Repaint as soon as progress nodes appear.
+  if('MutationObserver' in window){
+    const observer=new MutationObserver(function(mutations){
+      for(const mutation of mutations){
+        for(const node of mutation.addedNodes){
+          if(node.nodeType===1 && (node.matches?.('.ref-top-progress,[data-ref-progress-value],[data-ref-progress-bar]') || node.querySelector?.('.ref-top-progress,[data-ref-progress-value],[data-ref-progress-bar]'))){
+            render(); return;
+          }
+        }
+      }
+    });
+    observer.observe(document.documentElement,{childList:true,subtree:true});
+  }
+})();

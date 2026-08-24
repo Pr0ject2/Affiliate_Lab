@@ -20984,3 +20984,421 @@ html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead{
     margin-top:14px!important;
   }
 }
+
+
+/* ======================================================================
+   v265 — traffic source header progress alignment
+   Source article topbars used a centered max-width container, leaving the
+   progress indicator floating away from the right edge. Keep breadcrumbs
+   and actions in one full-width topbar with normal edge padding.
+   ====================================================================== */
+@media (min-width:901px){
+  html body.reference-ui-v99.article-page:not(.content-system-v103) .ref-topbar{
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:14px!important;
+    padding-right:14px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.reference-ui-v99.article-page:not(.content-system-v103) .ref-topbar-crumbs{
+    min-width:0!important;
+    flex:1 1 auto!important;
+  }
+
+  html body.reference-ui-v99.article-page:not(.content-system-v103) .ref-topbar-actions{
+    margin-left:auto!important;
+    flex:0 0 auto!important;
+  }
+
+  html body.reference-ui-v99.article-page:not(.content-system-v103) .ref-top-progress{
+    margin-right:0!important;
+  }
+}
+
+
+/* ======================================================================
+   v266 — real homepage laboratory background layer
+   ====================================================================== */
+html body.home-shell-v256 main.home-page{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+}
+html body.home-shell-v256 main.home-page > .home-lab-background-v266{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background-color:#0b1117!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-blueprint.svg')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:1800px auto!important;
+  opacity:1!important;
+}
+html body.home-shell-v256 main.home-page > :not(.home-lab-background-v266){
+  position:relative!important;
+  z-index:1!important;
+}
+html body.home-shell-v256 main.home-page > section,
+html body.reference-ui-v99.home-shell-v256 main.home-page > section,
+html body.theme-dark.home-shell-v256 main.home-page > section,
+html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page > section{
+  background:transparent!important;
+  background-image:none!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div,
+html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a,
+html body.theme-dark.home-shell-v256 main.home-page .home-search-card{
+  background-color:rgba(16,23,30,.92)!important;
+  backdrop-filter:blur(2px)!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266{
+  background-color:#f4f6f3!important;
+  opacity:.28!important;
+}
+@media (max-width:1100px){html body.home-shell-v256 main.home-page > .home-lab-background-v266{background-position:62% top!important;background-size:1500px auto!important}}
+@media (max-width:900px){html body.home-shell-v256 main.home-page > .home-lab-background-v266{background-position:68% top!important;background-size:1250px auto!important;opacity:.66!important}}
+
+/* v267: remove meaningless framed windows in traffic-source intros */
+html body .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99 .source-playbook-page .source-playbook-article{
+  background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;
+}
+html body .source-playbook-page .source-hero-shell,
+html body.reference-ui-v99 .source-playbook-page .source-hero-shell{
+  margin:0 0 18px!important;
+  padding:0 0 18px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html body .source-playbook-page .source-hero-shell > .lead,
+html body.reference-ui-v99 .source-playbook-page .source-hero-shell > .lead{
+  margin:0 0 14px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+html body .source-playbook-page .playbook-risk,
+html body.reference-ui-v99 .source-playbook-page .playbook-risk{
+  margin:14px 0 16px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html body .source-playbook-page .playbook-risk b,
+html body.reference-ui-v99 .source-playbook-page .playbook-risk b{
+  display:block!important;
+  margin:0 0 7px!important;
+}
+html body .source-playbook-page .playbook-risk p,
+html body.reference-ui-v99 .source-playbook-page .playbook-risk p{
+  display:block!important;
+  margin:0!important;
+}
+html body .source-playbook-page .source-section-tabs,
+html body.reference-ui-v99 .source-playbook-page .source-section-tabs{
+  margin:16px 0 8px!important;
+  padding:0 0 8px!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid var(--academy-line)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .source-playbook-page .source-section-tabs,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-section-tabs{
+  border-bottom-color:#2b333d!important;
+}
+
+
+/* v268 — home background toned down to match the approved reference more closely */
+html body.theme-dark.home-shell-v256 main.home-page,
+html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page{
+  background-color:#0c1117!important;
+  background-image:
+    radial-gradient(circle at 18% 14%,rgba(67,92,108,.08),transparent 26%),
+    linear-gradient(180deg,rgba(5,9,13,.18),rgba(5,9,13,.52) 46%,rgba(5,9,13,.7) 100%),
+    url('/Affiliate_Lab/assets/home-lab-blueprint.svg')!important;
+  background-position:left top,top center,right top!important;
+  background-size:100% 100%,100% 100%,1760px auto!important;
+  background-repeat:no-repeat,no-repeat,repeat-y!important;
+}
+@media (max-width:900px){
+  html body.theme-dark.home-shell-v256 main.home-page,
+  html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page{
+    background-size:100% 100%,100% 100%,1320px auto!important;
+    background-position:left top,top center,62% top!important;
+  }
+}
+
+
+/* v269 — source compare note: extra inner spacing so text never sticks to edges */
+html body .source-compare-note.compact-block-v103,
+html body .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 > .wrap.source-compare-note.compact-block-v103{
+  box-sizing:border-box!important;
+  padding:24px 28px!important;
+}
+html body .source-compare-note.compact-block-v103 strong,
+html body .wrap.source-compare-note.compact-block-v103 strong{
+  display:block!important;
+  margin:0 0 12px!important;
+}
+html body .source-compare-note.compact-block-v103 p,
+html body .wrap.source-compare-note.compact-block-v103 p{
+  margin:0!important;
+  line-height:1.7!important;
+}
+@media (max-width:650px){
+  html body .source-compare-note.compact-block-v103,
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.content-system-v103 main.compact-main-v103 .wrap.source-compare-note.compact-block-v103,
+  html body.content-system-v103 main.compact-main-v103 > .wrap.source-compare-note.compact-block-v103{
+    padding:18px 20px!important;
+  }
+}
+
+
+/* v270 — library category pills should not stretch into giant ovals */
+html body #libraryRows .library-row{
+  align-items:center!important;
+}
+html body #libraryRows .library-row > :nth-child(2){
+  align-self:stretch!important;
+}
+html body #libraryRows .library-type,
+html body.reference-ui-v99 #libraryRows .library-type,
+html body.theme-dark #libraryRows .library-type,
+html body.reference-ui-v99.theme-dark #libraryRows .library-type{
+  align-self:center!important;
+  justify-self:start!important;
+  display:inline-flex!important;
+  width:auto!important;
+  max-width:170px!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:10px 14px!important;
+  line-height:1.15!important;
+  white-space:normal!important;
+  text-align:center!important;
+  word-break:keep-all!important;
+  overflow-wrap:anywhere!important;
+  box-sizing:border-box!important;
+}
+@media (max-width:920px){
+  html body #libraryRows .library-row{
+    align-items:stretch!important;
+  }
+  html body #libraryRows .library-type,
+  html body.reference-ui-v99 #libraryRows .library-type,
+  html body.theme-dark #libraryRows .library-type,
+  html body.reference-ui-v99.theme-dark #libraryRows .library-type{
+    align-self:flex-start!important;
+    max-width:100%!important;
+  }
+}
+
+
+/* v273 — sidebar nav icons should be clean, with no boxed background */
+html body.reference-ui-v99 .global-sidebar .ref-nav-icon,
+html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-icon{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover .ref-nav-icon,
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active .ref-nav-icon,
+html body.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon,
+html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover .ref-nav-icon,
+html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-active .ref-nav-icon,
+html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+
+/* v274 — simplify palette: remove blue/pink tints, keep warm neutral + green accents */
+:root{
+  --wine:#8a6538;
+}
+
+html body:not(.theme-dark),
+html body.reference-ui-v99:not(.theme-dark){
+  --v109-bg:#f3efe6!important;
+  --v109-bg-soft:#f7f3eb!important;
+  --v109-surface:#fffdf8!important;
+  --v109-surface-warm:#f6efe4!important;
+  --v109-ink:#1f2723!important;
+  --v109-copy:#5f645f!important;
+  --v109-muted:#7a766e!important;
+  --v109-line:#ddd3c6!important;
+  --v109-line-strong:#d1c6b7!important;
+  --v109-green:#29584c!important;
+  --v109-green-dark:#1d443a!important;
+  --v109-green-soft:#eef3ee!important;
+  --v109-warm:#8a6538!important;
+  --v109-warm-soft:#f3eadc!important;
+  --v109-warning:#9b713f!important;
+  --v109-warning-soft:#fbf4e8!important;
+}
+
+html body:not(.theme-dark) .page-head:after,
+html body.reference-ui-v99:not(.theme-dark) .page-head:after{
+  background:linear-gradient(90deg,var(--v109-green) 0 42%,var(--v109-warm) 42% 74%,#c7b08f 74% 100%)!important;
+}
+
+html body:not(.theme-dark) .knowledge-map>div:nth-child(4):before,
+html body.reference-ui-v99:not(.theme-dark) .knowledge-map>div:nth-child(4):before{
+  background:var(--v109-warm)!important;
+}
+
+html body:not(.theme-dark) :is(.traffic-principle,.source-compare-note,.logic-analysis-v103,.logic-explain-v103,.logic-section-v103,.academy-content-section,.inline-note,.partner-next-step,.service-inline,.service-review-note,.playbook-tips,.hero-note,.hero-route,.related-primary,.handbook-intro,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.warning-note,.guide-v101-callout,.playbook-risk,.compact-block-v103),
+html body.reference-ui-v99:not(.theme-dark) :is(.traffic-principle,.source-compare-note,.logic-analysis-v103,.logic-explain-v103,.logic-section-v103,.academy-content-section,.inline-note,.partner-next-step,.service-inline,.service-review-note,.playbook-tips,.hero-note,.hero-route,.related-primary,.handbook-intro,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.warning-note,.guide-v101-callout,.playbook-risk,.compact-block-v103){
+  background:var(--v109-surface-warm)!important;
+  border-color:var(--v109-line)!important;
+  box-shadow:none!important;
+}
+
+html body:not(.theme-dark) :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103),
+html body.reference-ui-v99:not(.theme-dark) :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103){
+  border-left-color:var(--v109-warm)!important;
+}
+
+html body:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.rules-action-box),
+html body.reference-ui-v99:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.rules-action-box){
+  background:var(--v109-green-soft)!important;
+  border-color:#d8e4dc!important;
+  border-left-color:var(--v109-green)!important;
+}
+
+html body:not(.theme-dark) :is(.article th,.source-compare-row.source-compare-head>div,.source-compare-row>div:first-child,.catalog-search-head,.index-title),
+html body.reference-ui-v99:not(.theme-dark) :is(.article th,.source-compare-row.source-compare-head>div,.source-compare-row>div:first-child,.catalog-search-head,.index-title){
+  background:#efe8da!important;
+  color:var(--v109-ink)!important;
+}
+
+html body:not(.theme-dark) :is(.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid > .saved-block),
+html body.reference-ui-v99:not(.theme-dark) :is(.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid > .saved-block){
+  border-color:var(--v109-line)!important;
+}
+
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --v109-bg:#0f1114!important;
+  --v109-bg-soft:#13161b!important;
+  --v109-surface:#171b20!important;
+  --v109-surface-warm:#1a1d21!important;
+  --v109-ink:#edf1f3!important;
+  --v109-copy:#b8beb9!important;
+  --v109-muted:#949b96!important;
+  --v109-line:#2f353b!important;
+  --v109-line-strong:#3a4148!important;
+  --v109-green:#86cdb3!important;
+  --v109-green-dark:#6db89d!important;
+  --v109-green-soft:#1a2622!important;
+  --v109-warm:#c09b6c!important;
+  --v109-warm-soft:#26211b!important;
+  --v109-warning:#c8a06a!important;
+  --v109-warning-soft:#25201b!important;
+}
+
+html body.theme-dark :is(.logic-analysis-v103,.logic-explain-v103,.source-compare-note,.traffic-principle,.inline-note,.guide-v101-callout,.playbook-risk,.warning-note,.service-inline,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary),
+html body.reference-ui-v99.theme-dark :is(.logic-analysis-v103,.logic-explain-v103,.source-compare-note,.traffic-principle,.inline-note,.guide-v101-callout,.playbook-risk,.warning-note,.service-inline,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary){
+  background:#1a1d21!important;
+  border-color:#31373d!important;
+}
+
+html body.theme-dark :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103),
+html body.reference-ui-v99.theme-dark :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103){
+  border-left-color:var(--v109-warm)!important;
+}
+
+html body.theme-dark .page-head:after,
+html body.reference-ui-v99.theme-dark .page-head:after{
+  background:linear-gradient(90deg,var(--v109-green) 0 42%,var(--v109-warm) 42% 74%,#6f675a 74% 100%)!important;
+}
+
+
+/* v275 — larger copy in image+text figure blocks */
+html body .article-page .article-figure.compact:not(.source-journey-card)>figcaption,
+html body.reference-ui-v99 .article-page .article-figure.compact:not(.source-journey-card)>figcaption,
+html body .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption,
+html body.reference-ui-v99 .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption,
+html body .source-wizard-card figcaption,
+html body.reference-ui-v99 .source-wizard-card figcaption,
+html body .source-visual-pair figcaption,
+html body.reference-ui-v99 .source-visual-pair figcaption,
+html body .source-visual-wide figcaption,
+html body.reference-ui-v99 .source-visual-wide figcaption{
+  font-size:15.6px!important;
+  line-height:1.75!important;
+  padding:20px 22px!important;
+}
+
+html body .article-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+html body.reference-ui-v99 .article-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+html body .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+html body.reference-ui-v99 .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+html body .source-wizard-card figcaption strong,
+html body.reference-ui-v99 .source-wizard-card figcaption strong,
+html body .source-visual-pair figcaption strong,
+html body.reference-ui-v99 .source-visual-pair figcaption strong,
+html body .source-visual-wide figcaption strong,
+html body.reference-ui-v99 .source-visual-wide figcaption strong{
+  display:block!important;
+  margin-bottom:8px!important;
+  font-size:19px!important;
+  line-height:1.35!important;
+  font-weight:800!important;
+}
+
+html body .article-page .article-figure.compact.user-shot>figcaption,
+html body.reference-ui-v99 .article-page .article-figure.compact.user-shot>figcaption,
+html body .source-playbook-page .article-figure.compact.user-shot>figcaption,
+html body.reference-ui-v99 .source-playbook-page .article-figure.compact.user-shot>figcaption{
+  align-self:stretch!important;
+}
+
+@media(max-width:900px){
+  html body .article-page .article-figure.compact:not(.source-journey-card)>figcaption,
+  html body.reference-ui-v99 .article-page .article-figure.compact:not(.source-journey-card)>figcaption,
+  html body .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption,
+  html body.reference-ui-v99 .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption,
+  html body .source-wizard-card figcaption,
+  html body.reference-ui-v99 .source-wizard-card figcaption,
+  html body .source-visual-pair figcaption,
+  html body.reference-ui-v99 .source-visual-pair figcaption,
+  html body .source-visual-wide figcaption,
+  html body.reference-ui-v99 .source-visual-wide figcaption{
+    font-size:14.6px!important;
+    line-height:1.68!important;
+    padding:16px 17px!important;
+  }
+
+  html body .article-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+  html body.reference-ui-v99 .article-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+  html body .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+  html body.reference-ui-v99 .source-playbook-page .article-figure.compact:not(.source-journey-card)>figcaption strong,
+  html body .source-wizard-card figcaption strong,
+  html body.reference-ui-v99 .source-wizard-card figcaption strong,
+  html body .source-visual-pair figcaption strong,
+  html body.reference-ui-v99 .source-visual-pair figcaption strong,
+  html body .source-visual-wide figcaption strong,
+  html body.reference-ui-v99 .source-visual-wide figcaption strong{
+    font-size:17px!important;
+  }
+}

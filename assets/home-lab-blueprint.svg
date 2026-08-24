@@ -1,54 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
-  <defs>
-    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
-      <path d="M64 0H0V64" fill="none" stroke="#82959f" stroke-opacity=".105" stroke-width="1"/>
-      <path d="M32 0V64M0 32H64" fill="none" stroke="#82959f" stroke-opacity=".035" stroke-width="1"/>
-    </pattern>
-    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="17" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
-    </filter>
-  </defs>
-
-  <rect width="1600" height="1000" fill="url(#grid)"/>
-  <rect width="1600" height="1000" filter="url(#noise)" opacity=".72"/>
-
-  <!-- large flask blueprint in the empty right side of the hero -->
-  <g fill="none" stroke="#719c8e" stroke-linecap="round" stroke-linejoin="round">
-    <g opacity=".24" stroke-width="1.5">
-      <path d="M1248 176h92M1273 176v132l-120 216c-13 24 4 53 32 53h218c28 0 45-29 32-53l-120-216V176h25"/>
-      <path d="M1192 466c45 24 90 3 135 22 38 16 75 8 111-4"/>
-      <path d="M1175 536h277"/>
-      <circle cx="1244" cy="420" r="8"/>
-      <circle cx="1334" cy="473" r="6"/>
-      <circle cx="1378" cy="410" r="5"/>
-    </g>
-    <g opacity=".15" stroke-width="1">
-      <path d="M1110 620h410M1150 650h330"/>
-      <path d="M1160 114h250M1194 94v40M1378 94v40"/>
-      <circle cx="1450" cy="220" r="64"/>
-      <circle cx="1450" cy="220" r="39"/>
-      <path d="M1360 220h180M1450 130v180M1405 175l90 90M1495 175l-90 90"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+<defs>
+  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+    <path d="M56 0H0V56" fill="none" stroke="#7a8c96" stroke-opacity=".08" stroke-width="1"/>
+    <path d="M28 0V56M0 28H56" fill="none" stroke="#7a8c96" stroke-opacity=".028" stroke-width="1"/>
+  </pattern>
+  <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="12" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 .06"/></feComponentTransfer>
+  </filter>
+  <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".14"/>
+    <stop offset="0.28" stop-color="#ffffff" stop-opacity=".28"/>
+    <stop offset="0.6" stop-color="#ffffff" stop-opacity=".72"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+  </linearGradient>
+</defs>
+<rect width="1800" height="1200" fill="url(#grid)"/>
+<rect width="1800" height="1200" fill="#0f161d" opacity=".18"/>
+<rect width="1800" height="1200" filter="url(#grain)" opacity=".30"/>
+<g opacity=".85">
+<g fill="none" stroke="#7f948c" stroke-linecap="round" stroke-linejoin="round">
+  <g opacity=".22" stroke-width="1.7">
+    <path d="M1390 170h105M1418 170v146l-143 254c-16 29 5 64 39 64h285c34 0 55-35 39-64l-143-254V170h29"/>
+    <path d="M1314 519c53 26 105 4 158 24 49 19 96 8 141-7"/>
+    <path d="M1298 580h330"/>
+    <circle cx="1371" cy="465" r="9"/><circle cx="1479" cy="520" r="7"/><circle cx="1553" cy="448" r="5"/>
   </g>
-
-  <!-- small drafting marks and route diagram -->
-  <g fill="none" stroke="#7e929c" stroke-width="1.1" opacity=".13">
-    <circle cx="260" cy="740" r="86"/>
-    <circle cx="260" cy="740" r="52"/>
-    <path d="M148 740h224M260 628v224"/>
-    <path d="M510 162L610 118 705 172 798 128 900 184"/>
-    <path d="M610 118v124M705 172v114M798 128v162"/>
+  <g opacity=".12" stroke-width="1.1">
+    <circle cx="1600" cy="232" r="76"/><circle cx="1600" cy="232" r="44"/>
+    <path d="M1490 232h220M1600 122v220M1547 179l106 106M1653 179l-106 106"/>
+    <path d="M1288 690h390M1326 722h315M1304 118h270M1340 96v46M1538 96v46"/>
   </g>
-  <g fill="#78958b" opacity=".16">
-    <circle cx="510" cy="162" r="3"/><circle cx="610" cy="118" r="3"/><circle cx="705" cy="172" r="3"/>
-    <circle cx="798" cy="128" r="3"/><circle cx="900" cy="184" r="3"/>
-  </g>
-
-  <!-- subtle measurement ticks -->
-  <g stroke="#8397a1" stroke-width="1" opacity=".10">
-    <path d="M1020 90v38M1048 100v18M1076 100v18M1104 90v38"/>
-    <path d="M1000 780h38M1010 752v18M1010 724v18M1000 696h38"/>
-  </g>
+</g>
+<g fill="none" stroke="#738691" stroke-width="1.05" opacity=".12">
+  <circle cx="310" cy="866" r="100"/><circle cx="310" cy="866" r="61"/>
+  <path d="M178 866h264M310 734v264M239 795l142 142M381 795L239 937"/>
+  <path d="M494 183l114-48 109 58 106-51 117 64M608 135v145M717 193v128M823 142v174"/>
+</g>
+<g fill="#7d9b90" opacity=".12"><circle cx="494" cy="183" r="4"/><circle cx="608" cy="135" r="4"/><circle cx="717" cy="193" r="4"/><circle cx="823" cy="142" r="4"/><circle cx="940" cy="206" r="4"/></g>
+<g fill="none" stroke="#6f9488" stroke-width="1.15" opacity=".14">
+  <path d="M980 870h52M995 870v75l-48 84c-7 13 2 29 17 29h100c15 0 24-16 17-29l-48-84v-75"/>
+  <path d="M1115 854h46M1128 854v126c0 30 21 54 48 54s48-24 48-54V854h13"/>
+  <path d="M1286 930h115M1306 930l-16 112h107l-16-112M961 1019c27 12 55 3 83 11"/>
+</g>
+<g stroke="#8196a0" stroke-width="1" opacity=".10"><path d="M1080 90v42M1110 101v20M1140 101v20M1170 90v42M1020 760h42M1031 728v20M1031 696v20M1020 664h42"/></g>
+</g>
+<rect x="0" y="0" width="1800" height="1200" fill="url(#fadeRight)" opacity=".06"/>
 </svg>
