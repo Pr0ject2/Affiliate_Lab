@@ -21849,3 +21849,123 @@ html body.reference-ui-v99 .source-playbook-page .article-figure.compact.user-sh
     padding:14px!important;
   }
 }
+
+/* ======================================================================
+   v277 — approved chalk-lab background across the entire homepage
+   Small white hand-drawn sketches + erased chalk traces. Background stays
+   peripheral and quiet so it supports the interface instead of competing.
+   ====================================================================== */
+html body.home-shell-v256 main.home-page,
+html body.reference-ui-v99.home-shell-v256 main.home-page{
+  background:#0b1015!important;
+  background-image:none!important;
+}
+
+html body.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+  background:#0b1015!important;
+  background-image:none!important;
+  opacity:1!important;
+}
+
+html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-blueprint.svg?v=20260824-2770')!important;
+  background-repeat:repeat-y!important;
+  background-position:center top!important;
+  background-size:1620px auto!important;
+  opacity:.68!important;
+}
+
+/* Chalkboard wear: broad erased patches rather than a decorative gradient. */
+html body.home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(ellipse at 17% 9%,rgba(255,255,255,.018),transparent 24%),
+    radial-gradient(ellipse at 84% 22%,rgba(255,255,255,.014),transparent 20%),
+    radial-gradient(ellipse at 23% 48%,rgba(255,255,255,.012),transparent 25%),
+    radial-gradient(ellipse at 82% 67%,rgba(255,255,255,.014),transparent 22%),
+    radial-gradient(ellipse at 18% 88%,rgba(255,255,255,.011),transparent 21%),
+    linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.09))!important;
+}
+
+/* The actual content remains above the chalk layer. */
+html body.home-shell-v256 main.home-page > :not(.home-lab-background-v266),
+html body.reference-ui-v99.home-shell-v256 main.home-page > :not(.home-lab-background-v266){
+  position:relative!important;
+  z-index:1!important;
+}
+
+/* Cards stay opaque enough that sketches never interfere with reading. */
+html body.theme-dark.home-shell-v256 main.home-page :is(
+  .home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-search-card,
+  .home-results-inner,.section-entry,.section-outcome,.playbook-card
+),
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page :is(
+  .home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-search-card,
+  .home-results-inner,.section-entry,.section-outcome,.playbook-card
+){
+  background-color:rgba(15,22,29,.94)!important;
+  backdrop-filter:none!important;
+}
+
+/* Light theme uses the same drawings as faint graphite/pencil marks. */
+html body:not(.theme-dark).home-shell-v256 main.home-page,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page{
+  background:#f5f1e8!important;
+  background-image:none!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#f5f1e8!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  filter:invert(1) grayscale(1)!important;
+  opacity:.16!important;
+}
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  background:
+    radial-gradient(ellipse at 17% 9%,rgba(40,48,44,.022),transparent 24%),
+    radial-gradient(ellipse at 84% 22%,rgba(40,48,44,.018),transparent 20%),
+    radial-gradient(ellipse at 23% 48%,rgba(40,48,44,.016),transparent 25%),
+    radial-gradient(ellipse at 82% 67%,rgba(40,48,44,.018),transparent 22%)!important;
+}
+
+@media (max-width:1100px){
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    background-size:1440px auto!important;
+    background-position:54% top!important;
+    opacity:.58!important;
+  }
+}
+
+@media (max-width:900px){
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    background-size:1120px auto!important;
+    background-position:56% top!important;
+    opacity:.40!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    opacity:.10!important;
+  }
+}

@@ -1,50 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
-<defs>
-  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
-    <path d="M56 0H0V56" fill="none" stroke="#7a8c96" stroke-opacity=".08" stroke-width="1"/>
-    <path d="M28 0V56M0 28H56" fill="none" stroke="#7a8c96" stroke-opacity=".028" stroke-width="1"/>
-  </pattern>
-  <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
-    <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="12" stitchTiles="stitch"/>
-    <feColorMatrix type="saturate" values="0"/>
-    <feComponentTransfer><feFuncA type="table" tableValues="0 .06"/></feComponentTransfer>
-  </filter>
-  <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#ffffff" stop-opacity=".14"/>
-    <stop offset="0.28" stop-color="#ffffff" stop-opacity=".28"/>
-    <stop offset="0.6" stop-color="#ffffff" stop-opacity=".72"/>
-    <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
-  </linearGradient>
-</defs>
-<rect width="1800" height="1200" fill="url(#grid)"/>
-<rect width="1800" height="1200" fill="#0f161d" opacity=".18"/>
-<rect width="1800" height="1200" filter="url(#grain)" opacity=".30"/>
-<g opacity=".85">
-<g fill="none" stroke="#7f948c" stroke-linecap="round" stroke-linejoin="round">
-  <g opacity=".22" stroke-width="1.7">
-    <path d="M1390 170h105M1418 170v146l-143 254c-16 29 5 64 39 64h285c34 0 55-35 39-64l-143-254V170h29"/>
-    <path d="M1314 519c53 26 105 4 158 24 49 19 96 8 141-7"/>
-    <path d="M1298 580h330"/>
-    <circle cx="1371" cy="465" r="9"/><circle cx="1479" cy="520" r="7"/><circle cx="1553" cy="448" r="5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2600" viewBox="0 0 1800 2600">
+  <defs>
+    <filter id="chalk" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.12" numOctaves="2" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="softChalk" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.07" numOctaves="2" seed="9" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+      <feGaussianBlur stdDeviation="0.28"/>
+    </filter>
+    <filter id="dust" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="17" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .18 0"/>
+    </filter>
+    <pattern id="microGrid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#fff" stroke-opacity=".034" stroke-width="1"/>
+      <path d="M36 0V72M0 36H72" fill="none" stroke="#fff" stroke-opacity=".013" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- faint board grain and almost invisible drafting grid -->
+  <rect width="1800" height="2600" fill="url(#microGrid)"/>
+  <rect width="1800" height="2600" filter="url(#dust)" opacity=".22"/>
+
+  <!-- chalk eraser smudges: broad, incomplete, deliberately uneven -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" filter="url(#softChalk)">
+    <path d="M78 486c118-18 214-5 318-15M106 505c94-8 178 7 262-2" stroke-width="18" opacity=".018"/>
+    <path d="M1375 686c105-11 223 8 326-6M1422 706c78 3 146-5 234 4" stroke-width="22" opacity=".022"/>
+    <path d="M112 1170c134 5 220-12 326-5M142 1193c93 7 159-3 231 1" stroke-width="20" opacity=".019"/>
+    <path d="M1328 1432c122-15 244-2 359-10M1360 1456c89 7 167 1 262 5" stroke-width="23" opacity=".021"/>
+    <path d="M86 2030c112-12 221 8 327-2M120 2054c78 5 158-2 234 4" stroke-width="20" opacity=".019"/>
+    <path d="M1310 2290c112 2 239-12 351 1M1346 2313c93-4 171 7 267 0" stroke-width="22" opacity=".021"/>
   </g>
-  <g opacity=".12" stroke-width="1.1">
-    <circle cx="1600" cy="232" r="76"/><circle cx="1600" cy="232" r="44"/>
-    <path d="M1490 232h220M1600 122v220M1547 179l106 106M1653 179l-106 106"/>
-    <path d="M1288 690h390M1326 722h315M1304 118h270M1340 96v46M1538 96v46"/>
+
+  <!-- TOP: small margin sketches, intentionally away from hero copy -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#chalk)">
+    <!-- tiny molecule -->
+    <g opacity=".15" stroke-width="1.35" transform="translate(105 180) rotate(-5)">
+      <path d="M0 18 24 4l25 14v28L24 60 0 46ZM49 18l25-14 24 14v28L74 60 49 46"/>
+      <circle cx="0" cy="18" r="2"/><circle cx="24" cy="4" r="2"/><circle cx="49" cy="18" r="2"/><circle cx="98" cy="18" r="2"/><circle cx="74" cy="60" r="2"/>
+    </g>
+
+    <!-- small graph -->
+    <g opacity=".16" stroke-width="1.25" transform="translate(1500 130) rotate(1)">
+      <path d="M0 82V0M0 82h126"/>
+      <path d="M8 66c20-34 31-12 49-39 16-25 34 26 62-15"/>
+      <path d="M112 8l10 4-8 7"/>
+      <circle cx="57" cy="27" r="20" opacity=".45"/>
+      <path d="M43 27h28M57 13v28" opacity=".42"/>
+    </g>
+
+    <!-- tiny crosshair -->
+    <g opacity=".105" stroke-width="1.05" transform="translate(1645 390)">
+      <circle cx="0" cy="0" r="28"/><circle cx="0" cy="0" r="9"/><path d="M-45 0h90M0-45v90"/>
+    </g>
+
+    <!-- hero flask near bottom-left margin -->
+    <g opacity=".17" stroke-width="1.55" transform="translate(178 730) rotate(-2)">
+      <path d="M45 0h48M57 0v52L7 143c-8 15 2 33 20 33h84c18 0 28-18 20-33L81 52V0"/>
+      <path d="M24 130c24 10 46-2 70 8 12 5 25 4 36 0"/>
+      <path d="M34 151h72" opacity=".7"/>
+      <circle cx="49" cy="112" r="3"/><circle cx="85" cy="128" r="2.4"/>
+    </g>
+
+    <!-- subtle measurement marks -->
+    <g opacity=".105" stroke-width="1" transform="translate(1458 880)">
+      <path d="M0 0h165M12-10v20M42-6v12M72-6v12M102-6v12M132-6v12M162-10v20"/>
+      <path d="M0 28h118M8 20v16M38 23v10M68 23v10M98 23v10"/>
+    </g>
   </g>
-</g>
-<g fill="none" stroke="#738691" stroke-width="1.05" opacity=".12">
-  <circle cx="310" cy="866" r="100"/><circle cx="310" cy="866" r="61"/>
-  <path d="M178 866h264M310 734v264M239 795l142 142M381 795L239 937"/>
-  <path d="M494 183l114-48 109 58 106-51 117 64M608 135v145M717 193v128M823 142v174"/>
-</g>
-<g fill="#7d9b90" opacity=".12"><circle cx="494" cy="183" r="4"/><circle cx="608" cy="135" r="4"/><circle cx="717" cy="193" r="4"/><circle cx="823" cy="142" r="4"/><circle cx="940" cy="206" r="4"/></g>
-<g fill="none" stroke="#6f9488" stroke-width="1.15" opacity=".14">
-  <path d="M980 870h52M995 870v75l-48 84c-7 13 2 29 17 29h100c15 0 24-16 17-29l-48-84v-75"/>
-  <path d="M1115 854h46M1128 854v126c0 30 21 54 48 54s48-24 48-54V854h13"/>
-  <path d="M1286 930h115M1306 930l-16 112h107l-16-112M961 1019c27 12 55 3 83 11"/>
-</g>
-<g stroke="#8196a0" stroke-width="1" opacity=".10"><path d="M1080 90v42M1110 101v20M1140 101v20M1170 90v42M1020 760h42M1031 728v20M1031 696v20M1020 664h42"/></g>
-</g>
-<rect x="0" y="0" width="1800" height="1200" fill="url(#fadeRight)" opacity=".06"/>
+
+  <!-- MIDDLE: analytics/lab cues beside the next sections -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#chalk)">
+    <!-- slider controls -->
+    <g opacity=".125" stroke-width="1.2" transform="translate(112 1135) rotate(2)">
+      <path d="M0 0h116M0 31h116M0 62h116"/>
+      <circle cx="31" cy="0" r="6"/><circle cx="76" cy="31" r="6"/><circle cx="48" cy="62" r="6"/>
+    </g>
+
+    <!-- small funnel -->
+    <g opacity=".15" stroke-width="1.35" transform="translate(1540 1190) rotate(3)">
+      <path d="M0 0h126L80 58v57H47V58Z"/>
+      <path d="M23 18h81M35 36h58" opacity=".6"/>
+    </g>
+
+    <!-- hand-drawn bars/curve -->
+    <g opacity=".13" stroke-width="1.25" transform="translate(145 1515) rotate(-1)">
+      <path d="M0 110V0M0 110h154"/>
+      <path d="M18 96V72M45 96V49M72 96V60M99 96V29M126 96V41"/>
+      <path d="M12 77c28-25 46-6 70-31 21-22 36 7 64-31"/>
+    </g>
+
+    <!-- tiny chain / attribution sketch -->
+    <g opacity=".115" stroke-width="1.2" transform="translate(1452 1580) rotate(-4)">
+      <rect x="0" y="0" width="49" height="28" rx="7"/><rect x="84" y="0" width="49" height="28" rx="7"/><rect x="168" y="0" width="49" height="28" rx="7"/>
+      <path d="M49 14h35M133 14h35"/>
+      <path d="m76 9 8 5-8 5M160 9l8 5-8 5"/>
+    </g>
+  </g>
+
+  <!-- LOWER: sparse notes so the background continues to the end -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#chalk)">
+    <!-- checklist -->
+    <g opacity=".125" stroke-width="1.15" transform="translate(116 1935) rotate(-2)">
+      <rect x="0" y="0" width="13" height="13"/><path d="m3 7 3 3 6-8"/><path d="M24 6h103"/>
+      <rect x="0" y="29" width="13" height="13"/><path d="m3 36 3 3 6-8"/><path d="M24 35h88"/>
+      <rect x="0" y="58" width="13" height="13"/><path d="M24 64h112"/>
+    </g>
+
+    <!-- test tubes -->
+    <g opacity=".14" stroke-width="1.3" transform="translate(1518 1910) rotate(2)">
+      <path d="M0 0h28M6 0v82c0 18 10 29 22 29s22-11 22-29V0h10"/>
+      <path d="M78 0h26M84 0v65c0 16 9 26 20 26s20-10 20-26V0h10"/>
+      <path d="M9 71c12 6 24-4 38 2M87 56c10 5 20-3 34 1"/>
+    </g>
+
+    <!-- small circular target -->
+    <g opacity=".105" stroke-width="1.1" transform="translate(1650 2235)">
+      <circle cx="0" cy="0" r="38"/><circle cx="0" cy="0" r="21"/><circle cx="0" cy="0" r="5"/><path d="M-53 0h106M0-53v106"/>
+    </g>
+
+    <!-- bottom lab flask -->
+    <g opacity=".13" stroke-width="1.35" transform="translate(216 2260) rotate(2)">
+      <path d="M36 0h40M46 0v44L7 116c-6 12 2 26 16 26h67c14 0 22-14 16-26L66 44V0"/>
+      <path d="M20 105c17 8 37 0 55 7 10 4 18 3 27 0"/>
+      <circle cx="39" cy="92" r="2.5"/><circle cx="68" cy="103" r="2"/>
+    </g>
+
+    <!-- tiny timeline -->
+    <g opacity=".10" stroke-width="1.05" transform="translate(1300 2450)">
+      <path d="M0 0h290"/>
+      <circle cx="18" cy="0" r="4"/><circle cx="96" cy="0" r="4"/><circle cx="181" cy="0" r="4"/><circle cx="270" cy="0" r="4"/>
+      <path d="M18-14v28M96-10v20M181-10v20M270-14v28"/>
+    </g>
+  </g>
+
+  <!-- very faint handwritten chalk notes -->
+  <g fill="#fff" opacity=".085" font-family="Segoe Print, Comic Sans MS, cursive" font-size="20" filter="url(#chalk)">
+    <text x="115" y="345" transform="rotate(-6 115 345)">E = mc²</text>
+    <text x="1518" y="335" transform="rotate(4 1518 335)">y = kx²</text>
+    <text x="1490" y="1080" transform="rotate(-3 1490 1080)">CTR ↑</text>
+    <text x="130" y="1760" transform="rotate(-4 130 1760)">plan → test → check</text>
+    <text x="1428" y="1775" transform="rotate(3 1428 1775)">A / B</text>
+    <text x="1130" y="2365" transform="rotate(-5 1130 2365)">data → decision</text>
+  </g>
 </svg>
