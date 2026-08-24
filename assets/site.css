@@ -21402,3 +21402,450 @@ html body.reference-ui-v99 .source-playbook-page .article-figure.compact.user-sh
     font-size:17px!important;
   }
 }
+
+/* ======================================================================
+   v276 — final mobile normalization
+   One content width for every page and both themes; remove accumulated
+   mobile-width conflicts and common horizontal-overflow problems.
+   ====================================================================== */
+@media (max-width:900px){
+  :root{
+    --tl-mobile-gutter:14px;
+    --tl-mobile-width:calc(100% - (var(--tl-mobile-gutter) * 2));
+  }
+
+  html,
+  html body,
+  html body.reference-ui-v99,
+  html body.theme-dark,
+  html body.reference-ui-v99.theme-dark{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-x:clip!important;
+  }
+
+  html body :is(main,.compact-main-v103,.home-page,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.about-main-v114),
+  html body.reference-ui-v99 :is(main,.compact-main-v103,.home-page,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.about-main-v114),
+  html body.theme-dark :is(main,.compact-main-v103,.home-page,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.about-main-v114){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Canonical mobile content gutter. This deliberately ignores theme. */
+  html body main > .wrap,
+  html body main > section.wrap,
+  html body main > aside.wrap,
+  html body main > div.wrap,
+  html body main > section > .wrap,
+  html body main > div > .wrap,
+  html body.reference-ui-v99 main > .wrap,
+  html body.reference-ui-v99 main > section.wrap,
+  html body.reference-ui-v99 main > aside.wrap,
+  html body.reference-ui-v99 main > div.wrap,
+  html body.reference-ui-v99 main > section > .wrap,
+  html body.reference-ui-v99 main > div > .wrap,
+  html body.theme-dark main > .wrap,
+  html body.theme-dark main > section.wrap,
+  html body.theme-dark main > aside.wrap,
+  html body.theme-dark main > div.wrap,
+  html body.theme-dark main > section > .wrap,
+  html body.theme-dark main > div > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Article workspaces use the same gutter as every landing page. */
+  html body .article-layout,
+  html body.reference-ui-v99 .article-layout,
+  html body .source-playbook-page .article-layout,
+  html body.reference-ui-v99 .source-playbook-page .article-layout{
+    display:block!important;
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0 auto!important;
+    padding:18px 0 54px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body :is(.article,.structured-article-v103,.source-playbook-article),
+  html body.reference-ui-v99 :is(.article,.structured-article-v103,.source-playbook-article){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  html body :is(.article-aside,.article-aside.enhanced-rail,.playbook-aside){
+    display:none!important;
+  }
+
+  /* Header also shares the same visual gutter and never changes with theme. */
+  html body .site-header,
+  html body.reference-ui-v99 .site-header,
+  html body.theme-dark .site-header,
+  html body.reference-ui-v99.theme-dark .site-header{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    left:0!important;
+    right:0!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .ref-topbar{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding-left:var(--tl-mobile-gutter)!important;
+    padding-right:var(--tl-mobile-gutter)!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.reference-ui-v99 .ref-topbar-crumbs{
+    min-width:0!important;
+    overflow:hidden!important;
+  }
+
+  html body.reference-ui-v99 .ref-mobile-brand,
+  html body .site-header .brand{
+    min-width:0!important;
+    max-width:calc(100% - 92px)!important;
+    overflow:hidden!important;
+  }
+
+  html body.reference-ui-v99 .ref-mobile-brand b,
+  html body .site-header .brand-text b{
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    white-space:nowrap!important;
+  }
+
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{
+    max-width:calc(100vw - 20px)!important;
+    box-sizing:border-box!important;
+  }
+
+  html body .site-footer,
+  html body.reference-ui-v99 .site-footer{
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    overflow:hidden!important;
+  }
+  html body .site-footer > .wrap,
+  html body.reference-ui-v99 .site-footer > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  /* Typography: no oversized desktop display type on narrow screens. */
+  html body :is(.page-head h1,.article-page .article h1,.source-playbook-article h1,.about-hero-v114 h1),
+  html body.reference-ui-v99 :is(.page-head h1,.article-page .article h1,.source-playbook-article h1,.about-hero-v114 h1){
+    max-width:100%!important;
+    font-size:clamp(29px,8.2vw,36px)!important;
+    line-height:1.08!important;
+    letter-spacing:-.035em!important;
+    overflow-wrap:anywhere!important;
+  }
+  html body :is(.article h2,.source-playbook-article h2,.section-heading h2,.home-section-title h2),
+  html body.reference-ui-v99 :is(.article h2,.source-playbook-article h2,.section-heading h2,.home-section-title h2){
+    max-width:100%!important;
+    font-size:clamp(22px,6.2vw,28px)!important;
+    line-height:1.16!important;
+    overflow-wrap:anywhere!important;
+  }
+  html body :is(p,li,dd,figcaption),
+  html body.reference-ui-v99 :is(p,li,dd,figcaption){
+    overflow-wrap:break-word!important;
+  }
+
+  /* Home: same width as every other page; no desktop grid survives. */
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-grid{
+    display:block!important;
+    width:100%!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    width:100%!important;
+    max-width:100%!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    max-width:100%!important;
+    font-size:clamp(34px,9.8vw,45px)!important;
+    line-height:1.02!important;
+  }
+  html body.home-shell-v256 main.home-page :is(.home-welcome-summary,.home-entry-grid,.home-source-grid),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-welcome-summary,.home-entry-grid,.home-source-grid){
+    width:100%!important;
+    max-width:100%!important;
+    grid-template-columns:1fr!important;
+  }
+
+  /* Library cards: clean vertical mobile layout; compact category chip. */
+  html body #libraryRows,
+  html body.reference-ui-v99 #libraryRows{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  html body #libraryRows .library-row,
+  html body.reference-ui-v99 #libraryRows .library-row{
+    display:flex!important;
+    flex-direction:column!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    gap:11px!important;
+    padding:16px!important;
+    border-radius:12px!important;
+    box-sizing:border-box!important;
+    clip-path:none!important;
+  }
+  html body #libraryRows .library-row:after{display:none!important}
+  html body #libraryRows .library-row > *{width:100%!important;max-width:100%!important;min-width:0!important}
+  html body #libraryRows .library-type,
+  html body.reference-ui-v99 #libraryRows .library-type{
+    align-self:flex-start!important;
+    width:auto!important;
+    max-width:100%!important;
+    padding:7px 10px!important;
+    border-radius:999px!important;
+    white-space:normal!important;
+  }
+  html body #libraryRows .library-meta,
+  html body.reference-ui-v99 #libraryRows .library-meta{
+    display:flex!important;
+    flex-direction:row!important;
+    flex-wrap:wrap!important;
+    width:100%!important;
+    min-height:0!important;
+    gap:7px 10px!important;
+    padding:10px 0 0!important;
+    border-left:0!important;
+    border-top:1px solid var(--v109-line)!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  html body #libraryRows .library-meta span,
+  html body.reference-ui-v99 #libraryRows .library-meta span{
+    width:auto!important;
+    min-height:0!important;
+    justify-content:flex-start!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    text-align:left!important;
+  }
+  html body #libraryRows .library-meta :is(.level-badge,.reading-state-badge),
+  html body.reference-ui-v99 #libraryRows .library-meta :is(.level-badge,.reading-state-badge){
+    padding:4px 8px!important;
+  }
+
+  /* Grids/cards collapse consistently instead of retaining mixed widths. */
+  html body :is(
+    .service-tool-grid,.service-grid,.service-use-grid,.tools-grid,.tool-form-grid,
+    .saved-grid,.recent-home-grid,.related-grid,.compare-grid,.problem-options,
+    .rules-summary-grid,.rules-model-grid,.geo-chip-grid,.traffic-source-grid,
+    .source-toolkit-grid,.source-journey-grid.four,.source-journey-grid.three,
+    .source-visual-pair,.playbook-checklist,.platform-setup,.playbook-format-list,
+    .playbook-steps,.traffic-diagnostic-list,.guide-v101-grid.five,.guide-v101-grid.four,
+    .guide-v101-grid.three,.guide-v101-formats,.guide-v101-funnel-table,
+    .guide-v101-diagnostics,.guide-v101-scale,.guide-v101-next>div,
+    .knowledge-map,.split-section,.about-grid,.path-dashboard,.ref-summary-grid,
+    .ref-connected-tools>div
+  ),
+  html body.reference-ui-v99 :is(
+    .service-tool-grid,.service-grid,.service-use-grid,.tools-grid,.tool-form-grid,
+    .saved-grid,.recent-home-grid,.related-grid,.compare-grid,.problem-options,
+    .rules-summary-grid,.rules-model-grid,.geo-chip-grid,.traffic-source-grid,
+    .source-toolkit-grid,.source-journey-grid.four,.source-journey-grid.three,
+    .source-visual-pair,.playbook-checklist,.platform-setup,.playbook-format-list,
+    .playbook-steps,.traffic-diagnostic-list,.guide-v101-grid.five,.guide-v101-grid.four,
+    .guide-v101-grid.three,.guide-v101-formats,.guide-v101-funnel-table,
+    .guide-v101-diagnostics,.guide-v101-scale,.guide-v101-next>div,
+    .knowledge-map,.split-section,.about-grid,.path-dashboard,.ref-summary-grid,
+    .ref-connected-tools>div
+  ){
+    grid-template-columns:1fr!important;
+    max-width:100%!important;
+  }
+
+  html body :is(.service-tool,.service-card,.tool-card,.about-card,.section-card,.source-tool-card,.source-journey-card,.playbook-card,.calc-card,.diagnostic-card,.notes-card,.field-case),
+  html body.reference-ui-v99 :is(.service-tool,.service-card,.tool-card,.about-card,.section-card,.source-tool-card,.source-journey-card,.playbook-card,.calc-card,.diagnostic-card,.notes-card,.field-case){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Image/caption blocks never create a second-width system on mobile. */
+  html body :is(.article-figure,.guide-v101-media,.source-visual-wide,.source-visual-pair .article-figure,.source-journey-card.article-figure),
+  html body.reference-ui-v99 :is(.article-figure,.guide-v101-media,.source-visual-wide,.source-visual-pair .article-figure,.source-journey-card.article-figure){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    box-sizing:border-box!important;
+  }
+  html body :is(.article-figure img,.guide-v101-media img,.source-visual-pair img,.source-visual-wide img,.source-journey-card img),
+  html body.reference-ui-v99 :is(.article-figure img,.guide-v101-media img,.source-visual-pair img,.source-visual-wide img,.source-journey-card img){
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    min-width:0!important;
+    object-fit:contain!important;
+    box-sizing:border-box!important;
+  }
+  html body .article-page .article-figure.compact:not(.source-journey-card),
+  html body.reference-ui-v99 .article-page .article-figure.compact:not(.source-journey-card),
+  html body .source-playbook-page .article-figure.compact:not(.source-journey-card),
+  html body.reference-ui-v99 .source-playbook-page .article-figure.compact:not(.source-journey-card){
+    display:flex!important;
+    flex-direction:column!important;
+  }
+
+  /* Tabs, breadcrumbs and action rows scroll/wrap internally rather than widening the page. */
+  html body :is(.source-section-tabs,.breadcrumbs,.article-actions,.article-actions-unified,.source-compare-actions,.service-tool-actions,.home-actions),
+  html body.reference-ui-v99 :is(.source-section-tabs,.breadcrumbs,.article-actions,.article-actions-unified,.source-compare-actions,.service-tool-actions,.home-actions){
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  html body .source-section-tabs,
+  html body.reference-ui-v99 .source-section-tabs{
+    width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    overflow-x:auto!important;
+    overscroll-behavior-inline:contain!important;
+  }
+  html body :is(.article-actions,.article-actions-unified,.source-compare-actions,.service-tool-actions,.home-actions),
+  html body.reference-ui-v99 :is(.article-actions,.article-actions-unified,.source-compare-actions,.service-tool-actions,.home-actions){
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:8px!important;
+  }
+
+  /* Wide data stays scrollable inside its own box; it no longer stretches the page. */
+  html body :is(.article table,.rules-table,.compare-table,.source-compare-table),
+  html body.reference-ui-v99 :is(.article table,.rules-table,.compare-table,.source-compare-table){
+    max-width:100%!important;
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  html body .article table,
+  html body.reference-ui-v99 .article table{
+    display:block!important;
+    width:100%!important;
+  }
+  html body .source-compare-table,
+  html body.reference-ui-v99 .source-compare-table{
+    display:block!important;
+    width:100%!important;
+  }
+  html body .source-compare-row,
+  html body.reference-ui-v99 .source-compare-row{
+    min-width:620px!important;
+    grid-template-columns:160px 1fr 1fr!important;
+  }
+
+  /* Forms: no fixed widths and no iOS zoom caused by tiny inputs. */
+  html body :is(input,select,textarea,button),
+  html body.reference-ui-v99 :is(input,select,textarea,button){
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  html body :is(input,select,textarea),
+  html body.reference-ui-v99 :is(input,select,textarea){
+    font-size:16px!important;
+  }
+  html body :is(.searchbox>div,.home-main-search>div,.library-search,.source-compare-picker,.source-wizard-card),
+  html body.reference-ui-v99 :is(.searchbox>div,.home-main-search>div,.library-search,.source-compare-picker,.source-wizard-card){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  html body .source-compare-picker,
+  html body.reference-ui-v99 .source-compare-picker,
+  html body .source-wizard-card,
+  html body.reference-ui-v99 .source-wizard-card{
+    grid-template-columns:1fr!important;
+  }
+
+  /* Long technical strings and code wrap/scroll without pushing the viewport. */
+  html body :is(pre,code,.guide-v101-code,.guide-v101-code code),
+  html body.reference-ui-v99 :is(pre,code,.guide-v101-code,.guide-v101-code code){
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  html body pre,
+  html body.reference-ui-v99 pre{
+    overflow-x:auto!important;
+    white-space:pre!important;
+  }
+
+  /* Remove old negative-edge tricks left by desktop-to-mobile conversions. */
+  html body :is(.source-section-tabs,.ref-source-funnel,.article-figure,.home-welcome-summary,.library-shell,.service-workflow,.section-bottom-links),
+  html body.reference-ui-v99 :is(.source-section-tabs,.ref-source-funnel,.article-figure,.home-welcome-summary,.library-shell,.service-workflow,.section-bottom-links){
+    transform:none!important;
+  }
+}
+
+@media (max-width:420px){
+  :root{--tl-mobile-gutter:12px;}
+
+  html body :is(.page-head h1,.article-page .article h1,.source-playbook-article h1,.about-hero-v114 h1),
+  html body.reference-ui-v99 :is(.page-head h1,.article-page .article h1,.source-playbook-article h1,.about-hero-v114 h1){
+    font-size:clamp(27px,8.8vw,33px)!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    font-size:clamp(31px,10.2vw,40px)!important;
+  }
+
+  html body #libraryRows .library-row,
+  html body.reference-ui-v99 #libraryRows .library-row{
+    padding:14px!important;
+  }
+}
