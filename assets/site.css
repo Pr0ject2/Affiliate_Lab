@@ -4194,7 +4194,8 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
 .sidebar-hints-toggle[aria-pressed="false"]{background:#ebe8e1!important;color:#777b77!important}
 .sidebar-hints-toggle[aria-pressed="false"] b{color:#777b77}
 
-.hints-off .term-help,.hints-off .term-help:disabled{padding:0!important;border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;text-decoration:none!important;cursor:text!important;opacity:1!important;box-shadow:none!important}
+.hints-off .term-help,.hints-off .term-help:disabled{padding:0!important;border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;text-decoration:none!important;cursor:text!important;opacity:1!important;
+  filter:none!important;box-shadow:none!important}
 .hints-off .term-help:after,.hints-off .beginner-term-note{display:none!important}
 .hints-off .term-tooltip{display:none!important}
 
@@ -4506,6 +4507,7 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
   body.mobile-nav-open .mobile-nav-overlay{
     visibility:visible!important;
     opacity:1!important;
+  filter:none!important;
     pointer-events:auto!important;
     transition:opacity .2s ease,visibility 0s!important;
   }
@@ -5166,6 +5168,7 @@ main,.site-footer{margin-left:var(--sidebar-width)!important}
   font-weight:800!important;
   text-decoration:none!important;
   opacity:1!important;
+  filter:none!important;
 }
 .playbook-card>a:after{content:"  →"}
 
@@ -7130,7 +7133,8 @@ body .playbook-card .playbook-facts{display:flex!important;flex-wrap:wrap!import
 body .playbook-card .playbook-facts>div{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;min-height:0!important;padding:7px 10px!important;border-radius:8px!important;background:#fbfcfb!important}
 body .playbook-card .playbook-facts dt{font-size:11px!important;font-weight:700!important;color:#6c7874!important}
 body .playbook-card .playbook-facts dd{font-size:12px!important;line-height:1.35!important}
-body .playbook-card>a{margin-top:16px!important;padding-top:14px!important;border-top:1px solid #e7e1d7!important;font-size:12px!important;opacity:1!important;color:#184e40!important}
+body .playbook-card>a{margin-top:16px!important;padding-top:14px!important;border-top:1px solid #e7e1d7!important;font-size:12px!important;opacity:1!important;
+  filter:none!important;color:#184e40!important}
 
 /* Source articles: unified width and calmer layout */
 body.reference-ui-v99 .source-playbook-page .article-layout,
@@ -7988,7 +7992,8 @@ html body.theme-dark .home-actions a:not(.home-action-primary):not(.home-action-
     z-index:180!important;transition:opacity .2s ease,visibility 0s linear .2s!important
   }
   html body.mobile-nav-open .mobile-nav-overlay{
-    visibility:visible!important;opacity:1!important;pointer-events:auto!important;
+    visibility:visible!important;opacity:1!important;
+  filter:none!important;pointer-events:auto!important;
     transition:opacity .2s ease,visibility 0s!important
   }
 
@@ -12005,13 +12010,13 @@ html body.reference-ui-v99 .source-playbook-page :is(.source-hero-shell>.playboo
 }
 html body.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts),
 html body.reference-ui-v99.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts){
-  background:#2b333d!important;
-  border-color:#2b333d!important;
+  background:transparent!important;
+  border-color:#303B46!important;
 }
 html body.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div,
 html body.reference-ui-v99.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div{
-  background:#191e25!important;
-  border-right-color:#2b333d!important;
+  background:transparent!important;
+  border-right-color:#303B46!important;
 }
 html body.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts) dt,
 html body.reference-ui-v99.theme-dark .source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts) dt{
@@ -12339,6 +12344,7 @@ html body .site-footer .footer-identity p,
 html body .site-footer .footer-bottom span,
 html body .site-footer .footer-bottom small{
   opacity:1!important;
+  filter:none!important;
 }
 
 
@@ -12675,7 +12681,8 @@ html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a.is-ac
 html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon{
   color:#c2cdd2!important;
 }
-html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon-img{opacity:1!important;filter:none!important}
+html body.theme-dark.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon-img{opacity:1!important;
+  filter:none!important;filter:none!important}
 
 html body.theme-dark.reference-ui-v99 .global-sidebar .ref-partner-card{
   border-color:#3c4852!important;
@@ -14135,6 +14142,7 @@ html body.theme-dark :is(input,textarea)::placeholder,
 html body.reference-ui-v99.theme-dark :is(input,textarea)::placeholder{
   color:#77838c!important;
   opacity:1!important;
+  filter:none!important;
 }
 
 /* Tables/code use the same understated hierarchy. */
@@ -15958,12 +15966,12 @@ html body.reference-ui-v99 main:not(.home-page) > section:not(.wrap) > .wrap.nar
    A dedicated body marker outranks the accumulated legacy width rules.
    ====================================================================== */
 :root{
-  --tl-v198-reading-width:930px;
-  --tl-v198-rail-width:270px;
-  --tl-v198-rail-gap:28px;
-  --tl-v198-gutter:18px;
-  --tl-v198-gutter-tablet:14px;
-  --tl-v198-gutter-mobile:10px;
+  --tl-v198-reading-width:1120px;
+  --tl-v198-rail-width:276px;
+  --tl-v198-rail-gap:34px;
+  --tl-v198-gutter:24px;
+  --tl-v198-gutter-tablet:16px;
+  --tl-v198-gutter-mobile:12px;
 }
 
 /* Ordinary internal sections / catalogs / start pages. */
@@ -17171,10 +17179,10 @@ html body .journal-head .narrow{
 
 @media (min-width:1051px){
   :root{
-    --tl-v217-page-max:1240px;
-    --tl-v217-rail:292px;
-    --tl-v217-gap:32px;
-    --tl-v217-gutter:18px;
+    --tl-v217-page-max:1120px;
+    --tl-v217-rail:276px;
+    --tl-v217-gap:34px;
+    --tl-v217-gutter:24px;
   }
 
   /* Use the full internal-page canvas and push the rail to the far right. */
@@ -17266,17 +17274,17 @@ html body .journal-head .narrow{
   html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout,
   html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout,
   html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout{
-    width:min(calc(100% - (var(--tl-v217-gutter) * 2)), 1296px)!important;
-    max-width:1296px!important;
+    width:min(calc(100% - (var(--tl-v217-gutter) * 2)), 1120px)!important;
+    max-width:1120px!important;
   }
 
   html body.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
   html body.reference-ui-v99.theme-dark.article-page main#main-content > .wrap.article-layout > :is(.article,.source-playbook-article),
   html body.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article),
   html body.reference-ui-v99.theme-dark.content-system-v103 main.source-playbook-page > .wrap.article-layout > :is(.article,.source-playbook-article){
-    max-width:972px!important;
-    width:972px!important;
-    flex:0 1 972px!important;
+    max-width:810px!important;
+    width:810px!important;
+    flex:0 1 810px!important;
   }
 }
 
@@ -17875,11 +17883,11 @@ html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-ico
 
 @media (min-width:1051px){
   :root{
-    --tl-v224-wrap:1296px;
-    --tl-v224-article:968px;
-    --tl-v224-rail:296px;
-    --tl-v224-gap:32px;
-    --tl-v224-gutter:18px;
+    --tl-v224-wrap:1120px;
+    --tl-v224-article:810px;
+    --tl-v224-rail:276px;
+    --tl-v224-gap:34px;
+    --tl-v224-gutter:24px;
   }
 
   html body.article-page :is(main#main-content, main.source-playbook-page),
@@ -18541,7 +18549,12 @@ html body.reference-ui-v99.theme-dark main.source-playbook-page{
 html body.theme-dark main.source-playbook-page .source-playbook-article,
 html body.reference-ui-v99.theme-dark main.source-playbook-page .source-playbook-article,
 html body.theme-dark main.source-playbook-page .source-hero-shell,
-html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-shell,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-shell{
+  background:transparent!important;
+  background-image:none!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
 html body.theme-dark main.source-playbook-page .article-aside .aside-block,
 html body.reference-ui-v99.theme-dark main.source-playbook-page .article-aside .aside-block{
   background:var(--tl-dark-article,#111820)!important;
@@ -18621,14 +18634,14 @@ html body.reference-ui-v99.theme-dark main.source-playbook-page :is(
   .playbook-head-actions a,
   .source-compare-actions a
 ){
-  background:var(--tl-dark-card,#171E26)!important;
+  background:transparent!important;
   border-color:var(--tl-dark-line,#303B46)!important;
   box-shadow:none!important;
 }
 
 html body.theme-dark main.source-playbook-page :is(.article-figure,.guide-v101-media,.source-title-visual),
 html body.reference-ui-v99.theme-dark main.source-playbook-page :is(.article-figure,.guide-v101-media,.source-title-visual){
-  background:var(--tl-dark-soft,#1C252E)!important;
+  background:transparent!important;
   border-color:var(--tl-dark-line,#303B46)!important;
 }
 
@@ -19431,6 +19444,7 @@ html body.reference-ui-v99 .source-compare-note > :last-child{
     z-index:310!important;
     visibility:hidden!important;
     opacity:1!important;
+  filter:none!important;
     pointer-events:none!important;
     transform:translate3d(-105%,0,0)!important;
     transition:transform .2s ease,visibility 0s linear .2s!important;
@@ -19456,6 +19470,7 @@ html body.reference-ui-v99 .source-compare-note > :last-child{
   html body.mobile-nav-open .mobile-nav-overlay{
     visibility:visible!important;
     opacity:1!important;
+  filter:none!important;
     pointer-events:auto!important;
   }
 
@@ -20398,7 +20413,7 @@ html body.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap,
 html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap,
 html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap,
 html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results) > .wrap{
-  width:min(calc(100% - 88px),1120px)!important;
+  width:min(calc(100% - 48px),1120px)!important;
   max-width:1120px!important;
   margin:0 auto!important;
   padding:0!important;
@@ -20681,7 +20696,7 @@ html body.theme-dark.home-shell-v256 main.home-page .home-results .home-results-
    with text. Keep it attached to the full homepage surface. */
 html body.theme-dark.home-shell-v256 main.home-page,
 html body.theme-dark.reference-ui-v99.home-shell-v256 main.home-page{
-  background-color:#0b1117!important;
+  background-color:#0a1318!important;
   background-image:
     linear-gradient(90deg,rgba(9,14,19,.20) 0%,rgba(9,14,19,.08) 48%,rgba(9,14,19,.12) 100%),
     linear-gradient(180deg,rgba(7,12,17,.05) 0%,rgba(7,12,17,.28) 100%),
@@ -21033,12 +21048,13 @@ html body.home-shell-v256 main.home-page > .home-lab-background-v266{
   inset:0!important;
   z-index:0!important;
   pointer-events:none!important;
-  background-color:#0b1117!important;
+  background-color:#0a1318!important;
   background-image:url('/Affiliate_Lab/assets/home-lab-blueprint.svg')!important;
   background-repeat:no-repeat!important;
   background-position:center top!important;
-  background-size:1800px auto!important;
+  background-size:1750px auto!important;
   opacity:1!important;
+  filter:none!important;
 }
 html body.home-shell-v256 main.home-page > :not(.home-lab-background-v266){
   position:relative!important;
@@ -21059,7 +21075,7 @@ html body.theme-dark.home-shell-v256 main.home-page .home-search-card{
 }
 html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266{
   background-color:#f4f6f3!important;
-  opacity:.28!important;
+  opacity:.24!important;
 }
 @media (max-width:1100px){html body.home-shell-v256 main.home-page > .home-lab-background-v266{background-position:62% top!important;background-size:1500px auto!important}}
 @media (max-width:900px){html body.home-shell-v256 main.home-page > .home-lab-background-v266{background-position:68% top!important;background-size:1250px auto!important;opacity:.66!important}}
@@ -21872,6 +21888,7 @@ html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background
   background:#0b1015!important;
   background-image:none!important;
   opacity:1!important;
+  filter:none!important;
 }
 
 html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
@@ -21933,6 +21950,7 @@ html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background
 html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
   background:#f5f1e8!important;
   opacity:1!important;
+  filter:none!important;
 }
 html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
 html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
@@ -21967,5 +21985,1327 @@ html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .ho
   html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
   html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
     opacity:.10!important;
+  }
+}
+
+/* ======================================================================
+   v281 — traffic source pages: remove leftover blue/graphite card fills
+   Keep borders and hierarchy, but let blocks sit on the page background.
+   ====================================================================== */
+html body.theme-dark .source-playbook-page :is(
+  .guide-v101-flow,
+  .guide-v101-callout,
+  .guide-v101-verdict,
+  .guide-v101-grid > div,
+  .guide-v101-formats > article,
+  .guide-v101-media,
+  .guide-v101-code,
+  .guide-v101-timeline > div,
+  .guide-v101-link-options > div,
+  .guide-v101-funnel-table > div,
+  .guide-v101-diagnostics a,
+  .guide-v101-next a,
+  .guide-v101-steps li,
+  .playbook-facts > div,
+  .playbook-checklist li,
+  .platform-setup > div,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .traffic-diagnostic-list li,
+  .source-journey-card,
+  .source-tool-card,
+  .source-toolkit-grid > a,
+  .source-toolkit-helper,
+  .service-inline,
+  .playbook-tips,
+  .ref-source-funnel,
+  .article-figure,
+  .playbook-risk
+),
+html body.reference-ui-v99.theme-dark .source-playbook-page :is(
+  .guide-v101-flow,
+  .guide-v101-callout,
+  .guide-v101-verdict,
+  .guide-v101-grid > div,
+  .guide-v101-formats > article,
+  .guide-v101-media,
+  .guide-v101-code,
+  .guide-v101-timeline > div,
+  .guide-v101-link-options > div,
+  .guide-v101-funnel-table > div,
+  .guide-v101-diagnostics a,
+  .guide-v101-next a,
+  .guide-v101-steps li,
+  .playbook-facts > div,
+  .playbook-checklist li,
+  .platform-setup > div,
+  .playbook-format-list > div,
+  .playbook-steps > li,
+  .traffic-diagnostic-list li,
+  .source-journey-card,
+  .source-tool-card,
+  .source-toolkit-grid > a,
+  .source-toolkit-helper,
+  .service-inline,
+  .playbook-tips,
+  .ref-source-funnel,
+  .article-figure,
+  .playbook-risk
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+/* The flow in the screenshot should read as a bordered diagram, not a panel. */
+html body.theme-dark .source-playbook-page .guide-v101-flow,
+html body.reference-ui-v99.theme-dark .source-playbook-page .guide-v101-flow{
+  border-color:#303a44!important;
+}
+
+/* Callouts keep a subtle border/accent only, with no filled rectangle. */
+html body.theme-dark .source-playbook-page .guide-v101-callout,
+html body.reference-ui-v99.theme-dark .source-playbook-page .guide-v101-callout{
+  border-top:1px solid #303a44!important;
+  border-right:1px solid #303a44!important;
+  border-bottom:1px solid #303a44!important;
+}
+
+html body.theme-dark .source-playbook-page .guide-v101-callout:not(.warning),
+html body.reference-ui-v99.theme-dark .source-playbook-page .guide-v101-callout:not(.warning){
+  border-left-color:#44b892!important;
+}
+
+html body.theme-dark .source-playbook-page .guide-v101-callout.warning,
+html body.reference-ui-v99.theme-dark .source-playbook-page .guide-v101-callout.warning{
+  border-left-color:#c09b6c!important;
+}
+
+
+/* v282 — source compare note: add explicit inner offset to text */
+html body .source-compare-note.compact-block-v103,
+html body .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 > .wrap.source-compare-note.compact-block-v103{
+  padding:24px 28px!important;
+}
+html body .source-compare-note.compact-block-v103 > strong,
+html body .wrap.source-compare-note.compact-block-v103 > strong,
+html body .source-compare-note.compact-block-v103 > p,
+html body .wrap.source-compare-note.compact-block-v103 > p{
+  padding-left:4px!important;
+  padding-right:4px!important;
+}
+@media (max-width:650px){
+  html body .source-compare-note.compact-block-v103,
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.content-system-v103 main.compact-main-v103 .wrap.source-compare-note.compact-block-v103,
+  html body.content-system-v103 main.compact-main-v103 > .wrap.source-compare-note.compact-block-v103{
+    padding:18px 20px!important;
+  }
+  html body .source-compare-note.compact-block-v103 > strong,
+  html body .wrap.source-compare-note.compact-block-v103 > strong,
+  html body .source-compare-note.compact-block-v103 > p,
+  html body .wrap.source-compare-note.compact-block-v103 > p{
+    padding-left:2px!important;
+    padding-right:2px!important;
+  }
+}
+
+
+/* v283 — unify source compare helper blocks with main site palette */
+html body .source-compare-explain .traffic-cost-note,
+html body.reference-ui-v99 .source-compare-explain .traffic-cost-note,
+html body .source-compare-note.compact-block-v103,
+html body .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 .wrap.source-compare-note.compact-block-v103,
+html body.content-system-v103 main.compact-main-v103 > .wrap.source-compare-note.compact-block-v103{
+  background:var(--v109-surface)!important;
+  border:1px solid var(--v109-line)!important;
+  border-left:1px solid var(--v109-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+html body .source-compare-explain .traffic-cost-note,
+html body.reference-ui-v99 .source-compare-explain .traffic-cost-note{
+  padding:18px 20px!important;
+  color:var(--v109-copy)!important;
+  font-size:14px!important;
+  line-height:1.7!important;
+  margin:0 0 28px!important;
+}
+html body .source-compare-note.compact-block-v103 strong,
+html body .wrap.source-compare-note.compact-block-v103 strong{
+  color:var(--v109-ink)!important;
+}
+html body .source-compare-note.compact-block-v103 p,
+html body .wrap.source-compare-note.compact-block-v103 p{
+  color:var(--v109-copy)!important;
+}
+@media (max-width:650px){
+  html body .source-compare-explain .traffic-cost-note,
+  html body.reference-ui-v99 .source-compare-explain .traffic-cost-note{
+    padding:16px 18px!important;
+    font-size:13.5px!important;
+  }
+}
+
+
+/* v284 — Journal tests and Favorites are independent products. */
+html body .saved-page .favorites-only,
+html body.reference-ui-v99 .saved-page .favorites-only{
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body .saved-page .favorites-only .saved-grid,
+html body.reference-ui-v99 .saved-page .favorites-only .saved-grid{
+  margin-top:18px!important;
+}
+html body .notes-page .journal-tests{
+  margin-bottom:72px!important;
+}
+
+
+/* v285 — home lives in topbar, not in left navigation */
+@media (min-width:901px){
+  html body.reference-ui-v99 .ref-top-home{
+    flex:0 0 auto!important;
+    height:40px!important;
+    min-width:96px!important;
+    padding:0 13px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:8px!important;
+    border-radius:11px!important;
+    text-decoration:none!important;
+    font-size:11.5px!important;
+    line-height:1!important;
+    font-weight:750!important;
+    letter-spacing:.005em!important;
+    overflow:visible!important;
+    transition:background .16s ease,border-color .16s ease,transform .16s ease!important;
+  }
+  html body.reference-ui-v99 .ref-top-home svg{
+    width:16px!important;
+    height:16px!important;
+    flex:0 0 16px!important;
+    stroke-width:1.8!important;
+  }
+  html body.reference-ui-v99 .ref-top-home span{
+    overflow:visible!important;
+    text-overflow:clip!important;
+  }
+  html body.reference-ui-v99 .ref-top-home:hover{
+    transform:translateY(-1px)!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-top-home{
+    background:linear-gradient(180deg,#ffffff 0%,#f5f8f6 100%)!important;
+    border:1px solid #cad7d1!important;
+    box-shadow:0 2px 8px rgba(35,65,54,.07)!important;
+    color:#244c40!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-top-home svg{color:#4f7266!important}
+  html body.reference-ui-v99:not(.theme-dark) .ref-top-home:hover{
+    background:#edf6f2!important;
+    border-color:#82bba5!important;
+    color:#193d33!important;
+  }
+  html body.reference-ui-v99.theme-dark .ref-top-home{
+    background:linear-gradient(180deg,#18212a 0%,#131b23 100%)!important;
+    border:1px solid #354452!important;
+    box-shadow:inset 0 1px rgba(255,255,255,.025)!important;
+    color:#edf2f5!important;
+  }
+  html body.reference-ui-v99.theme-dark .ref-top-home svg{color:#aab9c1!important}
+  html body.reference-ui-v99.theme-dark .ref-top-home:hover{
+    background:#1d2932!important;
+    border-color:#4f927c!important;
+    color:#f4f7f8!important;
+  }
+}
+
+
+/* v286 — History is a separate section from Favorites */
+html body .saved-page .favorite-card .saved-card-main small,
+html body.reference-ui-v99 .saved-page .favorite-card .saved-card-main small{display:none!important}
+html body .history-page .saved-block + .saved-block,
+html body.reference-ui-v99 .history-page .saved-block + .saved-block{margin-top:58px!important}
+html body .history-page .saved-block-head span b,
+html body.reference-ui-v99 .history-page .saved-block-head span b{font:inherit!important;color:inherit!important}
+html body .history-page .history-card.viewed,
+html body.reference-ui-v99 .history-page .history-card.viewed{border-color:var(--v109-line)!important}
+html body .history-page .history-card.unviewed,
+html body.reference-ui-v99 .history-page .history-card.unviewed{background:transparent!important;border-style:dashed!important;opacity:.9}
+html body .history-page .history-card .saved-card-main,
+html body.reference-ui-v99 .history-page .history-card .saved-card-main{display:block!important;text-decoration:none!important}
+html body .history-page .history-card small,
+html body.reference-ui-v99 .history-page .history-card small{display:block!important;margin-top:8px!important;font-size:11.5px!important;color:var(--v109-muted)!important}
+html body.theme-dark .history-page .history-card.unviewed,
+html body.reference-ui-v99.theme-dark .history-page .history-card.unviewed{background:transparent!important;border-color:#343b42!important}
+@media(max-width:700px){html body .history-page .saved-block + .saved-block{margin-top:42px!important}}
+
+/* ======================================================================
+   v287 — site-wide visual system and layout normalization
+   One palette, one content width, one card language, one mobile contract.
+   ====================================================================== */
+
+html body.tl-unified-v287{
+  --tl-sidebar:220px;
+  --tl-topbar:58px;
+  --tl-content:1120px;
+  --tl-article:1120px;
+  --tl-radius:14px;
+  --tl-radius-sm:10px;
+  --tl-green:#2f7e68;
+  --tl-green-strong:#246752;
+  --tl-green-soft:#e9f2ee;
+  --tl-warm:#8a6b48;
+  --tl-warm-soft:#f2eadf;
+  --tl-bg:#f5f2eb;
+  --tl-surface:#fffdf9;
+  --tl-surface-2:#f7f3ec;
+  --tl-line:#ddd5ca;
+  --tl-line-strong:#cec4b7;
+  --tl-ink:#1d2723;
+  --tl-copy:#59635e;
+  --tl-muted:#7b817d;
+  --tl-shadow:0 8px 24px rgba(26,38,32,.045);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  color:var(--tl-ink)!important;
+  background:var(--tl-bg)!important;
+  --ref-sidebar:var(--tl-sidebar)!important;
+  --ref-topbar:var(--tl-topbar)!important;
+  --academy-sidebar:var(--tl-sidebar)!important;
+  --academy-header:var(--tl-topbar)!important;
+}
+
+html body.tl-unified-v287.theme-dark,
+html body.tl-unified-v287.reference-ui-v99.theme-dark{
+  --tl-green:#58b994;
+  --tl-green-strong:#6bc7a5;
+  --tl-green-soft:#17251f;
+  --tl-warm:#b28d62;
+  --tl-warm-soft:#241f19;
+  --tl-bg:#0b1015;
+  --tl-surface:#111820;
+  --tl-surface-2:#161e26;
+  --tl-line:#303a44;
+  --tl-line-strong:#3d4853;
+  --tl-ink:#eef2f4;
+  --tl-copy:#b9c3c8;
+  --tl-muted:#85929b;
+  --tl-shadow:none;
+  color:var(--tl-ink)!important;
+  background:var(--tl-bg)!important;
+}
+
+/* Main surfaces: theme changes colors, never geometry. */
+html body.tl-unified-v287.reference-ui-v99 main:not(.home-page),
+html body.tl-unified-v287 main:not(.home-page),
+html body.tl-unified-v287.reference-ui-v99 .site-footer,
+html body.tl-unified-v287 .site-footer{
+  background:var(--tl-bg)!important;
+  color:var(--tl-ink)!important;
+}
+
+/* One content width across landing pages, tools, library, personal pages and home. */
+html body.tl-unified-v287 main.compact-main-v103 > .wrap,
+html body.tl-unified-v287 main.compact-main-v103 > section > .wrap,
+html body.tl-unified-v287 main.section-landing > .wrap,
+html body.tl-unified-v287 main.traffic-hub-page > .wrap,
+html body.tl-unified-v287 main.services-page > .wrap,
+html body.tl-unified-v287 main.about-main-v114 > .wrap,
+html body.tl-unified-v287 main.home-page > section > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > section > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.section-landing > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.traffic-hub-page > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.services-page > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.about-main-v114 > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main.home-page > section > .wrap{
+  width:min(calc(100% - 48px),var(--tl-content))!important;
+  max-width:var(--tl-content)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  box-sizing:border-box!important;
+}
+
+html body.tl-unified-v287 .article-layout,
+html body.tl-unified-v287.reference-ui-v99 .article-layout{
+  width:min(calc(100% - 48px),var(--tl-article))!important;
+  max-width:var(--tl-article)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  box-sizing:border-box!important;
+}
+
+/* Unified content grid for regular articles and source playbooks. */
+@media (min-width:1101px){
+  html body.tl-unified-v287 .article-layout,
+  html body.tl-unified-v287.reference-ui-v99 .article-layout{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 276px!important;
+    gap:34px!important;
+    align-items:start!important;
+  }
+  html body.tl-unified-v287 .article,
+  html body.tl-unified-v287 .source-playbook-article,
+  html body.tl-unified-v287.reference-ui-v99 .article,
+  html body.tl-unified-v287.reference-ui-v99 .source-playbook-article{
+    min-width:0!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  html body.tl-unified-v287 .article-aside.enhanced-rail,
+  html body.tl-unified-v287.reference-ui-v99 .article-aside.enhanced-rail{
+    width:276px!important;
+    max-width:276px!important;
+    position:sticky!important;
+    top:calc(var(--tl-topbar) + 18px)!important;
+    align-self:start!important;
+  }
+}
+
+/* Page headings use one hierarchy everywhere. */
+html body.tl-unified-v287 main:not(.home-page) .page-head,
+html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) .page-head{
+  padding:48px 0 26px!important;
+  margin:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287 main:not(.home-page) .page-head > .wrap,
+html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) .page-head > .wrap{
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head) .overline,
+html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) .overline{
+  margin:0 0 9px!important;
+  color:var(--tl-warm)!important;
+  font-size:11px!important;
+  line-height:1.2!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head) h1,
+html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) h1{
+  max-width:900px!important;
+  margin:0!important;
+  color:var(--tl-ink)!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:clamp(38px,3.7vw,52px)!important;
+  line-height:1.06!important;
+  font-weight:800!important;
+  letter-spacing:-.04em!important;
+  text-wrap:balance!important;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head) p,
+html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) p{
+  max-width:780px!important;
+  margin:14px 0 0!important;
+  color:var(--tl-copy)!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+
+/* Typography inside all long-form pages. */
+html body.tl-unified-v287 :is(.article,.source-playbook-article) h1,
+html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h1{
+  color:var(--tl-ink)!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:clamp(36px,3.25vw,48px)!important;
+  line-height:1.07!important;
+  letter-spacing:-.04em!important;
+  font-weight:800!important;
+  text-wrap:balance!important;
+}
+html body.tl-unified-v287 :is(.article,.source-playbook-article) h2,
+html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h2{
+  margin:42px 0 14px!important;
+  color:var(--tl-ink)!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:28px!important;
+  line-height:1.18!important;
+  letter-spacing:-.025em!important;
+  font-weight:780!important;
+}
+html body.tl-unified-v287 :is(.article,.source-playbook-article) h3,
+html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h3{
+  margin:28px 0 10px!important;
+  color:var(--tl-ink)!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:20px!important;
+  line-height:1.3!important;
+  font-weight:760!important;
+}
+html body.tl-unified-v287 :is(.article,.source-playbook-article) :is(p,li,dd),
+html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) :is(p,li,dd){
+  color:var(--tl-copy)!important;
+  font-size:16px!important;
+  line-height:1.72!important;
+}
+html body.tl-unified-v287 :is(.article,.source-playbook-article) .lead,
+html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) .lead{
+  max-width:780px!important;
+  color:var(--tl-copy)!important;
+  font-size:18px!important;
+  line-height:1.65!important;
+}
+
+/* Article hero/header: same neutral treatment on all guide types. */
+html body.tl-unified-v287 :is(.academy-article-hero,.source-hero-shell),
+html body.tl-unified-v287.reference-ui-v99 :is(.academy-article-hero,.source-hero-shell){
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+html body.tl-unified-v287 .academy-article-hero,
+html body.tl-unified-v287.reference-ui-v99 .academy-article-hero{
+  padding:0 0 24px!important;
+  margin:0 0 24px!important;
+  border-bottom:1px solid var(--tl-line)!important;
+}
+html body.tl-unified-v287 .source-hero-shell,
+html body.tl-unified-v287.reference-ui-v99 .source-hero-shell{
+  padding:0 0 24px!important;
+  margin:0 0 22px!important;
+  border-bottom:1px solid var(--tl-line)!important;
+}
+html body.tl-unified-v287 :is(.article-label,.source-title-copy .source-kicker),
+html body.tl-unified-v287.reference-ui-v99 :is(.article-label,.source-title-copy .source-kicker){
+  color:var(--tl-warm)!important;
+}
+html body.tl-unified-v287 .breadcrumbs,
+html body.tl-unified-v287.reference-ui-v99 .breadcrumbs{
+  margin:0 0 20px!important;
+  color:var(--tl-muted)!important;
+  font-size:12px!important;
+  line-height:1.4!important;
+}
+html body.tl-unified-v287 .breadcrumbs a,
+html body.tl-unified-v287.reference-ui-v99 .breadcrumbs a{color:var(--tl-copy)!important}
+
+/* One card/panel language across the site. */
+html body.tl-unified-v287 :is(
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.section-card,
+  .library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,
+  .saved-card,.notes-card,.notes-panel,.help-situation,.diagnostic-card,.calc-card,.field-case,
+  .logic-action-v103,.logic-analysis-v103,.logic-warning-v103,.logic-explain-v103,.inline-note,
+  .partner-specific-box,.service-inline,.partner-next-step,.warning-note,.traffic-cost-note,
+  .source-compare-note,.source-compare-picker,.source-compare-table,.related-primary,.related-secondary,
+  .next-reading a,.article-exit-nav a,.article-figure,.playbook-card,.home-entry-grid>a,.home-search-card
+),
+html body.tl-unified-v287.reference-ui-v99 :is(
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,.section-card,
+  .library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,
+  .saved-card,.notes-card,.notes-panel,.help-situation,.diagnostic-card,.calc-card,.field-case,
+  .logic-action-v103,.logic-analysis-v103,.logic-warning-v103,.logic-explain-v103,.inline-note,
+  .partner-specific-box,.service-inline,.partner-next-step,.warning-note,.traffic-cost-note,
+  .source-compare-note,.source-compare-picker,.source-compare-table,.related-primary,.related-secondary,
+  .next-reading a,.article-exit-nav a,.article-figure,.playbook-card,.home-entry-grid>a,.home-search-card
+){
+  background:var(--tl-surface)!important;
+  background-image:none!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:var(--tl-radius)!important;
+  box-shadow:var(--tl-shadow)!important;
+  color:var(--tl-ink)!important;
+}
+
+/* No stray blue/pink panels; semantic callouts use only green or warm accent. */
+html body.tl-unified-v287 :is(.inline-note,.logic-warning-v103,.warning-note,.traffic-cost-note,.source-compare-note),
+html body.tl-unified-v287.reference-ui-v99 :is(.inline-note,.logic-warning-v103,.warning-note,.traffic-cost-note,.source-compare-note){
+  border-left:3px solid var(--tl-warm)!important;
+}
+html body.tl-unified-v287 :is(.logic-action-v103,.partner-specific-box,.service-inline),
+html body.tl-unified-v287.reference-ui-v99 :is(.logic-action-v103,.partner-specific-box,.service-inline){
+  border-left:3px solid var(--tl-green)!important;
+}
+html body.tl-unified-v287 :is(.inline-note,.logic-warning-v103,.warning-note,.traffic-cost-note,.source-compare-note) :is(p,li,small),
+html body.tl-unified-v287.reference-ui-v99 :is(.inline-note,.logic-warning-v103,.warning-note,.traffic-cost-note,.source-compare-note) :is(p,li,small){
+  color:var(--tl-copy)!important;
+}
+
+/* Source pages intentionally use the page itself as the fill: borders remain, colored windows do not. */
+html body.tl-unified-v287 main.source-playbook-page :is(
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-tool-card,.source-journey-card,
+  .playbook-risk,.playbook-tips,.service-inline,.guide-v101-grid>div,.guide-v101-dual>div,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-timeline>div,.playbook-faq details
+),
+html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page :is(
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-tool-card,.source-journey-card,
+  .playbook-risk,.playbook-tips,.service-inline,.guide-v101-grid>div,.guide-v101-dual>div,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-timeline>div,.playbook-faq details
+){
+  background:transparent!important;
+  background-image:none!important;
+  border-color:var(--tl-line)!important;
+  box-shadow:none!important;
+  color:var(--tl-ink)!important;
+}
+
+/* Tables and comparison grids share neutral palette. */
+html body.tl-unified-v287 :is(.article table,.source-compare-table,.compare-table),
+html body.tl-unified-v287.reference-ui-v99 :is(.article table,.source-compare-table,.compare-table){
+  border-color:var(--tl-line)!important;
+  background:transparent!important;
+}
+html body.tl-unified-v287 :is(.article th,.source-compare-row.source-compare-head>div,.source-compare-row>div:first-child),
+html body.tl-unified-v287.reference-ui-v99 :is(.article th,.source-compare-row.source-compare-head>div,.source-compare-row>div:first-child){
+  background:var(--tl-surface-2)!important;
+  border-color:var(--tl-line)!important;
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287 :is(.article td,.source-compare-row>div),
+html body.tl-unified-v287.reference-ui-v99 :is(.article td,.source-compare-row>div){
+  background:var(--tl-surface)!important;
+  border-color:var(--tl-line)!important;
+  color:var(--tl-copy)!important;
+}
+
+/* Buttons and secondary actions use one geometry. */
+html body.tl-unified-v287 :is(
+  .bookmark-button,.saved-link,.text-button,.source-compare-actions a,.service-open-link,
+  .service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .article-exit-nav a,.next-reading a,.rail-all-tools,.home-actions a,.section-bottom-links a
+),
+html body.tl-unified-v287.reference-ui-v99 :is(
+  .bookmark-button,.saved-link,.text-button,.source-compare-actions a,.service-open-link,
+  .service-tool-actions>a,.service-inline-primary,.service-inline-secondary,.service-inline-more,
+  .article-exit-nav a,.next-reading a,.rail-all-tools,.home-actions a,.section-bottom-links a
+){
+  min-height:38px!important;
+  padding:9px 13px!important;
+  border:1px solid var(--tl-line-strong)!important;
+  border-radius:9px!important;
+  background:var(--tl-surface)!important;
+  color:var(--tl-ink)!important;
+  box-shadow:none!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:12.5px!important;
+  font-weight:700!important;
+  line-height:1.3!important;
+  text-decoration:none!important;
+}
+html body.tl-unified-v287 :is(.bookmark-button,.saved-link,.source-compare-actions a,.service-open-link,.service-tool-actions>a,.article-exit-nav a,.next-reading a,.rail-all-tools,.home-actions a,.section-bottom-links a):hover,
+html body.tl-unified-v287.reference-ui-v99 :is(.bookmark-button,.saved-link,.source-compare-actions a,.service-open-link,.service-tool-actions>a,.article-exit-nav a,.next-reading a,.rail-all-tools,.home-actions a,.section-bottom-links a):hover{
+  border-color:var(--tl-green)!important;
+  color:var(--tl-green-strong)!important;
+  background:var(--tl-green-soft)!important;
+}
+
+/* Right rail follows the same card language, without oversized decoration. */
+html body.tl-unified-v287 .article-aside.enhanced-rail,
+html body.tl-unified-v287.reference-ui-v99 .article-aside.enhanced-rail{
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287 .article-aside.enhanced-rail .aside-block,
+html body.tl-unified-v287.reference-ui-v99 .article-aside.enhanced-rail .aside-block{
+  margin:0 0 12px!important;
+  padding:14px!important;
+  background:var(--tl-surface)!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:12px!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287 .rail-toc li a,
+html body.tl-unified-v287.reference-ui-v99 .rail-toc li a{
+  color:var(--tl-copy)!important;
+  font-size:11.5px!important;
+  line-height:1.42!important;
+}
+html body.tl-unified-v287 .rail-toc li a:before,
+html body.tl-unified-v287.reference-ui-v99 .rail-toc li a:before{color:var(--tl-muted)!important}
+html body.tl-unified-v287 .rail-toc li a:is(:hover,.is-current),
+html body.tl-unified-v287.reference-ui-v99 .rail-toc li a:is(:hover,.is-current){color:var(--tl-green-strong)!important}
+
+/* Header controls: same button language for Home / theme / favorites. */
+html body.tl-unified-v287.reference-ui-v99 .site-header{
+  height:var(--tl-topbar)!important;
+  background:color-mix(in srgb,var(--tl-bg) 94%,transparent)!important;
+  border-bottom:1px solid var(--tl-line)!important;
+  box-shadow:none!important;
+  backdrop-filter:blur(12px)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .ref-topbar{
+  min-height:var(--tl-topbar)!important;
+  padding:0 16px!important;
+  gap:12px!important;
+}
+html body.tl-unified-v287.reference-ui-v99 :is(.ref-top-home,.ref-theme-button,.ref-top-favorite){
+  min-height:38px!important;
+  height:38px!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:10px!important;
+  background:var(--tl-surface)!important;
+  color:var(--tl-ink)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99 :is(.ref-top-home,.ref-top-favorite){padding:0 12px!important;gap:7px!important}
+html body.tl-unified-v287.reference-ui-v99 :is(.ref-top-home,.ref-theme-button,.ref-top-favorite):hover{
+  border-color:var(--tl-green)!important;
+  background:var(--tl-green-soft)!important;
+  color:var(--tl-green-strong)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-search{
+  height:38px!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:10px!important;
+  background:var(--tl-surface)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-search input{
+  color:var(--tl-ink)!important;
+  background:transparent!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-search kbd,
+html body.tl-unified-v287.reference-ui-v99 .ref-top-search span{color:var(--tl-muted)!important}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-progress{color:var(--tl-copy)!important}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-progress i{background:var(--tl-line)!important}
+html body.tl-unified-v287.reference-ui-v99 .ref-top-progress i em{background:var(--tl-green)!important}
+
+/* Left menu: logical groups + neutral shell. Icons never have boxed fills. */
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar{
+  width:var(--tl-sidebar)!important;
+  max-width:var(--tl-sidebar)!important;
+  padding:16px 14px 18px!important;
+  background:var(--tl-bg)!important;
+  border-right:1px solid var(--tl-line)!important;
+  box-shadow:none!important;
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-sidebar-brand{
+  min-height:48px!important;
+  margin:0 0 10px!important;
+  padding:0 6px 10px!important;
+  border-bottom:1px solid var(--tl-line)!important;
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-heading{
+  min-height:28px!important;
+  padding:7px 4px 4px!important;
+  color:var(--tl-muted)!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  letter-spacing:.10em!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group{margin:2px 0 5px!important}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a{
+  min-height:38px!important;
+  padding:8px 9px!important;
+  border:1px solid transparent!important;
+  border-radius:8px!important;
+  color:var(--tl-copy)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-size:13px!important;
+  line-height:1.25!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover{
+  color:var(--tl-ink)!important;
+  background:var(--tl-surface-2)!important;
+  border-color:var(--tl-line)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"]{
+  color:var(--tl-green-strong)!important;
+  background:var(--tl-green-soft)!important;
+  border-color:color-mix(in srgb,var(--tl-green) 34%,var(--tl-line))!important;
+  box-shadow:inset 3px 0 0 var(--tl-green)!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-icon,
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a:hover .ref-nav-icon,
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon{
+  width:20px!important;
+  height:20px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:currentColor!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-icon-img{width:17px!important;height:17px!important;opacity:.82!important}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-partner-card{
+  margin-top:12px!important;
+  padding:13px!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:10px!important;
+  background:var(--tl-surface)!important;
+  color:var(--tl-ink)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-partner-card>span{color:var(--tl-copy)!important}
+html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-partner-card em{color:var(--tl-green-strong)!important}
+
+/* Section rhythm. */
+html body.tl-unified-v287 main:not(.home-page) > :is(section.wrap,div.wrap,aside.wrap),
+html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > :is(section.wrap,div.wrap,aside.wrap){
+  margin-top:0!important;
+  margin-bottom:28px!important;
+}
+html body.tl-unified-v287 :is(.section-group-head,.service-workflow-head,.saved-block-head) h2,
+html body.tl-unified-v287.reference-ui-v99 :is(.section-group-head,.service-workflow-head,.saved-block-head) h2{
+  color:var(--tl-ink)!important;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+  font-size:25px!important;
+  line-height:1.2!important;
+  letter-spacing:-.02em!important;
+  font-weight:770!important;
+}
+html body.tl-unified-v287 :is(.section-entry,.section-outcome,.service-tool,.library-row,.saved-card,.notes-card,.help-situation),
+html body.tl-unified-v287.reference-ui-v99 :is(.section-entry,.section-outcome,.service-tool,.library-row,.saved-card,.notes-card,.help-situation){
+  padding:18px!important;
+}
+
+/* Footer is quiet and uses the same width/palette. */
+html body.tl-unified-v287 .site-footer,
+html body.tl-unified-v287.reference-ui-v99 .site-footer{
+  border-top:1px solid var(--tl-line)!important;
+  color:var(--tl-copy)!important;
+}
+html body.tl-unified-v287 .site-footer .wrap,
+html body.tl-unified-v287.reference-ui-v99 .site-footer .wrap{
+  width:min(calc(100% - 48px),var(--tl-content))!important;
+  max-width:var(--tl-content)!important;
+  margin-inline:auto!important;
+}
+
+/* Mobile/tablet: one width and one padding contract, regardless of theme/page type. */
+@media (max-width:1100px){
+  html body.tl-unified-v287{
+    --tl-sidebar:0px;
+    --ref-sidebar:0px!important;
+    --academy-sidebar:0px!important;
+  }
+  html body.tl-unified-v287.reference-ui-v99 main,
+  html body.tl-unified-v287 main,
+  html body.tl-unified-v287.reference-ui-v99 .site-footer,
+  html body.tl-unified-v287 .site-footer{
+    margin-left:0!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+  html body.tl-unified-v287 .article-layout,
+  html body.tl-unified-v287.reference-ui-v99 .article-layout{
+    display:block!important;
+    width:min(calc(100% - 40px),860px)!important;
+    max-width:860px!important;
+  }
+  html body.tl-unified-v287 .article-aside.enhanced-rail,
+  html body.tl-unified-v287.reference-ui-v99 .article-aside.enhanced-rail{display:none!important}
+}
+
+@media (max-width:900px){
+  html body.tl-unified-v287{
+    --tl-topbar:60px;
+    --ref-topbar:60px!important;
+    --academy-header:60px!important;
+    --v110-mobile-header:60px!important;
+    overflow-x:hidden!important;
+  }
+  html body.tl-unified-v287.reference-ui-v99 .site-header,
+  html body.tl-unified-v287 .site-header{
+    left:0!important;
+    width:100%!important;
+    height:var(--tl-topbar)!important;
+  }
+  html body.tl-unified-v287.reference-ui-v99 main,
+  html body.tl-unified-v287 main{
+    padding-top:var(--tl-topbar)!important;
+  }
+  html body.tl-unified-v287 main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287 main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287 main.section-landing > .wrap,
+  html body.tl-unified-v287 main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287 main.services-page > .wrap,
+  html body.tl-unified-v287 main.about-main-v114 > .wrap,
+  html body.tl-unified-v287 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.section-landing > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.services-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.about-main-v114 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.home-page > section > .wrap,
+  html body.tl-unified-v287 .article-layout,
+  html body.tl-unified-v287.reference-ui-v99 .article-layout,
+  html body.tl-unified-v287 .site-footer .wrap,
+  html body.tl-unified-v287.reference-ui-v99 .site-footer .wrap{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    box-sizing:border-box!important;
+  }
+  html body.tl-unified-v287 main:not(.home-page) .page-head,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) .page-head{padding:34px 0 20px!important}
+  html body.tl-unified-v287 :is(.page-head,.section-landing-head) h1,
+  html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) h1{
+    font-size:34px!important;
+    line-height:1.09!important;
+  }
+  html body.tl-unified-v287 :is(.page-head,.section-landing-head) p,
+  html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) p{
+    font-size:15.5px!important;
+    line-height:1.62!important;
+  }
+  html body.tl-unified-v287 :is(.article,.source-playbook-article) h1,
+  html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h1{font-size:32px!important}
+  html body.tl-unified-v287 :is(.article,.source-playbook-article) h2,
+  html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h2{font-size:24px!important;margin-top:34px!important}
+  html body.tl-unified-v287 :is(.article,.source-playbook-article) h3,
+  html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h3{font-size:19px!important}
+  html body.tl-unified-v287 :is(.article,.source-playbook-article) :is(p,li,dd),
+  html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) :is(p,li,dd){font-size:15px!important;line-height:1.68!important}
+
+  html body.tl-unified-v287.reference-ui-v99 .ref-topbar{padding:0 10px!important;gap:7px!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-topbar-crumbs{display:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-search{flex:1 1 auto!important;min-width:0!important;max-width:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-search kbd{display:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-favorite span{display:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-favorite{width:40px!important;min-width:40px!important;padding:0!important;justify-content:center!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-theme-button,
+  html body.tl-unified-v287.reference-ui-v99 .ref-mobile-menu{width:40px!important;min-width:40px!important;height:40px!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-progress{display:none!important}
+
+  html body.tl-unified-v287.reference-ui-v99 .global-sidebar,
+  html body.tl-unified-v287 .global-sidebar{
+    top:var(--tl-topbar)!important;
+    bottom:0!important;
+    width:min(320px,calc(100vw - 28px))!important;
+    max-width:min(320px,calc(100vw - 28px))!important;
+    padding:14px 12px 22px!important;
+    background:var(--tl-bg)!important;
+    border-right:1px solid var(--tl-line)!important;
+    box-shadow:10px 0 28px rgba(0,0,0,.18)!important;
+    overflow-y:auto!important;
+  }
+  html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-sidebar-brand,
+  html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-sidebar-collapse-top{display:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .global-sidebar .ref-nav-group nav a{min-height:42px!important;font-size:13.5px!important}
+
+  /* Grids collapse consistently instead of each page inventing a width. */
+  html body.tl-unified-v287 :is(
+    .section-entry-grid,.service-grid,.service-tool-grid,.service-use-grid,.tools-grid,.tool-form-grid,
+    .saved-grid,.recent-home-grid,.related-grid,.compare-grid,.guide-v101-grid,.guide-v101-dual,
+    .source-toolkit-grid,.source-journey-grid,.playbook-checklist,.platform-setup,.playbook-format-list,
+    .playbook-steps,.traffic-diagnostic-list,.home-entry-grid,.home-source-grid,.knowledge-map
+  ),
+  html body.tl-unified-v287.reference-ui-v99 :is(
+    .section-entry-grid,.service-grid,.service-tool-grid,.service-use-grid,.tools-grid,.tool-form-grid,
+    .saved-grid,.recent-home-grid,.related-grid,.compare-grid,.guide-v101-grid,.guide-v101-dual,
+    .source-toolkit-grid,.source-journey-grid,.playbook-checklist,.platform-setup,.playbook-format-list,
+    .playbook-steps,.traffic-diagnostic-list,.home-entry-grid,.home-source-grid,.knowledge-map
+  ){
+    grid-template-columns:1fr!important;
+  }
+  html body.tl-unified-v287 :is(.section-entry,.section-outcome,.service-tool,.library-row,.saved-card,.notes-card,.help-situation),
+  html body.tl-unified-v287.reference-ui-v99 :is(.section-entry,.section-outcome,.service-tool,.library-row,.saved-card,.notes-card,.help-situation){padding:16px!important}
+
+  /* Wide data components scroll internally, never widen the page. */
+  html body.tl-unified-v287 :is(.article table,.source-compare-table,.compare-table,.rules-table),
+  html body.tl-unified-v287.reference-ui-v99 :is(.article table,.source-compare-table,.compare-table,.rules-table){
+    max-width:100%!important;
+    overflow-x:auto!important;
+  }
+  html body.tl-unified-v287 :is(.source-section-tabs,.breadcrumbs),
+  html body.tl-unified-v287.reference-ui-v99 :is(.source-section-tabs,.breadcrumbs){
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scrollbar-width:thin!important;
+  }
+  html body.tl-unified-v287 img,
+  html body.tl-unified-v287 svg,
+  html body.tl-unified-v287 video{max-width:100%!important}
+}
+
+@media (max-width:520px){
+  html body.tl-unified-v287 main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287 main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287 main.section-landing > .wrap,
+  html body.tl-unified-v287 main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287 main.services-page > .wrap,
+  html body.tl-unified-v287 main.about-main-v114 > .wrap,
+  html body.tl-unified-v287 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.section-landing > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.services-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.about-main-v114 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.home-page > section > .wrap,
+  html body.tl-unified-v287 .article-layout,
+  html body.tl-unified-v287.reference-ui-v99 .article-layout,
+  html body.tl-unified-v287 .site-footer .wrap,
+  html body.tl-unified-v287.reference-ui-v99 .site-footer .wrap{
+    width:calc(100% - 24px)!important;
+  }
+  html body.tl-unified-v287 :is(.page-head,.section-landing-head) h1,
+  html body.tl-unified-v287.reference-ui-v99 :is(.page-head,.section-landing-head) h1{font-size:30px!important}
+  html body.tl-unified-v287 :is(.article,.source-playbook-article) h1,
+  html body.tl-unified-v287.reference-ui-v99 :is(.article,.source-playbook-article) h1{font-size:29px!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-mobile-brand b{display:none!important}
+  html body.tl-unified-v287.reference-ui-v99 .ref-top-search input{font-size:12px!important}
+}
+
+/* v287.1 — hard width parity override after legacy page-specific max-width rules. */
+@media (min-width:901px){
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.section-landing > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.section-landing > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.traffic-hub-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.services-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.services-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.about-main-v114 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main.about-main-v114 > section > .wrap{
+    width:min(calc(100% - 48px),var(--tl-content))!important;
+    max-width:var(--tl-content)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+
+@media (max-width:900px){
+  html body.tl-unified-v287.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.theme-dark.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.theme-dark.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > section > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 main.compact-main-v103:not(.home-page):not(.source-playbook-page) > section > .wrap{
+    width:calc(100% - 24px)!important;
+  }
+}
+
+/* v287.2 — final primary-container width contract. */
+@media (min-width:901px){
+  html body.tl-unified-v287:not(.article-page) main:not(.home-page) > .wrap,
+  html body.tl-unified-v287:not(.article-page) main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287:not(.article-page) main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287:not(.article-page) main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287:not(.article-page) main:not(.home-page) .page-head > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.article-page) main:not(.home-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.article-page) main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.article-page) main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.article-page) main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.article-page) main:not(.home-page) .page-head > .wrap{
+    width:min(calc(100% - 48px),var(--tl-content))!important;
+    max-width:var(--tl-content)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  html body.tl-unified-v287.article-page .article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page .article-layout{
+    width:min(calc(100% - 36px),var(--tl-article))!important;
+    max-width:var(--tl-article)!important;
+  }
+}
+
+@media (max-width:900px){
+  html body.tl-unified-v287 main:not(.home-page) > .wrap,
+  html body.tl-unified-v287 main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287 main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287 main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287 main:not(.home-page) .page-head > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) .page-head > .wrap,
+  html body.tl-unified-v287.article-page .article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page .article-layout{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287 main:not(.home-page) > .wrap,
+  html body.tl-unified-v287 main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287 main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287 main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287 main:not(.home-page) .page-head > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > div.wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) > aside.wrap,
+  html body.tl-unified-v287.reference-ui-v99 main:not(.home-page) .page-head > .wrap,
+  html body.tl-unified-v287.article-page .article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page .article-layout{
+    width:calc(100% - 24px)!important;
+  }
+}
+
+/* v287.3 — override the oldest high-specificity width rules. */
+@media (min-width:901px){
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow{
+    width:min(calc(100% - 48px),var(--tl-content))!important;
+    max-width:var(--tl-content)!important;
+    margin-inline:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.compact-main-v103 > .wrap.article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page > .wrap.article-layout{
+    width:min(calc(100% - 48px),var(--tl-article))!important;
+    max-width:var(--tl-article)!important;
+    margin-inline:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
+@media (max-width:900px){
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.compact-main-v103 > .wrap.article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-inline:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.compact-main-v103 > .wrap.article-layout,
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page > .wrap.article-layout{
+    width:calc(100% - 24px)!important;
+  }
+}
+
+/* v287.4 — article/source canvas uses the same 1120px site width. */
+@media (min-width:901px){
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287,
+  html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287{
+    width:min(calc(100% - 48px),var(--tl-content))!important;
+    max-width:var(--tl-content)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
+@media (max-width:900px){
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287,
+  html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287,
+  html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main > div.wrap.article-layout.tl-primary-layout-v287{
+    width:calc(100% - 24px)!important;
+  }
+}
+
+/* v287.5 — remove remaining template drift (serif titles / source hero fill). */
+html body.tl-unified-v287 :is(h1,h2,h3,h4,.library-row h2,.saved-card b,.related-card b,.handbook b,.section-group-head h2,.service-workflow-head h2),
+html body.tl-unified-v287.reference-ui-v99 :is(h1,h2,h3,h4,.library-row h2,.saved-card b,.related-card b,.handbook b,.section-group-head h2,.service-workflow-head h2){
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+}
+html body.tl-unified-v287 .library-row h2,
+html body.tl-unified-v287.reference-ui-v99 .library-row h2,
+html body.tl-unified-v287 .saved-card b,
+html body.tl-unified-v287.reference-ui-v99 .saved-card b{
+  color:var(--tl-ink)!important;
+  font-weight:720!important;
+  letter-spacing:-.018em!important;
+}
+html body.tl-unified-v287 .library-shell,
+html body.tl-unified-v287.reference-ui-v99 .library-shell,
+html body.tl-unified-v287 .library-main,
+html body.tl-unified-v287.reference-ui-v99 .library-main{
+  background:transparent!important;
+  background-image:none!important;
+  border-color:var(--tl-line)!important;
+  box-shadow:none!important;
+}
+
+html body.tl-unified-v287 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .source-playbook-article{
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+html body.tl-unified-v287 main.source-playbook-page .playbook-facts,
+html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .playbook-facts{
+  background:transparent!important;
+  background-image:none!important;
+  border:1px solid var(--tl-line)!important;
+  border-radius:12px!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+html body.tl-unified-v287 main.source-playbook-page .playbook-facts>div,
+html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .playbook-facts>div{
+  background:transparent!important;
+  border-color:var(--tl-line)!important;
+}
+@media (min-width:901px){
+  html body.tl-unified-v287 main.source-playbook-page .playbook-facts,
+  html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .playbook-facts{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  }
+}
+@media (max-width:900px) and (min-width:521px){
+  html body.tl-unified-v287 main.source-playbook-page .playbook-facts,
+  html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .playbook-facts{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287 main.source-playbook-page .playbook-facts,
+  html body.tl-unified-v287.reference-ui-v99 main.source-playbook-page .playbook-facts{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* v287.6 — final source-page surface cleanup after sitewide unification. */
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-hero-shell,
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-hero-shell{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main.source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts),
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:1px solid var(--tl-line)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main.source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div,
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page :is(.source-hero-shell>.playbook-facts,.source-playbook-article>.playbook-facts)>div{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border-color:var(--tl-line)!important;
+  box-shadow:none!important;
+}
+
+/* v287.7 — same long-form geometry in light/dark and exact mobile alignment. */
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main#main-content .article,
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main#main-content .article,
+html body.tl-unified-v287.theme-dark.article-page.content-system-v103.internal-page-v198 main#main-content .article,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.article-page.content-system-v103.internal-page-v198 main#main-content .article{
+  padding:0!important;
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+/* Source playbooks follow exactly the same horizontal geometry in both themes. */
+html body.tl-unified-v287.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.reference-ui-v99.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.theme-dark.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.article-page.content-system-v103.internal-page-v198 main.source-playbook-page .source-playbook-article{
+  padding:0!important;
+}
+
+@media (max-width:900px){
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    box-sizing:border-box!important;
+  }
+}
+@media (max-width:520px){
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.internal-page-v198 main.compact-main-v103 > section.page-head.journal-head.compact-block-v103 > .wrap.narrow,
+  html body.tl-unified-v287.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap{
+    width:calc(100% - 24px)!important;
   }
 }

@@ -1,119 +1,160 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="3200" viewBox="0 0 1800 3200">
   <defs>
-    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.14" numOctaves="2" seed="14" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.7" xChannelSelector="R" yChannelSelector="G"/>
+    <linearGradient id="boardTone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1318"/>
+      <stop offset="52%" stop-color="#0d171d"/>
+      <stop offset="100%" stop-color="#0a1217"/>
+    </linearGradient>
+    <filter id="chalkRough" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.12" numOctaves="2" seed="31" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
-    <filter id="dust" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="0.9"/>
+    <filter id="boardDust" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="2" seed="12" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .12 0"/>
     </filter>
-    <filter id="noisewash" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="22" result="grain"/>
-      <feColorMatrix in="grain" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .08 0"/>
+    <filter id="smudge" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6"/>
     </filter>
+    <style>
+      .c1{stroke:#fffdf4;stroke-opacity:.17;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#chalkRough)}
+      .c2{stroke:#fffdf4;stroke-opacity:.12;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#chalkRough)}
+      .c3{stroke:#fffdf4;stroke-opacity:.09;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#chalkRough)}
+      .txt{fill:#fffdf4;fill-opacity:.10;font-family:"Segoe Print","Comic Sans MS",cursive;filter:url(#chalkRough)}
+      .txt2{fill:#fffdf4;fill-opacity:.07;font-family:"Segoe Print","Comic Sans MS",cursive;filter:url(#chalkRough)}
+    </style>
   </defs>
 
-  <rect width="1800" height="3200" fill="transparent"/>
-  <rect width="1800" height="3200" filter="url(#noisewash)" opacity=".28"/>
+  <rect width="1800" height="3200" fill="url(#boardTone)"/>
+  <rect width="1800" height="3200" filter="url(#boardDust)" opacity=".42"/>
 
-  <!-- erased chalk smudges -->
-  <g fill="none" stroke="#fff" stroke-linecap="round" filter="url(#dust)">
-    <path d="M92 310c110-6 191 7 280-2" stroke-width="17" opacity=".028"/>
-    <path d="M1380 552c128-10 210 5 300-6" stroke-width="21" opacity=".026"/>
-    <path d="M118 1178c143 3 224-9 324-2" stroke-width="19" opacity=".022"/>
-    <path d="M1350 1590c112-7 225 2 304-8" stroke-width="20" opacity=".023"/>
-    <path d="M126 2360c127 0 222-8 315-3" stroke-width="20" opacity=".022"/>
-    <path d="M1360 2820c122-7 226 6 314-3" stroke-width="22" opacity=".024"/>
+  <g filter="url(#smudge)" fill="none" stroke="#fffdf4" stroke-linecap="round">
+    <path d="M92 338c124 -12 221 10 314 -8" stroke-width="22" opacity=".028"/>
+    <path d="M1334 570c152 -8 251 11 355 -8" stroke-width="24" opacity=".03"/>
+    <path d="M108 1248c138 0 253 -10 349 -3" stroke-width="22" opacity=".028"/>
+    <path d="M1328 1658c128 -7 246 8 345 -5" stroke-width="23" opacity=".03"/>
+    <path d="M98 2396c128 2 246 -11 348 -3" stroke-width="23" opacity=".028"/>
+    <path d="M1334 2860c133 -4 244 8 345 -5" stroke-width="24" opacity=".03"/>
+    <path d="M1430 1005c112 0 175 -6 240 -2" stroke-width="18" opacity=".018"/>
+    <path d="M1358 3014c104 0 177 -5 244 -2" stroke-width="18" opacity=".018"/>
   </g>
 
-  <!-- top-left beaker cluster -->
-  <g transform="translate(110 150) rotate(-4)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <path d="M34 0h42M44 0v44L12 108c-6 11 1 23 13 23h60c12 0 19-12 13-23L66 44V0" stroke-width="1.5" opacity=".20"/>
-      <path d="M22 91c18 8 33-2 49 6 8 4 17 4 25 0" stroke-width="1.1" opacity=".18"/>
-      <circle cx="36" cy="77" r="2.1" stroke-width="1.1" opacity=".15"/>
-      <circle cx="61" cy="86" r="1.6" stroke-width="1" opacity=".13"/>
-      <path d="M112 18h94M112 18v88M112 106h76" stroke-width="1.15" opacity=".14"/>
-      <path d="M122 88c10-24 26-8 36-24 10-16 17 10 34-18" stroke-width="1.15" opacity=".18"/>
-    </g>
+  <!-- upper left flask + sheet -->
+  <g transform="translate(116 144) rotate(-4)">
+    <path class="c1" stroke-width="1.9" d="M34 4h43m-33 0v47L12 116c-8 12 1 27 17 27h59c16 0 24-15 17-27L72 51V4"/>
+    <path class="c2" stroke-width="1.3" d="M20 99c18 7 35-4 51 3 7 4 16 5 27 1"/>
+    <path class="c3" stroke-width="1.1" d="M30 114c9-6 16 5 24 2m9-8c4 4 8 4 12 1"/>
+    <circle class="c2" stroke-width="1.2" cx="36" cy="85" r="2.3"/>
+    <circle class="c3" stroke-width="1.1" cx="63" cy="90" r="1.8"/>
+    <path class="c2" stroke-width="1.2" d="M122 20l76-4 4 72-86 6z"/>
+    <path class="c3" stroke-width="1.1" d="M132 44c12-6 24-7 35-1m-38 15c15-5 32-5 47 0m-39 14c13-4 28-4 40 0"/>
   </g>
 
-  <!-- top-right target / drafting circle -->
-  <g transform="translate(1590 430)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <circle cx="0" cy="0" r="110" stroke-width="1.2" opacity=".11"/>
-      <circle cx="0" cy="0" r="66" stroke-width="1.1" opacity=".12"/>
-      <circle cx="0" cy="0" r="26" stroke-width="1.1" opacity=".13"/>
-      <path d="M-144 0h78M67 0h78M0-144v78M0 67v78" stroke-width="1.05" opacity=".10"/>
-      <path d="M-88 -88 88 88M88 -88 -88 88" stroke-width=".9" opacity=".05"/>
-      <path d="M-12 -12h24v24h-24z" stroke-width="1" opacity=".08"/>
-    </g>
+  <!-- upper middle faint equation lines -->
+  <g transform="translate(360 470) rotate(-3)">
+    <text class="txt" x="0" y="0" font-size="26">test → click → reg → FTD</text>
+    <text class="txt2" x="48" y="48" font-size="22">source + link + note</text>
   </g>
 
-  <!-- hero-right tiny notes -->
-  <g transform="translate(1450 980) rotate(3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-    <path d="M0 0h118" stroke-width="1.05" opacity=".12"/>
-    <path d="M0 18h87" stroke-width="1.02" opacity=".10"/>
-    <path d="M0 36h64" stroke-width="1" opacity=".08"/>
-    <path d="M140 6c8-4 17-4 25 0 9 6 18 4 28 0" stroke-width="1.05" opacity=".15"/>
-    <path d="M142 32c10-10 18-10 28 0" stroke-width="1.05" opacity=".12"/>
+  <!-- upper right target with more chalk -->
+  <g transform="translate(1578 420) rotate(2)">
+    <circle class="c2" stroke-width="1.45" cx="0" cy="0" r="122"/>
+    <circle class="c2" stroke-width="1.35" cx="0" cy="0" r="78"/>
+    <circle class="c1" stroke-width="1.25" cx="0" cy="0" r="34"/>
+    <path class="c3" stroke-width="1.1" d="M-160 0h88M72 0h88M0-160v88M0 72v88"/>
+    <path class="c3" stroke-width="1.05" d="M-94 -94 94 94M94 -94 -94 94"/>
+    <path class="c2" stroke-width="1.1" d="M-14 -14h28v28h-28z"/>
+    <path class="c3" stroke-width=".9" d="M-134 34c30-18 45-16 74 2"/>
   </g>
 
-  <!-- middle-left funnel / flow -->
-  <g transform="translate(120 1310) rotate(-2)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <path d="M0 0h150L95 58v54H55V58Z" stroke-width="1.3" opacity=".16"/>
-      <path d="M22 16h102M37 34h74" stroke-width="1.05" opacity=".12"/>
-      <rect x="10" y="146" width="40" height="24" rx="5" stroke-width="1.05" opacity=".12"/>
-      <rect x="84" y="146" width="40" height="24" rx="5" stroke-width="1.05" opacity=".12"/>
-      <path d="M50 158h34" stroke-width="1" opacity=".12"/>
-      <path d="m73 152 9 6-9 6" stroke-width="1.05" opacity=".14"/>
-    </g>
+  <!-- right side note cluster -->
+  <g transform="translate(1414 920) rotate(4)">
+    <path class="c2" stroke-width="1.1" d="M0 0h116m0 18H0m72 18H0"/>
+    <path class="c3" stroke-width="1.05" d="M136 10c12-5 19-4 27 2 10 7 20 7 31 0"/>
+    <path class="c3" stroke-width="1.05" d="M138 34c10-9 18-10 28 0"/>
+    <text class="txt2" x="0" y="72" font-size="20">CTR / FTD</text>
   </g>
 
-  <!-- middle-right lab graph and tiny molecule -->
-  <g transform="translate(1490 1650) rotate(2)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <path d="M0 110V0M0 110h132" stroke-width="1.15" opacity=".15"/>
-      <path d="M12 91V74M36 91V56M60 91V63M84 91V34M108 91V46" stroke-width="1.15" opacity=".13"/>
-      <path d="M10 78c21-25 31-8 49-28 16-18 28 10 46-22" stroke-width="1.15" opacity=".16"/>
-      <path d="M180 25 204 10l24 14v28l-24 14-24-14Zm48 0 24-14 25 14v28l-25 14-24-14" stroke-width="1.05" opacity=".11"/>
-      <circle cx="204" cy="10" r="2" stroke-width="1" opacity=".10"/>
-      <circle cx="252" cy="10" r="2" stroke-width="1" opacity=".10"/>
-      <circle cx="277" cy="24" r="2" stroke-width="1" opacity=".10"/>
-    </g>
+  <!-- middle left funnel with chalk arrows -->
+  <g transform="translate(104 1284) rotate(-2)">
+    <path class="c1" stroke-width="1.55" d="M0 0h168l-60 63v54H60V63Z"/>
+    <path class="c3" stroke-width="1.08" d="M20 18h114M38 35h76"/>
+    <rect class="c2" stroke-width="1.1" x="14" y="150" width="44" height="26" rx="5"/>
+    <rect class="c2" stroke-width="1.1" x="92" y="150" width="44" height="26" rx="5"/>
+    <path class="c2" stroke-width="1.05" d="M59 163h31"/>
+    <path class="c2" stroke-width="1.1" d="m80 156 10 7-10 7"/>
+    <text class="txt2" x="8" y="206" font-size="18">что проверять?</text>
   </g>
 
-  <!-- lower-left flask and scribbles -->
-  <g transform="translate(130 2515) rotate(2)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <path d="M28 0h46M40 0v53L8 143c-7 14 2 29 18 29h73c16 0 25-15 18-29L62 53V0" stroke-width="1.45" opacity=".18"/>
-      <path d="M18 128c22 9 42-2 63 7 10 4 19 3 29 0" stroke-width="1.08" opacity=".16"/>
-      <circle cx="38" cy="113" r="2.4" stroke-width="1" opacity=".13"/>
-      <circle cx="70" cy="124" r="1.8" stroke-width="1" opacity=".12"/>
-      <path d="M164 22h122" stroke-width="1.1" opacity=".12"/>
-      <path d="M164 43h88" stroke-width="1.05" opacity=".10"/>
-      <path d="M164 64h104" stroke-width="1.02" opacity=".08"/>
-      <path d="M174 98c8-6 17-6 25 0 9 6 18 5 28 0" stroke-width="1.05" opacity=".11"/>
-    </g>
+  <!-- center faint blueprint lines -->
+  <g transform="translate(730 1420) rotate(1)">
+    <path class="c3" stroke-width="1" d="M0 0h240m-240 44h198m-198 44h160"/>
+    <path class="c3" stroke-width="1" d="M260 16v108m34-82v82m34-58v58"/>
+    <path class="c3" stroke-width="1" d="M338 0c16 4 25 13 28 28"/>
   </g>
 
-  <!-- lower-right partial target and ruler -->
-  <g transform="translate(1570 2670) rotate(-3)">
-    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-      <circle cx="0" cy="0" r="86" stroke-width="1.1" opacity=".10"/>
-      <circle cx="0" cy="0" r="48" stroke-width="1.05" opacity=".12"/>
-      <circle cx="0" cy="0" r="12" stroke-width="1" opacity=".12"/>
-      <path d="M-116 0h66M50 0h66M0-116v66M0 50v66" stroke-width=".95" opacity=".09"/>
-      <path d="M-190 152h150M-178 144v16M-148 147v10M-118 147v10M-88 147v10M-58 144v16" stroke-width=".95" opacity=".10"/>
-    </g>
+  <!-- middle right graph + molecule -->
+  <g transform="translate(1460 1616) rotate(2)">
+    <path class="c2" stroke-width="1.2" d="M0 122V0M0 122h142"/>
+    <path class="c2" stroke-width="1.18" d="M15 101V80M44 101V58M73 101V66M102 101V35M130 101V49"/>
+    <path class="c1" stroke-width="1.2" d="M14 86c24-28 34-8 54-30 18-19 31 10 53-24"/>
+    <path class="c3" stroke-width="1.02" d="M184 26 209 11l25 14v29l-25 14-25-14Zm50 0 25-14 26 14v29l-26 14-25-14"/>
+    <circle class="c3" stroke-width="1" cx="209" cy="11" r="2.2"/>
+    <circle class="c3" stroke-width="1" cx="259" cy="12" r="2.2"/>
+    <circle class="c3" stroke-width="1" cx="285" cy="26" r="2.2"/>
+    <text class="txt2" x="162" y="96" font-size="18">данные</text>
   </g>
 
-  <!-- tiny handwritten chalk notes -->
-  <g fill="#fff" opacity=".075" font-family="Segoe Print, Comic Sans MS, cursive" filter="url(#rough)">
-    <text x="125" y="540" font-size="19" transform="rotate(-6 125 540)">test → click → reg</text>
-    <text x="1460" y="1220" font-size="18" transform="rotate(4 1460 1220)">CTR / FTD</text>
-    <text x="150" y="1950" font-size="18" transform="rotate(-5 150 1950)">source · link · result</text>
-    <text x="1415" y="2120" font-size="18" transform="rotate(3 1415 2120)">check the data</text>
+  <!-- large center-right chalk arrows -->
+  <g transform="translate(1300 2020) rotate(-6)">
+    <path class="c3" stroke-width="1.1" d="M0 0c38-10 70-10 106 0"/>
+    <path class="c3" stroke-width="1.1" d="m92 -8 14 8-14 8"/>
+    <text class="txt2" x="0" y="-18" font-size="17">что улучшать дальше</text>
+  </g>
+
+  <!-- lower left large flask -->
+  <g transform="translate(108 2460) rotate(3)">
+    <path class="c1" stroke-width="1.8" d="M34 2h52m-38 0v58L8 154c-8 15 2 31 19 31h84c17 0 27-16 19-31L91 60V2"/>
+    <path class="c2" stroke-width="1.18" d="M22 140c24 11 44-1 66 8 10 4 19 3 30 0"/>
+    <path class="c3" stroke-width="1.05" d="M32 126c8 0 13 4 18 8m18-10c10 0 18 6 26 4"/>
+    <circle class="c2" stroke-width="1.05" cx="42" cy="124" r="2.6"/>
+    <circle class="c3" stroke-width="1" cx="78" cy="133" r="1.9"/>
+    <text class="txt2" x="148" y="36" font-size="19">link / source / result</text>
+    <path class="c3" stroke-width="1.02" d="M148 52h118m0 18h82m-82 18h97"/>
+  </g>
+
+  <!-- lower middle notebook block -->
+  <g transform="translate(748 2550) rotate(-2)">
+    <path class="c2" stroke-width="1.15" d="M0 0h192v108H0z"/>
+    <path class="c3" stroke-width="1" d="M16 20h110m-110 20h138m-138 20h124m-124 20h96"/>
+    <path class="c3" stroke-width="1" d="M154 16h20m-20 20h20m-20 20h20"/>
+  </g>
+
+  <!-- lower right target + ruler -->
+  <g transform="translate(1566 2686) rotate(-4)">
+    <circle class="c2" stroke-width="1.2" cx="0" cy="0" r="92"/>
+    <circle class="c2" stroke-width="1.15" cx="0" cy="0" r="54"/>
+    <circle class="c1" stroke-width="1.05" cx="0" cy="0" r="14"/>
+    <path class="c3" stroke-width="1" d="M-124 0h72M52 0h72M0-124v72M0 52v72"/>
+    <path class="c3" stroke-width="1" d="M-206 154h162M-194 146v16M-162 149v10M-130 149v10M-98 149v10M-66 146v16"/>
+    <path class="c3" stroke-width="1" d="M-4 -4 4 4M4 -4 -4 4"/>
+  </g>
+
+  <!-- extra small chalk details to make the page feel fuller -->
+  <g transform="translate(316 2928) rotate(-6)">
+    <text class="txt2" x="0" y="0" font-size="18">check rule / geo</text>
+    <path class="c3" stroke-width="1" d="M0 16h90m0 14H22"/>
+  </g>
+  <g transform="translate(1210 2860) rotate(5)">
+    <text class="txt2" x="0" y="0" font-size="18">масштабировать после сверки</text>
+    <path class="c3" stroke-width="1" d="M0 18h126"/>
+  </g>
+  <g transform="translate(1188 344) rotate(-6)">
+    <path class="c3" stroke-width="1" d="M0 0h70m0 12H18"/>
+    <text class="txt2" x="0" y="32" font-size="16">карта пути</text>
+  </g>
+  <g transform="translate(480 1004) rotate(4)">
+    <path class="c3" stroke-width="1.1" d="M0 0c10-8 21-8 31 0 10 7 21 7 31 0"/>
+    <path class="c3" stroke-width="1" d="M84 4h76"/>
   </g>
 </svg>
