@@ -21897,11 +21897,11 @@ html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background
   position:absolute!important;
   inset:0!important;
   pointer-events:none!important;
-  background-image:url('/Affiliate_Lab/assets/home-lab-blueprint.svg?v=20260824-2780')!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-blueprint.svg?v=20260824-2891')!important;
   background-repeat:repeat-y!important;
   background-position:center top!important;
   background-size:1660px auto!important;
-  opacity:.54!important;
+  opacity:.62!important;
 }
 
 /* Chalkboard wear: broad erased patches rather than a decorative gradient. */
@@ -21971,7 +21971,7 @@ html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .ho
   html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
     background-size:1480px auto!important;
     background-position:54% top!important;
-    opacity:.46!important;
+    opacity:.52!important;
   }
 }
 
@@ -21980,7 +21980,7 @@ html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .ho
   html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
     background-size:1180px auto!important;
     background-position:56% top!important;
-    opacity:.33!important;
+    opacity:.40!important;
   }
   html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
   html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
@@ -23308,4 +23308,113 @@ html body.tl-unified-v287.reference-ui-v99.theme-dark.article-page.content-syste
   html body.tl-unified-v287.reference-ui-v99.content-system-v103.about-page-v114.internal-page-v198 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap{
     width:calc(100% - 24px)!important;
   }
+}
+
+
+/* ======================================================================
+   v289 — light sidebar contrast + state normalization
+   Keep the light sidebar fully independent from legacy dark-only colors.
+   ====================================================================== */
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:var(--tl-bg)!important;
+  border-right-color:var(--tl-line)!important;
+  color:var(--tl-ink)!important;
+}
+
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand span,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand b,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand strong{
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand small{
+  color:var(--tl-muted)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-brand{
+  border-bottom-color:var(--tl-line)!important;
+}
+
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-collapse-top{
+  border:1px solid var(--tl-line)!important;
+  background:var(--tl-surface)!important;
+  color:var(--tl-copy)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-sidebar-collapse-top:hover{
+  border-color:color-mix(in srgb,var(--tl-green) 38%,var(--tl-line))!important;
+  background:var(--tl-green-soft)!important;
+  color:var(--tl-green-strong)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-collapse-icon{
+  color:var(--tl-green)!important;
+}
+
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading span,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading i{
+  color:var(--tl-muted)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading:hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading:hover span,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-heading:hover i{
+  color:var(--tl-ink)!important;
+}
+
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a:not([aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a.is-active:not([aria-current="page"]){
+  color:var(--tl-copy)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a:hover{
+  color:var(--tl-ink)!important;
+  background:var(--tl-surface-2)!important;
+  border-color:var(--tl-line)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a[aria-current="page"]{
+  color:var(--tl-green-strong)!important;
+  background:var(--tl-green-soft)!important;
+  border-color:color-mix(in srgb,var(--tl-green) 34%,var(--tl-line))!important;
+  box-shadow:inset 3px 0 0 var(--tl-green)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-icon,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-icon-img{
+  color:currentColor!important;
+  opacity:.78!important;
+  filter:none!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a:hover .ref-nav-icon-img{
+  color:currentColor!important;
+  opacity:.92!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-nav-group nav a[aria-current="page"] .ref-nav-icon-img{
+  color:currentColor!important;
+  opacity:1!important;
+}
+
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-partner-card{
+  background:var(--tl-surface)!important;
+  border-color:var(--tl-line)!important;
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-partner-card b{
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-partner-card>span{
+  color:var(--tl-copy)!important;
+}
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .ref-partner-card em{
+  color:var(--tl-green-strong)!important;
+}
+
+/* Fallback sidebar markup before/without rebuilt navigation. */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand,
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand b,
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand strong{
+  color:var(--tl-ink)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand small{
+  color:var(--tl-muted)!important;
 }
