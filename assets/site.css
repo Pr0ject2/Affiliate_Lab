@@ -23575,3 +23575,45 @@ html body.theme-dark .article-layout{
   background-color:transparent!important;
   background-image:none!important;
 }
+
+
+/* v312: seamless dark chalk texture on all internal pages, no drawings */
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page),
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page) :is(.page-head,.section-landing-head,.article-layout,.article-shell,.box,.wrap){
+  background-color: transparent !important;
+}
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page){
+  background-color:#0d1217 !important;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,0.015) 0%, rgba(255,255,255,0.006) 22%, rgba(255,255,255,0.012) 47%, rgba(255,255,255,0.005) 71%, rgba(255,255,255,0.01) 100%),
+    radial-gradient(circle at 16% 18%, rgba(255,255,255,0.03) 0 0.9px, transparent 1.9px),
+    radial-gradient(circle at 68% 42%, rgba(255,255,255,0.024) 0 0.85px, transparent 1.8px),
+    radial-gradient(circle at 42% 76%, rgba(255,255,255,0.02) 0 0.8px, transparent 1.7px),
+    radial-gradient(circle at 83% 12%, rgba(255,255,255,0.018) 0 0.7px, transparent 1.6px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 0%, rgba(255,255,255,0.006) 18%, rgba(255,255,255,0.016) 42%, rgba(255,255,255,0.005) 66%, rgba(255,255,255,0.014) 100%),
+    linear-gradient(0deg, rgba(8,11,16,0.18), rgba(8,11,16,0.18));
+  background-repeat:repeat !important;
+  background-size:
+    100% 100%,
+    220px 220px,
+    320px 320px,
+    260px 260px,
+    360px 360px,
+    100% 100%,
+    100% 100% !important;
+  background-position:
+    top left,
+    0 0,
+    41px 67px,
+    123px 29px,
+    211px 143px,
+    top left,
+    top left !important;
+}
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page) > :is(section,aside),
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page) .wrap,
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page) .article-shell,
+html body.theme-dark :is(main.compact-main-v103:not(.home-page),main.source-playbook-page,main.services-page,main.traffic-hub-page,.notfound,main.redirect-page) .article-layout{
+  background-image:none !important;
+  background-color:transparent !important;
+}
