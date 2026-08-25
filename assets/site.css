@@ -23758,3 +23758,441 @@ html body.theme-dark :is(.playbook-facts dt,.playbook-facts dd,.guide-v101-flow 
 html body.reference-ui-v99.theme-dark :is(.playbook-facts dt,.playbook-facts dd,.guide-v101-flow b,.guide-v101-funnel-table b,.guide-v101-grid b,.guide-v101-verdict b,.service-card h3,.library-card h3,.about-card h3,.section-card h3){
   color:#e8edf0!important;
 }
+
+/* ======================================================================
+   v320 — coherent light theme: green navigation/footer, warm-neutral UI,
+   no blue interface accents, and stable card/content spacing.
+   ====================================================================== */
+html body.tl-unified-v287:not(.theme-dark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark){
+  --tl-green:#2d735d!important;
+  --tl-green-strong:#245e4d!important;
+  --tl-green-soft:#edf4f0!important;
+  --tl-warm:#8b6c49!important;
+  --tl-warm-soft:#f4ede3!important;
+  --tl-bg:#f3f0e8!important;
+  --tl-surface:#fffdf9!important;
+  --tl-surface-2:#f8f4ed!important;
+  --tl-line:#ddd4c8!important;
+  --tl-line-strong:#cfc4b6!important;
+  --tl-ink:#17231f!important;
+  --tl-copy:#58625d!important;
+  --tl-muted:#7c817d!important;
+  --tl-shadow:0 8px 24px rgba(31,45,38,.055)!important;
+  --paper:#f3f0e8!important;
+  --paper-2:#ebe6dc!important;
+  --surface:#fffdf9!important;
+  --ink:#17231f!important;
+  --muted:#69736e!important;
+  --line:#ddd4c8!important;
+  --line-dark:#cfc4b6!important;
+  --forest:#2d735d!important;
+  --forest-2:#173b31!important;
+  --forest-soft:#edf4f0!important;
+  background:#f3f0e8!important;
+  color:#17231f!important;
+}
+
+/* Light canvas: warm neutral, matching the hierarchy of dark mode. */
+html body.tl-unified-v287:not(.theme-dark) main:not(.home-page),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main:not(.home-page){
+  background:#f3f0e8!important;
+  color:#17231f!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.page-head,.section-landing-head),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.page-head,.section-landing-head){
+  background:transparent!important;
+  background-image:none!important;
+  border-color:#ddd4c8!important;
+}
+
+/* Restore the green identity to the left navigation in LIGHT mode. */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:#15382f!important;
+  background-image:linear-gradient(180deg,#173d33 0%,#123129 100%)!important;
+  border-right-color:#2a4d42!important;
+  color:#eef5f2!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.sidebar-brand,.ref-sidebar-brand),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.sidebar-brand,.ref-sidebar-brand){
+  color:#f6faf8!important;
+  border-bottom-color:rgba(255,255,255,.12)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand b,.ref-sidebar-brand strong),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand b,.ref-sidebar-brand strong){
+  color:#f6faf8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.sidebar-brand small,.ref-sidebar-brand small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.sidebar-brand small,.ref-sidebar-brand small){
+  color:#b7cbc3!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.sidebar-group-toggle,.ref-nav-heading),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.sidebar-group-toggle,.ref-nav-heading){
+  color:#a9c1b8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a,.ref-nav-group nav a),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a,.ref-nav-group nav a){
+  background:transparent!important;
+  border-color:transparent!important;
+  color:#d8e5e0!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:before,.ref-nav-icon),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:before,.ref-nav-icon){
+  color:#a9c8bc!important;
+  background:rgba(255,255,255,.035)!important;
+  border-color:rgba(255,255,255,.08)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover){
+  background:rgba(255,255,255,.075)!important;
+  color:#fff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a.is-active,.ref-nav-group nav a[aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a.is-active,.ref-nav-group nav a[aria-current="page"]){
+  background:rgba(102,183,150,.16)!important;
+  color:#f8fbfa!important;
+  box-shadow:inset 3px 0 0 #75c5a5!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active:before,.sidebar-menu a.is-active:before,.sidebar-menu a[aria-current="page"]:before,.ref-nav-group nav a.is-active .ref-nav-icon,.ref-nav-group nav a[aria-current="page"] .ref-nav-icon),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active:before,.sidebar-menu a.is-active:before,.sidebar-menu a[aria-current="page"]:before,.ref-nav-group nav a.is-active .ref-nav-icon,.ref-nav-group nav a[aria-current="page"] .ref-nav-icon){
+  color:#a6e0c7!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-search input,.ref-sidebar-search input),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-search input,.ref-sidebar-search input){
+  background:#102c25!important;
+  border-color:#34584d!important;
+  color:#eef6f2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-search input,.ref-sidebar-search input)::placeholder,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-search input,.ref-sidebar-search input)::placeholder{
+  color:#9eb9af!important;
+  opacity:1!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-mode-compact,.sidebar-partner-cta,.ref-partner-card),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-mode-compact,.sidebar-partner-cta,.ref-partner-card){
+  background:#193f35!important;
+  border-color:#356052!important;
+  color:#edf6f2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.audience-mode-toggle-v254,.sidebar-hints-toggle),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.audience-mode-toggle-v254,.sidebar-hints-toggle){
+  background:#123229!important;
+  border-color:#31564a!important;
+  color:#e7f1ed!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-bottom,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-bottom{
+  border-color:rgba(255,255,255,.1)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-bottom a,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-bottom a{
+  color:#dce9e4!important;
+}
+
+/* Footer returns to the same green family instead of charcoal/blue. */
+html body.tl-unified-v287:not(.theme-dark) .site-footer,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#15382f!important;
+  background-image:linear-gradient(180deg,#173b32 0%,#112f27 100%)!important;
+  border-top:1px solid #31564a!important;
+  color:#eef5f2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(.footer-brand,b,strong),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer :is(.footer-brand,b,strong){color:#f7faf9!important}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(p,a,span,small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer :is(p,a,span,small){color:#c4d6cf!important}
+html body.tl-unified-v287:not(.theme-dark) .site-footer a:hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer a:hover{color:#fff!important}
+html body.tl-unified-v287:not(.theme-dark) .footer-bottom,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .footer-bottom{border-color:rgba(255,255,255,.1)!important}
+
+/* Warm-neutral card system: same hierarchy as dark mode, no blue surfaces. */
+html body.tl-unified-v287:not(.theme-dark) :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .catalog-search,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,
+  .section-card,.knowledge-map>div,.handbook-intro,.handbook ol.starter-five li a,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.platform-setup li,.playbook-format-list>div,.playbook-steps>li,
+  .traffic-diagnostic-list li,.source-journey-card,.source-tool-card,.article-aside.enhanced-rail,
+  .article-aside.enhanced-rail .aside-block,.rail-partner-card,.rail-path-card,.rail-cover-card,.playbook-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.traffic-next a,.traffic-hub-basics>div,
+  .partner-next-step,.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-timeline,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,
+  .notes-card,.notes-panel,.tool-panel,.related-reading,.related-primary,.related-secondary,.article-exit-nav a,
+  .next-reading a,.starter-next,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .section-groups,.section-bottom-links,.source-compare-picker,.source-compare-table,.source-compare-row>div
+),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(
+  .home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,
+  .catalog-search,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,
+  .section-card,.knowledge-map>div,.handbook-intro,.handbook ol.starter-five li a,.playbook-facts>div,
+  .playbook-checklist li,.platform-setup>div,.platform-setup li,.playbook-format-list>div,.playbook-steps>li,
+  .traffic-diagnostic-list li,.source-journey-card,.source-tool-card,.article-aside.enhanced-rail,
+  .article-aside.enhanced-rail .aside-block,.rail-partner-card,.rail-path-card,.rail-cover-card,.playbook-card,
+  .service-notice,.service-task-nav a,.service-start-grid>div,.traffic-next a,.traffic-hub-basics>div,
+  .partner-next-step,.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-timeline,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,
+  .notes-card,.notes-panel,.tool-panel,.related-reading,.related-primary,.related-secondary,.article-exit-nav a,
+  .next-reading a,.starter-next,.section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .section-groups,.section-bottom-links,.source-compare-picker,.source-compare-table,.source-compare-row>div
+){
+  background:#fffdf9!important;
+  background-image:none!important;
+  border-color:#ddd4c8!important;
+  color:#17231f!important;
+  box-shadow:0 8px 24px rgba(31,45,38,.05)!important;
+}
+
+/* Editorial callouts: only green and warm accents. */
+html body.tl-unified-v287:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.service-inline,.rules-action-box),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.service-inline,.rules-action-box){
+  background:#eef4f0!important;
+  border-color:#d1dfd8!important;
+  border-left-color:#2d735d!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.logic-warning-v103,.inline-note,.warning-note,.traffic-cost-note,.source-compare-note,.playbook-risk,.guide-v101-callout.warning),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.logic-warning-v103,.inline-note,.warning-note,.traffic-cost-note,.source-compare-note,.playbook-risk,.guide-v101-callout.warning){
+  background:#faf4ea!important;
+  border-color:#e3d5c2!important;
+  border-left-color:#9a744a!important;
+}
+
+/* The numbered editorial cards from regular articles: real internal padding and stable text flow. */
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103{
+  margin:14px 0!important;
+  padding:24px 26px 25px!important;
+  border:1px solid #ddd4c8!important;
+  border-radius:14px!important;
+  background:#fffdf9!important;
+  box-shadow:0 8px 22px rgba(31,45,38,.045)!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+  display:grid!important;
+  grid-template-columns:40px minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:14px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 0 14px!important;
+  padding:0!important;
+  color:#17231f!important;
+  font-size:26px!important;
+  line-height:1.2!important;
+  overflow-wrap:anywhere!important;
+  box-sizing:border-box!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103{
+  display:grid!important;
+  place-items:center!important;
+  width:40px!important;
+  min-width:40px!important;
+  height:28px!important;
+  padding:0!important;
+  border:1px solid #c9ddd4!important;
+  border-radius:999px!important;
+  background:#edf5f1!important;
+  color:#246b56!important;
+  font-size:11px!important;
+  line-height:1!important;
+  font-weight:850!important;
+  letter-spacing:.06em!important;
+  box-sizing:border-box!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note){
+  max-width:100%!important;
+  margin-left:54px!important;
+  margin-right:0!important;
+  box-sizing:border-box!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,li,dd),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,li,dd){
+  color:#59635e!important;
+  overflow-wrap:break-word!important;
+  word-break:normal!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-action-v103>h2::after,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-action-v103>h2::after{
+  display:none!important;
+  content:none!important;
+}
+
+/* Sitewide layout safety: content cannot escape cards/grids or hug borders. */
+html body.tl-unified-v287:not(.theme-dark) :is(
+  .article,.source-playbook-article,.structured-article-v103,.article-layout,.library-main,.services-grid,
+  .playbook-catalog-grid,.home-entry-grid,.home-source-grid,.section-groups,.traffic-hub-main,.about-main-v114
+),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(
+  .article,.source-playbook-article,.structured-article-v103,.article-layout,.library-main,.services-grid,
+  .playbook-catalog-grid,.home-entry-grid,.home-source-grid,.section-groups,.traffic-hub-main,.about-main-v114
+){
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(
+  .library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,.section-card,.saved-card,
+  .notes-card,.notes-panel,.help-situation,.diagnostic-card,.calc-card,.field-case,.source-tool-card,.playbook-card,
+  .home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.article-aside.enhanced-rail .aside-block
+),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(
+  .library-card,.service-card,.service-tool,.tool-card,.about-card,.about-card-v114,.section-card,.saved-card,
+  .notes-card,.notes-panel,.help-situation,.diagnostic-card,.calc-card,.field-case,.source-tool-card,.playbook-card,
+  .home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.article-aside.enhanced-rail .aside-block
+){
+  box-sizing:border-box!important;
+  min-width:0!important;
+  overflow-wrap:break-word!important;
+}
+
+/* Remove blue/pink interface accents; brand logos themselves remain untouched. */
+html body.tl-unified-v287:not(.theme-dark) :is(
+  .nav-analytics,.nav-tools,.nav-services,.nav-practice,.nav-basics,.nav-economics,
+  .service-mark,.rail-tool-mark,.logic-index-v103,.section-index,.guide-step-index,.journey-step-index,.flow-step-index,
+  .reading-state-badge,.rule-model-badge,.service-primary-badge,.about-route-v114 li:before
+),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(
+  .nav-analytics,.nav-tools,.nav-services,.nav-practice,.nav-basics,.nav-economics,
+  .service-mark,.rail-tool-mark,.logic-index-v103,.section-index,.guide-step-index,.journey-step-index,.flow-step-index,
+  .reading-state-badge,.rule-model-badge,.service-primary-badge,.about-route-v114 li:before
+){
+  background-color:#edf4f0!important;
+  border-color:#cdded6!important;
+  color:#2b6f5a!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(a,.plain-link,.text-cta,.source-section-tabs a,.rail-all-tools),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(a,.plain-link,.text-cta,.source-section-tabs a,.rail-all-tools){
+  color:#356b5a;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(a:hover,.plain-link:hover,.text-cta:hover,.source-section-tabs a:hover,.rail-all-tools:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(a:hover,.plain-link:hover,.text-cta:hover,.source-section-tabs a:hover,.rail-all-tools:hover){
+  color:#214f41!important;
+}
+
+/* Tables/inputs/buttons follow the same warm + green language. */
+html body.tl-unified-v287:not(.theme-dark) :is(input,select,textarea,.home-main-search input),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(input,select,textarea,.home-main-search input){
+  background:#fffdf9!important;
+  border-color:#d8cfc2!important;
+  color:#202b26!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(input,select,textarea)::placeholder,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(input,select,textarea)::placeholder{color:#898c87!important;opacity:1!important}
+html body.tl-unified-v287:not(.theme-dark) :is(table,thead,tbody,tr),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(table,thead,tbody,tr){background:#fffdf9!important;color:#27322d!important}
+html body.tl-unified-v287:not(.theme-dark) th,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) th{background:#eee8dd!important;color:#26332d!important;border-color:#d9d0c4!important}
+html body.tl-unified-v287:not(.theme-dark) td,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) td{background:#fffdf9!important;color:#5a645f!important;border-color:#ddd4c8!important}
+
+/* Responsive card padding: never let headings/body touch the edge or slide sideways. */
+@media(max-width:900px){
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103{
+    padding:21px 20px 22px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+    grid-template-columns:38px minmax(0,1fr)!important;
+    gap:12px!important;
+    font-size:23px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103{
+    width:38px!important;min-width:38px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note),
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note){
+    margin-left:50px!important;
+  }
+}
+@media(max-width:620px){
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103{
+    padding:18px 16px 20px!important;
+    border-radius:12px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103>h2{
+    grid-template-columns:36px minmax(0,1fr)!important;
+    gap:10px!important;
+    font-size:21px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103{
+    width:36px!important;min-width:36px!important;height:26px!important;font-size:10px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note),
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-section-v103 :is(p,ul,ol,dl,figure,table,pre,.inline-note){
+    margin-left:0!important;
+  }
+}
+
+/* v320.1 — final light-theme cleanup: no blue UI and safer horizontal flow. */
+html body.tl-unified-v287:not(.theme-dark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark){overflow-x:clip!important}
+html body.tl-unified-v287:not(.theme-dark) .site-header,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-header{
+  background:#fbf9f4!important;
+  border-bottom-color:#d9d0c4!important;
+  color:#25312c!important;
+  box-shadow:0 4px 16px rgba(31,45,38,.045)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.ref-topbar,.ref-top-search,.theme-toggle,.ref-theme-button,.ref-top-favorite,.header-about-link),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.ref-topbar,.ref-top-search,.theme-toggle,.ref-theme-button,.ref-top-favorite,.header-about-link){
+  background:#fbf9f4!important;
+  border-color:#d8d0c4!important;
+  color:#40514a!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.ref-topbar-crumbs,.ref-topbar-crumbs a,.ref-topbar-crumbs b,.ref-top-progress span,.ref-top-progress b),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.ref-topbar-crumbs,.ref-topbar-crumbs a,.ref-topbar-crumbs b,.ref-top-progress span,.ref-top-progress b){
+  color:#4f625a!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.ref-top-progress em,.rail-progress span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.ref-top-progress em,.rail-progress span){background:#3f8d73!important}
+html body.tl-unified-v287:not(.theme-dark) main a:not(.home-action-partner):not([data-track="affiliate_cta"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main a:not(.home-action-partner):not([data-track="affiliate_cta"]){color:#356b5a!important}
+html body.tl-unified-v287:not(.theme-dark) main a:not(.home-action-partner):not([data-track="affiliate_cta"]):hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main a:not(.home-action-partner):not([data-track="affiliate_cta"]):hover{color:#214f41!important}
+html body.tl-unified-v287:not(.theme-dark) :is(.guide-v101-format-art,.guide-v101-format-art.f1,.guide-v101-format-art.f2,.guide-v101-format-art.f3,.guide-v101-format-art.f4,.guide-v101-format-art.f5),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.guide-v101-format-art,.guide-v101-format-art.f1,.guide-v101-format-art.f2,.guide-v101-format-art.f3,.guide-v101-format-art.f4,.guide-v101-format-art.f5){
+  background:linear-gradient(145deg,#edf4f0,#f8f4ed)!important;
+  border-color:#d4dfd9!important;
+  color:#2d735d!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.article,.source-playbook-article,.structured-article-v103,.article-layout,.page-head .wrap,.section-landing-head .wrap) :is(h1,h2,h3,h4,p,li,dd,dt,a,span,code),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.article,.source-playbook-article,.structured-article-v103,.article-layout,.page-head .wrap,.section-landing-head .wrap) :is(h1,h2,h3,h4,p,li,dd,dt,a,span,code){
+  max-width:100%!important;
+  min-width:0!important;
+  overflow-wrap:break-word!important;
+}
+@media(max-width:700px){
+  html body.tl-unified-v287:not(.theme-dark) main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287:not(.theme-dark) main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287:not(.theme-dark) main.section-landing > .wrap,
+  html body.tl-unified-v287:not(.theme-dark) main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287:not(.theme-dark) main.services-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main.compact-main-v103 > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main.compact-main-v103 > section > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main.section-landing > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main.traffic-hub-page > .wrap,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main.services-page > .wrap{
+    width:calc(100% - 28px)!important;
+    max-width:calc(100% - 28px)!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark) .article-layout,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-layout{
+    width:calc(100% - 28px)!important;
+    max-width:calc(100% - 28px)!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
