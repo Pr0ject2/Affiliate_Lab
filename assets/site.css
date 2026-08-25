@@ -23620,3 +23620,141 @@ html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page) > 
   background-color:transparent!important;
   background-image:none!important;
 }
+
+
+/* v319 — dark palette tuned for the chalkboard texture */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --paper:#091118!important;
+  --paper-2:#0d161d!important;
+  --surface:#111a21!important;
+  --ink:#e8edf0!important;
+  --muted:#b6c0c8!important;
+  --line:#31414d!important;
+  --line-dark:#3b4b57!important;
+  color:#d5dde3!important;
+}
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  color:#d5dde3!important;
+}
+html body.theme-dark :is(h1,h2,h3,h4,h5,h6,strong,b),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:#eef2f4!important;
+}
+html body.theme-dark :is(p,li,dd,dt,small,label,.lead,.article .lead,.article-author p,.breadcrumbs,.breadcrumbs a,.breadcrumbs span,.source-title-copy .article-label,.guide-v101-section p,.service-card p,.library-card p,.about-card p,.section-card p,.sidebar-bottom small),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,small,label,.lead,.article .lead,.article-author p,.breadcrumbs,.breadcrumbs a,.breadcrumbs span,.source-title-copy .article-label,.guide-v101-section p,.service-card p,.library-card p,.about-card p,.section-card p,.sidebar-bottom small){
+  color:#bcc7cf!important;
+}
+html body.theme-dark :is(.article-label,.overline,.sidebar-group-title,.home-kicker,.home-section-title>p,.playbook-card-top,.service-kicker,.service-card-top,.source-card-top,.section-caption,.diagnostic-kicker,.calc-kicker,.guide-v101-label),
+html body.reference-ui-v99.theme-dark :is(.article-label,.overline,.sidebar-group-title,.home-kicker,.home-section-title>p,.playbook-card-top,.service-kicker,.service-card-top,.source-card-top,.section-caption,.diagnostic-kicker,.calc-kicker,.guide-v101-label){
+  color:#c8a472!important;
+}
+html body.theme-dark :is(a,.plain-link,.text-cta,.source-section-tabs a,.article-aside.enhanced-rail .rail-toc a,.home-search-links a,.home-actions a,.sidebar-bottom a),
+html body.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta,.source-section-tabs a,.article-aside.enhanced-rail .rail-toc a,.home-search-links a,.home-actions a,.sidebar-bottom a){
+  color:#cfd9df;
+}
+html body.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.source-section-tabs a:hover,.article-aside.enhanced-rail .rail-toc a:hover,.home-search-links a:hover,.home-actions a:hover,.sidebar-bottom a:hover),
+html body.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.text-cta:hover,.source-section-tabs a:hover,.article-aside.enhanced-rail .rail-toc a:hover,.home-search-links a:hover,.home-actions a:hover,.sidebar-bottom a:hover){
+  color:#eef3f5!important;
+}
+html body.theme-dark :is(.site-header,.global-sidebar,.site-footer),
+html body.reference-ui-v99.theme-dark :is(.site-header,.global-sidebar,.site-footer){
+  background:rgba(7,12,17,.88)!important;
+  border-color:#293743!important;
+  backdrop-filter:blur(8px);
+}
+html body.theme-dark :is(.home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,.catalog-search,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.knowledge-map>div,.handbook-intro,.handbook ol.starter-five li a,.playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.source-tool-card,.article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-partner-card,.rail-path-card,.rail-cover-card,.playbook-card,.service-notice,.service-task-nav a,.service-start-grid>div,.traffic-next a,.traffic-hub-basics>div,.partner-next-step,.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,.academy-content-section,.logic-section-v103,.related-reading,.related-primary,.related-secondary,.article-exit-nav a,.next-reading a,.starter-next,.service-inline,.section-entry,.section-outcome,.section-feature,.section-groups,.section-bottom-links,.source-section-tabs a,.playbook-risk,.source-compare-note,.page-head .page-head-note,.section-landing-head .section-landing-note,.searchbox>div,.sidebar-partner-cta,.sidebar-mode-compact,.audience-mode-toggle-v254,.sidebar-hints-toggle),
+html body.reference-ui-v99.theme-dark :is(.home-search-card,.home-welcome-summary>div,.home-entry-grid>a,.home-source-grid>a,.home-results-inner,.catalog-search,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.knowledge-map>div,.handbook-intro,.handbook ol.starter-five li a,.playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,.playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.source-tool-card,.article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-partner-card,.rail-path-card,.rail-cover-card,.playbook-card,.service-notice,.service-task-nav a,.service-start-grid>div,.traffic-next a,.traffic-hub-basics>div,.partner-next-step,.guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,.article-figure,.calc-card,.diagnostic-card,.field-case,.notes-card,.tool-panel,.academy-content-section,.logic-section-v103,.related-reading,.related-primary,.related-secondary,.article-exit-nav a,.next-reading a,.starter-next,.service-inline,.section-entry,.section-outcome,.section-feature,.section-groups,.section-bottom-links,.source-section-tabs a,.playbook-risk,.source-compare-note,.page-head .page-head-note,.section-landing-head .section-landing-note,.searchbox>div,.sidebar-partner-cta,.sidebar-mode-compact,.audience-mode-toggle-v254,.sidebar-hints-toggle){
+  background:rgba(13,20,27,.82)!important;
+  border-color:#32424e!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.16)!important;
+}
+html body.theme-dark .home-results-inner,
+html body.reference-ui-v99.theme-dark .home-results-inner{
+  background:rgba(18,31,38,.86)!important;
+  border-color:#38505e!important;
+}
+html body.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input),
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,button:not(.ref-nav-heading),.home-main-search input,.sidebar-search input){
+  background:rgba(12,18,24,.92)!important;
+  border-color:#3a4b57!important;
+  color:#e4eaee!important;
+}
+html body.theme-dark :is(input,select,textarea)::placeholder,
+html body.reference-ui-v99.theme-dark :is(input,select,textarea)::placeholder{
+  color:#8fa0aa!important;
+  opacity:1!important;
+}
+html body.theme-dark :is(button,.home-main-search button,.service-task-nav a,.source-section-tabs a,.home-actions a,.traffic-next a,.article-exit-nav a,.next-reading a,.starter-next,.guide-v101-diagnostics a,.guide-v101-next a),
+html body.reference-ui-v99.theme-dark :is(button,.home-main-search button,.service-task-nav a,.source-section-tabs a,.home-actions a,.traffic-next a,.article-exit-nav a,.next-reading a,.starter-next,.guide-v101-diagnostics a,.guide-v101-next a){
+  border-color:#435362!important;
+}
+html body.theme-dark :is(button:hover,.home-main-search button:hover,.service-task-nav a:hover,.source-section-tabs a:hover,.home-actions a:hover,.traffic-next a:hover,.article-exit-nav a:hover,.next-reading a:hover,.starter-next:hover,.guide-v101-diagnostics a:hover,.guide-v101-next a:hover),
+html body.reference-ui-v99.theme-dark :is(button:hover,.home-main-search button:hover,.service-task-nav a:hover,.source-section-tabs a:hover,.home-actions a:hover,.traffic-next a:hover,.article-exit-nav a:hover,.next-reading a:hover,.starter-next:hover,.guide-v101-diagnostics a:hover,.guide-v101-next a:hover){
+  background:rgba(22,31,40,.92)!important;
+  border-color:#546677!important;
+}
+html body.theme-dark .sidebar-menu a,
+html body.reference-ui-v99.theme-dark .sidebar-menu a{
+  color:#cbd5db!important;
+}
+html body.theme-dark .sidebar-menu a:before,
+html body.reference-ui-v99.theme-dark .sidebar-menu a:before{
+  color:#86a89d!important;
+  background:rgba(255,255,255,.04)!important;
+}
+html body.theme-dark .sidebar-menu a:hover,
+html body.theme-dark .sidebar-menu a[aria-current="page"],
+html body.theme-dark .sidebar-menu a.is-active,
+html body.reference-ui-v99.theme-dark .sidebar-menu a:hover,
+html body.reference-ui-v99.theme-dark .sidebar-menu a[aria-current="page"],
+html body.reference-ui-v99.theme-dark .sidebar-menu a.is-active{
+  background:rgba(82,125,114,.18)!important;
+  color:#f0f4f5!important;
+}
+html body.theme-dark .sidebar-menu a[aria-current="page"],
+html body.theme-dark .sidebar-menu a.is-active,
+html body.reference-ui-v99.theme-dark .sidebar-menu a[aria-current="page"],
+html body.reference-ui-v99.theme-dark .sidebar-menu a.is-active{
+  box-shadow:inset 3px 0 0 #73af9c!important;
+}
+html body.theme-dark .theme-toggle,
+html body.theme-dark .header-about-link,
+html body.theme-dark .ref-theme-button,
+html body.theme-dark .ref-top-favorite,
+html body.reference-ui-v99.theme-dark .theme-toggle,
+html body.reference-ui-v99.theme-dark .header-about-link,
+html body.reference-ui-v99.theme-dark .ref-theme-button,
+html body.reference-ui-v99.theme-dark .ref-top-favorite{
+  background:rgba(13,20,27,.84)!important;
+  border-color:#334350!important;
+  color:#e6ecef!important;
+}
+html body.theme-dark :is(table,thead,tbody,tr),
+html body.reference-ui-v99.theme-dark :is(table,thead,tbody,tr){
+  background:rgba(12,18,24,.78)!important;
+  color:#d8e0e5!important;
+}
+html body.theme-dark th,
+html body.reference-ui-v99.theme-dark th{
+  background:rgba(27,35,44,.96)!important;
+  color:#eef2f4!important;
+  border-color:#3c4b56!important;
+}
+html body.theme-dark td,
+html body.reference-ui-v99.theme-dark td{
+  background:rgba(14,20,27,.8)!important;
+  color:#c3ccd3!important;
+  border-color:#34424d!important;
+}
+html body.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning),
+html body.reference-ui-v99.theme-dark :is(.inline-note,.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+  background:rgba(37,31,22,.84)!important;
+  border-color:#6c5a42!important;
+  color:#dbc5a3!important;
+}
+html body.theme-dark :is(.playbook-facts dt,.playbook-facts dd,.guide-v101-flow b,.guide-v101-funnel-table b,.guide-v101-grid b,.guide-v101-verdict b,.service-card h3,.library-card h3,.about-card h3,.section-card h3),
+html body.reference-ui-v99.theme-dark :is(.playbook-facts dt,.playbook-facts dd,.guide-v101-flow b,.guide-v101-funnel-table b,.guide-v101-grid b,.guide-v101-verdict b,.service-card h3,.library-card h3,.about-card h3,.section-card h3){
+  color:#e8edf0!important;
+}
