@@ -23587,3 +23587,36 @@ html body.reference-ui-v99.theme-dark main:not(.home-page) > :is(.page-head,.sec
   background-color:transparent!important;
   background-image:none!important;
 }
+
+
+/* v318 — real homepage chalkboard texture on every internal page.
+   The texture sits on BODY; internal MAIN is transparent so legacy page backgrounds cannot hide it. */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  background-color:#0b1117!important;
+  background-image:
+    linear-gradient(rgba(5,9,13,.18),rgba(5,9,13,.18)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260825-3181')!important;
+  background-repeat:repeat!important;
+  background-position:left top!important;
+  background-size:auto,1300px 1300px!important;
+  background-attachment:scroll!important;
+}
+html body.theme-dark.internal-page-v198 main:not(.home-page),
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+}
+/* Disable older generated background layers: BODY now owns the texture. */
+html body.theme-dark.internal-page-v198 main:not(.home-page)::before,
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page)::before{
+  content:none!important;
+  display:none!important;
+}
+/* Only structural full-width canvases become transparent; cards/panels keep their surfaces. */
+html body.theme-dark.internal-page-v198 main:not(.home-page) > :is(.page-head,.section-landing-head,.article-layout,.library-shell),
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page) > :is(.page-head,.section-landing-head,.article-layout,.library-shell){
+  background-color:transparent!important;
+  background-image:none!important;
+}
