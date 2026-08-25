@@ -23450,7 +23450,7 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab
   pointer-events:none!important;
   background-image:
     linear-gradient(rgba(8,14,20,.30),rgba(8,14,20,.30)),
-    url('/Affiliate_Lab/assets/home-chalk-reference-soft-tall.png?v=20260825-3101')!important;
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-tall.webp?v=20260825-3241')!important;
   background-repeat:no-repeat!important;
   background-position:center top!important;
   background-size:100% auto!important;
@@ -23502,7 +23502,7 @@ html body.theme-dark main:not(.home-page).section-landing{
   background-color:#0b1015!important;
   background-image:
     linear-gradient(rgba(6,9,12,.74),rgba(6,9,12,.74)),
-    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260825-3101')!important;
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.webp?v=20260825-3241')!important;
   background-repeat:repeat!important;
   background-position:center top!important;
   background-size:1080px auto!important;
@@ -23535,7 +23535,7 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab
   background-color:#081018!important;
   background-image:
     linear-gradient(rgba(8,14,20,.22),rgba(8,14,20,.22)),
-    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260825-3101')!important;
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.webp?v=20260825-3241')!important;
   background-repeat:repeat!important;
   background-position:center top!important;
   background-size:1200px 1200px!important;
@@ -23570,7 +23570,7 @@ html body.reference-ui-v99.theme-dark main:not(.home-page)::before{
   z-index:0!important;
   pointer-events:none!important;
   background-color:#081018!important;
-  background-image:url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260825-3172')!important;
+  background-image:url('/Affiliate_Lab/assets/home-chalk-reference-soft.webp?v=20260825-3241')!important;
   background-repeat:no-repeat!important;
   background-position:center top!important;
   background-size:100% 100%!important;
@@ -23596,7 +23596,7 @@ html body.reference-ui-v99.theme-dark.internal-page-v198{
   background-color:#0b1117!important;
   background-image:
     linear-gradient(rgba(5,9,13,.18),rgba(5,9,13,.18)),
-    url('/Affiliate_Lab/assets/home-chalk-reference-soft.png?v=20260825-3181')!important;
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.webp?v=20260825-3241')!important;
   background-repeat:repeat!important;
   background-position:left top!important;
   background-size:auto,1300px 1300px!important;
@@ -24194,5 +24194,607 @@ html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.article,.source
     max-width:calc(100% - 28px)!important;
     padding-left:0!important;
     padding-right:0!important;
+  }
+}
+
+
+/* ======================================================================
+   v323 — internal dark background softened so it supports text.
+   Homepage stays unchanged.
+   ====================================================================== */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  background-color:#0a1015!important;
+  background-image:
+    linear-gradient(rgba(7,11,16,.44),rgba(7,11,16,.44))!important,
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft.webp?v=20260825-3241')!important;
+  background-repeat:repeat!important;
+  background-position:left top!important;
+  background-size:auto,1300px 1300px!important;
+  background-attachment:scroll!important;
+}
+@media (max-width:1100px){
+  html body.theme-dark.internal-page-v198,
+  html body.reference-ui-v99.theme-dark.internal-page-v198{
+    background-size:auto,1100px 1100px!important;
+  }
+}
+@media (max-width:900px){
+  html body.theme-dark.internal-page-v198,
+  html body.reference-ui-v99.theme-dark.internal-page-v198{
+    background-size:auto,920px 920px!important;
+  }
+}
+@media (max-width:680px){
+  html body.theme-dark.internal-page-v198,
+  html body.reference-ui-v99.theme-dark.internal-page-v198{
+    background-size:auto,760px 760px!important;
+  }
+}
+
+
+/* ======================================================================
+   v324 — light theme cleanup: brighter left menu text, consistent warm card
+   outlines, and inner spacing so headings never hug the edges.
+   ====================================================================== */
+html body.tl-unified-v287:not(.theme-dark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark){
+  --tl-lite-surface:#fffdf9!important;
+  --tl-lite-surface-2:#fbf8f1!important;
+  --tl-lite-line:#ddd4c8!important;
+  --tl-lite-line-strong:#d3c8ba!important;
+  --tl-lite-title:#17231f!important;
+  --tl-lite-copy:#5a645f!important;
+  --tl-lite-green:#2d735d!important;
+  --tl-lite-green-soft:#edf4f0!important;
+  --tl-lite-green-text:#ecf6f2!important;
+  --tl-lite-green-sub:#c5d9d1!important;
+}
+
+/* Left menu text was still too dim in light theme. */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  color:var(--tl-lite-green-text)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.sidebar-group-toggle,.ref-nav-heading,.sidebar-mode-compact>span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.sidebar-group-toggle,.ref-nav-heading,.sidebar-mode-compact>span){
+  color:var(--tl-lite-green-sub)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a,.sidebar-group-reference .sidebar-menu a,.ref-nav-group nav a,.sidebar-bottom a,.sidebar-mode-compact small,.sidebar-hints-toggle,.sidebar-partner-cta b,.sidebar-partner-cta span,.sidebar-partner-cta small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a,.sidebar-group-reference .sidebar-menu a,.ref-nav-group nav a,.sidebar-bottom a,.sidebar-mode-compact small,.sidebar-hints-toggle,.sidebar-partner-cta b,.sidebar-partner-cta span,.sidebar-partner-cta small){
+  color:#e7f2ed!important;
+  opacity:1!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.sidebar-group-reference .sidebar-menu a:hover,.ref-nav-group nav a:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.sidebar-group-reference .sidebar-menu a:hover,.ref-nav-group nav a:hover){
+  color:#fff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-bottom small,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-bottom small{
+  color:#b8d0c8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:before,.nav-icon,.ref-nav-icon),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:before,.nav-icon,.ref-nav-icon){
+  color:#bfe1d4!important;
+  border-color:rgba(255,255,255,.14)!important;
+}
+
+/* Outer light blocks get the same spacing logic as the dark theme. */
+html body.tl-unified-v287:not(.theme-dark) :is(.compact-block-v103,.section-groups,.section-bottom-links,.academy-content-section,.related-reading,.related-primary,.related-secondary),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.compact-block-v103,.section-groups,.section-bottom-links,.academy-content-section,.related-reading,.related-primary,.related-secondary){
+  background:var(--tl-lite-surface)!important;
+  border:1px solid var(--tl-lite-line)!important;
+  border-radius:16px!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.compact-block-v103,.section-groups),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.compact-block-v103,.section-groups){
+  padding:24px 22px 26px!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-group,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group{
+  padding:26px 0!important;
+  border-top-color:var(--tl-lite-line)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-group:first-child,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group:first-child{
+  padding-top:2px!important;
+  border-top:0!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-group-head,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group-head{
+  margin:0 0 18px!important;
+  padding:0 2px!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-group-head h2,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group-head h2{
+  margin:0!important;
+  color:var(--tl-lite-title)!important;
+  line-height:1.2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-group-head p,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group-head p{
+  color:var(--tl-lite-copy)!important;
+}
+
+/* Card outlines/accents should match everywhere, without blue deviations. */
+html body.tl-unified-v287:not(.theme-dark) :is(.section-entry,.section-outcome,.home-entry-grid>a,.home-source-grid>a,.playbook-card,.service-card,.service-tool,.tool-card,.about-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.library-row,.library-card,.calc-card,.diagnostic-card,.notes-card),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.section-entry,.section-outcome,.home-entry-grid>a,.home-source-grid>a,.playbook-card,.service-card,.service-tool,.tool-card,.about-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.library-row,.library-card,.calc-card,.diagnostic-card,.notes-card){
+  background:var(--tl-lite-surface)!important;
+  border:1px solid var(--tl-lite-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-entry,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry{
+  padding:21px 20px 18px!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-entry:before,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry:before{
+  width:4px!important;
+  background:var(--tl-lite-green)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.section-analytics-page .section-entry:before,.section-economics-page .section-entry:before,.section-practice-page .section-entry:before,.section-basics-page .section-entry:before),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.section-analytics-page .section-entry:before,.section-economics-page .section-entry:before,.section-practice-page .section-entry:before,.section-basics-page .section-entry:before){
+  background:var(--tl-lite-green)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-entry b,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry b{
+  color:var(--tl-lite-title)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-entry p,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry p{
+  color:var(--tl-lite-copy)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .section-entry span,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry span{
+  color:#7a5a3d!important;
+}
+
+/* Headings inside content blocks need safe inset on desktop too. */
+html body.tl-unified-v287:not(.theme-dark) :is(.article-page .article,.source-playbook-article,.academy-content-section,.related-reading,.related-primary,.related-secondary,.compact-block-v103),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.article-page .article,.source-playbook-article,.academy-content-section,.related-reading,.related-primary,.related-secondary,.compact-block-v103){
+  padding-left:24px!important;
+  padding-right:24px!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.article-page .article h1,.article-page .article h2,.source-playbook-article h1,.source-playbook-article h2,.academy-content-section h2,.compact-block-v103 h2),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.article-page .article h1,.article-page .article h2,.source-playbook-article h1,.source-playbook-article h2,.academy-content-section h2,.compact-block-v103 h2){
+  line-height:1.18!important;
+}
+
+/* Mobile/narrow screens: keep the same inner air without breaking layouts. */
+@media(max-width:760px){
+  html body.tl-unified-v287:not(.theme-dark) :is(.compact-block-v103,.section-groups,.article-page .article,.source-playbook-article,.academy-content-section,.related-reading,.related-primary,.related-secondary),
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.compact-block-v103,.section-groups,.article-page .article,.source-playbook-article,.academy-content-section,.related-reading,.related-primary,.related-secondary){
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark) .section-entry,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-entry{
+    padding:18px 16px 16px!important;
+  }
+  html body.tl-unified-v287:not(.theme-dark) .section-group-head,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .section-group-head{
+    padding:0!important;
+  }
+}
+
+
+/* ======================================================================
+   v325 — light theme refinement: cleaner lab-first palette, softer contrast,
+   calmer controls and consistent spacing/strokes across the whole interface.
+   ====================================================================== */
+html body.tl-unified-v287:not(.theme-dark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark){
+  --tl-lite-bg:#f3efe8!important;
+  --tl-lite-bg-2:#f7f3ec!important;
+  --tl-lite-surface:#fffdfa!important;
+  --tl-lite-surface-2:#faf7f1!important;
+  --tl-lite-line:#d8d0c4!important;
+  --tl-lite-line-strong:#cbc2b4!important;
+  --tl-lite-title:#1d2a25!important;
+  --tl-lite-copy:#5c6762!important;
+  --tl-lite-copy-soft:#76807a!important;
+  --tl-lite-green:#2f6d59!important;
+  --tl-lite-green-2:#3e7d67!important;
+  --tl-lite-green-soft:#edf4f0!important;
+  --tl-lite-green-soft-2:#e5efe9!important;
+  --tl-lite-warm:#8c6d4c!important;
+  background:var(--tl-lite-bg)!important;
+  color:var(--tl-lite-copy)!important;
+}
+
+html body.tl-unified-v287:not(.theme-dark) :is(main,main:not(.home-page),.page-shell,.page-content),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(main,main:not(.home-page),.page-shell,.page-content){
+  background:transparent!important;
+}
+
+/* Top bar and controls: lighter, quieter, more precise. */
+html body.tl-unified-v287:not(.theme-dark) .site-header,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-header{
+  background:rgba(255,251,245,.92)!important;
+  border-bottom:1px solid rgba(200,191,179,.82)!important;
+  backdrop-filter:blur(12px)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.ref-topbar,.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.ref-topbar,.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:rgba(255,253,249,.96)!important;
+  border:1px solid var(--tl-lite-line)!important;
+  box-shadow:0 6px 18px rgba(52,63,57,.035)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.ref-theme-button:hover,.ref-top-favorite:hover,.header-about-link:hover,.ref-top-home:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button:hover,.ref-top-favorite:hover,.header-about-link:hover,.ref-top-home:hover){
+  background:var(--tl-lite-green-soft)!important;
+  border-color:#bfd0c7!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .ref-top-search input,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .ref-top-search input{
+  color:var(--tl-lite-title)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .ref-top-search input::placeholder,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .ref-top-search input::placeholder{
+  color:#82908a!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .ref-top-progress i,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .ref-top-progress i{
+  background:#dde7e2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .ref-top-progress em,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .ref-top-progress em{
+  background:var(--tl-lite-green-2)!important;
+}
+
+/* Core typography. */
+html body.tl-unified-v287:not(.theme-dark) :is(h1,h2,h3,h4,h5,h6),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(h1,h2,h3,h4,h5,h6){
+  color:var(--tl-lite-title)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(p,li,dd,dt,small,span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(p,li,dd,dt,small,span){
+  color:var(--tl-lite-copy)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.eyebrow,.section-label,.page-head small,.section-group-head small,.saved-block-head span,.problem-step>span,.problem-follow>span,.problem-result>span,.article-label,.library-type, .service-mark,.rail-tool-mark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.eyebrow,.section-label,.page-head small,.section-group-head small,.saved-block-head span,.problem-step>span,.problem-follow>span,.problem-result>span,.article-label,.library-type,.service-mark,.rail-tool-mark){
+  color:var(--tl-lite-warm)!important;
+}
+
+/* Cards and content shells. */
+html body.tl-unified-v287:not(.theme-dark) :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid > .saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.academy-content-section,.compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.diagnostic-wizard-card,.saved-card,.saved-empty,.problem-result-links a,.source-section-tabs a,.rail-all-tools),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid > .saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.academy-content-section,.compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.diagnostic-wizard-card,.saved-card,.saved-empty,.problem-result-links a,.source-section-tabs a,.rail-all-tools){
+  background:linear-gradient(180deg,rgba(255,253,249,.98),rgba(251,247,240,.97))!important;
+  border:1px solid var(--tl-lite-line)!important;
+  box-shadow:0 10px 28px rgba(46,55,50,.038)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.saved-card,.problem-result-links a,.source-section-tabs a,.rail-all-tools):hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.saved-card,.problem-result-links a,.source-section-tabs a,.rail-all-tools):hover{
+  border-color:#c1d1c8!important;
+  box-shadow:0 14px 34px rgba(46,55,50,.055)!important;
+}
+
+/* Lab-first accents instead of cold blue. */
+html body.tl-unified-v287:not(.theme-dark) :is(a,.plain-link,.text-cta,.guide-v101-inline-link a,.service-tool>a,.source-toolkit-helper a,.source-toolkit-all a,.playbook-card>a,.bookmark-button,.saved-link,.section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.rail-all-tools,.source-section-tabs a.is-current,.source-section-tabs a:first-child),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(a,.plain-link,.text-cta,.guide-v101-inline-link a,.service-tool>a,.source-toolkit-helper a,.source-toolkit-all a,.playbook-card>a,.bookmark-button,.saved-link,.section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.rail-all-tools,.source-section-tabs a.is-current,.source-section-tabs a:first-child){
+  color:var(--tl-lite-green)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(a:hover,.plain-link:hover,.text-cta:hover,.guide-v101-inline-link a:hover,.service-tool>a:hover,.source-toolkit-helper a:hover,.source-toolkit-all a:hover,.playbook-card>a:hover,.bookmark-button:hover,.saved-link:hover,.section-bottom-links a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,.article-exit-nav a:hover,.next-reading a:hover,.rail-all-tools:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(a:hover,.plain-link:hover,.text-cta:hover,.guide-v101-inline-link a:hover,.service-tool>a:hover,.source-toolkit-helper a:hover,.source-toolkit-all a:hover,.playbook-card>a:hover,.bookmark-button:hover,.saved-link:hover,.section-bottom-links a:hover,.guide-v101-next a:hover,.guide-v101-diagnostics a:hover,.article-exit-nav a:hover,.next-reading a:hover,.rail-all-tools:hover){
+  color:#224f41!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a,.ref-nav-group nav a[aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a,.ref-nav-group nav a[aria-current="page"]){
+  background:var(--tl-lite-green-soft)!important;
+  border-color:#bfd0c7!important;
+  color:#21483b!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a):hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a):hover{
+  background:var(--tl-lite-green-soft-2)!important;
+  border-color:#adc3b8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.home-action-partner,.sidebar-partner-cta,.ref-partner-card),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.home-action-partner,.sidebar-partner-cta,.ref-partner-card){
+  background:linear-gradient(180deg,#fff7ea,#fbf0de)!important;
+  border-color:#deccb3!important;
+}
+
+/* Left menu and footer should feel like one lab control panel. */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:linear-gradient(180deg,#2f6f5a 0%,#295e4d 100%)!important;
+  border-right:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:inset -1px 0 0 rgba(255,255,255,.04)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a,.sidebar-menu a),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a,.sidebar-menu a){
+  border-color:rgba(255,255,255,.08)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a:hover,.sidebar-menu a:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a:hover,.sidebar-menu a:hover){
+  background:rgba(255,255,255,.08)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a[aria-current="page"],.sidebar-menu a[aria-current="page"],.sidebar-menu a.active,.sidebar-menu a.is-active),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a[aria-current="page"],.sidebar-menu a[aria-current="page"],.sidebar-menu a.active,.sidebar-menu a.is-active){
+  background:rgba(255,255,255,.12)!important;
+  border-color:rgba(255,255,255,.14)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:linear-gradient(180deg,#2f6f5a 0%,#295e4d 100%)!important;
+  color:#e7f2ed!important;
+  border-top:0!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(h2,h3,h4,b,strong,a,p,li,small,span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer :is(h2,h3,h4,b,strong,a,p,li,small,span){
+  color:#e7f2ed!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer small,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer small{
+  color:#bfd4cb!important;
+}
+
+/* Form fields and utility chips. */
+html body.tl-unified-v287:not(.theme-dark) :is(input,select,textarea,.home-main-search input,.sidebar-search input),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(input,select,textarea,.home-main-search input,.sidebar-search input){
+  background:#fffdfa!important;
+  border:1px solid #d4cabd!important;
+  color:var(--tl-lite-title)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(input,select,textarea,.home-main-search input,.sidebar-search input):focus,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(input,select,textarea,.home-main-search input,.sidebar-search input):focus{
+  outline:none!important;
+  border-color:#a8c0b5!important;
+  box-shadow:0 0 0 4px rgba(47,109,89,.08)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.tag,.chip,.home-actions a,.saved-card>span,.article-meta span,.source-meta .chip,.rule-model-badge),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.tag,.chip,.home-actions a,.saved-card>span,.article-meta span,.source-meta .chip,.rule-model-badge){
+  border-radius:999px!important;
+}
+
+/* Gentle separators and readable side rails. */
+html body.tl-unified-v287:not(.theme-dark) :is(hr,.section-group,.article-aside.enhanced-rail .aside-block,.problem-source-row,.saved-block-head),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(hr,.section-group,.article-aside.enhanced-rail .aside-block,.problem-source-row,.saved-block-head){
+  border-color:rgba(208,199,187,.9)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .article-aside.enhanced-rail,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-aside.enhanced-rail{
+  background:transparent!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .article-aside.enhanced-rail .aside-block,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-aside.enhanced-rail .aside-block{
+  border-radius:14px!important;
+  margin-bottom:14px!important;
+}
+
+/* Keep numbers and small highlights visible, but not harsh. */
+html body.tl-unified-v287:not(.theme-dark) :is(.section-entry-index,.home-entry-grid .index,.home-source-grid .index,.saved-card-mark,.step-badge,.note-badge),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.section-entry-index,.home-entry-grid .index,.home-source-grid .index,.saved-card-mark,.step-badge,.note-badge){
+  background:#e6f0eb!important;
+  border:1px solid #c5d8cf!important;
+  color:#255544!important;
+}
+
+@media(max-width:760px){
+  html body.tl-unified-v287:not(.theme-dark) :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.section-groups,.related-reading,.related-primary,.related-secondary,.diagnostic-wizard-card),
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.section-groups,.related-reading,.related-primary,.related-secondary,.diagnostic-wizard-card){
+    border-radius:14px!important;
+  }
+}
+
+
+/* ======================================================================
+   v326 — full site cleanup pass for both themes.
+   Purpose: align spacing, borders, rail blocks, buttons, typography and
+   reduce visual roughness across desktop/mobile in light and dark modes.
+   ====================================================================== */
+
+/* Shared structural rhythm */
+html body.tl-unified-v287,
+html body.tl-unified-v287.reference-ui-v99{
+  --tl-radius-1:16px;
+  --tl-radius-2:18px;
+  --tl-pad-x:24px;
+  --tl-pad-y:22px;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.related-reading,.related-primary,.related-secondary,.diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.library-card,.service-card,.service-tool,.tool-card,.playbook-card,.source-tool-card,.about-card,.section-card,.section-entry,.section-outcome,.problem-result-links a,.traffic-next a,.article-aside.enhanced-rail .aside-block,.saved-card,.saved-empty,.home-entry-grid>a,.home-source-grid>a,.journal-reading-grid>.saved-block,.section-bottom-links,.traffic-hub-basics>div,.source-compare-row>div,.source-compare-actions a,.rail-all-tools,.source-compare-picker,.source-compare-table){
+  border-radius:var(--tl-radius-1)!important;
+}
+html body.tl-unified-v287 :is(.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.related-reading,.related-primary,.related-secondary,.diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card){
+  padding:var(--tl-pad-y) var(--tl-pad-x)!important;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head){
+  padding:26px var(--tl-pad-x)!important;
+}
+html body.tl-unified-v287 :is(.article-page .article h1,.article-page .article h2,.article-page .article h3,.source-playbook-article h1,.source-playbook-article h2,.source-playbook-article h3,.academy-content-section h2,.academy-content-section h3,.compact-block-v103 h2,.compact-block-v103 h3,.page-head h1,.page-head h2,.section-landing-head h1,.section-landing-head h2){
+  line-height:1.14!important;
+  margin-top:0!important;
+  margin-bottom:14px!important;
+}
+html body.tl-unified-v287 :is(.article-page .article p,.source-playbook-article p,.academy-content-section p,.compact-block-v103 p,.page-head p,.section-landing-head p){
+  line-height:1.68!important;
+  margin-top:0!important;
+  margin-bottom:14px!important;
+}
+html body.tl-unified-v287 :is(.article-page .article ul,.article-page .article ol,.source-playbook-article ul,.source-playbook-article ol,.academy-content-section ul,.academy-content-section ol,.compact-block-v103 ul,.compact-block-v103 ol){
+  padding-left:1.15rem!important;
+}
+html body.tl-unified-v287 :is(.article-page .article li,.source-playbook-article li,.academy-content-section li,.compact-block-v103 li){
+  margin-bottom:8px!important;
+}
+html body.tl-unified-v287 :is(.page-head,.section-landing-head,.academy-content-section,.compact-block-v103,.related-reading,.related-primary,.related-secondary,.diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.article-page .article,.source-playbook-article){
+  margin-bottom:18px!important;
+}
+html body.tl-unified-v287 :is(img,video,iframe,.article-figure img,.article-hero img,.step-figure img){
+  max-width:100%!important;
+  border-radius:14px!important;
+}
+html body.tl-unified-v287 :is(table){
+  width:100%!important;
+  border-collapse:separate!important;
+  border-spacing:0!important;
+}
+html body.tl-unified-v287 :is(th,td){
+  vertical-align:top!important;
+}
+html body.tl-unified-v287 :is(.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.section-groups,.related-reading,.related-primary,.related-secondary,.diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.page-head,.section-landing-head,.library-card,.service-card,.service-tool,.tool-card,.playbook-card,.source-tool-card,.about-card,.section-card,.section-entry,.section-outcome,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,.article-aside.enhanced-rail .aside-block,.source-compare-row>div,.source-compare-actions a,.problem-result-links a,.traffic-next a,.section-bottom-links,.traffic-hub-basics>div,.rail-all-tools,.source-section-tabs a){
+  overflow-wrap:anywhere!important;
+}
+html body.tl-unified-v287 .article-aside.enhanced-rail{
+  gap:14px!important;
+}
+html body.tl-unified-v287 .article-aside.enhanced-rail .aside-block{
+  padding:16px!important;
+}
+html body.tl-unified-v287 :is(.source-section-tabs,.article-cta-row,.problem-result-links,.source-compare-actions,.home-actions,.traffic-next){
+  gap:10px!important;
+}
+html body.tl-unified-v287 :is(.source-section-tabs a,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.home-actions a,.traffic-next a,.rail-all-tools,.button-primary,.home-main-search button,.sidebar-partner-cta,.source-partner-cta>a){
+  min-height:42px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:10px 14px!important;
+  font-weight:700!important;
+}
+html body.tl-unified-v287 :is(.section-entry,.section-outcome,.library-card,.service-card,.service-tool,.tool-card,.playbook-card,.source-tool-card,.about-card,.section-card,.saved-card,.journal-reading-grid>.saved-block,.home-entry-grid>a,.home-source-grid>a){
+  padding:20px!important;
+}
+html body.tl-unified-v287 :is(.section-entry h3,.section-entry b,.section-outcome h3,.library-card h3,.service-card h3,.service-tool h3,.tool-card h3,.playbook-card h3,.source-tool-card h3,.about-card h3,.section-card h3,.saved-card h3,.home-entry-grid>a h3,.home-source-grid>a h3){
+  margin-top:0!important;
+  margin-bottom:10px!important;
+}
+html body.tl-unified-v287 :is(.ref-top-home,.ref-top-favorite,.ref-theme-button,.header-about-link,.ref-top-search){
+  border-radius:14px!important;
+}
+
+/* Dark theme tuning */
+html body.tl-unified-v287.theme-dark,
+html body.tl-unified-v287.reference-ui-v99.theme-dark{
+  --tl-dark-bg:#071019!important;
+  --tl-dark-surface:#0c1721!important;
+  --tl-dark-surface-2:#0f1d28!important;
+  --tl-dark-line:#1d2d38!important;
+  --tl-dark-line-soft:#233744!important;
+  --tl-dark-title:#edf1eb!important;
+  --tl-dark-copy:#c4cec9!important;
+  --tl-dark-copy-soft:#98a7a1!important;
+  --tl-dark-green:#73b29a!important;
+  --tl-dark-green-soft:rgba(115,178,154,.14)!important;
+  color:var(--tl-dark-copy)!important;
+}
+html body.tl-unified-v287.theme-dark .site-header,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .site-header{
+  background:rgba(7,15,24,.82)!important;
+  border-bottom:1px solid rgba(39,58,70,.92)!important;
+  backdrop-filter:blur(12px)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.ref-topbar,.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.ref-topbar,.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:rgba(12,23,33,.9)!important;
+  border:1px solid var(--tl-dark-line)!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.ref-top-home:hover,.ref-top-favorite:hover,.ref-theme-button:hover,.header-about-link:hover),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.ref-top-home:hover,.ref-top-favorite:hover,.ref-theme-button:hover,.header-about-link:hover){
+  background:rgba(18,32,44,.95)!important;
+  border-color:var(--tl-dark-line-soft)!important;
+}
+html body.tl-unified-v287.theme-dark :is(h1,h2,h3,h4,h5,h6),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,h5,h6){
+  color:var(--tl-dark-title)!important;
+}
+html body.tl-unified-v287.theme-dark :is(p,li,dd,dt,span,small),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(p,li,dd,dt,span,small){
+  color:var(--tl-dark-copy)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.eyebrow,.section-label,.page-head small,.section-group-head small,.saved-block-head span,.problem-step>span,.problem-follow>span,.problem-result>span,.article-label,.library-type,.service-mark,.rail-tool-mark),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.eyebrow,.section-label,.page-head small,.section-group-head small,.saved-block-head span,.problem-step>span,.problem-follow>span,.problem-result>span,.article-label,.library-type,.service-mark,.rail-tool-mark){
+  color:#c8a985!important;
+}
+html body.tl-unified-v287.theme-dark :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid>.saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.academy-content-section,.compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.diagnostic-wizard-card,.saved-card,.saved-empty,.problem-result-links a,.source-section-tabs a,.rail-all-tools),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid>.saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,.library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,.home-entry-grid>a,.home-source-grid>a,.section-entry,.section-outcome,.academy-content-section,.compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,.notes-card,.diagnostic-wizard-card,.saved-card,.saved-empty,.problem-result-links a,.source-section-tabs a,.rail-all-tools){
+  background:linear-gradient(180deg,rgba(11,22,31,.9),rgba(10,19,28,.88))!important;
+  border:1px solid var(--tl-dark-line)!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.12)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.library-row:hover,.library-card:hover,.service-card:hover,.service-tool:hover,.tool-card:hover,.about-card:hover,.section-card:hover,.home-entry-grid>a:hover,.home-source-grid>a:hover,.section-entry:hover,.section-outcome:hover,.playbook-card:hover,.source-tool-card:hover,.traffic-next a:hover,.traffic-hub-basics>div:hover,.calc-card:hover,.diagnostic-card:hover,.notes-card:hover,.saved-card:hover,.problem-result-links a:hover,.source-section-tabs a:hover,.rail-all-tools:hover),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.library-row:hover,.library-card:hover,.service-card:hover,.service-tool:hover,.tool-card:hover,.about-card:hover,.section-card:hover,.home-entry-grid>a:hover,.home-source-grid>a:hover,.section-entry:hover,.section-outcome:hover,.playbook-card:hover,.source-tool-card:hover,.traffic-next a:hover,.traffic-hub-basics>div:hover,.calc-card:hover,.diagnostic-card:hover,.notes-card:hover,.saved-card:hover,.problem-result-links a:hover,.source-section-tabs a:hover,.rail-all-tools:hover){
+  border-color:var(--tl-dark-line-soft)!important;
+}
+html body.tl-unified-v287.theme-dark :is(a,.plain-link,.text-cta,.guide-v101-inline-link a,.service-tool>a,.source-toolkit-helper a,.source-toolkit-all a,.playbook-card>a,.bookmark-button,.saved-link,.section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.rail-all-tools,.source-section-tabs a.is-current,.source-section-tabs a:first-child),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(a,.plain-link,.text-cta,.guide-v101-inline-link a,.service-tool>a,.source-toolkit-helper a,.source-toolkit-all a,.playbook-card>a,.bookmark-button,.saved-link,.section-bottom-links a,.guide-v101-next a,.guide-v101-diagnostics a,.article-exit-nav a,.next-reading a,.rail-all-tools,.source-section-tabs a.is-current,.source-section-tabs a:first-child){
+  color:var(--tl-dark-green)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a,.ref-nav-group nav a[aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.button-primary,.source-partner-cta>a,.home-actions a:not(.home-action-partner),.home-main-search button,.article-cta-row a,.source-compare-actions a,.home-results nav a,.traffic-next .primary,.problem-result-links a,.ref-nav-group nav a[aria-current="page"]){
+  background:var(--tl-dark-green-soft)!important;
+  border-color:#315646!important;
+  color:#cde7dc!important;
+}
+html body.tl-unified-v287.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input){
+  background:rgba(8,17,26,.82)!important;
+  border:1px solid var(--tl-dark-line)!important;
+  color:var(--tl-dark-title)!important;
+}
+html body.tl-unified-v287.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input):focus,
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input):focus{
+  border-color:#355646!important;
+  box-shadow:0 0 0 4px rgba(115,178,154,.08)!important;
+}
+html body.tl-unified-v287.theme-dark .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .global-sidebar{
+  background:linear-gradient(180deg,rgba(7,15,24,.98),rgba(8,19,28,.98))!important;
+  border-right:1px solid rgba(31,48,59,.9)!important;
+}
+html body.tl-unified-v287.theme-dark .site-footer,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .site-footer{
+  background:linear-gradient(180deg,rgba(7,15,24,.98),rgba(8,19,28,.98))!important;
+  border-top:1px solid rgba(31,48,59,.9)!important;
+}
+html body.tl-unified-v287.theme-dark .site-footer :is(h2,h3,h4,b,strong,a,p,li,small,span),
+html body.tl-unified-v287.reference-ui-v99.theme-dark .site-footer :is(h2,h3,h4,b,strong,a,p,li,small,span){
+  color:var(--tl-dark-copy)!important;
+}
+
+/* Light theme extra cleanup */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group h4,.sidebar-group-title,.sidebar-heading),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group h4,.sidebar-group-title,.sidebar-heading){
+  color:#eef7f2!important;
+  opacity:.95!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a,.sidebar-menu a,.sidebar-menu button,.sidebar-menu span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a,.sidebar-menu a,.sidebar-menu button,.sidebar-menu span){
+  color:#f3fbf7!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a small,.sidebar-menu a small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.ref-nav-group nav a small,.sidebar-menu a small){
+  color:#dceae3!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.source-section-tabs a,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.home-actions a,.traffic-next a,.rail-all-tools),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.source-section-tabs a,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.home-actions a,.traffic-next a,.rail-all-tools){
+  background:rgba(255,252,247,.98)!important;
+}
+
+/* Mobile and narrow screens */
+@media(max-width:980px){
+  html body.tl-unified-v287{
+    --tl-pad-x:18px;
+    --tl-pad-y:18px;
+  }
+  html body.tl-unified-v287 .article-aside.enhanced-rail{
+    gap:12px!important;
+  }
+}
+@media(max-width:760px){
+  html body.tl-unified-v287{
+    --tl-pad-x:16px;
+    --tl-pad-y:16px;
+  }
+  html body.tl-unified-v287 :is(.page-head,.section-landing-head,.article-page .article,.source-playbook-article,.academy-content-section,.compact-block-v103,.related-reading,.related-primary,.related-secondary,.diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.library-card,.service-card,.service-tool,.tool-card,.playbook-card,.source-tool-card,.about-card,.section-card,.section-entry,.section-outcome,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,.article-aside.enhanced-rail .aside-block,.source-compare-row>div,.section-bottom-links,.traffic-hub-basics>div){
+    border-radius:14px!important;
+  }
+  html body.tl-unified-v287 :is(.source-section-tabs a,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.home-actions a,.traffic-next a,.rail-all-tools,.button-primary,.home-main-search button,.sidebar-partner-cta,.source-partner-cta>a){
+    width:100%!important;
   }
 }
