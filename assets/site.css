@@ -24798,3 +24798,1046 @@ html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.source-section-
     width:100%!important;
   }
 }
+
+
+/* ======================================================================
+   v327 — article card edges and text inset cleanup.
+   Prevent consecutive article sections from visually merging into one
+   sharp rectangle; keep all text safely inside the card in both themes.
+   ====================================================================== */
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > .academy-article-hero,
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding:24px 26px 25px!important;
+  border-radius:16px!important;
+  overflow:hidden!important;
+  background-clip:padding-box!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > .academy-article-hero{
+  margin-top:0!important;
+  margin-bottom:20px!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+  margin-top:0!important;
+  margin-bottom:18px!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103 + section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103 + section.article-depth.logic-section-v103,
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103 + section{
+  margin-top:0!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(.academy-article-hero,section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > :is(h1,h2,h3,p,ul,ol,dl,figure,table,pre,.inline-note,.article-actions,.academy-article-hero-main,.academy-article-hero-foot){
+  max-width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2{
+  display:grid!important;
+  grid-template-columns:auto minmax(0,1fr)!important;
+  align-items:center!important;
+  column-gap:14px!important;
+  row-gap:8px!important;
+  width:100%!important;
+  margin:0 0 14px!important;
+  padding:0!important;
+  line-height:1.18!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2:not(:has(.logic-index-v103)){
+  display:block!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > :is(p,ul,ol,dl,figure,table,pre,.inline-note){
+  margin-left:0!important;
+  margin-right:0!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > p{
+  margin-top:0!important;
+  margin-bottom:14px!important;
+  line-height:1.68!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > p:last-child{
+  margin-bottom:0!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 .logic-index-v103{
+  flex:0 0 auto!important;
+  align-self:center!important;
+  margin:0!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) .inline-note{
+  margin:18px 0 0!important;
+  padding:16px 18px!important;
+  border-radius:12px!important;
+  box-sizing:border-box!important;
+}
+
+/* Dark article surfaces — visible separation without excessive contrast. */
+html body.tl-unified-v287.theme-dark.content-system-v103 .structured-article-v103 > .academy-article-hero,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.content-system-v103 .structured-article-v103 > .academy-article-hero,
+html body.tl-unified-v287.theme-dark.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.theme-dark.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+  background:linear-gradient(180deg,rgba(10,22,31,.92),rgba(8,18,27,.90))!important;
+  border:1px solid #20313d!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.10)!important;
+}
+html body.tl-unified-v287.theme-dark.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) + :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103),
+html body.tl-unified-v287.reference-ui-v99.theme-dark.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) + :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103){
+  border-top:1px solid #20313d!important;
+}
+
+/* Light article surfaces — same geometry, softer warm border. */
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > .academy-article-hero,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > .academy-article-hero,
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+  background:linear-gradient(180deg,#fffdfa,#fbf8f2)!important;
+  border:1px solid #d8d0c4!important;
+  box-shadow:0 9px 24px rgba(40,52,46,.035)!important;
+}
+
+@media(max-width:760px){
+  html body.tl-unified-v287.content-system-v103 .structured-article-v103 > .academy-article-hero,
+  html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+  html body.tl-unified-v287.content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+    padding:19px 17px 20px!important;
+    border-radius:14px!important;
+    margin-bottom:14px!important;
+  }
+  html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2{
+    column-gap:11px!important;
+    font-size:clamp(21px,6vw,25px)!important;
+  }
+}
+
+/* ======================================================================
+   v328 — light-theme article recovery + restored green chrome.
+   Fixes: broken article heading flow, drifting light article surfaces,
+   brighter left navigation / footer, and safer text wrapping.
+   ====================================================================== */
+
+/* Restore the old green frame in light theme and brighten copy. */
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:#18443a!important;
+  border-right:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:8px 0 24px rgba(19,53,45,.12)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-brand,.sidebar-brand b,.sidebar-brand strong),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand,.sidebar-brand b,.sidebar-brand strong){
+  color:#f4fbf8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-brand small,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-brand small{
+  color:#bed8d0!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-group-title,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-group-title{
+  color:#deefe8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-search input,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-search input{
+  background:rgba(7,24,19,.26)!important;
+  color:#f4fbf8!important;
+  border-color:rgba(255,255,255,.15)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-search input::placeholder,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-search input::placeholder{
+  color:#b8d0c8!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-menu a,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a{
+  color:#e1efe9!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-menu a:before,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:before{
+  color:#b8d8cc!important;
+  background:rgba(255,255,255,.055)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-menu a:hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:hover{
+  background:rgba(255,255,255,.08)!important;
+  color:#ffffff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar .sidebar-menu a:is(.active,.is-active,[aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:is(.active,.is-active,[aria-current="page"]){
+  background:rgba(103,212,170,.17)!important;
+  color:#ffffff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-partner-cta,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-partner-cta{
+  background:rgba(99,193,156,.12)!important;
+  border-color:rgba(125,219,182,.24)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-bottom,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-bottom,
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-bottom a,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-bottom a,
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar>.sidebar-bottom small,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar>.sidebar-bottom small{
+  color:#d8ebe4!important;
+}
+
+html body.tl-unified-v287:not(.theme-dark) .site-footer,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#18443a!important;
+  border-top:3px solid #2d7c66!important;
+  color:#eef7f3!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(.footer-brand,.footer-links a,.footer-bottom span,.footer-main p),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer :is(.footer-brand,.footer-links a,.footer-bottom span,.footer-main p){
+  color:#eef7f3!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer .footer-links a:hover,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a:hover{
+  color:#ffffff!important;
+}
+
+/* Light article pages: keep a stable, centered surface. */
+html body.tl-unified-v287:not(.theme-dark) .article-page,
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-page,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page{
+  background:#f4f1ea!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .article-page .article-layout,
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page .article-layout,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-page .article-layout,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page .article-layout{
+  align-items:start!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .article-page .article,
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page .source-playbook-article,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-page .article,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page .source-playbook-article{
+  position:relative!important;
+  min-width:0!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .article-page .academy-article-hero,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .article-page .academy-article-hero{
+  margin:0 0 18px!important;
+  padding:0 0 16px!important;
+  border-bottom:1px solid #ddd5ca!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page .source-hero-shell,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page .source-hero-shell{
+  margin:0 0 18px!important;
+  padding:0 0 16px!important;
+  border-bottom:1px solid #ddd5ca!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page .source-playbook-article>section,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page .source-playbook-article>section{
+  margin:0!important;
+  padding:18px 0 19px!important;
+  border-top:1px solid #e0d8cb!important;
+  border-bottom:0!important;
+  background:transparent!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .source-playbook-page .source-playbook-article>section:first-of-type,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .source-playbook-page .source-playbook-article>section:first-of-type{
+  border-top:0!important;
+}
+
+/* Structured article sections: card geometry without text collapse. */
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+  background:linear-gradient(180deg,#fffdfa,#faf7f1)!important;
+  border:1px solid #d9d1c5!important;
+  border-radius:16px!important;
+  box-shadow:0 8px 20px rgba(45,59,53,.035)!important;
+  padding:23px 24px 24px!important;
+  overflow:visible!important;
+}
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103 + section,
+html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103 + section,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103 + section,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103 + section{
+  margin-top:0!important;
+}
+
+/* Broken title fix: stop ultra-narrow wrapping and pin the number badge. */
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2,
+html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  margin:0 0 14px!important;
+  line-height:1.18!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  hyphens:none!important;
+  text-wrap:pretty!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2:has(.logic-index-v103),
+html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2:has(.logic-index-v103){
+  position:relative!important;
+  padding-left:56px!important;
+  min-height:40px!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 .logic-index-v103,
+html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 .logic-index-v103{
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  margin:0!important;
+  flex:none!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2 > :not(.logic-index-v103),
+html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2 > :not(.logic-index-v103){
+  display:inline!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  hyphens:none!important;
+}
+html body.tl-unified-v287.content-system-v103 .structured-article-v103 :is(h1,h2,h3,p,li,dd,figcaption,span,b,strong,a),
+html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 :is(h1,h2,h3,p,li,dd,figcaption,span,b,strong,a){
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
+}
+
+@media(max-width:760px){
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+  html body.tl-unified-v287:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.academy-content-section.logic-section-v103,
+  html body.tl-unified-v287.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > section.article-depth.logic-section-v103{
+    padding:19px 17px 20px!important;
+    border-radius:14px!important;
+  }
+  html body.tl-unified-v287.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2:has(.logic-index-v103),
+  html body.tl-unified-v287.reference-ui-v99.content-system-v103 .structured-article-v103 > :is(section.academy-content-section.logic-section-v103,section.article-depth.logic-section-v103) > h2:has(.logic-index-v103){
+    padding-left:50px!important;
+    min-height:36px!important;
+  }
+}
+
+/* ======================================================================
+   v329 — higher-quality homepage background only.
+   Keep internals lightweight; raise detail just on the main page.
+   ====================================================================== */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  background-image:
+    linear-gradient(rgba(8,14,20,.30),rgba(8,14,20,.30)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-tall-hq.webp?v=20260825-3291')!important;
+}
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background-image:
+    linear-gradient(rgba(8,14,20,.22),rgba(8,14,20,.22)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-hq.webp?v=20260825-3291')!important;
+  background-size:1300px 1300px!important;
+}
+@media (max-width:900px){
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+    background-size:1040px 1040px!important;
+  }
+}
+@media (max-width:680px){
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+    background-size:820px 820px!important;
+  }
+}
+
+/* ======================================================================
+   v330 — internal dark mode: exact option E matte-charcoal background,
+   GitHub-inspired neutral palette with GitHub green as the lab accent.
+   Homepage background is intentionally untouched.
+   ====================================================================== */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  --gh-canvas:#0d1117!important;
+  --gh-canvas-subtle:#161b22!important;
+  --gh-canvas-inset:#010409!important;
+  --gh-border:#30363d!important;
+  --gh-border-muted:#21262d!important;
+  --gh-fg:#e6edf3!important;
+  --gh-fg-muted:#8b949e!important;
+  --gh-fg-subtle:#6e7681!important;
+  --gh-green:#3fb950!important;
+  --gh-green-strong:#2ea043!important;
+  --gh-green-deep:#238636!important;
+  --gh-green-soft:rgba(46,160,67,.14)!important;
+  --gh-warm:#d29922!important;
+  color:var(--gh-fg)!important;
+  background-color:var(--gh-canvas)!important;
+  background-image:
+    linear-gradient(rgba(13,17,23,.10),rgba(13,17,23,.10)),
+    url('/Affiliate_Lab/assets/internal-bg-matte-charcoal-e.webp?v=20260825-3301')!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  background-attachment:fixed!important;
+}
+
+/* Body owns the internal texture. All structural canvases stay transparent. */
+html body.theme-dark.internal-page-v198 main:not(.home-page),
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page),
+html body.theme-dark.internal-page-v198 main:not(.home-page)::before,
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page)::before{
+  background:transparent!important;
+  background-image:none!important;
+  filter:none!important;
+}
+html body.theme-dark.internal-page-v198 main:not(.home-page)::before,
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page)::before{
+  content:none!important;
+  display:none!important;
+}
+html body.theme-dark.internal-page-v198 main:not(.home-page) > :is(.page-head,.section-landing-head,.article-layout,.library-shell,.traffic-hub-main,.services-intro),
+html body.reference-ui-v99.theme-dark.internal-page-v198 main:not(.home-page) > :is(.page-head,.section-landing-head,.article-layout,.library-shell,.traffic-hub-main,.services-intro){
+  background:transparent!important;
+  background-image:none!important;
+}
+
+/* GitHub canvas/chrome */
+html body.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer){
+  background:rgba(13,17,23,.96)!important;
+  border-color:var(--gh-border)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 .site-header,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .site-header{
+  backdrop-filter:blur(10px)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:rgba(22,27,34,.96)!important;
+  border:1px solid var(--gh-border)!important;
+  color:var(--gh-fg)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover{
+  background:#1f2630!important;
+  border-color:#484f58!important;
+}
+
+/* GitHub-like surfaces; slightly translucent so E remains visible. */
+html body.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,.rail-cover-card,
+  .home-search-card,.catalog-search,.library-row,.library-card,.service-card,.service-tool,
+  .tool-card,.about-card,.section-card,.section-entry,.section-outcome,.playbook-card,
+  .source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,.rail-all-tools
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,.rail-cover-card,
+  .home-search-card,.catalog-search,.library-row,.library-card,.service-card,.service-tool,
+  .tool-card,.about-card,.section-card,.section-entry,.section-outcome,.playbook-card,
+  .source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,.rail-all-tools
+){
+  background:rgba(22,27,34,.90)!important;
+  border-color:var(--gh-border)!important;
+  box-shadow:0 8px 26px rgba(1,4,9,.16)!important;
+  color:var(--gh-fg)!important;
+}
+
+/* Typography */
+html body.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:var(--gh-fg)!important;
+}
+html body.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small){
+  color:#b7c0ca!important;
+}
+html body.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption){
+  color:var(--gh-fg-muted)!important;
+}
+html body.theme-dark.internal-page-v198 a,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a{
+  color:#7ee787!important;
+}
+html body.theme-dark.internal-page-v198 a:hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a:hover{
+  color:#aff5b4!important;
+}
+
+/* Green lab accents using GitHub's success palette. */
+html body.theme-dark.internal-page-v198 :is(.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active){
+  background:var(--gh-green-soft)!important;
+  color:#f0fff4!important;
+  box-shadow:inset 3px 0 0 var(--gh-green)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-top-progress em,.rail-progress span),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-progress em,.rail-progress span){
+  background:var(--gh-green)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark){
+  background:rgba(46,160,67,.14)!important;
+  border-color:rgba(63,185,80,.34)!important;
+  color:#7ee787!important;
+}
+
+/* Inputs and buttons */
+html body.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input){
+  background:var(--gh-canvas)!important;
+  border:1px solid var(--gh-border)!important;
+  color:var(--gh-fg)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(input,select,textarea):focus,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea):focus{
+  border-color:var(--gh-green)!important;
+  box-shadow:0 0 0 3px rgba(46,160,67,.16)!important;
+  outline:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.traffic-next .primary),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.traffic-next .primary){
+  background:var(--gh-green-deep)!important;
+  border-color:rgba(240,246,252,.10)!important;
+  color:#fff!important;
+}
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.traffic-next .primary):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.article-cta-row a,.problem-result-links a,.source-compare-actions a,.traffic-next .primary):hover{
+  background:var(--gh-green-strong)!important;
+}
+
+/* Tables / notes */
+html body.theme-dark.internal-page-v198 table,
+html body.reference-ui-v99.theme-dark.internal-page-v198 table{
+  background:rgba(13,17,23,.92)!important;
+  color:var(--gh-fg)!important;
+}
+html body.theme-dark.internal-page-v198 th,
+html body.reference-ui-v99.theme-dark.internal-page-v198 th{
+  background:var(--gh-canvas-subtle)!important;
+  color:var(--gh-fg)!important;
+  border-color:var(--gh-border)!important;
+}
+html body.theme-dark.internal-page-v198 td,
+html body.reference-ui-v99.theme-dark.internal-page-v198 td{
+  background:rgba(13,17,23,.84)!important;
+  color:#b7c0ca!important;
+  border-color:var(--gh-border)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning){
+  background:rgba(210,153,34,.08)!important;
+  border-color:rgba(210,153,34,.30)!important;
+  color:#d7c49b!important;
+}
+
+/* ======================================================================
+   v331 — internal dark mode refinement for option E.
+   Tone down contrast, soften green accents, and align all remaining UI
+   chrome with the matte-charcoal background and GitHub-like hierarchy.
+   ====================================================================== */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  --gh-canvas:#0d1117!important;
+  --gh-canvas-subtle:#11161c!important;
+  --gh-canvas-inset:#0a0f14!important;
+  --gh-surface:#141a21!important;
+  --gh-surface-2:#181f27!important;
+  --gh-border:#2a3139!important;
+  --gh-border-strong:#38414a!important;
+  --gh-fg:#d8e0e7!important;
+  --gh-fg-soft:#c5ced6!important;
+  --gh-fg-muted:#9aa5af!important;
+  --gh-fg-subtle:#7f8994!important;
+  --gh-accent:#6fbe97!important;
+  --gh-accent-strong:#56a880!important;
+  --gh-accent-deep:#3f8767!important;
+  --gh-accent-soft:rgba(111,190,151,.14)!important;
+  --gh-accent-line:rgba(111,190,151,.28)!important;
+  --gh-warm:#b89256!important;
+}
+
+/* Softer shell */
+html body.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer){
+  background:rgba(11,15,20,.94)!important;
+  border-color:var(--gh-border)!important;
+}
+
+html body.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:rgba(20,26,33,.92)!important;
+  border-color:var(--gh-border)!important;
+  color:var(--gh-fg-soft)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover{
+  background:rgba(24,31,39,.98)!important;
+  border-color:var(--gh-border-strong)!important;
+  color:var(--gh-fg)!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-search input,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-search input{
+  color:var(--gh-fg-soft)!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-search input::placeholder,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-search input::placeholder{
+  color:var(--gh-fg-subtle)!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-search kbd,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-search kbd{
+  background:rgba(13,17,23,.88)!important;
+  border-color:var(--gh-border)!important;
+  color:var(--gh-fg-subtle)!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-progress span,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-progress span{
+  color:var(--gh-fg-subtle)!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-progress i,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-progress i{
+  background:#1a222b!important;
+}
+html body.theme-dark.internal-page-v198 .ref-top-progress em,
+html body.reference-ui-v99.theme-dark.internal-page-v198 .ref-top-progress em{
+  background:var(--gh-accent-strong)!important;
+}
+
+/* Softer panels and cards */
+html body.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-all-tools,.home-search-card,.catalog-search,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.section-entry,.section-outcome,
+  .playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,.guide-v101-flow,
+  .guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,
+  .guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,.starter-next,
+  .service-inline,.service-notice,.partner-next-step,.tool-panel,.academy-content-section,
+  .logic-explain-v103,.logic-action-v103,.logic-analysis-v103,.article-exit-nav a,.next-reading a,
+  .section-feature,.section-groups,.field-case
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-all-tools,.home-search-card,.catalog-search,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.section-entry,.section-outcome,
+  .playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,.guide-v101-flow,
+  .guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-timeline,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,
+  .guide-v101-funnel-table>div,.guide-v101-diagnostics a,.guide-v101-next a,.starter-next,
+  .service-inline,.service-notice,.partner-next-step,.tool-panel,.academy-content-section,
+  .logic-explain-v103,.logic-action-v103,.logic-analysis-v103,.article-exit-nav a,.next-reading a,
+  .section-feature,.section-groups,.field-case
+){
+  background:rgba(20,26,33,.84)!important;
+  border-color:var(--gh-border)!important;
+  color:var(--gh-fg-soft)!important;
+  box-shadow:0 8px 26px rgba(1,4,9,.12)!important;
+}
+
+/* Typography gets calmer: still readable, less glaring */
+html body.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b,.article h1,.article h2,.article h3),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b,.article h1,.article h2,.article h3){
+  color:var(--gh-fg)!important;
+}
+html body.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small,label,.service-copy,.rail-note,.playbook-card p,.article p),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small,label,.service-copy,.rail-note,.playbook-card p,.article p){
+  color:#acb6c0!important;
+}
+html body.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption,.aside-title,.rail-overline),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption,.aside-title,.rail-overline){
+  color:var(--gh-fg-muted)!important;
+}
+
+/* Links and accents: move from neon green to a calmer mint-sage accent */
+html body.theme-dark.internal-page-v198 a,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a{
+  color:#86c7a6!important;
+}
+html body.theme-dark.internal-page-v198 a:hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a:hover{
+  color:#aedcc4!important;
+}
+
+/* Sidebar, tabs, chips, utility controls */
+html body.theme-dark.internal-page-v198 :is(.sidebar-menu a,.sidebar-section-toggle,.service-task-nav a,.article-tabs a,.playbook-nav a,.playbook-tab,.playbook-pills a,.tag,.chip,.filter-chip,.section-pill,.rail-all-tools a,.article-exit-nav a,.next-reading a,.source-compare-actions a,.problem-result-links a,.calc-actions a,.diagnostic-actions a,.feedback-actions button,.article-cta-row a),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.sidebar-menu a,.sidebar-section-toggle,.service-task-nav a,.article-tabs a,.playbook-nav a,.playbook-tab,.playbook-pills a,.tag,.chip,.filter-chip,.section-pill,.rail-all-tools a,.article-exit-nav a,.next-reading a,.source-compare-actions a,.problem-result-links a,.calc-actions a,.diagnostic-actions a,.feedback-actions button,.article-cta-row a){
+  background:rgba(13,17,23,.60)!important;
+  border-color:var(--gh-border)!important;
+  color:var(--gh-fg-soft)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(.sidebar-menu a:hover,.sidebar-section-toggle:hover,.service-task-nav a:hover,.article-tabs a:hover,.playbook-nav a:hover,.playbook-tab:hover,.playbook-pills a:hover,.tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover,.rail-all-tools a:hover,.article-exit-nav a:hover,.next-reading a:hover,.source-compare-actions a:hover,.problem-result-links a:hover,.calc-actions a:hover,.diagnostic-actions a:hover,.feedback-actions button:hover,.article-cta-row a:hover),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.sidebar-menu a:hover,.sidebar-section-toggle:hover,.service-task-nav a:hover,.article-tabs a:hover,.playbook-nav a:hover,.playbook-tab:hover,.playbook-pills a:hover,.tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover,.rail-all-tools a:hover,.article-exit-nav a:hover,.next-reading a:hover,.source-compare-actions a:hover,.problem-result-links a:hover,.calc-actions a:hover,.diagnostic-actions a:hover,.feedback-actions button:hover,.article-cta-row a:hover){
+  background:rgba(20,26,33,.92)!important;
+  border-color:var(--gh-border-strong)!important;
+  color:var(--gh-fg)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,.service-task-nav a.is-active,.article-tabs a.is-active,.playbook-nav a.is-active,.playbook-tab.is-active,.filter-chip.is-active,.section-pill.is-active),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,.service-task-nav a.is-active,.article-tabs a.is-active,.playbook-nav a.is-active,.playbook-tab.is-active,.filter-chip.is-active,.section-pill.is-active){
+  background:var(--gh-accent-soft)!important;
+  border-color:var(--gh-accent-line)!important;
+  color:#e4f3eb!important;
+  box-shadow:inset 2px 0 0 var(--gh-accent)!important;
+}
+
+/* Badges and indexed labels */
+html body.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number,.article-step-index,.playbook-facts b,.progress-index),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number,.article-step-index,.playbook-facts b,.progress-index){
+  background:rgba(111,190,151,.12)!important;
+  border-color:rgba(111,190,151,.22)!important;
+  color:#8ed0af!important;
+}
+
+/* Inputs */
+html body.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input,.diagnostic-card input,.diagnostic-card select),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input,.diagnostic-card input,.diagnostic-card select){
+  background:rgba(10,15,20,.80)!important;
+  border-color:var(--gh-border)!important;
+  color:var(--gh-fg-soft)!important;
+}
+html body.theme-dark.internal-page-v198 :is(input,select,textarea):focus,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea):focus{
+  border-color:var(--gh-accent)!important;
+  box-shadow:0 0 0 3px rgba(111,190,151,.14)!important;
+}
+
+/* Primary actions should be darker and less shouty */
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary){
+  background:#2c6d54!important;
+  border-color:#377d61!important;
+  color:#f4fbf7!important;
+}
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary):hover{
+  background:#34795e!important;
+  border-color:#41906f!important;
+}
+
+/* Tables and informative callouts */
+html body.theme-dark.internal-page-v198 table,
+html body.reference-ui-v99.theme-dark.internal-page-v198 table{
+  background:rgba(13,17,23,.78)!important;
+  border-color:var(--gh-border)!important;
+}
+html body.theme-dark.internal-page-v198 th,
+html body.reference-ui-v99.theme-dark.internal-page-v198 th{
+  background:#151b22!important;
+  color:var(--gh-fg-soft)!important;
+  border-color:var(--gh-border)!important;
+}
+html body.theme-dark.internal-page-v198 td,
+html body.reference-ui-v99.theme-dark.internal-page-v198 td{
+  background:rgba(15,20,26,.80)!important;
+  color:#aeb8c1!important;
+  border-color:var(--gh-border)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning,.service-warning,.service-review-note,.tool-source-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.hero-note,.hero-route),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning,.service-warning,.service-review-note,.tool-source-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.hero-note,.hero-route){
+  background:rgba(184,146,86,.08)!important;
+  border-color:rgba(184,146,86,.24)!important;
+  color:#cbbb9d!important;
+}
+
+/* Icons / muted decorations */
+html body.theme-dark.internal-page-v198 :is(.tool-logo-shell,.rail-tool-mark,.service-mark,.playbook-facts .icon-shell,.source-title-visual,.article-figure .figure-icon),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.tool-logo-shell,.rail-tool-mark,.service-mark,.playbook-facts .icon-shell,.source-title-visual,.article-figure .figure-icon){
+  background:rgba(13,17,23,.58)!important;
+  border-color:var(--gh-border)!important;
+}
+
+/* ======================================================================
+   v332 — exact palette C: Carbon Mint.
+   Background remains option E. Homepage remains untouched.
+   Exact grid colors:
+   surface #14191f | surface2 #192027 | border #2b343c
+   title #dbe3e6 | text #a9b6bb | muted #7d8a90
+   accent #5ea98c | button #2f6d58 | button text #f0f7f4
+   ====================================================================== */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  --c-surface:#14191f!important;
+  --c-surface-2:#192027!important;
+  --c-border:#2b343c!important;
+  --c-title:#dbe3e6!important;
+  --c-text:#a9b6bb!important;
+  --c-muted:#7d8a90!important;
+  --c-accent:#5ea98c!important;
+  --c-button:#2f6d58!important;
+  --c-button-text:#f0f7f4!important;
+  color:var(--c-text)!important;
+}
+
+/* chrome */
+html body.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.site-header,.global-sidebar,.site-footer){
+  background:rgba(13,17,23,.95)!important;
+  border-color:var(--c-border)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:var(--c-surface)!important;
+  border-color:var(--c-border)!important;
+  color:var(--c-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover{
+  background:var(--c-surface-2)!important;
+  border-color:#39444d!important;
+  color:var(--c-title)!important;
+}
+
+/* surfaces */
+html body.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-all-tools,.home-search-card,.catalog-search,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.section-entry,.section-outcome,
+  .playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,
+  .guide-v101-next a,.starter-next,.service-inline,.service-notice,.partner-next-step,
+  .tool-panel,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103,
+  .article-exit-nav a,.next-reading a,.section-feature,.section-groups,.field-case
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-all-tools,.home-search-card,.catalog-search,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.section-entry,.section-outcome,
+  .playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,.calc-card,.diagnostic-card,
+  .diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .problem-result-links a,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .playbook-facts>div,.playbook-checklist li,.platform-setup>div,.playbook-format-list>div,
+  .playbook-steps>li,.traffic-diagnostic-list li,.source-journey-card,.article-figure,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-grid>div,.guide-v101-formats article,
+  .guide-v101-timeline,.guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,
+  .guide-v101-steps li,.guide-v101-funnel-table>div,.guide-v101-diagnostics a,
+  .guide-v101-next a,.starter-next,.service-inline,.service-notice,.partner-next-step,
+  .tool-panel,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103,
+  .article-exit-nav a,.next-reading a,.section-feature,.section-groups,.field-case
+){
+  background:rgba(20,25,31,.88)!important;
+  border-color:var(--c-border)!important;
+  color:var(--c-text)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.10)!important;
+}
+
+/* nested panels */
+html body.theme-dark.internal-page-v198 :is(
+  .playbook-card-top,.service-card-top,.source-card-top,.article-meta span,
+  .rail-tool-mark,.service-mark,.tool-logo-shell,.source-title-visual,
+  .article-figure figcaption,.playbook-facts>div,.platform-setup>div,
+  .playbook-format-list>div,.guide-v101-grid>div,.guide-v101-funnel-table>div
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .playbook-card-top,.service-card-top,.source-card-top,.article-meta span,
+  .rail-tool-mark,.service-mark,.tool-logo-shell,.source-title-visual,
+  .article-figure figcaption,.playbook-facts>div,.platform-setup>div,
+  .playbook-format-list>div,.guide-v101-grid>div,.guide-v101-funnel-table>div
+){
+  background:var(--c-surface-2)!important;
+  border-color:var(--c-border)!important;
+}
+
+/* text */
+html body.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:var(--c-title)!important;
+}
+html body.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small,label),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(p,li,dd,dt,figcaption,.lead,.breadcrumbs,.article-meta,small,label){
+  color:var(--c-text)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption,.aside-title,.rail-overline,.breadcrumbs span),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.article-label,.eyebrow,.section-label,.service-kicker,.playbook-card-top,.library-type,.section-caption,.aside-title,.rail-overline,.breadcrumbs span){
+  color:var(--c-muted)!important;
+}
+html body.theme-dark.internal-page-v198 a,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a{
+  color:var(--c-accent)!important;
+}
+html body.theme-dark.internal-page-v198 a:hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 a:hover{
+  color:#79bca0!important;
+}
+
+/* controls and chips */
+html body.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a,.sidebar-section-toggle,.service-task-nav a,.article-tabs a,
+  .playbook-nav a,.playbook-tab,.playbook-pills a,.tag,.chip,.filter-chip,
+  .section-pill,.rail-all-tools a,.article-exit-nav a,.next-reading a,
+  .source-compare-actions a,.problem-result-links a,.calc-actions a,
+  .diagnostic-actions a,.feedback-actions button,.article-cta-row a
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a,.sidebar-section-toggle,.service-task-nav a,.article-tabs a,
+  .playbook-nav a,.playbook-tab,.playbook-pills a,.tag,.chip,.filter-chip,
+  .section-pill,.rail-all-tools a,.article-exit-nav a,.next-reading a,
+  .source-compare-actions a,.problem-result-links a,.calc-actions a,
+  .diagnostic-actions a,.feedback-actions button,.article-cta-row a
+){
+  background:var(--c-surface)!important;
+  border-color:var(--c-border)!important;
+  color:var(--c-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a:hover,.sidebar-section-toggle:hover,.service-task-nav a:hover,
+  .article-tabs a:hover,.playbook-nav a:hover,.playbook-tab:hover,.playbook-pills a:hover,
+  .tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover,.rail-all-tools a:hover,
+  .article-exit-nav a:hover,.next-reading a:hover,.source-compare-actions a:hover,
+  .problem-result-links a:hover,.calc-actions a:hover,.diagnostic-actions a:hover,
+  .feedback-actions button:hover,.article-cta-row a:hover
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a:hover,.sidebar-section-toggle:hover,.service-task-nav a:hover,
+  .article-tabs a:hover,.playbook-nav a:hover,.playbook-tab:hover,.playbook-pills a:hover,
+  .tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover,.rail-all-tools a:hover,
+  .article-exit-nav a:hover,.next-reading a:hover,.source-compare-actions a:hover,
+  .problem-result-links a:hover,.calc-actions a:hover,.diagnostic-actions a:hover,
+  .feedback-actions button:hover,.article-cta-row a:hover
+){
+  background:var(--c-surface-2)!important;
+  border-color:#3a454e!important;
+  color:var(--c-title)!important;
+}
+html body.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,
+  .service-task-nav a.is-active,.article-tabs a.is-active,.playbook-nav a.is-active,
+  .playbook-tab.is-active,.filter-chip.is-active,.section-pill.is-active
+),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(
+  .sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active,.sidebar-menu a.active,
+  .service-task-nav a.is-active,.article-tabs a.is-active,.playbook-nav a.is-active,
+  .playbook-tab.is-active,.filter-chip.is-active,.section-pill.is-active
+){
+  background:rgba(94,169,140,.14)!important;
+  border-color:rgba(94,169,140,.30)!important;
+  color:#dceee7!important;
+  box-shadow:inset 2px 0 0 var(--c-accent)!important;
+}
+
+/* badges */
+html body.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number,.article-step-index,.progress-index),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number,.article-step-index,.progress-index){
+  background:rgba(94,169,140,.12)!important;
+  border-color:rgba(94,169,140,.24)!important;
+  color:#79bca0!important;
+}
+
+/* inputs */
+html body.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea,.home-main-search input,.sidebar-search input){
+  background:#0f1419!important;
+  border-color:var(--c-border)!important;
+  color:var(--c-text)!important;
+}
+html body.theme-dark.internal-page-v198 :is(input,select,textarea)::placeholder,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea)::placeholder{
+  color:var(--c-muted)!important;
+}
+html body.theme-dark.internal-page-v198 :is(input,select,textarea):focus,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(input,select,textarea):focus{
+  border-color:var(--c-accent)!important;
+  box-shadow:0 0 0 3px rgba(94,169,140,.14)!important;
+}
+
+/* primary actions */
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary){
+  background:var(--c-button)!important;
+  border-color:#397762!important;
+  color:var(--c-button-text)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary):hover,
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.button-primary,.home-main-search button,.traffic-next .primary,.calc-actions .primary,.diagnostic-actions .primary,.problem-result-links a.primary,.source-compare-actions a.primary):hover{
+  background:#377a63!important;
+  border-color:#438972!important;
+}
+
+/* progress */
+html body.theme-dark.internal-page-v198 :is(.ref-top-progress em,.rail-progress span),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-progress em,.rail-progress span){
+  background:var(--c-accent)!important;
+}
+html body.theme-dark.internal-page-v198 :is(.ref-top-progress i,.rail-progress),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.ref-top-progress i,.rail-progress){
+  background:#1c252c!important;
+}
+
+/* tables */
+html body.theme-dark.internal-page-v198 table,
+html body.reference-ui-v99.theme-dark.internal-page-v198 table{
+  background:var(--c-surface)!important;
+  border-color:var(--c-border)!important;
+}
+html body.theme-dark.internal-page-v198 th,
+html body.reference-ui-v99.theme-dark.internal-page-v198 th{
+  background:var(--c-surface-2)!important;
+  color:var(--c-title)!important;
+  border-color:var(--c-border)!important;
+}
+html body.theme-dark.internal-page-v198 td,
+html body.reference-ui-v99.theme-dark.internal-page-v198 td{
+  background:var(--c-surface)!important;
+  color:var(--c-text)!important;
+  border-color:var(--c-border)!important;
+}
+
+/* warning/info blocks remain muted */
+html body.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning,.service-warning,.service-review-note,.tool-source-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.hero-note,.hero-route),
+html body.reference-ui-v99.theme-dark.internal-page-v198 :is(.inline-note,.playbook-risk,.warning-note,.guide-v101-callout.warning,.service-warning,.service-review-note,.tool-source-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.hero-note,.hero-route){
+  background:#191c1d!important;
+  border-color:#4a4439!important;
+  color:#bcb39f!important;
+}
