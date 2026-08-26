@@ -26357,3 +26357,277 @@ html body.tl-unified-v287:not(.theme-dark) .site-footer a:hover,
 html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer a:hover{
   color:#ffffff!important;
 }
+
+/* ======================================================================
+   v336 — palette F / Black Lab, rebuilt from the exact approved mockup.
+   Homepage artwork/background is intentionally untouched.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-f-bg:#0b0d0e;
+  --tl-f-texture:#101314;
+  --tl-f-sidebar:#171d1b;
+  --tl-f-top:#101314;
+  --tl-f-surface:#15191a;
+  --tl-f-surface-2:#1a2021;
+  --tl-f-border:#2e3534;
+  --tl-f-title:#e1e6e4;
+  --tl-f-text:#b3bcba;
+  --tl-f-muted:#7d8885;
+  --tl-f-accent:#6cae91;
+  --tl-f-accent-2:#315f4d;
+  --tl-f-footer:#171d1b;
+  color:var(--tl-f-text)!important;
+}
+
+/* Internal page canvas: Black Lab. The homepage chalk artwork stays intact. */
+html body.theme-dark.internal-page-v198,
+html body.reference-ui-v99.theme-dark.internal-page-v198{
+  background-color:var(--tl-f-bg)!important;
+  background-image:repeating-linear-gradient(
+    180deg,
+    transparent 0 43px,
+    rgba(16,19,20,.50) 43px 44px
+  )!important;
+  background-attachment:scroll!important;
+}
+html body.theme-dark.internal-page-v198::before,
+html body.theme-dark.internal-page-v198::after,
+html body.reference-ui-v99.theme-dark.internal-page-v198::before,
+html body.reference-ui-v99.theme-dark.internal-page-v198::after{
+  display:none!important;
+}
+
+/* Left laboratory menu */
+html body.theme-dark .global-sidebar,
+html body.reference-ui-v99.theme-dark .global-sidebar{
+  background:var(--tl-f-sidebar)!important;
+  border-color:var(--tl-f-border)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-brand,.sidebar-brand span,.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand,.ref-sidebar-brand span,.ref-sidebar-brand b,.ref-sidebar-brand strong),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-brand,.sidebar-brand span,.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand,.ref-sidebar-brand span,.ref-sidebar-brand b,.ref-sidebar-brand strong){
+  color:var(--tl-f-title)!important;
+  opacity:1!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-brand small,.ref-sidebar-brand small,.sidebar-group-title,.ref-nav-heading span),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-brand small,.ref-sidebar-brand small,.sidebar-group-title,.ref-nav-heading span){
+  color:var(--tl-f-muted)!important;
+  opacity:1!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-menu a,.ref-nav-group nav a),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-menu a,.ref-nav-group nav a){
+  background:transparent!important;
+  border-color:transparent!important;
+  color:var(--tl-f-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover){
+  background:var(--tl-f-surface-2)!important;
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a.active,.ref-nav-group nav a[aria-current="page"]),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a.active,.ref-nav-group nav a[aria-current="page"]){
+  background:var(--tl-f-accent-2)!important;
+  color:#f4fbf8!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-menu a:before,.nav-icon,.ref-nav-icon),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-menu a:before,.nav-icon,.ref-nav-icon){
+  color:var(--tl-f-accent)!important;
+}
+html body.theme-dark .global-sidebar :is(.sidebar-search input,.sidebar-hints-toggle,.sidebar-mode-compact,.sidebar-partner-cta),
+html body.reference-ui-v99.theme-dark .global-sidebar :is(.sidebar-search input,.sidebar-hints-toggle,.sidebar-mode-compact,.sidebar-partner-cta){
+  background:var(--tl-f-surface)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-text)!important;
+  box-shadow:none!important;
+}
+
+/* Top bar */
+html body.theme-dark .site-header,
+html body.reference-ui-v99.theme-dark .site-header{
+  background:var(--tl-f-top)!important;
+  border-bottom:1px solid var(--tl-f-border)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home),
+html body.reference-ui-v99.theme-dark :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home){
+  background:var(--tl-f-surface)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover,
+html body.reference-ui-v99.theme-dark :is(.ref-top-search,.ref-theme-button,.ref-top-favorite,.header-about-link,.ref-top-home):hover{
+  background:var(--tl-f-surface-2)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark :is(.ref-topbar-crumbs a,.ref-top-progress span,.ref-top-search input::placeholder,.ref-top-search kbd),
+html body.reference-ui-v99.theme-dark :is(.ref-topbar-crumbs a,.ref-top-progress span,.ref-top-search input::placeholder,.ref-top-search kbd){
+  color:var(--tl-f-muted)!important;
+}
+html body.theme-dark :is(.ref-topbar-crumbs b,.ref-top-progress b),
+html body.reference-ui-v99.theme-dark :is(.ref-topbar-crumbs b,.ref-top-progress b){
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark .ref-top-progress i,
+html body.reference-ui-v99.theme-dark .ref-top-progress i{
+  background:var(--tl-f-border)!important;
+}
+html body.theme-dark .ref-top-progress em,
+html body.reference-ui-v99.theme-dark .ref-top-progress em{
+  background:var(--tl-f-accent)!important;
+}
+
+/* One exact surface system for articles, cards and right rail. */
+html body.theme-dark :is(
+  .article-page .article,.source-playbook-article,.page-head,.section-landing-head,
+  .compact-block-v103,.section-groups,.section-bottom-links,.library-shell,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.playbook-card,.source-tool-card,
+  .diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.saved-card,.saved-empty,
+  .journal-reading-grid>.saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-path-card,.rail-partner-card,.home-search-card,.home-entry-grid>a,.home-source-grid>a
+),
+html body.reference-ui-v99.theme-dark :is(
+  .article-page .article,.source-playbook-article,.page-head,.section-landing-head,
+  .compact-block-v103,.section-groups,.section-bottom-links,.library-shell,.library-row,.library-card,
+  .service-card,.service-tool,.tool-card,.about-card,.section-card,.playbook-card,.source-tool-card,
+  .diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.saved-card,.saved-empty,
+  .journal-reading-grid>.saved-block,.source-compare-picker,.source-compare-table,.source-compare-row>div,
+  .article-aside.enhanced-rail,.article-aside.enhanced-rail .aside-block,.rail-card,.rail-tools,
+  .rail-cover-card,.rail-path-card,.rail-partner-card,.home-search-card,.home-entry-grid>a,.home-source-grid>a
+){
+  background:var(--tl-f-surface)!important;
+  border-color:var(--tl-f-border)!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark :is(
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .academy-content-section,.logic-section-v103,.partner-specific-box,.related-reading,.related-primary,.related-secondary,
+  .article-figure,.field-case,.inline-note,.rules-action-box,.service-inline,.playbook-risk,
+  .guide-v101-callout,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-flow,.guide-v101-verdict,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.platform-setup>div,.playbook-format-list>div,
+  .traffic-diagnostic-list li,.knowledge-map>div,.rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.geo-directory
+),
+html body.reference-ui-v99.theme-dark :is(
+  .section-entry,.section-outcome,.section-feature>div,.section-feature>aside,
+  .academy-content-section,.logic-section-v103,.partner-specific-box,.related-reading,.related-primary,.related-secondary,
+  .article-figure,.field-case,.inline-note,.rules-action-box,.service-inline,.playbook-risk,
+  .guide-v101-callout,.guide-v101-grid>div,.guide-v101-formats article,.guide-v101-flow,.guide-v101-verdict,
+  .guide-v101-media,.guide-v101-link-options>div,.guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div,
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.platform-setup>div,.playbook-format-list>div,
+  .traffic-diagnostic-list li,.knowledge-map>div,.rules-summary-grid>div,.rules-model-grid section,.geo-chip-grid li,.geo-directory
+){
+  background:var(--tl-f-surface-2)!important;
+  border-color:var(--tl-f-border)!important;
+  box-shadow:none!important;
+}
+
+/* Typography */
+html body.theme-dark :is(h1,h2,h3,h4,h5,h6,strong,b,.article-label,.footer-brand,.source-title-copy h1),
+html body.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,h5,h6,strong,b,.article-label,.footer-brand,.source-title-copy h1){
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.article-author p,.source-playbook-article p,.source-playbook-article li),
+html body.reference-ui-v99.theme-dark :is(p,li,dd,dt,small,figcaption,.lead,.article-meta,.breadcrumbs,.article-author p,.source-playbook-article p,.source-playbook-article li){
+  color:var(--tl-f-text)!important;
+}
+html body.theme-dark :is(.service-kicker,.library-type,.eyebrow,.section-label,.article-meta,.rail-note,.aside-title),
+html body.reference-ui-v99.theme-dark :is(.service-kicker,.library-type,.eyebrow,.section-label,.article-meta,.rail-note,.aside-title){
+  color:var(--tl-f-muted)!important;
+}
+html body.theme-dark a,
+html body.reference-ui-v99.theme-dark a{
+  color:var(--tl-f-accent)!important;
+}
+html body.theme-dark a:hover,
+html body.reference-ui-v99.theme-dark a:hover{
+  color:#91c7b1!important;
+}
+
+/* Buttons, tabs, chips and inputs */
+html body.theme-dark :is(
+  button,.bookmark-button,.saved-link,.source-section-tabs a,.article-cta-row a,.traffic-next a,
+  .article-exit-nav a,.next-reading a,.guide-v101-diagnostics a,.guide-v101-next a,.rail-all-tools,
+  .problem-options button,.problem-result-links a,.source-compare-actions a,.tag,.chip,.filter-chip,.section-pill
+),
+html body.reference-ui-v99.theme-dark :is(
+  button,.bookmark-button,.saved-link,.source-section-tabs a,.article-cta-row a,.traffic-next a,
+  .article-exit-nav a,.next-reading a,.guide-v101-diagnostics a,.guide-v101-next a,.rail-all-tools,
+  .problem-options button,.problem-result-links a,.source-compare-actions a,.tag,.chip,.filter-chip,.section-pill
+){
+  background:var(--tl-f-surface-2)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-text)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(
+  button:hover,.bookmark-button:hover,.saved-link:hover,.source-section-tabs a:hover,.article-cta-row a:hover,
+  .traffic-next a:hover,.article-exit-nav a:hover,.next-reading a:hover,.guide-v101-diagnostics a:hover,
+  .guide-v101-next a:hover,.rail-all-tools:hover,.problem-options button:hover,.problem-result-links a:hover,
+  .source-compare-actions a:hover,.tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover
+),
+html body.reference-ui-v99.theme-dark :is(
+  button:hover,.bookmark-button:hover,.saved-link:hover,.source-section-tabs a:hover,.article-cta-row a:hover,
+  .traffic-next a:hover,.article-exit-nav a:hover,.next-reading a:hover,.guide-v101-diagnostics a:hover,
+  .guide-v101-next a:hover,.rail-all-tools:hover,.problem-options button:hover,.problem-result-links a:hover,
+  .source-compare-actions a:hover,.tag:hover,.chip:hover,.filter-chip:hover,.section-pill:hover
+){
+  background:#202829!important;
+  border-color:#394342!important;
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark :is(.button-primary,.home-main-search button,.traffic-next .primary,.problem-result-links .primary,.source-compare-actions .primary),
+html body.reference-ui-v99.theme-dark :is(.button-primary,.home-main-search button,.traffic-next .primary,.problem-result-links .primary,.source-compare-actions .primary){
+  background:var(--tl-f-accent-2)!important;
+  border-color:var(--tl-f-accent-2)!important;
+  color:#f4fbf8!important;
+}
+html body.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input),
+html body.reference-ui-v99.theme-dark :is(input,select,textarea,.home-main-search input,.sidebar-search input){
+  background:var(--tl-f-surface)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-title)!important;
+  box-shadow:none!important;
+}
+html body.theme-dark :is(input,select,textarea)::placeholder,
+html body.reference-ui-v99.theme-dark :is(input,select,textarea)::placeholder{
+  color:var(--tl-f-muted)!important;
+}
+html body.theme-dark :is(input,select,textarea):focus,
+html body.reference-ui-v99.theme-dark :is(input,select,textarea):focus{
+  outline:none!important;
+  border-color:var(--tl-f-accent)!important;
+  box-shadow:0 0 0 3px rgba(108,174,145,.12)!important;
+}
+
+/* Index badges */
+html body.theme-dark :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number),
+html body.reference-ui-v99.theme-dark :is(.logic-index-v103,.section-entry-index,.step-badge,.note-badge,.saved-card-mark,.step-number){
+  background:var(--tl-f-surface-2)!important;
+  border-color:var(--tl-f-border)!important;
+  color:var(--tl-f-accent)!important;
+}
+
+/* Footer */
+html body.theme-dark .site-footer,
+html body.reference-ui-v99.theme-dark .site-footer{
+  background:var(--tl-f-footer)!important;
+  border-top:2px solid var(--tl-f-accent-2)!important;
+  color:var(--tl-f-text)!important;
+}
+html body.theme-dark .site-footer :is(h2,h3,h4,b,strong,.footer-brand),
+html body.reference-ui-v99.theme-dark .site-footer :is(h2,h3,h4,b,strong,.footer-brand){
+  color:var(--tl-f-title)!important;
+}
+html body.theme-dark .site-footer :is(p,a,span,small),
+html body.reference-ui-v99.theme-dark .site-footer :is(p,a,span,small){
+  color:var(--tl-f-text)!important;
+}
