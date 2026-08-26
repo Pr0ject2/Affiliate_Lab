@@ -23898,3 +23898,132 @@ html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .ho
     background-size:1040px auto!important;
   }
 }
+
+/* v365 — real fixes: restore footer palette, explicit History icon, and stronger outer spacing */
+
+/* 1) Footer: return the original palette, but keep the text brighter in light theme */
+html body:not(.theme-dark) .site-footer,
+html body.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#0d241e!important;
+  background-image:none!important;
+  border-top:1px solid #23443a!important;
+}
+html body:not(.theme-dark) .site-footer :is(.footer-brand,h2,h3,h4,b,strong,a,span),
+html body.reference-ui-v99:not(.theme-dark) .site-footer :is(.footer-brand,h2,h3,h4,b,strong,a,span){
+  color:#f5fbf8!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer :is(p,small,li),
+html body.reference-ui-v99:not(.theme-dark) .site-footer :is(p,small,li){
+  color:#d9eae4!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer a:hover,
+html body.reference-ui-v99:not(.theme-dark) .site-footer a:hover{
+  color:#ffffff!important;
+}
+html body:not(.theme-dark) .site-footer :is(.footer-bottom,.disclosure),
+html body.reference-ui-v99:not(.theme-dark) .site-footer :is(.footer-bottom,.disclosure){
+  border-color:#29483f!important;
+}
+
+/* 2) Sidebar History icon: use a real inline icon instead of relying only on pseudo-elements */
+html body .global-sidebar .sidebar-menu a[data-nav="history"],
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"]{
+  display:flex!important;
+  align-items:center!important;
+  gap:9px!important;
+}
+html body .global-sidebar .sidebar-menu a[data-nav="history"]:before,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"]:before{
+  content:none!important;
+  display:none!important;
+}
+html body .global-sidebar .sidebar-menu a .sidebar-inline-icon-history,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a .sidebar-inline-icon-history{
+  flex:0 0 17px!important;
+  width:17px!important;
+  height:17px!important;
+  display:grid!important;
+  place-items:center!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  border-radius:5px!important;
+  background:rgba(255,255,255,.035)!important;
+  color:#a9c7bd!important;
+  font:700 11px/1 Inter,"Segoe UI",Arial,sans-serif!important;
+  box-sizing:border-box!important;
+  margin-left:1px!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a .sidebar-inline-icon-history,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a .sidebar-inline-icon-history{
+  border-color:rgba(255,255,255,.16)!important;
+  background:rgba(255,255,255,.05)!important;
+  color:#c4ded5!important;
+}
+html body .global-sidebar .sidebar-menu a[data-nav="history"].is-active .sidebar-inline-icon-history,
+html body .global-sidebar .sidebar-menu a[data-nav="history"][aria-current="page"] .sidebar-inline-icon-history,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"].is-active .sidebar-inline-icon-history,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"][aria-current="page"] .sidebar-inline-icon-history{
+  color:#53d8a4!important;
+  background:rgba(83,216,164,.14)!important;
+}
+
+/* 3) Outer framed sections: visibly larger insets, matching article spacing */
+html body .section-groups.compact-block-v103,
+html body.reference-ui-v99 .section-groups.compact-block-v103,
+html body .section-bottom-links.compact-block-v103,
+html body.reference-ui-v99 .section-bottom-links.compact-block-v103,
+html body .section-feature.compact-block-v103,
+html body.reference-ui-v99 .section-feature.compact-block-v103,
+html body .section-outcome.compact-block-v103,
+html body.reference-ui-v99 .section-outcome.compact-block-v103,
+html body .beginner-term-note.compact-block-v103,
+html body.reference-ui-v99 .beginner-term-note.compact-block-v103,
+html body .source-compare-note.compact-block-v103,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+  padding:30px 32px 34px!important;
+}
+html body .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+  padding-top:28px!important;
+  margin-top:28px!important;
+}
+html body .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group:first-child{
+  padding-top:0!important;
+  margin-top:0!important;
+}
+html body .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group-head{
+  margin:0 0 20px!important;
+}
+html body :is(.article-page .article,.source-playbook-page .source-playbook-article),
+html body.reference-ui-v99 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+  padding:34px 36px!important;
+}
+
+@media (max-width:900px){
+  html body .section-groups.compact-block-v103,
+  html body.reference-ui-v99 .section-groups.compact-block-v103,
+  html body .section-bottom-links.compact-block-v103,
+  html body.reference-ui-v99 .section-bottom-links.compact-block-v103,
+  html body .section-feature.compact-block-v103,
+  html body.reference-ui-v99 .section-feature.compact-block-v103,
+  html body .section-outcome.compact-block-v103,
+  html body.reference-ui-v99 .section-outcome.compact-block-v103,
+  html body .beginner-term-note.compact-block-v103,
+  html body.reference-ui-v99 .beginner-term-note.compact-block-v103,
+  html body .source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+    padding:20px 20px 22px!important;
+  }
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding-top:18px!important;
+    margin-top:18px!important;
+  }
+  html body :is(.article-page .article,.source-playbook-page .source-playbook-article),
+  html body.reference-ui-v99 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+    padding:22px 20px!important;
+  }
+}
