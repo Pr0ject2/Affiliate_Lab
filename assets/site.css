@@ -23816,3 +23816,85 @@ html body.reference-ui-v99 main.compact-main-v103 > section.page-head.compact-bl
     width:min(calc(100% - 2 * var(--tl363-frame-pad-mobile)),var(--content-max))!important;
   }
 }
+
+/* v364 — light homepage hero fills the first screen and uses a softer, sharper background */
+html body:not(.theme-dark).home-shell-v256 main.home-page,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page{
+  background:#f2ecdf!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+  min-height:calc(100vh - 72px)!important;
+  display:flex!important;
+  align-items:center!important;
+  padding:34px 0 28px!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#f2ecdf!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  height:calc(100vh - 72px)!important;
+  min-height:760px!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-board-light-exact.webp?v=20260826-3641')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:min(100%,1700px) auto!important;
+  opacity:1!important;
+  filter:brightness(.9) saturate(.92)!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  background:
+    linear-gradient(rgba(244,237,225,.20),rgba(244,237,225,.20)),
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.022),transparent 24%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.018),transparent 22%),
+    linear-gradient(180deg,transparent 0 76vh,rgba(244,237,225,.18) calc(76vh + 80px),rgba(242,236,223,.34) 100%)!important;
+}
+
+@media (max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+    min-height:calc(100vh - 72px)!important;
+    padding:30px 0 22px!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    min-height:720px!important;
+    background-size:min(100%,1500px) auto!important;
+    background-position:center top!important;
+  }
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+    min-height:auto!important;
+    display:block!important;
+    padding:26px 0 24px!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:650px!important;
+    min-height:650px!important;
+    background-size:1280px auto!important;
+    filter:brightness(.91) saturate(.92)!important;
+  }
+}
+
+@media (max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:540px!important;
+    min-height:540px!important;
+    background-size:1040px auto!important;
+  }
+}
