@@ -1772,12 +1772,12 @@
 
     const header=document.querySelector('.site-header');
     if(header){
-      let crumbHtml=`<a class="ref-top-home" href="${base}">${svg('home')}<span>Главная</span></a>`;
+      let crumbHtml=`<a class="ref-top-home" href="${base}"><span>Главная</span></a>`;
       const articleCrumbs=document.querySelector('.breadcrumbs');
       if(articleCrumbs){
         const parts=[...articleCrumbs.querySelectorAll('a,span')].map(el=>({text:(el.textContent||'').trim(),href:el.tagName==='A'?el.getAttribute('href'):''})).filter(x=>x.text&&x.text!=='/');
         if(parts.length){
-          crumbHtml=`<a class="ref-top-home" href="${base}">${svg('home')}<span>Главная</span></a>`+parts.map(p=>`<span>›</span>${p.href?`<a href="${p.href}">${p.text}</a>`:`<b>${p.text}</b>`}`).join('');
+          crumbHtml=`<a class="ref-top-home" href="${base}"><span>Главная</span></a>`+parts.map(p=>`<span>›</span>${p.href?`<a href="${p.href}">${p.text}</a>`:`<b>${p.text}</b>`}`).join('');
         }
       }
       header.innerHTML=`<div class="ref-topbar">

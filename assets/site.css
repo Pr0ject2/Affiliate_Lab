@@ -22027,3 +22027,341 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab
     background-size:min(100%,820px) auto!important;
   }
 }
+
+
+/* ======================================================================
+   v341 — homepage: illustrations only in the upper zone.
+   Lower part keeps the same chalk texture without repeating drawings.
+   ====================================================================== */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  inset:auto!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  height:clamp(340px,52vw,880px)!important;
+  overflow:hidden!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+}
+
+/* The base layer is texture only and may continue down the whole homepage. */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background-image:
+    linear-gradient(rgba(8,14,20,.22),rgba(8,14,20,.22)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-hq.webp?v=20260826-3411')!important;
+  background-repeat:repeat!important;
+}
+
+/* Desktop home control is a text button, not a lone house icon. */
+html body.reference-ui-v99 .ref-top-home{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:32px!important;
+  padding:0 12px!important;
+  border:1px solid #34414a!important;
+  border-radius:7px!important;
+  background:#161d23!important;
+  color:#eef4f2!important;
+  font-size:10.5px!important;
+  font-weight:650!important;
+  text-decoration:none!important;
+  flex:0 0 auto!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-home{
+  background:#fffdf9!important;
+  border-color:#d8d1c5!important;
+  color:#24483d!important;
+}
+html body.reference-ui-v99 .ref-top-home:hover{
+  filter:brightness(1.06);
+}
+
+
+/* ======================================================================
+   v342 — light theme follows the same design logic as dark theme.
+   Layout, framing, hierarchy, paddings and card treatment stay the same;
+   only the palette changes.
+   ====================================================================== */
+html body:not(.theme-dark){
+  --tl-light-bg:#f3efe7;
+  --tl-light-bg-2:#f7f4ed;
+  --tl-light-surface:#fcfaf6;
+  --tl-light-surface-2:#f6f1e9;
+  --tl-light-ink:#1f2d29;
+  --tl-light-copy:#576760;
+  --tl-light-muted:#7a867f;
+  --tl-light-line:#d8d0c3;
+  --tl-light-line-strong:#c7bcad;
+  --tl-light-green:#2e6758;
+  --tl-light-green-2:#245245;
+  --tl-light-green-soft:#e3eee9;
+  --tl-light-warm:#9a7751;
+  --tl-light-warm-soft:#f4e9da;
+  --tl-light-shadow:0 8px 22px rgba(34,42,38,.045);
+}
+
+html body:not(.theme-dark){
+  background:var(--tl-light-bg)!important;
+  color:var(--tl-light-copy)!important;
+}
+html body:not(.theme-dark) :is(main,.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.section-page,.notes-page){
+  color:var(--tl-light-copy)!important;
+}
+html body:not(.theme-dark) :is(h1,h2,h3,h4,strong,b,.article-title){color:var(--tl-light-ink)!important}
+html body:not(.theme-dark) :is(p,li,dd,dt,small,.lead,figcaption){color:var(--tl-light-copy)!important}
+
+/* top bar and breadcrumb/search shell */
+html body:not(.theme-dark) .site-header,
+html body.reference-ui-v99:not(.theme-dark) .site-header{
+  background:var(--tl-light-bg-2)!important;
+  border-bottom:1px solid var(--tl-light-line)!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-topbar,
+html body:not(.theme-dark) .header-inner{
+  background:transparent!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(.ref-top-home,.ref-top-favorite,.ref-theme-button,.ref-mobile-menu,.ref-top-search, .header-about-link, .theme-toggle){
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  color:var(--tl-light-green)!important;
+  box-shadow:none!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(.ref-top-home,.ref-top-favorite,.ref-theme-button,.ref-mobile-menu,.ref-top-search):hover,
+html body:not(.theme-dark) :is(.header-about-link,.theme-toggle):hover{
+  background:var(--tl-light-surface-2)!important;
+  border-color:var(--tl-light-line-strong)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) :is(.ref-top-search input,.ref-top-search, .ref-topbar-crumbs, .breadcrumbs a, .breadcrumbs span){
+  color:var(--tl-light-copy)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-progress span,
+html body:not(.theme-dark) .progress-label{color:var(--tl-light-muted)!important}
+
+/* sidebar and footer keep the same frame logic as dark mode, only recolored */
+html body:not(.theme-dark) .global-sidebar,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:#1f5c4d!important;
+  border-right:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:none!important;
+  scrollbar-color:#6ea28d transparent!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-brand,b,strong,.ref-sidebar-brand b,.ref-nav-heading,.sidebar-menu a,.sidebar-secondary a,.sidebar-foot span,.sidebar-partner-card b,.ref-partner-card b,.sidebar-mode>span){
+  color:#f4faf7!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-brand small,.ref-sidebar-brand small,.sidebar-secondary a,.sidebar-foot small,.sidebar-partner-card p,.ref-partner-card p){
+  color:#cde2d9!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-rule,.ref-sidebar-groups){border-color:rgba(255,255,255,.10)!important}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-menu a,.ref-nav-group nav a){
+  background:transparent!important;
+  border:1px solid transparent!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover){
+  background:rgba(255,255,255,.07)!important;
+  border-color:rgba(255,255,255,.08)!important;
+  color:#fff!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a.active,.ref-nav-group nav a[aria-current="page"]){
+  background:rgba(130,216,181,.15)!important;
+  border-color:rgba(130,216,181,.18)!important;
+  color:#ffffff!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:before,
+html body:not(.theme-dark) .global-sidebar .nav-icon{
+  background:rgba(255,255,255,.06)!important;
+  color:#cfe6dd!important;
+  border-color:rgba(255,255,255,.08)!important;
+}
+html body:not(.theme-dark) .global-sidebar>.sidebar-search input,
+html body:not(.theme-dark) .global-sidebar .sidebar-search input{
+  background:rgba(7,24,19,.26)!important;
+  border:1px solid rgba(255,255,255,.13)!important;
+  color:#fff!important;
+}
+html body:not(.theme-dark) .global-sidebar>.sidebar-search input::placeholder,
+html body:not(.theme-dark) .global-sidebar .sidebar-search input::placeholder{color:#c2dbd1!important}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-partner-cta,.sidebar-partner-rules,.ref-partner-card){
+  background:rgba(255,255,255,.04)!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  color:#d5e6df!important;
+}
+html body:not(.theme-dark) .site-footer,
+html body.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#1f5c4d!important;
+  border-top:1px solid rgba(255,255,255,.10)!important;
+}
+html body:not(.theme-dark) .site-footer :is(h2,h3,b,strong,a,span){color:#f4faf7!important}
+html body:not(.theme-dark) .site-footer :is(p,small,li){color:#cfe2db!important}
+
+/* page areas */
+html body:not(.theme-dark) main,
+html body.reference-ui-v99:not(.theme-dark) main,
+html body.reference-ui-v99:not(.theme-dark) :is(.source-playbook-page, main.article-page){
+  background:var(--tl-light-bg)!important;
+}
+html body:not(.theme-dark) :is(.page-head,.section-landing-head,.home-entry-section,.home-sources-v51,.home-results,.home-welcome){
+  background:var(--tl-light-bg)!important;
+  border-color:var(--tl-light-line)!important;
+  box-shadow:none!important;
+}
+
+/* unified surface system */
+html body:not(.theme-dark) :is(
+  .playbook-card,.home-source-grid>a,.home-entry-grid>a,.section-entry,.section-outcome,
+  .knowledge-map>div,.library-row,.tool-card,.about-card,.service-card,.service-tool,
+  .source-tool-card,.traffic-hub-basics>div,.traffic-next a,.section-feature>div,
+  .section-feature>aside,.article-aside.enhanced-rail .aside-block,
+  .article-aside.enhanced-rail .rail-card,.article-aside.enhanced-rail .rail-cover-card,
+  .article-aside.enhanced-rail .rail-partner-card,.article-aside.enhanced-rail .rail-path-card,
+  .saved-card,.related-card,.recent-home-card,.compare-card,.diagnostic-wizard-card,
+  .wizard-result-card,.path-card,.audience-mode-card,.preset-card,.hero-card,
+  .continue-card,.playbook-summary-card,.catalog-search,.index-panel,.tool-preview,
+  .term-preview,.foundation-list,.source-wizard-card,.problem-result-links a
+){
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:11px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(
+  .playbook-card:hover,.home-source-grid>a:hover,.home-entry-grid>a:hover,.section-entry:hover,
+  .library-row:hover,.tool-card:hover,.service-card:hover,.service-tool:hover,.source-tool-card:hover,
+  .traffic-next a:hover,.related-card:hover,.saved-card:hover,.recent-home-card:hover
+){
+  border-color:var(--tl-light-line-strong)!important;
+  box-shadow:var(--tl-light-shadow)!important;
+}
+html body:not(.theme-dark) :is(.playbook-card,.home-source-grid>a,.home-entry-grid>a,.section-entry,.knowledge-map>div,.library-row,.service-tool,.source-tool-card,.traffic-next a):before,
+html body:not(.theme-dark) .playbook-card:after,
+html body:not(.theme-dark) .section-feature aside:before,
+html body:not(.theme-dark) .page-head:after{display:none!important}
+
+/* article structure mirrors dark mode */
+html body:not(.theme-dark) .source-playbook-article>section,
+html body:not(.theme-dark) .article-page .article>section,
+html body:not(.theme-dark) .structured-article-v103>section{
+  padding:18px 0!important;
+  margin:0!important;
+  border-top:1px solid var(--tl-light-line)!important;
+  background:transparent!important;
+}
+html body:not(.theme-dark) .source-playbook-article>section:first-of-type,
+html body:not(.theme-dark) .article-page .article>section:first-of-type{border-top:0!important}
+
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103){
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-left-width:1px!important;
+  border-radius:11px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-warning-v103{
+  background:var(--tl-light-warm-soft)!important;
+  border:1px solid #ddc9ab!important;
+}
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103{
+  background:var(--tl-light-green-soft)!important;
+  border:1px solid #cadcd4!important;
+  color:var(--tl-light-green)!important;
+}
+
+html body:not(.theme-dark) :is(.handbook-intro,.inline-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note,.service-inline,.service-review-note,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary){
+  background:var(--tl-light-surface-2)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-left-width:1px!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(.playbook-risk,.guide-v101-callout.warning,.service-warning,.warning-note){
+  background:var(--tl-light-warm-soft)!important;
+  border:1px solid #ddc9ab!important;
+}
+
+/* facts, tabs, pills and forms */
+html body:not(.theme-dark) .playbook-card-top{background:transparent!important;color:var(--tl-light-muted)!important}
+html body:not(.theme-dark) .playbook-card-top>span:not(.playbook-hero-art){color:var(--tl-light-warm)!important}
+html body:not(.theme-dark) .playbook-card-top .playbook-hero-art{
+  background-color:var(--tl-light-surface-2)!important;
+  border:1px solid var(--tl-light-line)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .playbook-card .playbook-facts>div,
+html body:not(.theme-dark) .playbook-facts>div,
+html body:not(.theme-dark) .source-playbook-article>.playbook-facts>div,
+html body:not(.theme-dark) .source-hero-shell>.playbook-facts>div{
+  background:var(--tl-light-surface-2)!important;
+  border:1px solid var(--tl-light-line)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(.playbook-facts dd,.source-playbook-article>.playbook-facts dd,.source-hero-shell>.playbook-facts dd,.source-section-tabs a:first-child,.source-playbook-article a,.article-page .article a,.related-card>b,.saved-card-main>b){
+  color:var(--tl-light-green)!important;
+}
+html body:not(.theme-dark) .source-section-tabs{border-bottom:1px solid var(--tl-light-line)!important;background:transparent!important}
+html body:not(.theme-dark) .source-section-tabs a{color:var(--tl-light-copy)!important}
+html body:not(.theme-dark) .source-section-tabs a span{background:var(--tl-light-surface)!important;border:1px solid var(--tl-light-line)!important;color:var(--tl-light-muted)!important}
+html body:not(.theme-dark) :is(input,select,textarea,.wizard-options button,.problem-options button,.audience-mode-buttons button,.path-mode-switch button,.sidebar-mode button){
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  color:var(--tl-light-ink)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) :is(input,select,textarea)::placeholder{color:var(--tl-light-muted)!important}
+html body:not(.theme-dark) :is(.home-actions a,.service-tool-actions a,.service-open-link,.home-results nav a,.guide-v101-inline-link a,.problem-result-links a,.text-button){
+  border-radius:8px!important;
+}
+html body:not(.theme-dark) :is(.home-action-primary,.ref-top-home.primary,.button-primary,.wizard-next,.problem-result-links a.primary){
+  background:var(--tl-light-green)!important;
+  border-color:var(--tl-light-green)!important;
+  color:#fff!important;
+}
+html body:not(.theme-dark) :is(.home-action-partner,.button-secondary,.problem-result-links a){
+  background:var(--tl-light-surface-2)!important;
+  border-color:var(--tl-light-line)!important;
+  color:var(--tl-light-green)!important;
+}
+
+/* tables */
+html body:not(.theme-dark) .article th{background:var(--tl-light-surface-2)!important;color:var(--tl-light-ink)!important;border-color:var(--tl-light-line)!important}
+html body:not(.theme-dark) .article td{background:var(--tl-light-surface)!important;border-color:var(--tl-light-line)!important;color:var(--tl-light-copy)!important}
+
+/* home summary / search cards */
+html body:not(.theme-dark) .home-welcome-summary>div{
+  background:rgba(252,250,246,.94)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-top-width:1px!important;
+}
+html body:not(.theme-dark) .home-search-card{
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line-strong)!important;
+  box-shadow:var(--tl-light-shadow)!important;
+}
+html body:not(.theme-dark) .home-source-grid small{border-top-color:var(--tl-light-line)!important;color:var(--tl-light-green)!important}
+
+/* reference-ui article rail and content area */
+html body.reference-ui-v99:not(.theme-dark) .article-layout{
+  background:transparent!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .source-playbook-article,
+html body.reference-ui-v99:not(.theme-dark) .article-page .article{
+  background:transparent!important;
+  color:var(--tl-light-copy)!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .source-title-copy h1,
+html body.reference-ui-v99:not(.theme-dark) .source-playbook-article h2,
+html body.reference-ui-v99:not(.theme-dark) .article-page .article h2{color:var(--tl-light-ink)!important}
+html body.reference-ui-v99:not(.theme-dark) .source-hero-shell>.lead,
+html body.reference-ui-v99:not(.theme-dark) .source-playbook-article :is(p,li,dd),
+html body.reference-ui-v99:not(.theme-dark) .article-page .article :is(p,li,dd){color:var(--tl-light-copy)!important}
+
+/* mobile keeps identical rhythm */
+@media(max-width:1050px){
+  html body:not(.theme-dark) .global-sidebar{box-shadow:16px 0 38px rgba(16,34,28,.22)!important}
+  html body:not(.theme-dark) .playbook-card,
+  html body:not(.theme-dark) .section-entry,
+  html body:not(.theme-dark) .service-card{padding:17px!important}
+}
