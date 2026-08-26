@@ -22533,3 +22533,122 @@ html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::-webkit-searc
   appearance:none!important;
   display:none!important;
 }
+
+
+/* v345 — remove empty desktop space inside article tables */
+@media (min-width: 901px){
+  html body .article table,
+  html body .compare-table,
+  html body .rules-table,
+  html body .source-compare-table{
+    display:table!important;
+    width:100%!important;
+    min-width:100%!important;
+    max-width:100%!important;
+    table-layout:fixed!important;
+    overflow:visible!important;
+  }
+  html body .article table tr,
+  html body .article table thead,
+  html body .article table tbody{
+    width:100%!important;
+  }
+  html body .article table th,
+  html body .article table td{
+    word-break:break-word!important;
+  }
+  html body .article table th:first-child,
+  html body .article table td:first-child{
+    width:28%!important;
+  }
+  html body .article table th:last-child,
+  html body .article table td:last-child{
+    width:72%!important;
+  }
+}
+
+
+/* v346 — light theme article layout mirrors dark theme */
+html body:not(.theme-dark) :is(.article-page .article,.source-playbook-page .source-playbook-article),
+html body.reference-ui-v99:not(.theme-dark) :is(.article-page .article,.source-playbook-page .source-playbook-article){
+  background:var(--tl-light-surface)!important;
+  background-image:none!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:14px!important;
+  color:var(--tl-light-copy)!important;
+  box-shadow:none!important;
+  padding:28px!important;
+  overflow:hidden!important;
+}
+
+html body:not(.theme-dark) :is(.article-page .article,.source-playbook-page .source-playbook-article) > :is(.academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-exit-nav,.next-reading,.article-author),
+html body.reference-ui-v99:not(.theme-dark) :is(.article-page .article,.source-playbook-page .source-playbook-article) > :is(.academy-article-hero,.academy-content-section,.logic-section-v103,.article-depth,.related-reading,.article-exit-nav,.next-reading,.article-author){
+  margin-left:0!important;
+  margin-right:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+
+html body:not(.theme-dark) :is(.source-playbook-page .source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103,.article-depth,.related-reading),
+html body.reference-ui-v99:not(.theme-dark) :is(.source-playbook-page .source-playbook-article>section,.article-page .article>section:not(.related-reading),.academy-content-section,.logic-section-v103,.article-depth,.related-reading){
+  background:transparent!important;
+  background-image:none!important;
+  margin:0!important;
+  padding:24px 0!important;
+  border-top:1px solid var(--tl-light-line)!important;
+  border-bottom:0!important;
+  border-left:0!important;
+  border-right:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+html body:not(.theme-dark) :is(.source-playbook-page .source-playbook-article>section:first-of-type,.article-page .article>section:first-of-type,.article-page .article>.academy-article-hero:first-child),
+html body.reference-ui-v99:not(.theme-dark) :is(.source-playbook-page .source-playbook-article>section:first-of-type,.article-page .article>section:first-of-type,.article-page .article>.academy-article-hero:first-child){
+  border-top:0!important;
+  padding-top:0!important;
+}
+
+/* remove per-section card styling in light article theme */
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103),
+html body.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103){
+  background:transparent!important;
+  border:0!important;
+  border-top:1px solid var(--tl-light-line)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:24px 0!important;
+  margin:0!important;
+}
+
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 > :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103):first-of-type,
+html body.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 > :is(.logic-section-v103,.logic-explain-v103,.logic-action-v103,.logic-analysis-v103):first-of-type{
+  border-top:0!important;
+  padding-top:0!important;
+}
+
+/* warnings and callouts stay visually boxed, like in dark theme's logic */
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-warning-v103,
+html body.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-warning-v103{
+  margin:20px 0!important;
+  padding:20px 22px!important;
+  border:1px solid #ddc9ab!important;
+  border-radius:12px!important;
+  background:var(--tl-light-warm-soft)!important;
+}
+
+/* preserve the numbered heading badge, but without boxed section cards */
+html body:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103,
+html body.reference-ui-v99:not(.theme-dark).content-system-v103 .structured-article-v103 .logic-index-v103{
+  background:var(--tl-light-green-soft)!important;
+  border:1px solid #cadcd4!important;
+  border-radius:999px!important;
+  color:var(--tl-light-green)!important;
+}
+
+/* inner cards inside sections still keep a subtle frame */
+html body:not(.theme-dark) :is(.playbook-card,.section-entry,.section-outcome,.source-tool-card,.tool-card,.related-card,.saved-card,.library-row,.compare-card,.article-aside.enhanced-rail .aside-block),
+html body.reference-ui-v99:not(.theme-dark) :is(.playbook-card,.section-entry,.section-outcome,.source-tool-card,.tool-card,.related-card,.saved-card,.library-row,.compare-card,.article-aside.enhanced-rail .aside-block){
+  border-radius:12px!important;
+}
