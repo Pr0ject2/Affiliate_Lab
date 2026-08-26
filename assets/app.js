@@ -1718,7 +1718,7 @@
         ['Журнал тестов',base+'notes/','pen-square'],['История',base+'history/','history']
       ]}
     ];
-    const navIcon=(name)=>`<svg class="ref-nav-icon-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><use href="${base}assets/icons/nav.svg#${name}"></use></svg>`;
+    const navIcon=(name)=>`<svg class="ref-nav-icon-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><use href="${base}assets/icons/nav.svg?v=20260826-3821#${name}"></use></svg>`;
     const pathMatches=(href)=>{
       if(href===base) return currentPath===base || currentPath===base+'index.html';
       return currentPath===href || currentPath===href+'index.html' || currentPath.startsWith(href);
