@@ -23263,3 +23263,352 @@ html body.reference-ui-v99.theme-dark .global-sidebar .ref-nav-group nav a:is(:h
 /* Rows follow their own content height; no artificial empty space. */
 html body .traffic-hub-page .playbook-catalog-grid,
 html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid{grid-auto-rows:auto!important}
+
+/* v352 — footer copy is white in both themes */
+html body .site-footer,
+html body.reference-ui-v99 .site-footer{
+  color:#ffffff!important;
+}
+html body .site-footer :is(h1,h2,h3,h4,h5,h6,p,span,small,b,strong,a,li,dt,dd,.footer-brand,.footer-links a,.footer-bottom span,.footer-identity p),
+html body.reference-ui-v99 .site-footer :is(h1,h2,h3,h4,h5,h6,p,span,small,b,strong,a,li,dt,dd,.footer-brand,.footer-links a,.footer-bottom span,.footer-identity p){
+  color:#ffffff!important;
+  opacity:1!important;
+}
+html body .site-footer a:hover,
+html body.reference-ui-v99 .site-footer a:hover{
+  color:#ffffff!important;
+}
+
+/* v353 — add breathing room inside warning/prelaunch blocks in both themes */
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+  box-sizing:border-box!important;
+  margin:14px 0 18px!important;
+  padding:18px 22px!important;
+  border-radius:12px!important;
+}
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) > :first-child{
+  margin-top:0!important;
+}
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) > :last-child{
+  margin-bottom:0!important;
+}
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) b{
+  display:block!important;
+  margin:0 0 8px!important;
+}
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) p,
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) ul,
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) ol,
+html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning) div{
+  margin:0!important;
+}
+html body:not(.theme-dark) :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+  background:#f7f1e6!important;
+  border-color:#d8c3a1!important;
+}
+html body.theme-dark :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning),
+html body.reference-ui-v99.theme-dark :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+  background:#1f231f!important;
+  border-color:#4d5a50!important;
+}
+@media (max-width: 700px){
+  html body :is(.playbook-risk,.guide-v101-callout.warning,.warning-note,.service-warning){
+    padding:16px 18px!important;
+  }
+}
+
+/* ======================================================================
+   v141 — readable text inside source format art cards in both themes
+   ====================================================================== */
+html body .guide-v101-formats .guide-v101-format-art,
+html body.reference-ui-v99 .guide-v101-formats .guide-v101-format-art,
+html body .source-playbook-article .guide-v101-format-art{
+  box-sizing:border-box!important;
+  min-height:86px!important;
+  height:86px!important;
+  padding:14px 16px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  gap:3px!important;
+  overflow:hidden!important;
+  line-height:1!important;
+}
+html body .guide-v101-formats .guide-v101-format-art{
+  font-size:12px!important;
+  font-weight:800!important;
+  letter-spacing:.04em!important;
+}
+html body .guide-v101-formats .guide-v101-format-art b,
+html body.reference-ui-v99 .guide-v101-formats .guide-v101-format-art b{
+  display:block!important;
+  margin:0!important;
+  font-size:clamp(24px,2vw,29px)!important;
+  line-height:.95!important;
+  letter-spacing:.01em!important;
+  color:rgba(255,255,255,.88)!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.16)!important;
+}
+html body .guide-v101-formats .guide-v101-format-art{
+  color:rgba(255,255,255,.96)!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.16)!important;
+}
+html body.theme-dark .guide-v101-formats .guide-v101-format-art,
+html body.reference-ui-v99.theme-dark .guide-v101-formats .guide-v101-format-art{
+  color:rgba(255,255,255,.97)!important;
+}
+html body.theme-dark .guide-v101-formats .guide-v101-format-art b,
+html body.reference-ui-v99.theme-dark .guide-v101-formats .guide-v101-format-art b{
+  color:rgba(255,255,255,.9)!important;
+}
+@media (max-width:900px){
+  html body .guide-v101-formats .guide-v101-format-art,
+  html body .source-playbook-article .guide-v101-format-art{
+    min-height:82px!important;
+    height:82px!important;
+    padding:13px 14px!important;
+  }
+  html body .guide-v101-formats .guide-v101-format-art{
+    font-size:11px!important;
+  }
+  html body .guide-v101-formats .guide-v101-format-art b,
+  html body.reference-ui-v99 .guide-v101-formats .guide-v101-format-art b{
+    font-size:22px!important;
+  }
+}
+
+/* v142 — first action button in source-next-links uses white text in both themes */
+html body .source-next-links a:first-child,
+html body.reference-ui-v99 .source-next-links a:first-child,
+html body.theme-dark .source-next-links a:first-child,
+html body.reference-ui-v99.theme-dark .source-next-links a:first-child{
+  color:#fff!important;
+}
+html body .source-next-links a:first-child:hover,
+html body.reference-ui-v99 .source-next-links a:first-child:hover,
+html body.theme-dark .source-next-links a:first-child:hover,
+html body.reference-ui-v99.theme-dark .source-next-links a:first-child:hover{
+  color:#fff!important;
+}
+
+/* v143 — remove accidental outer frames around source article hero blocks */
+html body .source-playbook-page .article-layout:before,
+html body.reference-ui-v99 .source-playbook-page .article-layout:before{
+  display:none!important;
+}
+
+html body .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99 .source-playbook-page .source-playbook-article,
+html body .source-playbook-page .source-hero-shell,
+html body.reference-ui-v99 .source-playbook-page .source-hero-shell{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+html body .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99 .source-playbook-page .source-playbook-article{
+  padding:0!important;
+}
+
+html body .source-playbook-page .source-hero-shell,
+html body.reference-ui-v99 .source-playbook-page .source-hero-shell{
+  margin:0 0 10px!important;
+  padding:0 0 10px!important;
+  border-bottom:0!important;
+}
+
+html body .source-playbook-page .source-section-tabs,
+html body.reference-ui-v99 .source-playbook-page .source-section-tabs{
+  margin-top:14px!important;
+  border-top:0!important;
+  border-left:0!important;
+  border-right:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+
+html body .source-playbook-page .source-section-tabs a,
+html body.reference-ui-v99 .source-playbook-page .source-section-tabs a{
+  border-top:0!important;
+  border-left:0!important;
+  border-right:0!important;
+  box-shadow:none!important;
+}
+
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article,
+html body.theme-dark .source-playbook-page .source-hero-shell,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-hero-shell{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+/* v144 — add a proper sidebar icon for History, matching the existing menu style */
+html body .global-sidebar .sidebar-menu a[data-nav="history"]:before,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"]:before{
+  content:"↺"!important;
+  font-size:12px!important;
+  font-weight:800!important;
+}
+
+/* ======================================================================
+   v145 — light theme homepage background: paper-like lab sketches
+   ====================================================================== */
+html body:not(.theme-dark).home-shell-v256 main.home-page,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page{
+  background:#f7f3eb!important;
+  background-image:none!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:
+    radial-gradient(1200px 420px at 50% 0%,rgba(255,255,255,.56),transparent 72%),
+    linear-gradient(180deg,rgba(255,255,255,.34),rgba(245,240,231,.12) 24%,rgba(245,240,231,0) 48%),
+    #f7f3eb!important;
+  opacity:1!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  height:clamp(380px,54vw,960px)!important;
+  pointer-events:none!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-light-sketches.svg?v=20260826-1451')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:min(100%,1680px) auto!important;
+  opacity:.92!important;
+  filter:none!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(ellipse at 16% 11%,rgba(122,136,128,.06),transparent 22%),
+    radial-gradient(ellipse at 84% 19%,rgba(122,136,128,.05),transparent 19%),
+    radial-gradient(ellipse at 18% 54%,rgba(122,136,128,.04),transparent 17%),
+    radial-gradient(ellipse at 84% 60%,rgba(122,136,128,.04),transparent 17%),
+    linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 30%,rgba(201,191,176,.03) 100%)!important;
+}
+
+@media (max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    background-size:min(100%,1460px) auto!important;
+    background-position:54% top!important;
+    opacity:.88!important;
+  }
+}
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:clamp(300px,64vw,620px)!important;
+    background-size:min(100%,1160px) auto!important;
+    background-position:58% top!important;
+    opacity:.78!important;
+  }
+}
+@media (max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:300px!important;
+    background-size:min(100%,860px) auto!important;
+    background-position:62% top!important;
+    opacity:.68!important;
+  }
+}
+
+/* ======================================================================
+   v146 — exact light homepage background based on chosen Laboratory Board
+   The original artwork is preserved; its center is softened into a reading
+   zone so the homepage copy never sits on top of the illustrations.
+   ====================================================================== */
+html body:not(.theme-dark).home-shell-v256 main.home-page,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page{
+  background:#f9f2e5!important;
+  background-image:none!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+  background:#f9f2e5!important;
+  background-image:none!important;
+  opacity:1!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  height:clamp(650px,58vw,900px)!important;
+  pointer-events:none!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-board-light-exact.webp?v=20260826-1461')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:min(100%,1600px) auto!important;
+  opacity:1!important;
+  filter:none!important;
+}
+
+/* Continue the same warm laboratory-paper surface below the illustration. */
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.025),transparent 24%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.02),transparent 22%),
+    linear-gradient(180deg,transparent 0 760px,rgba(245,235,218,.20) 1040px,rgba(249,242,229,.34) 100%)!important;
+}
+
+@media(max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:780px!important;
+    background-size:1450px auto!important;
+    background-position:center top!important;
+  }
+}
+
+@media(max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:650px!important;
+    background-size:1180px auto!important;
+    background-position:center top!important;
+  }
+}
+
+@media(max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:560px!important;
+    background-size:1030px auto!important;
+    background-position:center top!important;
+  }
+}
