@@ -24027,3 +24027,250 @@ html body.reference-ui-v99 :is(.article-page .article,.source-playbook-page .sou
     padding:22px 20px!important;
   }
 }
+
+/* v366 — enlarge light homepage background and add a smoother lower transition */
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+  min-height:calc(100vh - 72px)!important;
+  padding:28px 0 22px!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#f1ebde!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  height:calc(100vh - 20px)!important;
+  min-height:860px!important;
+  background-image:url('/Affiliate_Lab/assets/home-lab-board-light-exact.webp?v=20260826-3641')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:min(112%,1920px) auto!important;
+  opacity:1!important;
+  filter:brightness(.89) saturate(.9)!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(180deg,
+      rgba(241,235,222,0) 0%,
+      rgba(241,235,222,0) 58%,
+      rgba(241,235,222,.10) 68%,
+      rgba(241,235,222,.28) 78%,
+      rgba(241,235,222,.54) 88%,
+      rgba(241,235,222,.82) 95%,
+      rgba(241,235,222,1) 100%),
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.018),transparent 25%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.014),transparent 23%)!important;
+}
+
+@media (max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+    padding:26px 0 20px!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    min-height:780px!important;
+    background-size:min(118%,1720px) auto!important;
+  }
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page .home-welcome{
+    min-height:auto!important;
+    padding:26px 0 22px!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:700px!important;
+    min-height:700px!important;
+    background-size:1380px auto!important;
+    filter:brightness(.9) saturate(.9)!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    background:
+      linear-gradient(180deg,
+        rgba(241,235,222,0) 0%,
+        rgba(241,235,222,0) 52%,
+        rgba(241,235,222,.12) 64%,
+        rgba(241,235,222,.34) 78%,
+        rgba(241,235,222,.66) 90%,
+        rgba(241,235,222,1) 100%)!important;
+  }
+}
+
+@media (max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:590px!important;
+    min-height:590px!important;
+    background-size:1120px auto!important;
+  }
+}
+
+/* v367 — dim the light homepage background so it supports the content instead of competing with it */
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#efe8d9!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  filter:brightness(.82) saturate(.82) contrast(.94)!important;
+  opacity:.9!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  background:
+    linear-gradient(180deg,
+      rgba(239,232,217,.18) 0%,
+      rgba(239,232,217,.14) 18%,
+      rgba(239,232,217,.12) 36%,
+      rgba(239,232,217,.18) 58%,
+      rgba(239,232,217,.28) 68%,
+      rgba(239,232,217,.46) 78%,
+      rgba(239,232,217,.68) 88%,
+      rgba(239,232,217,.88) 95%,
+      rgba(239,232,217,1) 100%),
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.012),transparent 25%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.01),transparent 23%)!important;
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    filter:brightness(.84) saturate(.82) contrast(.95)!important;
+    opacity:.88!important;
+  }
+}
+
+/* v368 — section landing groups follow the cleaner logic: no giant outer slab, each logical group is its own block */
+html body.theme-dark{
+  --tl368-group-bg:#10161d;
+  --tl368-group-line:#2b3440;
+  --tl368-card-bg:#121922;
+  --tl368-card-line:#30404d;
+}
+html body:not(.theme-dark){
+  --tl368-group-bg:#f6f2ea;
+  --tl368-group-line:#d8d0c3;
+  --tl368-card-bg:#fffdf9;
+  --tl368-card-line:#ddd5c8;
+}
+
+/* remove the big shared square around all category groups */
+html body .section-groups.compact-block-v103,
+html body.reference-ui-v99 .section-groups.compact-block-v103{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  padding:0!important;
+  display:grid!important;
+  gap:22px!important;
+}
+
+/* each logical group becomes its own framed section, like the cleaner reference layout */
+html body .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+  background:var(--tl368-group-bg)!important;
+  border:1px solid var(--tl368-group-line)!important;
+  border-radius:18px!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+  padding:28px 30px 30px!important;
+  margin:0!important;
+}
+html body .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group:first-child{
+  margin:0!important;
+  padding:28px 30px 30px!important;
+  border-top:1px solid var(--tl368-group-line)!important;
+}
+html body .section-groups.compact-block-v103 .section-group + .section-group,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group + .section-group{
+  margin:0!important;
+}
+
+html body .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group-head{
+  margin:0 0 18px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+}
+html body .section-groups.compact-block-v103 .section-group-head h2,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group-head h2{
+  margin:0!important;
+}
+html body .section-groups.compact-block-v103 .section-group-head p,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group-head p{
+  margin:8px 0 0!important;
+}
+html body .section-groups.compact-block-v103 .section-entry-grid,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:14px!important;
+  align-items:start!important;
+}
+html body .section-groups.compact-block-v103 .section-entry,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry{
+  background:var(--tl368-card-bg)!important;
+  border:1px solid var(--tl368-card-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+  min-height:158px!important;
+  padding:20px 22px!important;
+}
+html body .section-groups.compact-block-v103 .section-entry:hover,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry:hover{
+  transform:none!important;
+  box-shadow:none!important;
+}
+
+/* inline note at the top of some pages should not be swallowed by a big box */
+html body .section-groups.compact-block-v103 > .affiliate-inline-mention,
+html body.reference-ui-v99 .section-groups.compact-block-v103 > .affiliate-inline-mention{
+  background:var(--tl368-group-bg)!important;
+  border:1px solid var(--tl368-group-line)!important;
+  border-radius:16px!important;
+  padding:18px 22px!important;
+  margin:0!important;
+}
+
+@media (max-width:900px){
+  html body .section-groups.compact-block-v103,
+  html body.reference-ui-v99 .section-groups.compact-block-v103{
+    gap:18px!important;
+  }
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group,
+  html body .section-groups.compact-block-v103 .section-group:first-child,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group:first-child{
+    padding:20px 20px 22px!important;
+  }
+  html body .section-groups.compact-block-v103 .section-entry-grid,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry-grid{
+    grid-template-columns:1fr!important;
+  }
+  html body .section-groups.compact-block-v103 > .affiliate-inline-mention,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 > .affiliate-inline-mention{
+    padding:16px 18px!important;
+  }
+}
