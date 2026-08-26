@@ -24555,36 +24555,102 @@ html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page .home
   text-shadow:0 1px 0 rgba(255,255,255,.34)!important;
 }
 
-/* v374 — light theme pages use the same base tone as the homepage background */
-html body:not(.theme-dark){
-  --tl-light-bg:#efe8d9!important;
-  --tl-light-bg-2:#efe8d9!important;
-  --tl-light-surface:#f7f2e8!important;
-  --tl-light-surface-2:#f3ede2!important;
-  --tl-light-line:#d6cdbf!important;
-  --tl-light-line-strong:#cbbfad!important;
-  background:#efe8d9!important;
+/* v375 — shift the hero copy and learning cards slightly to the right */
+html body.home-shell-v256 main.home-page .home-welcome-copy,
+html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+  margin-left:18px!important;
 }
 
-html body:not(.theme-dark) main,
-html body.reference-ui-v99:not(.theme-dark) main,
-html body:not(.theme-dark) :is(.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.section-page,.notes-page,.compact-main-v103),
-html body.reference-ui-v99:not(.theme-dark) :is(.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.section-page,.notes-page,.compact-main-v103){
-  background:#efe8d9!important;
+@media (max-width:1100px){
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    margin-left:12px!important;
+  }
 }
 
-html body:not(.theme-dark) :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.continue-home),
-html body.reference-ui-v99:not(.theme-dark) :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.continue-home){
-  background:transparent!important;
-  border-color:var(--tl-light-line)!important;
+@media (max-width:900px){
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    margin-left:0!important;
+  }
 }
 
-html body:not(.theme-dark) :is(main.compact-main-v103 > section.page-head.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103),
-html body.reference-ui-v99:not(.theme-dark) :is(main.compact-main-v103 > section.page-head.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103){
+/* v376 — restore the original light-home artwork brightness/colors.
+   De-emphasize it by softening fine detail instead of darkening it. */
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
   background:#efe8d9!important;
+  background-color:#efe8d9!important;
 }
 
-html body:not(.theme-dark) .site-header,
-html body.reference-ui-v99:not(.theme-dark) .site-header{
-  background:#efe8d9!important;
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  /* keep the approved size and the image's native brightness/saturation */
+  height:calc(100vh - 34px)!important;
+  min-height:800px!important;
+  background-position:center top!important;
+  background-size:min(104%,1760px) auto!important;
+  opacity:1!important;
+  filter:blur(1.25px)!important;
+  transform:scale(1.004)!important;
+  transform-origin:center top!important;
+}
+
+/* Do not wash out the whole artwork. Only fade its very bottom into the page tone. */
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:linear-gradient(180deg,
+    rgba(239,232,217,0) 0%,
+    rgba(239,232,217,0) 72%,
+    rgba(239,232,217,.05) 78%,
+    rgba(239,232,217,.16) 84%,
+    rgba(239,232,217,.34) 89%,
+    rgba(239,232,217,.58) 94%,
+    rgba(239,232,217,.82) 97%,
+    rgba(239,232,217,1) 100%)!important;
+}
+
+@media (max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    min-height:740px!important;
+    background-size:min(108%,1600px) auto!important;
+    filter:blur(1.1px)!important;
+  }
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:660px!important;
+    min-height:660px!important;
+    background-size:1280px auto!important;
+    opacity:1!important;
+    filter:blur(.9px)!important;
+    transform:scale(1.003)!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    background:linear-gradient(180deg,
+      rgba(239,232,217,0) 0%,
+      rgba(239,232,217,0) 68%,
+      rgba(239,232,217,.08) 76%,
+      rgba(239,232,217,.26) 84%,
+      rgba(239,232,217,.54) 91%,
+      rgba(239,232,217,.82) 96%,
+      rgba(239,232,217,1) 100%)!important;
+  }
+}
+
+@media (max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:560px!important;
+    min-height:560px!important;
+    background-size:1060px auto!important;
+  }
 }
