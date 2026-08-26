@@ -23612,3 +23612,207 @@ html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .ho
     background-position:center top!important;
   }
 }
+
+/* v161 — brighter footer text in light theme */
+html body:not(.theme-dark) .site-footer,
+html body.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#1f5c4d!important;
+}
+html body:not(.theme-dark) .site-footer .footer-brand,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-brand,
+html body:not(.theme-dark) .site-footer .footer-links a,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a,
+html body:not(.theme-dark) .site-footer .footer-bottom span,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-bottom span,
+html body:not(.theme-dark) .site-footer .footer-bottom small,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-bottom small{
+  color:#ffffff!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer .footer-identity p,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-identity p{
+  color:#eef7f3!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer a:hover,
+html body.reference-ui-v99:not(.theme-dark) .site-footer a:hover{
+  color:#ffffff!important;
+}
+
+/* v162 — force a visible icon for History in the left sidebar */
+html body .global-sidebar .sidebar-menu a[data-nav="history"]:before,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"]:before{
+  content:"↺"!important;
+  display:grid!important;
+  place-items:center!important;
+  color:#a9c7bd!important;
+  font:700 11px/1 Inter,"Segoe UI",Arial,sans-serif!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  background:rgba(255,255,255,.035)!important;
+}
+html body .global-sidebar .sidebar-menu a[data-nav="history"].active:before,
+html body .global-sidebar .sidebar-menu a[data-nav="history"][aria-current="page"]:before,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"].active:before,
+html body.reference-ui-v99 .global-sidebar .sidebar-menu a[data-nav="history"][aria-current="page"]:before{
+  color:#53d8a4!important;
+  background:rgba(83,216,164,.14)!important;
+}
+
+/* v163 — clean up source icon holders so logos don't sit inside an awkward inner tile */
+html body .playbook-card-top,
+html body.reference-ui-v99 .playbook-card-top{
+  align-items:flex-start!important;
+}
+
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  padding:0!important;
+  border-radius:18px!important;
+  background-color:#f6f1e8!important;
+  border:1px solid #d8d0c3!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.72)!important;
+}
+
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before{
+  position:static!important;
+  inset:auto!important;
+  width:48px!important;
+  height:48px!important;
+  border-radius:0!important;
+  background-color:transparent!important;
+  background-size:contain!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  box-shadow:none!important;
+}
+
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  width:62px!important;
+  height:62px!important;
+  min-width:62px!important;
+  flex-basis:62px!important;
+  border-radius:16px!important;
+  background-color:#f6f1e8!important;
+  border:1px solid #d8d0c3!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.72)!important;
+}
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+  position:static!important;
+  inset:auto!important;
+  width:44px!important;
+  height:44px!important;
+  border-radius:0!important;
+  background-color:transparent!important;
+  box-shadow:none!important;
+}
+html body .source-playbook-page .source-title-row{
+  grid-template-columns:62px minmax(0,1fr)!important;
+  gap:14px!important;
+}
+
+html body.theme-dark .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .playbook-card-top .playbook-hero-art,
+html body.theme-dark main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-color:#1a2027!important;
+  border-color:#36414b!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)!important;
+}
+
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+    width:68px!important;
+    height:68px!important;
+    min-width:68px!important;
+  }
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before{
+    width:43px!important;
+    height:43px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:56px!important;
+    height:56px!important;
+    min-width:56px!important;
+    flex-basis:56px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+    width:39px!important;
+    height:39px!important;
+  }
+  html body .source-playbook-page .source-title-row{
+    grid-template-columns:56px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+}
+
+/* v363 — unify inner padding so outer article/frame borders do not hug content */
+:root{
+  --tl363-frame-pad-x:30px;
+  --tl363-frame-pad-y:28px;
+  --tl363-frame-pad-mobile:18px;
+}
+
+/* shared framed shells */
+html body :is(.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103),
+html body.reference-ui-v99 :is(.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103){
+  padding:var(--tl363-frame-pad-y) var(--tl363-frame-pad-x)!important;
+}
+
+/* section-group pages specifically needed more air from the outer frame */
+html body .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+  padding-top:24px!important;
+  margin-top:24px!important;
+}
+html body .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group-head{
+  margin:0 0 18px!important;
+}
+
+/* article shells keep the same look but with safer inner spacing */
+html body :is(.article-page .article,.source-playbook-page .source-playbook-article),
+html body.reference-ui-v99 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+  padding:32px!important;
+}
+
+/* framed page headers should align with article insets */
+html body main.compact-main-v103 > section.page-head.compact-block-v103,
+html body.reference-ui-v99 main.compact-main-v103 > section.page-head.compact-block-v103{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+html body main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+html body.reference-ui-v99 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap{
+  width:min(calc(100% - 2 * var(--tl363-frame-pad-x)),var(--content-max))!important;
+}
+
+/* generic compact framed sections on phones/tablets */
+@media (max-width:900px){
+  html body :is(.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103),
+  html body.reference-ui-v99 :is(.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103){
+    padding:var(--tl363-frame-pad-mobile)!important;
+  }
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding-top:18px!important;
+    margin-top:18px!important;
+  }
+  html body :is(.article-page .article,.source-playbook-page .source-playbook-article),
+  html body.reference-ui-v99 :is(.article-page .article,.source-playbook-page .source-playbook-article){
+    padding:20px!important;
+  }
+  html body main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap,
+  html body.reference-ui-v99 main.compact-main-v103 > section.page-head.compact-block-v103 > .wrap{
+    width:min(calc(100% - 2 * var(--tl363-frame-pad-mobile)),var(--content-max))!important;
+  }
+}
