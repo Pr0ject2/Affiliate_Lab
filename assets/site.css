@@ -24274,3 +24274,136 @@ html body.reference-ui-v99 .section-groups.compact-block-v103 > .affiliate-inlin
     padding:16px 18px!important;
   }
 }
+
+/* v369 — make the light homepage background a bit smaller and soften the bottom blend */
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#efe8d9!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  height:calc(100vh - 34px)!important;
+  min-height:800px!important;
+  background-position:center top!important;
+  background-size:min(104%,1760px) auto!important;
+  filter:brightness(.82) saturate(.82) contrast(.94)!important;
+  opacity:.9!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(180deg,
+      rgba(239,232,217,.12) 0%,
+      rgba(239,232,217,.10) 18%,
+      rgba(239,232,217,.08) 36%,
+      rgba(239,232,217,.10) 54%,
+      rgba(239,232,217,.18) 64%,
+      rgba(239,232,217,.30) 74%,
+      rgba(239,232,217,.48) 83%,
+      rgba(239,232,217,.68) 90%,
+      rgba(239,232,217,.84) 95%,
+      rgba(239,232,217,.94) 98%,
+      rgba(239,232,217,1) 100%),
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.010),transparent 25%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.008),transparent 23%)!important;
+}
+
+@media (max-width:1100px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    min-height:740px!important;
+    background-size:min(108%,1600px) auto!important;
+  }
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:660px!important;
+    min-height:660px!important;
+    background-size:1280px auto!important;
+    filter:brightness(.84) saturate(.82) contrast(.95)!important;
+    opacity:.88!important;
+  }
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    background:
+      linear-gradient(180deg,
+        rgba(239,232,217,.10) 0%,
+        rgba(239,232,217,.08) 24%,
+        rgba(239,232,217,.08) 46%,
+        rgba(239,232,217,.16) 60%,
+        rgba(239,232,217,.34) 75%,
+        rgba(239,232,217,.60) 88%,
+        rgba(239,232,217,.86) 96%,
+        rgba(239,232,217,1) 100%)!important;
+  }
+}
+
+@media (max-width:680px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body:not(.theme-dark).reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    height:560px!important;
+    min-height:560px!important;
+    background-size:1060px auto!important;
+  }
+}
+
+/* v370 — remove the seam on the dark homepage, darken both zones, and keep one unified background tone */
+html body.theme-dark.home-shell-v256 main.home-page,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page{
+  background:#0c1218!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#0c1218!important;
+  background-color:#0c1218!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  filter:brightness(.74) saturate(.78) contrast(.96)!important;
+  opacity:.9!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(180deg,
+      rgba(12,18,24,.10) 0%,
+      rgba(12,18,24,.08) 24%,
+      rgba(12,18,24,.08) 50%,
+      rgba(12,18,24,.12) 66%,
+      rgba(12,18,24,.22) 78%,
+      rgba(12,18,24,.42) 88%,
+      rgba(12,18,24,.72) 95%,
+      rgba(12,18,24,.92) 98%,
+      rgba(12,18,24,1) 100%),
+    radial-gradient(ellipse at 18% 22%,rgba(255,255,255,.018),transparent 26%),
+    radial-gradient(ellipse at 82% 58%,rgba(255,255,255,.014),transparent 24%)!important;
+}
+
+/* keep the content area itself on the same tone so there is no visible horizontal seam */
+html body.theme-dark.home-shell-v256 main.home-page :is(.home-entry-section,.home-results,.home-next,.home-sources-v51),
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page :is(.home-entry-section,.home-results,.home-next,.home-sources-v51){
+  background:transparent!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    filter:brightness(.76) saturate(.78) contrast(.96)!important;
+    opacity:.88!important;
+  }
+}
