@@ -22365,3 +22365,171 @@ html body.reference-ui-v99:not(.theme-dark) .article-page .article :is(p,li,dd){
   html body:not(.theme-dark) .section-entry,
   html body:not(.theme-dark) .service-card{padding:17px!important}
 }
+
+
+/* ======================================================================
+   v343 — finish the light-theme transfer:
+   restore wrapper outlines/radius and roll the sidebar back one step.
+   ====================================================================== */
+
+/* Light sidebar/footer: rollback to the previous calmer version. */
+html body:not(.theme-dark) .global-sidebar,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  width:var(--sidebar-width)!important;
+  padding:21px 16px 18px!important;
+  background:#fbfaf6!important;
+  border-right:1px solid #d9d4ca!important;
+  box-shadow:3px 0 18px rgba(30,41,36,.025)!important;
+  scrollbar-color:#d3d0c8 transparent!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-brand b,.sidebar-brand span b,.sidebar-menu a,.sidebar-bottom a,.sidebar-group-title,.sidebar-partner-cta b,.sidebar-partner-cta span),
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand b,.sidebar-brand span b,.sidebar-menu a,.sidebar-bottom a,.sidebar-group-title,.sidebar-partner-cta b,.sidebar-partner-cta span){
+  color:#2f3d38!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-brand small,.sidebar-bottom small,.sidebar-partner-cta small),
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand small,.sidebar-bottom small,.sidebar-partner-cta small){
+  color:#81877f!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-search input,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-search input{
+  background:#fff!important;
+  border:1px solid #cec8bd!important;
+  color:#26342f!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-search input::placeholder,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-search input::placeholder{color:#858982!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu{gap:2px!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a{
+  min-height:38px!important;
+  padding:7px 10px!important;
+  border-radius:6px!important;
+  background:transparent!important;
+  border:0!important;
+  color:#414b46!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:hover,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:hover{
+  background:#f0eee8!important;
+  color:#173f34!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a.active,
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a[aria-current="page"],
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a.active,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a[aria-current="page"]{
+  background:#e8ede8!important;
+  color:#173f34!important;
+  font-weight:700!important;
+  box-shadow:inset 3px 0 0 #315447!important;
+}
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:before,
+html body:not(.theme-dark) .global-sidebar .sidebar-menu a:after,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:before,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-menu a:after{display:none!important}
+html body:not(.theme-dark) .global-sidebar .nav-icon,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .nav-icon{display:none!important}
+html body:not(.theme-dark) .global-sidebar .sidebar-bottom,
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar .sidebar-bottom{
+  margin-top:auto!important;
+  padding:16px 9px 3px!important;
+  border-top:1px solid #ded9cf!important;
+}
+html body:not(.theme-dark) .global-sidebar :is(.sidebar-partner-cta,.sidebar-partner-rules,.ref-partner-card),
+html body.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-partner-cta,.sidebar-partner-rules,.ref-partner-card){
+  background:#f6f2ea!important;
+  border:1px solid #ddd4c7!important;
+  color:#4d5954!important;
+}
+html body:not(.theme-dark) .site-footer,
+html body.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#fbfaf6!important;
+  border-top:1px solid #d9d4ca!important;
+}
+html body:not(.theme-dark) .site-footer :is(h2,h3,b,strong,a,span,.footer-brand),
+html body.reference-ui-v99:not(.theme-dark) .site-footer :is(h2,h3,b,strong,a,span,.footer-brand){color:#2f3d38!important}
+html body:not(.theme-dark) .site-footer :is(p,small,li),
+html body.reference-ui-v99:not(.theme-dark) .site-footer :is(p,small,li){color:#7b817b!important}
+
+/* Restore the wrapper frame logic in light theme. */
+html body:not(.theme-dark) :is(.beginner-term-note.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.source-compare-note.compact-block-v103),
+html body.reference-ui-v99:not(.theme-dark) :is(.beginner-term-note.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.source-compare-note.compact-block-v103){
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  padding:18px 18px 22px!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  padding:18px 0 0!important;
+  margin:18px 0 0!important;
+  border-top:1px solid var(--tl-light-line)!important;
+  background:transparent!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child{
+  padding-top:0!important;
+  margin-top:0!important;
+  border-top:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  margin-bottom:16px!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head h2,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head h2{
+  margin:0!important;
+  color:var(--tl-light-ink)!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-entry,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-entry{
+  border-radius:12px!important;
+}
+html body:not(.theme-dark) .section-bottom-links.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-bottom-links.compact-block-v103{
+  padding:18px!important;
+}
+html body:not(.theme-dark) .section-bottom-links.compact-block-v103 a,
+html body.reference-ui-v99:not(.theme-dark) .section-bottom-links.compact-block-v103 a{
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:10px!important;
+}
+
+/* Page head should keep the same rounded shell, not sharp edges. */
+html body:not(.theme-dark) main.compact-main-v103 > section.page-head.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) main.compact-main-v103 > section.page-head.compact-block-v103{
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:14px!important;
+  overflow:hidden!important;
+  background:var(--tl-light-bg)!important;
+}
+
+
+/* v344 — remove the inner oval from the top search field. */
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:none!important;
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  padding:0!important;
+}
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::-webkit-search-decoration,
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::-webkit-search-cancel-button,
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::-webkit-search-results-button,
+html body.reference-ui-v99:not(.theme-dark) .ref-top-search input::-webkit-search-results-decoration{
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  display:none!important;
+}
