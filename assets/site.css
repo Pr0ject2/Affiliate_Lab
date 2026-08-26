@@ -24407,3 +24407,184 @@ html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page :is(.home-e
     opacity:.88!important;
   }
 }
+
+/* v371 — remove the remaining seam on the light homepage while keeping the approved background size */
+html body:not(.theme-dark).home-shell-v256 main.home-page,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page{
+  background:#efe8d9!important;
+}
+
+/* keep following homepage sections on the exact same surface so no hard band appears under the hero */
+html body:not(.theme-dark).home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results),
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results){
+  background:transparent!important;
+  border-color:transparent!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266{
+  background:#efe8d9!important;
+  background-color:#efe8d9!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  background:
+    linear-gradient(180deg,
+      rgba(239,232,217,.10) 0%,
+      rgba(239,232,217,.08) 18%,
+      rgba(239,232,217,.07) 38%,
+      rgba(239,232,217,.09) 56%,
+      rgba(239,232,217,.16) 66%,
+      rgba(239,232,217,.28) 76%,
+      rgba(239,232,217,.46) 84%,
+      rgba(239,232,217,.68) 90%,
+      rgba(239,232,217,.86) 95%,
+      rgba(239,232,217,.96) 98%,
+      rgba(239,232,217,1) 100%),
+    radial-gradient(ellipse at 15% 24%,rgba(113,102,82,.009),transparent 25%),
+    radial-gradient(ellipse at 84% 58%,rgba(113,102,82,.007),transparent 23%)!important;
+}
+
+@media (max-width:900px){
+  html body:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    background:
+      linear-gradient(180deg,
+        rgba(239,232,217,.09) 0%,
+        rgba(239,232,217,.08) 22%,
+        rgba(239,232,217,.08) 46%,
+        rgba(239,232,217,.14) 62%,
+        rgba(239,232,217,.30) 78%,
+        rgba(239,232,217,.56) 90%,
+        rgba(239,232,217,.84) 97%,
+        rgba(239,232,217,1) 100%)!important;
+  }
+}
+
+/* v372 — restore the dark lower chalk background and blend it seamlessly with the upper artwork */
+html body.theme-dark.home-shell-v256 main.home-page,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page{
+  background:#0a0f14!important;
+}
+
+/* lower/background texture: same tone and darkness as the upper illustration */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+  background-color:#0a0f14!important;
+  background-image:
+    linear-gradient(rgba(5,9,13,.42),rgba(5,9,13,.42)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-hq.webp?v=20260826-3721')!important;
+  background-repeat:repeat!important;
+  background-position:center top!important;
+  background-size:1300px 1300px!important;
+  opacity:1!important;
+}
+
+/* upper detailed layer: same overlay/tone; fade only the image edge into the lower texture */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+  background-image:
+    linear-gradient(rgba(5,9,13,.42),rgba(5,9,13,.42)),
+    url('/Affiliate_Lab/assets/home-chalk-reference-soft-tall-hq.webp?v=20260826-3721')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:min(100%,1672px) auto!important;
+  filter:none!important;
+  opacity:1!important;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 84%,rgba(0,0,0,.92) 88%,rgba(0,0,0,.72) 92%,rgba(0,0,0,.42) 96%,transparent 100%)!important;
+  mask-image:linear-gradient(to bottom,#000 0%,#000 84%,rgba(0,0,0,.92) 88%,rgba(0,0,0,.72) 92%,rgba(0,0,0,.42) 96%,transparent 100%)!important;
+}
+
+/* no extra full-page gradient changing brightness between upper and lower zones */
+html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::after,
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  content:none!important;
+  display:none!important;
+}
+
+html body.theme-dark.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results,.home-next),
+html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results,.home-next){
+  background:transparent!important;
+  border-color:transparent!important;
+}
+
+@media (max-width:900px){
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+    background-size:1040px 1040px!important;
+  }
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    background-size:min(100%,1080px) auto!important;
+  }
+}
+@media (max-width:680px){
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266{
+    background-size:820px 820px!important;
+  }
+  html body.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page > .home-lab-background-v266::before{
+    background-size:min(100%,820px) auto!important;
+  }
+}
+
+/* v373 — improve readability of light-theme hero copy over the laboratory background */
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome-copy,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page .home-welcome-copy{
+  position:relative!important;
+  z-index:1!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-welcome h1,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page .home-welcome h1{
+  color:#143228!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.42)!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-intro-copy,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page .home-intro-copy{
+  color:#4c5953!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.36)!important;
+}
+
+html body:not(.theme-dark).home-shell-v256 main.home-page .home-lead,
+html body.reference-ui-v99:not(.theme-dark).home-shell-v256 main.home-page .home-lead{
+  color:#54635c!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.34)!important;
+}
+
+/* v374 — light theme pages use the same base tone as the homepage background */
+html body:not(.theme-dark){
+  --tl-light-bg:#efe8d9!important;
+  --tl-light-bg-2:#efe8d9!important;
+  --tl-light-surface:#f7f2e8!important;
+  --tl-light-surface-2:#f3ede2!important;
+  --tl-light-line:#d6cdbf!important;
+  --tl-light-line-strong:#cbbfad!important;
+  background:#efe8d9!important;
+}
+
+html body:not(.theme-dark) main,
+html body.reference-ui-v99:not(.theme-dark) main,
+html body:not(.theme-dark) :is(.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.section-page,.notes-page,.compact-main-v103),
+html body.reference-ui-v99:not(.theme-dark) :is(.article-page,.source-playbook-page,.traffic-hub-page,.services-page,.section-page,.notes-page,.compact-main-v103){
+  background:#efe8d9!important;
+}
+
+html body:not(.theme-dark) :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.continue-home),
+html body.reference-ui-v99:not(.theme-dark) :is(.page-head,.section-landing-head,.home-welcome,.home-entry-section,.home-sources-v51,.home-results,.continue-home){
+  background:transparent!important;
+  border-color:var(--tl-light-line)!important;
+}
+
+html body:not(.theme-dark) :is(main.compact-main-v103 > section.page-head.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103),
+html body.reference-ui-v99:not(.theme-dark) :is(main.compact-main-v103 > section.page-head.compact-block-v103,.section-groups.compact-block-v103,.section-bottom-links.compact-block-v103,.section-feature.compact-block-v103,.section-outcome.compact-block-v103,.beginner-term-note.compact-block-v103,.source-compare-note.compact-block-v103){
+  background:#efe8d9!important;
+}
+
+html body:not(.theme-dark) .site-header,
+html body.reference-ui-v99:not(.theme-dark) .site-header{
+  background:#efe8d9!important;
+}
