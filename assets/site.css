@@ -26631,3 +26631,531 @@ html body.theme-dark .site-footer :is(p,a,span,small),
 html body.reference-ui-v99.theme-dark .site-footer :is(p,a,span,small){
   color:var(--tl-f-text)!important;
 }
+
+/* ======================================================================
+   v337 — remove remaining blue-looking inner article panels in dark mode.
+   One article surface, transparent chapters, quiet neutral dividers only.
+   ====================================================================== */
+html body.theme-dark,
+html body.reference-ui-v99.theme-dark{
+  --tl-v337-surface:#151918;
+  --tl-v337-divider:#282e2b;
+  --tl-v337-control:#191e1c;
+  --tl-v337-control-hover:#202622;
+}
+
+/* The article itself is the only framed dark surface. */
+html body.theme-dark .article-page .article,
+html body.theme-dark .source-playbook-page .source-playbook-article,
+html body.reference-ui-v99.theme-dark .article-page .article,
+html body.reference-ui-v99.theme-dark .source-playbook-page .source-playbook-article{
+  background:var(--tl-v337-surface)!important;
+  border:1px solid #2e3534!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+
+/* Chapters must not look like separate blue cards. */
+html body.theme-dark :is(
+  .structured-article-v103 .academy-content-section,
+  .structured-article-v103 .logic-section-v103,
+  .structured-article-v103 .article-depth,
+  .structured-article-v103 .partner-specific-box,
+  .structured-article-v103 .related-reading,
+  .structured-article-v103 .related-primary,
+  .structured-article-v103 .related-secondary,
+  .structured-article-v103 .article-exit-nav,
+  .structured-article-v103 .article-author,
+  .source-playbook-article>section,
+  .source-playbook-article .guide-v101-section,
+  .source-playbook-article .playbook-facts,
+  .source-playbook-article .playbook-checklist,
+  .source-playbook-article .playbook-steps,
+  .source-playbook-article .platform-setup,
+  .source-playbook-article .playbook-format-list,
+  .source-playbook-article .traffic-diagnostic-list
+),
+html body.reference-ui-v99.theme-dark :is(
+  .structured-article-v103 .academy-content-section,
+  .structured-article-v103 .logic-section-v103,
+  .structured-article-v103 .article-depth,
+  .structured-article-v103 .partner-specific-box,
+  .structured-article-v103 .related-reading,
+  .structured-article-v103 .related-primary,
+  .structured-article-v103 .related-secondary,
+  .structured-article-v103 .article-exit-nav,
+  .structured-article-v103 .article-author,
+  .source-playbook-article>section,
+  .source-playbook-article .guide-v101-section,
+  .source-playbook-article .playbook-facts,
+  .source-playbook-article .playbook-checklist,
+  .source-playbook-article .playbook-steps,
+  .source-playbook-article .platform-setup,
+  .source-playbook-article .playbook-format-list,
+  .source-playbook-article .traffic-diagnostic-list
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border-left:0!important;
+  border-right:0!important;
+  border-bottom:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+/* One subtle divider between chapters. */
+html body.theme-dark :is(
+  .structured-article-v103 .academy-content-section,
+  .structured-article-v103 .logic-section-v103,
+  .structured-article-v103 .article-depth,
+  .structured-article-v103 .partner-specific-box,
+  .structured-article-v103 .related-reading,
+  .source-playbook-article>section
+),
+html body.reference-ui-v99.theme-dark :is(
+  .structured-article-v103 .academy-content-section,
+  .structured-article-v103 .logic-section-v103,
+  .structured-article-v103 .article-depth,
+  .structured-article-v103 .partner-specific-box,
+  .structured-article-v103 .related-reading,
+  .source-playbook-article>section
+){
+  border-top:1px solid var(--tl-v337-divider)!important;
+  margin:0!important;
+  padding:22px 0!important;
+}
+
+/* Nested informational items inherit the article surface instead of blue fills. */
+html body.theme-dark .article :is(
+  .inline-note,.service-inline,.rules-action-box,.logic-explain-v103,.logic-action-v103,
+  .logic-analysis-v103,.logic-warning-v103,.article-figure,.related-primary,.related-secondary,
+  .article-exit-nav a,.next-reading a,.guide-v101-grid>div,.guide-v101-formats article,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-media,.guide-v101-link-options>div,
+  .guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div
+),
+html body.reference-ui-v99.theme-dark .article :is(
+  .inline-note,.service-inline,.rules-action-box,.logic-explain-v103,.logic-action-v103,
+  .logic-analysis-v103,.logic-warning-v103,.article-figure,.related-primary,.related-secondary,
+  .article-exit-nav a,.next-reading a,.guide-v101-grid>div,.guide-v101-formats article,
+  .guide-v101-flow,.guide-v101-verdict,.guide-v101-media,.guide-v101-link-options>div,
+  .guide-v101-code,.guide-v101-steps li,.guide-v101-funnel-table>div
+){
+  background:transparent!important;
+  background-image:none!important;
+  border-color:var(--tl-v337-divider)!important;
+  box-shadow:none!important;
+}
+
+/* Controls use neutral black/green graphite, never navy. */
+html body.theme-dark :is(
+  button,.bookmark-button,.saved-link,.source-section-tabs a,.article-cta-row a,
+  .article-exit-nav a,.next-reading a,.rail-all-tools,.tag,.chip,.filter-chip,.section-pill
+),
+html body.reference-ui-v99.theme-dark :is(
+  button,.bookmark-button,.saved-link,.source-section-tabs a,.article-cta-row a,
+  .article-exit-nav a,.next-reading a,.rail-all-tools,.tag,.chip,.filter-chip,.section-pill
+){
+  background:var(--tl-v337-control)!important;
+  border-color:#303834!important;
+}
+html body.theme-dark :is(
+  button:hover,.bookmark-button:hover,.saved-link:hover,.source-section-tabs a:hover,
+  .article-cta-row a:hover,.article-exit-nav a:hover,.next-reading a:hover,.rail-all-tools:hover
+),
+html body.reference-ui-v99.theme-dark :is(
+  button:hover,.bookmark-button:hover,.saved-link:hover,.source-section-tabs a:hover,
+  .article-cta-row a:hover,.article-exit-nav a:hover,.next-reading a:hover,.rail-all-tools:hover
+){
+  background:var(--tl-v337-control-hover)!important;
+}
+
+
+/* v338: make the top bar flat and single-color in dark theme */
+html body.theme-dark .site-header,
+html body.reference-ui-v99.theme-dark .site-header{
+  background:#0d1117!important;
+  background-image:none!important;
+  border-bottom:1px solid #20262d!important;
+  box-shadow:none!important;
+}
+html body.theme-dark .site-header::before,
+html body.theme-dark .site-header::after,
+html body.reference-ui-v99.theme-dark .site-header::before,
+html body.reference-ui-v99.theme-dark .site-header::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body.theme-dark .site-header .header-inner,
+html body.reference-ui-v99.theme-dark .site-header .header-inner{
+  background:transparent!important;
+}
+
+/* ======================================================================
+   v339 — restore v279 color system, preserve current homepage background
+   ====================================================================== */
+
+/* ---------- Shared aliases from v279 ---------- */
+html body.tl-unified-v287{
+  --v279-light-bg:#f3efe6;
+  --v279-light-bg-soft:#f7f3eb;
+  --v279-light-surface:#fffdf8;
+  --v279-light-surface-warm:#f6efe4;
+  --v279-light-ink:#1f2723;
+  --v279-light-copy:#5f645f;
+  --v279-light-muted:#7a766e;
+  --v279-light-line:#ddd3c6;
+  --v279-light-line-strong:#d1c6b7;
+  --v279-light-green:#29584c;
+  --v279-light-green-strong:#1d443a;
+  --v279-light-green-soft:#eef3ee;
+  --v279-light-warm:#8a6538;
+  --v279-light-warm-soft:#f3eadc;
+
+  --v279-dark-page:#0B1015;
+  --v279-dark-article:#111820;
+  --v279-dark-card:#171E26;
+  --v279-dark-soft:#1C252E;
+  --v279-dark-line:#303B46;
+  --v279-dark-line-soft:#232E3A;
+  --v279-dark-text:#EDF2F5;
+  --v279-dark-copy:#B8C3CA;
+  --v279-dark-muted:#85939D;
+  --v279-dark-accent:#44B892;
+  --v279-dark-accent-hover:#63C6A5;
+  --v279-dark-warm:#C09B6C;
+}
+
+/* ---------- Light theme: exact v279 family ---------- */
+html body.tl-unified-v287:not(.theme-dark),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark){
+  --tl-green:var(--v279-light-green)!important;
+  --tl-green-strong:var(--v279-light-green-strong)!important;
+  --tl-green-soft:var(--v279-light-green-soft)!important;
+  --tl-warm:var(--v279-light-warm)!important;
+  --tl-warm-soft:var(--v279-light-warm-soft)!important;
+  --tl-bg:var(--v279-light-bg)!important;
+  --tl-surface:var(--v279-light-surface)!important;
+  --tl-surface-2:var(--v279-light-bg-soft)!important;
+  --tl-line:var(--v279-light-line)!important;
+  --tl-line-strong:var(--v279-light-line-strong)!important;
+  --tl-ink:var(--v279-light-ink)!important;
+  --tl-copy:var(--v279-light-copy)!important;
+  --tl-muted:var(--v279-light-muted)!important;
+  --v109-bg:var(--v279-light-bg)!important;
+  --v109-bg-soft:var(--v279-light-bg-soft)!important;
+  --v109-surface:var(--v279-light-surface)!important;
+  --v109-surface-warm:var(--v279-light-surface-warm)!important;
+  --v109-ink:var(--v279-light-ink)!important;
+  --v109-copy:var(--v279-light-copy)!important;
+  --v109-muted:var(--v279-light-muted)!important;
+  --v109-line:var(--v279-light-line)!important;
+  --v109-line-strong:var(--v279-light-line-strong)!important;
+  --v109-green:var(--v279-light-green)!important;
+  --v109-green-dark:var(--v279-light-green-strong)!important;
+  --v109-green-soft:var(--v279-light-green-soft)!important;
+  --v109-warm:var(--v279-light-warm)!important;
+  --v109-warm-soft:var(--v279-light-warm-soft)!important;
+  background:var(--v279-light-bg)!important;
+  color:var(--v279-light-ink)!important;
+}
+
+html body.tl-unified-v287:not(.theme-dark) main:not(.home-page),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) main:not(.home-page){
+  background:var(--v279-light-bg)!important;
+  background-image:none!important;
+  color:var(--v279-light-ink)!important;
+}
+
+/* v279 light shell */
+html body.tl-unified-v287:not(.theme-dark) .site-header,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-header{
+  background:#173f35!important;
+  background-image:none!important;
+  border-bottom:1px solid rgba(255,255,255,.09)!important;
+  box-shadow:0 5px 20px rgba(18,45,37,.10)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar{
+  background:#17382f!important;
+  background-image:none!important;
+  border-right:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:8px 0 26px rgba(18,42,35,.09)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer,
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#0d241e!important;
+  background-image:none!important;
+  border-top:1px solid #23443a!important;
+  color:#dce9e4!important;
+}
+
+html body.tl-unified-v287:not(.theme-dark) .site-header :is(.brand-text b,.brand-text strong,.header-about-link,.theme-toggle,.ref-topbar-crumbs b),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-header :is(.brand-text b,.brand-text strong,.header-about-link,.theme-toggle,.ref-topbar-crumbs b){
+  color:#f4f8f6!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-header :is(.brand-text small,.header-tagline,.ref-topbar-crumbs a,.ref-top-progress span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .site-header :is(.brand-text small,.header-tagline,.ref-topbar-crumbs a,.ref-top-progress span){
+  color:#b9d0c7!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-brand,.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand,.ref-sidebar-brand b,.ref-sidebar-brand strong,.sidebar-menu a,.ref-nav-group nav a),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand,.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand,.ref-sidebar-brand b,.ref-sidebar-brand strong,.sidebar-menu a,.ref-nav-group nav a){
+  color:#cfe0da!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand b,.ref-sidebar-brand strong),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand b,.sidebar-brand strong,.ref-sidebar-brand b,.ref-sidebar-brand strong){
+  color:#fff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-brand small,.ref-sidebar-brand small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-brand small,.ref-sidebar-brand small){
+  color:#9fbdb2!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.ref-nav-heading span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-group-title,.ref-nav-heading span){
+  color:#a8c5ba!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a:hover,.ref-nav-group nav a:hover){
+  background:rgba(255,255,255,.07)!important;
+  color:#fff!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a[aria-current="page"]),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) .global-sidebar :is(.sidebar-menu a.active,.sidebar-menu a.is-active,.sidebar-menu a[aria-current="page"],.ref-nav-group nav a[aria-current="page"]){
+  background:rgba(117,201,169,.14)!important;
+  color:#fff!important;
+  border-color:rgba(117,201,169,.18)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(.footer-brand,h2,h3,h4,b,strong){color:#f2f7f5!important}
+html body.tl-unified-v287:not(.theme-dark) .site-footer :is(p,span,small,li){color:#aebfba!important}
+html body.tl-unified-v287:not(.theme-dark) .site-footer a{color:#d6e6e0!important}
+html body.tl-unified-v287:not(.theme-dark) .site-footer a:hover{color:#fff!important}
+
+/* light surfaces/cards */
+html body.tl-unified-v287:not(.theme-dark) :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,
+  .section-entry,.section-outcome,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,
+  .calc-card,.diagnostic-card,.diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,
+  .problem-result-links a,.rail-all-tools,.compact-block-v103,.section-groups,.section-bottom-links,
+  .related-reading,.related-primary,.related-secondary,.article-figure,.home-entry-grid>a,.home-source-grid>a,.home-search-card
+),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(
+  .page-head,.section-landing-head,.article-page .article,.source-playbook-article,
+  .article-aside.enhanced-rail .aside-block,.notes-panel,.journal-reading-grid>.saved-block,
+  .source-compare-picker,.source-compare-table,.source-compare-row>div,.source-compare-actions a,
+  .library-row,.library-card,.service-card,.service-tool,.tool-card,.about-card,.section-card,
+  .section-entry,.section-outcome,.playbook-card,.source-tool-card,.traffic-next a,.traffic-hub-basics>div,
+  .calc-card,.diagnostic-card,.diagnostic-wizard-card,.notes-card,.saved-card,.saved-empty,
+  .problem-result-links a,.rail-all-tools,.compact-block-v103,.section-groups,.section-bottom-links,
+  .related-reading,.related-primary,.related-secondary,.article-figure,.home-entry-grid>a,.home-source-grid>a,.home-search-card
+){
+  background:var(--v279-light-surface)!important;
+  border-color:var(--v279-light-line)!important;
+  color:var(--v279-light-ink)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.logic-analysis-v103,.logic-explain-v103,.inline-note,.partner-next-step,.service-inline,.warning-note,.guide-v101-callout,.playbook-risk,.source-compare-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.logic-analysis-v103,.logic-explain-v103,.inline-note,.partner-next-step,.service-inline,.warning-note,.guide-v101-callout,.playbook-risk,.source-compare-note,.traffic-principle,.traffic-cost-note,.source-cost-box,.author-note,.tool-source-note){
+  background:var(--v279-light-surface-warm)!important;
+  border-color:var(--v279-light-line)!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.rules-action-box),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.logic-action-v103,.partner-specific-box,.rules-action-box){
+  background:var(--v279-light-green-soft)!important;
+  border-color:#d8e4dc!important;
+}
+html body.tl-unified-v287:not(.theme-dark) :is(h1,h2,h3,h4,strong,b),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(h1,h2,h3,h4,strong,b){color:var(--v279-light-ink)!important}
+html body.tl-unified-v287:not(.theme-dark) :is(p,li,dd,dt,figcaption,.lead,small),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(p,li,dd,dt,figcaption,.lead,small){color:var(--v279-light-copy)!important}
+html body.tl-unified-v287:not(.theme-dark) :is(.article-label,.section-kicker,.library-type,.article-meta span,.footer-bottom span),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(.article-label,.section-kicker,.library-type,.article-meta span,.footer-bottom span){color:var(--v279-light-muted)!important}
+html body.tl-unified-v287:not(.theme-dark) :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link),
+html body.tl-unified-v287.reference-ui-v99:not(.theme-dark) :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link){color:var(--v279-light-green)!important}
+
+/* ---------- Dark theme: restore v279 graphite system ---------- */
+html body.tl-unified-v287.theme-dark,
+html body.tl-unified-v287.reference-ui-v99.theme-dark{
+  --tl-green:var(--v279-dark-accent)!important;
+  --tl-green-strong:var(--v279-dark-accent-hover)!important;
+  --tl-green-soft:rgba(68,184,146,.14)!important;
+  --tl-warm:var(--v279-dark-warm)!important;
+  --tl-warm-soft:#26211b!important;
+  --tl-bg:var(--v279-dark-page)!important;
+  --tl-surface:var(--v279-dark-article)!important;
+  --tl-surface-2:var(--v279-dark-card)!important;
+  --tl-line:var(--v279-dark-line)!important;
+  --tl-line-strong:#3d4853!important;
+  --tl-ink:var(--v279-dark-text)!important;
+  --tl-copy:var(--v279-dark-copy)!important;
+  --tl-muted:var(--v279-dark-muted)!important;
+  --v109-bg:#0f1114!important;
+  --v109-bg-soft:#13161b!important;
+  --v109-surface:#171b20!important;
+  --v109-surface-warm:#1a1d21!important;
+  --v109-ink:#edf1f3!important;
+  --v109-copy:#b8beb9!important;
+  --v109-muted:#949b96!important;
+  --v109-line:#2f353b!important;
+  --v109-line-strong:#3a4148!important;
+  --v109-green:#86cdb3!important;
+  --v109-green-dark:#6db89d!important;
+  --v109-green-soft:#1a2622!important;
+  --v109-warm:#c09b6c!important;
+  --v109-warm-soft:#26211b!important;
+  background:var(--v279-dark-page)!important;
+  color:var(--v279-dark-text)!important;
+}
+
+/* Restore v279 plain internal canvas. Homepage background layer is intentionally excluded. */
+html body.tl-unified-v287.theme-dark.internal-page-v198,
+html body.tl-unified-v287.reference-ui-v99.theme-dark.internal-page-v198,
+html body.tl-unified-v287.theme-dark main:not(.home-page),
+html body.tl-unified-v287.reference-ui-v99.theme-dark main:not(.home-page){
+  background:var(--v279-dark-page)!important;
+  background-image:none!important;
+  color:var(--v279-dark-text)!important;
+}
+
+html body.tl-unified-v287.theme-dark :is(.site-header,.global-sidebar),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.site-header,.global-sidebar){
+  background:#0B1015!important;
+  background-image:none!important;
+  border-color:var(--v279-dark-line)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.theme-dark .site-footer,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .site-footer{
+  background:#0b0f14!important;
+  background-image:none!important;
+  border-color:#252d35!important;
+}
+
+html body.tl-unified-v287.theme-dark :is(
+  .academy-article-hero,.article-page .article,.source-playbook-article,
+  .article-aside.enhanced-rail .aside-block,.journal-reading-grid>.saved-block,.notes-panel,
+  .service-card,.article-card,.about-card,.home-search-card,.guide-v101-callout,.inline-note,
+  .partner-next-step,.warning-note,.service-notice,.page-head,.section-landing-head,
+  .compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.saved-card,.saved-empty
+),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(
+  .academy-article-hero,.article-page .article,.source-playbook-article,
+  .article-aside.enhanced-rail .aside-block,.journal-reading-grid>.saved-block,.notes-panel,
+  .service-card,.article-card,.about-card,.home-search-card,.guide-v101-callout,.inline-note,
+  .partner-next-step,.warning-note,.service-notice,.page-head,.section-landing-head,
+  .compact-block-v103,.section-groups,.section-bottom-links,.related-reading,.related-primary,.related-secondary,
+  .diagnostic-card,.diagnostic-wizard-card,.calc-card,.notes-card,.saved-card,.saved-empty
+){
+  background:var(--v279-dark-article)!important;
+  border-color:var(--v279-dark-line)!important;
+  color:var(--v279-dark-text)!important;
+  box-shadow:none!important;
+}
+
+html body.tl-unified-v287.theme-dark :is(
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.source-journey-card,.source-tool-card,
+  .traffic-diagnostic-list li,.service-tool,.service-inline,.guide-v101-grid>div,.guide-v101-dual>div,
+  .guide-v101-formats>article,.guide-v101-flow,.guide-v101-timeline>div,.library-row,.library-card,
+  .tool-card,.section-card,.section-entry,.section-outcome,.traffic-next a,.traffic-hub-basics>div,
+  .article-figure,.problem-result-links a,.source-compare-picker,.source-compare-table,.source-compare-row>div,
+  .source-compare-actions a,.rail-all-tools
+),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(
+  .playbook-facts>div,.playbook-checklist li,.playbook-steps>li,.source-journey-card,.source-tool-card,
+  .traffic-diagnostic-list li,.service-tool,.service-inline,.guide-v101-grid>div,.guide-v101-dual>div,
+  .guide-v101-formats>article,.guide-v101-flow,.guide-v101-timeline>div,.library-row,.library-card,
+  .tool-card,.section-card,.section-entry,.section-outcome,.traffic-next a,.traffic-hub-basics>div,
+  .article-figure,.problem-result-links a,.source-compare-picker,.source-compare-table,.source-compare-row>div,
+  .source-compare-actions a,.rail-all-tools
+){
+  background:var(--v279-dark-card)!important;
+  border-color:var(--v279-dark-line)!important;
+  color:var(--v279-dark-text)!important;
+  box-shadow:none!important;
+}
+
+/* Current single-frame article structure stays; only colors return to v279. */
+html body.tl-unified-v287.theme-dark :is(.structured-article-v103 .logic-section-v103,.article-page .article>.academy-content-section,.source-playbook-article>section:not(.related-reading)),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.structured-article-v103 .logic-section-v103,.article-page .article>.academy-content-section,.source-playbook-article>section:not(.related-reading)){
+  background:transparent!important;
+  border-color:var(--v279-dark-line-soft)!important;
+}
+
+html body.tl-unified-v287.theme-dark :is(h1,h2,h3,h4,strong,b),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(h1,h2,h3,h4,strong,b){color:var(--v279-dark-text)!important}
+html body.tl-unified-v287.theme-dark :is(p,li,dd,dt,figcaption,.lead,small,.article p,.article li,.source-playbook-article p,.source-playbook-article li),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(p,li,dd,dt,figcaption,.lead,small,.article p,.article li,.source-playbook-article p,.source-playbook-article li){color:var(--v279-dark-copy)!important}
+html body.tl-unified-v287.theme-dark :is(.article-label,.section-kicker,.library-type,.aside-block>b,.playbook-aside b,.source-facts dt,.article-meta span,.footer-bottom span),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.article-label,.section-kicker,.library-type,.aside-block>b,.playbook-aside b,.source-facts dt,.article-meta span,.footer-bottom span){color:var(--v279-dark-muted)!important}
+html body.tl-unified-v287.theme-dark :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(a,.plain-link,.saved-link,.text-cta,.service-name-link,.geo-guideline-link){color:var(--v279-dark-text)!important}
+html body.tl-unified-v287.theme-dark :is(a:hover,.plain-link:hover,.saved-link:hover,.text-cta:hover,.service-name-link:hover,.geo-guideline-link:hover),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(a:hover,.plain-link:hover,.saved-link:hover,.text-cta:hover,.service-name-link:hover,.geo-guideline-link:hover){color:var(--v279-dark-accent-hover)!important}
+
+/* v279 buttons / fields / active states */
+html body.tl-unified-v287.theme-dark :is(
+  .bookmark-button,.saved-link,.text-button,.source-compare-actions a,.service-open-link,.service-tool-actions>a,
+  .service-inline-primary,.service-inline-secondary,.service-inline-more,.article-exit-nav a,.next-reading a,
+  .rail-all-tools,.home-actions a,.section-bottom-links a,.ref-top-home,.ref-theme-button,.ref-top-favorite,
+  .header-about-link,.theme-toggle,.article-actions a,.article-actions button,.source-section-tabs a
+),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(
+  .bookmark-button,.saved-link,.text-button,.source-compare-actions a,.service-open-link,.service-tool-actions>a,
+  .service-inline-primary,.service-inline-secondary,.service-inline-more,.article-exit-nav a,.next-reading a,
+  .rail-all-tools,.home-actions a,.section-bottom-links a,.ref-top-home,.ref-theme-button,.ref-top-favorite,
+  .header-about-link,.theme-toggle,.article-actions a,.article-actions button,.source-section-tabs a
+){
+  background:var(--v279-dark-article)!important;
+  border-color:var(--v279-dark-line)!important;
+  color:var(--v279-dark-text)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.theme-dark :is(.bookmark-button,.source-section-tabs a,.ref-top-home,.ref-theme-button,.ref-top-favorite,.theme-toggle):hover,
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.bookmark-button,.source-section-tabs a,.ref-top-home,.ref-theme-button,.ref-top-favorite,.theme-toggle):hover{
+  background:var(--v279-dark-soft)!important;
+  border-color:var(--v279-dark-accent)!important;
+  color:var(--v279-dark-text)!important;
+}
+html body.tl-unified-v287.theme-dark :is(.bookmark-button[aria-pressed="true"],.source-section-tabs a.is-current,.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.bookmark-button[aria-pressed="true"],.source-section-tabs a.is-current,.sidebar-menu a[aria-current="page"],.sidebar-menu a.is-active){
+  background:rgba(68,184,146,.14)!important;
+  border-color:var(--v279-dark-accent)!important;
+  color:var(--v279-dark-accent-hover)!important;
+}
+html body.tl-unified-v287.theme-dark :is(input,select,textarea,.ref-top-search,.sidebar-search input,.home-main-search input),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(input,select,textarea,.ref-top-search,.sidebar-search input,.home-main-search input){
+  background:#0f151c!important;
+  border-color:#313c47!important;
+  color:var(--v279-dark-text)!important;
+  box-shadow:none!important;
+}
+html body.tl-unified-v287.theme-dark :is(input,textarea,.home-main-search input,.sidebar-search input)::placeholder,
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(input,textarea,.home-main-search input,.sidebar-search input)::placeholder{
+  color:#8794a0!important;
+}
+html body.tl-unified-v287.theme-dark .ref-top-progress i,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .ref-top-progress i{background:var(--v279-dark-line)!important}
+html body.tl-unified-v287.theme-dark .ref-top-progress em,
+html body.tl-unified-v287.reference-ui-v99.theme-dark .ref-top-progress em{background:var(--v279-dark-accent)!important}
+
+/* v279 callout accents */
+html body.tl-unified-v287.theme-dark :is(.logic-analysis-v103,.logic-explain-v103,.source-compare-note,.traffic-principle,.inline-note,.guide-v101-callout,.playbook-risk,.warning-note,.service-inline,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.logic-analysis-v103,.logic-explain-v103,.source-compare-note,.traffic-principle,.inline-note,.guide-v101-callout,.playbook-risk,.warning-note,.service-inline,.partner-next-step,.playbook-tips,.hero-note,.hero-route,.related-primary){
+  background:#1a1d21!important;
+  border-color:#31373d!important;
+}
+html body.tl-unified-v287.theme-dark :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103),
+html body.tl-unified-v287.reference-ui-v99.theme-dark :is(.inline-note,.source-compare-note,.traffic-principle,.playbook-risk,.guide-v101-callout.warning,.warning-note,.logic-warning-v103){
+  border-left-color:var(--v279-dark-warm)!important;
+}
+
+/* Homepage background is NOT overridden here. Only its UI colors inherit v279. */
+html body.home-shell-v256 main.home-page > .home-lab-background-v266,
+html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+html body.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+  /* intentionally untouched */
+}
