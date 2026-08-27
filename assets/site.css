@@ -26582,3 +26582,69 @@ html body.reference-ui-v99 .source-compare-note.compact-block-v103 p{
     color:#ffffff!important;
   }
 }
+
+
+/* ======================================================================
+   v408 — about page light theme borders aligned with the rest of the site
+   ====================================================================== */
+html body:not(.theme-dark).about-page-v114 .about-section-v114{
+  border-bottom-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114>a,.about-principle-grid-v114>div){
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+  color:var(--v109-copy)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-value-grid-v114>a:hover{
+  border-color:var(--v109-line-strong)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114 b,.about-principle-grid-v114 b,.about-route-v114 b,.about-nav-card-v114>strong,.about-nav-links-v114 b){
+  color:var(--v109-green-dark)!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114 span,.about-principle-grid-v114 p,.about-route-v114 p,.about-nav-links-v114 small,.about-review-v114){
+  color:var(--v109-copy)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-value-grid-v114 em,
+html body:not(.theme-dark).about-page-v114 .about-route-v114 a{
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-route-v114 li{
+  border-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-route-v114 li:before{
+  background:var(--v109-green-soft)!important;
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-boundaries-v114 li{
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+  color:var(--v109-copy)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-boundaries-v114 li:before{
+  color:var(--v109-warm)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-card-v114{
+  background:var(--v109-surface)!important;
+  border:1px solid var(--v109-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-card-v114>span{
+  color:var(--v109-muted)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-links-v114 a{
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114{
+  background:var(--v109-green-soft)!important;
+  border:1px solid #d8e4dc!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114 b{
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114 p{
+  color:var(--v109-copy)!important;
+}
