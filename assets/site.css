@@ -25722,3 +25722,147 @@ html body.reference-ui-v99.services-page .service-notice{
   html body.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before,
   html body.reference-ui-v99.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before{margin:0 0 20px!important;}
 }
+
+
+/* v396 — remove extra light fill from outer section-group shells */
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  background:transparent!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  margin-bottom:16px!important;
+}
+
+
+/* v397 — restore missing icons in light theme with explicit pseudo-element rendering */
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:hidden!important;
+  background-image:none!important;
+}
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+  content:""!important;
+  display:block!important;
+  width:44px!important;
+  height:44px!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:contain!important;
+  flex:0 0 auto!important;
+}
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{width:40px!important;height:40px!important;}
+}
+@media (max-width:430px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{width:36px!important;height:36px!important;}
+}
+
+
+/* v398 — remove the decorative desktop top/side stripe behind content. */
+@media (min-width:1180px){
+  html body::before,
+  html body::after,
+  html body.theme-dark::before,
+  html body.theme-dark::after,
+  html body.reference-ui-v99::before,
+  html body.reference-ui-v99::after,
+  html body.reference-ui-v99.theme-dark::before,
+  html body.reference-ui-v99.theme-dark::after{
+    content:none!important;
+    display:none!important;
+    background:none!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+}
+
+
+/* v399 — light theme: remove the extra shared background slab between grouped sections. */
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:18px!important;
+  box-shadow:none!important;
+  padding:30px 30px 28px!important;
+  margin:0 0 22px!important;
+  border-top:1px solid var(--tl-light-line)!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:last-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:last-child{
+  margin-bottom:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child{
+  padding-top:30px!important;
+  margin-top:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  margin:0 0 18px!important;
+}
+
+
+/* v400 — light traffic cards: shift icon/title to the right and prevent side clipping. */
+html body:not(.theme-dark) .traffic-hub-page .playbook-card,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card{
+  padding-left:30px!important;
+  padding-right:26px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top{
+  justify-content:flex-start!important;
+  align-items:center!important;
+  gap:18px!important;
+  padding-left:8px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art),
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art){
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:72px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top .playbook-hero-art{
+  margin-left:2px!important;
+  background-position:center center!important;
+  overflow:visible!important;
+}
+@media (max-width:900px){
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card,
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card{padding-left:22px!important;padding-right:20px!important;}
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card-top,
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top{gap:14px!important;padding-left:4px!important;}
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art),
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art){min-height:64px!important;}
+}
