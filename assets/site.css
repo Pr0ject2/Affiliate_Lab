@@ -26437,3 +26437,148 @@ html body.reference-ui-v99 .source-compare-note.compact-block-v103 p{
     padding-right:14px!important;
   }
 }
+
+
+/* ======================================================================
+   v406 — mobile homepage final pass
+   Dark theme hero width aligned with lower blocks.
+   Hide decorative homepage images on mobile in both themes.
+   ====================================================================== */
+@media (max-width:900px){
+  /* Remove decorative homepage imagery on mobile */
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+    display:none!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    display:none!important;
+    content:none!important;
+    background:none!important;
+  }
+
+  /* Dark theme: make the top home area use the same full mobile width
+     rhythm as the sections below. */
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome{
+    padding-top:32px!important;
+    padding-bottom:34px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy{
+    padding:18px 18px 18px!important;
+    border-radius:16px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    padding:18px 18px 16px!important;
+    border-radius:16px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.theme-dark.home-shell-v256 main.home-page .home-actions,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-actions{
+    width:100%!important;
+    max-width:none!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a,
+  html body.theme-dark.home-shell-v256 main.home-page .home-source-grid > a,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-source-grid > a{
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-main-search,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-main-search,
+  html body.theme-dark.home-shell-v256 main.home-page .home-main-search > div,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-main-search > div{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+}
+
+
+/* ======================================================================
+   v407 — darker mobile top bar for light theme only
+   Restore the darker old-feeling top strip without touching dark theme.
+   ====================================================================== */
+@media (max-width:900px){
+  html body:not(.theme-dark) .site-header,
+  html body.reference-ui-v99:not(.theme-dark) .site-header{
+    background:
+      linear-gradient(90deg,#123a31 0%,#17463b 56%,#1b5244 100%)!important;
+    border-bottom:1px solid rgba(255,255,255,.16)!important;
+    box-shadow:0 6px 18px rgba(10,28,22,.18)!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) .ref-topbar,
+  html body:not(.theme-dark) .header-inner{
+    background:transparent!important;
+    color:#f1f8f4!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand,
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand b,
+  html body:not(.theme-dark) .brand-text b,
+  html body:not(.theme-dark) .brand-text small{
+    color:#f1f8f4!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-menu),
+  html body:not(.theme-dark) :is(.theme-toggle,.mobile-nav-toggle){
+    background:rgba(0,0,0,.18)!important;
+    border-color:rgba(255,255,255,.20)!important;
+    color:#ffffff!important;
+  }
+}
