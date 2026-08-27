@@ -25866,3 +25866,574 @@ html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top
   html body:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art),
   html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art){min-height:64px!important;}
 }
+
+
+/* v401 — traffic cards: keep only one large icon, move icon and label right, no clipping in both themes */
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+  padding-left:28px!important;
+  padding-right:24px!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+  display:flex!important;
+  justify-content:flex-start!important;
+  align-items:flex-start!important;
+  gap:16px!important;
+  padding-left:8px!important;
+  min-height:84px!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  position:relative!important;
+  right:auto!important;
+  left:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  flex:0 0 76px!important;
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  margin:0!important;
+  padding:0!important;
+  border-radius:18px!important;
+  overflow:visible!important;
+  box-sizing:border-box!important;
+  background:none!important;
+  background-image:none!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:12px!important;
+  width:auto!important;
+  height:auto!important;
+  border-radius:0!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:contain!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#fbf7ef!important;
+  border:1px solid #d8ccb9!important;
+  box-shadow:0 6px 16px rgba(69,51,20,.06)!important;
+}
+html body.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#18222d!important;
+  border:1px solid #3a4652!important;
+  box-shadow:0 8px 18px rgba(0,0,0,.18)!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+  display:flex!important;
+  align-items:center!important;
+  min-height:76px!important;
+  padding-top:0!important;
+}
+@media (max-width:900px){
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding-left:22px!important;
+    padding-right:20px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+    gap:14px!important;
+    padding-left:4px!important;
+    min-height:74px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+    flex-basis:68px!important;
+    width:68px!important;
+    height:68px!important;
+    min-width:68px!important;
+    border-radius:16px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+    inset:10px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+    min-height:68px!important;
+  }
+}
+@media (max-width:430px){
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+    flex-basis:62px!important;
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    border-radius:14px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+    inset:9px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+    min-height:62px!important;
+  }
+}
+
+
+/* v402 — source compare note needs inner padding so text does not stick to the edge */
+html body .wrap.source-compare-note.compact-block-v103,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+html body .source-compare-note.compact-block-v103,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+  padding:28px 38px 30px!important;
+}
+html body .wrap.source-compare-note.compact-block-v103 strong,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103 strong,
+html body .source-compare-note.compact-block-v103 strong,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103 strong{
+  display:block!important;
+  margin:0 0 10px!important;
+}
+html body .wrap.source-compare-note.compact-block-v103 p,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103 p,
+html body .source-compare-note.compact-block-v103 p,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103 p{
+  margin:0!important;
+}
+@media (max-width:900px){
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+  html body .source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+    padding:22px 26px 24px!important;
+  }
+}
+@media (max-width:640px){
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+  html body .source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+    padding:18px 20px 20px!important;
+  }
+}
+
+
+/* v403 — restore the green gradient mobile top bar in light theme */
+@media (max-width:900px){
+  html body:not(.theme-dark) .site-header,
+  html body.reference-ui-v99:not(.theme-dark) .site-header{
+    background:linear-gradient(90deg,#18493d 0%, #1d5647 58%, #226353 100%)!important;
+    border-bottom:1px solid rgba(255,255,255,.14)!important;
+    box-shadow:0 6px 18px rgba(10,28,22,.14)!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-topbar,
+  html body:not(.theme-dark) .header-inner{
+    background:transparent!important;
+    color:#eef7f3!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand,
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand b,
+  html body:not(.theme-dark) .brand-text b,
+  html body:not(.theme-dark) .brand-text small{
+    color:#eef7f3!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-menu),
+  html body:not(.theme-dark) :is(.theme-toggle,.mobile-nav-toggle){
+    background:rgba(0,0,0,.14)!important;
+    border-color:rgba(255,255,255,.18)!important;
+    color:#ffffff!important;
+  }
+}
+
+
+/* ======================================================================
+   v404 — mobile polish pass
+   One visual width, fewer nested gutters, cleaner mobile stacking.
+   Desktop is intentionally untouched.
+   ====================================================================== */
+@media (max-width:900px){
+
+  /* HOME: the intro used to become noticeably narrower than sections below
+     because the hero panel added another large inner gutter. */
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-grid{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:18px 14px 18px!important;
+    border-radius:18px!important;
+    box-sizing:border-box!important;
+    backdrop-filter:none!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    max-width:none!important;
+    margin-bottom:14px!important;
+    font-size:clamp(32px,9.2vw,41px)!important;
+    line-height:1.04!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-intro-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-intro-copy{
+    max-width:none!important;
+    font-size:15.5px!important;
+    line-height:1.58!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-lead,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead{
+    margin-top:20px!important;
+    font-size:15px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary{
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    max-width:none!important;
+    gap:8px!important;
+    margin:16px 0 0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary > div{
+    width:100%!important;
+    min-height:0!important;
+    padding:14px 14px 15px!important;
+    border-radius:12px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary b,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary b{
+    font-size:13px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary span,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary span{
+    font-size:12.5px!important;
+    line-height:1.5!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-actions,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    width:100%!important;
+    margin-top:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-actions a,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-actions a{
+    width:100%!important;
+    min-height:44px!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    width:100%!important;
+    max-width:none!important;
+    margin:14px 0 0!important;
+    padding:18px 14px 16px!important;
+    border-radius:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search > div,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search > div{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    overflow:visible!important;
+    border:0!important;
+    background:transparent!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search input,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search input,
+  html body.home-shell-v256 main.home-page .home-main-search button,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search button{
+    width:100%!important;
+    min-height:44px!important;
+    border-radius:10px!important;
+    border:1px solid currentColor!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search button,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search button{
+    border-left-width:1px!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.home-results),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.home-results){
+    padding-top:32px!important;
+    padding-bottom:34px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title{
+    margin-bottom:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title-split,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title-split{
+    display:block!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title-split > span,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title-split > span{
+    display:block!important;
+    margin-top:8px!important;
+    max-width:none!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid,.home-source-grid),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-grid,.home-source-grid){
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid>a,.home-source-grid>a),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-grid>a,.home-source-grid>a){
+    width:100%!important;
+    max-width:100%!important;
+    min-height:0!important;
+    padding:18px!important;
+    border-radius:12px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results-inner,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results-inner{
+    display:block!important;
+    width:100%!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results nav,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    margin-top:16px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results nav a,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav a{
+    width:100%!important;
+    min-height:44px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* LANDINGS: preserve the canonical width, reduce unnecessary nested padding. */
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding:18px 16px 20px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-entry-grid,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry-grid{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-entry,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry{
+    width:100%!important;
+    min-width:0!important;
+    padding:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body .section-bottom-links.compact-block-v103,
+  html body.reference-ui-v99 .section-bottom-links.compact-block-v103{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+
+  html body .section-bottom-links.compact-block-v103 a,
+  html body.reference-ui-v99 .section-bottom-links.compact-block-v103 a{
+    width:100%!important;
+    min-height:44px!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+  }
+
+  /* ARTICLES: reduce the second gutter added by the article card itself. */
+  html body.article-page .article-layout,
+  html body.reference-ui-v99.article-page .article-layout,
+  html body.source-playbook-page .article-layout,
+  html body.reference-ui-v99.source-playbook-page .article-layout{
+    padding-top:14px!important;
+    padding-bottom:44px!important;
+  }
+
+  html body.article-page .article,
+  html body.reference-ui-v99.article-page .article{
+    padding:18px 16px!important;
+  }
+
+  html body.source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.source-playbook-page .source-playbook-article{
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body :is(.academy-content-section,.logic-section-v103,.guide-v101-section),
+  html body.reference-ui-v99 :is(.academy-content-section,.logic-section-v103,.guide-v101-section){
+    max-width:100%!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* SERVICES: headings no longer fight the cards on narrow screens. */
+  html body.services-page .service-workflow-head,
+  html body.reference-ui-v99.services-page .service-workflow-head{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    align-items:start!important;
+  }
+
+  html body.services-page .service-tool,
+  html body.reference-ui-v99.services-page .service-tool{
+    width:100%!important;
+    padding:18px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.services-page :is(.service-open-link,.service-tool-actions>a),
+  html body.reference-ui-v99.services-page :is(.service-open-link,.service-tool-actions>a){
+    min-height:44px!important;
+  }
+
+  /* HISTORY: header controls stack instead of squeezing the title. */
+  html body .history-page .saved-block-head,
+  html body.reference-ui-v99 .history-page .saved-block-head{
+    align-items:flex-start!important;
+    flex-direction:column!important;
+    gap:8px!important;
+  }
+
+  html body .history-page .saved-card-main,
+  html body.reference-ui-v99 .history-page .saved-card-main{
+    padding:16px 42px 16px 16px!important;
+  }
+
+  /* COMPARE: keep controls compact, table scrolls in its own viewport. */
+  html body .source-compare-page.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-page.compact-block-v103{
+    padding-left:16px!important;
+    padding-right:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body .source-compare-picker,
+  html body.reference-ui-v99 .source-compare-picker{
+    padding:16px!important;
+    gap:12px!important;
+  }
+
+  html body .source-compare-table,
+  html body.reference-ui-v99 .source-compare-table{
+    border-radius:12px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+  }
+
+  /* TRAFFIC CATALOG: keep the large icon treatment, but make card geometry mobile-safe. */
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding:18px 16px 18px 20px!important;
+    overflow:visible!important;
+  }
+
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+    width:100%!important;
+    max-width:100%!important;
+    padding-left:4px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Generic action/touch targets. */
+  html body :is(
+    .text-button,.service-open-link,.source-compare-actions a,.article-actions a,
+    .article-actions-unified a,.guide-v101-next a,.guide-v101-diagnostics a
+  ),
+  html body.reference-ui-v99 :is(
+    .text-button,.service-open-link,.source-compare-actions a,.article-actions a,
+    .article-actions-unified a,.guide-v101-next a,.guide-v101-diagnostics a
+  ){
+    min-height:44px!important;
+  }
+}
+
+@media (max-width:650px){
+  html body .history-page,
+  html body.reference-ui-v99 .history-page{
+    padding:18px 14px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding:16px 14px 18px!important;
+    border-radius:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    padding:16px 12px 16px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    padding:16px 12px 14px!important;
+  }
+}
+
+@media (max-width:420px){
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    font-size:clamp(30px,9.4vw,36px)!important;
+  }
+
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding-left:18px!important;
+    padding-right:14px!important;
+  }
+}
