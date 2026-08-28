@@ -1827,7 +1827,7 @@
       const h1=article.querySelector('h1'); if(h1)h1.textContent=data.title;
       const lead=article.querySelector('.source-hero-shell>.lead'); if(lead)lead.textContent=data.subtitle;
       const icon=article.querySelector('.source-hero-icon');
-      if(icon){icon.style.setProperty('--source-accent',data.accent); if(slug==='youtube')icon.innerHTML='<span class="ref-play-triangle"></span>';}
+      if(icon){icon.style.setProperty('--source-accent',data.accent);}
       const titleRow=article.querySelector('.source-title-row');
       if(titleRow){titleRow.querySelector('.ref-launch-time')?.remove();}
       const oldFacts=article.querySelector('.playbook-facts');
