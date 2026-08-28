@@ -27616,3 +27616,284 @@ html body.reference-ui-v99:not(.theme-dark) .history-page.compact-block-v103{
     min-width:0!important;
   }
 }
+
+/* ======================================================================
+   v424 — unify mobile sidebar width for both themes and make it slightly narrower.
+   Light and dark drawers should open to the same final width.
+   ====================================================================== */
+@media (max-width:1050px){
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar,
+  html body:not(.theme-dark) .global-sidebar,
+  html body.reference-ui-v99:not(.theme-dark) .global-sidebar,
+  html body.theme-dark .global-sidebar,
+  html body.reference-ui-v99.theme-dark .global-sidebar{
+    left:0!important;
+    right:auto!important;
+    width:min(300px,calc(100vw - 28px))!important;
+    min-width:min(300px,calc(100vw - 28px))!important;
+    max-width:min(300px,calc(100vw - 28px))!important;
+    padding:14px 12px max(20px,env(safe-area-inset-bottom)) 14px!important;
+    box-sizing:border-box!important;
+    transform:translate3d(calc(-100% - 2px),0,0)!important;
+    will-change:transform!important;
+  }
+
+  html body.mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99.mobile-nav-open .global-sidebar,
+  html body:not(.theme-dark).mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99:not(.theme-dark).mobile-nav-open .global-sidebar,
+  html body.theme-dark.mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99.theme-dark.mobile-nav-open .global-sidebar{
+    left:0!important;
+    transform:translate3d(0,0,0)!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+  }
+}
+
+@media (max-width:430px){
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar,
+  html body:not(.theme-dark) .global-sidebar,
+  html body.reference-ui-v99:not(.theme-dark) .global-sidebar,
+  html body.theme-dark .global-sidebar,
+  html body.reference-ui-v99.theme-dark .global-sidebar{
+    width:calc(100vw - 24px)!important;
+    min-width:calc(100vw - 24px)!important;
+    max-width:calc(100vw - 24px)!important;
+  }
+}
+
+/* ======================================================================
+   v425 — unified footer cleanup across the whole site.
+   Light theme mirrors the restored green sidebar; dark theme mirrors its
+   sidebar as well. Same geometry everywhere, with a calmer mobile stack.
+   ====================================================================== */
+html body .site-footer,
+html body.reference-ui-v99 .site-footer{
+  position:relative!important;
+  margin-top:54px!important;
+  padding:0!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+html body:not(.theme-dark) .site-footer,
+html body.reference-ui-v99:not(.theme-dark) .site-footer{
+  background:#17382f!important;
+  border-top:1px solid #2c564a!important;
+  color:#dce9e4!important;
+}
+html body.theme-dark .site-footer,
+html body.reference-ui-v99.theme-dark .site-footer{
+  background:#0B1015!important;
+  border-top:1px solid #303B46!important;
+  color:#B8C3CA!important;
+}
+
+html body .site-footer > .wrap,
+html body.reference-ui-v99 .site-footer > .wrap{
+  width:min(calc(100% - 56px),1160px)!important;
+  max-width:1160px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+
+html body .site-footer .footer-main,
+html body.reference-ui-v99 .site-footer .footer-main{
+  min-height:0!important;
+  display:grid!important;
+  grid-template-columns:minmax(260px,.86fr) minmax(420px,1.35fr)!important;
+  align-items:start!important;
+  gap:70px!important;
+  padding-top:38px!important;
+  padding-bottom:32px!important;
+}
+html body .site-footer .footer-identity,
+html body.reference-ui-v99 .site-footer .footer-identity{
+  min-width:0!important;
+  padding:0!important;
+}
+html body .site-footer .footer-brand,
+html body.reference-ui-v99 .site-footer .footer-brand{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:34px!important;
+  margin:0!important;
+  padding:0!important;
+  font:600 29px/1.08 Georgia,"Times New Roman",serif!important;
+  letter-spacing:-.02em!important;
+  text-decoration:none!important;
+}
+html body:not(.theme-dark) .site-footer .footer-brand,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-brand{color:#ffffff!important;}
+html body.theme-dark .site-footer .footer-brand,
+html body.reference-ui-v99.theme-dark .site-footer .footer-brand{color:#EDF2F5!important;}
+
+html body .site-footer .footer-identity p,
+html body.reference-ui-v99 .site-footer .footer-identity p{
+  max-width:390px!important;
+  margin:10px 0 0!important;
+  font-size:14px!important;
+  line-height:1.62!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer .footer-identity p,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-identity p{color:#c7dcd4!important;}
+html body.theme-dark .site-footer .footer-identity p,
+html body.reference-ui-v99.theme-dark .site-footer .footer-identity p{color:#94A1AA!important;}
+
+html body .site-footer .footer-links,
+html body.reference-ui-v99 .site-footer .footer-links{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  align-content:start!important;
+  justify-content:stretch!important;
+  gap:8px 12px!important;
+  width:100%!important;
+  margin:0!important;
+}
+html body .site-footer .footer-links a,
+html body.reference-ui-v99 .site-footer .footer-links a{
+  display:flex!important;
+  align-items:center!important;
+  min-height:38px!important;
+  margin:0!important;
+  padding:8px 10px!important;
+  border:1px solid transparent!important;
+  border-radius:8px!important;
+  font-size:12.5px!important;
+  font-weight:650!important;
+  line-height:1.25!important;
+  text-decoration:none!important;
+  opacity:1!important;
+  transition:background .15s ease,border-color .15s ease,color .15s ease!important;
+}
+html body:not(.theme-dark) .site-footer .footer-links a,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a{
+  color:#e4f0eb!important;
+  background:rgba(255,255,255,.025)!important;
+  border-color:rgba(255,255,255,.07)!important;
+}
+html body:not(.theme-dark) .site-footer .footer-links a:hover,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a:hover{
+  color:#ffffff!important;
+  background:rgba(255,255,255,.075)!important;
+  border-color:rgba(255,255,255,.13)!important;
+}
+html body.theme-dark .site-footer .footer-links a,
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a{
+  color:#C3CDD3!important;
+  background:#10171D!important;
+  border-color:#263039!important;
+}
+html body.theme-dark .site-footer .footer-links a:hover,
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:hover{
+  color:#EDF2F5!important;
+  background:#151E25!important;
+  border-color:#394650!important;
+}
+
+html body .site-footer .footer-bottom,
+html body.reference-ui-v99 .site-footer .footer-bottom{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  min-height:50px!important;
+  margin:0!important;
+  padding-top:14px!important;
+  padding-bottom:16px!important;
+  font-size:10.5px!important;
+  letter-spacing:.02em!important;
+  opacity:1!important;
+}
+html body:not(.theme-dark) .site-footer .footer-bottom,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-bottom{
+  border-top:1px solid rgba(255,255,255,.10)!important;
+  color:#afc9bf!important;
+}
+html body.theme-dark .site-footer .footer-bottom,
+html body.reference-ui-v99.theme-dark .site-footer .footer-bottom{
+  border-top:1px solid #263039!important;
+  color:#7F8D96!important;
+}
+html body:not(.theme-dark) .site-footer .footer-bottom :is(span,small),
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-bottom :is(span,small){color:#afc9bf!important;}
+html body.theme-dark .site-footer .footer-bottom :is(span,small),
+html body.reference-ui-v99.theme-dark .site-footer .footer-bottom :is(span,small){color:#7F8D96!important;}
+
+/* Keep legacy footer pieces from resurfacing on any page. */
+html body .site-footer :is(.footer-grid,.disclosure),
+html body.reference-ui-v99 .site-footer :is(.footer-grid,.disclosure){display:none!important;}
+
+@media (max-width:900px){
+  html body .site-footer,
+  html body.reference-ui-v99 .site-footer{
+    margin-top:40px!important;
+  }
+  html body .site-footer > .wrap,
+  html body.reference-ui-v99 .site-footer > .wrap{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+  }
+  html body .site-footer .footer-main,
+  html body.reference-ui-v99 .site-footer .footer-main{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:24px!important;
+    padding-top:30px!important;
+    padding-bottom:24px!important;
+  }
+  html body .site-footer .footer-identity p,
+  html body.reference-ui-v99 .site-footer .footer-identity p{
+    max-width:520px!important;
+  }
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  html body .site-footer .footer-links a,
+  html body.reference-ui-v99 .site-footer .footer-links a{
+    min-height:42px!important;
+    padding:9px 10px!important;
+  }
+}
+
+@media (max-width:520px){
+  html body .site-footer > .wrap,
+  html body.reference-ui-v99 .site-footer > .wrap{
+    width:calc(100% - 28px)!important;
+  }
+  html body .site-footer .footer-main,
+  html body.reference-ui-v99 .site-footer .footer-main{
+    gap:20px!important;
+    padding-top:28px!important;
+    padding-bottom:22px!important;
+  }
+  html body .site-footer .footer-brand,
+  html body.reference-ui-v99 .site-footer .footer-brand{
+    font-size:26px!important;
+  }
+  html body .site-footer .footer-identity p,
+  html body.reference-ui-v99 .site-footer .footer-identity p{
+    font-size:13.5px!important;
+    line-height:1.58!important;
+  }
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  html body .site-footer .footer-bottom,
+  html body.reference-ui-v99 .site-footer .footer-bottom{
+    flex-direction:row!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    gap:8px 14px!important;
+    padding-top:13px!important;
+    padding-bottom:max(18px,env(safe-area-inset-bottom))!important;
+  }
+}
