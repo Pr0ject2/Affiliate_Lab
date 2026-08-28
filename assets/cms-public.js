@@ -1,8 +1,9 @@
 (function(){
 'use strict';
-const BASE='/Affiliate_Lab/';
+const BASE='/';
 const j=(u)=>fetch(u,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function safeInternalHref(value,fallback=BASE){try{const raw=String(value||'').trim();if(raw.startsWith('#'))return raw;const u=new URL(raw,location.origin);if(u.origin!==location.origin||!u.pathname.startsWith(BASE))return fallback;return u.pathname+u.search+u.hash}catch{return fallback}}
 function currentPath(){let p=location.pathname;return p.endsWith('/')?p:p+'/'}
 function renderNav(data){
   const sidebar=document.querySelector('.global-sidebar'); if(!sidebar||!data?.groups)return;
@@ -26,7 +27,7 @@ function renderNav(data){
 
     refHost.innerHTML=(data.groups||[]).map((g,gi)=>{
       const links=(g.items||[]).map(it=>{
-        const href=it.href||'#'; const isActive=href===activeHref;
+        const href=safeInternalHref(it.href||'#','#'); const isActive=href===activeHref;
         const cleanTitle=String(it.title||'Пункт').replace(/^↺\s*/,'');
         return `<a href="${esc(href)}" class="${isActive?'is-active':''}"${isActive?' aria-current="page"':''}><span class="ref-nav-icon">${iconMarkup(it.id||'custom')}</span><span>${esc(cleanTitle)}</span></a>`;
       }).join('');
@@ -49,14 +50,14 @@ function renderNav(data){
     const title=document.createElement('p'); title.className='sidebar-group-title'; title.textContent=g.title||'Раздел'; box.appendChild(title);
     const nav=document.createElement('nav'); nav.className='sidebar-menu'; nav.setAttribute('aria-label',g.title||'Раздел');
     (g.items||[]).forEach(it=>{
-      const a=document.createElement('a'); a.href=it.href||'#'; a.dataset.nav=it.id||'custom'; a.dataset.cmsIcon=it.icon||'•'; a.classList.add('cms-nav-item');
+      const a=document.createElement('a'); a.href=safeInternalHref(it.href||'#','#'); a.dataset.nav=it.id||'custom'; a.dataset.cmsIcon=it.icon||'•'; a.classList.add('cms-nav-item');
       if(currentPathFromHref(a.href)===path){a.classList.add('active');a.setAttribute('aria-current','page')}
       const span=document.createElement('span');span.textContent=String(it.title||'Пункт').replace(/^↺\s*/,'');a.appendChild(span);nav.appendChild(a);
     });
     box.appendChild(nav); sidebar.insertBefore(box,anchor||null); decorateGroup(box,gi);
   });
 }
-function currentPathFromHref(href){try{let p=new URL(href,location.href).pathname;return p.endsWith('/')?p:p+'/'}catch{return href}}
+function currentPathFromHref(href){const safe=safeInternalHref(href,'');if(!safe)return '';try{let p=new URL(safe,location.href).pathname;return p.endsWith('/')?p:p+'/'}catch{return ''}}
 function decorateGroup(group,index){
  const title=group.querySelector(':scope > .sidebar-group-title'),menu=group.querySelector(':scope > .sidebar-menu');if(!title||!menu)return;
  const b=document.createElement('button');b.type='button';b.className='sidebar-group-toggle';b.textContent=title.textContent.trim();
@@ -65,8 +66,8 @@ function decorateGroup(group,index){
  b.addEventListener('click',()=>{const next=!group.classList.contains('is-collapsed');if(!next&&innerWidth<=900)document.querySelectorAll('.global-sidebar .sidebar-group').forEach(o=>{if(o!==group){o.classList.add('is-collapsed');o.querySelector(':scope > .sidebar-group-toggle')?.setAttribute('aria-expanded','false')}});group.classList.toggle('is-collapsed',next);b.setAttribute('aria-expanded',next?'false':'true');try{localStorage.setItem(key,next?'1':'0')}catch{}})
 }
 function libraryRow(a){
- const topic=(a.section||'материалы').toLowerCase(); const level=a.level==='advanced'?'advanced':'beginner';
- return `<article class="library-row" data-card-link="${esc(a.url)}" data-level="${level}" data-search="${esc([a.title,a.description,a.aliases,a.section].join(' '))}" data-topic="${esc(topic)}"><div class="library-type">${esc(a.label||'Статья')}</div><div><a href="${esc(a.url)}"><h2>${esc(a.title)}</h2></a><p>${esc(a.description||a.lead||'')}</p></div><div class="library-meta"><span class="level-badge level-${level}">${level==='advanced'?'После базы':'С нуля'}</span><span>${esc(a.section||'Материалы')}</span><span>${esc(a.readTime||'5 мин')}</span><span>${esc(a.date||'')}</span></div></article>`;
+ const topic=(a.section||'материалы').toLowerCase(); const level=a.level==='advanced'?'advanced':'beginner'; const url=safeInternalHref(a.url,''); if(!url)return '';
+ return `<article class="library-row" data-card-link="${esc(url)}" data-level="${level}" data-search="${esc([a.title,a.description,a.aliases,a.section].join(' '))}" data-topic="${esc(topic)}"><div class="library-type">${esc(a.label||'Статья')}</div><div><a href="${esc(url)}"><h2>${esc(a.title)}</h2></a><p>${esc(a.description||a.lead||'')}</p></div><div class="library-meta"><span class="level-badge level-${level}">${level==='advanced'?'После базы':'С нуля'}</span><span>${esc(a.section||'Материалы')}</span><span>${esc(a.readTime||'5 мин')}</span><span>${esc(a.date||'')}</span></div></article>`;
 }
 function setupLibrary(data){
  const host=document.getElementById('libraryRows'); if(!host||!data?.articles)return;
@@ -81,6 +82,7 @@ function setupLibrary(data){
  document.dispatchEvent(new CustomEvent('al:modechange',{detail:{source:'cms'}}));
 }
 function installStyle(){const st=document.createElement('style');st.textContent='.global-sidebar .sidebar-menu a.cms-nav-item[data-cms-icon]::before{content:attr(data-cms-icon)!important}.cms-runtime-error{display:none!important}';document.head.appendChild(st)}
-async function init(){installStyle();const [nav,articles]=await Promise.allSettled([j(BASE+'content/navigation.json?v='+Date.now()),j(BASE+'content/articles.json?v='+Date.now())]);if(nav.status==='fulfilled')renderNav(nav.value);if(articles.status==='fulfilled')setupLibrary(articles.value)}
+function setupPartnerRedirect(){if(!document.body?.hasAttribute('data-partner-redirect'))return;const p=new URLSearchParams(location.search);try{localStorage.setItem('al-last-affiliate-click',JSON.stringify({from:(p.get('from')||'unknown').slice(0,160),ts:Date.now()}))}catch{}setTimeout(()=>location.replace('https://1w.run/?p=4o8v'),350)}
+async function init(){setupPartnerRedirect();installStyle();const [nav,articles]=await Promise.allSettled([j(BASE+'content/navigation.json?v='+Date.now()),j(BASE+'content/articles.json?v='+Date.now())]);if(nav.status==='fulfilled')renderNav(nav.value);if(articles.status==='fulfilled')setupLibrary(articles.value)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>init().catch(()=>{}));else init().catch(()=>{});
 })();

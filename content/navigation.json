@@ -8,19 +8,19 @@
         {
           "id": "start",
           "title": "С чего начать",
-          "href": "/Affiliate_Lab/start/",
+          "href": "/start/",
           "icon": "○"
         },
         {
           "id": "traffic",
           "title": "Источники трафика",
-          "href": "/Affiliate_Lab/traffic/",
+          "href": "/traffic/",
           "icon": "↗"
         },
         {
           "id": "compare",
           "title": "Сравнение источников",
-          "href": "/Affiliate_Lab/traffic/compare/",
+          "href": "/traffic/compare/",
           "icon": "≡"
         }
       ]
@@ -32,31 +32,31 @@
         {
           "id": "practice",
           "title": "Практические гайды",
-          "href": "/Affiliate_Lab/practice/",
+          "href": "/practice/",
           "icon": "✓"
         },
         {
           "id": "diagnostics",
           "title": "Диагностика и ошибки",
-          "href": "/Affiliate_Lab/diagnostics/",
+          "href": "/diagnostics/",
           "icon": "?"
         },
         {
           "id": "analytics",
           "title": "Аналитика",
-          "href": "/Affiliate_Lab/analytics/",
+          "href": "/analytics/",
           "icon": "⌁"
         },
         {
           "id": "tools",
           "title": "Калькуляторы",
-          "href": "/Affiliate_Lab/tools/",
+          "href": "/tools/",
           "icon": "▦"
         },
         {
           "id": "services",
           "title": "Сервисы",
-          "href": "/Affiliate_Lab/services/",
+          "href": "/services/",
           "icon": "□"
         }
       ]
@@ -68,19 +68,19 @@
         {
           "id": "library",
           "title": "Статьи",
-          "href": "/Affiliate_Lab/guides/",
+          "href": "/guides/",
           "icon": "▤"
         },
         {
           "id": "basics",
           "title": "Обзоры",
-          "href": "/Affiliate_Lab/basics/",
+          "href": "/basics/",
           "icon": "◫"
         },
         {
           "id": "glossary",
           "title": "Словарь терминов",
-          "href": "/Affiliate_Lab/glossary/",
+          "href": "/glossary/",
           "icon": "ab"
         }
       ]
@@ -92,13 +92,13 @@
         {
           "id": "notes",
           "title": "Журнал тестов",
-          "href": "/Affiliate_Lab/notes/",
+          "href": "/notes/",
           "icon": "✎"
         },
         {
           "id": "history",
           "title": "История",
-          "href": "/Affiliate_Lab/history/",
+          "href": "/history/",
           "icon": "↺"
         }
       ]

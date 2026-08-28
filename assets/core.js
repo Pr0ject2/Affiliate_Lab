@@ -154,7 +154,7 @@
     function go(event){
       if(event)event.preventDefault();
       const q=siteSearch.value.trim();
-      location.href='/Affiliate_Lab/guides/'+(q?'?q='+encodeURIComponent(q):'');
+      location.href='/guides/'+(q?'?q='+encodeURIComponent(q):'');
     }
     const form=siteSearch.closest('form');
     if(form)form.addEventListener('submit',go);
@@ -248,7 +248,7 @@ window.alTrack=function(name,data){
   'use strict';
   const KEY='ita-site-progress-v3';
   const LEGACY=['ita-site-progress-v2','ita-site-progress-v1'];
-  const FALLBACK=["/Affiliate_Lab/guides/1win-rules/", "/Affiliate_Lab/guides/adsbridge-campaign/", "/Affiliate_Lab/guides/affiliate-manager/", "/Affiliate_Lab/guides/affiliate-marketing/", "/Affiliate_Lab/guides/choose-program/", "/Affiliate_Lab/guides/choose-traffic-source/", "/Affiliate_Lab/guides/clicks-no-registrations/", "/Affiliate_Lab/guides/community-traffic/", "/Affiliate_Lab/guides/content-sites/", "/Affiliate_Lab/guides/cpa-vs-revshare/", "/Affiliate_Lab/guides/first-ftd/", "/Affiliate_Lab/guides/free-traffic/", "/Affiliate_Lab/guides/ftd/", "/Affiliate_Lab/guides/geo/", "/Affiliate_Lab/guides/ggr-ngr/", "/Affiliate_Lab/guides/landing-page/", "/Affiliate_Lab/guides/launch-checklist/", "/Affiliate_Lab/guides/metrics/", "/Affiliate_Lab/guides/nigeria-ad-guidelines/", "/Affiliate_Lab/guides/offer/", "/Affiliate_Lab/guides/paid-traffic/", "/Affiliate_Lab/guides/partner-dashboard/", "/Affiliate_Lab/guides/registrations-no-ftd/", "/Affiliate_Lab/guides/revshare/", "/Affiliate_Lab/guides/search-traffic/", "/Affiliate_Lab/guides/social-traffic/", "/Affiliate_Lab/guides/statistics-mismatch/", "/Affiliate_Lab/guides/statistics/", "/Affiliate_Lab/guides/stream-traffic/", "/Affiliate_Lab/guides/tracker-for-beginner/", "/Affiliate_Lab/guides/tracking/", "/Affiliate_Lab/guides/traffic-quality/", "/Affiliate_Lab/guides/video-traffic/", "/Affiliate_Lab/traffic/sources/alt-video/", "/Affiliate_Lab/traffic/sources/communities/", "/Affiliate_Lab/traffic/sources/content-site/", "/Affiliate_Lab/traffic/sources/dzen/", "/Affiliate_Lab/traffic/sources/mailing/", "/Affiliate_Lab/traffic/sources/paid/", "/Affiliate_Lab/traffic/sources/reddit/", "/Affiliate_Lab/traffic/sources/search/", "/Affiliate_Lab/traffic/sources/short-video/", "/Affiliate_Lab/traffic/sources/social/", "/Affiliate_Lab/traffic/sources/streams/", "/Affiliate_Lab/traffic/sources/telegram/", "/Affiliate_Lab/traffic/sources/vk-video/", "/Affiliate_Lab/traffic/sources/x-twitter/", "/Affiliate_Lab/traffic/sources/youtube/"];
+  const FALLBACK=["/guides/1win-rules/", "/guides/adsbridge-campaign/", "/guides/affiliate-manager/", "/guides/affiliate-marketing/", "/guides/choose-program/", "/guides/choose-traffic-source/", "/guides/clicks-no-registrations/", "/guides/community-traffic/", "/guides/content-sites/", "/guides/cpa-vs-revshare/", "/guides/first-ftd/", "/guides/free-traffic/", "/guides/ftd/", "/guides/geo/", "/guides/ggr-ngr/", "/guides/landing-page/", "/guides/launch-checklist/", "/guides/metrics/", "/guides/nigeria-ad-guidelines/", "/guides/offer/", "/guides/paid-traffic/", "/guides/partner-dashboard/", "/guides/registrations-no-ftd/", "/guides/revshare/", "/guides/search-traffic/", "/guides/social-traffic/", "/guides/statistics-mismatch/", "/guides/statistics/", "/guides/stream-traffic/", "/guides/tracker-for-beginner/", "/guides/tracking/", "/guides/traffic-quality/", "/guides/video-traffic/", "/traffic/sources/alt-video/", "/traffic/sources/communities/", "/traffic/sources/content-site/", "/traffic/sources/dzen/", "/traffic/sources/mailing/", "/traffic/sources/paid/", "/traffic/sources/reddit/", "/traffic/sources/search/", "/traffic/sources/short-video/", "/traffic/sources/social/", "/traffic/sources/streams/", "/traffic/sources/telegram/", "/traffic/sources/vk-video/", "/traffic/sources/x-twitter/", "/traffic/sources/youtube/"];
   let catalog=FALLBACK.slice();
   const visited=new Set();
 
@@ -262,8 +262,8 @@ window.alTrack=function(name,data){
   }
   function isArticle(value){
     const p=normalize(value);
-    return (p.startsWith('/Affiliate_Lab/guides/')&&p!=='/Affiliate_Lab/guides/') ||
-           p.startsWith('/Affiliate_Lab/traffic/sources/');
+    return (p.startsWith('/guides/')&&p!=='/guides/') ||
+           p.startsWith('/traffic/sources/');
   }
   function parseArray(key){
     try{
@@ -314,7 +314,7 @@ window.alTrack=function(name,data){
     if(link){
       try{const p=new URL(link.href,location.href).pathname;return p.replace(/assets\/site\.css.*$/,'')}catch(e){}
     }
-    return '/Affiliate_Lab/';
+    return '/';
   }
   async function discover(){
     try{
