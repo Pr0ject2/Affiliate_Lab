@@ -27460,103 +27460,61 @@ html body.reference-ui-v99 main.source-playbook-page .source-hero-icon > img{
 }
 
 
-/* v417 — source article icons: real platform image only; no legacy replacement/play triangle */
-html body main.source-playbook-page .source-title-row,
-html body.reference-ui-v99 main.source-playbook-page .source-title-row{
-  padding-left:18px!important;
-  padding-right:8px!important;
-  overflow:visible!important;
-}
-html body main.source-playbook-page .source-hero-icon,
-html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
-  overflow:visible!important;
-  background-image:none!important;
-}
-html body main.source-playbook-page .source-hero-icon .ref-play-triangle,
-html body.reference-ui-v99 main.source-playbook-page .source-hero-icon .ref-play-triangle{
-  display:none!important;
-}
-html body main.source-playbook-page .source-hero-icon>img,
-html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
-  display:block!important;
-  visibility:visible!important;
-  opacity:1!important;
-  width:52px!important;
-  height:52px!important;
-  max-width:52px!important;
-  max-height:52px!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  margin:0!important;
-  padding:0!important;
-  filter:none!important;
-}
-@media (max-width:900px){
-  html body main.source-playbook-page .source-title-row,
-  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
-    padding-left:14px!important;
-    padding-right:6px!important;
-  }
-  html body main.source-playbook-page .source-hero-icon>img,
-  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
-    width:44px!important;
-    height:44px!important;
-    max-width:44px!important;
-    max-height:44px!important;
-  }
-}
-@media (max-width:430px){
-  html body main.source-playbook-page .source-title-row,
-  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
-    padding-left:10px!important;
-    padding-right:4px!important;
-  }
-  html body main.source-playbook-page .source-hero-icon>img,
-  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
-    width:40px!important;
-    height:40px!important;
-    max-width:40px!important;
-    max-height:40px!important;
-  }
+/* ======================================================================
+   v418 — stronger light-theme outlines across utility pages and sections
+   ====================================================================== */
+html body:not(.theme-dark){
+  --v109-line:#d5cab8!important;
+  --v109-line-strong:#c4b49d!important;
 }
 
-
-/* v418 — perfectly center source logos inside their icon frames */
-html body .traffic-hub-page .playbook-card-top .playbook-hero-art,
-html body.reference-ui-v99 .traffic-hub-page .playbook-card-top .playbook-hero-art,
-html body main.source-playbook-page .source-hero-icon,
-html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
-  position:relative!important;
-  display:block!important;
-  overflow:hidden!important;
-  line-height:0!important;
+html body:not(.theme-dark) :is(
+  .diagnostic-wizard-card,.source-compare-page,.saved-page,.wrap.notes-page,
+  .wrap.glossary,.wrap.tool-suite,.wrap.tool-memory,.service-workflow,
+  .service-start-grid,.section-groups,.section-bottom-links,.about-nav-card-v114,
+  .about-nav-links-v114 a,.related-secondary,.related-reading,.calc-card,
+  .tool-panel,.field-case,.journal-reading-grid>.saved-block,.notes-composer
+){
+  background:#fffdf8!important;
+  border:1px solid var(--v109-line-strong)!important;
+  border-radius:12px!important;
+  box-shadow:none!important;
 }
 
-html body .traffic-hub-page .playbook-card-top .playbook-hero-art > img,
-html body.reference-ui-v99 .traffic-hub-page .playbook-card-top .playbook-hero-art > img,
-html body main.source-playbook-page .source-hero-icon > img,
-html body.reference-ui-v99 main.source-playbook-page .source-hero-icon > img{
-  position:absolute!important;
-  left:50%!important;
-  top:50%!important;
-  transform:translate(-50%,-50%)!important;
-  margin:0!important;
-  padding:0!important;
-  display:block!important;
-  object-fit:contain!important;
-  object-position:center center!important;
-  vertical-align:middle!important;
+html body:not(.theme-dark).about-page-v114 .about-section-v114{
+  margin:0 0 22px!important;
+  padding:24px 20px 28px!important;
+  border:1px solid var(--v109-line-strong)!important;
+  border-radius:14px!important;
+  background:#fffdf8!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-section-v114:last-child{margin-bottom:0!important}
+html body:not(.theme-dark).about-page-v114 .about-section-head-v114{margin-bottom:18px!important}
+html body:not(.theme-dark).about-page-v114 .about-route-v114 li{border-color:var(--v109-line)!important}
+
+html body:not(.theme-dark) .diagnostic-wizard-card{
+  padding:26px!important;
+  border-color:var(--v109-line-strong)!important;
+  background:#fffdf8!important;
+}
+html body:not(.theme-dark) .problem-source-row{border-bottom:1px solid var(--v109-line)!important}
+html body:not(.theme-dark) .problem-source-row select,
+html body:not(.theme-dark) .problem-options button,
+html body:not(.theme-dark) .diagnostic-after a,
+html body:not(.theme-dark) .problem-result-links a{
+  border-color:var(--v109-line-strong)!important;
+  background:#fffdf9!important;
+}
+html body:not(.theme-dark) .problem-options button:hover,
+html body:not(.theme-dark) .diagnostic-after a:hover,
+html body:not(.theme-dark) .problem-result-links a:hover,
+html body:not(.theme-dark) .problem-source-row select:focus{
+  border-color:#b49f82!important;
+  background:#f6f0e5!important;
 }
 
-html body .traffic-hub-page .playbook-card-top,
-html body.reference-ui-v99 .traffic-hub-page .playbook-card-top,
-html body main.source-playbook-page .source-title-row,
-html body.reference-ui-v99 main.source-playbook-page .source-title-row{
-  align-items:center!important;
-}
-
-html body main.source-playbook-page .source-title-copy,
-html body.reference-ui-v99 main.source-playbook-page .source-title-copy{
-  align-self:center!important;
-  margin:0!important;
+html body:not(.theme-dark) :is(.article-aside.enhanced-rail .aside-block,.article-exit-nav a,.next-reading a){
+  border-color:var(--v109-line-strong)!important;
+  background:#fffdf8!important;
 }
