@@ -27518,3 +27518,27 @@ html body:not(.theme-dark) :is(.article-aside.enhanced-rail .aside-block,.articl
   border-color:var(--v109-line-strong)!important;
   background:#fffdf8!important;
 }
+
+/* v419 — remove barely visible outer tints from structural light-theme wrappers.
+   These sections already contain real cards inside them, so the wrapper itself
+   should stay transparent instead of looking like a washed-out extra panel. */
+html body:not(.theme-dark) :is(
+  .traffic-hub-main.compact-block-v103,
+  .traffic-hub-basics.compact-block-v103,
+  .traffic-next.compact-block-v103,
+  .source-compare-explain.compact-block-v103
+),
+html body.reference-ui-v99:not(.theme-dark) :is(
+  .traffic-hub-main.compact-block-v103,
+  .traffic-hub-basics.compact-block-v103,
+  .traffic-next.compact-block-v103,
+  .source-compare-explain.compact-block-v103
+){
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
