@@ -6,9 +6,44 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function currentPath(){let p=location.pathname;return p.endsWith('/')?p:p+'/'}
 function renderNav(data){
   const sidebar=document.querySelector('.global-sidebar'); if(!sidebar||!data?.groups)return;
+  const path=currentPath();
+  const refHost=sidebar.querySelector(':scope > .ref-sidebar-groups');
+
+  /* Reference UI already owns the sidebar shell. Update that existing menu
+     from the CMS data instead of appending a second legacy navigation below it. */
+  if(refHost){
+    const iconMap={
+      start:'compass',traffic:'route',compare:'scaling',practice:'book-open',
+      services:'package-2',analytics:'line-chart',diagnostics:'circle-alert',tools:'calculator',
+      library:'layout-template',basics:'map',glossary:'whole-word',notes:'pen-square',history:'history'
+    };
+    const iconMarkup=(id)=>`<svg class="ref-nav-icon-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><use href="${BASE}assets/icons/nav.svg?v=20260826-3821#${iconMap[id]||'layout-template'}"></use></svg>`;
+    const items=[];
+    (data.groups||[]).forEach(g=>(g.items||[]).forEach(it=>items.push(it)));
+    const activeHref=items.map(it=>it.href||'#').filter(h=>{
+      const hp=currentPathFromHref(h); return path===hp || (hp!==BASE && path.startsWith(hp));
+    }).sort((a,b)=>String(b).length-String(a).length)[0]||'';
+
+    refHost.innerHTML=(data.groups||[]).map((g,gi)=>{
+      const links=(g.items||[]).map(it=>{
+        const href=it.href||'#'; const isActive=href===activeHref;
+        const cleanTitle=String(it.title||'Пункт').replace(/^↺\s*/,'');
+        return `<a href="${esc(href)}" class="${isActive?'is-active':''}"${isActive?' aria-current="page"':''}><span class="ref-nav-icon">${iconMarkup(it.id||'custom')}</span><span>${esc(cleanTitle)}</span></a>`;
+      }).join('');
+      const hasActive=(g.items||[]).some(it=>(it.href||'#')===activeHref);
+      return `<section class="ref-nav-group is-open${hasActive?' has-active':''}" data-ref-group="${esc(g.id||String(gi))}"><button class="ref-nav-heading" type="button" aria-expanded="true"><span>${esc(String(g.title||'Раздел').toUpperCase())}</span><i>⌄</i></button><nav>${links}</nav></section>`;
+    }).join('');
+
+    refHost.querySelectorAll('.ref-nav-heading').forEach(btn=>btn.addEventListener('click',()=>{
+      const group=btn.closest('.ref-nav-group'); const next=!group.classList.contains('is-open');
+      group.classList.toggle('is-open',next); btn.setAttribute('aria-expanded',next?'true':'false');
+    }));
+    return;
+  }
+
+  /* Legacy fallback for pages where the reference shell is not present. */
   sidebar.querySelectorAll(':scope > .sidebar-group').forEach(x=>x.remove());
   const anchor=sidebar.querySelector(':scope > .sidebar-mode-compact, :scope > .sidebar-partner-cta, :scope > .sidebar-bottom');
-  const path=currentPath();
   data.groups.forEach((g,gi)=>{
     const box=document.createElement('div'); box.className='sidebar-group'; box.dataset.sidebarGroup=g.id||String(gi);
     const title=document.createElement('p'); title.className='sidebar-group-title'; title.textContent=g.title||'Раздел'; box.appendChild(title);
@@ -16,7 +51,7 @@ function renderNav(data){
     (g.items||[]).forEach(it=>{
       const a=document.createElement('a'); a.href=it.href||'#'; a.dataset.nav=it.id||'custom'; a.dataset.cmsIcon=it.icon||'•'; a.classList.add('cms-nav-item');
       if(currentPathFromHref(a.href)===path){a.classList.add('active');a.setAttribute('aria-current','page')}
-      const span=document.createElement('span');span.textContent=it.title||'Пункт';a.appendChild(span);nav.appendChild(a);
+      const span=document.createElement('span');span.textContent=String(it.title||'Пункт').replace(/^↺\s*/,'');a.appendChild(span);nav.appendChild(a);
     });
     box.appendChild(nav); sidebar.insertBefore(box,anchor||null); decorateGroup(box,gi);
   });
