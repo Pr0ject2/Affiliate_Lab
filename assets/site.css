@@ -27542,3 +27542,14 @@ html body.reference-ui-v99:not(.theme-dark) :is(
   box-shadow:none!important;
   overflow:visible!important;
 }
+
+/* v420 — history page outer shell in light theme should not have a visible outline */
+html body:not(.theme-dark) .history-page.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .history-page.compact-block-v103{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
