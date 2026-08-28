@@ -28084,3 +28084,193 @@ html body.reference-ui-v99.theme-dark .site-footer .footer-links a:hover{color:#
     max-height:calc(100dvh - 78px)!important;
   }
 }
+
+
+/* ======================================================================
+   v428 — footer cleanup
+   Remove ghost backgrounds behind footer text, keep the bottom row aligned,
+   and use solid continuous separators instead of broken segmented strokes.
+   ====================================================================== */
+html body .site-footer,
+html body.reference-ui-v99 .site-footer{
+  overflow:hidden!important;
+}
+html body .site-footer > .wrap,
+html body.reference-ui-v99 .site-footer > .wrap{
+  width:min(calc(100% - 64px),var(--content-max))!important;
+  max-width:var(--content-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  background:transparent!important;
+}
+html body .site-footer .footer-main,
+html body.reference-ui-v99 .site-footer .footer-main{
+  grid-template-columns:minmax(260px,1fr) minmax(0,1.45fr)!important;
+  gap:42px!important;
+  align-items:start!important;
+  padding-top:30px!important;
+  padding-bottom:24px!important;
+}
+html body .site-footer .footer-links,
+html body.reference-ui-v99 .site-footer .footer-links{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  grid-auto-flow:row!important;
+  grid-template-rows:none!important;
+  gap:0!important;
+  width:100%!important;
+  margin:0!important;
+  align-items:stretch!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+html body .site-footer .footer-link-group,
+html body.reference-ui-v99 .site-footer .footer-link-group{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:10px!important;
+  min-height:100%!important;
+  margin:0!important;
+  padding:0 18px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body .site-footer .footer-link-group:first-child,
+html body.reference-ui-v99 .site-footer .footer-link-group:first-child{padding-left:0!important;}
+html body .site-footer .footer-link-group:last-child,
+html body.reference-ui-v99 .site-footer .footer-link-group:last-child{padding-right:0!important;}
+html body .site-footer .footer-link-group + .footer-link-group,
+html body.reference-ui-v99 .site-footer .footer-link-group + .footer-link-group{
+  border-left:1px solid rgba(255,255,255,.16)!important;
+}
+html body.theme-dark .site-footer .footer-link-group + .footer-link-group,
+html body.reference-ui-v99.theme-dark .site-footer .footer-link-group + .footer-link-group{
+  border-left-color:#2c3740!important;
+}
+html body:not(.theme-dark) .site-footer .footer-link-group + .footer-link-group,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-link-group + .footer-link-group{
+  border-left-color:#2e4c43!important;
+}
+html body .site-footer .footer-links a,
+html body.reference-ui-v99 .site-footer .footer-links a{
+  display:block!important;
+  width:100%!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  outline:0!important;
+  font-size:13px!important;
+  font-weight:650!important;
+  line-height:1.45!important;
+  text-decoration:none!important;
+}
+html body .site-footer .footer-links a::before,
+html body.reference-ui-v99 .site-footer .footer-links a::before,
+html body .site-footer .footer-links a::after,
+html body.reference-ui-v99 .site-footer .footer-links a::after{
+  display:none!important;
+}
+html body .site-footer .footer-bottom,
+html body.reference-ui-v99 .site-footer .footer-bottom{
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:18px!important;
+  width:min(calc(100% - 64px),var(--content-max))!important;
+  max-width:var(--content-max)!important;
+  margin:0 auto!important;
+  padding:15px 0 18px!important;
+  border-top:1px solid rgba(255,255,255,.11)!important;
+  background:transparent!important;
+}
+html body.theme-dark .site-footer .footer-bottom,
+html body.reference-ui-v99.theme-dark .site-footer .footer-bottom{border-top-color:#2c3740!important;}
+html body:not(.theme-dark) .site-footer .footer-bottom,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-bottom{border-top-color:#2e4c43!important;}
+html body .site-footer .footer-bottom span,
+html body.reference-ui-v99 .site-footer .footer-bottom span{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+@media (max-width:900px){
+  html body .site-footer > .wrap,
+  html body.reference-ui-v99 .site-footer > .wrap,
+  html body .site-footer .footer-bottom,
+  html body.reference-ui-v99 .site-footer .footer-bottom{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+  }
+  html body .site-footer .footer-main,
+  html body.reference-ui-v99 .site-footer .footer-main{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+  }
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:0!important;
+  }
+  html body .site-footer .footer-link-group,
+  html body.reference-ui-v99 .site-footer .footer-link-group{
+    padding:12px 0!important;
+    border-left:0!important;
+  }
+  html body .site-footer .footer-link-group:nth-child(odd),
+  html body.reference-ui-v99 .site-footer .footer-link-group:nth-child(odd){padding-right:14px!important;}
+  html body .site-footer .footer-link-group:nth-child(even),
+  html body.reference-ui-v99 .site-footer .footer-link-group:nth-child(even){padding-left:14px!important;border-left:1px solid rgba(255,255,255,.16)!important;}
+  html body.theme-dark .site-footer .footer-link-group:nth-child(even),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-link-group:nth-child(even){border-left-color:#2c3740!important;}
+  html body:not(.theme-dark) .site-footer .footer-link-group:nth-child(even),
+  html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-link-group:nth-child(even){border-left-color:#2e4c43!important;}
+  html body .site-footer .footer-link-group:nth-child(n+3),
+  html body.reference-ui-v99 .site-footer .footer-link-group:nth-child(n+3){border-top:1px solid rgba(255,255,255,.11)!important;}
+  html body.theme-dark .site-footer .footer-link-group:nth-child(n+3),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-link-group:nth-child(n+3){border-top-color:#2c3740!important;}
+  html body:not(.theme-dark) .site-footer .footer-link-group:nth-child(n+3),
+  html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-link-group:nth-child(n+3){border-top-color:#2e4c43!important;}
+}
+@media (max-width:560px){
+  html body .site-footer > .wrap,
+  html body.reference-ui-v99 .site-footer > .wrap,
+  html body .site-footer .footer-bottom,
+  html body.reference-ui-v99 .site-footer .footer-bottom{
+    width:calc(100% - 28px)!important;
+  }
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{grid-template-columns:1fr!important;}
+  html body .site-footer .footer-link-group,
+  html body.reference-ui-v99 .site-footer .footer-link-group{
+    padding:10px 0!important;
+    border-left:0!important;
+  }
+  html body .site-footer .footer-link-group + .footer-link-group,
+  html body.reference-ui-v99 .site-footer .footer-link-group + .footer-link-group{
+    border-left:0!important;
+    border-top:1px solid rgba(255,255,255,.11)!important;
+  }
+  html body.theme-dark .site-footer .footer-link-group + .footer-link-group,
+  html body.reference-ui-v99.theme-dark .site-footer .footer-link-group + .footer-link-group{border-top-color:#2c3740!important;}
+  html body:not(.theme-dark) .site-footer .footer-link-group + .footer-link-group,
+  html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-link-group + .footer-link-group{border-top-color:#2e4c43!important;}
+  html body .site-footer .footer-bottom,
+  html body.reference-ui-v99 .site-footer .footer-bottom{
+    flex-direction:row!important;
+    flex-wrap:wrap!important;
+    justify-content:space-between!important;
+    gap:8px 14px!important;
+    padding-bottom:max(18px,env(safe-area-inset-bottom))!important;
+  }
+}
