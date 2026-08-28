@@ -25502,3 +25502,1729 @@ html body.reference-ui-v99 .global-sidebar .sidebar-brand span:last-child small{
     font-size:15.6px!important;
   }
 }
+
+
+/* v392 — restore source/service icons, single clean outline, no clipping */
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+}
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+html body .playbook-card-top .playbook-hero-art::after,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::after,
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before,
+html body main.source-playbook-page .source-hero-icon::after,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art{
+  width:70px!important;
+  height:70px!important;
+  min-width:70px!important;
+  padding:10px!important;
+  border-radius:16px!important;
+  border:1px solid #d7c9b6!important;
+  background-color:#fbf7ef!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-size:44px 44px!important;
+  box-shadow:0 6px 16px rgba(69,51,20,.06)!important;
+}
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  text-indent:-9999px!important;
+  font-size:0!important;
+  color:transparent!important;
+  width:70px!important;
+  height:70px!important;
+  min-width:70px!important;
+  flex-basis:70px!important;
+  padding:10px!important;
+  border-radius:16px!important;
+  border:1px solid #d7c9b6!important;
+  background-color:#fbf7ef!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-size:44px 44px!important;
+  box-shadow:0 6px 16px rgba(69,51,20,.06)!important;
+}
+html body.theme-dark .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .playbook-card-top .playbook-hero-art,
+html body.theme-dark main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-color:#1a2129!important;
+  border-color:#3a4652!important;
+  box-shadow:0 8px 18px rgba(0,0,0,.18)!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+}
+html body main.source-playbook-page .source-title-row,
+html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+  grid-template-columns:70px minmax(0,1fr) !important;
+  gap:16px!important;
+}
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:62px!important; height:62px!important; min-width:62px!important; flex-basis:62px!important;
+    padding:9px!important; border-radius:14px!important; background-size:38px 38px!important;
+  }
+  html body main.source-playbook-page .source-title-row,
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{grid-template-columns:62px minmax(0,1fr)!important; gap:14px!important;}
+}
+@media (max-width:430px){
+  html body .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:56px!important; height:56px!important; min-width:56px!important; flex-basis:56px!important;
+    padding:8px!important; border-radius:13px!important; background-size:34px 34px!important;
+  }
+  html body main.source-playbook-page .source-title-row,
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{grid-template-columns:56px minmax(0,1fr)!important; gap:12px!important;}
+}
+
+
+/* v393 — more breathing room for history page outer frame */
+html body .history-page,
+html body.reference-ui-v99 .history-page{
+  padding:34px 36px!important;
+}
+html body .history-page .saved-block + .saved-block,
+html body.reference-ui-v99 .history-page .saved-block + .saved-block{
+  margin-top:42px!important;
+}
+@media (max-width:900px){
+  html body .history-page,
+  html body.reference-ui-v99 .history-page{padding:26px 28px!important;}
+}
+@media (max-width:650px){
+  html body .history-page,
+  html body.reference-ui-v99 .history-page{padding:20px 18px!important;}
+}
+
+
+/* v394 — light theme section-group shells need the same visible frame logic */
+html body:not(.theme-dark){
+  --tl394-light-frame-bg:#fcfaf6;
+  --tl394-light-frame-line:#cfc4b4;
+  --tl394-light-card-bg:#fffdfa;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  background:var(--tl394-light-frame-bg)!important;
+  border:1px solid var(--tl394-light-frame-line)!important;
+  border-radius:18px!important;
+  padding:30px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  padding-top:24px!important;
+  margin-top:24px!important;
+  border-top:1px solid #d9cfbf!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child{
+  padding-top:0!important;
+  margin-top:0!important;
+  border-top:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  gap:28px!important;
+  margin:0 0 18px!important;
+  align-items:flex-start!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-entry,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-entry{
+  background:var(--tl394-light-card-bg)!important;
+  border:1px solid #d8cfc1!important;
+}
+@media (max-width:900px){
+  html body:not(.theme-dark) .section-groups.compact-block-v103,
+  html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{padding:20px!important;}
+  html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{padding-top:18px!important;margin-top:18px!important;}
+}
+
+
+/* v395 — services page uses clean section separators instead of outer framed shells */
+html body.services-page :is(.services-intro.compact-block-v103,.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103),
+html body.reference-ui-v99.services-page :is(.services-intro.compact-block-v103,.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103){
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+html body.services-page .services-intro.compact-block-v103,
+html body.reference-ui-v99.services-page .services-intro.compact-block-v103{
+  padding-top:10px!important;
+  padding-bottom:20px!important;
+  margin-bottom:2px!important;
+}
+html body.services-page .service-workflow.compact-block-v103,
+html body.reference-ui-v99.services-page .service-workflow.compact-block-v103{
+  padding-top:28px!important;
+  padding-bottom:4px!important;
+  margin-top:0!important;
+}
+html body.services-page .service-start-kit.compact-block-v103,
+html body.reference-ui-v99.services-page .service-start-kit.compact-block-v103{
+  margin-top:20px!important;
+  padding-top:28px!important;
+  padding-bottom:10px!important;
+  border-top:0!important;
+}
+html body.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before,
+html body.reference-ui-v99.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before{
+  content:"";
+  display:block;
+  height:1px;
+  width:100%;
+  margin:0 0 26px;
+}
+html body.services-page:not(.theme-dark) :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before,
+html body.reference-ui-v99.services-page:not(.theme-dark) :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before{
+  background:linear-gradient(90deg,rgba(207,196,180,0) 0%, rgba(207,196,180,.95) 12%, rgba(207,196,180,.95) 88%, rgba(207,196,180,0) 100%)!important;
+}
+html body.services-page.theme-dark :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before,
+html body.reference-ui-v99.services-page.theme-dark :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before{
+  background:linear-gradient(90deg,rgba(52,69,88,0) 0%, rgba(52,69,88,.95) 12%, rgba(52,69,88,.95) 88%, rgba(52,69,88,0) 100%)!important;
+}
+html body.services-page .service-workflow + .service-workflow,
+html body.reference-ui-v99.services-page .service-workflow + .service-workflow{
+  margin-top:0!important;
+  border-top:0!important;
+}
+html body.services-page .service-notice,
+html body.reference-ui-v99.services-page .service-notice{
+  margin-bottom:18px!important;
+}
+@media (max-width:900px){
+  html body.services-page .service-workflow.compact-block-v103,
+  html body.reference-ui-v99.services-page .service-workflow.compact-block-v103{padding-top:22px!important;}
+  html body.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before,
+  html body.reference-ui-v99.services-page :is(.service-workflow.compact-block-v103,.service-start-kit.compact-block-v103)::before{margin:0 0 20px!important;}
+}
+
+
+/* v396 — remove extra light fill from outer section-group shells */
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  background:transparent!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  margin-bottom:16px!important;
+}
+
+
+/* v397 — restore missing icons in light theme with explicit pseudo-element rendering */
+html body .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art,
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:hidden!important;
+  background-image:none!important;
+}
+html body .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+html body main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{
+  content:""!important;
+  display:block!important;
+  width:44px!important;
+  height:44px!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:contain!important;
+  flex:0 0 auto!important;
+}
+@media (max-width:900px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{width:40px!important;height:40px!important;}
+}
+@media (max-width:430px){
+  html body .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .playbook-card-top .playbook-hero-art::before,
+  html body main.source-playbook-page .source-hero-icon::before,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before{width:36px!important;height:36px!important;}
+}
+
+
+/* v398 — remove the decorative desktop top/side stripe behind content. */
+@media (min-width:1180px){
+  html body::before,
+  html body::after,
+  html body.theme-dark::before,
+  html body.theme-dark::after,
+  html body.reference-ui-v99::before,
+  html body.reference-ui-v99::after,
+  html body.reference-ui-v99.theme-dark::before,
+  html body.reference-ui-v99.theme-dark::after{
+    content:none!important;
+    display:none!important;
+    background:none!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+}
+
+
+/* v399 — light theme: remove the extra shared background slab between grouped sections. */
+html body:not(.theme-dark) .section-groups.compact-block-v103,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group{
+  background:var(--tl-light-surface)!important;
+  border:1px solid var(--tl-light-line)!important;
+  border-radius:18px!important;
+  box-shadow:none!important;
+  padding:30px 30px 28px!important;
+  margin:0 0 22px!important;
+  border-top:1px solid var(--tl-light-line)!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:last-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:last-child{
+  margin-bottom:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group:first-child{
+  padding-top:30px!important;
+  margin-top:0!important;
+}
+html body:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head,
+html body.reference-ui-v99:not(.theme-dark) .section-groups.compact-block-v103 .section-group-head{
+  margin:0 0 18px!important;
+}
+
+
+/* v400 — light traffic cards: shift icon/title to the right and prevent side clipping. */
+html body:not(.theme-dark) .traffic-hub-page .playbook-card,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card{
+  padding-left:30px!important;
+  padding-right:26px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top{
+  justify-content:flex-start!important;
+  align-items:center!important;
+  gap:18px!important;
+  padding-left:8px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art),
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art){
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:72px!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top .playbook-hero-art{
+  margin-left:2px!important;
+  background-position:center center!important;
+  overflow:visible!important;
+}
+@media (max-width:900px){
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card,
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card{padding-left:22px!important;padding-right:20px!important;}
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card-top,
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top{gap:14px!important;padding-left:4px!important;}
+  html body:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art),
+  html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-card-top>span:not(.playbook-hero-art){min-height:64px!important;}
+}
+
+
+/* v401 — traffic cards: keep only one large icon, move icon and label right, no clipping in both themes */
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+  padding-left:28px!important;
+  padding-right:24px!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+  display:flex!important;
+  justify-content:flex-start!important;
+  align-items:flex-start!important;
+  gap:16px!important;
+  padding-left:8px!important;
+  min-height:84px!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  position:relative!important;
+  right:auto!important;
+  left:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  flex:0 0 76px!important;
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  margin:0!important;
+  padding:0!important;
+  border-radius:18px!important;
+  overflow:visible!important;
+  box-sizing:border-box!important;
+  background:none!important;
+  background-image:none!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:12px!important;
+  width:auto!important;
+  height:auto!important;
+  border-radius:0!important;
+  background-image:var(--tl-v222-source-icon,var(--source-logo))!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:contain!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#fbf7ef!important;
+  border:1px solid #d8ccb9!important;
+  box-shadow:0 6px 16px rgba(69,51,20,.06)!important;
+}
+html body.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#18222d!important;
+  border:1px solid #3a4652!important;
+  box-shadow:0 8px 18px rgba(0,0,0,.18)!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+  display:flex!important;
+  align-items:center!important;
+  min-height:76px!important;
+  padding-top:0!important;
+}
+@media (max-width:900px){
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding-left:22px!important;
+    padding-right:20px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+    gap:14px!important;
+    padding-left:4px!important;
+    min-height:74px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+    flex-basis:68px!important;
+    width:68px!important;
+    height:68px!important;
+    min-width:68px!important;
+    border-radius:16px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+    inset:10px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+    min-height:68px!important;
+  }
+}
+@media (max-width:430px){
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+    flex-basis:62px!important;
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    border-radius:14px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before{
+    inset:9px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art),
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top > span:not(.playbook-hero-art){
+    min-height:62px!important;
+  }
+}
+
+
+/* v402 — source compare note needs inner padding so text does not stick to the edge */
+html body .wrap.source-compare-note.compact-block-v103,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+html body .source-compare-note.compact-block-v103,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+  padding:28px 38px 30px!important;
+}
+html body .wrap.source-compare-note.compact-block-v103 strong,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103 strong,
+html body .source-compare-note.compact-block-v103 strong,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103 strong{
+  display:block!important;
+  margin:0 0 10px!important;
+}
+html body .wrap.source-compare-note.compact-block-v103 p,
+html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103 p,
+html body .source-compare-note.compact-block-v103 p,
+html body.reference-ui-v99 .source-compare-note.compact-block-v103 p{
+  margin:0!important;
+}
+@media (max-width:900px){
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+  html body .source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+    padding:22px 26px 24px!important;
+  }
+}
+@media (max-width:640px){
+  html body .wrap.source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .wrap.source-compare-note.compact-block-v103,
+  html body .source-compare-note.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-note.compact-block-v103{
+    padding:18px 20px 20px!important;
+  }
+}
+
+
+/* v403 — restore the green gradient mobile top bar in light theme */
+@media (max-width:900px){
+  html body:not(.theme-dark) .site-header,
+  html body.reference-ui-v99:not(.theme-dark) .site-header{
+    background:linear-gradient(90deg,#18493d 0%, #1d5647 58%, #226353 100%)!important;
+    border-bottom:1px solid rgba(255,255,255,.14)!important;
+    box-shadow:0 6px 18px rgba(10,28,22,.14)!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-topbar,
+  html body:not(.theme-dark) .header-inner{
+    background:transparent!important;
+    color:#eef7f3!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand,
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand b,
+  html body:not(.theme-dark) .brand-text b,
+  html body:not(.theme-dark) .brand-text small{
+    color:#eef7f3!important;
+  }
+  html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-menu),
+  html body:not(.theme-dark) :is(.theme-toggle,.mobile-nav-toggle){
+    background:rgba(0,0,0,.14)!important;
+    border-color:rgba(255,255,255,.18)!important;
+    color:#ffffff!important;
+  }
+}
+
+
+/* ======================================================================
+   v404 — mobile polish pass
+   One visual width, fewer nested gutters, cleaner mobile stacking.
+   Desktop is intentionally untouched.
+   ====================================================================== */
+@media (max-width:900px){
+
+  /* HOME: the intro used to become noticeably narrower than sections below
+     because the hero panel added another large inner gutter. */
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-grid{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:18px 14px 18px!important;
+    border-radius:18px!important;
+    box-sizing:border-box!important;
+    backdrop-filter:none!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    max-width:none!important;
+    margin-bottom:14px!important;
+    font-size:clamp(32px,9.2vw,41px)!important;
+    line-height:1.04!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-intro-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-intro-copy{
+    max-width:none!important;
+    font-size:15.5px!important;
+    line-height:1.58!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-lead,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-lead{
+    margin-top:20px!important;
+    font-size:15px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary{
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    max-width:none!important;
+    gap:8px!important;
+    margin:16px 0 0!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary > div{
+    width:100%!important;
+    min-height:0!important;
+    padding:14px 14px 15px!important;
+    border-radius:12px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary b,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary b{
+    font-size:13px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-summary span,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-summary span{
+    font-size:12.5px!important;
+    line-height:1.5!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-actions,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    width:100%!important;
+    margin-top:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-actions a,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-actions a{
+    width:100%!important;
+    min-height:44px!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    width:100%!important;
+    max-width:none!important;
+    margin:14px 0 0!important;
+    padding:18px 14px 16px!important;
+    border-radius:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search > div,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search > div{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    overflow:visible!important;
+    border:0!important;
+    background:transparent!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search input,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search input,
+  html body.home-shell-v256 main.home-page .home-main-search button,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search button{
+    width:100%!important;
+    min-height:44px!important;
+    border-radius:10px!important;
+    border:1px solid currentColor!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-main-search button,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-main-search button{
+    border-left-width:1px!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.home-results),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.home-results){
+    padding-top:32px!important;
+    padding-bottom:34px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title{
+    margin-bottom:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title-split,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title-split{
+    display:block!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-section-title-split > span,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-section-title-split > span{
+    display:block!important;
+    margin-top:8px!important;
+    max-width:none!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid,.home-source-grid),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-grid,.home-source-grid){
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid>a,.home-source-grid>a),
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-grid>a,.home-source-grid>a){
+    width:100%!important;
+    max-width:100%!important;
+    min-height:0!important;
+    padding:18px!important;
+    border-radius:12px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results-inner,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results-inner{
+    display:block!important;
+    width:100%!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results nav,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    margin-top:16px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results nav a,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav a{
+    width:100%!important;
+    min-height:44px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* LANDINGS: preserve the canonical width, reduce unnecessary nested padding. */
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding:18px 16px 20px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-entry-grid,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry-grid{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-entry,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-entry{
+    width:100%!important;
+    min-width:0!important;
+    padding:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body .section-bottom-links.compact-block-v103,
+  html body.reference-ui-v99 .section-bottom-links.compact-block-v103{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+
+  html body .section-bottom-links.compact-block-v103 a,
+  html body.reference-ui-v99 .section-bottom-links.compact-block-v103 a{
+    width:100%!important;
+    min-height:44px!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+  }
+
+  /* ARTICLES: reduce the second gutter added by the article card itself. */
+  html body.article-page .article-layout,
+  html body.reference-ui-v99.article-page .article-layout,
+  html body.source-playbook-page .article-layout,
+  html body.reference-ui-v99.source-playbook-page .article-layout{
+    padding-top:14px!important;
+    padding-bottom:44px!important;
+  }
+
+  html body.article-page .article,
+  html body.reference-ui-v99.article-page .article{
+    padding:18px 16px!important;
+  }
+
+  html body.source-playbook-page .source-playbook-article,
+  html body.reference-ui-v99.source-playbook-page .source-playbook-article{
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body :is(.academy-content-section,.logic-section-v103,.guide-v101-section),
+  html body.reference-ui-v99 :is(.academy-content-section,.logic-section-v103,.guide-v101-section){
+    max-width:100%!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* SERVICES: headings no longer fight the cards on narrow screens. */
+  html body.services-page .service-workflow-head,
+  html body.reference-ui-v99.services-page .service-workflow-head{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    align-items:start!important;
+  }
+
+  html body.services-page .service-tool,
+  html body.reference-ui-v99.services-page .service-tool{
+    width:100%!important;
+    padding:18px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.services-page :is(.service-open-link,.service-tool-actions>a),
+  html body.reference-ui-v99.services-page :is(.service-open-link,.service-tool-actions>a){
+    min-height:44px!important;
+  }
+
+  /* HISTORY: header controls stack instead of squeezing the title. */
+  html body .history-page .saved-block-head,
+  html body.reference-ui-v99 .history-page .saved-block-head{
+    align-items:flex-start!important;
+    flex-direction:column!important;
+    gap:8px!important;
+  }
+
+  html body .history-page .saved-card-main,
+  html body.reference-ui-v99 .history-page .saved-card-main{
+    padding:16px 42px 16px 16px!important;
+  }
+
+  /* COMPARE: keep controls compact, table scrolls in its own viewport. */
+  html body .source-compare-page.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-page.compact-block-v103{
+    padding-left:16px!important;
+    padding-right:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body .source-compare-picker,
+  html body.reference-ui-v99 .source-compare-picker{
+    padding:16px!important;
+    gap:12px!important;
+  }
+
+  html body .source-compare-table,
+  html body.reference-ui-v99 .source-compare-table{
+    border-radius:12px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+  }
+
+  /* TRAFFIC CATALOG: keep the large icon treatment, but make card geometry mobile-safe. */
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding:18px 16px 18px 20px!important;
+    overflow:visible!important;
+  }
+
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+    width:100%!important;
+    max-width:100%!important;
+    padding-left:4px!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Generic action/touch targets. */
+  html body :is(
+    .text-button,.service-open-link,.source-compare-actions a,.article-actions a,
+    .article-actions-unified a,.guide-v101-next a,.guide-v101-diagnostics a
+  ),
+  html body.reference-ui-v99 :is(
+    .text-button,.service-open-link,.source-compare-actions a,.article-actions a,
+    .article-actions-unified a,.guide-v101-next a,.guide-v101-diagnostics a
+  ){
+    min-height:44px!important;
+  }
+}
+
+@media (max-width:650px){
+  html body .history-page,
+  html body.reference-ui-v99 .history-page{
+    padding:18px 14px!important;
+  }
+
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    padding:16px 14px 18px!important;
+    border-radius:14px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome-copy{
+    padding:16px 12px 16px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-search-card{
+    padding:16px 12px 14px!important;
+  }
+}
+
+@media (max-width:420px){
+  html body.home-shell-v256 main.home-page .home-welcome h1,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome h1{
+    font-size:clamp(30px,9.4vw,36px)!important;
+  }
+
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding-left:18px!important;
+    padding-right:14px!important;
+  }
+}
+
+
+/* ======================================================================
+   v406 — mobile homepage final pass
+   Dark theme hero width aligned with lower blocks.
+   Hide decorative homepage images on mobile in both themes.
+   ====================================================================== */
+@media (max-width:900px){
+  /* Remove decorative homepage imagery on mobile */
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266{
+    display:none!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.home-shell-v256 main.home-page > .home-lab-background-v266::after,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::before,
+  html body.reference-ui-v99.home-shell-v256 main.home-page > .home-lab-background-v266::after{
+    display:none!important;
+    content:none!important;
+    background:none!important;
+  }
+
+  /* Dark theme: make the top home area use the same full mobile width
+     rhythm as the sections below. */
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome{
+    padding-top:32px!important;
+    padding-bottom:34px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome > .wrap{
+    width:var(--tl-mobile-width)!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-grid,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy{
+    padding:18px 18px 18px!important;
+    border-radius:16px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    padding:18px 18px 16px!important;
+    border-radius:16px!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-summary,
+  html body.theme-dark.home-shell-v256 main.home-page .home-actions,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-actions{
+    width:100%!important;
+    max-width:none!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-summary > div,
+  html body.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-entry-grid > a,
+  html body.theme-dark.home-shell-v256 main.home-page .home-source-grid > a,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-source-grid > a{
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+
+  html body.theme-dark.home-shell-v256 main.home-page .home-main-search,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-main-search,
+  html body.theme-dark.home-shell-v256 main.home-page .home-main-search > div,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-main-search > div{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+
+@media (max-width:650px){
+  html body.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-welcome-copy,
+  html body.theme-dark.home-shell-v256 main.home-page .home-search-card,
+  html body.reference-ui-v99.theme-dark.home-shell-v256 main.home-page .home-search-card{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+}
+
+
+/* ======================================================================
+   v407 — darker mobile top bar for light theme only
+   Restore the darker old-feeling top strip without touching dark theme.
+   ====================================================================== */
+@media (max-width:900px){
+  html body:not(.theme-dark) .site-header,
+  html body.reference-ui-v99:not(.theme-dark) .site-header{
+    background:
+      linear-gradient(90deg,#123a31 0%,#17463b 56%,#1b5244 100%)!important;
+    border-bottom:1px solid rgba(255,255,255,.16)!important;
+    box-shadow:0 6px 18px rgba(10,28,22,.18)!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) .ref-topbar,
+  html body:not(.theme-dark) .header-inner{
+    background:transparent!important;
+    color:#f1f8f4!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand,
+  html body.reference-ui-v99:not(.theme-dark) .ref-mobile-brand b,
+  html body:not(.theme-dark) .brand-text b,
+  html body:not(.theme-dark) .brand-text small{
+    color:#f1f8f4!important;
+  }
+
+  html body.reference-ui-v99:not(.theme-dark) :is(.ref-theme-button,.ref-mobile-menu),
+  html body:not(.theme-dark) :is(.theme-toggle,.mobile-nav-toggle){
+    background:rgba(0,0,0,.18)!important;
+    border-color:rgba(255,255,255,.20)!important;
+    color:#ffffff!important;
+  }
+}
+
+
+/* ======================================================================
+   v408 — about page light theme borders aligned with the rest of the site
+   ====================================================================== */
+html body:not(.theme-dark).about-page-v114 .about-section-v114{
+  border-bottom-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114>a,.about-principle-grid-v114>div){
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+  color:var(--v109-copy)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-value-grid-v114>a:hover{
+  border-color:var(--v109-line-strong)!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114 b,.about-principle-grid-v114 b,.about-route-v114 b,.about-nav-card-v114>strong,.about-nav-links-v114 b){
+  color:var(--v109-green-dark)!important;
+}
+html body:not(.theme-dark).about-page-v114 :is(.about-value-grid-v114 span,.about-principle-grid-v114 p,.about-route-v114 p,.about-nav-links-v114 small,.about-review-v114){
+  color:var(--v109-copy)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-value-grid-v114 em,
+html body:not(.theme-dark).about-page-v114 .about-route-v114 a{
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-route-v114 li{
+  border-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-route-v114 li:before{
+  background:var(--v109-green-soft)!important;
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-boundaries-v114 li{
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+  color:var(--v109-copy)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-boundaries-v114 li:before{
+  color:var(--v109-warm)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-card-v114{
+  background:var(--v109-surface)!important;
+  border:1px solid var(--v109-line)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-card-v114>span{
+  color:var(--v109-muted)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-links-v114 a{
+  background:var(--v109-surface)!important;
+  border-color:var(--v109-line)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114{
+  background:var(--v109-green-soft)!important;
+  border:1px solid #d8e4dc!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114 b{
+  color:var(--v109-green)!important;
+}
+html body:not(.theme-dark).about-page-v114 .about-nav-note-v114 p{
+  color:var(--v109-copy)!important;
+}
+
+
+/* ======================================================================
+   v409 — mobile home padding cleanup: keep text and controls off the edges
+   ====================================================================== */
+@media (max-width: 640px){
+  html body.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results,.home-next) > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome > .wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results,.home-next) > .wrap{
+    width:calc(100% - 32px)!important;
+  }
+
+  html body main.home-page .continue-home{
+    padding:14px 0 10px!important;
+  }
+  html body main.home-page .continue-card{
+    padding:20px 18px!important;
+    border-radius:16px!important;
+    gap:16px!important;
+  }
+  html body main.home-page .continue-copy h2{
+    font-size:23px!important;
+    line-height:1.2!important;
+  }
+  html body main.home-page .continue-copy p{
+    font-size:14px!important;
+    line-height:1.62!important;
+  }
+  html body main.home-page .continue-primary{
+    min-height:44px!important;
+    padding:0 16px!important;
+    width:100%!important;
+  }
+  html body main.home-page .continue-secondary{
+    padding-left:2px!important;
+  }
+
+  html body.home-shell-v256 main.home-page .home-results{
+    padding:46px 0 50px!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner{
+    padding:24px 22px!important;
+    border-radius:18px!important;
+    gap:22px!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner > div,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner > div{
+    padding:0 2px!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner h2,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner h2{
+    font-size:25px!important;
+    line-height:1.1!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner > div > span,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results .home-results-inner > div > span{
+    font-size:14px!important;
+    line-height:1.66!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results nav,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav{
+    gap:10px!important;
+  }
+  html body.home-shell-v256 main.home-page .home-results nav a,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-results nav a{
+    min-height:52px!important;
+    padding:14px 16px!important;
+    border-radius:12px!important;
+  }
+
+  html body .site-footer,
+  html body.reference-ui-v99 .site-footer{
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  html body .site-footer .wrap,
+  html body.reference-ui-v99 .site-footer .wrap{
+    width:calc(100% - 32px)!important;
+    max-width:none!important;
+  }
+  html body .footer-main,
+  html body.reference-ui-v99 .footer-main{
+    gap:18px!important;
+    padding-top:28px!important;
+    padding-bottom:20px!important;
+  }
+  html body .footer-identity,
+  html body.reference-ui-v99 .footer-identity{
+    padding-right:2px!important;
+  }
+  html body .footer-links,
+  html body.reference-ui-v99 .footer-links{
+    gap:10px 18px!important;
+  }
+}
+
+
+/* ======================================================================
+   v412 — FINAL SITE PASS
+   Desktop-safe consistency + a deliberate mobile layout contract.
+   ====================================================================== */
+
+/* Small hardening rules that are safe on every viewport. */
+html{scrollbar-gutter:stable;}
+html body,html body *{box-sizing:border-box;}
+html body :is(img,svg,video,canvas,iframe){max-width:100%;}
+html body :is(.article,.source-playbook-article,.section-entry,.service-tool,.saved-card-main,.about-main,.source-compare-page){min-width:0;}
+html body :is(.article table,.compare-table,.source-compare-table,.rules-table){max-width:100%;}
+
+@media (max-width:900px){
+  :root{--tl-final-mobile-gutter:16px;}
+
+  html,html body{width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+  html body{position:relative!important;}
+  html body main,html body .site-footer{margin-left:0!important;width:100%!important;max-width:100%!important;}
+
+  /* Header + drawer. The drawer must arrive fully at x=0 on every phone. */
+  html body .site-header{overflow:visible!important;}
+  html body .site-header .header-inner,
+  html body.reference-ui-v99 .site-header .ref-topbar{
+    width:100%!important;
+    max-width:none!important;
+    padding-left:max(12px,env(safe-area-inset-left))!important;
+    padding-right:max(12px,env(safe-area-inset-right))!important;
+  }
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{
+    position:fixed!important;
+    left:0!important;
+    right:auto!important;
+    top:68px!important;
+    bottom:auto!important;
+    width:min(320px,calc(100vw - 12px))!important;
+    max-width:min(320px,calc(100vw - 12px))!important;
+    height:calc(100dvh - 68px)!important;
+    max-height:calc(100dvh - 68px)!important;
+    margin:0!important;
+    padding:14px 12px max(20px,env(safe-area-inset-bottom)) 14px!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain!important;
+    -webkit-overflow-scrolling:touch!important;
+    transform:translate3d(calc(-100% - 4px),0,0)!important;
+    will-change:transform!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  html body.mobile-nav-open .global-sidebar,
+  html body.reference-ui-v99.mobile-nav-open .global-sidebar{
+    transform:translate3d(0,0,0)!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+  }
+  html body .mobile-nav-overlay,
+  html body.reference-ui-v99 .mobile-nav-overlay{inset:68px 0 0!important;}
+
+  /* Canonical page gutters. Do not let nested shells repeatedly shrink content. */
+  html body main>.wrap,
+  html body main>section>.wrap,
+  html body .site-footer>.wrap{
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  html body :is(.article-layout,.tl-primary-layout-v287){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+    padding-left:var(--tl-final-mobile-gutter)!important;
+    padding-right:var(--tl-final-mobile-gutter)!important;
+  }
+  html body :is(.article,.source-playbook-article){width:100%!important;max-width:100%!important;min-width:0!important;}
+  html body :is(.article-aside,.article-aside.enhanced-rail,.source-playbook-page .article-aside){display:none!important;}
+
+  /* Long editorial blocks keep breathing room instead of touching their frames. */
+  html body :is(.academy-content-section,.logic-section-v103,.logic-explain-v103,.logic-analysis-v103,.logic-warning-v103,.logic-action-v103,.guide-v101-section,.service-inline,.article-purpose-note){
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+
+  /* Common grids collapse cleanly. */
+  html body :is(
+    .section-entry-grid,.service-tool-grid,.service-tool-grid-one,.service-start-grid,
+    .tools-grid,.tool-form-grid,.compare-grid,.notes-grid,.journal-reading-grid,
+    .about-value-grid-v114,.about-principle-grid-v114,.about-boundaries-v114 ul,
+    .saved-grid,.rules-summary-grid,.rules-model-grid,.geo-chip-grid,.guide-v101-grid,
+    .guide-v101-formats,.source-toolkit-grid,.source-journey-grid,.source-visual-pair,
+    .platform-setup,.playbook-format-list,.playbook-checklist,.traffic-diagnostic-list,
+    .traffic-hub-basics,.traffic-next,.knowledge-map
+  ){
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+
+  /* Section landing pages: outer shell stays quiet; each section/card owns its frame. */
+  html body .section-groups.compact-block-v103,
+  html body.reference-ui-v99 .section-groups.compact-block-v103{
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  html body .section-groups.compact-block-v103 .section-group,
+  html body.reference-ui-v99 .section-groups.compact-block-v103 .section-group{
+    width:100%!important;
+    max-width:100%!important;
+    padding:18px 16px 20px!important;
+    margin:0 0 14px!important;
+    border-radius:15px!important;
+  }
+  html body .section-group-head,
+  html body.reference-ui-v99 .section-group-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:8px!important;
+    margin-bottom:16px!important;
+  }
+  html body .section-entry,
+  html body.reference-ui-v99 .section-entry{padding:16px!important;min-height:0!important;}
+
+  /* Source pages. */
+  html body .source-title-row,
+  html body.reference-ui-v99 .source-title-row{
+    grid-template-columns:58px minmax(0,1fr)!important;
+    gap:12px!important;
+    align-items:center!important;
+  }
+  html body .source-hero-icon,
+  html body.reference-ui-v99 .source-hero-icon{
+    width:58px!important;height:58px!important;min-width:58px!important;flex-basis:58px!important;
+    border-radius:14px!important;
+  }
+  html body .source-title-copy h1,
+  html body.reference-ui-v99 .source-title-copy h1{font-size:28px!important;line-height:1.08!important;}
+  html body .source-section-tabs,
+  html body.reference-ui-v99 .source-section-tabs{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    gap:8px!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+    padding-left:2px!important;
+    padding-right:2px!important;
+  }
+  html body .source-section-tabs::-webkit-scrollbar{display:none!important;}
+  html body .source-section-tabs a,
+  html body .source-section-tabs button{flex:0 0 auto!important;white-space:nowrap!important;}
+  html body .playbook-facts,
+  html body.reference-ui-v99 .playbook-facts{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;}
+  html body .playbook-facts>div,
+  html body.reference-ui-v99 .playbook-facts>div{min-width:0!important;padding:12px 10px!important;}
+  html body .playbook-facts>div:last-child:nth-child(odd){grid-column:1/-1!important;}
+
+  /* Traffic catalog and its icon row. */
+  html body .traffic-hub-page .playbook-catalog-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;}
+  html body .traffic-hub-page .playbook-card{width:100%!important;padding:18px!important;overflow:visible!important;}
+  html body .traffic-hub-page .playbook-card-top{width:100%!important;padding-left:4px!important;gap:14px!important;}
+
+  /* Services. */
+  html body.services-page :is(.services-intro,.service-workflow,.service-start-kit){width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
+  html body.services-page .service-workflow-head{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:8px!important;}
+  html body.services-page .service-tool{width:100%!important;max-width:100%!important;padding:17px!important;}
+
+  /* Compare + tables. */
+  html body .source-compare-page.compact-block-v103,
+  html body.reference-ui-v99 .source-compare-page.compact-block-v103{
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding:0!important;
+  }
+  html body .source-compare-picker,
+  html body.reference-ui-v99 .source-compare-picker{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;padding:16px!important;}
+  html body :is(.source-compare-table,.article table,.compare-table,.rules-table){
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  html body :is(.source-compare-table th,.source-compare-table td,.article table th,.article table td){
+    min-width:150px!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    vertical-align:top!important;
+  }
+
+  /* History / saved / notes. */
+  html body :is(.history-page,.saved-page,.notes-page){
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding-left:0!important;padding-right:0!important;
+  }
+  html body .saved-block-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:8px!important;}
+  html body .saved-card-main{padding:16px!important;}
+  html body :is(.notes-composer,.journal-explainer){padding-left:16px!important;padding-right:16px!important;}
+
+  /* About page. */
+  html body.about-page-v114 .about-hero-v114 .wrap.narrow,
+  html body.about-page-v114 .about-layout-v114{
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding-left:0!important;padding-right:0!important;
+  }
+  html body.about-page-v114 .about-layout-v114{grid-template-columns:minmax(0,1fr)!important;gap:20px!important;}
+  html body.about-page-v114 .about-nav-card-v114{position:static!important;width:100%!important;max-width:100%!important;padding:18px!important;}
+
+  /* Home page: same visual width from the first block to the last block; no decorative artwork on phones. */
+  html body.home-shell-v256 main.home-page>.home-lab-background-v266,
+  html body.reference-ui-v99.home-shell-v256 main.home-page>.home-lab-background-v266{display:none!important;}
+  html body.home-shell-v256 main.home-page .home-welcome>.wrap,
+  html body.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results)>.wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page .home-welcome>.wrap,
+  html body.reference-ui-v99.home-shell-v256 main.home-page :is(.home-entry-section,.home-sources-v51,.continue-home,.home-results)>.wrap{
+    width:calc(100% - (var(--tl-final-mobile-gutter) * 2))!important;
+    max-width:none!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding-left:0!important;padding-right:0!important;
+  }
+  html body.home-shell-v256 main.home-page .home-welcome-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;width:100%!important;}
+  html body.home-shell-v256 main.home-page :is(.home-welcome-copy,.home-search-card){width:100%!important;max-width:none!important;margin:0!important;padding:18px!important;border-radius:16px!important;}
+  html body.home-shell-v256 main.home-page .home-welcome h1{max-width:none!important;font-size:clamp(32px,9.6vw,43px)!important;line-height:1.02!important;overflow-wrap:normal!important;}
+  html body.home-shell-v256 main.home-page .home-welcome-summary{grid-template-columns:minmax(0,1fr)!important;gap:10px!important;width:100%!important;}
+  html body.home-shell-v256 main.home-page .home-welcome-summary>div{padding:15px!important;min-height:0!important;}
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid,.home-source-grid){grid-template-columns:minmax(0,1fr)!important;gap:12px!important;}
+  html body.home-shell-v256 main.home-page :is(.home-entry-grid>a,.home-source-grid>a){width:100%!important;max-width:100%!important;min-height:0!important;padding:18px!important;}
+  html body.home-shell-v256 main.home-page .home-results .home-results-inner{padding:24px 20px!important;border-radius:18px!important;gap:20px!important;}
+  html body.home-shell-v256 main.home-page .home-results nav{grid-template-columns:minmax(0,1fr)!important;gap:10px!important;}
+
+  /* Footer remains readable and inset. */
+  html body .site-footer .footer-main{grid-template-columns:minmax(0,1fr)!important;gap:18px!important;padding-top:28px!important;padding-bottom:20px!important;}
+  html body .site-footer .footer-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px 18px!important;}
+  html body .site-footer .footer-bottom{gap:8px 16px!important;padding-top:14px!important;padding-bottom:18px!important;}
+
+  /* Comfortable tap targets. */
+  html body :is(
+    .home-actions a,.home-results nav a,.continue-primary,.continue-secondary,
+    .text-button,.service-open-link,.service-tool-actions a,.source-compare-actions a,
+    .article-actions a,.article-actions-unified a,.guide-v101-next a,.guide-v101-diagnostics a
+  ){min-height:44px!important;}
+}
+
+@media (max-width:520px){
+  :root{--tl-final-mobile-gutter:14px;}
+  html body .site-footer .footer-links{grid-template-columns:minmax(0,1fr)!important;}
+  html body .playbook-facts,
+  html body.reference-ui-v99 .playbook-facts{grid-template-columns:minmax(0,1fr)!important;}
+  html body .playbook-facts>div:last-child:nth-child(odd){grid-column:auto!important;}
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{width:min(308px,calc(100vw - 10px))!important;max-width:min(308px,calc(100vw - 10px))!important;}
+}
+
+
+/* ======================================================================
+   v414 — REAL SOURCE ICONS + SINGLE CLEAN OUTLINE
+   The old icon stack depended on multiple pseudo-element overrides and
+   could leave a blank/clipped tile. Icons now render as real SVG images.
+   ====================================================================== */
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+  padding-left:32px!important;
+  padding-right:28px!important;
+  overflow:visible!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:18px!important;
+  width:100%!important;
+  min-height:78px!important;
+  margin:0 0 18px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  position:relative!important;
+  inset:auto!important;
+  display:grid!important;
+  place-items:center!important;
+  flex:0 0 76px!important;
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  margin:0!important;
+  padding:11px!important;
+  box-sizing:border-box!important;
+  border-radius:18px!important;
+  background-image:none!important;
+  overflow:visible!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#fbf7ef!important;
+  border:1px solid #cfc1ae!important;
+  box-shadow:0 6px 15px rgba(69,51,20,.07),inset 0 1px 0 rgba(255,255,255,.82)!important;
+}
+html body.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+  background-color:#18212a!important;
+  border:1px solid #3e4a55!important;
+  box-shadow:0 7px 16px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.04)!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::before,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art>img,
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art>img{
+  display:block!important;
+  width:52px!important;
+  height:52px!important;
+  max-width:52px!important;
+  max-height:52px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0!important;
+  padding:0!important;
+}
+html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art),
+html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art){
+  display:flex!important;
+  align-items:center!important;
+  min-height:76px!important;
+  margin:0!important;
+  padding:0!important;
+  font-size:10px!important;
+  line-height:1.25!important;
+  letter-spacing:.10em!important;
+  font-weight:800!important;
+  text-transform:uppercase!important;
+}
+html body:not(.theme-dark) .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art){color:#8a6538!important;}
+html body.theme-dark .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art){color:#b69672!important;}
+
+/* Source article hero icon uses the same real image and outline. */
+html body main.source-playbook-page .source-title-row,
+html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+  grid-template-columns:72px minmax(0,1fr)!important;
+  gap:18px!important;
+  align-items:center!important;
+}
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  width:72px!important;
+  height:72px!important;
+  min-width:72px!important;
+  flex-basis:72px!important;
+  margin:0!important;
+  padding:10px!important;
+  box-sizing:border-box!important;
+  border-radius:17px!important;
+  background-image:none!important;
+  text-indent:0!important;
+  font-size:0!important;
+  color:transparent!important;
+  overflow:visible!important;
+}
+html body:not(.theme-dark) main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99:not(.theme-dark) main.source-playbook-page .source-hero-icon{
+  background-color:#fbf7ef!important;
+  border:1px solid #cfc1ae!important;
+  box-shadow:0 6px 15px rgba(69,51,20,.07),inset 0 1px 0 rgba(255,255,255,.82)!important;
+}
+html body.theme-dark main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99.theme-dark main.source-playbook-page .source-hero-icon{
+  background-color:#18212a!important;
+  border:1px solid #3e4a55!important;
+  box-shadow:0 7px 16px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.04)!important;
+}
+html body main.source-playbook-page .source-hero-icon::before,
+html body main.source-playbook-page .source-hero-icon::after,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::before,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body main.source-playbook-page .source-hero-icon>img,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
+  display:block!important;
+  width:50px!important;
+  height:50px!important;
+  max-width:50px!important;
+  max-height:50px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0!important;
+}
+
+@media (max-width:900px){
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card{
+    padding-left:24px!important;
+    padding-right:20px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top{
+    gap:14px!important;
+    min-height:68px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art{
+    flex-basis:66px!important;
+    width:66px!important;
+    height:66px!important;
+    min-width:66px!important;
+    padding:9px!important;
+    border-radius:15px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art>img,
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top .playbook-hero-art>img{
+    width:46px!important;
+    height:46px!important;
+    max-width:46px!important;
+    max-height:46px!important;
+  }
+  html body .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art),
+  html body.reference-ui-v99 .traffic-hub-page .playbook-catalog-grid .playbook-card-top>span:not(.playbook-hero-art){min-height:66px!important;}
+
+  html body main.source-playbook-page .source-title-row,
+  html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+    grid-template-columns:62px minmax(0,1fr)!important;
+    gap:14px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    flex-basis:62px!important;
+    padding:8px!important;
+    border-radius:14px!important;
+  }
+  html body main.source-playbook-page .source-hero-icon>img,
+  html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
+    width:44px!important;
+    height:44px!important;
+    max-width:44px!important;
+    max-height:44px!important;
+  }
+}

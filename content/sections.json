@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "id": "start",
+      "title": "Если начинаете с нуля",
+      "menuTitle": "С чего начать",
+      "path": "start/index.html",
+      "url": "/Affiliate_Lab/start/",
+      "description": "Рекомендуемый маршрут по базе TrafficLab для тех, кто впервые разбирается в FTD, RevShare, статистике и источниках трафика.",
+      "system": true
+    },
+    {
+      "id": "traffic",
+      "title": "Выберите площадку и переходите к запуску",
+      "menuTitle": "Источники трафика",
+      "path": "traffic/index.html",
+      "url": "/Affiliate_Lab/traffic/",
+      "description": "Источники трафика для iGaming: видео, Telegram, соцсети, поиск, сообщества, стримы, реклама и собственный сайт с отдельной аналитикой.",
+      "system": true
+    },
+    {
+      "id": "practice",
+      "title": "Что делать перед первым запуском",
+      "menuTitle": "Практические гайды",
+      "path": "practice/index.html",
+      "url": "/Affiliate_Lab/practice/",
+      "description": "Практика: выбор программы, подготовка запуска, лендинг, первый FTD, менеджер и проверка результата.",
+      "system": true
+    },
+    {
+      "id": "services",
+      "title": "Инструменты для работы с трафиком",
+      "menuTitle": "Сервисы",
+      "path": "services/index.html",
+      "url": "/Affiliate_Lab/services/",
+      "description": "Основной рабочий набор: Proxys.io, Multilogin, DarkStore, OnlineSim, RUVDS, Spy.House, AdsBridge и ProfitAds.",
+      "system": true
+    },
+    {
+      "id": "analytics",
+      "title": "Какие цифры смотреть",
+      "menuTitle": "Аналитика",
+      "path": "analytics/index.html",
+      "url": "/Affiliate_Lab/analytics/",
+      "description": "Трекинг, партнёрская статистика, метрики, когортный анализ и разделение источников трафика.",
+      "system": true
+    },
+    {
+      "id": "diagnostics",
+      "title": "Что не так с моим трафиком?",
+      "menuTitle": "Диагностика и ошибки",
+      "path": "diagnostics/index.html",
+      "url": "/Affiliate_Lab/diagnostics/",
+      "description": "Пошаговая диагностика проблем трафика: клики без регистраций, регистрации без депозитов, слабый доход и расхождения в трекинге.",
+      "system": true
+    },
+    {
+      "id": "tools",
+      "title": "Три расчёта, которые пригодятся на старте",
+      "menuTitle": "Калькуляторы",
+      "path": "tools/index.html",
+      "url": "/Affiliate_Lab/tools/",
+      "description": "Три практических инструмента: план первого теста, разбор фактического результата и сравнение двух источников трафика.",
+      "system": true
+    },
+    {
+      "id": "guides",
+      "title": "Все материалы",
+      "menuTitle": "Статьи",
+      "path": "guides/index.html",
+      "url": "/Affiliate_Lab/guides/",
+      "description": "Статьи и практические разборы по партнёрской экономике, аналитике, трекингу и источникам трафика.",
+      "system": true
+    },
+    {
+      "id": "basics",
+      "title": "Как всё работает",
+      "menuTitle": "Обзоры",
+      "path": "basics/index.html",
+      "url": "/Affiliate_Lab/basics/",
+      "description": "Базовая механика партнёрского маркетинга: оффер, FTD, GEO, трекинг и путь пользователя.",
+      "system": true
+    },
+    {
+      "id": "glossary",
+      "title": "Словарь",
+      "menuTitle": "Словарь терминов",
+      "path": "glossary/index.html",
+      "url": "/Affiliate_Lab/glossary/",
+      "description": "Словарь терминов партнёрского маркетинга и гемблинга: выплаты, аналитика, трекинг, источники трафика и работа с партнёрскими программами.",
+      "system": true
+    },
+    {
+      "id": "about",
+      "title": "Как пользоваться TrafficLab",
+      "menuTitle": "О проекте",
+      "path": "about/index.html",
+      "url": "/Affiliate_Lab/about/",
+      "description": "Как использовать TrafficLab на практике: выбрать источник трафика, подготовить тест, настроить учёт и разобрать результат по воронке.",
+      "system": true
+    },
+    {
+      "id": "help",
+      "title": "Куда мне дальше?",
+      "menuTitle": "Помощь",
+      "path": "help/index.html",
+      "url": "/Affiliate_Lab/help/",
+      "description": "Шесть простых ситуаций, которые помогают быстро найти нужный раздел TrafficLab без изучения всей библиотеки.",
+      "system": true
+    }
+  ]
+}

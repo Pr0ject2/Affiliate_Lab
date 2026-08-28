@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "0",
+      "title": "Начать",
+      "items": [
+        {
+          "id": "start",
+          "title": "С чего начать",
+          "href": "/Affiliate_Lab/start/",
+          "icon": "○"
+        },
+        {
+          "id": "traffic",
+          "title": "Источники трафика",
+          "href": "/Affiliate_Lab/traffic/",
+          "icon": "↗"
+        },
+        {
+          "id": "compare",
+          "title": "Сравнение источников",
+          "href": "/Affiliate_Lab/traffic/compare/",
+          "icon": "≡"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Работа",
+      "items": [
+        {
+          "id": "practice",
+          "title": "Практические гайды",
+          "href": "/Affiliate_Lab/practice/",
+          "icon": "✓"
+        },
+        {
+          "id": "diagnostics",
+          "title": "Диагностика и ошибки",
+          "href": "/Affiliate_Lab/diagnostics/",
+          "icon": "?"
+        },
+        {
+          "id": "analytics",
+          "title": "Аналитика",
+          "href": "/Affiliate_Lab/analytics/",
+          "icon": "⌁"
+        },
+        {
+          "id": "tools",
+          "title": "Калькуляторы",
+          "href": "/Affiliate_Lab/tools/",
+          "icon": "▦"
+        },
+        {
+          "id": "services",
+          "title": "Сервисы",
+          "href": "/Affiliate_Lab/services/",
+          "icon": "□"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Библиотека",
+      "items": [
+        {
+          "id": "library",
+          "title": "Статьи",
+          "href": "/Affiliate_Lab/guides/",
+          "icon": "▤"
+        },
+        {
+          "id": "basics",
+          "title": "Обзоры",
+          "href": "/Affiliate_Lab/basics/",
+          "icon": "◫"
+        },
+        {
+          "id": "glossary",
+          "title": "Словарь терминов",
+          "href": "/Affiliate_Lab/glossary/",
+          "icon": "ab"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Личное",
+      "items": [
+        {
+          "id": "notes",
+          "title": "Журнал тестов",
+          "href": "/Affiliate_Lab/notes/",
+          "icon": "✎"
+        },
+        {
+          "id": "history",
+          "title": "↺ История",
+          "href": "/Affiliate_Lab/history/",
+          "icon": "↺"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/about/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/analytics/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/basics/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/diagnostics/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/economics/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/glossary/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/1win-rules/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/adsbridge-campaign/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/affiliate-manager/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/affiliate-marketing/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/choose-program/</loc></url>
@@ -19,10 +22,10 @@
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/ftd/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/geo/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/ggr-ngr/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/landing-page/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/launch-checklist/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/metrics/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/nigeria-ad-guidelines/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/offer/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/paid-traffic/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/partner-dashboard/</loc></url>
@@ -30,36 +33,32 @@
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/revshare/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/search-traffic/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/social-traffic/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/statistics/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/statistics-mismatch/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/statistics/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/stream-traffic/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/tracker-for-beginner/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/tracking/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/traffic-quality/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/video-traffic/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/help/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/practice/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/services/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/start/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/tools/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/compare/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/alt-video/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/communities/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/content-site/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/dzen/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/mailing/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/paid/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/reddit/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/search/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/short-video/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/social/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/streams/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/telegram/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/vk-video/</loc></url>
+  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/x-twitter/</loc></url>
   <url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/youtube/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/social/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/communities/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/search/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/streams/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/paid/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/short-video/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/alt-video/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/dzen/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/reddit/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/x-twitter/</loc></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/traffic/sources/mailing/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/services/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/adsbridge-campaign/</loc><lastmod>2026-08-19</lastmod></url>
-<url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/1win-rules/</loc></url>
-  <url><loc>https://pr0ject2.github.io/Affiliate_Lab/guides/nigeria-ad-guidelines/</loc><lastmod>2026-08-24</lastmod></url>
 </urlset>

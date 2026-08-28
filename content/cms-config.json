@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "siteName": "TrafficLab",
+  "basePath": "/Affiliate_Lab/",
+  "canonicalBase": "https://pr0ject2.github.io/Affiliate_Lab/",
+  "repoDefaults": {
+    "owner": "pr0ject2",
+    "repo": "Affiliate_Lab",
+    "branch": "main"
+  },
+  "articleRoot": "guides"
+}
