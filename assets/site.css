@@ -27897,3 +27897,190 @@ html body.reference-ui-v99 .site-footer :is(.footer-grid,.disclosure){display:no
     padding-bottom:max(18px,env(safe-area-inset-bottom))!important;
   }
 }
+
+/* ======================================================================
+   v426 — restore a quieter footer: plain text links, no button cards.
+   Topic groups are separated with thin rules instead of boxes.
+   ====================================================================== */
+html body .site-footer .footer-links,
+html body.reference-ui-v99 .site-footer .footer-links{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  grid-template-rows:auto auto!important;
+  grid-auto-flow:column!important;
+  align-content:start!important;
+  gap:7px 0!important;
+  width:100%!important;
+  margin:0!important;
+}
+
+html body .site-footer .footer-links a,
+html body.reference-ui-v99 .site-footer .footer-links a{
+  position:relative!important;
+  display:block!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:4px 18px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-size:12.5px!important;
+  font-weight:600!important;
+  line-height:1.45!important;
+  text-decoration:none!important;
+  opacity:1!important;
+  transition:color .15s ease,opacity .15s ease!important;
+}
+html body .site-footer .footer-links a:nth-child(1),
+html body .site-footer .footer-links a:nth-child(2),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(1),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(2){padding-left:0!important;}
+
+/* Vertical topic dividers: Start | Work | Personal | About. */
+html body .site-footer .footer-links a:nth-child(3),
+html body .site-footer .footer-links a:nth-child(4),
+html body .site-footer .footer-links a:nth-child(5),
+html body .site-footer .footer-links a:nth-child(6),
+html body .site-footer .footer-links a:nth-child(7),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(3),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(4),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(5),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(6),
+html body.reference-ui-v99 .site-footer .footer-links a:nth-child(7){
+  border-left:1px solid rgba(255,255,255,.14)!important;
+}
+html body.theme-dark .site-footer .footer-links a:nth-child(3),
+html body.theme-dark .site-footer .footer-links a:nth-child(4),
+html body.theme-dark .site-footer .footer-links a:nth-child(5),
+html body.theme-dark .site-footer .footer-links a:nth-child(6),
+html body.theme-dark .site-footer .footer-links a:nth-child(7),
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(3),
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(4),
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(5),
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(6),
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(7){
+  border-left-color:#2e3942!important;
+}
+
+html body:not(.theme-dark) .site-footer .footer-links a,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a{color:#dce9e4!important;}
+html body:not(.theme-dark) .site-footer .footer-links a:hover,
+html body.reference-ui-v99:not(.theme-dark) .site-footer .footer-links a:hover{color:#ffffff!important;opacity:1!important;}
+html body.theme-dark .site-footer .footer-links a,
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a{color:#b9c4ca!important;}
+html body.theme-dark .site-footer .footer-links a:hover,
+html body.reference-ui-v99.theme-dark .site-footer .footer-links a:hover{color:#edf2f5!important;}
+
+@media (max-width:900px){
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:none!important;
+    grid-auto-flow:row!important;
+    gap:0!important;
+  }
+  html body .site-footer .footer-links a,
+  html body.reference-ui-v99 .site-footer .footer-links a{
+    padding:8px 12px!important;
+    border-left:0!important;
+  }
+  html body .site-footer .footer-links a:nth-child(odd),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(odd){padding-left:0!important;}
+  html body .site-footer .footer-links a:nth-child(even),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(even){padding-right:0!important;}
+
+  /* Each pair is one topic group; thin horizontal rules divide the groups. */
+  html body .site-footer .footer-links a:nth-child(n+3),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(n+3){
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  html body.theme-dark .site-footer .footer-links a:nth-child(n+3),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(n+3){
+    border-top-color:#2a343d!important;
+  }
+}
+
+@media (max-width:520px){
+  html body .site-footer .footer-links,
+  html body.reference-ui-v99 .site-footer .footer-links{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  html body .site-footer .footer-links a,
+  html body.reference-ui-v99 .site-footer .footer-links a{
+    padding:6px 0!important;
+    border-top:0!important;
+  }
+  html body .site-footer .footer-links a:nth-child(3),
+  html body .site-footer .footer-links a:nth-child(5),
+  html body .site-footer .footer-links a:nth-child(7),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(3),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(5),
+  html body.reference-ui-v99 .site-footer .footer-links a:nth-child(7){
+    margin-top:8px!important;
+    padding-top:13px!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  html body.theme-dark .site-footer .footer-links a:nth-child(3),
+  html body.theme-dark .site-footer .footer-links a:nth-child(5),
+  html body.theme-dark .site-footer .footer-links a:nth-child(7),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(3),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(5),
+  html body.reference-ui-v99.theme-dark .site-footer .footer-links a:nth-child(7){
+    border-top-color:#2a343d!important;
+  }
+}
+
+/* ======================================================================
+   v427 — compact mobile drawer height + stable light menu button state.
+   Mobile only: the sidebar ends after its content instead of filling the
+   entire viewport, while still becoming scrollable on shorter screens.
+   ====================================================================== */
+@media (max-width:1050px){
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar,
+  html body:not(.theme-dark) .global-sidebar,
+  html body.reference-ui-v99:not(.theme-dark) .global-sidebar,
+  html body.theme-dark .global-sidebar,
+  html body.reference-ui-v99.theme-dark .global-sidebar{
+    top:68px!important;
+    bottom:auto!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:calc(100dvh - 82px)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    border-bottom-right-radius:14px!important;
+  }
+
+  /* The light-theme menu trigger must not fall back to the generic white
+     button/focus state after the drawer closes. */
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle,
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle:hover,
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle:focus,
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle:focus-visible,
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle:active,
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle[aria-expanded="true"],
+  html body:not(.theme-dark) .site-header .mobile-nav-toggle[aria-expanded="false"],
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu,
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu:hover,
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu:focus,
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu:focus-visible,
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu:active,
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu[aria-expanded="true"],
+  html body.reference-ui-v99:not(.theme-dark) .site-header .ref-mobile-menu[aria-expanded="false"]{
+    background:rgba(0,0,0,.18)!important;
+    border-color:rgba(255,255,255,.20)!important;
+    color:#ffffff!important;
+    box-shadow:none!important;
+    outline:none!important;
+  }
+}
+
+@media (max-width:430px){
+  html body .global-sidebar,
+  html body.reference-ui-v99 .global-sidebar{
+    max-height:calc(100dvh - 78px)!important;
+  }
+}
