@@ -27519,3 +27519,44 @@ html body.reference-ui-v99 main.source-playbook-page .source-hero-icon>img{
     max-height:40px!important;
   }
 }
+
+
+/* v418 — perfectly center source logos inside their icon frames */
+html body .traffic-hub-page .playbook-card-top .playbook-hero-art,
+html body.reference-ui-v99 .traffic-hub-page .playbook-card-top .playbook-hero-art,
+html body main.source-playbook-page .source-hero-icon,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon{
+  position:relative!important;
+  display:block!important;
+  overflow:hidden!important;
+  line-height:0!important;
+}
+
+html body .traffic-hub-page .playbook-card-top .playbook-hero-art > img,
+html body.reference-ui-v99 .traffic-hub-page .playbook-card-top .playbook-hero-art > img,
+html body main.source-playbook-page .source-hero-icon > img,
+html body.reference-ui-v99 main.source-playbook-page .source-hero-icon > img{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  margin:0!important;
+  padding:0!important;
+  display:block!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  vertical-align:middle!important;
+}
+
+html body .traffic-hub-page .playbook-card-top,
+html body.reference-ui-v99 .traffic-hub-page .playbook-card-top,
+html body main.source-playbook-page .source-title-row,
+html body.reference-ui-v99 main.source-playbook-page .source-title-row{
+  align-items:center!important;
+}
+
+html body main.source-playbook-page .source-title-copy,
+html body.reference-ui-v99 main.source-playbook-page .source-title-copy{
+  align-self:center!important;
+  margin:0!important;
+}
